@@ -38,15 +38,13 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "dropdownimage": "listboxarw.png",
     "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
     "groupcells": false,
     "id": "lbChannelName",
-    "ide_onSelection": "AS_ListBox_ee745ac6b7b14529ae5c11da55f523c3",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c8b4087517b24c4a857ff0797d02c461",
+    "kuid": "e7e0e120e1ff4b14acb248762bd45c2b",
     "masterdata": [
         [
             "lb1",
@@ -66,8 +64,8 @@
         ]
     ],
     "name": "kony.ui.ListBox",
-    "parent": "flxPopupCreateNewChannel",
-    "pf": "frmChannelCreation",
+    "parent": "flxPopupChannelInfo",
+    "pf": "frmChannels",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "selectedkeys": null,

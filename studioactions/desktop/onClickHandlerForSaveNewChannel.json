@@ -1,0 +1,265 @@
+{
+    "AS_Button_b0d617015e0e4bc68208e7d55451902c": {
+        "id": "AS_Button_b0d617015e0e4bc68208e7d55451902c",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForSaveNewChannel",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmChannelCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b995d95be2ee4d2181bb89391aa35ffb"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "INVOKE_SERVICE_ced2be2833c946aab620e6ee54688914",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_j489158dc9514e188b7adce4bad216eb": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_j489158dc9514e188b7adce4bad216eb",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelID",
+                        "widgetPath": "this.view.txtChannelID",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannelCreation",
+                        "widgetKUID": "ddabe9397d704105b3c7c23abd37a9ce",
+                        "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "CHANNEL_create",
+                            "operationid": "116976"
+                        }
+                    }
+                },
+                "ME_Mapping_ca4e9b0fb6c049668881885f3ad60dab": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ca4e9b0fb6c049668881885f3ad60dab",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelLogo",
+                        "widgetPath": "this.view.txtChannelLogo",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannelCreation",
+                        "widgetKUID": "i5d1173975984f0cb2527e5d9e37b9e9",
+                        "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "logo",
+                        "dataType": "binary",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "CHANNEL_create",
+                            "operationid": "116976"
+                        }
+                    }
+                },
+                "ME_Mapping_b03f183908cc44b9bc1b05cbca29cb66": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b03f183908cc44b9bc1b05cbca29cb66",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelProperties",
+                        "widgetPath": "this.view.txtChannelProperties",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannelCreation",
+                        "widgetKUID": "i863bc80e6484a24a9692bf69c032a17",
+                        "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "properties_file",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "CHANNEL_create",
+                            "operationid": "116976"
+                        }
+                    }
+                },
+                "ME_Mapping_g4d2f31f90e040958b1ff56d81007700": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_g4d2f31f90e040958b1ff56d81007700",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "value",
+                        "widgetId": "lbChannelName",
+                        "widgetPath": "this.view.lbChannelName",
+                        "widgetType": "ListBox",
+                        "dataType": "string",
+                        "itemId": "frmChannelCreation",
+                        "collectionId": "selectedKeyValues",
+                        "widgetKUID": "c8b4087517b24c4a857ff0797d02c461",
+                        "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "name",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "CHANNEL_create",
+                            "operationid": "116976"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_j489158dc9514e188b7adce4bad216eb", "ME_Mapping_ca4e9b0fb6c049668881885f3ad60dab", "ME_Mapping_b03f183908cc44b9bc1b05cbca29cb66", "ME_Mapping_g4d2f31f90e040958b1ff56d81007700"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "CHANNEL_create",
+                "operationid": "116976"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_db39fb4091764bb18489a0118bbb88ea",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "CHANNEL_create!==null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "CHANNEL_create.opstatus===0"
+            }],
+            "parentId": "INVOKE_SERVICE_ced2be2833c946aab620e6ee54688914",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_eca1c104e92d4fd18561355bf27476ee",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_ced2be2833c946aab620e6ee54688914",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_c0612f865a7249ba95315fafef83d8d0",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Error",
+            "yesLabel": "OK",
+            "alertMessage": "Channel NOT created.",
+            "messageType": "constant",
+            "parentId": "_eca1c104e92d4fd18561355bf27476ee",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_fd12c4e575964b0a9ba974499997499f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### sono entrato nel FALSE\");",
+            "parentId": "SHOW_ALERT_c0612f865a7249ba95315fafef83d8d0",
+            "callbackType": "True"
+        }, {
+            "id": "NAVIGATE_TO_FORM__bae3976913a24d24b8622fc8ee2ae9fb",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmChannelCreation",
+            "formKUID": "b995d95be2ee4d2181bb89391aa35ffb",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_eca1c104e92d4fd18561355bf27476ee",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "SHOW_ALERT_aec026caa8c8409f83f2b9a188596a70",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": "Success",
+            "yesLabel": "Ok",
+            "alertMessage": "Channel succesfully created.",
+            "messageType": "constant",
+            "parentId": "_db39fb4091764bb18489a0118bbb88ea",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_c8a388406c5142fb838cbe8926b89aba",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### sono entrato nel true\");",
+            "parentId": "SHOW_ALERT_aec026caa8c8409f83f2b9a188596a70",
+            "callbackType": "True"
+        }, {
+            "id": "NAVIGATE_TO_FORM__cfcf917e7fd548b1882c11d5bf4078c6",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmChannels",
+            "formKUID": "c1e9143f6fef4291a170222e7c044c7c",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_db39fb4091764bb18489a0118bbb88ea",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }]
+    }
+}

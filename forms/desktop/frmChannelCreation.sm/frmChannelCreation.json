@@ -64,7 +64,7 @@
     "displayorientation": 1,
     "enabledforidletimeout": false,
     "id": "frmChannelCreation",
-    "ide_preShow": "AS_Form_c2ca3548e2f54f1f813bf9e89370dd9a",
+    "ide_postShow": "AS_Form_c90e7b12c0bf4f82b0e52b5097ffd13b",
     "info": null,
     "initdone": false,
     "inputaccessoryviewtype": 4,

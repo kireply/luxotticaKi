@@ -203,18 +203,6 @@
                 "rightValue": "undefined"
             }, {
                 "leftValueType": "varvalue",
-                "leftValue": "channelLogo",
-                "operator": "===",
-                "rightValueType": "value",
-                "rightValue": "\"\""
-            }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelLogo",
-                "operator": "===",
-                "rightValueType": "value",
-                "rightValue": "undefined"
-            }, {
-                "leftValueType": "varvalue",
                 "leftValue": "channelProperties",
                 "operator": "===",
                 "rightValueType": "value",
@@ -304,9 +292,9 @@
                 },
                 "opacity": 50,
                 "displayAnimationId": "",
-                "duration": "250",
+                "duration": "0",
                 "delay": "0",
-                "iterationCount": "1"
+                "iterationCount": ""
             },
             "config": {
                 "delay": "0",

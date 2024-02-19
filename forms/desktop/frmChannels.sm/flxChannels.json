@@ -1,12 +1,12 @@
 {
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0"
+    },
     "_height_": {
         "type": "string",
-        "value": "100%"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "0dp"
+        "value": "650dp"
     },
     "_margin_": [
         0,
@@ -22,36 +22,32 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
-    "_top_": {
+    "_right_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0"
     },
+    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_width_": {
         "type": "string",
-        "value": "99.99%"
+        "value": "79.06%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "formheader",
-        "hamburgermenu",
-        "smallerhamburgermenu",
-        "flxChannels",
-        "lblSelectOrCreateChannel"
+        "segChannels"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "fxlContainerChannels",
+    "id": "flxChannels",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "i3db4795373e4703b81621494679a37b",
+    "kuid": "c4f6e0ac3279402281cbaf09067f2695",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "frmChannels",
+    "parent": "fxlContainerChannels",
     "pf": "frmChannels",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

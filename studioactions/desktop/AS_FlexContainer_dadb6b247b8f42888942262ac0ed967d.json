@@ -1,0 +1,24 @@
+{
+    "AS_FlexContainer_dadb6b247b8f42888942262ac0ed967d": {
+        "id": "AS_FlexContainer_dadb6b247b8f42888942262ac0ed967d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmChannelCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b995d95be2ee4d2181bb89391aa35ffb"
+        },
+        "language": "js",
+        "eventType": "postShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_f4899f9321b44b23b2484f0bc9afadaa",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnSaveNewChannel.setEnable(false);",
+            "parentId": null
+        }]
+    }
+}

@@ -197,18 +197,6 @@
                 "rightValue": "undefined"
             }, {
                 "leftValueType": "varvalue",
-                "leftValue": "channelLogo",
-                "operator": "===",
-                "rightValueType": "value",
-                "rightValue": "\"\""
-            }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelLogo",
-                "operator": "===",
-                "rightValueType": "value",
-                "rightValue": "undefined"
-            }, {
-                "leftValueType": "varvalue",
                 "leftValue": "channelProperties",
                 "operator": "===",
                 "rightValueType": "value",

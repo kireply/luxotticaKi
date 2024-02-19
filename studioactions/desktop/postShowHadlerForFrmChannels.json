@@ -1,0 +1,258 @@
+{
+    "AS_Form_f9d12ed2a09d4b6ca5d36655b934d9b1": {
+        "id": "AS_Form_f9d12ed2a09d4b6ca5d36655b934d9b1",
+        "type": "ACTION_SEQUENCE",
+        "name": "postShowHadlerForFrmChannels",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmChannels",
+            "type": "forms",
+            "platform": "",
+            "KUID": "c1e9143f6fef4291a170222e7c044c7c"
+        },
+        "language": "js",
+        "eventType": "postShow",
+        "actions": [{
+            "id": "LOADING_INDICATOR_b67324adc5e04952aba778ff98b9c4f0",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Fetching channels..."
+        }, {
+            "id": "ADD_SNIPPET_g0922421b5ba4376ac12ba1cdb9d2426",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### sto fetchando i channels\");",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_d8d39e1855bc49a9aab6edc0f7844313",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "CHANNEL_get",
+                "operationid": "116974"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "ADD_SNIPPET_g56c3b1b0af347daa472294a0649b4b7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.txtChannelID.setEnabled(false);\nthis.view.lbChannelName.setEnabled(false);\nthis.view.txtChannelLogo.setEnabled(false);\nthis.view.txtChannelProperties.setEnabled(false);",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_e9e60e83a1f04a2488f5fc8c7ace6524",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### sono nella callback\");",
+            "parentId": "INVOKE_SERVICE_d8d39e1855bc49a9aab6edc0f7844313",
+            "callbackType": "Callback"
+        }, {
+            "id": "LOADING_INDICATOR_eff70f86cfc04e26b7e65c72fe3f58df",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_SERVICE_d8d39e1855bc49a9aab6edc0f7844313",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_b68c700757f24f3fb2f4e3563d729677",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "CHANNEL_get !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "CHANNEL_get.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_d8d39e1855bc49a9aab6edc0f7844313",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_a59d808b1e1e412ebf760c8e94bd1a4f",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_d8d39e1855bc49a9aab6edc0f7844313",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_g3da80052dfe42328006f5e0cc8cad0d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Error occurred in Foundry layer while fetching channels. OPSTATUS: \"+CHANNEL_get.opstatus);",
+            "parentId": "_a59d808b1e1e412ebf760c8e94bd1a4f",
+            "callbackType": null
+        }, {
+            "id": "_j6c0303f7dca424194c8ab904cfb98a5",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "CHANNEL_get.CHANNEL !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "CHANNEL_get.CHANNEL.length > 0"
+            }],
+            "parentId": "_b68c700757f24f3fb2f4e3563d729677",
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_cef67b14453843ef9c30a968a70f6749",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "_b68c700757f24f3fb2f4e3563d729677",
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_c0ec694e041f44a68584ab00b5d1e84e",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### No channels returned\");",
+            "parentId": "_cef67b14453843ef9c30a968a70f6749",
+            "callbackType": null
+        }, {
+            "id": "ADD_MAPPING_d8014af2955047e19ee79e2aa36a0a96",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_b17e24af83d24987be65e1dcfe8267c4": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b17e24af83d24987be65e1dcfe8267c4",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "CHANNEL",
+                        "dataType": "collection",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "CHANNEL_get",
+                            "operationid": "116974"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "rowData",
+                        "widgetId": "segChannels",
+                        "widgetPath": "this.view.segChannels",
+                        "widgetType": "Segment",
+                        "dataType": "collection",
+                        "itemId": "frmChannels",
+                        "collectionId": "masterdata",
+                        "widgetKUID": "e1f579ca6702404b931b56e95bd29eba",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_gebcb60b384b436998a271249ba313ed": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_gebcb60b384b436998a271249ba313ed",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "logo",
+                        "dataType": "string",
+                        "collectionId": "CHANNEL",
+                        "propertyPath": "[\"CHANNEL\"][0][\"logo\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "CHANNEL_get",
+                            "operationid": "116974"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "src",
+                        "widgetId": "imgLogo",
+                        "widgetPath": "this.view.imgLogo",
+                        "widgetType": "Image",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmChannels",
+                        "parentMappingId": "ME_Mapping_b17e24af83d24987be65e1dcfe8267c4",
+                        "segmentId": "segChannels",
+                        "segmentKUID": "e1f579ca6702404b931b56e95bd29eba",
+                        "widgetKUID": "h5728c5c8f9f4e588d22bdeaed01431c",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_cd5217c2aa724909a5ce3b63ec81505b": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cd5217c2aa724909a5ce3b63ec81505b",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "name",
+                        "dataType": "string",
+                        "collectionId": "CHANNEL",
+                        "propertyPath": "[\"CHANNEL\"][0][\"name\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "CHANNEL_get",
+                            "operationid": "116974"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblChannelInfo",
+                        "widgetPath": "this.view.lblChannelInfo",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmChannels",
+                        "parentMappingId": "ME_Mapping_b17e24af83d24987be65e1dcfe8267c4",
+                        "segmentId": "segChannels",
+                        "segmentKUID": "e1f579ca6702404b931b56e95bd29eba",
+                        "widgetKUID": "a299a3af8ad846d2964602712100f004",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_b17e24af83d24987be65e1dcfe8267c4", "ME_Mapping_gebcb60b384b436998a271249ba313ed", "ME_Mapping_cd5217c2aa724909a5ce3b63ec81505b"],
+            "parentId": "_j6c0303f7dca424194c8ab904cfb98a5",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }]
+    }
+}

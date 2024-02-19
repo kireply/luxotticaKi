@@ -37,6 +37,7 @@
     "displaytext": true,
     "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
     "id": "btnSaveNewChannel",
+    "ide_onClick": "AS_Button_b0d617015e0e4bc68208e7d55451902c",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

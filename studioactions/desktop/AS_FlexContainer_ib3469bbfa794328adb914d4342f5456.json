@@ -1,0 +1,19 @@
+{
+    "AS_FlexContainer_ib3469bbfa794328adb914d4342f5456": {
+        "id": "AS_FlexContainer_ib3469bbfa794328adb914d4342f5456",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmChannelCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b995d95be2ee4d2181bb89391aa35ffb"
+        },
+        "language": "js",
+        "eventType": "postShow",
+        "actions": []
+    }
+}

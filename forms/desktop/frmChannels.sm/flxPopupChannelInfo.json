@@ -1,12 +1,16 @@
 {
     "DNDConfig": null,
+    "_blur_": {
+        "enabled": false,
+        "value": 63
+    },
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "559dp"
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "520dp"
     },
     "_margin_": [
         0,
@@ -22,33 +26,42 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
+    "_skin_": "sbb5fcddbbb14add962da9f9a4e314c0",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "170dp"
     },
     "_width_": {
         "type": "string",
-        "value": "99.99%"
+        "value": "33.67%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "formheader",
-        "hamburgermenu",
-        "smallerhamburgermenu",
-        "flxChannels",
-        "lblSelectOrCreateChannel"
+        "lblTitlePopup",
+        "imgExitPopup",
+        "txtChannelID",
+        "txtChannelLogo",
+        "txtChannelProperties",
+        "lblChannelID",
+        "lblChannelName",
+        "lblChannelLogo",
+        "lblChannelProperties",
+        "lbChannelName"
     ],
     "clipbounds": false,
     "containerweight": 100,
+    "desktopweb": {
+        "zIndex": 2
+    },
     "enablescrolling": true,
-    "id": "fxlContainerChannels",
+    "id": "flxPopupChannelInfo",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "i3db4795373e4703b81621494679a37b",
+    "ismodalcontainer": true,
+    "isvisible": false,
+    "kuid": "i70a2ea907514b618067749d69eb0c78",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "frmChannels",

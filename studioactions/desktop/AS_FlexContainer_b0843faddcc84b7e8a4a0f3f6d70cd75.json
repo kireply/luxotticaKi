@@ -1,0 +1,24 @@
+{
+    "AS_FlexContainer_b0843faddcc84b7e8a4a0f3f6d70cd75": {
+        "id": "AS_FlexContainer_b0843faddcc84b7e8a4a0f3f6d70cd75",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmChannelCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b995d95be2ee4d2181bb89391aa35ffb"
+        },
+        "language": "js",
+        "eventType": "preShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_he2b93234a0841b081875e0a02dfeeb7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.txtChannelID.setEnabled(false);",
+            "parentId": null
+        }]
+    }
+}

@@ -45,7 +45,8 @@
     "canUpdateUI": true,
     "canvasWidth": 1200,
     "children": [
-        "fxlContainerChannels"
+        "fxlContainerChannels",
+        "flxPopupChannelInfo"
     ],
     "containerweight": 100,
     "controllerInfo": {
@@ -62,6 +63,7 @@
     "displayorientation": 1,
     "enabledforidletimeout": false,
     "id": "frmChannels",
+    "ide_postShow": "AS_Form_f9d12ed2a09d4b6ca5d36655b934d9b1",
     "info": null,
     "initdone": false,
     "inputaccessoryviewtype": 4,

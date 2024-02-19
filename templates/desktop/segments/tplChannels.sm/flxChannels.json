@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "180dp"
     },
     "_left_": {
         "type": "string",
@@ -29,36 +29,41 @@
     },
     "_width_": {
         "type": "string",
-        "value": "99.99%"
+        "value": "100%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "formheader",
-        "hamburgermenu",
-        "smallerhamburgermenu",
-        "flxChannels",
-        "lblSelectOrCreateChannel"
+        "imgLogo",
+        "lblChannelInfo",
+        "Image0hca7a0ddbbac42"
     ],
     "clipbounds": false,
+    "containerId": true,
     "containerweight": 100,
+    "controllerInfo": {
+        "default": {
+            "channel": "desktop",
+            "name": "flxChannelsController"
+        }
+    },
     "enablescrolling": true,
-    "id": "fxlContainerChannels",
+    "id": "flxChannels",
     "info": null,
+    "isTemplate": true,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "i3db4795373e4703b81621494679a37b",
+    "kuid": "e0372bab6c8e494d9384de1edb2885f1",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "frmChannels",
-    "pf": "frmChannels",
+    "parent": "tplChannels",
+    "pf": "tplChannels",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1,
-    "zindex": 1
+    "widgetalignment": 1
 }
