@@ -1,0 +1,43 @@
+{
+    "AS_Form_d76c27d259be4523b42927c709389bb3": {
+        "id": "AS_Form_d76c27d259be4523b42927c709389bb3",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmEditUser",
+            "type": "forms",
+            "platform": null,
+            "KUID": "f083813d2c09432d9f3d793de344cf37"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "IF_CONDITION_i7aea647de7140298bff88791fe7c97c",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "navigationsource",
+                "leftValue": "(this.getPreviousForm() === \"frmDashboard\") && this.navigationContext && this.navigationContext._meta_ && (this.navigationContext._meta_.widgetId ===  \"segListUsers\") && (this.navigationContext._meta_.eventName ===  \"onRowClick\")",
+                "operator": "===",
+                "rightValue": "",
+                "leftItemKUID": "b164a58fab0f47b1b2023b479f06502d",
+                "leftWidgetKUID": "j6ac8b2b279b4ccaac1620771e438fa6",
+                "sequenceId": "AS_Segment_ac5eea0885264b66a565b8afe828056a",
+                "eventName": "onRowClick",
+                "widgetId": "segListUsers"
+            }],
+            "parentId": null,
+            "criteria": "all",
+            "disabled": true
+        }, {
+            "id": "ADD_MAPPING_d0e1dd31d4b9406497dfeb6c47da72e4",
+            "type": "ADD_MAPPING",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "IF_CONDITION_i7aea647de7140298bff88791fe7c97c",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }]
+    }
+}

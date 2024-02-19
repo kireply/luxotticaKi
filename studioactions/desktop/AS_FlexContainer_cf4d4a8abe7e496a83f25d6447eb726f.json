@@ -1,0 +1,22 @@
+{
+    "AS_FlexContainer_cf4d4a8abe7e496a83f25d6447eb726f": {
+        "id": "AS_FlexContainer_cf4d4a8abe7e496a83f25d6447eb726f",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "frmChannelCreation",
+            "type": "forms",
+            "platform": null,
+            "KUID": "b995d95be2ee4d2181bb89391aa35ffb"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": []
+    }
+}

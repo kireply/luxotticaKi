@@ -1,0 +1,17 @@
+{
+    "AS_Button_e876ba3648eb4e86b872c20d1b21e607": {
+        "id": "AS_Button_e876ba3648eb4e86b872c20d1b21e607",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_c1ae49a5f09d466287bab8884aa0c854",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.submit();\nvar nav = new voltmx.mvc.Navigation(\"frmDashboard\");\nnav.navigate();",
+            "callbackType": null
+        }]
+    }
+}

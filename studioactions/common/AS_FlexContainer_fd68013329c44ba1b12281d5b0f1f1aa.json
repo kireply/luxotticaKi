@@ -1,0 +1,22 @@
+{
+    "AS_FlexContainer_fd68013329c44ba1b12281d5b0f1f1aa": {
+        "id": "AS_FlexContainer_fd68013329c44ba1b12281d5b0f1f1aa",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "KUID": "ucc86b75c87d4474b0dd7e08acfcf9d2",
+            "type": "userwidgets"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__cec3b8e653b04767b33f6dcc238eb597",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.LoginComponentPostShow();",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

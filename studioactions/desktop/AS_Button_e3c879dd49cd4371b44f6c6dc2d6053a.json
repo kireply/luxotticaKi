@@ -1,0 +1,253 @@
+{
+    "AS_Button_e3c879dd49cd4371b44f6c6dc2d6053a": {
+        "id": "AS_Button_e3c879dd49cd4371b44f6c6dc2d6053a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmAddUser",
+            "type": "forms",
+            "platform": "",
+            "KUID": "h902c48427904d6bb5bbba3458b3d375"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "INVOKE_SERVICE_dee92544524e4b0097065b1a6d87ce5a",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_b236d003a86f447fabced93f78e8019b": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b236d003a86f447fabced93f78e8019b",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtName",
+                        "widgetPath": "this.view.addoredituser2.txtName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmAddUser",
+                        "widgetKUID": "g3952d65a70b4af7850251ffbdf3d8a2",
+                        "itemKUID": "h902c48427904d6bb5bbba3458b3d375",
+                        "forkedPlatform": "all",
+                        "instanceKUID": "i38dfca959c54bd09e262e1737d05c9a"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "name",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "USER_create",
+                            "operationid": "115560"
+                        }
+                    }
+                },
+                "ME_Mapping_ee5930856afb4f4ab7533076fc1d633c": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ee5930856afb4f4ab7533076fc1d633c",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtSurname",
+                        "widgetPath": "this.view.addoredituser2.txtSurname",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmAddUser",
+                        "widgetKUID": "f5a3e4838e99480fb50f95a74039c97a",
+                        "itemKUID": "h902c48427904d6bb5bbba3458b3d375",
+                        "forkedPlatform": "all",
+                        "instanceKUID": "i38dfca959c54bd09e262e1737d05c9a"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "surname",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "USER_create",
+                            "operationid": "115560"
+                        }
+                    }
+                },
+                "ME_Mapping_id75b9397acd4f07a0bdfe841d68b851": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_id75b9397acd4f07a0bdfe841d68b851",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtCompileUserEmail",
+                        "widgetPath": "this.view.addoredituser2.txtCompileUserEmail",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmAddUser",
+                        "widgetKUID": "c0e515abaddf43488b5fefd9881466d2",
+                        "itemKUID": "h902c48427904d6bb5bbba3458b3d375",
+                        "forkedPlatform": "all",
+                        "instanceKUID": "i38dfca959c54bd09e262e1737d05c9a"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "email",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "USER_create",
+                            "operationid": "115560"
+                        }
+                    }
+                },
+                "ME_Mapping_de0faa4e9d2f4ab49cb1d16b7cf3a974": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_de0faa4e9d2f4ab49cb1d16b7cf3a974",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtCompileUserPassword",
+                        "widgetPath": "this.view.addoredituser2.txtCompileUserPassword",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmAddUser",
+                        "widgetKUID": "jbfa93815a4a488ea2429415837badc9",
+                        "itemKUID": "h902c48427904d6bb5bbba3458b3d375",
+                        "forkedPlatform": "all",
+                        "instanceKUID": "i38dfca959c54bd09e262e1737d05c9a"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "password",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "USER_create",
+                            "operationid": "115560"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_b236d003a86f447fabced93f78e8019b", "ME_Mapping_ee5930856afb4f4ab7533076fc1d633c", "ME_Mapping_id75b9397acd4f07a0bdfe841d68b851", "ME_Mapping_de0faa4e9d2f4ab49cb1d16b7cf3a974"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "USER_create",
+                "operationid": "115560"
+            },
+            "enableMappingEditor": true
+        }, {
+            "id": "_jfbe9a4c8166436f8f8b40c7a537b146",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "USER_create!==null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "USER_create.opstatus===0"
+            }],
+            "parentId": "INVOKE_SERVICE_dee92544524e4b0097065b1a6d87ce5a",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_e37791125ba6434b9649b59b512460b8",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_dee92544524e4b0097065b1a6d87ce5a",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_f3232174d0404d47984cc472985aef8d",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "User not added",
+            "yesLabel": "Ok",
+            "alertMessage": "Something went wrong",
+            "messageType": "constant",
+            "parentId": "_e37791125ba6434b9649b59b512460b8",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "NAVIGATE_TO_FORM__d08238e695bb4d2982f76d8a470d9d74",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmDashboard",
+            "formKUID": "b164a58fab0f47b1b2023b479f06502d",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_e37791125ba6434b9649b59b512460b8",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "SHOW_ALERT_jc5415c7ee374476a82d63f4e40a777a",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": "User added",
+            "yesLabel": "Ok",
+            "alertMessage": "User successfully added",
+            "messageType": "constant",
+            "parentId": "_jfbe9a4c8166436f8f8b40c7a537b146",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "NAVIGATE_TO_FORM__g665f819e9944e47bcc7612d41ca1e86",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmDashboard",
+            "formKUID": "b164a58fab0f47b1b2023b479f06502d",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_jfbe9a4c8166436f8f8b40c7a537b146",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }]
+    }
+}

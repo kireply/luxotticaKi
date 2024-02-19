@@ -1,0 +1,32 @@
+{
+    "AS_Form_j7bf211405b44586a7c73920bbfb2cfc": {
+        "id": "AS_Form_j7bf211405b44586a7c73920bbfb2cfc",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmEditUser",
+            "type": "forms",
+            "platform": null,
+            "KUID": "f083813d2c09432d9f3d793de344cf37"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__d19572653c0645adb8ccfb99220300d6",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onNavigate",
+            "display": "onNavigate",
+            "inputparams": [{
+                "name": "context"
+            }, {
+                "name": "isBackNavigation"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

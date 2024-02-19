@@ -1,0 +1,36 @@
+{
+    "AS_Button_bb8a5e719b47498090ec62a931d86c73": {
+        "id": "AS_Button_bb8a5e719b47498090ec62a931d86c73",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "u9c48b958b804cb5be55e25f3f6f5dfb"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "SCALE_ACTION_aee32aef12b642f5b86ec262a022ef44",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {}
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "250"
+            },
+            "start": "Immediately",
+            "animationId": "SCALE_ACTION_aee32aef12b642f5b86ec262a022ef44",
+            "displayAnimationId": "SCALE_ACTION_aee32aef12b642f5b86ec262a022ef44",
+            "forkedPlatform": "all"
+        }]
+    }
+}

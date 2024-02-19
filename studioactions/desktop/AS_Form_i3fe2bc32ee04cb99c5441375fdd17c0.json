@@ -1,0 +1,19 @@
+{
+    "AS_Form_i3fe2bc32ee04cb99c5441375fdd17c0": {
+        "id": "AS_Form_i3fe2bc32ee04cb99c5441375fdd17c0",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmEditUser",
+            "type": "forms",
+            "platform": "",
+            "KUID": "f083813d2c09432d9f3d793de344cf37"
+        },
+        "language": "js",
+        "eventType": "onMapping",
+        "actions": []
+    }
+}

@@ -1,0 +1,151 @@
+{
+    "AS_Button_a08f74658f134eebb8a75892adf0a55b": {
+        "id": "AS_Button_a08f74658f134eebb8a75892adf0a55b",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmDeleteUser",
+            "type": "forms",
+            "platform": "",
+            "KUID": "ced7a225779d43028086b1ceb5004406"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "INVOKE_SERVICE_ide45c2dcc0a412a9a00e7c134b89810",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_b944c7ef97b7498588ff52fc86452d9a": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b944c7ef97b7498588ff52fc86452d9a",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtID",
+                        "widgetPath": "this.view.txtID",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmDeleteUser",
+                        "widgetKUID": "i6c778da40bd450a887d3e8e555ea530",
+                        "itemKUID": "ced7a225779d43028086b1ceb5004406",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "USER_delete",
+                            "operationid": "115561"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_b944c7ef97b7498588ff52fc86452d9a"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "USER_delete",
+                "operationid": "115561"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_b3808606061c4ca59f81a1db617a24aa",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "USER_delete.opstatus===0"
+            }],
+            "parentId": "INVOKE_SERVICE_ide45c2dcc0a412a9a00e7c134b89810",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_fc38e383ce3b428d8e396de89dfceff9",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_ide45c2dcc0a412a9a00e7c134b89810",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_cbc8d399f3f44d82a883aaab0a68b722",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": "Unsuccesfull deletion",
+            "alertMessage": "User not deleted",
+            "messageType": "constant",
+            "parentId": "_fc38e383ce3b428d8e396de89dfceff9",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "NAVIGATE_TO_FORM__gc66e5d9720f4b12b84dae60e8d8e325",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmDashboard",
+            "formKUID": "b164a58fab0f47b1b2023b479f06502d",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_fc38e383ce3b428d8e396de89dfceff9",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "SHOW_ALERT_a7d959aa735045aebcc9a30a7a92fe5b",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": "Succesfull deletion",
+            "yesLabel": "Ok",
+            "alertMessage": "Succesfull deletion",
+            "messageType": "constant",
+            "parentId": "_b3808606061c4ca59f81a1db617a24aa",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "NAVIGATE_TO_FORM__e9b870ff5c9045fd982cc3168fdb4ee9",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmDashboard",
+            "formKUID": "b164a58fab0f47b1b2023b479f06502d",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_b3808606061c4ca59f81a1db617a24aa",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }]
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "AS_Button_i6c3beba777d4e409e602bc95f87e34a": {
+        "id": "AS_Button_i6c3beba777d4e409e602bc95f87e34a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "KUID": "ucc86b75c87d4474b0dd7e08acfcf9d2",
+            "type": "userwidgets"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET__b50f4f694fa04fd29ed6103923b0d269",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "kony.application.showLoadingScreen(\"\",\"Login in progress ...\", constants.LOADING_SCREEN_POSITION_ONLY_CENTER, true, true, null);",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "INVOKE_IDENTITY_SERVICE__f0ebde0c6ce34b93b3fec5da9e3d0716",
+            "type": "INVOKE_IDENTITY_SERVICE",
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "operationname": "login",
+                "servicename": "loginservice",
+                "type": "identity",
+                "isDeepLinkRequired": false,
+                "login_type": "basic"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "disabled": false,
+            "useDeviceBrowser": false,
+            "isDeepLinkRequired": false
+        }, {
+            "id": "INVOKE_FUNCTION___f3bb8d0fb2414ebf922453e88ecc2e8e",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onLoginFailuresWrapper",
+            "display": "onLoginFailuresWrapper",
+            "inputparams": [{
+                "name": "error",
+                "value": "error"
+            }],
+            "parentId": "INVOKE_IDENTITY_SERVICE__f0ebde0c6ce34b93b3fec5da9e3d0716",
+            "callbackType": "Failure",
+            "disabled": null,
+            "source": "controller"
+        }, {
+            "id": "INVOKE_FUNCTION___c7e1809330a847649d1e24f6479faaf3",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "onLoginSuccessWrapper",
+            "display": "onLoginSuccessWrapper",
+            "inputparams": [{
+                "name": "response",
+                "value": "response"
+            }],
+            "parentId": "INVOKE_IDENTITY_SERVICE__f0ebde0c6ce34b93b3fec5da9e3d0716",
+            "callbackType": "Success",
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

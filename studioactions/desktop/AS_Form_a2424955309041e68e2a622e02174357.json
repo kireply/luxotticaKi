@@ -1,0 +1,42 @@
+{
+    "AS_Form_a2424955309041e68e2a622e02174357": {
+        "id": "AS_Form_a2424955309041e68e2a622e02174357",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmAddUser",
+            "type": "forms",
+            "platform": "",
+            "KUID": "h902c48427904d6bb5bbba3458b3d375"
+        },
+        "language": "js",
+        "eventType": "preShow",
+        "actions": [{
+            "id": "_a322cfefe5b9452996e115de6a31f054",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "navigationsource",
+                "leftValue": "(this.getPreviousForm() === \"frmDashboard\") && this.navigationContext && this.navigationContext._meta_ && (this.navigationContext._meta_.widgetId ===  \"btnAddUser\") && (this.navigationContext._meta_.eventName ===  \"onClick\")",
+                "operator": "===",
+                "rightValue": "",
+                "leftItemKUID": "b164a58fab0f47b1b2023b479f06502d",
+                "leftWidgetKUID": "d903f0be04494548bd5f9ed6c7793e79",
+                "sequenceId": "AS_Button_da98b776e37748c2bcd84cbf918aff6d",
+                "eventName": "onClick",
+                "widgetId": "btnAddUser"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_f93a1b35aedd466e8b6b43819efe9b5e",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.addoredituser2.lblTitle.text = \"Add User\"",
+            "parentId": "_a322cfefe5b9452996e115de6a31f054",
+            "callbackType": null
+        }]
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "AS_Button_d116a832983d491eb59e2f056afd93f6": {
+        "id": "AS_Button_d116a832983d491eb59e2f056afd93f6",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmDeleteUser",
+            "type": "forms",
+            "platform": null,
+            "KUID": "ced7a225779d43028086b1ceb5004406"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_ed01ea42d90f42f788bb85276968477f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.submit();\nvar nav = new voltmx.mvc.Navigation(\"frmDashboard\");\nnav.navigate();",
+            "callbackType": null
+        }]
+    }
+}

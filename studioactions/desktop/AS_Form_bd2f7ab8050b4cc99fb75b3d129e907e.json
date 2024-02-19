@@ -1,0 +1,67 @@
+{
+    "AS_Form_bd2f7ab8050b4cc99fb75b3d129e907e": {
+        "id": "AS_Form_bd2f7ab8050b4cc99fb75b3d129e907e",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "f25d692cb3b14edea7ce9daf0340921f"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_e415b603d6fa436393f848a020da8804",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### sono nell'altro form\");",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "_e26b229fb80b49cb9ce41d8bd542ec64",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "navigationsource",
+                "leftValue": "(this.getPreviousForm() === \"frmDashboard\") && this.navigationContext && this.navigationContext._meta_ && (this.navigationContext._meta_.widgetId ===  \"segListUsers\") && (this.navigationContext._meta_.eventName ===  \"onRowClick\")",
+                "operator": "===",
+                "rightValue": "",
+                "leftItemKUID": "b164a58fab0f47b1b2023b479f06502d",
+                "leftWidgetKUID": "j6ac8b2b279b4ccaac1620771e438fa6",
+                "sequenceId": "AS_Segment_ac5eea0885264b66a565b8afe828056a",
+                "eventName": "onRowClick",
+                "widgetId": "segListUsers"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_f049644dc308413eaf663bc3e73ca883",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_a23f2fbb07914b12b1d8a5f6c28a4cbd",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Sono nell'else del preShow\");",
+            "parentId": "_f049644dc308413eaf663bc3e73ca883",
+            "callbackType": null
+        }, {
+            "id": "ADD_MAPPING_fbe340ae54ff409881c7ffaebb985afe",
+            "type": "ADD_MAPPING",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_e26b229fb80b49cb9ce41d8bd542ec64",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }]
+    }
+}

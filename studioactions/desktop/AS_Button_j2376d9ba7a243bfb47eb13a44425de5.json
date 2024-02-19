@@ -1,0 +1,152 @@
+{
+    "AS_Button_j2376d9ba7a243bfb47eb13a44425de5": {
+        "id": "AS_Button_j2376d9ba7a243bfb47eb13a44425de5",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "actions": [{
+            "id": "LOADING_INDICATOR_ide_onClick_f279a16f64c54ac5ba5d09f92ed0ea6d",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Log in ..."
+        }, {
+            "id": "INVOKE_IDENTITY_SERVICE_ide_onClick_i9d19279bd4c407498dec7336ef67a2c",
+            "type": "INVOKE_IDENTITY_SERVICE",
+            "mappings": {
+                "ME_Mapping_ea1807f751d649b7b6a522a6fe932aa9": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ea1807f751d649b7b6a522a6fe932aa9",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtEmail",
+                        "widgetPath": "this.view.txtEmail",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmAddUser",
+                        "widgetKUID": "afae3c10d6cb427981c31bac519fb63b",
+                        "itemKUID": "h902c48427904d6bb5bbba3458b3d375",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "userid",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "operationname": "login",
+                            "servicename": "LuxotticaKiIdentity",
+                            "type": "identity",
+                            "isDeepLinkRequired": false,
+                            "login_type": "basic"
+                        }
+                    }
+                },
+                "ME_Mapping_g10507bfe322480dab740de8546577cf": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_g10507bfe322480dab740de8546577cf",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtPassword",
+                        "widgetPath": "this.view.txtPassword",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmAddUser",
+                        "widgetKUID": "ae4db583ee444bdea7d683fb7af1ceb2",
+                        "itemKUID": "h902c48427904d6bb5bbba3458b3d375",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "password",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "operationname": "login",
+                            "servicename": "LuxotticaKiIdentity",
+                            "type": "identity",
+                            "isDeepLinkRequired": false,
+                            "login_type": "basic"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_ea1807f751d649b7b6a522a6fe932aa9", "ME_Mapping_g10507bfe322480dab740de8546577cf"],
+            "serviceconfig": {
+                "operationname": "login",
+                "servicename": "LuxotticaKiIdentity",
+                "type": "identity",
+                "isDeepLinkRequired": false,
+                "login_type": "basic"
+            },
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "useDeviceBrowser": false,
+            "isDeepLinkRequired": false
+        }, {
+            "id": "LOADING_INDICATOR_ide_onClick_i5bbdbc36b354eef9a44b69082f582eb",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_IDENTITY_SERVICE_ide_onClick_i9d19279bd4c407498dec7336ef67a2c",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Failure",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "SHOW_ALERT_ide_onClick_i263a4c96ff44074931d5f1d6e4a4616",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Login",
+            "yesLabel": "Ok",
+            "alertMessage": "Invalid Credentials.",
+            "messageType": "constant",
+            "parentId": "INVOKE_IDENTITY_SERVICE_ide_onClick_i9d19279bd4c407498dec7336ef67a2c",
+            "callbackType": "Failure",
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "LOADING_INDICATOR_ide_onClick_e9b7a81875cb4c8d8f6faadd662e4013",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_IDENTITY_SERVICE_ide_onClick_i9d19279bd4c407498dec7336ef67a2c",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Success",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "NAVIGATE_TO_FORM__ide_onClick_b0931400ba994565949d70908c1e8cd0",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmDashboard",
+            "formKUID": "b164a58fab0f47b1b2023b479f06502d",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "INVOKE_IDENTITY_SERVICE_ide_onClick_i9d19279bd4c407498dec7336ef67a2c",
+            "callbackType": "Success",
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }]
+    }
+}

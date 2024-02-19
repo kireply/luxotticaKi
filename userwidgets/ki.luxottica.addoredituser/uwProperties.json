@@ -1,0 +1,167 @@
+{
+    "classname": "addoredituser",
+    "definitions": {
+        "apis": {
+            "custom": [],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "Add",
+                    "group": "General",
+                    "kuid": "d75310a5c03e4cfe8bb2cacb899be346",
+                    "originalPropertyKey": "addOrEditOrDeleteUser",
+                    "propertyIndex": 2,
+                    "propertyKey": "addOrEditOrDeleteUser",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "Add, Edit or Delete a User?",
+                        "toolTip": "Specify whether you want to add, edit or delete a user?",
+                        "uiRepresentation": "Label-Combobox"
+                    },
+                    "srcWgtKUID": "i2e0a767829e4d8ba6a3fef75b762a78",
+                    "type": "list selector",
+                    "value": [
+                        "Add",
+                        "Edit",
+                        "Delete"
+                    ]
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "{\n      \"Name\":\"\",\n      \"Surname\":\"\",\n      \"Mail\":\"\"\n}",
+                    "group": "General",
+                    "kuid": "b2bdcb6f62f144de84c8c36ed762aba6",
+                    "originalPropertyKey": "userObject",
+                    "propertyIndex": 3,
+                    "propertyKey": "userObject",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "User Object",
+                        "toolTip": "JSON object representing a user",
+                        "uiConfig": {
+                            "Button": {
+                                "dataRetrieverId": "jsonEditor-Retriever",
+                                "dataUpdaterId": "jsonEditor-Updater",
+                                "popupId": "jsonEditor-Popup",
+                                "type": "jsonEditor"
+                            }
+                        },
+                        "uiRepresentation": "Label-Button"
+                    },
+                    "srcWgtKUID": "i2e0a767829e4d8ba6a3fef75b762a78",
+                    "type": "json",
+                    "value": ""
+                }
+            ],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "fb2242c974a4431fa51fb91542df75b9",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 1,
+                    "propertyKey": "lblTitle",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Title",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblTitle",
+                        "toolTip": "Set the form title",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "e9c0de8b72ed4c269b113c01904ad8be"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "a6a800f0dfcb4f598719bc1e42a04227",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 4,
+                    "propertyKey": "txtName",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Name",
+                        "isHiddenInTool": false,
+                        "srcWidget": "txtName",
+                        "toolTip": "Name of the user",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "TextField"
+                    },
+                    "srcWgtKUID": "j913ac9747dc4629a270af26a889d1b1"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "a5803436e8b94ca08ccc8625012810cd",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 5,
+                    "propertyKey": "txtSurname",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Surname",
+                        "isHiddenInTool": false,
+                        "srcWidget": "txtSurname",
+                        "toolTip": "Surname of the user",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "TextField"
+                    },
+                    "srcWgtKUID": "f9289ef96b70401da0cc27223a5f2986"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "hc5fe9cad94a4652b70991510e371215",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 6,
+                    "propertyKey": "txtCompileUserEmail",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Email",
+                        "isHiddenInTool": false,
+                        "srcWidget": "txtCompileUserEmail",
+                        "toolTip": "Email of the user",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "TextField"
+                    },
+                    "srcWgtKUID": "da3371d67630439184983222900b72a9"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "ki.luxottica",
+    "version": "1.0.0"
+}

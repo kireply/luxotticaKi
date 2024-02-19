@@ -1,0 +1,98 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "85%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s92c5d879f8142f08c34a981ec98d303",
+    "_top_": {
+        "type": "number",
+        "value": "137"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "15%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "btnLogout": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "dfdd2d1adcd549de80052e34a68aba1f",
+                "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
+                "wType": "Button"
+            }
+        },
+        "btnResizeMenu": {
+            "__events__": {
+                "ide_onClick": "AS_Button_b7255b7204714c589fe1e22b640916bc"
+            },
+            "__info__": {
+                "kuid": "b23821922602403bace5f5e7bd7e7508",
+                "srcKUID": "g6220a13ecc543cfbd274408555deb6b",
+                "wType": "Button"
+            }
+        },
+        "hamburgermenu": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "h61e901a7d594f6e9f22c3704583a6d7",
+                "srcKUID": "d252c589507e44fd8ed2ab19f3f7e081",
+                "wType": "FlexContainer"
+            }
+        },
+        "segMenu": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "jff886b22c0f445b949f0edec5a87891",
+                "srcKUID": "f6158cc0defe49f9b27229072ca607e4",
+                "wType": "Segment"
+            }
+        }
+    },
+    "enablescrolling": true,
+    "id": "hamburgermenu",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": true,
+    "kuid": "h61e901a7d594f6e9f22c3704583a6d7",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxMainListOfFlows",
+    "pf": "frmListOfFlows",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "d252c589507e44fd8ed2ab19f3f7e081",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

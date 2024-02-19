@@ -1,0 +1,25 @@
+{
+    "AS_Form_ab85cc9b2fbf4468bbd632e6d48061fd": {
+        "id": "AS_Form_ab85cc9b2fbf4468bbd632e6d48061fd",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmEditUser",
+            "type": "forms",
+            "platform": null,
+            "KUID": "f083813d2c09432d9f3d793de344cf37"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_MAPPING_a331ccfb75d64925957dc9f14cb242c5",
+            "type": "ADD_MAPPING",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": null,
+            "enableMappingEditor": true
+        }]
+    }
+}

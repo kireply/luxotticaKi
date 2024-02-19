@@ -1,0 +1,125 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "85%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s92c5d879f8142f08c34a981ec98d303",
+    "_top_": {
+        "type": "number",
+        "value": "137"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "btnLogout": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "j9e8d44c938f485b85e3c0e950dd4a72",
+                "srcKUID": "dc71668cc16f4695981806296357819d",
+                "wType": "Button"
+            }
+        },
+        "btnResizeMenu": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "de9b8a8bc9384502b6a513c043cb3c15",
+                "srcKUID": "b78ca6f9cd4742d8b6d55eda7606510c",
+                "wType": "Button"
+            }
+        },
+        "imgLogout": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "jec0acbf488240e284e70124af2079b3",
+                "srcKUID": "jaa0c3a1c660400285a65a88671ea804",
+                "wType": "Image"
+            },
+            "src": "logout_true.png"
+        },
+        "segMenu": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ea7dc3e496944c53abee99724069a5d1",
+                "srcKUID": "ab971c4c11bb416bac9ad77f0b35493b",
+                "wType": "Segment"
+            },
+            "data": {
+                "desktop": [
+                    {
+                        "imgMenuIcon": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "home_icon.png",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "imgMenuIcon": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "audience_icon.png",
+                            "type": "Image"
+                        }
+                    }
+                ]
+            }
+        },
+        "smallerhamburgermenu": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "c8d6235ff9284606adca4287472dea77",
+                "srcKUID": "bfbe8f5520c44ccc8b1717d6cf7e95af",
+                "wType": "FlexContainer"
+            },
+            "isVisible": false,
+            "responsiveData": {}
+        }
+    },
+    "enablescrolling": true,
+    "id": "smallerhamburgermenu",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": false,
+    "kuid": "c8d6235ff9284606adca4287472dea77",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxContainerChannelCreation",
+    "pf": "frmChannelCreation",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "bfbe8f5520c44ccc8b1717d6cf7e95af",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

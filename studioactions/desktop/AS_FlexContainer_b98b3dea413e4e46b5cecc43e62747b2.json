@@ -1,0 +1,55 @@
+{
+    "AS_FlexContainer_b98b3dea413e4e46b5cecc43e62747b2": {
+        "id": "AS_FlexContainer_b98b3dea413e4e46b5cecc43e62747b2",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "aebe53b0f0bf48f6bf5474bb02558d0a"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "LOADING_INDICATOR_ide_preShow_ea5181e1ddd34d179c4691dd7e9fa48d",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Fetching users ..."
+        }, {
+            "id": "INVOKE_OBJECT_SERVICE_ide_preShow_h688432e05d7403591280c87d26f8735",
+            "type": "INVOKE_OBJECT_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": null,
+            "isoffline": null,
+            "isobject": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "UsersStorage",
+                "type": "objectsvcs",
+                "objectname": "User",
+                "serviceid": "58825cb5-6fd0-41c8-b2c0-256e853449ff",
+                "methodname": "get"
+            },
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "ADD_MAPPING_ide_preShow_d4f048a0db714568bb1ae340b9c37b6a",
+            "type": "ADD_MAPPING",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "INVOKE_OBJECT_SERVICE_ide_preShow_h688432e05d7403591280c87d26f8735",
+            "callbackType": "Callback",
+            "enableMappingEditor": true
+        }]
+    }
+}

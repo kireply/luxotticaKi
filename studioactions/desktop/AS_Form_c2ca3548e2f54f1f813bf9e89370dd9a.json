@@ -1,0 +1,19 @@
+{
+    "AS_Form_c2ca3548e2f54f1f813bf9e89370dd9a": {
+        "id": "AS_Form_c2ca3548e2f54f1f813bf9e89370dd9a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmChannelCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b995d95be2ee4d2181bb89391aa35ffb"
+        },
+        "language": "js",
+        "eventType": "preShow",
+        "actions": []
+    }
+}

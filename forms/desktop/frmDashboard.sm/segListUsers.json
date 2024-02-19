@@ -1,0 +1,705 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_data_": [
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        },
+        {
+            "imgDeleteUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "delete.png"
+            },
+            "imgEditUser": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "pen.png"
+            },
+            "lblUserID": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Name"
+            },
+            "lblUserPassword": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "ID"
+            },
+            "lblUserSurname": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Surname"
+            },
+            "lblUserUsername": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "Email"
+            }
+        }
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "700dp"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "200dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "counter": "019",
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segListUsers",
+    "ide_onRowClick": "AS_Segment_b90c993bb8bd4c4c9374c26aee2605b5",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "j6ac8b2b279b4ccaac1620771e438fa6",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flxMainContentDashboard",
+    "pf": "frmDashboard",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowTemplateId": "f63a9c61bf664ac698bf57c1292899cb",
+    "rowcounter": 19,
+    "rowfocusskin": "s6e7f07455ec411fbcf9e06217636f94",
+    "rowskin": "sc4f7e6361364d3f810bc500daa8a11e",
+    "rowtemplate": "flxRowUserGrid",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionHeaderTemplateId": null,
+    "sectionheaderskin": "s64f2a4ab45b4b1fb87d6b6429f052a8",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorrequired": true,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxRowUserGrid": "flxRowUserGrid",
+        "imgDeleteUser": "imgDeleteUser",
+        "imgEditUser": "imgEditUser",
+        "lblUserID": "lblUserID",
+        "lblUserName": "lblUserName",
+        "lblUserPassword": "lblUserPassword",
+        "lblUserSurname": "lblUserSurname",
+        "lblUserUsername": "lblUserUsername"
+    }
+}

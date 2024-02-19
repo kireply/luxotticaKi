@@ -1,0 +1,23 @@
+{
+    "AS_Form_ed2db3a77e0f443eb3dd2eb2ec0407bf": {
+        "id": "AS_Form_ed2db3a77e0f443eb3dd2eb2ec0407bf",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmEditUser",
+            "type": "forms",
+            "platform": "",
+            "KUID": "f083813d2c09432d9f3d793de344cf37"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_h65bde80efa845939caf94442217e1df",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if ((this.getPreviousForm() === \"frmDashboard\") && this.navigationContext && this.navigationContext._meta_ && (this.navigationContext._meta_.widgetId === \"segListUsers\") && (this.navigationContext._meta_.eventName === \"onRowClick\")) {\n  this.view.addoredituser.txtName.text = gblUserName;\n}",
+            "parentId": null
+        }]
+    }
+}

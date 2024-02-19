@@ -1,0 +1,32 @@
+{
+    "AS_Image_baa467cff7eb45bda364b3199218ab43": {
+        "id": "AS_Image_baa467cff7eb45bda364b3199218ab43",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowUserGrid",
+            "type": "templates",
+            "platform": "",
+            "KUID": "f63a9c61bf664ac698bf57c1292899cb"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_f4b79991540b4d35a50a6ef2772ec013",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var x = new voltmx.mvc.Navigation(frmEditUser);\nx.navigate();",
+            "parentId": null
+        }]
+    }
+}

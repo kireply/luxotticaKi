@@ -1,0 +1,296 @@
+{
+    "AS_Form_e6294b3282f14f1dbfc1c85aaea6b7cc": {
+        "id": "AS_Form_e6294b3282f14f1dbfc1c85aaea6b7cc",
+        "type": "ACTION_SEQUENCE",
+        "name": "onPreShowHandlerForFrmDashboard",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmDashboard",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b164a58fab0f47b1b2023b479f06502d"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "LOADING_INDICATOR_he87b9c280dc4c1b911921a09cc17a13",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Fetching users ..."
+        }, {
+            "id": "INVOKE_SERVICE_fa02b2e3af6f440d8ee8b94954ebdf78",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "USER_get",
+                "operationid": "115558"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "disabled": true
+        }, {
+            "id": "ADD_SNIPPET_j369b9cedd8947d49f03ea7d6c4d6e4f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.flxMainContentDashboard.segListUsers.widgetDataMap = {\"lblUserName\":\"Name\", \"lblUserSurname\":\"Surname\", \"lblUserUsername\":\"Mail\", \"lblUserMatricola\":\"UserID\"};",
+            "parentId": "INVOKE_SERVICE_fa02b2e3af6f440d8ee8b94954ebdf78",
+            "callbackType": "Callback",
+            "disabled": true
+        }, {
+            "id": "ADD_MAPPING_b8492f38f9d24e239e280606a42977c5",
+            "type": "ADD_MAPPING",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "INVOKE_SERVICE_fa02b2e3af6f440d8ee8b94954ebdf78",
+            "callbackType": "Callback",
+            "enableMappingEditor": true,
+            "disabled": true
+        }, {
+            "id": "LOADING_INDICATOR_i00ab733c05c44ec96502ea233a74c18",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_SERVICE_fa02b2e3af6f440d8ee8b94954ebdf78",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_g4b050dd609b4a4ca53a2d8f3fabd264",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "USER_get !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "USER_get.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_fa02b2e3af6f440d8ee8b94954ebdf78",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_a67039d6b6874e5cb1621f72667f63a2",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_fa02b2e3af6f440d8ee8b94954ebdf78",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_jea8d46564c94fa9a6da8fda8b837fc3",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Error occurred in Foundry layer while fetching users. OPSTATUS: \"+USER_get.opstatus);",
+            "parentId": "_a67039d6b6874e5cb1621f72667f63a2",
+            "callbackType": null
+        }, {
+            "id": "_c2ceda63e7bf413cb1f332cc3b33336e",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "USER_get.USER !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "USER_get.USER.length > 0"
+            }],
+            "parentId": "_g4b050dd609b4a4ca53a2d8f3fabd264",
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_f5a516dc972d40d3951bc5537a425704",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "_g4b050dd609b4a4ca53a2d8f3fabd264",
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_b0b9768b9ac74690bb155d42f863668f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### No users returned.\");",
+            "parentId": "_f5a516dc972d40d3951bc5537a425704",
+            "callbackType": null
+        }, {
+            "id": "ADD_MAPPING_c56d58e6b1694a45addd6a91f6484ab7",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_e393a6186f6b43a28e03b8afd753e79d": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e393a6186f6b43a28e03b8afd753e79d",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "USER",
+                        "dataType": "collection",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "USER_get",
+                            "operationid": "115558"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "rowData",
+                        "widgetId": "segListUsers",
+                        "widgetPath": "this.view.segListUsers",
+                        "widgetType": "Segment",
+                        "dataType": "collection",
+                        "itemId": "frmDashboard",
+                        "collectionId": "masterdata",
+                        "widgetKUID": "j6ac8b2b279b4ccaac1620771e438fa6",
+                        "itemKUID": "b164a58fab0f47b1b2023b479f06502d",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_d9b553a834354813acd6834b4f7ca628": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d9b553a834354813acd6834b4f7ca628",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "name",
+                        "dataType": "string",
+                        "collectionId": "USER",
+                        "propertyPath": "[\"USER\"][0][\"name\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "USER_get",
+                            "operationid": "115558"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblUserName",
+                        "widgetPath": "this.view.lblUserName",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmDashboard",
+                        "parentMappingId": "ME_Mapping_e393a6186f6b43a28e03b8afd753e79d",
+                        "segmentId": "segListUsers",
+                        "segmentKUID": "j6ac8b2b279b4ccaac1620771e438fa6",
+                        "widgetKUID": "ccf710b1280f49cc9da307b66253ae83",
+                        "itemKUID": "b164a58fab0f47b1b2023b479f06502d",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_d559272763944f308f06dc9dac37d57b": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d559272763944f308f06dc9dac37d57b",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "surname",
+                        "dataType": "string",
+                        "collectionId": "USER",
+                        "propertyPath": "[\"USER\"][0][\"surname\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "USER_get",
+                            "operationid": "115558"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblUserSurname",
+                        "widgetPath": "this.view.lblUserSurname",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmDashboard",
+                        "parentMappingId": "ME_Mapping_e393a6186f6b43a28e03b8afd753e79d",
+                        "segmentId": "segListUsers",
+                        "segmentKUID": "j6ac8b2b279b4ccaac1620771e438fa6",
+                        "widgetKUID": "gd549d02c3a74050b51447324ca37cba",
+                        "itemKUID": "b164a58fab0f47b1b2023b479f06502d",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_ff252367c68442cf91acd4a8da664641": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ff252367c68442cf91acd4a8da664641",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "email",
+                        "dataType": "string",
+                        "collectionId": "USER",
+                        "propertyPath": "[\"USER\"][0][\"email\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "USER_get",
+                            "operationid": "115558"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblUserUsername",
+                        "widgetPath": "this.view.lblUserUsername",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmDashboard",
+                        "parentMappingId": "ME_Mapping_e393a6186f6b43a28e03b8afd753e79d",
+                        "segmentId": "segListUsers",
+                        "segmentKUID": "j6ac8b2b279b4ccaac1620771e438fa6",
+                        "widgetKUID": "j759db4907b64714a4992b1e5d92c2e8",
+                        "itemKUID": "b164a58fab0f47b1b2023b479f06502d",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_e393a6186f6b43a28e03b8afd753e79d", "ME_Mapping_d9b553a834354813acd6834b4f7ca628", "ME_Mapping_d559272763944f308f06dc9dac37d57b", "ME_Mapping_ff252367c68442cf91acd4a8da664641"],
+            "parentId": "_c2ceda63e7bf413cb1f332cc3b33336e",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }]
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "AS_Form_j1a7510365ef4016964a4fea67843c2d": {
+        "id": "AS_Form_j1a7510365ef4016964a4fea67843c2d",
+        "type": "ACTION_SEQUENCE",
+        "name": "onPostShowHandlerForFrmEditUser",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmEditUser",
+            "type": "forms",
+            "platform": "",
+            "KUID": "f083813d2c09432d9f3d793de344cf37"
+        },
+        "language": "js",
+        "eventType": "postShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_g9e5803da9e94137a9bfc31c3f71e22d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "const contact = this.navigationContext;\nvoltmx.print (\"### DATI PASSATI: \" + contact);",
+            "parentId": null,
+            "callbackType": null,
+            "disabled": true
+        }]
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "AS_FlexContainer_c4c1d0b58d2b4a048a341e9e3335476c": {
+        "id": "AS_FlexContainer_c4c1d0b58d2b4a048a341e9e3335476c",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmListOfFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "eb022b1d9c014130ba2ac8b4b6c5f93a"
+        },
+        "language": "js",
+        "eventType": "preShow",
+        "actions": []
+    }
+}

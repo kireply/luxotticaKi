@@ -1,0 +1,23 @@
+{
+    "AS_Form_g64f0af8729b46da97ebaa37f9bcfd7a": {
+        "id": "AS_Form_g64f0af8729b46da97ebaa37f9bcfd7a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": "",
+            "KUID": "f25d692cb3b14edea7ce9daf0340921f"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_cceeb1e3ab344ac1823331d99ec27dc1",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if ((this.getPreviousForm() === \"frmDashboard\") && this.navigationContext && this.navigationContext._meta_ && (this.navigationContext._meta_.widgetId === \"segListUsers\") && (this.navigationContext._meta_.eventName === \"onRowClick\")) {\n  this.view.txtName.text = gblUserName;\n}",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

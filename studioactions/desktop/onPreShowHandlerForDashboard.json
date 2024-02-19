@@ -1,0 +1,88 @@
+{
+    "AS_FlexContainer_ed0c793483ba4feea60c8763598bfac6": {
+        "id": "AS_FlexContainer_ed0c793483ba4feea60c8763598bfac6",
+        "type": "ACTION_SEQUENCE",
+        "name": "onPreShowHandlerForDashboard",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmDashboard",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b164a58fab0f47b1b2023b479f06502d"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "INVOKE_SERVICE_a87b7fe82b044139ab239e345409dd27",
+            "type": "INVOKE_OBJECT_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": null,
+            "isoffline": null,
+            "isobject": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "UsersStorage",
+                "type": "objectsvcs",
+                "objectname": "User",
+                "serviceid": "58825cb5-6fd0-41c8-b2c0-256e853449ff",
+                "methodname": "get"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "ADD_SNIPPET_eb23be9204b243258bb56c0a704dd2d4",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.segListUsers.widgetDataMap = {\"lblUserName\":\"Name\", \"lblUserSurname\":\"Surname\", \"lblUserUsername\":\"Mail\", \"lblUserId\":\"UserID\"};",
+            "parentId": "INVOKE_SERVICE_a87b7fe82b044139ab239e345409dd27",
+            "callbackType": "Callback"
+        }, {
+            "id": "ADD_MAPPING_ia7c37a497134705a35a33d7206e668e",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_aea3317cda9d49a2bc85e92a01b3f1c9": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_aea3317cda9d49a2bc85e92a01b3f1c9",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "records",
+                        "dataType": "collection",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "UsersStorage",
+                            "type": "objectsvcs",
+                            "objectname": "User",
+                            "serviceid": "58825cb5-6fd0-41c8-b2c0-256e853449ff",
+                            "methodname": "get"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "sectionData",
+                        "widgetId": "segListUsers",
+                        "widgetPath": "this.view.segListUsers",
+                        "widgetType": "Segment",
+                        "dataType": "collection",
+                        "itemId": "frmDashboard",
+                        "collectionId": "masterdata",
+                        "widgetKUID": "j6ac8b2b279b4ccaac1620771e438fa6",
+                        "itemKUID": "b164a58fab0f47b1b2023b479f06502d",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_aea3317cda9d49a2bc85e92a01b3f1c9"],
+            "parentId": "INVOKE_SERVICE_a87b7fe82b044139ab239e345409dd27",
+            "callbackType": "Callback",
+            "enableMappingEditor": true
+        }]
+    }
+}

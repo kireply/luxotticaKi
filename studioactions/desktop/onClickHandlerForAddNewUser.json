@@ -1,0 +1,32 @@
+{
+    "AS_Button_da98b776e37748c2bcd84cbf918aff6d": {
+        "id": "AS_Button_da98b776e37748c2bcd84cbf918aff6d",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForAddNewUser",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmDashboard",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b164a58fab0f47b1b2023b479f06502d"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "NAVIGATE_TO_FORM__e1575b6e3ebc40f59a51bbdf05082551",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmAddUser",
+            "formKUID": "h902c48427904d6bb5bbba3458b3d375",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }]
+    }
+}

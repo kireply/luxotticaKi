@@ -1,0 +1,30 @@
+{
+    "AS_Button_b2bc668d395b410abb1da8eea69e6268": {
+        "id": "AS_Button_b2bc668d395b410abb1da8eea69e6268",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": "",
+            "KUID": "a8aa5bc1c1ab4237a435dcd251e1625c"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "NAVIGATE_TO_FORM__c184a6278e8348f8a3ec7a6062ce5506",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmEditUser",
+            "formKUID": "f083813d2c09432d9f3d793de344cf37",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "enableMappingEditor": true,
+            "package": "",
+            "enableNavigationObj": true,
+            "navigationObj": "{\n    \"_meta_\": {\n        \"eventName\": \"\",\n        \"widgetId\": \"\"\n    }\n}",
+            "isCustomInput": false
+        }]
+    }
+}

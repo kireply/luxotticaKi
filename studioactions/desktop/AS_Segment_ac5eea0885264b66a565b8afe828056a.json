@@ -1,0 +1,137 @@
+{
+    "AS_Segment_ac5eea0885264b66a565b8afe828056a": {
+        "id": "AS_Segment_ac5eea0885264b66a565b8afe828056a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "name": "frmDashboard",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b164a58fab0f47b1b2023b479f06502d"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_g3182bf541664f5d9103107bd27980c2",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Riga cliccata\");",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "NAVIGATE_TO_FORM__f5a001fc7c7042e69bd636fb42feb940",
+            "type": "NAVIGATE_TO_FORM",
+            "formKUID": "a8aa5bc1c1ab4237a435dcd251e1625c",
+            "mappings": {
+                "ME_Mapping_dde411d1f83e4151b3d585db9a056c8d": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_dde411d1f83e4151b3d585db9a056c8d",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "lblUserName",
+                        "propertyKey": "segListUsers_lblUserName",
+                        "widgetId": "segListUsers",
+                        "widgetPath": "this.view.segListUsers",
+                        "widgetType": "Segment",
+                        "dataType": "string",
+                        "itemId": "frmDashboard",
+                        "collectionId": "selectedRowItems",
+                        "widgetKUID": "j6ac8b2b279b4ccaac1620771e438fa6",
+                        "itemKUID": "b164a58fab0f47b1b2023b479f06502d",
+                        "forkedPlatform": "all",
+                        "segmentChildInfo": {
+                            "kuid": "ccf710b1280f49cc9da307b66253ae83",
+                            "widgetType": "Label",
+                            "widgetPath": "this.view.lblUserName"
+                        }
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_c3f80080665048a4a39c74375b152a2c": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_c3f80080665048a4a39c74375b152a2c",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "lblUserSurname",
+                        "propertyKey": "segListUsers_lblUserSurname",
+                        "widgetId": "segListUsers",
+                        "widgetPath": "this.view.segListUsers",
+                        "widgetType": "Segment",
+                        "dataType": "string",
+                        "itemId": "frmDashboard",
+                        "collectionId": "selectedRowItems",
+                        "widgetKUID": "j6ac8b2b279b4ccaac1620771e438fa6",
+                        "itemKUID": "b164a58fab0f47b1b2023b479f06502d",
+                        "forkedPlatform": "all",
+                        "segmentChildInfo": {
+                            "kuid": "gd549d02c3a74050b51447324ca37cba",
+                            "widgetType": "Label",
+                            "widgetPath": "this.view.lblUserSurname"
+                        }
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_aee7764c653a4c4d94bfcc988aa82409": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_aee7764c653a4c4d94bfcc988aa82409",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "lblUserUsername",
+                        "propertyKey": "segListUsers_lblUserUsername",
+                        "widgetId": "segListUsers",
+                        "widgetPath": "this.view.segListUsers",
+                        "widgetType": "Segment",
+                        "dataType": "string",
+                        "itemId": "frmDashboard",
+                        "collectionId": "selectedRowItems",
+                        "widgetKUID": "j6ac8b2b279b4ccaac1620771e438fa6",
+                        "itemKUID": "b164a58fab0f47b1b2023b479f06502d",
+                        "forkedPlatform": "all",
+                        "segmentChildInfo": {
+                            "kuid": "j759db4907b64714a4992b1e5d92c2e8",
+                            "widgetType": "Label",
+                            "widgetPath": "this.view.lblUserUsername"
+                        }
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_dde411d1f83e4151b3d585db9a056c8d", "ME_Mapping_c3f80080665048a4a39c74375b152a2c", "ME_Mapping_aee7764c653a4c4d94bfcc988aa82409"],
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "enableNavigationObj": true,
+            "navigationObj": "{\n    \"segListUsers_lblUserName\": voltmx.visualizer.getPropertyValue(self.view.segListUsers.selectedRowItems[0][\"lblUserName\"], \"text\"),\n    \"segListUsers_lblUserSurname\": voltmx.visualizer.getPropertyValue(self.view.segListUsers.selectedRowItems[0][\"lblUserSurname\"], \"text\"),\n    \"segListUsers_lblUserUsername\": voltmx.visualizer.getPropertyValue(self.view.segListUsers.selectedRowItems[0][\"lblUserUsername\"], \"text\"),\n    \"_meta_\": {\n        \"eventName\": \"\",\n        \"widgetId\": \"\"\n    }\n}",
+            "isCustomInput": false
+        }, {
+            "id": "ADD_SNIPPET_f35e26f433bd484d99ed34cabe8dc9fa",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Sono uscito da navigate to form\");",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

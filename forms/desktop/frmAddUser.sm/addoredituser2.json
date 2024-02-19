@@ -1,0 +1,132 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "addoredituser2": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "i38dfca959c54bd09e262e1737d05c9a",
+                "srcKUID": "g236eb3c6baa409e93b0df3a81440988",
+                "wType": "FlexContainer"
+            }
+        },
+        "btnAddEdit": {
+            "__events__": {
+                "ide_onClick": "AS_Button_e3c879dd49cd4371b44f6c6dc2d6053a"
+            },
+            "__info__": {
+                "kuid": "a66ba64467e84212bb1ea69c300ec462",
+                "srcKUID": "i96d52271fa042abae2accdb2961ca7c",
+                "wType": "Button"
+            }
+        },
+        "flxMainCompileUser": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "c2f81702a27249ed80233b83448821ad",
+                "srcKUID": "d18e0d97d1474117b2e86775d8a97d57",
+                "wType": "FlexContainer"
+            }
+        },
+        "lblTitle": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "h936f52ce51c42a3a393f8df183e947c",
+                "srcKUID": "b6f7312dc2894e4faba70716da0b0c55",
+                "wType": "Label"
+            },
+            "responsiveData": {},
+            "text": "Add User"
+        },
+        "txtCompileUserEmail": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "c0e515abaddf43488b5fefd9881466d2",
+                "srcKUID": "j81c4cfd20064f33a2dc4fb4f3f95c0a",
+                "wType": "TextField"
+            }
+        },
+        "txtCompileUserPassword": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "jbfa93815a4a488ea2429415837badc9",
+                "srcKUID": "b1b8c4124fa241f0b6009729d4d89eda",
+                "wType": "TextField"
+            }
+        },
+        "txtName": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "g3952d65a70b4af7850251ffbdf3d8a2",
+                "srcKUID": "jdb927c26b484144a1727189a610e467",
+                "wType": "TextField"
+            }
+        },
+        "txtSurname": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "f5a3e4838e99480fb50f95a74039c97a",
+                "srcKUID": "cf8528204bda41fdbc4d399a9d1f1f65",
+                "wType": "TextField"
+            }
+        }
+    },
+    "enablescrolling": true,
+    "id": "addoredituser2",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": true,
+    "kuid": "i38dfca959c54bd09e262e1737d05c9a",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "frmAddUser",
+    "pf": "frmAddUser",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "g236eb3c6baa409e93b0df3a81440988",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

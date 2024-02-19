@@ -1,0 +1,137 @@
+{
+    "models": {
+        "desktop": {
+            "1366": {
+                "class": "GraphLinksModel",
+                "linkDataArray": [
+                    {
+                        "actionId": "NAVIGATE_TO_FORM__e1575b6e3ebc40f59a51bbdf05082551",
+                        "actionSequenceId": "AS_Button_da98b776e37748c2bcd84cbf918aff6d",
+                        "beautifiedPath": "frmDashboard > btnAddUser > onClick",
+                        "evt": "ide_onClick",
+                        "from": "b164a58fab0f47b1b2023b479f06502d",
+                        "isPSP": false,
+                        "points": [
+                            146.6,
+                            524.8452636718749,
+                            146.6,
+                            514.8452636718749,
+                            146.6,
+                            514.8452636718749,
+                            146.6,
+                            514.8452636718749,
+                            146.6,
+                            218.845263671875,
+                            146.6,
+                            208.845263671875
+                        ],
+                        "to": "h902c48427904d6bb5bbba3458b3d375",
+                        "widgetKUID": "d903f0be04494548bd5f9ed6c7793e79"
+                    },
+                    {
+                        "actionId": "NAVIGATE_TO_FORM__f5a001fc7c7042e69bd636fb42feb940",
+                        "actionSequenceId": "AS_Segment_ac5eea0885264b66a565b8afe828056a",
+                        "beautifiedPath": "frmDashboard > segListUsers > onRowClick",
+                        "evt": "ide_onRowClick",
+                        "from": "b164a58fab0f47b1b2023b479f06502d",
+                        "isPSP": false,
+                        "points": [
+                            192.8,
+                            708.8452636718749,
+                            192.8,
+                            726.8452636718749,
+                            192.8,
+                            726.8452636718749,
+                            300,
+                            726.8452636718749,
+                            300,
+                            1772,
+                            146.6,
+                            1772,
+                            146.6,
+                            2014.8452636718753,
+                            146.6,
+                            2024.8452636718753
+                        ],
+                        "to": "f25d692cb3b14edea7ce9daf0340921f",
+                        "widgetKUID": "j6ac8b2b279b4ccaac1620771e438fa6"
+                    },
+                    {
+                        "actionId": "NAVIGATE_TO_FORM__eac88d53c7f9438d8a7aea140fdaa388",
+                        "actionSequenceId": "AS_Button_ib6896ab65fa46aaae953a950c2c3745",
+                        "beautifiedPath": "frmLogin > btnLogin > onClick",
+                        "evt": "ide_onClick",
+                        "from": "hc1489bebc2c4f38b8ba6309c7ed6c02",
+                        "isPSP": false,
+                        "points": [
+                            146.6,
+                            1024.845263671875,
+                            146.6,
+                            1014.845263671875,
+                            146.6,
+                            1012,
+                            146.6,
+                            1012,
+                            146.6,
+                            988,
+                            196,
+                            988,
+                            196,
+                            724,
+                            100.4,
+                            724,
+                            100.4,
+                            726.8452636718749,
+                            100.4,
+                            708.8452636718749
+                        ],
+                        "to": "b164a58fab0f47b1b2023b479f06502d",
+                        "widgetKUID": "a24457ee33af4a0daa5e9f4c6abc30bf"
+                    }
+                ],
+                "nodeDataArray": [
+                    {
+                        "formKUID": "h902c48427904d6bb5bbba3458b3d375",
+                        "formName": "frmAddUser",
+                        "isStartupForm": false,
+                        "key": "h902c48427904d6bb5bbba3458b3d375",
+                        "loc": "8 24.845263671875003",
+                        "thumbnailURL": "/assets/luxotticaKi/forms/desktop/frmAddUser.sm/.thumbs/1366.jpeg"
+                    },
+                    {
+                        "formKUID": "b164a58fab0f47b1b2023b479f06502d",
+                        "formName": "frmDashboard",
+                        "isStartupForm": false,
+                        "key": "b164a58fab0f47b1b2023b479f06502d",
+                        "loc": "8 524.8452636718749",
+                        "thumbnailURL": "/assets/luxotticaKi/forms/desktop/frmDashboard.sm/.thumbs/1366.jpeg"
+                    },
+                    {
+                        "formKUID": "hc1489bebc2c4f38b8ba6309c7ed6c02",
+                        "formName": "frmLogin",
+                        "isStartupForm": true,
+                        "key": "hc1489bebc2c4f38b8ba6309c7ed6c02",
+                        "loc": "8 1024.845263671875",
+                        "thumbnailURL": null
+                    },
+                    {
+                        "formKUID": "f083813d2c09432d9f3d793de344cf37",
+                        "formName": "frmEditUser",
+                        "isStartupForm": false,
+                        "key": "f083813d2c09432d9f3d793de344cf37",
+                        "loc": "8 1524.845263671875",
+                        "thumbnailURL": null
+                    },
+                    {
+                        "formKUID": "f25d692cb3b14edea7ce9daf0340921f",
+                        "formName": "CopyfrmEditUser",
+                        "isStartupForm": false,
+                        "key": "f25d692cb3b14edea7ce9daf0340921f",
+                        "loc": "8 2024.8452636718753",
+                        "thumbnailURL": null
+                    }
+                ]
+            }
+        }
+    }
+}

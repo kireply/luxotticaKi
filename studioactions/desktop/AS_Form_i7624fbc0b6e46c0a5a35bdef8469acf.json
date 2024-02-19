@@ -1,0 +1,61 @@
+{
+    "AS_Form_i7624fbc0b6e46c0a5a35bdef8469acf": {
+        "id": "AS_Form_i7624fbc0b6e46c0a5a35bdef8469acf",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "type": "forms",
+            "platform": null,
+            "KUID": "a8aa5bc1c1ab4237a435dcd251e1625c"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "_f64a5dc835634166bef250fc4ba2c905",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "navigationsource",
+                "leftValue": "(this.getPreviousForm() === \"frmDashboard\") && this.navigationContext && this.navigationContext._meta_ && (this.navigationContext._meta_.widgetId ===  \"segListUsers\") && (this.navigationContext._meta_.eventName ===  \"onRowClick\")",
+                "operator": "===",
+                "rightValue": "",
+                "leftItemKUID": "b164a58fab0f47b1b2023b479f06502d",
+                "leftWidgetKUID": "j6ac8b2b279b4ccaac1620771e438fa6",
+                "sequenceId": "AS_Segment_ac5eea0885264b66a565b8afe828056a",
+                "eventName": "onRowClick",
+                "widgetId": "segListUsers"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_db03e91a1e9447c6b72df0276f037b75",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_f8b029178bc0491d9c132b49305df56f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"Nope\");",
+            "parentId": "_db03e91a1e9447c6b72df0276f037b75",
+            "callbackType": null
+        }, {
+            "id": "ADD_MAPPING_fdab3a0d763142f7a9b4d5a25bd4979c",
+            "type": "ADD_MAPPING",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_f64a5dc835634166bef250fc4ba2c905",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }]
+    }
+}

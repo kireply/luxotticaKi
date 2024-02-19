@@ -1,0 +1,30 @@
+{
+    "AS_Button_ded32913532b46e6b87d4411d00536c8": {
+        "id": "AS_Button_ded32913532b46e6b87d4411d00536c8",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmDashboard",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b164a58fab0f47b1b2023b479f06502d"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "NAVIGATE_TO_FORM__i7ede94193d04fc593122761807a2ff2",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmDeleteUser",
+            "formKUID": "ced7a225779d43028086b1ceb5004406",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }]
+    }
+}
