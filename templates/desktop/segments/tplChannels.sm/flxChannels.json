@@ -37,7 +37,10 @@
     "children": [
         "imgLogo",
         "lblChannelInfo",
-        "Image0hca7a0ddbbac42"
+        "imgInfo",
+        "lblChannelId",
+        "lblChannelName",
+        "lblChannelProperties"
     ],
     "clipbounds": false,
     "containerId": true,

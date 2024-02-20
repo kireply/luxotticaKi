@@ -45,6 +45,31 @@
                 "kuid": "if593ee7a799435585b718ceff6b27fd",
                 "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
                 "wType": "Button"
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "64.87%"
+                }
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "30%"
+                }
+            },
+            "responsiveData": {},
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "690dp"
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "110%"
+                }
             }
         },
         "btnResizeMenu": {
@@ -57,9 +82,10 @@
             "left": {
                 "Default": {
                     "type": "string",
-                    "value": "244dp"
+                    "value": "120%"
                 }
             },
+            "responsiveData": {},
             "width": {
                 "Default": {
                     "type": "string",

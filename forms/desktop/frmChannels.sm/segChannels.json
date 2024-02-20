@@ -7,143 +7,263 @@
     },
     "_data_": [
         {
-            "Image0hca7a0ddbbac42": {
+            "imgInfo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
+                "src": "info_icon.png"
             },
             "imgLogo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "imagedrag.png"
             },
+            "lblChannelId": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelId"
+            },
             "lblChannelInfo": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "channelInfo"
+            },
+            "lblChannelName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperties"
+            },
+            "lblChannelProperties": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperies"
             }
         },
         {
-            "Image0hca7a0ddbbac42": {
+            "imgInfo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
+                "src": "info_icon.png"
             },
             "imgLogo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "imagedrag.png"
             },
+            "lblChannelId": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelId"
+            },
             "lblChannelInfo": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "channelInfo"
+            },
+            "lblChannelName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperties"
+            },
+            "lblChannelProperties": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperies"
             }
         },
         {
-            "Image0hca7a0ddbbac42": {
+            "imgInfo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
+                "src": "info_icon.png"
             },
             "imgLogo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "imagedrag.png"
             },
+            "lblChannelId": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelId"
+            },
             "lblChannelInfo": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "channelInfo"
+            },
+            "lblChannelName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperties"
+            },
+            "lblChannelProperties": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperies"
             }
         },
         {
-            "Image0hca7a0ddbbac42": {
+            "imgInfo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
+                "src": "info_icon.png"
             },
             "imgLogo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "imagedrag.png"
             },
+            "lblChannelId": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelId"
+            },
             "lblChannelInfo": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "channelInfo"
+            },
+            "lblChannelName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperties"
+            },
+            "lblChannelProperties": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperies"
             }
         },
         {
-            "Image0hca7a0ddbbac42": {
+            "imgInfo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
+                "src": "info_icon.png"
             },
             "imgLogo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "imagedrag.png"
             },
+            "lblChannelId": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelId"
+            },
             "lblChannelInfo": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "channelInfo"
+            },
+            "lblChannelName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperties"
+            },
+            "lblChannelProperties": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperies"
             }
         },
         {
-            "Image0hca7a0ddbbac42": {
+            "imgInfo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
+                "src": "info_icon.png"
             },
             "imgLogo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "imagedrag.png"
             },
+            "lblChannelId": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelId"
+            },
             "lblChannelInfo": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "channelInfo"
+            },
+            "lblChannelName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperties"
+            },
+            "lblChannelProperties": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperies"
             }
         },
         {
-            "Image0hca7a0ddbbac42": {
+            "imgInfo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
+                "src": "info_icon.png"
             },
             "imgLogo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "imagedrag.png"
             },
+            "lblChannelId": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelId"
+            },
             "lblChannelInfo": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "channelInfo"
+            },
+            "lblChannelName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperties"
+            },
+            "lblChannelProperties": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperies"
             }
         },
         {
-            "Image0hca7a0ddbbac42": {
+            "imgInfo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
+                "src": "info_icon.png"
             },
             "imgLogo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "imagedrag.png"
             },
+            "lblChannelId": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelId"
+            },
             "lblChannelInfo": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "channelInfo"
+            },
+            "lblChannelName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperties"
+            },
+            "lblChannelProperties": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperies"
             }
         },
         {
-            "Image0hca7a0ddbbac42": {
+            "imgInfo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
+                "src": "info_icon.png"
             },
             "imgLogo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "imagedrag.png"
             },
+            "lblChannelId": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelId"
+            },
             "lblChannelInfo": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "channelInfo"
+            },
+            "lblChannelName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperties"
+            },
+            "lblChannelProperties": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperies"
             }
         },
         {
-            "Image0hca7a0ddbbac42": {
+            "imgInfo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
+                "src": "info_icon.png"
             },
             "imgLogo": {
                 "@class": "com.viz.ide.model.segment.ImageSegmentData",
                 "src": "imagedrag.png"
             },
+            "lblChannelId": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelId"
+            },
             "lblChannelInfo": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": "channelInfo"
+            },
+            "lblChannelName": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperties"
+            },
+            "lblChannelProperties": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "lblChannelProperies"
             }
         }
     ],
@@ -224,7 +344,7 @@
     "selectedindex": null,
     "selectedindices": null,
     "selecteditems": null,
-    "selectedsectionindex": null,
+    "selectedsectionindex": 0,
     "selectionbehavior": "default",
     "separatorcolor": "aaaaaa00",
     "separatorrequired": true,
@@ -235,10 +355,13 @@
     "wType": "Segment",
     "widgetalignment": 5,
     "widgetdatamap": {
-        "Image0hca7a0ddbbac42": "Image0hca7a0ddbbac42",
         "flxChannels": "flxChannels",
+        "imgInfo": "imgInfo",
         "imgLogo": "imgLogo",
-        "lblChannelInfo": "lblChannelInfo"
+        "lblChannelId": "lblChannelId",
+        "lblChannelInfo": "lblChannelInfo",
+        "lblChannelName": "lblChannelName",
+        "lblChannelProperties": "lblChannelProperties"
     },
     "zindex": 1
 }

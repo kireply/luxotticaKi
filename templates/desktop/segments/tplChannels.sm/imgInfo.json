@@ -35,7 +35,7 @@
     "canUpdateUI": true,
     "containerId": true,
     "containerweight": 100,
-    "id": "Image0hca7a0ddbbac42",
+    "id": "imgInfo",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",

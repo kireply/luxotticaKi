@@ -62,7 +62,8 @@
                 "kuid": "h030ee029f384a1fa3c50f7aef558473",
                 "srcKUID": "ce610084ab8844ddbb0450d4a5defa74",
                 "wType": "Image"
-            }
+            },
+            "src": "messenger.png"
         },
         "imgLogo": {
             "__events__": {},
@@ -70,6 +71,20 @@
                 "kuid": "i97662dda300419bb4c83862440ad4c7",
                 "srcKUID": "ce7abef35db14993952efc16beeea866",
                 "wType": "Image"
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "10%"
+                }
+            },
+            "responsiveData": {},
+            "src": "pmcnw0j1_400x400.png",
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "5%"
+                }
             }
         },
         "imgNotification": {
@@ -78,7 +93,8 @@
                 "kuid": "f5d0aac7423c4f5697735e492cac0fca",
                 "srcKUID": "id85c820b7a245b8b5e286e743059445",
                 "wType": "Image"
-            }
+            },
+            "src": "notification.png"
         },
         "imgProfile": {
             "__events__": {},
@@ -86,7 +102,8 @@
                 "kuid": "fce78b549fc743b995f3fc1abff8f899",
                 "srcKUID": "eba8d9cafd914ce0b4cbfeef2241d96a",
                 "wType": "Image"
-            }
+            },
+            "src": "user.png"
         }
     },
     "enablescrolling": true,

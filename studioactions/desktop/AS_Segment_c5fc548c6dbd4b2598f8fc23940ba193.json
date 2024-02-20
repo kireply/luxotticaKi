@@ -23,7 +23,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_e9b729613f7a44d488cbcb81f9282c0f",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxPopupChannelInfo.setVisibility(true);",
+            "codeSnippet": "this.view.flxPopupChannelInfo.setVisibility(true);\n\nthis.view.txtChannelID.setEnabled(false);\nthis.view.lbChannelName.setEnabled(false);\nthis.view.txtChannelLogo.setEnabled(false);\nthis.view.txtChannelProperties.setEnabled(false);\n\nvoltmx.print(\"### row click\");\nvar channel = this.view.segChannels.selectedRowItems[0];\nvoltmx.print (\"### selected row - channel: \"+JSON.stringify(channel));\n\nvoltmx.print(\"### channel ID: \" + channel.lblChannelId.text);\nvoltmx.print(\"### channel name: \" + channel.lblChannelName.text);\nvoltmx.print(\"### channel logo: \" + channel.imgLogo.src);\nvoltmx.print(\"### channel properties: \" + channel.lblChannelProperties.text);\n\nthis.view.flxPopupChannelInfo.txtChannelID.text = channel.lblChannelId.text;\nthis.view.flxPopupChannelInfo.txtChannelLogo.text = channel.imgLogo.src;\nthis.view.flxPopupChannelInfo.txtChannelProperties.text = channel.lblChannelProperties.text;\nthis.view.flxPopupChannelInfo.lbChannelName.masterData = [ [\"lb1\", channel.lblChannelName.text] ];\nthis.view.flxPopupChannelInfo.lbChannelName.selectedKey = \"lb1\";\n\nvoltmx.print(\"### finito con l'autocompletamento\");\n\n\n",
             "parentId": null
         }]
     }
