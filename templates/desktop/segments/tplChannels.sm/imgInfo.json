@@ -36,6 +36,8 @@
     "containerId": true,
     "containerweight": 100,
     "id": "imgInfo",
+    "ide_onTouchEnd": "AS_Image_afb3888540234c5d84fa3958bf0d5e31",
+    "ide_onTouchStart": "AS_Image_db6b0c51fca742328dfe001f9bc2be63",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",

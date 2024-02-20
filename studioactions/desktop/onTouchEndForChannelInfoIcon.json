@@ -1,0 +1,34 @@
+{
+    "AS_Image_afb3888540234c5d84fa3958bf0d5e31": {
+        "id": "AS_Image_afb3888540234c5d84fa3958bf0d5e31",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndForChannelInfoIcon",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplChannels",
+            "type": "templates",
+            "platform": "",
+            "KUID": "aba515c415004b8a8053cbb7d8641599"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_d5bc971a011f46858e96d8970b355679",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### cliccata ICONA INFO\");\ngblInfoIcon = \"true\";\nvoltmx.print(\"### finito metodo ICONA INFO\");\nvoltmx.print(\"### var globale icona info \" + gblInfoIcon + \" finish\");",
+            "parentId": null
+        }]
+    }
+}
