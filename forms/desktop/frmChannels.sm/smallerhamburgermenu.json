@@ -48,11 +48,26 @@
             }
         },
         "btnResizeMenu": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_Button_f579013c6e1742b5a7f014a35300171b"
+            },
             "__info__": {
                 "kuid": "fa95c80b007940a8a8e12cce5dcc1996",
                 "srcKUID": "b78ca6f9cd4742d8b6d55eda7606510c",
                 "wType": "Button"
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "70%"
+                }
+            },
+            "responsiveData": {},
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "52dp"
+                }
             }
         },
         "imgLogout": {
@@ -61,7 +76,8 @@
                 "kuid": "bbce73606e094ec5a1d3ca796bcb8982",
                 "srcKUID": "jaa0c3a1c660400285a65a88671ea804",
                 "wType": "Image"
-            }
+            },
+            "src": "logout_true.png"
         },
         "segMenu": {
             "__events__": {},
@@ -69,7 +85,27 @@
                 "kuid": "ga7efdf288aa4bc199c61bab374571f8",
                 "srcKUID": "ab971c4c11bb416bac9ad77f0b35493b",
                 "wType": "Segment"
-            }
+            },
+            "data": {
+                "desktop": [
+                    {
+                        "imgMenuIcon": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "home_icon.png",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "imgMenuIcon": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "audience_icon.png",
+                            "type": "Image"
+                        }
+                    }
+                ]
+            },
+            "isVisible": true,
+            "responsiveData": {}
         },
         "smallerhamburgermenu": {
             "__events__": {},

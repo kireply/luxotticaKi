@@ -24,7 +24,11 @@
         "actions": [{
             "id": "ADD_SNIPPET_beafccf8e49948539b411e12313819c9",
             "type": "ADD_SNIPPET",
+<<<<<<< Updated upstream
             "codeSnippet": "gblInfoIcon = \"false\";\nthis.view.flxPopupChannelInfo.setVisibility(false);",
+=======
+            "codeSnippet": "this.view.flxPopupChannelInfo.setVisibility(false);",
+>>>>>>> Stashed changes
             "parentId": null
         }]
     }

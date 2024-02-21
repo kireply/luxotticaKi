@@ -7,11 +7,7 @@
     },
     "_left_": {
         "type": "string",
-<<<<<<< Updated upstream
-        "value": "21%"
-=======
-        "value": "286dp"
->>>>>>> Stashed changes
+        "value": "240dp"
     },
     "_margin_": [
         1,
@@ -25,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "sc237b7a06d14a4a9d01a638fe3a4309",
-    "_text_": "Select or create your Channel",
+    "_skin_": "s8ea6684d41e4e668cdd38510e1d5ec5",
+    "_text_": "lblChannelProperties",
     "_top_": {
         "type": "string",
-        "value": "140dp"
+        "value": "116dp"
     },
     "_width_": {
         "type": "ref",
@@ -45,7 +41,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblSelectOrCreateChannel",
+    "id": "lblChannelProperties",
     "info": null,
     "ipad": {
         "psp": {
@@ -58,11 +54,11 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "b9531881d4b941e6a44c7a6b4832c2e5",
+    "isvisible": false,
+    "kuid": "fa88e448990e4867b2b57ae0b7ad0ab3",
     "name": "kony.ui.Label",
-    "parent": "fxlContainerChannels",
-    "pf": "frmChannels",
+    "parent": "channelTemplate",
+    "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",

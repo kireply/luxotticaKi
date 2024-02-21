@@ -73,7 +73,9 @@
             }
         },
         "btnResizeMenu": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_Button_e7e2accb6baa4005855eaab5eaa076a9"
+            },
             "__info__": {
                 "kuid": "e6721ab9e71842e8898f87bba90fd5c3",
                 "srcKUID": "g6220a13ecc543cfbd274408555deb6b",

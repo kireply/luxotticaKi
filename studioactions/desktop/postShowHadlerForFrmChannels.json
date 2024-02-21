@@ -27,10 +27,54 @@
         }, {
             "id": "ADD_SNIPPET_g0922421b5ba4376ac12ba1cdb9d2426",
             "type": "ADD_SNIPPET",
+<<<<<<< Updated upstream
+            "codeSnippet": "voltmx.print(\"### sto fetchando i channels\");\n\nvar basicConf = {id : \"buttonForOk\", text:\"OK\", isVisible:true, onClick: voltmx.print(\"finito\"), setEnabled:true, skin: \"btnskn\", focusSkin: \"btnfocusskn\"};\n\nvar layoutConf = {contentAlignment : constants.CONTENT_ALIGN_CENTER, height: \"200dp\", width:\"180dp\", fontSize:70, backgroundColor : \"ffffff\", margin: [2, 2, 15, 15], borderStyle : voltmx.skin.BORDER_STYLE_ROUNDED_CORNER};\n\nvar okButton = new voltmx.ui.Button(basicConf, layoutConf, {});\n\n\nvar basicConf = {id : \"buttonForOk2\", text:\"OKKKKK\", isVisible:true, onClick: voltmx.print(\"finito\"), setEnabled:true, skin: \"btnskn\", focusSkin: \"btnfocusskn\"};\n\nvar layoutConf = {contentAlignment : constants.CONTENT_ALIGN_CENTER, height: \"200dp\", width:\"180dp\", fontSize:70, backgroundColor : \"ffffff\", margin: [2, 2, 15, 15], borderStyle: voltmx.skin.BORDER_STYLE_ROUNDED_CORNER};\n\nvar okButton2 = new voltmx.ui.Button(basicConf, layoutConf, {});\n\n\nfor (i=0; i<2; i++) {\n  if (i===0) {\n    this.view.flxChannels.flxScrollChannels.add(okButton);\n  } else {\n\tthis.view.flxChannels.flxScrollChannels.add(okButton2);\n  }\n \n}\n\n\n\n\n\n",
+            "parentId": null,
+            "callbackType": null
+        }, {
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+            "codeSnippet": "voltmx.print(\"### sto fetchando i channels\");\n\nvar basicConf = {id : \"buttonForOk\", text:\"OK\", isVisible:true, onClick: voltmx.print(\"finito\"), setEnabled:true, skin: \"btnskn\", focusSkin: \"btnfocusskn\"};\n\nvar layoutConf = {contentAlignment : constants.CONTENT_ALIGN_CENTER, height: \"200dp\", width:\"180dp\", fontSize:70, backgroundColor : \"ffffff\", margin: [2, 2, 15, 15], borderStyle : voltmx.skin.BORDER_STYLE_ROUNDED_CORNER};\n\nvar okButton = new voltmx.ui.Button(basicConf, layoutConf, {});\n\n\nvar basicConf = {id : \"buttonForOk2\", text:\"OKKKKK\", isVisible:true, onClick: voltmx.print(\"finito\"), setEnabled:true, skin: \"btnskn\", focusSkin: \"btnfocusskn\"};\n\nvar layoutConf = {contentAlignment : constants.CONTENT_ALIGN_CENTER, height: \"200dp\", width:\"180dp\", fontSize:70, backgroundColor : \"ffffff\", margin: [2, 2, 15, 15], borderStyle: voltmx.skin.BORDER_STYLE_ROUNDED_CORNER};\n\nvar okButton2 = new voltmx.ui.Button(basicConf, layoutConf, {});\n\n\nfor (i=0; i<2; i++) {\n  if (i===0) {\n    this.view.flxChannels.flxScrollChannels.add(okButton);\n  } else {\n\tthis.view.flxChannels.flxScrollChannels.add(okButton2);\n  }\n \n}\n\n\n\n\n\n",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_ed6f081727504843b4396762a4ce20dc",
+            "selectedOption": "dismiss",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+=======
             "codeSnippet": "voltmx.print(\"### sto fetchando i channels\");",
             "parentId": null,
             "callbackType": null
         }, {
+>>>>>>> Stashed changes
+=======
+            "codeSnippet": "voltmx.print(\"### sto fetchando i channels\");\n\nvar basicConf = {id : \"buttonForOk\", text:\"OK\", isVisible:true, onClick: voltmx.print(\"finito\"), setEnabled:true, skin: \"btnskn\", focusSkin: \"btnfocusskn\"};\n\nvar layoutConf = {contentAlignment : constants.CONTENT_ALIGN_CENTER, height: \"200dp\", width:\"180dp\", fontSize:70, backgroundColor : \"ffffff\", margin: [2, 2, 15, 15], borderStyle : voltmx.skin.BORDER_STYLE_ROUNDED_CORNER};\n\nvar okButton = new voltmx.ui.Button(basicConf, layoutConf, {});\n\n\nvar basicConf = {id : \"buttonForOk2\", text:\"OKKKKK\", isVisible:true, onClick: voltmx.print(\"finito\"), setEnabled:true, skin: \"btnskn\", focusSkin: \"btnfocusskn\"};\n\nvar layoutConf = {contentAlignment : constants.CONTENT_ALIGN_CENTER, height: \"200dp\", width:\"180dp\", fontSize:70, backgroundColor : \"ffffff\", margin: [2, 2, 15, 15], borderStyle: voltmx.skin.BORDER_STYLE_ROUNDED_CORNER};\n\nvar okButton2 = new voltmx.ui.Button(basicConf, layoutConf, {});\n\n\nfor (i=0; i<2; i++) {\n  if (i===0) {\n    this.view.flxChannels.flxScrollChannels.add(okButton);\n  } else {\n\tthis.view.flxChannels.flxScrollChannels.add(okButton2);\n  }\n \n}\n\n\n\n\n\n",
+            "parentId": null,
+            "callbackType": null
+        }, {
+>>>>>>> Stashed changes
+            "id": "LOADING_INDICATOR_ed6f081727504843b4396762a4ce20dc",
+            "selectedOption": "dismiss",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+<<<<<<< Updated upstream
+=======
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
             "id": "INVOKE_SERVICE_d8d39e1855bc49a9aab6edc0f7844313",
             "type": "INVOKE_ASYNC_SERVICE",
             "inputparams": null,
@@ -48,11 +92,26 @@
             },
             "parentId": null,
             "callbackType": null,
-            "enableMappingEditor": true
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
+            "enableMappingEditor": true,
+            "disabled": true
         }, {
             "id": "ADD_SNIPPET_g56c3b1b0af347daa472294a0649b4b7",
             "type": "ADD_SNIPPET",
             "codeSnippet": "/*\nthis.view.txtChannelID.setEnabled(false);\nthis.view.lbChannelName.setEnabled(false);\nthis.view.txtChannelLogo.setEnabled(false);\nthis.view.txtChannelProperties.setEnabled(false);\n*/",
+=======
+            "enableMappingEditor": true
+        }, {
+            "id": "ADD_SNIPPET_g56c3b1b0af347daa472294a0649b4b7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.txtChannelID.setEnabled(false);\nthis.view.lbChannelName.setEnabled(false);\nthis.view.txtChannelLogo.setEnabled(false);\nthis.view.txtChannelProperties.setEnabled(false);",
+>>>>>>> Stashed changes
             "parentId": null,
             "callbackType": null
         }, {
@@ -247,6 +306,7 @@
                         "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
                         "forkedPlatform": "all"
                     }
+<<<<<<< Updated upstream
                 },
                 "ME_Mapping_c911a3098bc042319983f159f46d707f": {
                     "channel": "desktop",
@@ -364,6 +424,11 @@
                 }
             },
             "mappingsOrder": ["ME_Mapping_b17e24af83d24987be65e1dcfe8267c4", "ME_Mapping_gebcb60b384b436998a271249ba313ed", "ME_Mapping_cd5217c2aa724909a5ce3b63ec81505b", "ME_Mapping_c911a3098bc042319983f159f46d707f", "ME_Mapping_a8f6ac0fd08e4419a4edbd37e49fe129", "ME_Mapping_j8cafb1f5bf54a298557b51afa750472"],
+=======
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_b17e24af83d24987be65e1dcfe8267c4", "ME_Mapping_gebcb60b384b436998a271249ba313ed", "ME_Mapping_cd5217c2aa724909a5ce3b63ec81505b"],
+>>>>>>> Stashed changes
             "parentId": "_j6c0303f7dca424194c8ab904cfb98a5",
             "callbackType": null,
             "enableMappingEditor": true

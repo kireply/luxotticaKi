@@ -6,7 +6,19 @@
     },
     "_height_": {
         "type": "string",
-        "value": "72%"
+<<<<<<< Updated upstream
+        "value": "74.44%"
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+        "value": "74.44%"
+=======
+        "value": "650dp"
+>>>>>>> Stashed changes
+=======
+        "value": "74.44%"
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     },
     "_margin_": [
         0,
@@ -24,18 +36,54 @@
     "_percent_": true,
     "_right_": {
         "type": "string",
+<<<<<<< Updated upstream
+        "value": "0dp"
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+        "value": "0dp"
+=======
         "value": "0"
+>>>>>>> Stashed changes
+=======
+        "value": "0dp"
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     },
     "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_width_": {
         "type": "string",
+<<<<<<< Updated upstream
+        "value": "79.10%"
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+        "value": "79.10%"
+=======
         "value": "79.06%"
+>>>>>>> Stashed changes
+=======
+        "value": "79.10%"
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
+<<<<<<< Updated upstream
+        "flxScrollChannels"
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+        "flxScrollChannels"
+=======
         "segChannels"
+>>>>>>> Stashed changes
+=======
+        "flxScrollChannels"
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     ],
     "clipbounds": false,
     "containerweight": 100,
@@ -45,7 +93,19 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "c4f6e0ac3279402281cbaf09067f2695",
+<<<<<<< Updated upstream
+    "layouttype": 3,
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+    "layouttype": 3,
+=======
     "layouttype": 2,
+>>>>>>> Stashed changes
+=======
+    "layouttype": 3,
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     "name": "kony.ui.FlexContainer",
     "parent": "fxlContainerChannels",
     "pf": "frmChannels",

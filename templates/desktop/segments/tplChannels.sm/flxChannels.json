@@ -37,10 +37,14 @@
     "children": [
         "imgLogo",
         "lblChannelInfo",
+<<<<<<< Updated upstream
         "imgInfo",
         "lblChannelId",
         "lblChannelName",
         "lblChannelProperties"
+=======
+        "Image0hca7a0ddbbac42"
+>>>>>>> Stashed changes
     ],
     "clipbounds": false,
     "containerId": true,
