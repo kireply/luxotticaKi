@@ -6,272 +6,26 @@
         "value": "0dp"
     },
     "_data_": [
-        {
-            "imgInfo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "info_icon.png"
-            },
-            "imgLogo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblChannelId": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelId"
-            },
-            "lblChannelInfo": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "channelInfo"
-            },
-            "lblChannelName": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperties"
-            },
-            "lblChannelProperties": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperies"
-            }
-        },
-        {
-            "imgInfo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "info_icon.png"
-            },
-            "imgLogo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblChannelId": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelId"
-            },
-            "lblChannelInfo": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "channelInfo"
-            },
-            "lblChannelName": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperties"
-            },
-            "lblChannelProperties": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperies"
-            }
-        },
-        {
-            "imgInfo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "info_icon.png"
-            },
-            "imgLogo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblChannelId": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelId"
-            },
-            "lblChannelInfo": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "channelInfo"
-            },
-            "lblChannelName": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperties"
-            },
-            "lblChannelProperties": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperies"
-            }
-        },
-        {
-            "imgInfo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "info_icon.png"
-            },
-            "imgLogo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblChannelId": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelId"
-            },
-            "lblChannelInfo": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "channelInfo"
-            },
-            "lblChannelName": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperties"
-            },
-            "lblChannelProperties": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperies"
-            }
-        },
-        {
-            "imgInfo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "info_icon.png"
-            },
-            "imgLogo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblChannelId": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelId"
-            },
-            "lblChannelInfo": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "channelInfo"
-            },
-            "lblChannelName": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperties"
-            },
-            "lblChannelProperties": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperies"
-            }
-        },
-        {
-            "imgInfo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "info_icon.png"
-            },
-            "imgLogo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblChannelId": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelId"
-            },
-            "lblChannelInfo": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "channelInfo"
-            },
-            "lblChannelName": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperties"
-            },
-            "lblChannelProperties": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperies"
-            }
-        },
-        {
-            "imgInfo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "info_icon.png"
-            },
-            "imgLogo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblChannelId": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelId"
-            },
-            "lblChannelInfo": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "channelInfo"
-            },
-            "lblChannelName": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperties"
-            },
-            "lblChannelProperties": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperies"
-            }
-        },
-        {
-            "imgInfo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "info_icon.png"
-            },
-            "imgLogo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblChannelId": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelId"
-            },
-            "lblChannelInfo": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "channelInfo"
-            },
-            "lblChannelName": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperties"
-            },
-            "lblChannelProperties": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperies"
-            }
-        },
-        {
-            "imgInfo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "info_icon.png"
-            },
-            "imgLogo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblChannelId": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelId"
-            },
-            "lblChannelInfo": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "channelInfo"
-            },
-            "lblChannelName": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperties"
-            },
-            "lblChannelProperties": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperies"
-            }
-        },
-        {
-            "imgInfo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "info_icon.png"
-            },
-            "imgLogo": {
-                "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                "src": "imagedrag.png"
-            },
-            "lblChannelId": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelId"
-            },
-            "lblChannelInfo": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "channelInfo"
-            },
-            "lblChannelName": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperties"
-            },
-            "lblChannelProperties": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "lblChannelProperies"
-            }
-        }
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
     ],
     "_height_": {
         "type": "string",
         "value": "100%"
     },
     "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
     "_margin_": [
         0,
         0,
@@ -289,6 +43,10 @@
         "type": "string",
         "value": "0dp"
     },
+    "_top_": {
+        "type": "string",
+        "value": "0"
+    },
     "_width_": {
         "type": "string",
         "value": "100%"
@@ -299,10 +57,11 @@
     "counter": "09",
     "focusedindex": null,
     "focuseditem": null,
+    "generatedtemplate": null,
     "groupcells": false,
     "hasSections": false,
     "id": "segChannels",
-    "ide_onRowClick": "AS_Segment_c5fc548c6dbd4b2598f8fc23940ba193",
+    "ide_onRowClick": "AS_Segment_c5b0e3407cf94c6892c0f619649ff9ca",
     "info": null,
     "ipad": {
         "psp": {
@@ -315,7 +74,7 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "e1f579ca6702404b931b56e95bd29eba",
     "masterdata": {},
     "name": "kony.ui.SegmentedUI2",
@@ -323,9 +82,10 @@
     "pageoffdotimage": "pageoffdot.png",
     "pageondotimage": "pageondot.png",
     "paginationconfig": {
-        "position": "bottom"
+        "position": "bottom",
+        "vdistance": 1
     },
-    "parent": "flxChannels",
+    "parent": "flxScrollChannels",
     "pf": "frmChannels",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
@@ -344,24 +104,22 @@
     "selectedindex": null,
     "selectedindices": null,
     "selecteditems": null,
-    "selectedsectionindex": 0,
+    "selectedsectionindex": null,
     "selectionbehavior": "default",
+    "selectionbehaviorconfig": null,
     "separatorcolor": "aaaaaa00",
     "separatorrequired": true,
     "separatorthickness": 1,
     "showscrollbars": false,
+    "swipeContext": {
+        "currentPage": 0,
+        "imageWidth": 1080,
+        "widthRatio": 0
+    },
     "viewtype": "tableview",
     "vizProps": {},
     "wType": "Segment",
     "widgetalignment": 5,
-    "widgetdatamap": {
-        "flxChannels": "flxChannels",
-        "imgInfo": "imgInfo",
-        "imgLogo": "imgLogo",
-        "lblChannelId": "lblChannelId",
-        "lblChannelInfo": "lblChannelInfo",
-        "lblChannelName": "lblChannelName",
-        "lblChannelProperties": "lblChannelProperties"
-    },
+    "widgetdatamap": {},
     "zindex": 1
 }

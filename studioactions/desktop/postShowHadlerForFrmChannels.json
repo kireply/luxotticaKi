@@ -27,9 +27,19 @@
         }, {
             "id": "ADD_SNIPPET_g0922421b5ba4376ac12ba1cdb9d2426",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### sto fetchando i channels\");",
+            "codeSnippet": "voltmx.print(\"### sto fetchando i channels\");\n\nvar basicConf = {id : \"buttonForOk\", text:\"OK\", isVisible:true, onClick: voltmx.print(\"finito\"), setEnabled:true, skin: \"btnskn\", focusSkin: \"btnfocusskn\"};\n\nvar layoutConf = {contentAlignment : constants.CONTENT_ALIGN_CENTER, height: \"200dp\", width:\"180dp\", fontSize:70, backgroundColor : \"ffffff\", margin: [2, 2, 15, 15], borderStyle : voltmx.skin.BORDER_STYLE_ROUNDED_CORNER};\n\nvar okButton = new voltmx.ui.Button(basicConf, layoutConf, {});\n\n\nvar basicConf = {id : \"buttonForOk2\", text:\"OKKKKK\", isVisible:true, onClick: voltmx.print(\"finito\"), setEnabled:true, skin: \"btnskn\", focusSkin: \"btnfocusskn\"};\n\nvar layoutConf = {contentAlignment : constants.CONTENT_ALIGN_CENTER, height: \"200dp\", width:\"180dp\", fontSize:70, backgroundColor : \"ffffff\", margin: [2, 2, 15, 15], borderStyle: voltmx.skin.BORDER_STYLE_ROUNDED_CORNER};\n\nvar okButton2 = new voltmx.ui.Button(basicConf, layoutConf, {});\n\n\nfor (i=0; i<2; i++) {\n  if (i===0) {\n    this.view.flxChannels.flxScrollChannels.add(okButton);\n  } else {\n\tthis.view.flxChannels.flxScrollChannels.add(okButton2);\n  }\n \n}\n\n\n\n\n\n",
             "parentId": null,
             "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_ed6f081727504843b4396762a4ce20dc",
+            "selectedOption": "dismiss",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
         }, {
             "id": "INVOKE_SERVICE_d8d39e1855bc49a9aab6edc0f7844313",
             "type": "INVOKE_ASYNC_SERVICE",
@@ -48,7 +58,8 @@
             },
             "parentId": null,
             "callbackType": null,
-            "enableMappingEditor": true
+            "enableMappingEditor": true,
+            "disabled": true
         }, {
             "id": "ADD_SNIPPET_g56c3b1b0af347daa472294a0649b4b7",
             "type": "ADD_SNIPPET",

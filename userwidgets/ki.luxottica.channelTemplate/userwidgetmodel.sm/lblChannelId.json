@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "569dp"
+        "value": "240dp"
     },
     "_margin_": [
         1,
@@ -21,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "s65e1f90b6d84f7e9808897bf2fa9915",
-    "_text_": "Form Flows",
+    "_skin_": "s8ea6684d41e4e668cdd38510e1d5ec5",
+    "_text_": "lblChannelId",
     "_top_": {
         "type": "string",
-        "value": "384dp"
+        "value": "80dp"
     },
     "_width_": {
         "type": "ref",
@@ -41,7 +41,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "Label0d9a052731f2a4f",
+    "id": "lblChannelId",
     "info": null,
     "ipad": {
         "psp": {
@@ -54,11 +54,11 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "f4ffd18b61214174a0ecaaed996b8c94",
+    "isvisible": false,
+    "kuid": "b6e1071f90fb40838507d6d74eb27a42",
     "name": "kony.ui.Label",
-    "parent": "flxMainContainerFlows",
-    "pf": "frmFlows",
+    "parent": "channelTemplate",
+    "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",
