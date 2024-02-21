@@ -6,6 +6,13 @@
         "value": "0dp"
     },
     "_data_": [
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
         {},
         {},
         {},
@@ -16,16 +23,179 @@
         {},
         {},
         {}
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+        {
+            "Image0hca7a0ddbbac42": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "imgLogo": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "lblChannelInfo": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "channelInfo"
+            }
+        },
+        {
+            "Image0hca7a0ddbbac42": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "imgLogo": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "lblChannelInfo": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "channelInfo"
+            }
+        },
+        {
+            "Image0hca7a0ddbbac42": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "imgLogo": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "lblChannelInfo": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "channelInfo"
+            }
+        },
+        {
+            "Image0hca7a0ddbbac42": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "imgLogo": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "lblChannelInfo": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "channelInfo"
+            }
+        },
+        {
+            "Image0hca7a0ddbbac42": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "imgLogo": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "lblChannelInfo": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "channelInfo"
+            }
+        },
+        {
+            "Image0hca7a0ddbbac42": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "imgLogo": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "lblChannelInfo": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "channelInfo"
+            }
+        },
+        {
+            "Image0hca7a0ddbbac42": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "imgLogo": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "lblChannelInfo": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "channelInfo"
+            }
+        },
+        {
+            "Image0hca7a0ddbbac42": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "imgLogo": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "lblChannelInfo": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "channelInfo"
+            }
+        },
+        {
+            "Image0hca7a0ddbbac42": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "imgLogo": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "lblChannelInfo": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "channelInfo"
+            }
+        },
+        {
+            "Image0hca7a0ddbbac42": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "imgLogo": {
+                "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                "src": "imagedrag.png"
+            },
+            "lblChannelInfo": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": "channelInfo"
+            }
+        }
+>>>>>>> Stashed changes
+=======
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     ],
     "_height_": {
         "type": "string",
         "value": "100%"
     },
     "_indicator_": "none",
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     "_left_": {
         "type": "string",
         "value": "0dp"
     },
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     "_margin_": [
         0,
         0,
@@ -43,10 +213,25 @@
         "type": "string",
         "value": "0dp"
     },
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     "_top_": {
         "type": "string",
         "value": "0"
     },
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     "_width_": {
         "type": "string",
         "value": "100%"
@@ -57,11 +242,34 @@
     "counter": "09",
     "focusedindex": null,
     "focuseditem": null,
+<<<<<<< Updated upstream
     "generatedtemplate": null,
     "groupcells": false,
     "hasSections": false,
     "id": "segChannels",
     "ide_onRowClick": "AS_Segment_c5b0e3407cf94c6892c0f619649ff9ca",
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+    "generatedtemplate": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segChannels",
+    "ide_onRowClick": "AS_Segment_c5b0e3407cf94c6892c0f619649ff9ca",
+=======
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segChannels",
+    "ide_onRowClick": "AS_Segment_c5fc548c6dbd4b2598f8fc23940ba193",
+>>>>>>> Stashed changes
+=======
+    "generatedtemplate": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segChannels",
+    "ide_onRowClick": "AS_Segment_c5b0e3407cf94c6892c0f619649ff9ca",
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     "info": null,
     "ipad": {
         "psp": {
@@ -74,7 +282,19 @@
         }
     },
     "iscustomlayout": false,
+<<<<<<< Updated upstream
     "isvisible": false,
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+    "isvisible": false,
+=======
+    "isvisible": true,
+>>>>>>> Stashed changes
+=======
+    "isvisible": false,
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     "kuid": "e1f579ca6702404b931b56e95bd29eba",
     "masterdata": {},
     "name": "kony.ui.SegmentedUI2",
@@ -82,10 +302,30 @@
     "pageoffdotimage": "pageoffdot.png",
     "pageondotimage": "pageondot.png",
     "paginationconfig": {
+<<<<<<< Updated upstream
         "position": "bottom",
         "vdistance": 1
     },
     "parent": "flxScrollChannels",
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+        "position": "bottom",
+        "vdistance": 1
+    },
+    "parent": "flxScrollChannels",
+=======
+        "position": "bottom"
+    },
+    "parent": "flxChannels",
+>>>>>>> Stashed changes
+=======
+        "position": "bottom",
+        "vdistance": 1
+    },
+    "parent": "flxScrollChannels",
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     "pf": "frmChannels",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
@@ -106,20 +346,63 @@
     "selecteditems": null,
     "selectedsectionindex": null,
     "selectionbehavior": "default",
+<<<<<<< Updated upstream
     "selectionbehaviorconfig": null,
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+    "selectionbehaviorconfig": null,
+=======
+>>>>>>> Stashed changes
+=======
+    "selectionbehaviorconfig": null,
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     "separatorcolor": "aaaaaa00",
     "separatorrequired": true,
     "separatorthickness": 1,
     "showscrollbars": false,
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     "swipeContext": {
         "currentPage": 0,
         "imageWidth": 1080,
         "widthRatio": 0
     },
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     "viewtype": "tableview",
     "vizProps": {},
     "wType": "Segment",
     "widgetalignment": 5,
+<<<<<<< Updated upstream
     "widgetdatamap": {},
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+    "widgetdatamap": {},
+=======
+    "widgetdatamap": {
+        "Image0hca7a0ddbbac42": "Image0hca7a0ddbbac42",
+        "flxChannels": "flxChannels",
+        "imgLogo": "imgLogo",
+        "lblChannelInfo": "lblChannelInfo"
+    },
+>>>>>>> Stashed changes
+=======
+    "widgetdatamap": {},
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     "zindex": 1
 }

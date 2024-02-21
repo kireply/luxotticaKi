@@ -7,7 +7,11 @@
     },
     "_left_": {
         "type": "string",
+<<<<<<< Updated upstream
         "value": "21%"
+=======
+        "value": "286dp"
+>>>>>>> Stashed changes
     },
     "_margin_": [
         1,

@@ -38,8 +38,23 @@
         "formheader",
         "hamburgermenu",
         "smallerhamburgermenu",
+<<<<<<< Updated upstream
         "lblSelectOrCreateChannel",
         "flxChannels"
+=======
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+        "lblSelectOrCreateChannel",
+        "flxChannels"
+=======
+        "flxChannels",
+        "lblSelectOrCreateChannel"
+>>>>>>> Stashed changes
+=======
+        "lblSelectOrCreateChannel",
+        "flxChannels"
+>>>>>>> eab2ace401fc5ff5ba1ec23bc7f74f22a9a3f661
+>>>>>>> Stashed changes
     ],
     "clipbounds": false,
     "containerweight": 100,
