@@ -1,12 +1,12 @@
 {
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "-3dp"
-    },
     "_height_": {
         "type": "string",
-        "value": "766dp"
+        "value": "70dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -22,43 +22,47 @@
         0
     ],
     "_percent_": true,
-    "_right_": {
+    "_skin_": "se51be7f444d42e189bdb2a596333f47",
+    "_top_": {
         "type": "string",
         "value": "0dp"
     },
-    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_width_": {
         "type": "string",
-        "value": "78.33%"
+        "value": "100%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "btnBack",
-        "imgArrow",
-        "lblListOfFlows",
-        "channelTemplate",
-        "lblCreateNewFlow",
-        "imgCreateNewFlow",
-        "lbEnvironment",
-        "lbStatus",
-        "lbCategory",
-        "segFlows"
+        "lblStatus",
+        "lblFlowName",
+        "lblDescription",
+        "lblCategory",
+        "lblDefault",
+        "lblEnvironment",
+        "lblAuthor",
+        "lblLastModified"
     ],
     "clipbounds": false,
+    "containerId": true,
     "containerweight": 100,
+    "controllerInfo": {
+        "default": {
+            "channel": "desktop",
+            "name": "flxHeaderFlowsController"
+        }
+    },
     "enablescrolling": true,
-    "id": "FlexContainerFlows",
-    "ide_onTouchStart": "AS_FlexContainer_d774760b41764e81a4201c7f5392a5e2",
+    "id": "flxHeaderFlows",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "aa754b69368e430e814ff8508779e32b",
+    "kuid": "jd31346048d6471f8a60ccf65bcec00e",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMainContainerFlows",
-    "pf": "frmFlows",
+    "parent": "tplHeaderFlows",
+    "pf": "tplHeaderFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

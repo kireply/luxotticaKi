@@ -23,7 +23,7 @@
     "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_top_": {
         "type": "string",
-        "value": "10%"
+        "value": "8%"
     },
     "_width_": {
         "type": "string",
@@ -63,7 +63,7 @@
             "top": {
                 "Default": {
                     "type": "string",
-                    "value": "10%"
+                    "value": "8%"
                 }
             },
             "width": {

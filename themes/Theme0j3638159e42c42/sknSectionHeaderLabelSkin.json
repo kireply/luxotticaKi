@@ -3,7 +3,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "default",
-    "font_size": 192,
+    "font_size": 170,
     "font_weight": "bold",
     "isForked": true,
     "text_shadow": {
@@ -18,7 +18,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "default",
-    "font_size": 192,
+    "font_size": 170,
     "font_weight": "bold",
     "isForked": true
   },
@@ -32,7 +32,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "Helvetica",
-    "font_size": 192,
+    "font_size": 170,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -61,7 +61,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "System-Bold",
-    "font_size": 192,
+    "font_size": 170,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -83,7 +83,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "System-Bold",
-    "font_size": 192,
+    "font_size": 170,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -106,7 +106,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "None",
-    "font_size": 192,
+    "font_size": 170,
     "font_weight": "bold",
     "isForked": true
   },
@@ -115,7 +115,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "Helvetica",
-    "font_size": 192,
+    "font_size": 170,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -138,7 +138,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "Helvetica",
-    "font_size": 192,
+    "font_size": 170,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -161,7 +161,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "Helvetica",
-    "font_size": 192,
+    "font_size": 170,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -184,7 +184,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "Helvetica",
-    "font_size": 192,
+    "font_size": 170,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -207,7 +207,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "Helvetica",
-    "font_size": 192,
+    "font_size": 170,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -230,7 +230,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "Helvetica",
-    "font_size": 192,
+    "font_size": 170,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -253,7 +253,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "default",
-    "font_size": 192,
+    "font_size": 170,
     "font_weight": "bold",
     "isForked": true,
     "text_shadow": {
@@ -267,7 +267,7 @@
   "wType": "Label",
   "watchos": {
     "font_name": "System",
-    "font_size": 192,
+    "font_size": 170,
     "font_weight": "bold",
     "isForked": true
   },
@@ -275,7 +275,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "None",
-    "font_size": 192,
+    "font_size": 170,
     "font_weight": "bold",
     "isForked": true
   },
@@ -283,7 +283,7 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_name": "None",
-    "font_size": 192,
+    "font_size": 170,
     "font_weight": "bold",
     "isForked": true
   }

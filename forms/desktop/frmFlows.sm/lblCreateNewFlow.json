@@ -3,11 +3,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "50dp"
+        "value": "8%"
     },
     "_left_": {
         "type": "string",
-        "value": "1029dp"
+        "value": "76%"
     },
     "_margin_": [
         6,
@@ -21,28 +21,32 @@
         0,
         0
     ],
-    "_skin_": "sbec3b6461944ce2a4940251dd2f1a7c",
-    "_text_": "Button",
+    "_right_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_skin_": "s19dde20e5f64e9c8ed0e33578f4d7cd",
+    "_text_": "       Create new flow",
     "_top_": {
         "type": "string",
-        "value": "457dp"
+        "value": "30%"
     },
     "_width_": {
         "type": "string",
-        "value": "300dp"
+        "value": "19%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
     "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
-    "id": "Button0c1d0d94b2e2f45",
+    "id": "lblCreateNewFlow",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "b3ef5d8147e4422b83e6a0d9681b0f62",
     "name": "kony.ui.Button",
-    "parent": "frmFlows",
+    "parent": "FlexContainerFlows",
     "pf": "frmFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
