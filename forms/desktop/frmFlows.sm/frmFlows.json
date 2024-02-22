@@ -15,7 +15,12 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sea778dcbfbb4c21abc4235521fcacfd",
+    "_pxMenuIndex": [
+        2,
+        1,
+        6
+    ],
+    "_skin_": "s12dec31b6444ea3937fe7bc625d13b2",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -45,7 +50,8 @@
     "canUpdateUI": true,
     "canvasWidth": 1200,
     "children": [
-        "flxMainContainerFlows"
+        "flxMainContainerFlows",
+        "Button0c1d0d94b2e2f45"
     ],
     "containerweight": 100,
     "controllerInfo": {
@@ -62,6 +68,7 @@
     "displayorientation": 1,
     "enabledforidletimeout": false,
     "id": "frmFlows",
+    "ide_postShow": "AS_Form_c41cd5f3fea548359a446f5ed612c34f",
     "info": null,
     "initdone": false,
     "inputaccessoryviewtype": 4,

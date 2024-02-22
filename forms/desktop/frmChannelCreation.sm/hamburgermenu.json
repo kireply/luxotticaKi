@@ -73,7 +73,9 @@
             }
         },
         "btnResizeMenu": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_Button_ie32af34c22e44cda970993d47ad4587"
+            },
             "__info__": {
                 "kuid": "bff6182e36304006b2a4bc9dbd06e34d",
                 "srcKUID": "g6220a13ecc543cfbd274408555deb6b",
@@ -111,6 +113,14 @@
                     "type": "number",
                     "value": "137"
                 }
+            }
+        },
+        "imgLogout": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "j9522e4866c34afb93cf676d8986c013",
+                "srcKUID": "f6d6345317634850bef09677b329a6ec",
+                "wType": "Image"
             }
         },
         "segMenu": {
