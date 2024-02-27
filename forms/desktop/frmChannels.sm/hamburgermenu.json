@@ -40,7 +40,9 @@
     "containerweight": 0,
     "dataDiffs": {
         "btnLogout": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_Button_d683a08cbb1d4a6681a00dff6662e061"
+            },
             "__info__": {
                 "kuid": "bb3fbd8d242e4ab3a54122682ac0b550",
                 "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
@@ -196,6 +198,9 @@
                 "srcKUID": "f6158cc0defe49f9b27229072ca607e4",
                 "wType": "Segment"
             },
+            "autogrowMode": {
+                "Default": 0
+            },
             "data": {
                 "desktop": [
                     {
@@ -223,6 +228,12 @@
                         }
                     }
                 ]
+            },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "100%"
+                }
             },
             "left": {
                 "Default": {

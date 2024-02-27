@@ -1,0 +1,27 @@
+{
+    "AS_FlexContainer_de4fec969e774dc6935230739357fe38": {
+        "id": "AS_FlexContainer_de4fec969e774dc6935230739357fe38",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "preShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_fd28a9d2c10f4720b15e89265d1fefca",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "",
+            "parentId": null
+        }]
+    }
+}

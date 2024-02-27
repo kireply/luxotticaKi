@@ -23,7 +23,7 @@
     "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_top_": {
         "type": "string",
-        "value": "8%"
+        "value": "7.97%"
     },
     "_width_": {
         "type": "string",
@@ -34,7 +34,7 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50%"
+        "value": "49.95%"
     },
     "clipbounds": false,
     "containerweight": 0,
@@ -50,7 +50,7 @@
             "centerX": {
                 "Default": {
                     "type": "string",
-                    "value": "50%"
+                    "value": "49.95%"
                 }
             },
             "left": {
@@ -63,7 +63,7 @@
             "top": {
                 "Default": {
                     "type": "string",
-                    "value": "8%"
+                    "value": "7.97%"
                 }
             },
             "width": {
@@ -79,6 +79,12 @@
                 "kuid": "c4a3fea5b6644574ad16fb32c7dd96c1",
                 "srcKUID": "fa731a64aa1f424eb0ca4e04b8274af3",
                 "wType": "FlexContainer"
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "-11dp"
+                }
             }
         },
         "imgInfo": {
@@ -97,7 +103,8 @@
                 "kuid": "g2845a10924a4593ad17fe1f8220e6aa",
                 "srcKUID": "fd970f28b255473387b195aabf99d1b6",
                 "wType": "Image"
-            }
+            },
+            "src": "imagedrag.png"
         },
         "lblChannelId": {
             "__events__": {},

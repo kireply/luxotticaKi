@@ -40,7 +40,9 @@
     "containerweight": 0,
     "dataDiffs": {
         "btnLogout": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_Button_d1f2eb4288454081bae81597a4000e4c"
+            },
             "__info__": {
                 "kuid": "f2f0b63afa4b4ed9adf4ded9607430ed",
                 "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
@@ -69,7 +71,13 @@
                     "value": "97%"
                 }
             },
-            "responsiveData": {}
+            "responsiveData": {},
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "20dp"
+                }
+            }
         },
         "hamburgermenu": {
             "__events__": {},
@@ -171,6 +179,9 @@
                 "srcKUID": "f6158cc0defe49f9b27229072ca607e4",
                 "wType": "Segment"
             },
+            "autogrowMode": {
+                "Default": 0
+            },
             "data": {
                 "desktop": [
                     {
@@ -234,6 +245,12 @@
                         }
                     }
                 ]
+            },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "100.77%"
+                }
             },
             "left": {
                 "Default": {

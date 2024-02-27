@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "70dp"
+        "value": "60dp"
     },
     "_margin_": [
         0,
@@ -18,7 +18,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
+    "_skin_": "s32889b9bb084ecc82fd7a17fc5852d3",
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
@@ -30,8 +30,9 @@
         "lblCategory",
         "lblDefault",
         "lblEnvironment",
-        "lblAuthor",
-        "lblLastodified"
+        "flxShowStandard",
+        "flxShowActive",
+        "flxShowArchivedOrDraft"
     ],
     "clipbounds": false,
     "containerId": true,
@@ -42,9 +43,18 @@
             "name": "flxRowFlowsController"
         }
     },
+    "desktopweb": {
+        "psp": {
+            "ide_onHover": "AS_FlexContainer_d06e5cd3c8554272bb5ac1b7a13e48f4"
+        }
+    },
+    "disabledSkins": {
+        "hoverSkin": "s29d27d0d41e466b8b0a7941d3d2e840"
+    },
     "enablescrolling": true,
     "id": "flxRowFlows",
     "info": null,
+    "isTemplate": true,
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "e55aaa1d9f8249e685db73ae6858b404",

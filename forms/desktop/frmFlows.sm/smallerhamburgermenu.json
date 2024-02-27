@@ -40,7 +40,9 @@
     "containerweight": 0,
     "dataDiffs": {
         "btnLogout": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_Button_acf8779abd2844f3a81e0b192ede2c66"
+            },
             "__info__": {
                 "kuid": "db334b76135a4496bd518b861fe7eaa9",
                 "srcKUID": "dc71668cc16f4695981806296357819d",
@@ -93,6 +95,45 @@
                 "kuid": "cfb42e2806424340aa46c5a023b40833",
                 "srcKUID": "ab971c4c11bb416bac9ad77f0b35493b",
                 "wType": "Segment"
+            },
+            "data": {
+                "desktop": [
+                    {
+                        "imgMenuIcon": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "flow.png",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "imgMenuIcon": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "labels.png",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "imgMenuIcon": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "style_icon.png",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "imgMenuIcon": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "audience_icon.png",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "imgMenuIcon": {
+                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                            "src": "settings.png",
+                            "type": "Image"
+                        }
+                    }
+                ]
             },
             "left": {
                 "Default": {

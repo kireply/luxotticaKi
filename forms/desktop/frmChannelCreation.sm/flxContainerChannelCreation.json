@@ -35,8 +35,8 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "formheader",
-        "hamburgermenu",
+        "flxContainerHeader",
+        "flxContainerMenu",
         "smallerhamburgermenu"
     ],
     "clipbounds": false,

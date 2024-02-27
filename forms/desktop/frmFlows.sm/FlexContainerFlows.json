@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "-3dp"
+        "value": "0dp"
     },
     "_height_": {
         "type": "string",
-        "value": "766dp"
+        "value": "86%"
     },
     "_margin_": [
         0,
@@ -44,13 +44,19 @@
         "lbEnvironment",
         "lbStatus",
         "lbCategory",
-        "segFlows"
+        "lblHeaderSegFlows",
+        "segFlows",
+        "txtSearchFlowName",
+        "imgSearchFlowName",
+        "flxHeaderSegFlows"
     ],
     "clipbounds": false,
     "containerweight": 100,
+    "desktopweb": {
+        "psp": {}
+    },
     "enablescrolling": true,
     "id": "FlexContainerFlows",
-    "ide_onTouchStart": "AS_FlexContainer_d774760b41764e81a4201c7f5392a5e2",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

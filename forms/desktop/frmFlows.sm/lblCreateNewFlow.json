@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "76%"
+        "value": "75.98%"
     },
     "_margin_": [
         6,
@@ -29,7 +29,7 @@
     "_text_": "       Create new flow",
     "_top_": {
         "type": "string",
-        "value": "30%"
+        "value": "23.10%"
     },
     "_width_": {
         "type": "string",
@@ -38,6 +38,12 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 5,
+    "desktopweb": {
+        "psp": {
+            "hoverSkin": "s3b873adf2b14e22a1c4c63baa880178"
+        }
+    },
+    "disabledSkins": {},
     "displaytext": true,
     "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
     "id": "lblCreateNewFlow",

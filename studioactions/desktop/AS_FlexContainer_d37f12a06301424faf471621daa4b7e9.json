@@ -1,0 +1,22 @@
+{
+    "AS_FlexContainer_d37f12a06301424faf471621daa4b7e9": {
+        "id": "AS_FlexContainer_d37f12a06301424faf471621daa4b7e9",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "postShow",
+        "actions": []
+    }
+}

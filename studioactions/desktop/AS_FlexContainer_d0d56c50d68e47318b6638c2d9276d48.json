@@ -1,0 +1,27 @@
+{
+    "AS_FlexContainer_d0d56c50d68e47318b6638c2d9276d48": {
+        "id": "AS_FlexContainer_d0d56c50d68e47318b6638c2d9276d48",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "postShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_jcb4308710b54233b51df5dacddf71ae",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"sono dentro a snippet template\");",
+            "parentId": null
+        }]
+    }
+}

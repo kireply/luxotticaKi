@@ -4,7 +4,7 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "85%"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
@@ -26,12 +26,12 @@
     "_percent_": true,
     "_skin_": "s92c5d879f8142f08c34a981ec98d303",
     "_top_": {
-        "type": "number",
-        "value": "137"
+        "type": "string",
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "15%"
+        "value": "100%"
     },
     "areflexpropsreferenced": false,
     "autogrowmode": 0,
@@ -42,14 +42,14 @@
         "btnLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "e2696f5557c645f4a7a54b331c3f8675",
+                "kuid": "d59c802c4c69455e9ad9acc8f67efee5",
                 "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
                 "wType": "Button"
             },
             "centerX": {
                 "Default": {
                     "type": "string",
-                    "value": "60.17%"
+                    "value": "50%"
                 }
             },
             "height": {
@@ -68,7 +68,7 @@
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "200dp"
+                    "value": "80%"
                 }
             }
         },
@@ -77,16 +77,17 @@
                 "ide_onClick": "AS_Button_ie32af34c22e44cda970993d47ad4587"
             },
             "__info__": {
-                "kuid": "bff6182e36304006b2a4bc9dbd06e34d",
+                "kuid": "ad8a94fa86f94bcfb4737621032acef0",
                 "srcKUID": "g6220a13ecc543cfbd274408555deb6b",
                 "wType": "Button"
             },
             "left": {
                 "Default": {
                     "type": "string",
-                    "value": "246dp"
+                    "value": "97%"
                 }
             },
+            "responsiveData": {},
             "top": {
                 "Default": {
                     "type": "string",
@@ -102,23 +103,86 @@
                 "srcKUID": "d252c589507e44fd8ed2ab19f3f7e081",
                 "wType": "FlexContainer"
             },
+            "autogrowMode": {
+                "Default": 0
+            },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "100%"
+                }
+            },
             "left": {
                 "Default": {
                     "type": "string",
                     "value": "0dp"
                 }
             },
+            "maxHeight": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "maxWidth": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "minHeight": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "minWidth": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "right": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
             "top": {
                 "Default": {
-                    "type": "number",
-                    "value": "137"
+                    "type": "string",
+                    "value": "0dp"
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "100%"
                 }
             }
         },
         "imgLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "j9522e4866c34afb93cf676d8986c013",
+                "kuid": "acfb9914f1e8492383ca3059d00d0ffa",
                 "srcKUID": "f6d6345317634850bef09677b329a6ec",
                 "wType": "Image"
             }
@@ -126,7 +190,7 @@
         "segMenu": {
             "__events__": {},
             "__info__": {
-                "kuid": "a94abbbfb8514b0897e105d938219837",
+                "kuid": "b68622bce048495caf2b85f20bd78236",
                 "srcKUID": "f6158cc0defe49f9b27229072ca607e4",
                 "wType": "Segment"
             },
@@ -173,6 +237,7 @@
                     "value": "0dp"
                 }
             },
+            "responsiveData": {},
             "top": {
                 "Default": {
                     "type": "string",
@@ -182,7 +247,7 @@
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "119.83%"
+                    "value": "100%"
                 }
             }
         }
@@ -197,7 +262,7 @@
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
-    "parent": "flxContainerChannelCreation",
+    "parent": "flxContainerMenu",
     "pf": "frmChannelCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
