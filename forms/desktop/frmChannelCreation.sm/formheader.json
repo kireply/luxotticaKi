@@ -4,7 +4,7 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "15%"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
@@ -42,7 +42,7 @@
         "flxRightIcons": {
             "__events__": {},
             "__info__": {
-                "kuid": "bee0402ab0fb4dfa80ef7bdb6f327738",
+                "kuid": "h674c7f53c14447fb2230f4d6498459f",
                 "srcKUID": "e531395b10bb422b84d41ec9195b85bb",
                 "wType": "FlexContainer"
             }
@@ -51,46 +51,121 @@
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "e064bff26a2e4d759309c3f139c82d87",
+                "kuid": "f5af29640c9541189856071d688063b9",
                 "srcKUID": "ba758399ff27410698c4c05e42566ed8",
                 "wType": "FlexContainer"
+            },
+            "autogrowMode": {
+                "Default": 0
+            },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "100%"
+                }
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
+                }
+            },
+            "maxHeight": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "maxWidth": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "minHeight": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "minWidth": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "responsiveData": {},
+            "right": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "100%"
+                }
+            },
+            "zIndex": {
+                "Default": 1
             }
         },
         "imgChat": {
             "__events__": {},
             "__info__": {
-                "kuid": "e1b67db1b72f41f5ab245b8d439be096",
+                "kuid": "c737df7b6784479fa277df9a1f1c17c0",
                 "srcKUID": "ce610084ab8844ddbb0450d4a5defa74",
                 "wType": "Image"
-            },
-            "src": "messenger.png"
+            }
         },
         "imgLogo": {
             "__events__": {},
             "__info__": {
-                "kuid": "e72a55b990bc41638d92361d69d706ad",
+                "kuid": "ad8bcdd45c5b454fb1bc05a659d0de68",
                 "srcKUID": "ce7abef35db14993952efc16beeea866",
                 "wType": "Image"
-            },
-            "src": "pmcnw0j1_400x400.png"
+            }
         },
         "imgNotification": {
             "__events__": {},
             "__info__": {
-                "kuid": "bd52880513e544b2a16978cd18d20fad",
+                "kuid": "g990f72f524242a7a1853b63a687c190",
                 "srcKUID": "id85c820b7a245b8b5e286e743059445",
                 "wType": "Image"
-            },
-            "src": "notification.png"
+            }
         },
         "imgProfile": {
             "__events__": {},
             "__info__": {
-                "kuid": "d3505c4698ef48e789734f3019c9efe0",
+                "kuid": "d5f66a02fb53438c94c7b54b94e1efb7",
                 "srcKUID": "eba8d9cafd914ce0b4cbfeef2241d96a",
                 "wType": "Image"
-            },
-            "src": "user.png"
+            }
         }
     },
     "enablescrolling": true,
@@ -99,11 +174,11 @@
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kuid": "e064bff26a2e4d759309c3f139c82d87",
+    "kuid": "f5af29640c9541189856071d688063b9",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
-    "parent": "flxContainerChannelCreation",
+    "parent": "flxContainerHeader",
     "pf": "frmChannelCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

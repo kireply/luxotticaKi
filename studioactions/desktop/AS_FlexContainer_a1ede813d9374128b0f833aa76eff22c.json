@@ -1,0 +1,27 @@
+{
+    "AS_FlexContainer_a1ede813d9374128b0f833aa76eff22c": {
+        "id": "AS_FlexContainer_a1ede813d9374128b0f833aa76eff22c",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "preShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_a59aedc4e7a345ab9ccc8733dab4bc77",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### dentro snippet template\");",
+            "parentId": null
+        }]
+    }
+}

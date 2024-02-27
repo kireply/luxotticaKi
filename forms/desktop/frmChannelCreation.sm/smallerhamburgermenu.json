@@ -48,12 +48,21 @@
             }
         },
         "btnResizeMenu": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_Button_d5f68e35a08544b6a81f046c4aa95e8e"
+            },
             "__info__": {
                 "kuid": "de9b8a8bc9384502b6a513c043cb3c15",
                 "srcKUID": "b78ca6f9cd4742d8b6d55eda7606510c",
                 "wType": "Button"
-            }
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "80%"
+                }
+            },
+            "responsiveData": {}
         },
         "imgLogout": {
             "__events__": {},

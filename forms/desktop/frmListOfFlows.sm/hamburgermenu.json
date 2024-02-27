@@ -66,6 +66,14 @@
                 "wType": "FlexContainer"
             }
         },
+        "imgLogout": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "cc23b592bac344efba65cb633d9305bd",
+                "srcKUID": "f6d6345317634850bef09677b329a6ec",
+                "wType": "Image"
+            }
+        },
         "segMenu": {
             "__events__": {},
             "__info__": {

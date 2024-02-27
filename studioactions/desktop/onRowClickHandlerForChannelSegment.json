@@ -1,0 +1,77 @@
+{
+    "AS_Segment_c5fc548c6dbd4b2598f8fc23940ba193": {
+        "id": "AS_Segment_c5fc548c6dbd4b2598f8fc23940ba193",
+        "type": "ACTION_SEQUENCE",
+        "name": "onRowClickHandlerForChannelSegment",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "name": "frmChannels",
+            "type": "forms",
+            "platform": "",
+            "KUID": "c1e9143f6fef4291a170222e7c044c7c"
+        },
+        "language": "js",
+        "eventType": "onRowClick",
+        "actions": [{
+            "id": "_aa5f707f27c749aa94de77417832b94f",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "gblInfoIcon",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "\"true\""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_hb254091c089433e873539127ed85a1e",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_b8df9ce7fe0b4224af7baa88945183f7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### inizio metodo row click generico\");\nvar channel = this.view.segChannels.selectedRowItems[0];\nvoltmx.print (\"### selected row - channel: \"+JSON.stringify(channel));\n\ngblChannelId = channel.lblChannelId.text;\ngblChannelName = channel.lblChannelName.text;\ngblChannelLogo = channel.imgLogo.src;\ngblChannelProperties = channel.lblChannelProperties.text;\n\nvoltmx.print(\"### var globale id : \" + gblChannelId);\nvoltmx.print(\"### var globale nome : \" + gblChannelName);\nvoltmx.print(\"### var globale logo : \" + gblChannelLogo);\nvoltmx.print(\"### var globale propietà : \" + gblChannelProperties);\n\nvoltmx.print(\"### fine metodo row click generico\");\n\nvoltmx.print(\"### valore gblIconInfo: \" + gblInfoIcon + \" FINISH\");",
+            "parentId": "_hb254091c089433e873539127ed85a1e",
+            "callbackType": null
+        }, {
+            "id": "NAVIGATE_TO_FORM__g454b0d7598146b8a30a57541607fd32",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmFlows",
+            "formKUID": "e6a8fc2377784d1595b361cc9412aea7",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_hb254091c089433e873539127ed85a1e",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "ADD_SNIPPET_e9b729613f7a44d488cbcb81f9282c0f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### inizio metodo row click generico\");\nvar channel = this.view.segChannels.selectedRowItems[0];\nvoltmx.print (\"### selected row - channel: \"+JSON.stringify(channel));\n\ngblChannelId = channel.lblChannelId.text;\ngblChannelName = channel.lblChannelName.text;\ngblChannelLogo = channel.imgLogo.src;\ngblChannelProperties = channel.lblChannelProperties.text;\n\nvoltmx.print(\"### var globale id : \" + gblChannelId);\nvoltmx.print(\"### var globale nome : \" + gblChannelName);\nvoltmx.print(\"### var globale logo : \" + gblChannelLogo);\nvoltmx.print(\"### var globale propietà : \" + gblChannelProperties);\n\nvoltmx.print(\"### fine metodo row click generico\");\n\n\nself.view.flxPopupChannelInfo.setVisibility(true);\n\nthis.view.txtChannelID.setEnabled(false);\nthis.view.lbChannelName.setEnabled(false);\nthis.view.txtChannelLogo.setEnabled(false);\nthis.view.txtChannelProperties.setEnabled(false);\n\nthis.view.flxPopupChannelInfo.txtChannelID.text = gblChannelId;\nthis.view.flxPopupChannelInfo.txtChannelLogo.text = gblChannelLogo;\nthis.view.flxPopupChannelInfo.txtChannelProperties.text = gblChannelProperties;\nthis.view.flxPopupChannelInfo.lbChannelName.masterData = [ [\"lb1\", gblChannelName] ];\nthis.view.flxPopupChannelInfo.lbChannelName.selectedKey = \"lb1\";\n\n\nvoltmx.print(\"### finito con l'autocompletamento\");",
+            "parentId": "_aa5f707f27c749aa94de77417832b94f",
+            "callbackType": null
+        }]
+    }
+}

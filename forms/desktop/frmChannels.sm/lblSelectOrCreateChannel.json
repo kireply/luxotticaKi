@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "21%"
+        "value": "24%"
     },
     "_margin_": [
         1,
@@ -57,7 +57,7 @@
     "isvisible": true,
     "kuid": "b9531881d4b941e6a44c7a6b4832c2e5",
     "name": "kony.ui.Label",
-    "parent": "fxlContainerChannels",
+    "parent": "fxlMainContainerChannels",
     "pf": "frmChannels",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

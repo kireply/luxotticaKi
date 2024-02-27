@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "0dp"
+        "value": "-10dp"
     },
     "_data_": [
         {
@@ -269,7 +269,7 @@
     ],
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "101.85%"
     },
     "_indicator_": "none",
     "_margin_": [
@@ -287,11 +287,11 @@
     ],
     "_right_": {
         "type": "string",
-        "value": "0dp"
+        "value": "-6dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "99.07%"
     },
     "autogrowmode": 0,
     "canUpdateUI": true,

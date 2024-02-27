@@ -1,0 +1,27 @@
+{
+    "AS_FlexContainer_f5f083a8da6842048576d851c72a3bd7": {
+        "id": "AS_FlexContainer_f5f083a8da6842048576d851c72a3bd7",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_f3c091830ec74842be48627e049361fb",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if (this.view.imgStatus.src === \"green.png\") {\n  this.view.flxShowStandard.setVisibility(true);\n  this.view.flxShowActive.setVisibility(false);\n}\n\nvoltmx.print(\"### passato USCITO DA  hover\");",
+            "parentId": null
+        }]
+    }
+}

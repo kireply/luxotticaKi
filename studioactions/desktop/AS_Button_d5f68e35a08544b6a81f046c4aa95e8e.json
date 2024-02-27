@@ -1,0 +1,24 @@
+{
+    "AS_Button_d5f68e35a08544b6a81f046c4aa95e8e": {
+        "id": "AS_Button_d5f68e35a08544b6a81f046c4aa95e8e",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmChannelCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b995d95be2ee4d2181bb89391aa35ffb"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_cecd1fbfe36b448c87fb5668ed6f29bf",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.smallerhamburgermenu.setVisibility(false);\nthis.view.hamburgermenu.setVisibility(true);",
+            "parentId": null
+        }]
+    }
+}

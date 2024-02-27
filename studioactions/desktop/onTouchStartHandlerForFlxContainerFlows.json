@@ -1,0 +1,31 @@
+{
+    "AS_FlexContainer_d774760b41764e81a4201c7f5392a5e2": {
+        "id": "AS_FlexContainer_d774760b41764e81a4201c7f5392a5e2",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchStartHandlerForFlxContainerFlows",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onTouchStart",
+        "actions": [{
+            "id": "ADD_SNIPPET_bade644d3db74a43bedfb65924ce7df7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### sono passato sopra al flex container\");",
+            "parentId": null
+        }]
+    }
+}

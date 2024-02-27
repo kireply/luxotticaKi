@@ -37,7 +37,8 @@
     "children": [
         "segMenu",
         "btnLogout",
-        "btnResizeMenu"
+        "btnResizeMenu",
+        "imgLogout"
     ],
     "clipbounds": false,
     "containerweight": 100,

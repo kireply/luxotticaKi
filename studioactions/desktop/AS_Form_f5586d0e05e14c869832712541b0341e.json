@@ -1,0 +1,24 @@
+{
+    "AS_Form_f5586d0e05e14c869832712541b0341e": {
+        "id": "AS_Form_f5586d0e05e14c869832712541b0341e",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "preShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_aa979a98410e4551847f7b8cf2511f8c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.channelTemplate.imgLogo = gblChannelLogo;\nself.view.channelTemplate.lblChannelInfo = gblChannelName + \" - #\" + gblChannelId;\n",
+            "parentId": null
+        }]
+    }
+}
