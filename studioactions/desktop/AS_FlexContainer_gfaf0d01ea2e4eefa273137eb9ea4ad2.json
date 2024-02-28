@@ -1,0 +1,27 @@
+{
+    "AS_FlexContainer_gfaf0d01ea2e4eefa273137eb9ea4ad2": {
+        "id": "AS_FlexContainer_gfaf0d01ea2e4eefa273137eb9ea4ad2",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "postShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_ecc4665d225d4ccea43b558820584be4",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if (this.view.lblStatus === \"Active\") {\n  self.view.imgStatus.src = \"/green.png\";\n} else if (this.view.lblStatus === \"Archived\") {\n  self.view.imgStatus.src = \"/yellow.png\";\n} else {\n  self.view.imgStatus.src = \"/grey.png\";\n}",
+            "parentId": null
+        }]
+    }
+}

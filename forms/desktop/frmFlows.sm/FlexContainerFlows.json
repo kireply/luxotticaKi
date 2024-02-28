@@ -48,7 +48,8 @@
         "segFlows",
         "txtSearchFlowName",
         "imgSearchFlowName",
-        "flxHeaderSegFlows"
+        "flxHeaderSegFlows",
+        "segTemp"
     ],
     "clipbounds": false,
     "containerweight": 100,

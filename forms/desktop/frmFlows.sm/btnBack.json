@@ -37,6 +37,7 @@
     "displaytext": true,
     "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
     "id": "btnBack",
+    "ide_onClick": "AS_Button_e53bb7846bbe47d28572072ad535dafe",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

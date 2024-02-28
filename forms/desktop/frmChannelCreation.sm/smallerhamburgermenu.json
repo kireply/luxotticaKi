@@ -40,7 +40,9 @@
     "containerweight": 0,
     "dataDiffs": {
         "btnLogout": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_Button_d3cb5db87f6f470db25373d84bd442d1"
+            },
             "__info__": {
                 "kuid": "j9e8d44c938f485b85e3c0e950dd4a72",
                 "srcKUID": "dc71668cc16f4695981806296357819d",

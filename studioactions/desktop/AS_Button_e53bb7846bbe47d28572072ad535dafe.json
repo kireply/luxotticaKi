@@ -1,35 +1,33 @@
 {
-    "AS_Button_e8bc225472d749da80f61f2fcdcc031f": {
-        "id": "AS_Button_e8bc225472d749da80f61f2fcdcc031f",
+    "AS_Button_e53bb7846bbe47d28572072ad535dafe": {
+        "id": "AS_Button_e53bb7846bbe47d28572072ad535dafe",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
         }],
         "contextObj": {
-            "name": "frmChannels",
+            "name": "frmFlows",
             "type": "forms",
             "platform": "",
-            "KUID": "c1e9143f6fef4291a170222e7c044c7c"
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
         },
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "LOADING_INDICATOR_b2c1d682ccdb422fbdf8a26d430480e3",
+            "id": "LOADING_INDICATOR_b1abe1fe55a84d129e5676a3a68a8f7e",
             "selectedOption": "show",
-            "parentId": null,
             "type": "LOADING_INDICATOR",
-            "callbackType": null,
             "skin": "none",
             "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
             "isBlocked": "true",
             "showProgressIndicator": "true",
-            "text": "Logging out..."
+            "text": "Back to channels..."
         }, {
-            "id": "NAVIGATE_TO_FORM__c99b4c01114449b78e282dbb02804710",
+            "id": "NAVIGATE_TO_FORM__e6927b6280b44a71b4819727bfb3f4f8",
             "type": "NAVIGATE_TO_FORM",
-            "formId": "frmLogin",
-            "formKUID": "hc1489bebc2c4f38b8ba6309c7ed6c02",
+            "formId": "frmChannels",
+            "formKUID": "c1e9143f6fef4291a170222e7c044c7c",
             "projectName": "luxotticaKi",
             "mappings": {},
             "mappingsOrder": [],
@@ -37,11 +35,9 @@
             "package": "",
             "isCustomInput": false
         }, {
-            "id": "LOADING_INDICATOR_d9a422306fbf46c79c961597c39dd538",
+            "id": "LOADING_INDICATOR_ad5760ef6106484abc9aa0cc4ca6d6ef",
             "selectedOption": "dismiss",
-            "parentId": null,
             "type": "LOADING_INDICATOR",
-            "callbackType": null,
             "skin": "none",
             "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
             "isBlocked": "true",

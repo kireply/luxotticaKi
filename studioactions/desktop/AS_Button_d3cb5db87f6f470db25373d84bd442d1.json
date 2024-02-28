@@ -1,32 +1,30 @@
 {
-    "AS_Button_e8bc225472d749da80f61f2fcdcc031f": {
-        "id": "AS_Button_e8bc225472d749da80f61f2fcdcc031f",
+    "AS_Button_d3cb5db87f6f470db25373d84bd442d1": {
+        "id": "AS_Button_d3cb5db87f6f470db25373d84bd442d1",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
         }],
         "contextObj": {
-            "name": "frmChannels",
+            "name": "frmChannelCreation",
             "type": "forms",
             "platform": "",
-            "KUID": "c1e9143f6fef4291a170222e7c044c7c"
+            "KUID": "b995d95be2ee4d2181bb89391aa35ffb"
         },
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "LOADING_INDICATOR_b2c1d682ccdb422fbdf8a26d430480e3",
+            "id": "LOADING_INDICATOR_bad824d7c03840488cfd87551f97bc1f",
             "selectedOption": "show",
-            "parentId": null,
             "type": "LOADING_INDICATOR",
-            "callbackType": null,
             "skin": "none",
             "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
             "isBlocked": "true",
             "showProgressIndicator": "true",
             "text": "Logging out..."
         }, {
-            "id": "NAVIGATE_TO_FORM__c99b4c01114449b78e282dbb02804710",
+            "id": "NAVIGATE_TO_FORM__e9a788daae7f4d629f203c080c846d0c",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmLogin",
             "formKUID": "hc1489bebc2c4f38b8ba6309c7ed6c02",
@@ -37,11 +35,9 @@
             "package": "",
             "isCustomInput": false
         }, {
-            "id": "LOADING_INDICATOR_d9a422306fbf46c79c961597c39dd538",
+            "id": "LOADING_INDICATOR_e62f54054c24481993f72b63db02fad8",
             "selectedOption": "dismiss",
-            "parentId": null,
             "type": "LOADING_INDICATOR",
-            "callbackType": null,
             "skin": "none",
             "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
             "isBlocked": "true",
