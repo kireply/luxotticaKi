@@ -1,0 +1,24 @@
+{
+    "AS_ListBox_f9c5eb2774f74d0ab010cca5f256dff6": {
+        "id": "AS_ListBox_f9c5eb2774f74d0ab010cca5f256dff6",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onSelection",
+        "actions": [{
+            "id": "ADD_SNIPPET_dd762c8958bc4addab9fca47b55a6dc2",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "//backup to original list every time the selection changes\nself.view.segFlows.setData(gblFlowsList);\n\nvar categorySelected = this.view.lbCategory.selectedKeyValue[1];\nvoltmx.print(\"### Category: \" + categorySelected);\n\nif (categorySelected !== \"Category: All\") {\n  var segFlowsRef = self.view.segFlows.data;\n\n  var segFlowsRefFound = segFlowsRef.filter(flow => flow.category === categorySelected);\n\n  //var flowsFound = gblFlowsList.filter(flow => flow.channel_id === gblChannelId);\n  self.view.segFlows.setData(segFlowsRefFound);\n\n  voltmx.print(\"### TROVATO segFlowsRefFound: \" + JSON.stringify(segFlowsRefFound));\n}\n\n//self.view.segFlows.widgetDataMap = {lblStatus: \"status\", lblFlowName: \"id\", lblDescription: \"description\", lblCategory: \"category\", lblDefault: \"default_flag\", lblEnvironment: \"environment\", lblAuthor: \"author\", lblLastModified: \"last_modified\"};\n//self.view.segFlows.setData(flowsFound);\n\n//voltmx.print(\"### PROVA: \" + self.view.segFlows.data[1].description);\n\n\n",
+            "parentId": null
+        }]
+    }
+}

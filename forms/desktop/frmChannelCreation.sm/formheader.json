@@ -141,7 +141,8 @@
                 "kuid": "c737df7b6784479fa277df9a1f1c17c0",
                 "srcKUID": "ce610084ab8844ddbb0450d4a5defa74",
                 "wType": "Image"
-            }
+            },
+            "src": "messenger.png"
         },
         "imgLogo": {
             "__events__": {},
@@ -149,7 +150,8 @@
                 "kuid": "ad8bcdd45c5b454fb1bc05a659d0de68",
                 "srcKUID": "ce7abef35db14993952efc16beeea866",
                 "wType": "Image"
-            }
+            },
+            "src": "el_round_logo.png"
         },
         "imgNotification": {
             "__events__": {},
@@ -157,7 +159,8 @@
                 "kuid": "g990f72f524242a7a1853b63a687c190",
                 "srcKUID": "id85c820b7a245b8b5e286e743059445",
                 "wType": "Image"
-            }
+            },
+            "src": "notification.png"
         },
         "imgProfile": {
             "__events__": {},
@@ -165,7 +168,8 @@
                 "kuid": "d5f66a02fb53438c94c7b54b94e1efb7",
                 "srcKUID": "eba8d9cafd914ce0b4cbfeef2241d96a",
                 "wType": "Image"
-            }
+            },
+            "src": "user.png"
         }
     },
     "enablescrolling": true,
