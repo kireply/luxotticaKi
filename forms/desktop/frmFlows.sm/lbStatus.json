@@ -37,6 +37,7 @@
     "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
     "groupcells": false,
     "id": "lbStatus",
+    "ide_onSelection": "AS_ListBox_cb80936331d8418986fb85e3e6ff75bf",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

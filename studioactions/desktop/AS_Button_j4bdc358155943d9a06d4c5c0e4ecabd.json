@@ -1,0 +1,49 @@
+{
+    "AS_Button_j4bdc358155943d9a06d4c5c0e4ecabd": {
+        "id": "AS_Button_j4bdc358155943d9a06d4c5c0e4ecabd",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "CopyfrmFlows",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d569d8ca39af43bea658ee877f5208b9"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "LOADING_INDICATOR_ide_onClick_fd653c7d2f9a47d091de59129a4643af",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Logging out..."
+        }, {
+            "id": "NAVIGATE_TO_FORM__ide_onClick_a246b283cc2d4ae6bc7697fb82ac29e5",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmLogin",
+            "formKUID": "hc1489bebc2c4f38b8ba6309c7ed6c02",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "LOADING_INDICATOR_ide_onClick_db9476cd9f41477b86eed2aef1017771",
+            "selectedOption": "dismiss",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }]
+    }
+}

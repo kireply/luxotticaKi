@@ -48,6 +48,12 @@
                 "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
                 "wType": "Button"
             },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
             "responsiveData": {},
             "width": {
                 "Default": {

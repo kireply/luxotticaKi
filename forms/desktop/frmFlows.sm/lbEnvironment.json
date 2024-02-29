@@ -38,6 +38,7 @@
     "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
     "groupcells": false,
     "id": "lbEnvironment",
+    "ide_onSelection": "AS_ListBox_c69c17062ced474193d38d55a2a87c18",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

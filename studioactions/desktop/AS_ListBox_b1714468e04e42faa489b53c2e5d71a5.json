@@ -1,0 +1,23 @@
+{
+    "AS_ListBox_b1714468e04e42faa489b53c2e5d71a5": {
+        "id": "AS_ListBox_b1714468e04e42faa489b53c2e5d71a5",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "CopyfrmFlows",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d569d8ca39af43bea658ee877f5208b9"
+        },
+        "language": "js",
+        "eventType": "onSelection",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onSelection_b62b9967cc32477b91fbd2ce2b66fc3a",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "//backup to original list every time the selection changes\n//self.view.segFlows.setData(gblFlowsList);\n\nvar filteredByChannel = gblFlowsList.filter(flow => flow.channel_id === gblChannelId);\n\n// Retrieving all filters\nvar nameSelected = this.view.txtSearchFlowName.text;\nvar categorySelected = this.view.lbCategory.selectedKeyValue[1];\nvar statusSelected = this.view.lbStatus.selectedKeyValue[1];\nvar environmentSelected = this.view.lbEnvironment.selectedKeyValue[1];\n\n//voltmx.print(\"### Category: \" + categorySelected);\n\n\n// Apply all filters one by one on cascade\nif (nameSelected !== \"\") { // name selected, unique\n  \n  voltmx.print(\"### dentro IF filtri\");\n  var filteredByName = filteredByChannel.filter(flow => flow.id === nameSelected);\n  self.view.segFlows.setData(filteredByName);\n  \n} else { // name not selected, sum up all the other filters if selected\n  \n  voltmx.print(\"### dentro ELSE filtri\");\n  \n  var filteredByCategory = filteredByChannel;\n  \n  if (categorySelected !== \"Category: All\") {\n    filteredByCategory = filteredByChannel.filter(flow => flow.category === categorySelected);\n  }\n  var filteredByStatus = filteredByCategory;\n  \n  if (statusSelected !== \"Status: All\") {\n    filteredByStatus = filteredByCategory.filter(flow => flow.status === statusSelected);\n  }\n  var filteredByEnvironment = filteredByStatus;\n  \n  if (environmentSelected !== \"Environment: All\") {\n    filteredByEnvironment = filteredByStatus.filter(flow => flow.environment === environmentSelected);\n  }\n  \n  self.view.segFlows.setData(filteredByEnvironment);\n  \n}\n\n\n\n//self.view.segFlows.widgetDataMap = {lblStatus: \"status\", lblFlowName: \"id\", lblDescription: \"description\", lblCategory: \"category\", lblDefault: \"default_flag\", lblEnvironment: \"environment\", lblAuthor: \"author\", lblLastModified: \"last_modified\"};\n//self.view.segFlows.setData(flowsFound);\n\n//voltmx.print(\"### PROVA: \" + self.view.segFlows.data[1].description);\n\n\n"
+        }]
+    }
+}

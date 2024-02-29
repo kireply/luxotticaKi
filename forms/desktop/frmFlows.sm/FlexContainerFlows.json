@@ -44,11 +44,10 @@
         "lbEnvironment",
         "lbStatus",
         "lbCategory",
-        "lblHeaderSegFlows",
+        "flxHeaderSegFlows",
         "segFlows",
         "txtSearchFlowName",
-        "imgSearchFlowName",
-        "flxHeaderSegFlows"
+        "imgSearchFlowName"
     ],
     "clipbounds": false,
     "containerweight": 100,

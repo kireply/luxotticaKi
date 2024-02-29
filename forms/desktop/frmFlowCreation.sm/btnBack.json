@@ -1,0 +1,52 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s6f0066cf59c4675a1cc4709283955cf",
+    "_text_": "     Back",
+    "_top_": {
+        "type": "string",
+        "value": "6%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "12%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
+    "id": "btnBack",
+    "ide_onClick": "AS_Button_d9e49462f91e4405b3ec0a7bfdac5579",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "bac41a1bab7740fdb717f919eb901ab9",
+    "name": "kony.ui.Button",
+    "parent": "FlexContainerFlows",
+    "pf": "frmFlowCreation",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

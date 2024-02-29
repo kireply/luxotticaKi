@@ -1,0 +1,34 @@
+{
+    "AS_Image_e52845368e0b44318acee071d7293e22": {
+        "id": "AS_Image_e52845368e0b44318acee071d7293e22",
+        "type": "ACTION_SEQUENCE",
+        "name": "onDownloadCompleteHandlerForImgStatus",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "imagesrc"
+        }, {
+            "datatype": "boolean",
+            "name": "issuccess"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "onDownloadComplete",
+        "actions": [{
+            "id": "ADD_SNIPPET_d07cdcc0d2ec4deca8e9e2a68c4a8f40",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// Assigning dot color based on \"Status\"\nif (this.view.lblStatus.text === \"Active\") {\n  this.view.imgStatus.src = \"/green.png\";\n} else if (this.view.lblStatus.text === \"Archived\") {\n  this.view.imgStatus.src = \"/yellow.png\";\n} else {\n  this.view.imgStatus.src = \"/grey.png\";\n}",
+            "parentId": null
+        }]
+    }
+}
