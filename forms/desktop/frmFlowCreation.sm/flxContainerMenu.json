@@ -47,7 +47,7 @@
     "kuid": "g2593f4cbae54fddac52cb22207b9267",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMainContainerFlows",
+    "parent": "flxMainContainerFlowCreation",
     "pf": "frmFlowCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

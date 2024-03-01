@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "56%"
+        "value": "4.97%"
     },
     "_margin_": [
         1,
@@ -21,8 +21,12 @@
         0,
         0
     ],
-    "_skin_": "s7dbd208cec04b4ca1eb5a7583d7e772",
+    "_skin_": "s0ded8ea6d4448e5a20010223ea0da7f",
     "_text_": "Environment",
+    "_top_": {
+        "type": "string",
+        "value": "52.83%"
+    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -35,10 +39,6 @@
         }
     },
     "canUpdateUI": true,
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerweight": 100,
     "contentalignment": 4,
     "id": "lblEnvironment",
@@ -55,9 +55,9 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c291121020cd48eab1d133b2a6256426",
+    "kuid": "aafa7ef41a4f435ea3779aeb2f3595f5",
     "name": "kony.ui.Label",
-    "parent": "flxHeaderSegFlows",
+    "parent": "flxCreationFlow",
     "pf": "frmFlowCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

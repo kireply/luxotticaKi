@@ -3,11 +3,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "7%"
+        "value": "9%"
     },
     "_left_": {
         "type": "string",
-        "value": "43.58%"
+        "value": "5%"
     },
     "_margin_": [
         0,
@@ -22,30 +22,30 @@
         0
     ],
     "_placeholder_": "Please Select",
-    "_skin_": "scf7732e4e704ee88be9602cde5542e9",
+    "_skin_": "s6670225d90f4454945f185f0da4ab20",
     "_top_": {
         "type": "string",
-        "value": "37%"
+        "value": "42%"
     },
     "_width_": {
         "type": "string",
-        "value": "15%"
+        "value": "90%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
+    "dropdownimage": "listboxarw.png",
     "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
     "groupcells": false,
     "id": "lbCategory",
-    "ide_onSelection": "AS_ListBox_b1714468e04e42faa489b53c2e5d71a5",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "bb544874299945829a46b5ffb7d75a9b",
+    "kuid": "c3eee3d1ab8e4dff9749f9cb3ec04370",
     "masterdata": [
         [
             "lb1",
-            "Category: All"
+            "Sunglasses"
         ],
         [
             "lb2",
@@ -53,15 +53,11 @@
         ],
         [
             "lb3",
-            "Sunglasses"
-        ],
-        [
-            "lb4",
-            "Mix&Matches"
+            "Mix&Match"
         ]
     ],
     "name": "kony.ui.ListBox",
-    "parent": "FlexContainerFlows",
+    "parent": "flxCreationFlow",
     "pf": "frmFlowCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

@@ -10,7 +10,7 @@
             "name": "changedtext"
         }],
         "contextObj": {
-            "name": "CopyfrmFlows",
+            "name": "frmFlowCreation",
             "type": "forms",
             "platform": null,
             "KUID": "d569d8ca39af43bea658ee877f5208b9"

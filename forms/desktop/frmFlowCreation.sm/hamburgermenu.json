@@ -40,7 +40,9 @@
     "containerweight": 0,
     "dataDiffs": {
         "btnLogout": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_Button_bf04767aa34f4a50a9f731830e0d2944"
+            },
             "__info__": {
                 "kuid": "gd3edbdb49874eb7b47808fed87f4d66",
                 "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
@@ -152,7 +154,8 @@
                 "kuid": "icf0d42ee14a4c43823e7440d4043cf7",
                 "srcKUID": "f6d6345317634850bef09677b329a6ec",
                 "wType": "Image"
-            }
+            },
+            "src": "logout_true.png"
         },
         "segMenu": {
             "__events__": {},

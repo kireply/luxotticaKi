@@ -1,0 +1,25 @@
+{
+    "AS_Button_d38cb80742af4d62b0612fc57f91aef6": {
+        "id": "AS_Button_d38cb80742af4d62b0612fc57f91aef6",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnProceed",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlowCreation",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d569d8ca39af43bea658ee877f5208b9"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_j08193a15aa945fe9234410bb5ba12d5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var currentDate = new Date();\n\n// Ottengo i componenti della data (giorno, mese, anno)\nvar day = currentDate.getDate();\nvar month = currentDate.getMonth() + 1; // I mesi partono da 0 (gennaio) quindi aggiungo 1\nvar year = currentDate.getFullYear();\n\n// Formatta la data come stringa nel formato \"YYYY-MM-DD\"\nvar formattedDate = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\nvoltmx.print(\"### DATA: \" + formattedDate); // Stampo la data formattata",
+            "parentId": null
+        }]
+    }
+}

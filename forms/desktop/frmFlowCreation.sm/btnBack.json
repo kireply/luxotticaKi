@@ -34,8 +34,10 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 5,
+    "disabledSkins": {
+        "focusSkin": "s6de8ee3e9e1463996d5dbb22b25b33b"
+    },
     "displaytext": true,
-    "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
     "id": "btnBack",
     "ide_onClick": "AS_Button_d9e49462f91e4405b3ec0a7bfdac5579",
     "info": null,
@@ -43,7 +45,7 @@
     "isvisible": true,
     "kuid": "bac41a1bab7740fdb717f919eb901ab9",
     "name": "kony.ui.Button",
-    "parent": "FlexContainerFlows",
+    "parent": "flxContainerFlowCreation",
     "pf": "frmFlowCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

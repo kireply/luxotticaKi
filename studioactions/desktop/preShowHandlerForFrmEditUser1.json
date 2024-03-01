@@ -1,0 +1,25 @@
+{
+    "AS_Form_a9129f38525d4052a5bbaa2367342d1d": {
+        "id": "AS_Form_a9129f38525d4052a5bbaa2367342d1d",
+        "type": "ACTION_SEQUENCE",
+        "name": "preShowHandlerForFrmEditUser1",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmEditUser",
+            "type": "forms",
+            "platform": "",
+            "KUID": "f083813d2c09432d9f3d793de344cf37"
+        },
+        "language": "js",
+        "eventType": "preShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_cc2b014e0c9d4e0cbabdcf1bd3c4f57f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "/*const contact = this.navigationContext;\nvoltmx.print(\"### contact: \" + JSON.stringify(contact));\nvoltmx.print(\"### contact info: \" + contact.Name);\nthis.view.addoredituser.txtName = contact.Name;\nthis.view.addoredituser.txtSurname = contact.Surname;\nthis.view.addoredituser.txtCompileUserEmail = contact.Mail;*/\n\nconst contact = this.navigationContext;\nvoltmx.print(\"### contact: \" + JSON.stringify(contact));\nvoltmx.print(\"### contact info: \" + contact.lblUserName.text);\nthis.view.addoredituser2.txtName.text = contact.lblUserName.text;\nthis.view.addoredituser2.txtSurname.text = contact.lblUserSurname.text;\nthis.view.addoredituser2.txtCompileUserEmail.text = contact.lblUserUsername.text;\nthis.view.addoredituser2.txtCompileUserPassword.text = contact.lblUserPassword.text;\nthis.view.txtID.text = contact.lblUserID.text;",
+            "parentId": null
+        }]
+    }
+}

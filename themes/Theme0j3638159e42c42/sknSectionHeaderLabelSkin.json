@@ -2,8 +2,9 @@
   "android": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "default",
-    "font_size": 170,
+    "font_size": 210,
     "font_weight": "bold",
     "isForked": true,
     "text_shadow": {
@@ -17,8 +18,9 @@
   "androidwearos": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "default",
-    "font_size": 170,
+    "font_size": 210,
     "font_weight": "bold",
     "isForked": true
   },
@@ -31,8 +33,9 @@
   "desktopweb": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "Helvetica",
-    "font_size": 170,
+    "font_size": 210,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -60,8 +63,9 @@
   "ipad": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "System-Bold",
-    "font_size": 170,
+    "font_size": 210,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -82,8 +86,9 @@
   "iphone": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "System-Bold",
-    "font_size": 170,
+    "font_size": 210,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -105,8 +110,9 @@
   "kiosk": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "None",
-    "font_size": 170,
+    "font_size": 210,
     "font_weight": "bold",
     "isForked": true
   },
@@ -114,8 +120,9 @@
   "spaan": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "Helvetica",
-    "font_size": 170,
+    "font_size": 210,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -137,8 +144,9 @@
   "spaandroidtablet": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "Helvetica",
-    "font_size": 170,
+    "font_size": 210,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -160,8 +168,9 @@
   "spaip": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "Helvetica",
-    "font_size": 170,
+    "font_size": 210,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -183,8 +192,9 @@
   "spaipad": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "Helvetica",
-    "font_size": 170,
+    "font_size": 210,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -206,8 +216,9 @@
   "spawindowstablet": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "Helvetica",
-    "font_size": 170,
+    "font_size": 210,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -229,8 +240,9 @@
   "spawinphone8": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "Helvetica",
-    "font_size": 170,
+    "font_size": 210,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -252,8 +264,9 @@
   "tabrcandroid": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "default",
-    "font_size": 170,
+    "font_size": 210,
     "font_weight": "bold",
     "isForked": true,
     "text_shadow": {
@@ -266,24 +279,27 @@
   },
   "wType": "Label",
   "watchos": {
+    "font_color": "000000ff",
     "font_name": "System",
-    "font_size": 170,
+    "font_size": 210,
     "font_weight": "bold",
     "isForked": true
   },
   "windows8": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "None",
-    "font_size": 170,
+    "font_size": 210,
     "font_weight": "bold",
     "isForked": true
   },
   "winphone8": {
     "background_color": "ffffff00",
     "bg_type": "one",
+    "font_color": "000000ff",
     "font_name": "None",
-    "font_size": 170,
+    "font_size": 210,
     "font_weight": "bold",
     "isForked": true
   }

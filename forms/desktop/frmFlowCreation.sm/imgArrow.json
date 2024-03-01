@@ -42,7 +42,7 @@
     "isvisible": true,
     "kuid": "a63a7f6bc83642f19688a94ecdcb8a1b",
     "name": "kony.ui.Image2",
-    "parent": "FlexContainerFlows",
+    "parent": "flxContainerFlowCreation",
     "pf": "frmFlowCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

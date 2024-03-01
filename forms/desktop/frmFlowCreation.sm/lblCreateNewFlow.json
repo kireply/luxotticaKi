@@ -1,19 +1,15 @@
 {
-    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "8%"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "75.98%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_margin_": [
-        6,
-        6,
-        6,
-        6
+        1,
+        1,
+        1,
+        1
     ],
     "_padding_": [
         0,
@@ -21,41 +17,51 @@
         0,
         0
     ],
-    "_right_": {
-        "type": "string",
-        "value": "5%"
-    },
-    "_skin_": "s19dde20e5f64e9c8ed0e33578f4d7cd",
-    "_text_": "       Create new flow",
+    "_skin_": "s4796b99fc2740909838ef96bad90585",
+    "_text_": "Create new flow",
     "_top_": {
         "type": "string",
-        "value": "23.10%"
+        "value": "0dp"
     },
     "_width_": {
-        "type": "string",
-        "value": "19%"
+        "type": "ref",
+        "value": "preferred"
     },
-    "canUpdateUI": true,
-    "containerweight": 100,
-    "contentalignment": 5,
-    "desktopweb": {
-        "psp": {
-            "hoverSkin": "s3b873adf2b14e22a1c4c63baa880178"
+    "_wrapping_": 2,
+    "android": {
+        "textStyle": {
+            "letterSpacing": 0,
+            "strikeThrough": false
         }
     },
-    "disabledSkins": {},
-    "displaytext": true,
-    "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "contentalignment": 4,
     "id": "lblCreateNewFlow",
     "info": null,
+    "ipad": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
+    "iphone": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "j49f0c789f704431a45910478f338e0c",
-    "name": "kony.ui.Button",
-    "parent": "FlexContainerFlows",
+    "kuid": "b8e0e10152004342959ad10b0c8a89d2",
+    "name": "kony.ui.Label",
+    "parent": "flxCreationFlow",
     "pf": "frmFlowCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "wType": "Button",
+    "tooltip": "",
+    "wType": "Label",
     "zindex": 1
 }

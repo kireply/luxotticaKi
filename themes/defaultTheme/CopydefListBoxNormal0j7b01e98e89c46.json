@@ -1,0 +1,17 @@
+{
+  "background_color": "ffffffff",
+  "bg_type": "one",
+  "border_color": "333333ff",
+  "border_radius": 0,
+  "border_style": "custom",
+  "border_type": 0,
+  "border_width": 1,
+  "font_color": "333333ff",
+  "font_name": "iphoneSystem",
+  "font_size": 107,
+  "font_style": "normal",
+  "font_weight": "400",
+  "isDefaultSkin": false,
+  "kuid": "s6670225d90f4454945f185f0da4ab20",
+  "wType": "ListBox"
+}

@@ -3,11 +3,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "7%"
+        "value": "9%"
     },
     "_left_": {
         "type": "string",
-        "value": "76.01%"
+        "value": "5%"
     },
     "_margin_": [
         0,
@@ -22,14 +22,14 @@
         0
     ],
     "_placeholder_": "Please Select",
-    "_skin_": "scf7732e4e704ee88be9602cde5542e9",
+    "_skin_": "sf06630d019e461a8379e308bd99bc4c",
     "_top_": {
         "type": "string",
-        "value": "37%"
+        "value": "56.59%"
     },
     "_width_": {
         "type": "string",
-        "value": "19%"
+        "value": "90%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
@@ -37,31 +37,26 @@
     "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
     "groupcells": false,
     "id": "lbEnvironment",
-    "ide_onSelection": "AS_ListBox_jf8f738332ba4ee5bdadff0fa6a5cb38",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "df1846f578bb4ffea2f16d9bea98646b",
+    "kuid": "eeb5663c2c75423fa650a145b1bfb895",
     "masterdata": [
         [
             "lb1",
-            "Environment: All"
+            "Development"
         ],
         [
             "lb2",
-            "Production"
-        ],
-        [
-            "lb3",
             "Quality"
         ],
         [
-            "lb4",
-            "Development"
+            "lb3",
+            "Production"
         ]
     ],
     "name": "kony.ui.ListBox",
-    "parent": "FlexContainerFlows",
+    "parent": "flxCreationFlow",
     "pf": "frmFlowCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

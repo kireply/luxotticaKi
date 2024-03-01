@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "86%"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
@@ -25,11 +25,11 @@
     "_skin_": "sa1c3035bfc24f758dc00b3f95748a56",
     "_top_": {
         "type": "string",
-        "value": "14%"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "7.32%"
+        "value": "100%"
     },
     "allboxes": [],
     "autogrowmode": 0,
@@ -47,7 +47,7 @@
     "kuid": "e68c39b95c5042fe8490e7d1bb484697",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMainContainerFlows",
+    "parent": "flxMainContainerFlowCreation",
     "pf": "frmFlowCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
