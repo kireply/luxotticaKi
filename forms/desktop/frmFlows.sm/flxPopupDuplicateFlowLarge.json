@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "92%"
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -22,39 +22,50 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sa1c3035bfc24f758dc00b3f95748a56",
+    "_skin_": "sc1daa0d82554341a381bf79b8ce645e",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "40%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
-        "smallerhamburgermenu"
+        "flxContainerFlowDuplication",
+        "imgExitLargePopup",
+        "imgBackToSmallPopup"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxContainerSmallerMenu",
+    "id": "flxPopupDuplicateFlowLarge",
     "info": null,
     "iscustomlayout": false,
-    "ismodalcontainer": false,
+    "ismodalcontainer": true,
     "isvisible": false,
-    "kuid": "e68c39b95c5042fe8490e7d1bb484697",
+    "kuid": "ffb0e110af5f4093a0df2b5468f655a1",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMainContainerFlowCreation",
-    "pf": "frmFlowCreation",
+    "parent": "frmFlows",
+    "pf": "frmFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 2
 }

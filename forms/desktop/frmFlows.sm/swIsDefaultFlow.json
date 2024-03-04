@@ -1,6 +1,10 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizSwitch",
     "DNDConfig": null,
+    "_blur_": {
+        "enabled": false,
+        "value": 0
+    },
     "_height_": {
         "type": "string",
         "value": "3%"
@@ -22,13 +26,13 @@
         0
     ],
     "_right_": {
-        "type": "string",
-        "value": "0%"
+        "type": "number",
+        "value": "5"
     },
-    "_skin_": "s651c8b6c2924a32be3cf51c99fe123e",
+    "_skin_": "s63978a9c5f14fc9aec86118b5e423c7",
     "_top_": {
         "type": "string",
-        "value": "71.05%"
+        "value": "67%"
     },
     "_width_": {
         "type": "string",
@@ -36,21 +40,20 @@
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "id": "swIsSupernova",
+    "id": "swIsDefaultFlow",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "kiosk": {
         "render": false
     },
-    "kuid": "af3d5f2b694d42edaecbcf6d5e3fff7f",
+    "kuid": "d3468a9b2f024dc9aff275a279e85d46",
     "leftsidetext": " ",
     "name": "kony.ui.Switch",
-    "onslide": null,
     "osPlatform": "desktopweb",
     "osVersion": "iOS7",
-    "parent": "flxCreationFlow",
-    "pf": "frmFlowCreation",
+    "parent": "flxDuplicationFlow",
+    "pf": "frmFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "rightsidetext": " ",

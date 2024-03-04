@@ -1,0 +1,31 @@
+{
+    "AS_Segment_ie069a4b75c44ccf880b706daf27e7e7": {
+        "id": "AS_Segment_ie069a4b75c44ccf880b706daf27e7e7",
+        "type": "ACTION_SEQUENCE",
+        "name": "onRowClickHandlerForFlowSegment",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onRowClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_je0aa7e67b5c48dd9eabf9f1666a56e3",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var flow = this.view.segFlows.selectedRowItems[0];\n\nvoltmx.print(\"### FLOW JSON: \" + JSON.stringify(flow));\n\ngblFlowId = parseInt(flow.id.match(/\\d+/)[0]); //extracting only the id number\ngblFlowCategory = flow.category;\ngblFlowName = flow.id;\n\nvoltmx.print(\"### Flow Id: \" + gblFlowId);\nvoltmx.print(\"### Flow Name: \" + gblFlowName);\n\nthis.view.lbSelectChannel.masterData = [ [\"lb1\", \"Select the channel in which duplicate the flow\"], [\"lb2\", gblChannelName] ];\nthis.view.lbSelectChannel.selectedKey = \"lb1\";\n\nif (gblDuplicateIcon) {\n  this.view.lblDuplicateFlow.text = \"Duplicate Flow - \" + gblFlowName;\n  this.view.lblDuplicateFlow2.text = \"Duplicate Flow - \" + gblFlowName;\n  this.view.flxPopupDuplicateFlowSmall.setVisibility(true);\n}",
+            "parentId": null
+        }]
+    }
+}

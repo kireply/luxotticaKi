@@ -14,7 +14,7 @@
     "thumb_color": "ffffff"
   },
   "background_left_color": "ffffffff",
-  "background_right_color": "ffffffff",
+  "background_right_color": "000000ff",
   "bg_type": "one",
   "border_color": "000000ff",
   "border_style": "plain",

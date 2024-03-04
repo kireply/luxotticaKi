@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "97%"
     },
     "_left_": {
         "type": "string",
@@ -22,39 +22,63 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sa1c3035bfc24f758dc00b3f95748a56",
+    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_top_": {
         "type": "string",
         "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "90%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
-        "smallerhamburgermenu"
+        "lblDuplicateFlow2",
+        "flxInfo",
+        "lblChannel2",
+        "lbChannel2",
+        "lblFlowDescription",
+        "txtFlowDescription",
+        "lblCategory2",
+        "lbCategory2",
+        "lblEnvironment2",
+        "lbEnvironment2",
+        "lblIsDefaultFlow",
+        "lblIsSupernova",
+        "lblSelectStepsLayout",
+        "btnProceed",
+        "swIsDefaultFlow",
+        "swIsSupernova",
+        "flxStepsLayout"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxContainerSmallerMenu",
+    "id": "flxDuplicationFlow",
     "info": null,
     "iscustomlayout": false,
-    "ismodalcontainer": false,
-    "isvisible": false,
-    "kuid": "e68c39b95c5042fe8490e7d1bb484697",
+    "isvisible": true,
+    "kuid": "ie7afb584afd4ceebf6e113c83589a40",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMainContainerFlowCreation",
-    "pf": "frmFlowCreation",
+    "parent": "flxContainerFlowDuplication",
+    "pf": "frmFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 1
 }

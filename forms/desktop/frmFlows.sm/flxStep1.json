@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "90%"
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "7%"
     },
     "_margin_": [
         0,
@@ -22,34 +22,37 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sa1c3035bfc24f758dc00b3f95748a56",
+    "_skin_": "s47100a7868e4c9187e401623bf1659f",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "2dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "40%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
-        "smallerhamburgermenu"
+        "lblPercentage1"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxContainerSmallerMenu",
+    "id": "flxStep1",
     "info": null,
     "iscustomlayout": false,
-    "ismodalcontainer": false,
-    "isvisible": false,
-    "kuid": "e68c39b95c5042fe8490e7d1bb484697",
+    "isvisible": true,
+    "kuid": "d8ccae96f24c49009bef80c38de2da52",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMainContainerFlowCreation",
-    "pf": "frmFlowCreation",
+    "parent": "flxStepsLayout",
+    "pf": "frmFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

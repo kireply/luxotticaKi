@@ -1,34 +1,27 @@
 {
-    "AS_Button_bf04767aa34f4a50a9f731830e0d2944": {
-        "id": "AS_Button_bf04767aa34f4a50a9f731830e0d2944",
+    "AS_Button_j16102132e5d4b81ade29092fc657e6b": {
+        "id": "AS_Button_j16102132e5d4b81ade29092fc657e6b",
         "type": "ACTION_SEQUENCE",
-        "name": "onClickHandlerForButtonLogoutOfFrmFlowCreation",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
         }],
-        "contextObj": {
-            "name": "frmFlowCreation",
-            "type": "forms",
-            "platform": null,
-            "KUID": "d569d8ca39af43bea658ee877f5208b9"
-        },
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "LOADING_INDICATOR_b9794d0ab15b4e069143b2c535ef2574",
+            "id": "LOADING_INDICATOR_ide_onClick_hae670b5757443d987b45793029c8aa7",
             "selectedOption": "show",
             "type": "LOADING_INDICATOR",
             "skin": "none",
             "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
             "isBlocked": "true",
             "showProgressIndicator": "true",
-            "text": "Logging out..."
+            "text": "Back to channels..."
         }, {
-            "id": "NAVIGATE_TO_FORM__hdfe1cf064a1477cbaf8d052abfb8b8c",
+            "id": "NAVIGATE_TO_FORM__ide_onClick_g0cfca66fd0a4c97be3a9af1e4d142e1",
             "type": "NAVIGATE_TO_FORM",
-            "formId": "frmLogin",
-            "formKUID": "hc1489bebc2c4f38b8ba6309c7ed6c02",
+            "formId": "frmFlows",
+            "formKUID": "e6a8fc2377784d1595b361cc9412aea7",
             "projectName": "luxotticaKi",
             "mappings": {},
             "mappingsOrder": [],
@@ -36,7 +29,7 @@
             "package": "",
             "isCustomInput": false
         }, {
-            "id": "LOADING_INDICATOR_g81cdef16b3f46f8826030f51a8fa36f",
+            "id": "LOADING_INDICATOR_ide_onClick_b92d8f88ea704246b6107193ca105ec1",
             "selectedOption": "dismiss",
             "type": "LOADING_INDICATOR",
             "skin": "none",

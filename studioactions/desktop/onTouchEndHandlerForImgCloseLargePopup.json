@@ -1,0 +1,32 @@
+{
+    "AS_Image_c8bdbe5ab65e4bc0bc3071df13dd468d": {
+        "id": "AS_Image_c8bdbe5ab65e4bc0bc3071df13dd468d",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgCloseLargePopup",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_b4fdf60faca2467cae626702ed302fea",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxPopupDuplicateFlowLarge.setVisibility(false);\ngblDuplicateIcon = false;",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

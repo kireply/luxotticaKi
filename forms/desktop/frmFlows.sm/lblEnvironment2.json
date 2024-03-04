@@ -2,12 +2,12 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "100%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
-        "value": "10%"
+        "value": "4.97%"
     },
     "_margin_": [
         1,
@@ -21,15 +21,15 @@
         0,
         0
     ],
-    "_skin_": "sa2db6c525ab4ce18ec6919dc8cebf95",
-    "_text_": "Label",
+    "_skin_": "s0ded8ea6d4448e5a20010223ea0da7f",
+    "_text_": "Environment",
     "_top_": {
         "type": "string",
-        "value": "36dp"
+        "value": "54.83%"
     },
     "_width_": {
-        "type": "string",
-        "value": "16.11%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {
@@ -39,14 +39,9 @@
         }
     },
     "canUpdateUI": true,
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
-    "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblFlowName",
+    "id": "lblEnvironment2",
     "info": null,
     "ipad": {
         "psp": {
@@ -60,17 +55,12 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "adc0c5b9358448e994244ae8e9c0d4ff",
-    "maxwidth": {
-        "type": "string",
-        "value": "40%"
-    },
+    "kuid": "i8be7ae26cc34827b43749ec09dba42a",
     "name": "kony.ui.Label",
-    "parent": "flxRowFlows",
-    "pf": "tplRowFlows",
+    "parent": "flxDuplicationFlow",
+    "pf": "frmFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",
-    "wType": "Label",
-    "zindex": 1
+    "wType": "Label"
 }

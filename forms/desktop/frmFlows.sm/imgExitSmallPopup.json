@@ -4,10 +4,6 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "70%"
-    },
-    "_left_": {
-        "type": "string",
         "value": "10%"
     },
     "_margin_": [
@@ -22,42 +18,36 @@
         0,
         0
     ],
+    "_right_": {
+        "type": "string",
+        "value": "2%"
+    },
     "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
-    "_src_": "duplicate2.png",
+    "_src_": "close.png",
     "_top_": {
         "type": "string",
-        "value": "5%"
+        "value": "3%"
     },
     "_width_": {
         "type": "string",
-        "value": "9%"
+        "value": "10%"
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
-    "containerId": true,
     "containerweight": 100,
-    "id": "imgDuplicate",
-    "ide_onTouchEnd": "AS_Image_fb3934354f98479db654d5cafc17bb51",
+    "id": "imgExitSmallPopup",
+    "ide_onTouchEnd": "AS_Image_de0157760120436c9926e60b56a10c7e",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a03e2097d7ac4304ada51e930f61d175",
+    "kuid": "b55d552fcef44e3ca8c6bd382392e99d",
     "name": "kony.ui.Image2",
-    "parent": "flxShowActive",
-    "pf": "tplRowFlows",
+    "parent": "flxPopupDuplicateFlowSmall",
+    "pf": "frmFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "srcType": 1,
     "wType": "Image",
-    "widgetalignment": 5,
-    "zindex": 1
+    "widgetalignment": 5
 }

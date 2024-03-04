@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "10%"
+        "value": "0dp"
     },
     "_margin_": [
         1,
@@ -21,15 +21,15 @@
         0,
         0
     ],
-    "_skin_": "sa2db6c525ab4ce18ec6919dc8cebf95",
-    "_text_": "Label",
+    "_skin_": "s4d958c5d4aa49c68d1acbed300fddc6",
+    "_text_": "50%",
     "_top_": {
         "type": "string",
-        "value": "36dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "16.11%"
+        "value": "100%"
     },
     "_wrapping_": 2,
     "android": {
@@ -39,14 +39,13 @@
         }
     },
     "canUpdateUI": true,
-    "centery": {
+    "centerx": {
         "type": "string",
         "value": "50%"
     },
-    "containerId": true,
     "containerweight": 100,
-    "contentalignment": 4,
-    "id": "lblFlowName",
+    "contentalignment": 5,
+    "id": "lblPercentage2",
     "info": null,
     "ipad": {
         "psp": {
@@ -60,17 +59,12 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "adc0c5b9358448e994244ae8e9c0d4ff",
-    "maxwidth": {
-        "type": "string",
-        "value": "40%"
-    },
+    "kuid": "a8d0b03119224300b2ec33b081979dd9",
     "name": "kony.ui.Label",
-    "parent": "flxRowFlows",
-    "pf": "tplRowFlows",
+    "parent": "flxStep2",
+    "pf": "frmFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",
-    "wType": "Label",
-    "zindex": 1
+    "wType": "Label"
 }

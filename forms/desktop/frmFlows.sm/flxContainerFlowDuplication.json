@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sa1c3035bfc24f758dc00b3f95748a56",
+    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -35,21 +35,23 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "smallerhamburgermenu"
+        "flxDuplicationFlow"
     ],
     "clipbounds": false,
     "containerweight": 100,
+    "desktopweb": {
+        "psp": {}
+    },
     "enablescrolling": true,
-    "id": "flxContainerSmallerMenu",
+    "id": "flxContainerFlowDuplication",
     "info": null,
     "iscustomlayout": false,
-    "ismodalcontainer": false,
-    "isvisible": false,
-    "kuid": "e68c39b95c5042fe8490e7d1bb484697",
+    "isvisible": true,
+    "kuid": "f9d9231c90c246a1816ab85a117481db",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMainContainerFlowCreation",
-    "pf": "frmFlowCreation",
+    "parent": "flxPopupDuplicateFlowLarge",
+    "pf": "frmFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

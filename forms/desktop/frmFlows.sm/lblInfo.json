@@ -3,11 +3,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "80%"
     },
     "_left_": {
         "type": "string",
-        "value": "10%"
+        "value": "13%"
     },
     "_margin_": [
         1,
@@ -21,15 +21,11 @@
         0,
         0
     ],
-    "_skin_": "sa2db6c525ab4ce18ec6919dc8cebf95",
-    "_text_": "Label",
-    "_top_": {
-        "type": "string",
-        "value": "36dp"
-    },
+    "_skin_": "s98208b929b04a5ba5c26e2cbd341827",
+    "_text_": "The flow name will be automatically generated base on the information entered in the form below.",
     "_width_": {
         "type": "string",
-        "value": "16.11%"
+        "value": "85%"
     },
     "_wrapping_": 2,
     "android": {
@@ -43,10 +39,9 @@
         "type": "string",
         "value": "50%"
     },
-    "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblFlowName",
+    "id": "lblInfo",
     "info": null,
     "ipad": {
         "psp": {
@@ -60,17 +55,12 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "adc0c5b9358448e994244ae8e9c0d4ff",
-    "maxwidth": {
-        "type": "string",
-        "value": "40%"
-    },
+    "kuid": "a112597a78494af198f9ea9b068c1586",
     "name": "kony.ui.Label",
-    "parent": "flxRowFlows",
-    "pf": "tplRowFlows",
+    "parent": "flxInfo",
+    "pf": "frmFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",
-    "wType": "Label",
-    "zindex": 1
+    "wType": "Label"
 }

@@ -782,6 +782,7 @@
     "groupcells": false,
     "hasSections": false,
     "id": "segFlows",
+    "ide_onRowClick": "AS_Segment_ie069a4b75c44ccf880b706daf27e7e7",
     "info": null,
     "ipad": {
         "psp": {
