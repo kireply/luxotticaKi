@@ -38,6 +38,7 @@
         "flxContainerHeader",
         "flxContainerMenu",
         "flxContainerSmallerMenu",
+        "flxChannelscopy",
         "flxChannels",
         "lblSelectOrCreateChannel"
     ],

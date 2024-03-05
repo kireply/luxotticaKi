@@ -1,16 +1,12 @@
 {
     "DNDConfig": null,
-    "_blur_": {
-        "enabled": false,
-        "value": 63
-    },
     "_height_": {
         "type": "string",
-        "value": "559dp"
+        "value": "22.44%"
     },
     "_left_": {
         "type": "string",
-        "value": "520dp"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -26,51 +22,41 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sbb5fcddbbb14add962da9f9a4e314c0",
+    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_top_": {
         "type": "string",
-        "value": "170dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "33.67%"
+        "value": "25.18%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "lblTitlePopup",
-        "imgExitPopup",
-        "txtChannelID",
-        "txtChannelLogo",
-        "txtChannelProperties",
-        "lblChannelID",
-        "lblChannelName",
-        "lblChannelLogo",
-        "lblChannelProperties",
-        "lbChannelName"
+        "flxChannel"
     ],
     "clipbounds": false,
     "containerweight": 100,
-    "desktopweb": {
-        "zIndex": 2
-    },
     "enablescrolling": true,
-    "id": "flxPopupChannelInfo",
+    "id": "channelTemplatewithContract",
     "info": null,
     "iscustomlayout": false,
-    "ismodalcontainer": true,
-    "isvisible": false,
-    "kuid": "i70a2ea907514b618067749d69eb0c78",
+    "isvisible": true,
+    "kuid": "h81bf31150bb49c9a2809843ee9d7596",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "frmChannels",
-    "pf": "frmChannels",
+    "parent": "userwidgetmodel",
+    "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
+    "vizProps": {
+        "hidewidgethierarchy": false
+    },
     "wType": "FlexContainer",
     "widgetalignment": 1,
     "zindex": 1
