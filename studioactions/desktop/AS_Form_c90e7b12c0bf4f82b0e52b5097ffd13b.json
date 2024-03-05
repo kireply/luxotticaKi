@@ -24,7 +24,6 @@
             "type": "STYLE_ACTION",
             "itemType": "FORM",
             "itemId": "frmChannelCreation",
-            "widgetId": "btnSaveNewChannel",
             "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
             "widgetKUID": "acea9dcd3f784d719159054e3d1e5f3b",
             "wType": "Button",
@@ -51,13 +50,12 @@
             "forkedPlatform": "all",
             "parentId": null,
             "callbackType": null,
-            "widgetPath": "this.view.btnSaveNewChannel"
+            "disabled": true
         }, {
             "id": "STYLE_ACTION_a3ebacb203fb42daaf7014241284f19d",
             "type": "STYLE_ACTION",
             "itemType": "FORM",
             "itemId": "frmChannelCreation",
-            "widgetId": "txtChannelID",
             "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
             "widgetKUID": "ddabe9397d704105b3c7c23abd37a9ce",
             "wType": "TextField",
@@ -85,8 +83,7 @@
             "forkedPlatform": "all",
             "parentId": null,
             "callbackType": null,
-            "disabled": true,
-            "widgetPath": "this.view.txtChannelID"
+            "disabled": true
         }]
     }
 }

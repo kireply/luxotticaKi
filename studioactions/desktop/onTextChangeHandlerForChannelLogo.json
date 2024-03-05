@@ -61,110 +61,8 @@
         }, {
             "id": "ADD_MAPPING_aa5325fae84346e485e3287402a49863",
             "type": "ADD_MAPPING",
-            "mappings": {
-                "ME_Mapping_b9b1802d67a14bc5a2ea438a284e0944": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_b9b1802d67a14bc5a2ea438a284e0944",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Forms",
-                        "propertyName": "text",
-                        "widgetId": "txtChannelID",
-                        "widgetPath": "this.view.txtChannelID",
-                        "widgetType": "TextField",
-                        "dataType": "string",
-                        "itemId": "frmChannelCreation",
-                        "widgetKUID": "ddabe9397d704105b3c7c23abd37a9ce",
-                        "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Variables",
-                        "propertyName": "channelID",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    }
-                },
-                "ME_Mapping_f195b59bac63416884efb21cbba60db9": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_f195b59bac63416884efb21cbba60db9",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Forms",
-                        "propertyName": "text",
-                        "widgetId": "txtChannelLogo",
-                        "widgetPath": "this.view.txtChannelLogo",
-                        "widgetType": "TextField",
-                        "dataType": "string",
-                        "itemId": "frmChannelCreation",
-                        "widgetKUID": "i5d1173975984f0cb2527e5d9e37b9e9",
-                        "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Variables",
-                        "propertyName": "channelLogo",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    }
-                },
-                "ME_Mapping_bd2480656bfe46f6895da4ff69f28b66": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_bd2480656bfe46f6895da4ff69f28b66",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Forms",
-                        "propertyName": "text",
-                        "widgetId": "txtChannelProperties",
-                        "widgetPath": "this.view.txtChannelProperties",
-                        "widgetType": "TextField",
-                        "dataType": "string",
-                        "itemId": "frmChannelCreation",
-                        "widgetKUID": "i863bc80e6484a24a9692bf69c032a17",
-                        "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Variables",
-                        "propertyName": "channelProperties",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    }
-                },
-                "ME_Mapping_j5e9052f4dab4caeaec6d6be55ae5ec0": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_j5e9052f4dab4caeaec6d6be55ae5ec0",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Forms",
-                        "propertyName": "value",
-                        "widgetId": "lbChannelName",
-                        "widgetPath": "this.view.lbChannelName",
-                        "widgetType": "ListBox",
-                        "dataType": "string",
-                        "itemId": "frmChannelCreation",
-                        "collectionId": "selectedKeyValues",
-                        "widgetKUID": "c8b4087517b24c4a857ff0797d02c461",
-                        "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Variables",
-                        "propertyName": "channelName",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    }
-                }
-            },
-            "mappingsOrder": ["ME_Mapping_b9b1802d67a14bc5a2ea438a284e0944", "ME_Mapping_f195b59bac63416884efb21cbba60db9", "ME_Mapping_bd2480656bfe46f6895da4ff69f28b66", "ME_Mapping_j5e9052f4dab4caeaec6d6be55ae5ec0"],
+            "mappings": {},
+            "mappingsOrder": [],
             "parentId": null,
             "callbackType": null,
             "enableMappingEditor": true
@@ -241,7 +139,6 @@
             "type": "STYLE_ACTION",
             "itemType": "FORM",
             "itemId": "frmChannelCreation",
-            "widgetId": "btnSaveNewChannel",
             "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
             "widgetKUID": "acea9dcd3f784d719159054e3d1e5f3b",
             "wType": "Button",
@@ -268,8 +165,7 @@
             "displayAnimationId": "STYLE_ACTION_d154d986ae4f40c29f732222f398bf4e",
             "forkedPlatform": "all",
             "parentId": "_e6815edf705a4a3cb7aace68d0a2c633",
-            "callbackType": null,
-            "widgetPath": "this.view.btnSaveNewChannel"
+            "callbackType": null
         }, {
             "id": "ADD_SNIPPET_a17c678bf31e465580e60150592f1df0",
             "type": "ADD_SNIPPET",
@@ -281,7 +177,6 @@
             "type": "STYLE_ACTION",
             "itemType": "FORM",
             "itemId": "frmChannelCreation",
-            "widgetId": "btnSaveNewChannel",
             "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
             "widgetKUID": "acea9dcd3f784d719159054e3d1e5f3b",
             "wType": "Button",
@@ -307,8 +202,7 @@
             "displayAnimationId": "STYLE_ACTION_j96eb62525a049f5aa4bd686cb04f67d",
             "forkedPlatform": "all",
             "parentId": "_cc0ab57f256c42b1b2f1a236d0bd90d0",
-            "callbackType": null,
-            "widgetPath": "this.view.btnSaveNewChannel"
+            "callbackType": null
         }]
     }
 }

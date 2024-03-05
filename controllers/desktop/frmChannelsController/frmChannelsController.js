@@ -1,6 +1,6 @@
 define({ 
 
-  tiles:[],
+//   tiles:[],
   channels:[],
 
   onViewCreated(){
@@ -11,23 +11,19 @@ define({
 // //         this.addTile(this.tiles[0],0);
 // //       }
 //     };
-	this.view.preShow = async () => {
-      try{
+    this.view.preShow = async () => {
+      //try{
         await this.fetchChannels(); // aspetta che fetchChannels sia completato
         voltmx.print("### CHANNELS INSIDE ON VIEW: " + JSON.stringify(this.channels));
-    	//this.view.preShow = () => this.reloadData();
         this.reloadData();
-      } catch (error){
-        voltmx.print("### Error: " + JSON.stringify(error));
-      }
     };
   },
 
   reloadData(){
-    voltmx.print("### CHANNELS INSIDE ON RELOAD: " + JSON.stringify(this.channels));
-    //this.view.flxTiles.removeAll();
+//     voltmx.print("### CHANNELS INSIDE ON RELOAD: " + JSON.stringify(this.channels));
     this.view.flxChannels.removeAll();
     this.channels.forEach((box, index) => {this.addTile(box,index)});
+    this.addTile(null, 99);
   },
   
   fetchChannels(){
@@ -76,23 +72,62 @@ define({
           }
         },
       }, {}, {});
-      voltmx.print("### BUILDED FLEX");
+//       voltmx.print("### BUILDED FLEX");
       //const tile = new com.hcl.demo.uifactory.Tile({
-      const channel = new ki.luxottica.channelTemplate({
+      const channel = new ki.luxottica.channelTemplatewithContract({
         id: `channel{index}${new Date().getTime()}`,
         width: '95%',
-        height: '120dp',
+        height: '175dp',
         centerX: '50%',
         centerY: '50%'
       }, {}, {});
-      voltmx.print("### BUILDED CHANNEL: " + JSON.stringify(channel));
-      channel.glassLogo = box.logo;
-      channel.glassTitle = box.title;
+    
+//       voltmx.print("### CREATO IL CHANNEL");
+      if (box !== null) {
+        channel.channelLogo = box.logo;
+      	channel.channelInfo = box.name;
+        channel.channelIdentifier = box.id;
+        channel.channelProperties = box.properties_file;
+        channel.channelId = index;
+        channel.onClickTeaser = () => {
+      	//TODO ACTIONS WHILE CLICKING ON THE TILE
+          if (gblInfoIcon === true){
+  //           voltmx.print("### SET VISIBILITY");         
+            this.view.flxPopupChannelInfo.txtChannelID.text = channel.channelIdentifier;
+            this.view.flxPopupChannelInfo.txtChannelLogo.text = channel.channelLogo;
+            this.view.flxPopupChannelInfo.txtChannelProperties.text = channel.channelProperties;
+            this.view.flxPopupChannelInfo.lbChannelName.masterData = [ ["lb1", channel.channelInfo] ];
+            this.view.flxPopupChannelInfo.lbChannelName.selectedKey = "lb1"
+            this.view.flxPopupChannelInfo.setVisibility(true);
+          } else {
+  //           voltmx.print("### NAVIGATE");
+            gblChannelLogo = box.logo;
+            gblChannelName = box.name;
+            gblChannelId = box.id;
+            voltmx.print("### GLOBAL INFO: " + gblChannelName);
+            voltmx.print("### GLOBAL LOGO: " + gblChannelLogo);
+            var navigationManager = new voltmx.mvc.Navigation("frmFlows");
+            navigationManager.navigate();
+          }
+        }
+      }
+      else {
+//        voltmx.print("### INSIDE ELSE");
+       channel.channelLogo = "/add_circle_icon.png";
+       channel.channelInfo = "Add New Channel";
+       channel.channelId = index;
+//        voltmx.print("### CHANNEL INFO: " + channel.channelInfo);
+//        voltmx.print("### CHANNEL LOGO: " + channel.channelLogo);
+//        voltmx.print("### CHANNEL ID: " + channel.channelId);
+//        channel.channelImgInfo.setVisibility(false);
+      }
+//       voltmx.print("### CHANNEL INFO: " + channel.channelInfo);
+//       voltmx.print("### CHANNEL LOGO: " + channel.channelLogo);
+//       voltmx.print("### CHANNEL ID: " + channel.channelId);
+      
       flex.add(channel);
       this.view.flxChannels.add(flex);
     this.view.flxChannels.forceLayout();
   }
-
- 
 
 });

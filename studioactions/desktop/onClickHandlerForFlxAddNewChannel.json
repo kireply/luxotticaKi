@@ -12,38 +12,39 @@
         "actions": [{
             "id": "ADD_SNIPPET_ide_onClick_bbf226912ade44eb9b84eb2610c64a3c",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxPopupCreateNewChannel.setVisibility(true);\nthis.view.btnSaveNewChannel.setEnabled(false);"
+            "codeSnippet": "// this.view.flxPopupCreateNewChannel.setVisibility(true);\nthis.view.popupCreateNewChannel.setVisibility(true);\n// this.view.popupCreateNewChannel.btnSaveNewChannel.setEnabled(false);\n\n// btnSaveNewChannel.setEnabled(false);"
         }, {
             "id": "STYLE_ACTION_a3416a2f2acf4caa9ba1b48d42d92d49",
             "type": "STYLE_ACTION",
             "itemType": "FORM",
             "itemId": "frmChannelCreation",
-            "widgetId": "btnSaveNewChannel",
+            "widgetId": "popupCreateNewChannel",
             "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
-            "widgetKUID": "acea9dcd3f784d719159054e3d1e5f3b",
-            "wType": "Button",
+            "widgetKUID": "a1167e3d5fc4451ab8cf44247d090d31",
+            "wType": "UserWidgetInstance",
             "animationObject": {
                 "anchorPoint": {},
                 "stepConfig": {
                     "timingFunction": "kony.anim.EASE"
                 },
-                "opacity": "50",
+                "opacity": "100",
                 "displayAnimationId": "",
-                "duration": "0",
+                "duration": "250",
                 "delay": "0",
-                "iterationCount": ""
+                "iterationCount": "1"
             },
             "config": {
                 "delay": "0",
-                "iterationCount": 0,
+                "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "0"
+                "duration": "250"
             },
             "start": "Immediately",
             "animationId": "STYLE_ACTION_a3416a2f2acf4caa9ba1b48d42d92d49",
             "displayAnimationId": "STYLE_ACTION_a3416a2f2acf4caa9ba1b48d42d92d49",
             "forkedPlatform": "all",
-            "widgetPath": "this.view.btnSaveNewChannel"
+            "disabled": true,
+            "widgetPath": "this.view.popupCreateNewChannel"
         }]
     }
 }

@@ -1,0 +1,56 @@
+{
+    "AS_FlexContainer_d3b167d5343c4c829ce31a8737d64423": {
+        "id": "AS_FlexContainer_d3b167d5343c4c829ce31a8737d64423",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "f3634d1fd4dd46249c068cd0d19e3491"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "_dc34aba638144512962c68e9dac7a284",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "gblInfoIcon",
+                "operator": "===",
+                "rightValue": "true",
+                "rightValueType": "value"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_f3102ec58be8455782b7945649261c59",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_j4a0c0a496a142c7a01db762d0fac7f8",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### NAVIGATE\");\n\ngblChannelLogo = this.view.imgLogo.src;\ngblChannelName = this.view.lblChannelInfo.text;\n\nvar navigationManager = new voltmx.mvc.Navigation(\"frmFlows\");\nnavigationManager.navigate();",
+            "parentId": "_f3102ec58be8455782b7945649261c59",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_ce418684f0f84830b118756800ae370f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### SET VISIBILITY\");\nthis.view.flxPopupChannelInfo.isVisible = true;",
+            "parentId": "_dc34aba638144512962c68e9dac7a284",
+            "callbackType": null
+        }]
+    }
+}

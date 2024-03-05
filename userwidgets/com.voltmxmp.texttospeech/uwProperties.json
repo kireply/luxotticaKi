@@ -1,0 +1,383 @@
+{
+    "classname": "texttospeech",
+    "definitions": {
+        "apis": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "e468be13631c41faae5493522718e64b",
+                    "paramList": [
+                        {
+                            "name": "text"
+                        }
+                    ],
+                    "propertyKey": "speakOut",
+                    "pw": {
+                        "displayName": "speakOut",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "a6a937dbcf4946e5ad2e5a6d418cee42",
+                    "paramList": [],
+                    "propertyKey": "stopSpeech",
+                    "pw": {
+                        "displayName": "stopSpeech",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "j5c4a2b875be462d99406749093a4b52",
+                    "paramList": [],
+                    "propertyIndex": 1,
+                    "propertyKey": "speechOn",
+                    "pw": {
+                        "displayName": "speechOn",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "a6c807fba5484fdbb0178f2df14815b9",
+                    "paramList": [],
+                    "propertyIndex": 2,
+                    "propertyKey": "speechOff",
+                    "pw": {
+                        "displayName": "speechOff",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [
+                "General"
+            ],
+            "events": [],
+            "properties": [
+                "android",
+                "iOS",
+                "Desktop Web"
+            ],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "UK",
+                    "group": "android",
+                    "kuid": "a251067d343d45598ac6443ca73f80b9",
+                    "originalPropertyKey": "setAndroidLanguage",
+                    "propertyIndex": 1,
+                    "propertyKey": "setAndroidLanguage",
+                    "pw": {
+                        "displayName": "language",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "5.0",
+                    "group": "iOS",
+                    "kuid": "d21c4e89bbe548b59eaa31032aff5c89",
+                    "originalPropertyKey": "preUtteranceDelay",
+                    "propertyIndex": 1,
+                    "propertyKey": "preUtteranceDelay",
+                    "pw": {
+                        "displayName": "pre Utterance Delay",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "en-Us",
+                    "group": "Desktop Web",
+                    "kuid": "j8dab876e7d54617bb9efad392217fa0",
+                    "originalPropertyKey": "setWebLanguage",
+                    "propertyIndex": 1,
+                    "propertyKey": "setWebLanguage",
+                    "pw": {
+                        "displayName": "Language",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "5.0",
+                    "group": "iOS",
+                    "kuid": "cc5c749e527d405bba1beec933b4f8f7",
+                    "originalPropertyKey": "postUtteranceDelay",
+                    "propertyIndex": 2,
+                    "propertyKey": "postUtteranceDelay",
+                    "pw": {
+                        "displayName": "post Utterance Delay",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "1",
+                    "group": "Desktop Web",
+                    "kuid": "e75eee68c76d46f5be6fdf3686c85f10",
+                    "originalPropertyKey": "setPitch",
+                    "propertyIndex": 2,
+                    "propertyKey": "setPitch",
+                    "pw": {
+                        "displayName": "Pitch",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "1.0",
+                    "group": "iOS",
+                    "kuid": "c9df6fb1e9a84f6d9fc44074daab850a",
+                    "originalPropertyKey": "pitchMultiplier",
+                    "propertyIndex": 3,
+                    "propertyKey": "pitchMultiplier",
+                    "pw": {
+                        "displayName": "pitch Multiplier",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "1",
+                    "group": "Desktop Web",
+                    "kuid": "gd5df22d15bf4fb69059ae3a98ca0c68",
+                    "originalPropertyKey": "setWebVolume",
+                    "propertyIndex": 3,
+                    "propertyKey": "setWebVolume",
+                    "pw": {
+                        "displayName": "Volume",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "en-us",
+                    "group": "iOS",
+                    "kuid": "he41520fc54c47d292a3d888c7f23a32",
+                    "originalPropertyKey": "setIphoneLanguage",
+                    "propertyIndex": 4,
+                    "propertyKey": "setIphoneLanguage",
+                    "pw": {
+                        "displayName": "language",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "0.5",
+                    "group": "iOS",
+                    "kuid": "ae812b52d8e540a8bdb056b77a05d692",
+                    "originalPropertyKey": "volume",
+                    "propertyIndex": 5,
+                    "propertyKey": "volume",
+                    "pw": {
+                        "displayName": "volume",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "0.3",
+                    "group": "General",
+                    "kuid": "h5237d36de854de8a9ca915212cbc4d8",
+                    "originalPropertyKey": "setRate",
+                    "propertyIndex": 5,
+                    "propertyKey": "setRate",
+                    "pw": {
+                        "displayName": "speech rate",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "stop after finishing current word",
+                    "group": "iOS",
+                    "kuid": "f11486f6027a48f9b940c3fab14f47ca",
+                    "originalPropertyKey": "stopSpeechApibehaviour",
+                    "propertyIndex": 6,
+                    "propertyKey": "stopSpeechApibehaviour",
+                    "pw": {
+                        "displayName": "stop speech Api behaviour",
+                        "uiRepresentation": "Label-Combobox"
+                    },
+                    "srcWgtKUID": "u58f7b4e505d4759a809bc2eb78e94ee",
+                    "type": "list selector",
+                    "value": [
+                        "stop immediately ",
+                        "stop after finishing current word"
+                    ]
+                }
+            ],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "e61f7931541545f78bb0256dd1df4484",
+                    "originalPropertyKey": "src",
+                    "propertyIndex": 1,
+                    "propertyKey": "speechOnIcon",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Speech On icon",
+                        "srcWidget": "imgSpeechOn",
+                        "type": "string",
+                        "uiConfig": {
+                            "Button": {
+                                "dataRetrieverId": "Imagelist",
+                                "dataUpdaterId": "Imagelist",
+                                "popupId": "Imagelist",
+                                "type": "ImageEditBtn"
+                            },
+                            "Label": {}
+                        },
+                        "uiRepresentation": "Label-Label-Button",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "u2b0b989b4dc40a18c760f35c2f47750"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "f8fcba8b66e44eb59df4ffe84f25b345",
+                    "originalPropertyKey": "imageScaleMode",
+                    "propertyIndex": 2,
+                    "propertyKey": "speechOnIconScaleMode",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Speech On Icon Scale Mode",
+                        "srcWidget": "imgSpeechOn",
+                        "type": "enum",
+                        "uiRepresentation": "Label-Combobox",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "u2b0b989b4dc40a18c760f35c2f47750"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "da593e2dbcca4634b04ce0bbef148731",
+                    "originalPropertyKey": "src",
+                    "propertyIndex": 3,
+                    "propertyKey": "speechOffIcon",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Speech Off Icon",
+                        "srcWidget": "imgSpeechOff",
+                        "type": "string",
+                        "uiConfig": {
+                            "Button": {
+                                "dataRetrieverId": "Imagelist",
+                                "dataUpdaterId": "Imagelist",
+                                "popupId": "Imagelist",
+                                "type": "ImageEditBtn"
+                            },
+                            "Label": {}
+                        },
+                        "uiRepresentation": "Label-Label-Button",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "u54567508383479ab66e4ceeb91f607e"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "f5d249c71ba242a399791418af052da8",
+                    "originalPropertyKey": "imageScaleMode",
+                    "propertyIndex": 4,
+                    "propertyKey": "speechOffIconScaleMode",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Speech Off Icon Scale Mode",
+                        "srcWidget": "imgSpeechOff",
+                        "type": "enum",
+                        "uiRepresentation": "Label-Combobox",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "u54567508383479ab66e4ceeb91f607e"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "j957d187d4724c598764725352a4a48c",
+                    "originalPropertyKey": "skin",
+                    "propertyIndex": 6,
+                    "propertyKey": "imageFlexSkin",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "skin",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Image Flex skin",
+                        "srcWidget": "flxImage",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "uc96b047db1440f38ef4a23b2e0d2ca9"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.voltmxmp",
+    "version": "2.0.1"
+}

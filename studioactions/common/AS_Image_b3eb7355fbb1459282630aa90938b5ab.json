@@ -1,0 +1,29 @@
+{
+    "AS_Image_b3eb7355fbb1459282630aa90938b5ab": {
+        "id": "AS_Image_b3eb7355fbb1459282630aa90938b5ab",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "f3634d1fd4dd46249c068cd0d19e3491"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_g15ab3afb1d04db38c2fa84c32e10a48",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view\n\n\nflxPopupChannelInfo",
+            "parentId": null
+        }]
+    }
+}

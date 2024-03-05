@@ -1,7 +1,88 @@
 {
     "NativeFunctionAPI": {
-        "iOS": {},
-        "Android": {}
+        "iOS": {
+            "14.0": {
+                "Foundation-iOS-14.0": {
+                    "title": "Foundation",
+                    "platform": "iOS",
+                    "os": "14.0",
+                    "isDefault": false,
+                    "filename": "Foundation-iOS-14.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                },
+                "AVFoundation-iOS-14.0": {
+                    "title": "AVFoundation",
+                    "platform": "iOS",
+                    "os": "14.0",
+                    "isDefault": false,
+                    "filename": "AVFoundation-iOS-14.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                },
+                "Speech-iOS-14.0": {
+                    "title": "Speech",
+                    "platform": "iOS",
+                    "os": "14.0",
+                    "isDefault": false,
+                    "filename": "Speech-iOS-14.0.zip",
+                    "nfiversion": "3.0",
+                    "enable": true
+                }
+            }
+        },
+        "Android": {
+            "4.0": {
+                "android.speech-Android-4.0": {
+                    "title": "android.speech",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "isDefault": false,
+                    "filename": "android.speech-Android-4.0.zip",
+                    "enable": true
+                },
+                "android.speech.tts-Android-4.0": {
+                    "title": "android.speech.tts",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "isDefault": false,
+                    "filename": "android.speech.tts-Android-4.0.zip",
+                    "enable": true
+                },
+                "android.preference-Android-4.0": {
+                    "title": "android.preference",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "isDefault": false,
+                    "filename": "android.preference-Android-4.0.zip",
+                    "enable": true
+                },
+                "android.webkit-Android-4.0": {
+                    "title": "android.webkit",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "isDefault": false,
+                    "filename": "android.webkit-Android-4.0.zip",
+                    "enable": true
+                },
+                "java.util-Android-4.0": {
+                    "title": "java.util",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "isDefault": false,
+                    "filename": "java.util-Android-4.0.zip",
+                    "enable": true
+                },
+                "android.content-Android-4.0": {
+                    "title": "android.content",
+                    "platform": "Android",
+                    "os": "4.0",
+                    "isDefault": false,
+                    "filename": "android.content-Android-4.0.zip",
+                    "enable": true
+                }
+            }
+        }
     },
     "Metadata": {
         "Version": {
