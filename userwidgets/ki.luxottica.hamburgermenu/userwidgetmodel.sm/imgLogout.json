@@ -2,6 +2,10 @@
     "@class": "com.kony.gen.viz.model.component.KVizImage2",
     "DNDConfig": null,
     "_base64_": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "3.20%"
+    },
     "_height_": {
         "type": "string",
         "value": "50dp"
@@ -24,10 +28,6 @@
     ],
     "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
     "_src_": "logout_true.png",
-    "_top_": {
-        "type": "string",
-        "value": "690dp"
-    },
     "_width_": {
         "type": "string",
         "value": "40dp"

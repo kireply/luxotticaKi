@@ -1,0 +1,75 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizListBox",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "7%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Please Select",
+    "_skin_": "s6670225d90f4454945f185f0da4ab20",
+    "_top_": {
+        "type": "string",
+        "value": "47%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
+    "groupcells": false,
+    "id": "CopylbCategory0a9776ee57f914d",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "a3947b0b2c9b42b4844b2e5c4987b66b",
+    "masterdata": [
+        [
+            "lb1",
+            "Sunglasses"
+        ],
+        [
+            "lb2",
+            "Eyeglasses"
+        ],
+        [
+            "lb3",
+            "Mix&Match"
+        ]
+    ],
+    "name": "kony.ui.ListBox",
+    "parent": "CopyflxDuplicationFlow0edbaaaf68fb445",
+    "pf": "frmFlows",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "selectedkeys": null,
+    "selectedkeyvalue": null,
+    "selectedkeyvalues": null,
+    "size": 18,
+    "viewconfig": {
+        "toggleViewConfig": {
+            "viewStyle": 0
+        }
+    },
+    "viewtype": 0,
+    "wType": "ListBox",
+    "zindex": 1
+}

@@ -1,0 +1,28 @@
+{
+    "AS_FlexContainer_e8b8189b5fbe40b695bf010dfd236817": {
+        "id": "AS_FlexContainer_e8b8189b5fbe40b695bf010dfd236817",
+        "type": "ACTION_SEQUENCE",
+        "name": "onHoverHandlerForFlxImgPreview",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_ef16449385524118b121b96e87f0fd17",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### SOPRA CORNICE PREVIEW: \" + context.eventType);\n\n//Entering hover icon\nif (context.eventType !== \"leave\"){\n    this.view.flxImgPreview2.backgroundColor = \"dedede\";\n\tthis.view.lblPreview.setVisibility(true);\n} else {\n    this.view.flxImgPreview2.backgroundColor = \"ffffff\";\n    this.view.lblPreview.setVisibility(false);\n}",
+            "parentId": null
+        }]
+    }
+}

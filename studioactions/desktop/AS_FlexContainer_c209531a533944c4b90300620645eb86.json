@@ -1,0 +1,23 @@
+{
+    "AS_FlexContainer_c209531a533944c4b90300620645eb86": {
+        "id": "AS_FlexContainer_c209531a533944c4b90300620645eb86",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_bfea27bfb932479ea9f5946ffb134047",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### cliccato LAYOUT\");\nthis.view.flxStepsLayout.setFocus(true);"
+        }]
+    }
+}

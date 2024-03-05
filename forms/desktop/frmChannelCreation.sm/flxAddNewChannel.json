@@ -49,9 +49,7 @@
     "clipbounds": false,
     "containerweight": 100,
     "desktopweb": {
-        "psp": {
-            "ide_onHover": "AS_FlexContainer_d2f41c64f995478c9293783e3a7ec086"
-        }
+        "psp": {}
     },
     "disabledSkins": {
         "hoverSkin": "s0db037891274ea3b85d8ec218323593"

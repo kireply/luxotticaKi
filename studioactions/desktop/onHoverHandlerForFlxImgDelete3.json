@@ -1,0 +1,28 @@
+{
+    "AS_FlexContainer_d1950d6006dc44df8b93d99afc288cb1": {
+        "id": "AS_FlexContainer_d1950d6006dc44df8b93d99afc288cb1",
+        "type": "ACTION_SEQUENCE",
+        "name": "onHoverHandlerForFlxImgDelete3",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_g88531a6e4bd4081b44d5a8b4b5b6776",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "//Entering hover icon\nif (context.eventType !== \"leave\"){\n    this.view.flxImgDelete4.backgroundColor = \"dedede\";\n} else {\n    this.view.flxImgDelete4.backgroundColor = \"ffffff\";\n}",
+            "parentId": null
+        }]
+    }
+}

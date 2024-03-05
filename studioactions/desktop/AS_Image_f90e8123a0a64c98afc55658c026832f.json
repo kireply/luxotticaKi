@@ -1,0 +1,33 @@
+{
+    "AS_Image_f90e8123a0a64c98afc55658c026832f": {
+        "id": "AS_Image_f90e8123a0a64c98afc55658c026832f",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "onTouchStart",
+        "actions": [{
+            "id": "ADD_SNIPPET_d586c872abd440a3a7c57fea7841fbbc",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### onTouch INIZIATO\");",
+            "parentId": null
+        }]
+    }
+}

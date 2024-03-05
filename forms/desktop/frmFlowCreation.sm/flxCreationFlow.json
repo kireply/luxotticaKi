@@ -40,7 +40,7 @@
     },
     "centery": {
         "type": "string",
-        "value": "51.95%"
+        "value": "52.79%"
     },
     "children": [
         "lblCreateNewFlow",

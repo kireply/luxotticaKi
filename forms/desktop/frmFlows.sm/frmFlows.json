@@ -52,7 +52,8 @@
     "children": [
         "flxMainContainerFlows",
         "flxPopupDuplicateFlowSmall",
-        "flxPopupDuplicateFlowLarge"
+        "flxPopupDuplicateFlowLarge",
+        "flxPopupEditFlow"
     ],
     "containerweight": 100,
     "controllerInfo": {

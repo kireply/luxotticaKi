@@ -4,7 +4,7 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "40dp"
+        "value": "5%"
     },
     "_left_": {
         "type": "string",
@@ -26,11 +26,11 @@
     "_src_": "add_circle_icon_modified.png",
     "_top_": {
         "type": "string",
-        "value": "24.50%"
+        "value": "24.80%"
     },
     "_width_": {
         "type": "string",
-        "value": "40dp"
+        "value": "3%"
     },
     "canUpdateUI": true,
     "containerweight": 100,

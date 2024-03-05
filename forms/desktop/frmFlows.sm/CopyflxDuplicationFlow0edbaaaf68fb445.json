@@ -1,0 +1,84 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "97%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "children": [
+        "CopylblDuplicateFlow0ie82c1cf1ffc4c",
+        "CopyflxInfo0fd9bf6ca671746",
+        "CopylblChannel0eaa285f3fee14e",
+        "CopylbChannel0h127322c1c9d43",
+        "CopylblFlowDescription0ff274cb3b36d48",
+        "CopytxtFlowDescription0jce52abf18474b",
+        "CopylblCategory0a753749cc45247",
+        "CopylbCategory0a9776ee57f914d",
+        "CopylblEnvironment0bd8c8ab392d246",
+        "CopylbEnvironment0bb2e5844921544",
+        "CopylblIsDefaultFlow0c2acacb05bb14c",
+        "CopylblIsSupernova0bd746dba237540",
+        "CopylblSelectStepsLayout0e833189dda0746",
+        "CopybtnProceed0a7b7c2d014034a",
+        "CopyswIsDefaultFlow0b769a6fff02640",
+        "CopyswIsSupernova0hdd6b10711b546",
+        "CopyflxStepsLayout0g42ec5907c494d"
+    ],
+    "clipbounds": false,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "CopyflxDuplicationFlow0edbaaaf68fb445",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "e4b51fd152304437b8493610862e4fe1",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "CopyflxContainerFlowDuplication0bbe41a30dcf948",
+    "pf": "frmFlows",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1,
+    "zindex": 1
+}
