@@ -1,0 +1,17 @@
+{
+    "AS_FlexContainer_d59a469108f64b6d8740a06108928d78": {
+        "id": "AS_FlexContainer_d59a469108f64b6d8740a06108928d78",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_d8b0e5d8496849798126a5277f1cbcf4",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### cliccato LAYOUT\");\nthis.view.flxStepsLayout.setFocus(true);"
+        }]
+    }
+}

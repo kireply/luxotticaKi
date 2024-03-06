@@ -21,7 +21,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_ef16449385524118b121b96e87f0fd17",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### SOPRA CORNICE PREVIEW: \" + context.eventType);\n\n//Entering hover icon\nif (context.eventType !== \"leave\"){\n    this.view.flxImgPreview2.backgroundColor = \"dedede\";\n\tthis.view.lblPreview.setVisibility(true);\n} else {\n    this.view.flxImgPreview2.backgroundColor = \"ffffff\";\n    this.view.lblPreview.setVisibility(false);\n}",
+            "codeSnippet": "voltmx.print(\"### SOPRA CORNICE PREVIEW: \" + context.eventType);\n\n//Entering hover icon\nif (context.eventType !== \"leave\"){\n    this.view.flxImgPreview2.backgroundColor = \"dedede\";\n} else {\n    this.view.flxImgPreview2.backgroundColor = \"ffffff\";\n}",
             "parentId": null
         }]
     }

@@ -36,16 +36,15 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "60%"
+        "value": "50%"
     },
     "centery": {
         "type": "string",
-        "value": "60%"
+        "value": "50%"
     },
     "children": [
-        "CopyflxContainerFlowDuplication0bbe41a30dcf948",
-        "CopyimgExitLargePopup0f4e28a300d8341",
-        "CopyimgBackToSmallPopup0f8f1e50e959445"
+        "flxContainerFlowEdit",
+        "imgExitPopupEdit"
     ],
     "clipbounds": false,
     "containerweight": 100,
@@ -55,7 +54,7 @@
     "iscustomlayout": false,
     "ismodalcontainer": true,
     "isvisible": false,
-    "kuid": "f5e14be54bb641898792cbcba83077f9",
+    "kuid": "fe999a62bd6b4c21b80b870053a70444",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "frmFlows",

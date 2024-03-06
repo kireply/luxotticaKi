@@ -42,7 +42,9 @@
         "flxContainerHeader",
         "flxContainerMenu",
         "flxContainerSmallerMenu",
-        "flxContainerFlowCreation"
+        "flxContainerFlowCreation",
+        "flxPopupIsDefaultTrue",
+        "flxPopupIsDefaultFalse"
     ],
     "clipbounds": false,
     "containerweight": 100,

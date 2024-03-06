@@ -16,9 +16,19 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_d6ce40752e354638822d702fd9bee54c",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "formattedDate",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "ADD_SNIPPET_j08193a15aa945fe9234410bb5ba12d5",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "var currentDate = new Date();\n\n// Ottengo i componenti della data (giorno, mese, anno)\nvar day = currentDate.getDate();\nvar month = currentDate.getMonth() + 1; // I mesi partono da 0 (gennaio) quindi aggiungo 1\nvar year = currentDate.getFullYear();\n\n// Formatta la data come stringa nel formato \"YYYY-MM-DD\"\nvar formattedDate = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\nvoltmx.print(\"### DATA: \" + formattedDate); // Stampo la data formattata\n\nvoltmx.print(\"### SWITCH 1: \" + this.view.swIsDefaultFlow.selectedIndex);\nvoltmx.print(\"### SWitch 2: \" + this.view.swIsSupernova.selectedIndex);",
+            "codeSnippet": "var currentDate = new Date();\n\n// Ottengo i componenti della data (giorno, mese, anno)\nvar day = currentDate.getDate();\nvar month = currentDate.getMonth() + 1; // I mesi partono da 0 (gennaio) quindi aggiungo 1\nvar year = currentDate.getFullYear();\n\n// Formatta la data come stringa nel formato \"YYYY-MM-DD\"\nformattedDate = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\nvoltmx.print(\"### DATA: \" + formattedDate); // Stampo la data formattata\n\nvoltmx.print(\"### SWITCH 1: \" + this.view.swIsDefaultFlow.selectedIndex);\nvoltmx.print(\"### SWitch 2: \" + this.view.swIsSupernova.selectedIndex);",
             "parentId": null
         }, {
             "id": "ADD_LOCAL_VARIABLE_c093535c352f40eb8a646ba2e145cdd6",
@@ -140,17 +150,6 @@
             "dataType": "constant",
             "modifySet": "\"true\"",
             "modifySetType": "string"
-        }, {
-            "id": "ADD_LOCAL_VARIABLE_b5ef79d5f69c4388b2bd744e6fa21456",
-            "type": "ADD_LOCAL_VARIABLE",
-            "name": "CurrentDate",
-            "isGlobal": false,
-            "valuetype": "expression",
-            "datatype": "string",
-            "value": "var currentDate = new Date();",
-            "parentId": null,
-            "callbackType": null,
-            "disabled": true
         }, {
             "id": "LOADING_INDICATOR_he8d05aad4d145f7864a68cb4ebfa51a",
             "selectedOption": "show",
@@ -281,7 +280,7 @@
                         "type": "Services",
                         "propertyName": "status",
                         "dataType": "string",
-                        "expression": "\"Active\"",
+                        "expression": "\"Draft\"",
                         "forkedPlatform": "all",
                         "serviceconfig": {
                             "servicename": "mariaDB",
@@ -443,9 +442,35 @@
                             "operationid": "121128"
                         }
                     }
+                },
+                "ME_Mapping_hf4e34f22ff049d19b5aab6c1259aa14": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_hf4e34f22ff049d19b5aab6c1259aa14",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "formattedDate",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "last_modified",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_c90a3327ada64f839e646a25d9966428", "ME_Mapping_gd11f073140f4a5891c01b57774bfac9", "ME_Mapping_d6264b58602e4e8ab7d875d52cefa752", "ME_Mapping_d3d0c3f769da436ebc27f505d9bed9f4", "ME_Mapping_j6db8f8dc69040618eb2b980d1c78bc3", "ME_Mapping_aa1e052e0a7e4868be71e564640106c0", "ME_Mapping_i7242fc61e574d119e6182000c5f1a57", "ME_Mapping_h4cf41f348c9447eb7d36e7b3ac1c2e1", "ME_Mapping_cb54ec8d2fe04444bb3003be8d985805", "ME_Mapping_b3b2e46b862a485586ae4e7e500184bb"],
+            "mappingsOrder": ["ME_Mapping_c90a3327ada64f839e646a25d9966428", "ME_Mapping_gd11f073140f4a5891c01b57774bfac9", "ME_Mapping_d6264b58602e4e8ab7d875d52cefa752", "ME_Mapping_d3d0c3f769da436ebc27f505d9bed9f4", "ME_Mapping_j6db8f8dc69040618eb2b980d1c78bc3", "ME_Mapping_aa1e052e0a7e4868be71e564640106c0", "ME_Mapping_i7242fc61e574d119e6182000c5f1a57", "ME_Mapping_h4cf41f348c9447eb7d36e7b3ac1c2e1", "ME_Mapping_cb54ec8d2fe04444bb3003be8d985805", "ME_Mapping_b3b2e46b862a485586ae4e7e500184bb", "ME_Mapping_hf4e34f22ff049d19b5aab6c1259aa14"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -459,7 +484,7 @@
         }, {
             "id": "ADD_SNIPPET_bf87ff44c15d4dd68e2c963a1f48a9e6",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"Finito il metodo dell'onclick\");",
+            "codeSnippet": "voltmx.print(\"### DATA FORMATTATA: \" + formattedDate);\nvoltmx.print(\"### Finito il metodo dell'onclick\");",
             "parentId": null,
             "callbackType": null
         }, {
@@ -472,6 +497,63 @@
             "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
             "isBlocked": "true",
             "showProgressIndicator": "true"
+        }, {
+            "id": "_bf9a39ec35d6468788c6c9832c7dea9b",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "FLOW_create!== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "FLOW_create.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_a8f07eebb37441e993dc80f380a76964",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_f01531be8be64ca3aaa208629f5b8236",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_a8f07eebb37441e993dc80f380a76964",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_d3194fac6cf246f68b76e4828ec53804",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Flow not created",
+            "alertMessage": "Flow creation NOT succesful.",
+            "messageType": "constant",
+            "parentId": "_f01531be8be64ca3aaa208629f5b8236",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "SHOW_ALERT_e60d7cef0ef4490d862c66e675b4ae99",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": "Flow Created.",
+            "yesLabel": "Ok",
+            "alertMessage": "Flow Created succesfully",
+            "messageType": "constant",
+            "parentId": "_bf9a39ec35d6468788c6c9832c7dea9b",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
         }]
     }
 }

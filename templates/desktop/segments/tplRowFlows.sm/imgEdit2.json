@@ -44,6 +44,7 @@
     "containerId": true,
     "containerweight": 100,
     "id": "imgEdit2",
+    "ide_onTouchEnd": "AS_Image_g19457e56f944200a00c5b060a8f5ab3",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",

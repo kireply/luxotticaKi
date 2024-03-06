@@ -44,6 +44,7 @@
     "containerId": true,
     "containerweight": 100,
     "id": "imgDuplicate2",
+    "ide_onTouchEnd": "AS_Image_d1041f173fb047a98856ef69b4617481",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",

@@ -1,0 +1,34 @@
+{
+    "AS_Image_d1041f173fb047a98856ef69b4617481": {
+        "id": "AS_Image_d1041f173fb047a98856ef69b4617481",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgDuplicateFlow2",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_d33ea2f040054a698dfa80da01933c2a",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblDuplicateIcon = true;",
+            "parentId": null
+        }]
+    }
+}
