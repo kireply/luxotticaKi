@@ -1,0 +1,34 @@
+{
+    "AS_Image_g19457e56f944200a00c5b060a8f5ab3": {
+        "id": "AS_Image_g19457e56f944200a00c5b060a8f5ab3",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgEditFlow2",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_cdc45e828a3c42fdab7f50ee0c755a8f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblEditIcon = true;",
+            "parentId": null
+        }]
+    }
+}

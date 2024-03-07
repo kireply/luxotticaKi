@@ -1,0 +1,294 @@
+{
+    "AS_ListBox_a51bc3fc954a44a89a3617b265d375f6": {
+        "id": "AS_ListBox_a51bc3fc954a44a89a3617b265d375f6",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "eventType": "onSelection",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_ide_onSelection_da98f6b17fd441eaaec75566ee04a4c6",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "channelID",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\""
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ide_onSelection_bb93eac8095f4bba8712cb7b72945453",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "channelName",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\""
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ide_onSelection_e87ef2d357454be0adb9909e87b4a9c6",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "channelLogo",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\""
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ide_onSelection_b8b59b7bc0ec40da83e1db72f3b73d1a",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "channelProperties",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\""
+        }, {
+            "id": "ADD_MAPPING_ide_onSelection_d2ed948ee3c94d50add239ae6c051d8c",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_f5013f871f39453fb597773c3b5a9cde": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f5013f871f39453fb597773c3b5a9cde",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelInsideFrmChannels",
+                        "widgetPath": "this.view.txtChannelInsideFrmChannels",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannels",
+                        "widgetKUID": "a709edb70a60483983498ef971327e19",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Variables",
+                        "propertyName": "channelID",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_j2a73a4b959e40c198254afceabcc128": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_j2a73a4b959e40c198254afceabcc128",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelLogoInsideFrmChannels",
+                        "widgetPath": "this.view.txtChannelLogoInsideFrmChannels",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannels",
+                        "widgetKUID": "dfd79c43a830418d946cdccb44fd4b83",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Variables",
+                        "propertyName": "channelLogo",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_i67de98ef14847989b5c06c6a49a4831": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_i67de98ef14847989b5c06c6a49a4831",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "value",
+                        "widgetId": "lbChannelNameInsideFrmChannels",
+                        "widgetPath": "this.view.lbChannelNameInsideFrmChannels",
+                        "widgetType": "ListBox",
+                        "dataType": "string",
+                        "itemId": "frmChannels",
+                        "collectionId": "selectedKeyValues",
+                        "widgetKUID": "e74135133adb4951972fe5130a0db4e5",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Variables",
+                        "propertyName": "channelName",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_e340db2c946a4d54abc614d49a04e171": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e340db2c946a4d54abc614d49a04e171",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelPropertiesInsideFrmChannels",
+                        "widgetPath": "this.view.txtChannelPropertiesInsideFrmChannels",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannels",
+                        "widgetKUID": "ae6d0917eb824707883abe8c2ce5c352",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Variables",
+                        "propertyName": "channelProperties",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_f5013f871f39453fb597773c3b5a9cde", "ME_Mapping_j2a73a4b959e40c198254afceabcc128", "ME_Mapping_i67de98ef14847989b5c06c6a49a4831", "ME_Mapping_e340db2c946a4d54abc614d49a04e171"],
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "IF_CONDITION_ide_onSelection_c4af2cf31dc74e908e86828a046b2955",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "channelID",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "\"\""
+            }, {
+                "leftValueType": "varvalue",
+                "leftValue": "channelID",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "undefined"
+            }, {
+                "leftValueType": "varvalue",
+                "leftValue": "channelName",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "\"\""
+            }, {
+                "leftValueType": "varvalue",
+                "leftValue": "channelName",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "undefined"
+            }, {
+                "leftValueType": "varvalue",
+                "leftValue": "channelName",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "\"Select Channel Name\""
+            }, {
+                "leftValueType": "varvalue",
+                "leftValue": "channelProperties",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "\"\""
+            }, {
+                "leftValueType": "varvalue",
+                "leftValue": "channelProperties",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "undefined"
+            }],
+            "callbackType": null,
+            "criteria": "any"
+        }, {
+            "id": "ADD_SNIPPET_ide_onSelection_ac797f4464134a70a1a5a67663fd79db",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnSaveNewChannel.setEnabled(false);",
+            "parentId": "IF_CONDITION_ide_onSelection_c4af2cf31dc74e908e86828a046b2955",
+            "callbackType": null
+        }, {
+            "id": "_ide_onSelection_jf3a68341c1346b79968698bd6328261",
+            "type": "STYLE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmChannels",
+            "widgetId": "btnSaveNewChannelInsideFrmChannels",
+            "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+            "widgetKUID": "j0858120438c4d45b43b1ff72d7c1a7b",
+            "wType": "Button",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "opacity": "50",
+                "displayAnimationId": "",
+                "duration": "0",
+                "delay": "0",
+                "iterationCount": ""
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 0,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "0"
+            },
+            "start": "Immediately",
+            "parentAnimation": "STYLE_ACTION_ja0eeacf1a2d4e0793b40ca483e0930b",
+            "animationId": "STYLE_ACTION_b4f40d9e881f4b1f9ea10c46da9856d7",
+            "displayAnimationId": "STYLE_ACTION_b4f40d9e881f4b1f9ea10c46da9856d7",
+            "forkedPlatform": "all",
+            "parentId": "IF_CONDITION_ide_onSelection_c4af2cf31dc74e908e86828a046b2955",
+            "callbackType": null,
+            "widgetPath": "this.view.btnSaveNewChannelInsideFrmChannels"
+        }, {
+            "id": "ELSE_CONDITION_ide_onSelection_c5d111ae67d54f288802b7fb4c39cd7b",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_ide_onSelection_gdb231ae05e24be9ad421c4486776c72",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnSaveNewChannel.setEnabled(true);",
+            "parentId": "ELSE_CONDITION_ide_onSelection_c5d111ae67d54f288802b7fb4c39cd7b",
+            "callbackType": null
+        }, {
+            "id": "_ide_onSelection_b941c3ebee5640f988d21460bf6726a1",
+            "type": "STYLE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmChannels",
+            "widgetId": "btnSaveNewChannelInsideFrmChannels",
+            "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+            "widgetKUID": "j0858120438c4d45b43b1ff72d7c1a7b",
+            "wType": "Button",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "250",
+                "delay": "0",
+                "iterationCount": "1"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 0,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "0"
+            },
+            "start": "Immediately",
+            "parentAnimation": "STYLE_ACTION_b4f40d9e881f4b1f9ea10c46da9856d7",
+            "animationId": "STYLE_ACTION_ja0eeacf1a2d4e0793b40ca483e0930b",
+            "displayAnimationId": "STYLE_ACTION_ja0eeacf1a2d4e0793b40ca483e0930b",
+            "forkedPlatform": "all",
+            "parentId": "ELSE_CONDITION_ide_onSelection_c5d111ae67d54f288802b7fb4c39cd7b",
+            "callbackType": null,
+            "widgetPath": "this.view.btnSaveNewChannelInsideFrmChannels"
+        }]
+    }
+}

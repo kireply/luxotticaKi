@@ -1,0 +1,31 @@
+{
+    "AS_Segment_ie069a4b75c44ccf880b706daf27e7e7": {
+        "id": "AS_Segment_ie069a4b75c44ccf880b706daf27e7e7",
+        "type": "ACTION_SEQUENCE",
+        "name": "onRowClickHandlerForFlowSegment",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onRowClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_je0aa7e67b5c48dd9eabf9f1666a56e3",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var flow = this.view.segFlows.selectedRowItems[0];\n\nvoltmx.print(\"### FLOW JSON: \" + JSON.stringify(flow));\n\ngblFlowId = parseInt(flow.id.match(/\\d+/)[0]); //extracting only the id number\ngblFlowCategory = flow.category;\ngblFlowName = flow.id; // full Flow name Ex. RB_EYE_00001\ngblFlowStatus = flow.status;\n\nvoltmx.print(\"### Flow Id: \" + gblFlowId);\nvoltmx.print(\"### Flow Name: \" + gblFlowName);\n\n\nif (gblDuplicateIcon) {\n  // Titles\n  this.view.lblDuplicateFlow.text = \"Duplicate Flow - \" + gblFlowName;\n  this.view.lblDuplicateFlow2.text = \"Duplicate Flow - \" + gblFlowName;\n  // Channel\n  this.view.lbSelectChannel.masterData = [ [\"lb1\", \"Select the channel in which duplicate the flow\"], [\"lb2\", gblChannelName] ];\n  this.view.lbSelectChannel.selectedKey = \"lb1\";\n  \n  this.view.flxPopupDuplicateFlowLarge.flxContainerFlowDuplication.flxDuplicationFlow.txtFlowDescription.text = flow.description;\n  this.view.flxPopupDuplicateFlowLarge.flxContainerFlowDuplication.flxDuplicationFlow.swIsDefaultFlow.selectedIndex = (flow.default_flag === \"true\" ? 0 : 1) ;\n  this.view.flxPopupDuplicateFlowLarge.flxContainerFlowDuplication.flxDuplicationFlow.swIsSupernova.selectedIndex = (flow.supernova === \"true\" ? 0 : 1) ;\n  voltmx.print(\"### Flow description: \" + flow.description);\n  this.view.flxBlur.setVisibility(true);\n  this.view.flxPopupDuplicateFlowSmall.setVisibility(true);\n}\n\nif (gblEditIcon) {\n  // Title\n  this.view.lblEditFlow.text = \"Edit Flow - \" + gblFlowName;\n  // Channel\n  this.view.lbChannelEdit.masterData = [ [\"lb1\", gblChannelName] ];\n  this.view.lbChannelEdit.selectedKey = \"lb1\";\n  this.view.lbChannelEdit.setEnabled(false);\n  this.view.lbChannelEdit.opacity = 0.5;\n  this.view.lblChannelEdit.opacity = 0.5;\n  // Flow name\n  this.view.txtFlowNameEdit.text = flow.id;  // !! POTREBBE SERVIRE PATH INTERO!!!\n  this.view.txtFlowNameEdit.setEnabled(false);\n  this.view.txtFlowNameEdit.opacity = 0.5;\n  this.view.lblFlowNameEdit.opacity = 0.5;\n  // Flow description\n  this.view.txtFlowDescription.text = flow.description;  // !! POTREBBE SERVIRE PATH INTERO!!!\n  // Flow category\n  this.view.lbCategoryEdit.masterData = [ [\"lb1\", flow.category] ];\n  this.view.lbCategoryEdit.selectedKey = \"lb1\";\n  this.view.lbCategoryEdit.setEnabled(false);\n  this.view.lbCategoryEdit.opacity = 0.5;\n  this.view.lblCategoryEdit.opacity = 0.5;\n  // Flow environment\n  //this.view.flxContainerFlowEdit.flxEditFlow.lbCategoryEdit;\n  //isDefault\n  this.view.swIsDefaultFlowEdit.selectedIndex = (flow.default_flag === \"true\" ? 0 : 1) ;\n  //isSupernova\n  this.view.swIsSupernovaEdit.selectedIndex = (flow.supernova === \"true\" ? 0 : 1) ;\n  \n  this.view.flxBlur.setVisibility(true);\n  this.view.flxPopupEditFlow.setVisibility(true);\n}\n\n\n\n\n\n\n\n\n\n\n",
+            "parentId": null
+        }]
+    }
+}

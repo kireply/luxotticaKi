@@ -1,0 +1,57 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "9%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s45112357e134e1d994f67a398ae0ec5",
+    "_text_": "Proceed",
+    "_top_": {
+        "type": "string",
+        "value": "89.98%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "90%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50.06%"
+    },
+    "containerweight": 100,
+    "contentalignment": 5,
+    "disabledSkins": {
+        "focusSkin": "s6de8ee3e9e1463996d5dbb22b25b33b"
+    },
+    "displaytext": true,
+    "id": "btnProceed",
+    "ide_onClick": "AS_Button_d38cb80742af4d62b0612fc57f91aef6",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "b638a3e7287d4e628a71ce2782cc30c2",
+    "name": "kony.ui.Button",
+    "parent": "flxCreationFlow",
+    "pf": "frmFlowCreation",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button"
+}

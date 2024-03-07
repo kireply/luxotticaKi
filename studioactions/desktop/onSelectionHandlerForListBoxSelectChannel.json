@@ -1,0 +1,57 @@
+{
+    "AS_ListBox_ad19a701a5104553aa2fd4d125012030": {
+        "id": "AS_ListBox_ad19a701a5104553aa2fd4d125012030",
+        "type": "ACTION_SEQUENCE",
+        "name": "onSelectionHandlerForListBoxSelectChannel",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onSelection",
+        "actions": [{
+            "id": "ADD_SNIPPET_i79e3da328e64e6eae271d1bd520b658",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if (this.view.lbSelectChannel.selectedKey !== \"lb1\") {\n  this.view.flxPopupDuplicateFlowSmall.setVisibility(false);\n  this.view.flxPopupDuplicateFlowLarge.setVisibility(true);\n  \n  this.view.lbChannel2.masterData = [ [\"lb1\", this.view.flxPopupDuplicateFlowSmall.lbSelectChannel.selectedKeyValue[1]] ];\n  this.view.lbChannel2.selectedKey = \"lb1\";\n  this.view.lbChannel2.setEnabled(false);\n  voltmx.print(\"### SCELTA: \" + this.view.flxPopupDuplicateFlowSmall.lbSelectChannel.selectedKeyValue[1]);\n}\n\n",
+            "parentId": null
+        }, {
+            "id": "STYLE_ACTION_c58118e2cc464488b835ee1f0cd57463",
+            "type": "STYLE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmFlows",
+            "widgetId": "lbChannel2",
+            "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+            "widgetKUID": "b6c123779bb845eea4abd6109169783e",
+            "wType": "ListBox",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "opacity": 50,
+                "displayAnimationId": "",
+                "duration": "250",
+                "delay": "0",
+                "iterationCount": "1"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 0,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "0"
+            },
+            "start": "Immediately",
+            "animationId": "STYLE_ACTION_c58118e2cc464488b835ee1f0cd57463",
+            "displayAnimationId": "STYLE_ACTION_c58118e2cc464488b835ee1f0cd57463",
+            "forkedPlatform": "all",
+            "parentId": null,
+            "widgetPath": "this.view.lbChannel2"
+        }]
+    }
+}

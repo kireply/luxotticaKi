@@ -1,0 +1,27 @@
+{
+    "AS_FlexContainer_eceb3e81c6994492b5263226ac076353": {
+        "id": "AS_FlexContainer_eceb3e81c6994492b5263226ac076353",
+        "type": "ACTION_SEQUENCE",
+        "name": "onHoverHandlerForFlxImgEdit",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onHover_j68f6ce9beee454983cc96ce49347374",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### SOPRA CORNICE EDIT: \" + context.eventType);\n\n//Entering hover icon\nif (context.eventType !== \"leave\"){\n    this.view.flxImgEdit2.backgroundColor = \"dedede\";\n} else {\n    this.view.flxImgEdit2.backgroundColor = \"ffffff\";\n}"
+        }]
+    }
+}

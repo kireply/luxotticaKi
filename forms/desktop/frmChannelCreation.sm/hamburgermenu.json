@@ -40,16 +40,30 @@
     "containerweight": 0,
     "dataDiffs": {
         "btnLogout": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_Button_c6ea8ed2faa5499d88f57d06692c5cf5"
+            },
             "__info__": {
                 "kuid": "d59c802c4c69455e9ad9acc8f67efee5",
                 "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
                 "wType": "Button"
             },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": "4%"
+                }
+            },
             "centerX": {
                 "Default": {
                     "type": "string",
                     "value": "50%"
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
                 }
             },
             "height": {
@@ -62,7 +76,7 @@
             "top": {
                 "Default": {
                     "type": "string",
-                    "value": "690dp"
+                    "value": ""
                 }
             },
             "width": {
@@ -185,7 +199,15 @@
                 "kuid": "acfb9914f1e8492383ca3059d00d0ffa",
                 "srcKUID": "f6d6345317634850bef09677b329a6ec",
                 "wType": "Image"
-            }
+            },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": "4%"
+                }
+            },
+            "responsiveData": {},
+            "src": "logout_true.png"
         },
         "segMenu": {
             "__events__": {},

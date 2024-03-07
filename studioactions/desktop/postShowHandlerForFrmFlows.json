@@ -1,0 +1,502 @@
+{
+    "AS_Form_c41cd5f3fea548359a446f5ed612c34f": {
+        "id": "AS_Form_c41cd5f3fea548359a446f5ed612c34f",
+        "type": "ACTION_SEQUENCE",
+        "name": "postShowHandlerForFrmFlows",
+        "params": [{
+            "name": "eventobject",
+            "datatype": "collection"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "postShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_jdc919a999c54ee08e4157b31f26c5c7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.channelTemplate.imgLogo.src = gblChannelLogo;\nthis.view.channelTemplate.lblChannelInfo.text = gblChannelName + \" - #\" + gblChannelId;\n\nvoltmx.print(\"### gblChannelId: \" + gblChannelId);\nvoltmx.print(\"### gblChannelName: \" + gblChannelName);\n",
+            "parentId": null
+        }, {
+            "id": "ADD_SNIPPET_b78bdb154d4e4888b653bf0d2094cc1e",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.addFlowsData();",
+            "parentId": null,
+            "callbackType": null,
+            "disabled": true
+        }, {
+            "id": "LOADING_INDICATOR_g941bb93d6424c559a6e88a14b9e2875",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Fetching flows..."
+        }, {
+            "id": "INVOKE_SERVICE_c32dee4d8b044d22ab9acefb417195d6",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": [{
+                "name": "",
+                "value": ""
+            }, {
+                "name": "",
+                "value": ""
+            }, {
+                "name": "",
+                "value": ""
+            }],
+            "httpconfigs": [{
+                "name": "timeout",
+                "value": ""
+            }],
+            "isasynchronous": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "FLOW_get",
+                "operationid": "118474"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "disabled": false
+        }, {
+            "id": "LOADING_INDICATOR_e0c9ea56f0a8449aa829bb9249c6a8db",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_SERVICE_c32dee4d8b044d22ab9acefb417195d6",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_d36fd5b2ae034a2d82c568792010a1c9",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "FLOW_get !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "FLOW_get.opstatus === 0 "
+            }],
+            "parentId": "INVOKE_SERVICE_c32dee4d8b044d22ab9acefb417195d6",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_b9893834ba734925b7095537cb917865",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### sono nell'if indentato\");",
+            "parentId": "_d36fd5b2ae034a2d82c568792010a1c9",
+            "callbackType": null
+        }, {
+            "id": "ADD_MAPPING_ac72a22bafba49fbb1907ee32f0d7094",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_c777143decea4c89b499e6e759f36c94": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_c777143decea4c89b499e6e759f36c94",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "FLOW",
+                        "dataType": "collection",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_get",
+                            "operationid": "118474"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "rowData",
+                        "widgetId": "segFlows",
+                        "widgetPath": "this.view.segFlows",
+                        "widgetType": "Segment",
+                        "dataType": "collection",
+                        "itemId": "frmFlows",
+                        "collectionId": "masterdata",
+                        "widgetKUID": "f8814bb1dffc4fc8a3ea46a257fbb77a",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_af00c6da272642eaa37a1f0577063413": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_af00c6da272642eaa37a1f0577063413",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "status",
+                        "dataType": "string",
+                        "collectionId": "FLOW",
+                        "propertyPath": "[\"FLOW\"][0][\"status\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_get",
+                            "operationid": "118474"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblStatus",
+                        "widgetPath": "this.view.lblStatus",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmFlows",
+                        "parentMappingId": "ME_Mapping_c777143decea4c89b499e6e759f36c94",
+                        "segmentId": "segFlows",
+                        "segmentKUID": "f8814bb1dffc4fc8a3ea46a257fbb77a",
+                        "widgetKUID": "c034d02296e14f9eb8aff9b7c8b7fef8",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_a5a01cf0571e4623a8f7eaf088a8a975": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a5a01cf0571e4623a8f7eaf088a8a975",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "id",
+                        "dataType": "number",
+                        "collectionId": "FLOW",
+                        "propertyPath": "[\"FLOW\"][0][\"id\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_get",
+                            "operationid": "118474"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblFlowName",
+                        "widgetPath": "this.view.lblFlowName",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmFlows",
+                        "parentMappingId": "ME_Mapping_c777143decea4c89b499e6e759f36c94",
+                        "segmentId": "segFlows",
+                        "segmentKUID": "f8814bb1dffc4fc8a3ea46a257fbb77a",
+                        "widgetKUID": "adc0c5b9358448e994244ae8e9c0d4ff",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_e587b5930daa424e9f941c4f3045c0c1": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e587b5930daa424e9f941c4f3045c0c1",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "description",
+                        "dataType": "string",
+                        "collectionId": "FLOW",
+                        "propertyPath": "[\"FLOW\"][0][\"description\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_get",
+                            "operationid": "118474"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblDescription",
+                        "widgetPath": "this.view.lblDescription",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmFlows",
+                        "parentMappingId": "ME_Mapping_c777143decea4c89b499e6e759f36c94",
+                        "segmentId": "segFlows",
+                        "segmentKUID": "f8814bb1dffc4fc8a3ea46a257fbb77a",
+                        "widgetKUID": "j677dd7828da403b875a50cbdad255d7",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_c0b46c2894a146889949cdf9c0fb72e8": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_c0b46c2894a146889949cdf9c0fb72e8",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "category",
+                        "dataType": "string",
+                        "collectionId": "FLOW",
+                        "propertyPath": "[\"FLOW\"][0][\"category\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_get",
+                            "operationid": "118474"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblCategory",
+                        "widgetPath": "this.view.lblCategory",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmFlows",
+                        "parentMappingId": "ME_Mapping_c777143decea4c89b499e6e759f36c94",
+                        "segmentId": "segFlows",
+                        "segmentKUID": "f8814bb1dffc4fc8a3ea46a257fbb77a",
+                        "widgetKUID": "f0995bb7a3974153a6989cee4617d2c5",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_a0ae7b0c91274c449366970442eb665f": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a0ae7b0c91274c449366970442eb665f",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "default_flag",
+                        "dataType": "boolean",
+                        "collectionId": "FLOW",
+                        "propertyPath": "[\"FLOW\"][0][\"default_flag\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_get",
+                            "operationid": "118474"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblDefault",
+                        "widgetPath": "this.view.lblDefault",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmFlows",
+                        "parentMappingId": "ME_Mapping_c777143decea4c89b499e6e759f36c94",
+                        "segmentId": "segFlows",
+                        "segmentKUID": "f8814bb1dffc4fc8a3ea46a257fbb77a",
+                        "widgetKUID": "cbcebb474a89459eaafaf59171fb740a",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_fdd617bacd4f4cf69932432a8d4753d8": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_fdd617bacd4f4cf69932432a8d4753d8",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "environment",
+                        "dataType": "string",
+                        "collectionId": "FLOW",
+                        "propertyPath": "[\"FLOW\"][0][\"environment\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_get",
+                            "operationid": "118474"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblEnvironment",
+                        "widgetPath": "this.view.lblEnvironment",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmFlows",
+                        "parentMappingId": "ME_Mapping_c777143decea4c89b499e6e759f36c94",
+                        "segmentId": "segFlows",
+                        "segmentKUID": "f8814bb1dffc4fc8a3ea46a257fbb77a",
+                        "widgetKUID": "c94b7b4dec0e445995393df25f41cc59",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_aa17e4e346c94ccb9a52551ba7bfd2e9": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_aa17e4e346c94ccb9a52551ba7bfd2e9",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "author",
+                        "dataType": "string",
+                        "collectionId": "FLOW",
+                        "propertyPath": "[\"FLOW\"][0][\"author\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_get",
+                            "operationid": "118474"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblAuthor",
+                        "widgetPath": "this.view.lblAuthor",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmFlows",
+                        "parentMappingId": "ME_Mapping_c777143decea4c89b499e6e759f36c94",
+                        "segmentId": "segFlows",
+                        "segmentKUID": "f8814bb1dffc4fc8a3ea46a257fbb77a",
+                        "widgetKUID": "b70f51c5325b45f1844b4870e8000c44",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_c32cc0333df54f9bb08bcfa1f33f386b": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_c32cc0333df54f9bb08bcfa1f33f386b",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "last_modified",
+                        "dataType": "date",
+                        "collectionId": "FLOW",
+                        "propertyPath": "[\"FLOW\"][0][\"last_modified\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_get",
+                            "operationid": "118474"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblLastModified",
+                        "widgetPath": "this.view.lblLastModified",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmFlows",
+                        "parentMappingId": "ME_Mapping_c777143decea4c89b499e6e759f36c94",
+                        "segmentId": "segFlows",
+                        "segmentKUID": "f8814bb1dffc4fc8a3ea46a257fbb77a",
+                        "widgetKUID": "bf3129ef66814f29902a9b5d77cd3b4c",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_a322a84d58e1469ea6d6161aad89ec56": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a322a84d58e1469ea6d6161aad89ec56",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "FLOW",
+                        "dataType": "collection",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_get",
+                            "operationid": "118474"
+                        }
+                    },
+                    "target": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowsList",
+                        "dataType": "collection",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_c777143decea4c89b499e6e759f36c94", "ME_Mapping_af00c6da272642eaa37a1f0577063413", "ME_Mapping_a5a01cf0571e4623a8f7eaf088a8a975", "ME_Mapping_e587b5930daa424e9f941c4f3045c0c1", "ME_Mapping_c0b46c2894a146889949cdf9c0fb72e8", "ME_Mapping_a0ae7b0c91274c449366970442eb665f", "ME_Mapping_fdd617bacd4f4cf69932432a8d4753d8", "ME_Mapping_aa17e4e346c94ccb9a52551ba7bfd2e9", "ME_Mapping_c32cc0333df54f9bb08bcfa1f33f386b", "ME_Mapping_a322a84d58e1469ea6d6161aad89ec56"],
+            "parentId": "_d36fd5b2ae034a2d82c568792010a1c9",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "ADD_SNIPPET_f3eb7e0f724a4e228b7ab3c5c146f5be",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "//voltmx.print(\"### stampa segFlow: \" + this.view.segFlows);\n\n//voltmx.print(\"### stampa segFlow[0][0] \" + this.view.segFlows[0][0]);\n\n// Ottieni il riferimento al widget di segmento\n//var segmentWidget = this.view.segFlows; // sostituisci con l'id del tuo segment widget\n// Ottieni i dati del segmento\n//var data1 = segmentWidget.data;\n\n//voltmx.print(\"PROVA: \" + this.view.segFlows.data[1].description);\n\nvoltmx.print(\"### STAMPA DI gblFlowsList: \" + JSON.stringify(gblFlowsList));\n\n// Retrieving selected Channel's flows\nvar flowsFound = gblFlowsList.filter(flow => flow.channel_id === gblChannelId);\n\nvoltmx.print(\"### TROVATO flowsFound: \" + JSON.stringify(flowsFound));\n\n// for each element, formatting the flow name/id. Ex. \"RB_EYE_00001\"\nfor (var i = 0; i < flowsFound.length; i++) {\n  \n  // assigning the right id and zeros based on the id digits\n  var id = parseInt(flowsFound[i].id);\n  if (id < 10) {\n    id = \"0000\" + id;\n  } else if (id < 100 && id >= 10) {\n    id = \"000\" + id;\n  } else if (id < 1000 && id >= 100) {\n    id = \"00\" + id;\n  } else if (id < 10000 && id >= 1000) {\n    id = \"0\" + id;\n  }\n  \n  flowsFound[i].id = gblChannelId + \"_\" + flowsFound[i].category.substring(0, 3).toUpperCase() + \"_\" + id;   // precedente controllo per sole 2 cifre -> (parseInt(flowsFound[i].id) < 10 ? (\"0000\" + flowsFound[i].id) : (\"000\" + flowsFound[i].id) )\n}\n\n\nself.view.segFlows.widgetDataMap = {lblStatus: \"status\", lblFlowName: \"id\", lblDescription: \"description\", lblCategory: \"category\", lblDefault: \"default_flag\", lblEnvironment: \"environment\", lblAuthor: \"author\", lblLastModified: \"last_modified\"};\nself.view.segFlows.setData(flowsFound);\n\nvoltmx.print(\"### PROVA: \" + self.view.segFlows.data[1].description);\n\nvoltmx.print(\"### PROVA2: \" + JSON.stringify(self.view.segFlows.data));\n\nvoltmx.print(\"### Num. righe del segment: \"  + self.view.segFlows.data.length);\n\n/* for each segment row, formatting the flow name. Ex. \"RB_EYE_00001\"\nfor (var i = 0; i < self.view.segFlows.data.length; i++) {\n  self.view.segFlows.data[i].id = gblChannelId + \"_\" + self.view.segFlows.data[i].category.substring(0, 3).toUpperCase() + \"_\" + (parseInt(self.view.segFlows.data[i].id) < 10 ? (\"0000\" + self.view.segFlows.data[i].id) : (\"000\" + self.view.segFlows.data[i].id) );\n  voltmx.print(\"### riga \" + i + \" - \" + self.view.segFlows.data[i].id);\n}\n\n*/\n\n\n// Mapping the labels of the Segment template with the data to pass.\n//self.view.segTemp.widgetDataMap = {lblStatus: \"status\", lblFlowName: \"id\", lblDescription: \"description\", lblCategory: \"category\", lblDefault: \"default_flag\", lblEnvironment: \"environment\", lblAuthor: \"author\", lblLastModified: \"last_modified\"};\n//var gblFlowsList2 = [{\"a_b_test\":\"false\",\"environment\":\"Dev\",\"supernova\":\"false\",\"author\":\"Author\",\"steps_layout\":\"steps\",\"description\":\"First description\",\"id\":\"1\",\"category\":\"Eyeglasses\",\"last_modified\":\"2024-02-23\",\"default_flag\":\"false\",\"channel_id\":\"RB\",\"status\":\"Active\"}];\n\n//self.view.segTemp.setData(gblFlowsList2);\n//voltmx.print(\"### Popolato il segTemp con gblFlowsList2\");\n\n\n\n// Itera su ogni riga del segmento\n/*for (var i = 0; i < data.length; i++) {\n  // Ottieni la riga corrente\n  var row = data[i];\n  voltmx.print(\"### ROW: \" + row);\n  voltmx.print(\"### ROW[1]: \" + row[1]);\n  // Controlla il valore di lblStatus\n  if (row.lblStatus.text === \"Active\") {\n    // Setta l'attributo src di imgStatus se lblStatus è 'active'\n    row.imgStatus.src = \"green.png\";\n    voltmx.print(\"### IF ACTIVE\");\n  } else if (row.lblStatus.text === \"Archived\") {\n    // Setta l'attributo src di imgStatus se lblStatus non è 'active'\n    row.imgStatus.src = \"yellow.png\";\n    voltmx.print(\"### IF ARCHIVED\");\n  } else {\n    row.imgStatus.src = \"grey.png\";\n    voltmx.print(\"### IF DRAFT\");\n  }\n\n}\n// Aggiorna il segmento con i nuovi dati\nsegmentWidget.setData(data);\n*/\n\nvoltmx.print(\"### METODO CONCLUSO\");\n\n",
+            "parentId": "_d36fd5b2ae034a2d82c568792010a1c9",
+            "callbackType": null,
+            "disabled": false
+        }, {
+            "id": "_d6713007ec7a4fbeb342694c6e9e07bb",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_c32dee4d8b044d22ab9acefb417195d6",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_a051e7dc7f64435ba60e73a532b903d3",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### non sono entrato nell'if\");",
+            "parentId": "_d6713007ec7a4fbeb342694c6e9e07bb",
+            "callbackType": null
+        }]
+    }
+}

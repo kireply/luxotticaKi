@@ -48,10 +48,22 @@
                 "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
                 "wType": "Button"
             },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": "4%"
+                }
+            },
             "centerX": {
                 "Default": {
                     "type": "string",
                     "value": "50.67%"
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
                 }
             },
             "left": {
@@ -61,10 +73,16 @@
                 }
             },
             "responsiveData": {},
+            "right": {
+                "Default": {
+                    "type": "string",
+                    "value": "0%"
+                }
+            },
             "top": {
                 "Default": {
                     "type": "string",
-                    "value": "690dp"
+                    "value": ""
                 }
             },
             "width": {
@@ -189,7 +207,26 @@
                 "srcKUID": "f6d6345317634850bef09677b329a6ec",
                 "wType": "Image"
             },
-            "src": "logout_true.png"
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": "4%"
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "responsiveData": {},
+            "src": "logout_true.png",
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            }
         },
         "segMenu": {
             "__events__": {},
@@ -242,6 +279,12 @@
                 }
             },
             "responsiveData": {},
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
+                }
+            },
             "width": {
                 "Default": {
                     "type": "string",

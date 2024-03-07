@@ -1,0 +1,52 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "50dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "70dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s1099e64f0f047d2afd1302953fae05b",
+    "_text_": "Save",
+    "_top_": {
+        "type": "string",
+        "value": "473dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "300dp"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
+    "id": "btnSaveNewChannelInsideFrmChannels",
+    "ide_onClick": "AS_Button_b1e5019a4b8b4dce9e6d8f16a2703545",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "j0858120438c4d45b43b1ff72d7c1a7b",
+    "name": "kony.ui.Button",
+    "parent": "flxPopupCreateNewChannelInsideFrmChannels",
+    "pf": "frmChannels",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

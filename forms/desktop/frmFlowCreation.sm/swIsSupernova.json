@@ -1,0 +1,61 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizSwitch",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "3%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "84%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_right_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_skin_": "s651c8b6c2924a32be3cf51c99fe123e",
+    "_top_": {
+        "type": "string",
+        "value": "71.05%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "8%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "id": "swIsSupernova",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kiosk": {
+        "render": false
+    },
+    "kuid": "af3d5f2b694d42edaecbcf6d5e3fff7f",
+    "leftsidetext": " ",
+    "name": "kony.ui.Switch",
+    "onslide": null,
+    "osPlatform": "desktopweb",
+    "osVersion": "iOS7",
+    "parent": "flxCreationFlow",
+    "pf": "frmFlowCreation",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "rightsidetext": " ",
+    "selectedindex": 1,
+    "wType": "Switch",
+    "widgetalignment": 5,
+    "zindex": 1
+}

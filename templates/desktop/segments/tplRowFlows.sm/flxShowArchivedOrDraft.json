@@ -35,11 +35,11 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "imgPreview2",
-        "imgDuplicate2",
-        "imgEdit2",
-        "imgActivate",
-        "imgDelete"
+        "flxImgPreview3",
+        "flxImgDuplicate3",
+        "flxImgEdit3",
+        "flxImgActivate3",
+        "flxImgDelete3"
     ],
     "clipbounds": false,
     "containerId": true,

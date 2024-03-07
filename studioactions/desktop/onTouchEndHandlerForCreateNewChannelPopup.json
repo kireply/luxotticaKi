@@ -1,0 +1,31 @@
+{
+    "AS_Image_cb67ab6c252e4083aff717b8a7ebc94f": {
+        "id": "AS_Image_cb67ab6c252e4083aff717b8a7ebc94f",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForCreateNewChannelPopup",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmChannels",
+            "type": "forms",
+            "platform": "",
+            "KUID": "c1e9143f6fef4291a170222e7c044c7c"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_b1ac249456484f4a8d69ccc0e91bb4df",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblInfoIcon = \"false\";\nthis.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\n// this.view.flxPopupChannelInfo.setVisibility(false);",
+            "parentId": null
+        }]
+    }
+}

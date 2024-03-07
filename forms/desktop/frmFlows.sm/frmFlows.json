@@ -50,7 +50,11 @@
     "canUpdateUI": true,
     "canvasWidth": 1200,
     "children": [
-        "flxMainContainerFlows"
+        "flxMainContainerFlows",
+        "flxBlur",
+        "flxPopupDuplicateFlowSmall",
+        "flxPopupDuplicateFlowLarge",
+        "flxPopupEditFlow"
     ],
     "containerweight": 100,
     "controllerInfo": {

@@ -1,0 +1,182 @@
+{
+    "classname": "channelTemplatewithContract",
+    "definitions": {
+        "apis": {
+            "custom": [],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "e8add311f4ea46b28ed9125a483c2d59",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 1,
+                    "propertyKey": "onClickTeaser",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onClickTeaser",
+                        "srcWidget": "flxChannel",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "i24fb73ae8034ab3bcaa163e3dbe2e64",
+                    "translateAtInstance": false
+                }
+            ]
+        },
+        "groups": {
+            "apis": [],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "1",
+                    "group": "General",
+                    "kuid": "e83af60e1451497c81b3fd1c0a2cd2fd",
+                    "originalPropertyKey": "channelId",
+                    "propertyIndex": 3,
+                    "propertyKey": "channelId",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "channelId",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "h81bf31150bb49c9a2809843ee9d7596",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "deb1d58fdbe248efb6cfc474f5703dea",
+                    "originalPropertyKey": "src",
+                    "propertyIndex": 1,
+                    "propertyKey": "channelLogo",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "channelLogo",
+                        "isHiddenInTool": false,
+                        "srcWidget": "imgLogo",
+                        "type": "string",
+                        "uiConfig": {
+                            "Button": {
+                                "dataRetrieverId": "Imagelist",
+                                "dataUpdaterId": "Imagelist",
+                                "popupId": "Imagelist",
+                                "type": "ImageEditBtn"
+                            },
+                            "Label": {}
+                        },
+                        "uiRepresentation": "Label-Label-Button",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "f8f0f122a9fe40f9ad3d8f707a6b76e6"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "e937d4ab8ad441a1b7191a8d3a3e71aa",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 2,
+                    "propertyKey": "channelInfo",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "channelInfo",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblChannelInfo",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "e2af7fe7c69647f2b7086b1a023fc3e9"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "f04eba07025e4d1494929e804c3d93a3",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 4,
+                    "propertyKey": "imgInfoVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "imgInfoVisible",
+                        "isHiddenInTool": false,
+                        "srcWidget": "imgInfo",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "c0d9636e9706454abb79d671a8bb339a"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "b83883c4cf2d4acfb1f21f3f5fa52d69",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 5,
+                    "propertyKey": "channelIdentifier",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "channelIdentifier",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblChannelId",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "e61dcc04def344f1b40454f875eab1a1"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "d029d8ec4b8e4c189c8d39a66d4f7235",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 6,
+                    "propertyKey": "channelProperties",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "channelProperties",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblChannelProperties",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "hc54a62e5990491393434c27d03f63b9"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "ki.luxottica",
+    "version": "1.0.0"
+}

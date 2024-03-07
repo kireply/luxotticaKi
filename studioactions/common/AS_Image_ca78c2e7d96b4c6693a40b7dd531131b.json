@@ -1,0 +1,29 @@
+{
+    "AS_Image_ca78c2e7d96b4c6693a40b7dd531131b": {
+        "id": "AS_Image_ca78c2e7d96b4c6693a40b7dd531131b",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "f3634d1fd4dd46249c068cd0d19e3491"
+        },
+        "language": "js",
+        "eventType": "onTouchStart",
+        "actions": [{
+            "id": "ADD_SNIPPET_ef3f276f315b4596b91d3e5f3ae113a0",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblInfoIcon = true;",
+            "parentId": null
+        }]
+    }
+}

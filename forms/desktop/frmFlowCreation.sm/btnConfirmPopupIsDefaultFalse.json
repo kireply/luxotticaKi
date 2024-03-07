@@ -1,0 +1,52 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "20%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "52.18%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s1133861c93d4e828553634e501a1d28",
+    "_text_": "Confirm",
+    "_top_": {
+        "type": "string",
+        "value": "59.26%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "40%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
+    "id": "btnConfirmPopupIsDefaultFalse",
+    "ide_onClick": "AS_Button_f66aaa9d8a5d4b48a0863ca80cf6461f",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "cd324e74dc674bbca7cc371a80d0e636",
+    "name": "kony.ui.Button",
+    "parent": "flxPopupIsDefaultFalse",
+    "pf": "frmFlowCreation",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

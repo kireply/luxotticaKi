@@ -48,6 +48,18 @@
                 "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
                 "wType": "Button"
             },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": "4%"
+                }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
             "responsiveData": {},
             "width": {
                 "Default": {
@@ -170,6 +182,13 @@
                 "srcKUID": "f6d6345317634850bef09677b329a6ec",
                 "wType": "Image"
             },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": "4%"
+                }
+            },
+            "responsiveData": {},
             "src": "logout_true.png"
         },
         "segMenu": {
@@ -249,7 +268,7 @@
             "height": {
                 "Default": {
                     "type": "string",
-                    "value": "100.77%"
+                    "value": "100%"
                 }
             },
             "left": {

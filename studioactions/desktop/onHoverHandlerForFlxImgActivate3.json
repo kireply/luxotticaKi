@@ -1,0 +1,28 @@
+{
+    "AS_FlexContainer_baff0f9856d348a6809cecde4144789f": {
+        "id": "AS_FlexContainer_baff0f9856d348a6809cecde4144789f",
+        "type": "ACTION_SEQUENCE",
+        "name": "onHoverHandlerForFlxImgActivate3",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_dfe9788a4dd846c584bc88af467907e2",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "//Entering hover icon\nif (context.eventType !== \"leave\"){\n    this.view.flxImgActivate4.backgroundColor = \"dedede\";\n} else {\n    this.view.flxImgActivate4.backgroundColor = \"ffffff\";\n}",
+            "parentId": null
+        }]
+    }
+}

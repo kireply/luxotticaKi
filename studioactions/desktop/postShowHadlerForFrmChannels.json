@@ -52,7 +52,7 @@
         }, {
             "id": "ADD_SNIPPET_g56c3b1b0af347daa472294a0649b4b7",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "/*\nthis.view.txtChannelID.setEnabled(false);\nthis.view.lbChannelName.setEnabled(false);\nthis.view.txtChannelLogo.setEnabled(false);\nthis.view.txtChannelProperties.setEnabled(false);\n*/\n\n//this.view.segChannels.orientation = constants.BOX_LAYOUT_HORIZONTAL;\n//voltmx.print(\"### ORIENTAMENTO MODIFICATO.\");\n",
+            "codeSnippet": "\nthis.view.txtChannelID.setEnabled(false);\nthis.view.lbChannelName.setEnabled(false);\nthis.view.txtChannelLogo.setEnabled(false);\nthis.view.txtChannelProperties.setEnabled(false);\n\n//this.view.segChannels.orientation = constants.BOX_LAYOUT_HORIZONTAL;\n//voltmx.print(\"### ORIENTAMENTO MODIFICATO.\");\n",
             "parentId": null,
             "callbackType": null
         }, {

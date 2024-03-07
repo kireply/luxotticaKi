@@ -27,7 +27,7 @@
                 "stepConfig": {
                     "timingFunction": "kony.anim.EASE"
                 },
-                "opacity": "50",
+                "opacity": 50,
                 "displayAnimationId": "",
                 "duration": "0",
                 "delay": "0",

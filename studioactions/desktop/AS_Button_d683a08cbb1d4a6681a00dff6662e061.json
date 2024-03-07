@@ -15,6 +15,17 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
+            "id": "LOADING_INDICATOR_d3bf182051ac490b9f5b9f1d8d1ff08b",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Logging out..."
+        }, {
             "id": "NAVIGATE_TO_FORM__c4fe490040314d0fa7791f618a8e3ff7",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmLogin",
@@ -25,6 +36,16 @@
             "enableMappingEditor": true,
             "package": "",
             "isCustomInput": false
+        }, {
+            "id": "LOADING_INDICATOR_b2c69fc8a9eb498c86791e1561543f23",
+            "selectedOption": "dismiss",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
         }]
     }
 }

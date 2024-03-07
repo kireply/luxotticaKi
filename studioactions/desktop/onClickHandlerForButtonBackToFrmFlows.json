@@ -1,0 +1,48 @@
+{
+    "AS_Button_d9e49462f91e4405b3ec0a7bfdac5579": {
+        "id": "AS_Button_d9e49462f91e4405b3ec0a7bfdac5579",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForButtonBackToFrmFlows",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlowCreation",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d569d8ca39af43bea658ee877f5208b9"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "LOADING_INDICATOR_ide_onClick_fa60e20d3f6e42cd9147140f663472e5",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Back to channels..."
+        }, {
+            "id": "NAVIGATE_TO_FORM__ide_onClick_ceedf0f72fae451fb38fe415a78dd005",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmFlows",
+            "formKUID": "e6a8fc2377784d1595b361cc9412aea7",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "LOADING_INDICATOR_ide_onClick_c0aaee4ebce149f5a2c780b5dd02a9cb",
+            "selectedOption": "dismiss",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }]
+    }
+}

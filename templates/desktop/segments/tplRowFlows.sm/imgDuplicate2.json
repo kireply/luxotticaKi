@@ -4,11 +4,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "70%"
+        "value": "90%"
     },
     "_left_": {
         "type": "string",
-        "value": "10%"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -26,24 +26,25 @@
     "_src_": "duplicate2.png",
     "_top_": {
         "type": "string",
-        "value": "5%"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "9%"
+        "value": "70%"
     },
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "31.94%"
+        "value": "50%"
     },
     "centery": {
         "type": "string",
-        "value": "54.98%"
+        "value": "50%"
     },
     "containerId": true,
     "containerweight": 100,
     "id": "imgDuplicate2",
+    "ide_onTouchEnd": "AS_Image_d1041f173fb047a98856ef69b4617481",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",
@@ -51,12 +52,12 @@
     "isvisible": true,
     "kuid": "ac2e80c91997432b9442b90a7b9df8d9",
     "name": "kony.ui.Image2",
-    "parent": "flxShowArchivedOrDraft",
+    "parent": "flxImgDuplicate3",
     "pf": "tplRowFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "srcType": 1,
     "wType": "Image",
     "widgetalignment": 5,
-    "zindex": 1
+    "zindex": 2
 }

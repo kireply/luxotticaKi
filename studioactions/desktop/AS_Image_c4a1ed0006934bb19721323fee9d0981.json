@@ -1,0 +1,33 @@
+{
+    "AS_Image_c4a1ed0006934bb19721323fee9d0981": {
+        "id": "AS_Image_c4a1ed0006934bb19721323fee9d0981",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_ad6fcf49a5704afab32679a68c12f2b2",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.flxPopupDuplicateFlowSmall.setVisibility(true);\nvoltmx.print(\"### ESEGUITO DENTRO TOUCH ICONA DUPLICA\");",
+            "parentId": null
+        }]
+    }
+}

@@ -40,6 +40,7 @@
     "containerId": true,
     "containerweight": 100,
     "id": "imgStatus",
+    "ide_onDownloadComplete": "AS_Image_e52845368e0b44318acee071d7293e22",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",

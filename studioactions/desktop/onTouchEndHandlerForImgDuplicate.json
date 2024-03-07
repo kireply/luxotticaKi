@@ -1,0 +1,27 @@
+{
+    "AS_Image_f27258aae0eb45af88bed9a7d565dcdc": {
+        "id": "AS_Image_f27258aae0eb45af88bed9a7d565dcdc",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgDuplicate",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onTouchEnd_b35a653d3d964c3e8daf91a6e3a446bf",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblDuplicateIcon = true;"
+        }]
+    }
+}

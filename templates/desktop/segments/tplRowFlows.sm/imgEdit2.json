@@ -4,11 +4,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "60%"
+        "value": "70%"
     },
     "_left_": {
         "type": "string",
-        "value": "20%"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -26,11 +26,11 @@
     "_src_": "pen.png",
     "_top_": {
         "type": "string",
-        "value": "5%"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "9%"
+        "value": "60%"
     },
     "canUpdateUI": true,
     "centerx": {
@@ -44,6 +44,7 @@
     "containerId": true,
     "containerweight": 100,
     "id": "imgEdit2",
+    "ide_onTouchEnd": "AS_Image_g19457e56f944200a00c5b060a8f5ab3",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",
@@ -51,12 +52,12 @@
     "isvisible": true,
     "kuid": "d0979363b5534c1c9dd439329caa3fd4",
     "name": "kony.ui.Image2",
-    "parent": "flxShowArchivedOrDraft",
+    "parent": "flxImgEdit3",
     "pf": "tplRowFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "srcType": 1,
     "wType": "Image",
     "widgetalignment": 5,
-    "zindex": 1
+    "zindex": 2
 }

@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "7.05%"
+        "value": "7%"
     },
     "_left_": {
         "type": "string",
@@ -37,6 +37,7 @@
     "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
     "groupcells": false,
     "id": "lbCategory",
+    "ide_onSelection": "AS_ListBox_f9c5eb2774f74d0ab010cca5f256dff6",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
