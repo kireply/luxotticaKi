@@ -42,9 +42,7 @@
         "flxContainerHeader",
         "flxContainerMenu",
         "flxContainerSmallerMenu",
-        "flxContainerFlowCreation",
-        "flxPopupIsDefaultTrue",
-        "flxPopupIsDefaultFalse"
+        "flxContainerFlowCreation"
     ],
     "clipbounds": false,
     "containerweight": 100,
@@ -65,5 +63,5 @@
     "snaptogrid": true,
     "wType": "FlexContainer",
     "widgetalignment": 1,
-    "zindex": 2
+    "zindex": 1
 }

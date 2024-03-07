@@ -36,11 +36,11 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50.05%"
+        "value": "50%"
     },
     "centery": {
         "type": "string",
-        "value": "50.00%"
+        "value": "50%"
     },
     "children": [
         "imgExitPopupIsDefaultTrue",
@@ -56,11 +56,11 @@
     "info": null,
     "iscustomlayout": false,
     "ismodalcontainer": true,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "b487c74c88d84d6ea9f51ee8a27c4b0c",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMainContainerFlowCreation",
+    "parent": "frmFlowCreation",
     "pf": "frmFlowCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

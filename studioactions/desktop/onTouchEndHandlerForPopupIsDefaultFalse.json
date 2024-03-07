@@ -1,0 +1,31 @@
+{
+    "AS_Image_h28ae22cac9747289337701bcd20640a": {
+        "id": "AS_Image_h28ae22cac9747289337701bcd20640a",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForPopupIsDefaultFalse",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmFlowCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "d569d8ca39af43bea658ee877f5208b9"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_fdd5dea03d754b408651f7431e178469",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxPopupIsDefaultFalse.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);",
+            "parentId": null
+        }]
+    }
+}
