@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "0"
+        "value": "40dp"
     },
     "_margin_": [
         1,
@@ -21,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "s65e1f90b6d84f7e9808897bf2fa9915",
-    "_text_": "Label",
+    "_skin_": "s780a224818b473e813d49741ebd41c2",
+    "_text_": "Channel ID",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "122dp"
     },
     "_width_": {
         "type": "ref",
@@ -41,7 +41,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblChannelProperties",
+    "id": "lblChannelInsideFrmChannels",
     "info": null,
     "ipad": {
         "psp": {
@@ -54,13 +54,14 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": false,
-    "kuid": "hc54a62e5990491393434c27d03f63b9",
+    "isvisible": true,
+    "kuid": "c2bb7c09fdac49ccaf2ef9781511a2f9",
     "name": "kony.ui.Label",
-    "parent": "flxChannel",
-    "pf": "userwidgetmodel",
+    "parent": "flxPopupCreateNewChannelInsideFrmChannels",
+    "pf": "frmChannels",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",
-    "wType": "Label"
+    "wType": "Label",
+    "zindex": 1
 }

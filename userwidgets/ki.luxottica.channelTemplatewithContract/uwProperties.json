@@ -111,28 +111,19 @@
                     "access": "Enable",
                     "group": "General",
                     "kuid": "f04eba07025e4d1494929e804c3d93a3",
-                    "originalPropertyKey": "src",
+                    "originalPropertyKey": "isVisible",
                     "propertyIndex": 4,
-                    "propertyKey": "channelImgInfo",
+                    "propertyKey": "imgInfoVisible",
                     "pw": {
                         "access": "readwrite",
-                        "category": "widget",
+                        "category": "look",
                         "dependencyConditions": {},
                         "dependentKeysKUIDs": null,
-                        "displayName": "channelImgInfo",
+                        "displayName": "imgInfoVisible",
                         "isHiddenInTool": false,
                         "srcWidget": "imgInfo",
-                        "type": "string",
-                        "uiConfig": {
-                            "Button": {
-                                "dataRetrieverId": "Imagelist",
-                                "dataUpdaterId": "Imagelist",
-                                "popupId": "Imagelist",
-                                "type": "ImageEditBtn"
-                            },
-                            "Label": {}
-                        },
-                        "uiRepresentation": "Label-Label-Button",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
                         "wType": "Image"
                     },
                     "srcWgtKUID": "c0d9636e9706454abb79d671a8bb339a"
