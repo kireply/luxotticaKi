@@ -1,9 +1,5 @@
 {
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "0"
-    },
     "_height_": {
         "type": "string",
         "value": "100%"
@@ -26,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
+    "_skin_": "s94d48bedfd940dd8127b330ca00273f",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -38,20 +34,23 @@
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "children": [
-        "flxContainerHeader",
-        "flxContainerMenu",
-        "flxContainerSmallerMenu",
-        "FlexContainerFlows"
-    ],
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "children": [],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxMainContainerFlows",
+    "id": "flxBlur",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "eaad13509a4b44629ba54c4164511423",
+    "isvisible": false,
+    "kuid": "gae34b69f24c4833b8ca0ca67bcdfe17",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "frmFlows",
@@ -62,6 +61,5 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1,
-    "zindex": 1
+    "widgetalignment": 1
 }
