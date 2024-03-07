@@ -1,0 +1,25 @@
+{
+    "AS_Button_h06a1c5151cc407fa24104d313956327": {
+        "id": "AS_Button_h06a1c5151cc407fa24104d313956327",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnCancelPopupIsDefaultTrue",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlowCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "d569d8ca39af43bea658ee877f5208b9"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_fcb5ada83ed742d9a664a2f3cdcf92f5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxPopupIsDefaultTrue.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);",
+            "parentId": null
+        }]
+    }
+}

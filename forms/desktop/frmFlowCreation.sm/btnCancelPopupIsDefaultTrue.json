@@ -37,6 +37,7 @@
     "displaytext": true,
     "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
     "id": "btnCancelPopupIsDefaultTrue",
+    "ide_onClick": "AS_Button_h06a1c5151cc407fa24104d313956327",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
