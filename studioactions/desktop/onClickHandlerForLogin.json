@@ -28,7 +28,13 @@
         }, {
             "id": "ADD_SNIPPET_bd58ab64f7f746bb9f2d8ea1c44dbd05",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.verifyLoggeduser();",
+            "codeSnippet": "this.verifyLoggeduser();\n\n",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_d6560fdfa29c40028f239395003b41bf",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "",
             "parentId": null,
             "callbackType": null
         }, {

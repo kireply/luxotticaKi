@@ -2,7 +2,7 @@
     "AS_Image_i6ec5db67080471db59760055f1318fd": {
         "id": "AS_Image_i6ec5db67080471db59760055f1318fd",
         "type": "ACTION_SEQUENCE",
-        "name": "onTouchEndOnPopupAddNewChannel",
+        "name": "onTouchEndOnPopupAddNewChannelInfo",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -24,7 +24,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_beafccf8e49948539b411e12313819c9",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "gblInfoIcon = \"false\";\nthis.view.flxPopupChannelInfo.setVisibility(false);",
+            "codeSnippet": "gblInfoIcon = \"false\";\n// this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\nthis.view.flxPopupChannelInfo.setVisibility(false);",
             "parentId": null
         }]
     }

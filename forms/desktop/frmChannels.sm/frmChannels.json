@@ -51,7 +51,8 @@
     "canvasWidth": 1200,
     "children": [
         "fxlMainContainerChannels",
-        "flxPopupChannelInfo"
+        "flxPopupChannelInfo",
+        "flxPopupCreateNewChannelInsideFrmChannels"
     ],
     "containerweight": 100,
     "controllerInfo": {

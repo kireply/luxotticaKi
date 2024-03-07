@@ -74,8 +74,8 @@ define({
       //const tile = new com.hcl.demo.uifactory.Tile({
       const channel = new ki.luxottica.channelTemplatewithContract({
         id: `channel{index}${new Date().getTime()}`,
-        width: '95%',
-        height: '175dp',
+        width: '100%',
+        height: '147%',
         centerX: '50%',
         centerY: '50%'
       }, {}, {});
@@ -113,6 +113,10 @@ define({
        channel.channelLogo = "/add_circle_icon.png";
        channel.channelInfo = "Add New Channel";
        channel.channelId = index;
+       channel.imgInfoVisible = false;
+       channel.onClickTeaser = () => {
+         this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(true);
+       }
 //        voltmx.print("### CHANNEL INFO: " + channel.channelInfo);
 //        voltmx.print("### CHANNEL LOGO: " + channel.channelLogo);
 //        voltmx.print("### CHANNEL ID: " + channel.channelId);
