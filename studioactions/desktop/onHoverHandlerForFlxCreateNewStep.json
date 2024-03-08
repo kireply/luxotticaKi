@@ -1,0 +1,29 @@
+{
+    "AS_FlexContainer_e882fb5122cc4083ab672ebc46c4647c": {
+        "id": "AS_FlexContainer_e882fb5122cc4083ab672ebc46c4647c",
+        "type": "ACTION_SEQUENCE",
+        "name": "onHoverHandlerForFlxCreateNewStep",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "frmStepCreation",
+            "type": "forms",
+            "platform": null,
+            "KUID": "j27b7970c694429db6312f3b27f7428e"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_c148ad972f534e5ca4471ea81a512caa",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if (context.eventType !== \"leave\"){\n  this.view.flxCreateNewStep.backgroundColor = \"000000\";\n  this.view.imgNewStep.src = \"/add_circle_icon_modified.png\";\n  this.view.lblStepCreationBlack.setVisibility(false);\n  this.view.lblStepCreationWhite.setVisibility(true);\n  //this.view.lblStepCreation.backgroundColor = \"ffffff\";\n} else {\n  this.view.flxCreateNewStep.backgroundColor = \"ffffff\";\n  this.view.imgNewStep.src = \"/plus.png\";\n  this.view.lblStepCreationWhite.setVisibility(false);\n  this.view.lblStepCreationBlack.setVisibility(true);\n  //this.view.lblStepCreation.backgroundColor = \"000000\";\n}\n",
+            "parentId": null,
+            "disabled": true
+        }]
+    }
+}

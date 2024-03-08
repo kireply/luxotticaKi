@@ -41,6 +41,16 @@
             "codeSnippet": "var currentDate = new Date();\n\n// Ottengo i componenti della data (giorno, mese, anno)\nvar day = currentDate.getDate();\nvar month = currentDate.getMonth() + 1; // I mesi partono da 0 (gennaio) quindi aggiungo 1\nvar year = currentDate.getFullYear();\n\n// Formatta la data come stringa nel formato \"YYYY-MM-DD\"\nformattedDate = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\nvoltmx.print(\"### DATA: \" + formattedDate); // Stampo la data formattata\n\nvoltmx.print(\"### SWITCH 1: \" + this.view.swIsDefaultFlow.selectedIndex);\nvoltmx.print(\"### SWitch 2: \" + this.view.swIsSupernova.selectedIndex);",
             "parentId": null
         }, {
+            "id": "ADD_LOCAL_VARIABLE_j6a1ca9f83cc466cb8ea2736d6e95daf",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "idNewFlow",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "ADD_LOCAL_VARIABLE_c093535c352f40eb8a646ba2e145cdd6",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "isDefault",
@@ -554,10 +564,10 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "NAVIGATE_TO_FORM__c7d014db6dcc4c21a983b2b63994632a",
+            "id": "NAVIGATE_TO_FORM__ef850a32d8f2439fb6d141fed440f4f6",
             "type": "NAVIGATE_TO_FORM",
-            "formId": "frmStepCreation",
-            "formKUID": "j27b7970c694429db6312f3b27f7428e",
+            "formId": "frmFlowCreation",
+            "formKUID": "d569d8ca39af43bea658ee877f5208b9",
             "projectName": "luxotticaKi",
             "mappings": {},
             "mappingsOrder": [],
@@ -583,17 +593,136 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
+            "id": "MODIFY_VARIABLE_ACTION_e880c56be5ec4f76823b16eeb487a583",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "_b2f523cef84040e090c87877eb5cfebb",
+            "callbackType": null,
+            "variable": "idNewFlow",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "expression",
+            "modifySet": "FLOW_create.FLOW[0].id",
+            "modifySetType": "string"
+        }, {
             "id": "NAVIGATE_TO_FORM__j0a5af54bda8404e856780e9c7d0be00",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmStepCreation",
             "formKUID": "j27b7970c694429db6312f3b27f7428e",
             "projectName": "luxotticaKi",
-            "mappings": {},
-            "mappingsOrder": [],
+            "mappings": {
+                "ME_Mapping_eb51ae90a3614dedb87fdf75a7c33dc0": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_eb51ae90a3614dedb87fdf75a7c33dc0",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "isDefault",
+                        "propertyKey": "variable_isDefault",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_fb29eafa1fb8406f8a5319fdfd02610f": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_fb29eafa1fb8406f8a5319fdfd02610f",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "value",
+                        "propertyKey": "lbEnvironment_value",
+                        "widgetId": "lbEnvironment",
+                        "widgetPath": "this.view.lbEnvironment",
+                        "widgetType": "ListBox",
+                        "dataType": "string",
+                        "itemId": "frmFlowCreation",
+                        "collectionId": "selectedKeyValues",
+                        "widgetKUID": "eeb5663c2c75423fa650a145b1bfb895",
+                        "itemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_ed779b75d95f45fba8aa6a7f1f850b39": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ed779b75d95f45fba8aa6a7f1f850b39",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "propertyKey": "txtFlowDescription_text",
+                        "widgetId": "txtFlowDescription",
+                        "widgetPath": "this.view.txtFlowDescription",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmFlowCreation",
+                        "widgetKUID": "h3833e9d81274cb4829ec0ca3c25286a",
+                        "itemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_bbc3af0ce09c499e869746d6631ff9c3": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_bbc3af0ce09c499e869746d6631ff9c3",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "idNewFlow",
+                        "propertyKey": "variable_idNewFlow",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_g494238873974aba97e0e14892a5dfec": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_g494238873974aba97e0e14892a5dfec",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "value",
+                        "propertyKey": "lbCategory_value",
+                        "widgetId": "lbCategory",
+                        "widgetPath": "this.view.lbCategory",
+                        "widgetType": "ListBox",
+                        "dataType": "string",
+                        "itemId": "frmFlowCreation",
+                        "collectionId": "selectedKeyValues",
+                        "widgetKUID": "c3eee3d1ab8e4dff9749f9cb3ec04370",
+                        "itemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_eb51ae90a3614dedb87fdf75a7c33dc0", "ME_Mapping_fb29eafa1fb8406f8a5319fdfd02610f", "ME_Mapping_ed779b75d95f45fba8aa6a7f1f850b39", "ME_Mapping_bbc3af0ce09c499e869746d6631ff9c3", "ME_Mapping_g494238873974aba97e0e14892a5dfec"],
             "parentId": "_b2f523cef84040e090c87877eb5cfebb",
             "callbackType": null,
             "enableMappingEditor": true,
             "package": "",
+            "enableNavigationObj": true,
+            "navigationObj": "{\n    \"variable_isDefault\": isDefault,\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"variable_idNewFlow\": idNewFlow,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
             "isCustomInput": false
         }, {
             "id": "ADD_SNIPPET_edefbd2510fb498b85d34842058f657d",
@@ -1023,6 +1152,19 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
+            "id": "NAVIGATE_TO_FORM__b37dd371ad374ce88cd3f1a45b042f67",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmFlowCreation",
+            "formKUID": "d569d8ca39af43bea658ee877f5208b9",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_f01531be8be64ca3aaa208629f5b8236",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
             "id": "SHOW_ALERT_e60d7cef0ef4490d862c66e675b4ae99",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_INFO",
@@ -1038,6 +1180,138 @@
             "alertMessagei18n": null,
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
+        }, {
+            "id": "MODIFY_VARIABLE_ACTION_dfeb1bdedef44b78bdcedc9a89889296",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "_bf9a39ec35d6468788c6c9832c7dea9b",
+            "callbackType": null,
+            "variable": "idNewFlow",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "expression",
+            "modifySet": "FLOW_create.FLOW[0].id",
+            "modifySetType": "string"
+        }, {
+            "id": "NAVIGATE_TO_FORM__d2d98bd45fc04d72a2f4cb5393da03c1",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmStepCreation",
+            "formKUID": "j27b7970c694429db6312f3b27f7428e",
+            "projectName": "luxotticaKi",
+            "mappings": {
+                "ME_Mapping_a5a09c7df339421cb55ab09963a65363": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a5a09c7df339421cb55ab09963a65363",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "isDefault",
+                        "propertyKey": "variable_isDefault",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_f46937e6282f4c4a8bbe55109b60b1f5": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f46937e6282f4c4a8bbe55109b60b1f5",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "value",
+                        "propertyKey": "lbEnvironment_value",
+                        "widgetId": "lbEnvironment",
+                        "widgetPath": "this.view.lbEnvironment",
+                        "widgetType": "ListBox",
+                        "dataType": "string",
+                        "itemId": "frmFlowCreation",
+                        "collectionId": "selectedKeyValues",
+                        "widgetKUID": "eeb5663c2c75423fa650a145b1bfb895",
+                        "itemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_d526f32fb6b44174bd964a9f5f1877f3": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d526f32fb6b44174bd964a9f5f1877f3",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "propertyKey": "txtFlowDescription_text",
+                        "widgetId": "txtFlowDescription",
+                        "widgetPath": "this.view.txtFlowDescription",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmFlowCreation",
+                        "widgetKUID": "h3833e9d81274cb4829ec0ca3c25286a",
+                        "itemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_j02f3659b3ef45ccb0fa931e16a6269c": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_j02f3659b3ef45ccb0fa931e16a6269c",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "idNewFlow",
+                        "propertyKey": "variable_idNewFlow",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_a5d57f78116e4acc852d315c4eb938b2": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a5d57f78116e4acc852d315c4eb938b2",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "value",
+                        "propertyKey": "lbCategory_value",
+                        "widgetId": "lbCategory",
+                        "widgetPath": "this.view.lbCategory",
+                        "widgetType": "ListBox",
+                        "dataType": "string",
+                        "itemId": "frmFlowCreation",
+                        "collectionId": "selectedKeyValues",
+                        "widgetKUID": "c3eee3d1ab8e4dff9749f9cb3ec04370",
+                        "itemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_a5a09c7df339421cb55ab09963a65363", "ME_Mapping_f46937e6282f4c4a8bbe55109b60b1f5", "ME_Mapping_d526f32fb6b44174bd964a9f5f1877f3", "ME_Mapping_j02f3659b3ef45ccb0fa931e16a6269c", "ME_Mapping_a5d57f78116e4acc852d315c4eb938b2"],
+            "parentId": "_bf9a39ec35d6468788c6c9832c7dea9b",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "enableNavigationObj": true,
+            "navigationObj": "{\n    \"variable_isDefault\": isDefault,\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"variable_idNewFlow\": idNewFlow,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
+            "isCustomInput": false
         }]
     }
 }

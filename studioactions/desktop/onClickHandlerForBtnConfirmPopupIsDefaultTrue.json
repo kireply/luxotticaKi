@@ -52,6 +52,16 @@
             "parentId": null,
             "callbackType": null
         }, {
+            "id": "ADD_LOCAL_VARIABLE_bfda003e73d34a6c9cc83649c56f5955",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "idNewFlow",
+            "isGlobal": false,
+            "valuetype": "expression",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "_hc429af0eb384e1bbe13efcc12cafa81",
             "type": "IF_CONDITION",
             "conditions": [{
@@ -489,8 +499,8 @@
         }, {
             "id": "NAVIGATE_TO_FORM__e674c7cb6e21424a89032173b9f925ed",
             "type": "NAVIGATE_TO_FORM",
-            "formId": "frmStepCreation",
-            "formKUID": "j27b7970c694429db6312f3b27f7428e",
+            "formId": "frmFlowCreation",
+            "formKUID": "d569d8ca39af43bea658ee877f5208b9",
             "projectName": "luxotticaKi",
             "mappings": {},
             "mappingsOrder": [],
@@ -516,17 +526,136 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
+            "id": "MODIFY_VARIABLE_ACTION_cf61571683b94610b6fa5abf4db23204",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "_ab3367875b0f484d99539d2182b23334",
+            "callbackType": null,
+            "variable": "idNewFlow",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "expression",
+            "modifySet": "FLOW_create.FLOW[0].id",
+            "modifySetType": "string"
+        }, {
             "id": "NAVIGATE_TO_FORM__d63d7001c0c94f699952b25895034080",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmStepCreation",
             "formKUID": "j27b7970c694429db6312f3b27f7428e",
             "projectName": "luxotticaKi",
-            "mappings": {},
-            "mappingsOrder": [],
+            "mappings": {
+                "ME_Mapping_h919993f067d4abe885d2515e84690a5": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h919993f067d4abe885d2515e84690a5",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "isDefault",
+                        "propertyKey": "variable_isDefault",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_f8094628ea8c44ad98c5917e8c9ca0de": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f8094628ea8c44ad98c5917e8c9ca0de",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "value",
+                        "propertyKey": "lbEnvironment_value",
+                        "widgetId": "lbEnvironment",
+                        "widgetPath": "this.view.lbEnvironment",
+                        "widgetType": "ListBox",
+                        "dataType": "string",
+                        "itemId": "frmFlowCreation",
+                        "collectionId": "selectedKeyValues",
+                        "widgetKUID": "eeb5663c2c75423fa650a145b1bfb895",
+                        "itemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_fbc24ba9f85f470ca8aa39cfdc170e99": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_fbc24ba9f85f470ca8aa39cfdc170e99",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "propertyKey": "txtFlowDescription_text",
+                        "widgetId": "txtFlowDescription",
+                        "widgetPath": "this.view.txtFlowDescription",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmFlowCreation",
+                        "widgetKUID": "h3833e9d81274cb4829ec0ca3c25286a",
+                        "itemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_de879b66a4374d049ef1a5e102888544": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_de879b66a4374d049ef1a5e102888544",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "value",
+                        "propertyKey": "lbCategory_value",
+                        "widgetId": "lbCategory",
+                        "widgetPath": "this.view.lbCategory",
+                        "widgetType": "ListBox",
+                        "dataType": "string",
+                        "itemId": "frmFlowCreation",
+                        "collectionId": "selectedKeyValues",
+                        "widgetKUID": "c3eee3d1ab8e4dff9749f9cb3ec04370",
+                        "itemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_b0230044146a49e8a764f27406316b44": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b0230044146a49e8a764f27406316b44",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "idNewFlow",
+                        "propertyKey": "variable_idNewFlow",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_h919993f067d4abe885d2515e84690a5", "ME_Mapping_f8094628ea8c44ad98c5917e8c9ca0de", "ME_Mapping_fbc24ba9f85f470ca8aa39cfdc170e99", "ME_Mapping_de879b66a4374d049ef1a5e102888544", "ME_Mapping_b0230044146a49e8a764f27406316b44"],
             "parentId": "_ab3367875b0f484d99539d2182b23334",
             "callbackType": null,
             "enableMappingEditor": true,
             "package": "",
+            "enableNavigationObj": true,
+            "navigationObj": "{\n    \"variable_isDefault\": isDefault,\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"variable_idNewFlow\": idNewFlow,\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnConfirmPopupIsDefaultTrue\"\n    }\n}",
             "isCustomInput": false
         }]
     }

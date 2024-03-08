@@ -15,7 +15,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sea778dcbfbb4c21abc4235521fcacfd",
+    "_skin_": "s6da503a60604c158c61327115b6214d",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -62,6 +62,7 @@
     "displayorientation": 1,
     "enabledforidletimeout": false,
     "id": "frmStepCreation",
+    "ide_postShow": "AS_Form_ae13006052bd45f98d837f87778106e4",
     "info": null,
     "initdone": false,
     "inputaccessoryviewtype": 4,

@@ -1,12 +1,12 @@
 {
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_height_": {
         "type": "string",
-        "value": "86%"
+        "value": "5%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -22,37 +22,41 @@
         0
     ],
     "_percent_": true,
-    "_right_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
+    "_top_": {
+        "type": "string",
+        "value": "27.49%"
+    },
     "_width_": {
         "type": "string",
-        "value": "78.33%"
+        "value": "70%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "54%"
+    },
     "children": [
-        "imgLogo",
-        "lblFlowName",
-        "lblFlowDescription",
-        "lblFlowCategory",
-        "flxFlowInfo",
-        "flxCreateNewStep"
+        "lblTitleABTest",
+        "lblABTest",
+        "lblTitleEnvironment",
+        "lblEnvironment",
+        "lblTitleIsDefaultFlow",
+        "lblIsDefaultFlow"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxContainerStepCreation",
+    "id": "flxFlowInfo",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d2b7edae53ad45f1984b04607a150f66",
+    "kuid": "c1eb2f38f46c45ffa2079c8e28d02fba",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMainContainerStepCreation",
+    "parent": "flxContainerStepCreation",
     "pf": "frmStepCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
