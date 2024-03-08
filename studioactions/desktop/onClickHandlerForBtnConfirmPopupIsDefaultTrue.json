@@ -28,7 +28,7 @@
         }, {
             "id": "ADD_SNIPPET_bd2b46dce413407689046791198ee907",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "var currentDate = new Date();\n\n// Ottengo i componenti della data (giorno, mese, anno)\nvar day = currentDate.getDate();\nvar month = currentDate.getMonth() + 1; // I mesi partono da 0 (gennaio) quindi aggiungo 1\nvar year = currentDate.getFullYear();\n\n// Formatta la data come stringa nel formato \"YYYY-MM-DD\"\nformattedDate = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\nvoltmx.print(\"### DATA: \" + formattedDate); // Stampo la data formattata\n\nvoltmx.print(\"### SWITCH 1: \" + this.view.swIsDefaultFlow.selectedIndex);\nvoltmx.print(\"### SWitch 2: \" + this.view.swIsSupernova.selectedIndex);",
+            "codeSnippet": "var currentDate = new Date();\n\n// Ottengo i componenti della data (giorno, mese, anno)\nvar day = currentDate.getDate();\nvar month = currentDate.getMonth() + 1; // I mesi partono da 0 (gennaio) quindi aggiungo 1\nvar year = currentDate.getFullYear();\n\n// Formatta la data come stringa nel formato \"YYYY-MM-DD\"\nformattedDate = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\nvoltmx.print(\"### DATA: \" + formattedDate); // Stampo la data formattata\n",
             "parentId": null,
             "callbackType": null
         }, {
@@ -189,32 +189,6 @@
                     "target": {
                         "type": "Services",
                         "propertyName": "channel_id",
-                        "dataType": "string",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "FLOW_create",
-                            "operationid": "121128"
-                        }
-                    }
-                },
-                "ME_Mapping_cc3a90a4cef64374a4e6fc3dd46a1fce": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_cc3a90a4cef64374a4e6fc3dd46a1fce",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "gblFlowStatus",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Services",
-                        "propertyName": "status",
                         "dataType": "string",
                         "forkedPlatform": "all",
                         "serviceconfig": {
@@ -423,9 +397,33 @@
                             "operationid": "121128"
                         }
                     }
+                },
+                "ME_Mapping_a87d9865b0744e42abd523925b1f5635": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a87d9865b0744e42abd523925b1f5635",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "status",
+                        "dataType": "string",
+                        "expression": "\"Draft\"",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_iaffcc88a9eb4d47a1a40282db0abed7", "ME_Mapping_e23c2026bb3f494c84d6f1d3fb61cd95", "ME_Mapping_dfec04fe0e2d47aeaeaf203b378950da", "ME_Mapping_cc3a90a4cef64374a4e6fc3dd46a1fce", "ME_Mapping_b34d35190eb743ea8f07ce1367430545", "ME_Mapping_cf95aa0b707741a6b6509174c19515cf", "ME_Mapping_a34b3630d78f4fe6a8e704827813b482", "ME_Mapping_i480ad06eeda49bc895011866fbf13ee", "ME_Mapping_ibc5ebb56d3141b7a9673dd41ee67241", "ME_Mapping_a8d5892c4638419295cf5de71e1a10c6", "ME_Mapping_i74356b523d04abba3eb3ab917d7acc4"],
+            "mappingsOrder": ["ME_Mapping_iaffcc88a9eb4d47a1a40282db0abed7", "ME_Mapping_e23c2026bb3f494c84d6f1d3fb61cd95", "ME_Mapping_dfec04fe0e2d47aeaeaf203b378950da", "ME_Mapping_b34d35190eb743ea8f07ce1367430545", "ME_Mapping_cf95aa0b707741a6b6509174c19515cf", "ME_Mapping_a34b3630d78f4fe6a8e704827813b482", "ME_Mapping_i480ad06eeda49bc895011866fbf13ee", "ME_Mapping_ibc5ebb56d3141b7a9673dd41ee67241", "ME_Mapping_a8d5892c4638419295cf5de71e1a10c6", "ME_Mapping_i74356b523d04abba3eb3ab917d7acc4", "ME_Mapping_a87d9865b0744e42abd523925b1f5635"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -489,6 +487,19 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
+            "id": "NAVIGATE_TO_FORM__e674c7cb6e21424a89032173b9f925ed",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmStepCreation",
+            "formKUID": "j27b7970c694429db6312f3b27f7428e",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_b50ad2c557a04c2db4c6802f17f3a755",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
             "id": "SHOW_ALERT_eb95ef4029c24d168306fcc3f1c39ca0",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_INFO",
@@ -504,6 +515,19 @@
             "alertMessagei18n": null,
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
+        }, {
+            "id": "NAVIGATE_TO_FORM__d63d7001c0c94f699952b25895034080",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmStepCreation",
+            "formKUID": "j27b7970c694429db6312f3b27f7428e",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_ab3367875b0f484d99539d2182b23334",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
         }]
     }
 }

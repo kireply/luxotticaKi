@@ -554,6 +554,19 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
+            "id": "NAVIGATE_TO_FORM__c7d014db6dcc4c21a983b2b63994632a",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmStepCreation",
+            "formKUID": "j27b7970c694429db6312f3b27f7428e",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_j2da671d6e554fb79c3ba7db92e74562",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
             "id": "SHOW_ALERT_a9d78f8f6c684e9b9a2a335313c9e9f8",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_INFO",
@@ -569,6 +582,19 @@
             "alertMessagei18n": null,
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
+        }, {
+            "id": "NAVIGATE_TO_FORM__j0a5af54bda8404e856780e9c7d0be00",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmStepCreation",
+            "formKUID": "j27b7970c694429db6312f3b27f7428e",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_b2f523cef84040e090c87877eb5cfebb",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
         }, {
             "id": "ADD_SNIPPET_edefbd2510fb498b85d34842058f657d",
             "type": "ADD_SNIPPET",
