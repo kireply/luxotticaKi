@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "30%"
+        "value": "45%"
     },
     "_left_": {
         "type": "string",
-        "value": "0"
+        "value": "88%"
     },
     "_margin_": [
         0,
@@ -22,44 +22,36 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "se11329cf9c64939aebfe702dbf3994c",
+    "_skin_": "sfc7a0028a874c3dad7fa68057f1ec3f",
     "_top_": {
         "type": "string",
-        "value": "50%"
+        "value": "48%"
     },
     "_width_": {
         "type": "string",
-        "value": "35%"
+        "value": "4%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "centerx": {
+    "centery": {
         "type": "string",
         "value": "50%"
     },
     "children": [
-        "imgNewStep",
-        "lblStepCreationBlack",
-        "lblStepCreationWhite"
+        "imgPublish"
     ],
     "clipbounds": false,
     "containerweight": 100,
-    "desktopweb": {
-        "psp": {
-            "ide_onHover": "AS_FlexContainer_e882fb5122cc4083ab672ebc46c4647c"
-        }
-    },
     "enablescrolling": true,
-    "id": "flxCreateNewStep",
-    "ide_onClick": "AS_FlexContainer_ff1a82b918a040d2a74712cc03cde5b6",
+    "id": "flxPublish",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "b4be694452aa4ffbb258331d830fd7ce",
+    "kuid": "ee91a535bac14a4a938b5b1e0a661120",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxContainerStepCreation",
+    "parent": "flxContainerHeader",
     "pf": "frmStepCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
@@ -67,5 +59,6 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 1
 }

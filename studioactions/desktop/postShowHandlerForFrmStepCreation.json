@@ -74,7 +74,7 @@
         }, {
             "id": "ADD_SNIPPET_cc696ae95a9448ee8edd6e50169cb1ef",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "if (this.view.lblIsDefaultFlow.text === \"true\") {\n  this.view.lblIsDefaultFlow.text = \"Yes\";\n} else {\n  this.view.lblIsDefaultFlow.text = \"No\";\n}\n\nvar id = parseInt(this.view.lblFlowName.text);\n  if (id < 10) {\n    id = \"0000\" + id;\n  } else if (id < 100 && id >= 10) {\n    id = \"000\" + id;\n  } else if (id < 1000 && id >= 100) {\n    id = \"00\" + id;\n  } else if (id < 10000 && id >= 1000) {\n    id = \"0\" + id;\n  }\n\nthis.view.lblFlowName.text = \"#\" + gblChannelId + \"_\" + this.view.lblFlowCategory.text.substring(0, 3).toUpperCase() + \"_\" + id;  ",
+            "codeSnippet": "if (this.view.lblIsDefaultFlow.text === \"true\") {\n  this.view.lblIsDefaultFlow.text = \"Yes\";\n} else {\n  this.view.lblIsDefaultFlow.text = \"No\";\n}\n\ngblFlowId = parseInt(this.view.lblFlowName.text);\n\nvar id = parseInt(this.view.lblFlowName.text);\n  if (id < 10) {\n    id = \"0000\" + id;\n  } else if (id < 100 && id >= 10) {\n    id = \"000\" + id;\n  } else if (id < 1000 && id >= 100) {\n    id = \"00\" + id;\n  } else if (id < 10000 && id >= 1000) {\n    id = \"0\" + id;\n  }\n\nthis.view.lblFlowName.text = \"#\" + gblChannelId + \"_\" + this.view.lblFlowCategory.text.substring(0, 3).toUpperCase() + \"_\" + id;  \n\ngblFlowName = this.view.lblFlowName.text\n\nvoltmx.print(\"### global flow ID: \" + gblFlowId);\nvoltmx.print(\"### global flow Name: \" + gblFlowName);",
             "parentId": null,
             "callbackType": null
         }, {

@@ -1,0 +1,60 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizSwitch",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "6.50%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "88%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_right_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_skin_": "s651c8b6c2924a32be3cf51c99fe123e",
+    "_top_": {
+        "type": "string",
+        "value": "16%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "6%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "id": "swHasGreyout",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kiosk": {
+        "render": false
+    },
+    "kuid": "g68adb38b42a4f8fbc85d850357ab886",
+    "leftsidetext": " ",
+    "name": "kony.ui.Switch",
+    "osPlatform": "desktopweb",
+    "osVersion": "iOS7",
+    "parent": "flxAutoproceedTrue",
+    "pf": "frmStepCreation",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "rightsidetext": " ",
+    "selectedindex": 1,
+    "wType": "Switch",
+    "widgetalignment": 5,
+    "zindex": 1
+}

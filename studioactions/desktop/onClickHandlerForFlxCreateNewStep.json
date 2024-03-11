@@ -1,0 +1,25 @@
+{
+    "AS_FlexContainer_ff1a82b918a040d2a74712cc03cde5b6": {
+        "id": "AS_FlexContainer_ff1a82b918a040d2a74712cc03cde5b6",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForFlxCreateNewStep",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmStepCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j27b7970c694429db6312f3b27f7428e"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_j83fc97b9e6a4638a8675a19321d4acd",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxBlur.setVisibility(true);\nthis.view.flxPopupNewStep.setVisibility(true);",
+            "parentId": null
+        }]
+    }
+}

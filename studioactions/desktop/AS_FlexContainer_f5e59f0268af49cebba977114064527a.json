@@ -1,0 +1,87 @@
+{
+    "AS_FlexContainer_f5e59f0268af49cebba977114064527a": {
+        "id": "AS_FlexContainer_f5e59f0268af49cebba977114064527a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "frmStepCreation",
+            "type": "forms",
+            "platform": null,
+            "KUID": "j27b7970c694429db6312f3b27f7428e"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "TRANSFORM_ACTION_NEW_de12d0e0870748a2bf0e6aad5eee6f73",
+            "type": "TRANSFORM_ACTION_NEW",
+            "itemType": "FORM",
+            "itemId": "frmStepCreation",
+            "itemKUID": "j27b7970c694429db6312f3b27f7428e",
+            "widgetKUID": "be989de3d82345afb7ec2fde5bc3dce3",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "top": "20",
+                "left": "20",
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "width": "",
+                "height": "",
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "250",
+                "delay": "0",
+                "iterationCount": "1"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "250"
+            },
+            "start": "Immediately",
+            "parentAnimation": "STYLE_ACTION_b30a40ca146a4f59830a95c536d41ebf",
+            "animationId": "TRANSFORM_ACTION_NEW_de12d0e0870748a2bf0e6aad5eee6f73",
+            "displayAnimationId": "TRANSFORM_ACTION_NEW_de12d0e0870748a2bf0e6aad5eee6f73",
+            "forkedPlatform": "all"
+        }, {
+            "id": "STYLE_ACTION_b30a40ca146a4f59830a95c536d41ebf",
+            "type": "STYLE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepCreation",
+            "itemKUID": "j27b7970c694429db6312f3b27f7428e",
+            "widgetKUID": "be989de3d82345afb7ec2fde5bc3dce3",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "backgroundColor": "a61ea600",
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "250",
+                "delay": "0",
+                "iterationCount": "1"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "250"
+            },
+            "start": "Immediately",
+            "parentAnimation": "TRANSFORM_ACTION_NEW_de12d0e0870748a2bf0e6aad5eee6f73",
+            "animationId": "STYLE_ACTION_b30a40ca146a4f59830a95c536d41ebf",
+            "displayAnimationId": "STYLE_ACTION_b30a40ca146a4f59830a95c536d41ebf",
+            "forkedPlatform": "all"
+        }]
+    }
+}

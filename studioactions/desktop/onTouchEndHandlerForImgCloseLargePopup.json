@@ -22,9 +22,9 @@
         "language": "js",
         "eventType": "onTouchEnd",
         "actions": [{
-            "id": "ADD_SNIPPET_d4ef5e0c83de42aaacbc99faa34b9815",
+            "id": "ADD_SNIPPET_i725fb654bb74d4281448b9f0bc954d2",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxPopupEditFlow.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);\ngblEditIcon = false;",
+            "codeSnippet": "this.view.flxBlur.setVisibility(false);\nthis.view.flxPopupNewStep.setVisibility(false);",
             "parentId": null,
             "callbackType": null
         }]

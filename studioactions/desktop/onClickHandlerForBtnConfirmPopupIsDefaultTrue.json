@@ -431,9 +431,33 @@
                             "operationid": "121128"
                         }
                     }
+                },
+                "ME_Mapping_c881b7d404c2490bbb5615a864b3eef5": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_c881b7d404c2490bbb5615a864b3eef5",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "layout_id",
+                        "dataType": "string",
+                        "expression": "\"1\"",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_iaffcc88a9eb4d47a1a40282db0abed7", "ME_Mapping_e23c2026bb3f494c84d6f1d3fb61cd95", "ME_Mapping_dfec04fe0e2d47aeaeaf203b378950da", "ME_Mapping_b34d35190eb743ea8f07ce1367430545", "ME_Mapping_cf95aa0b707741a6b6509174c19515cf", "ME_Mapping_a34b3630d78f4fe6a8e704827813b482", "ME_Mapping_i480ad06eeda49bc895011866fbf13ee", "ME_Mapping_ibc5ebb56d3141b7a9673dd41ee67241", "ME_Mapping_a8d5892c4638419295cf5de71e1a10c6", "ME_Mapping_i74356b523d04abba3eb3ab917d7acc4", "ME_Mapping_a87d9865b0744e42abd523925b1f5635"],
+            "mappingsOrder": ["ME_Mapping_iaffcc88a9eb4d47a1a40282db0abed7", "ME_Mapping_e23c2026bb3f494c84d6f1d3fb61cd95", "ME_Mapping_dfec04fe0e2d47aeaeaf203b378950da", "ME_Mapping_b34d35190eb743ea8f07ce1367430545", "ME_Mapping_cf95aa0b707741a6b6509174c19515cf", "ME_Mapping_a34b3630d78f4fe6a8e704827813b482", "ME_Mapping_i480ad06eeda49bc895011866fbf13ee", "ME_Mapping_ibc5ebb56d3141b7a9673dd41ee67241", "ME_Mapping_a8d5892c4638419295cf5de71e1a10c6", "ME_Mapping_i74356b523d04abba3eb3ab917d7acc4", "ME_Mapping_a87d9865b0744e42abd523925b1f5635", "ME_Mapping_c881b7d404c2490bbb5615a864b3eef5"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",

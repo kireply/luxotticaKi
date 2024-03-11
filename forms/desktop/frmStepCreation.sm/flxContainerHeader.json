@@ -35,7 +35,11 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "formheader"
+        "formheader",
+        "btnPreview",
+        "flxSave",
+        "flxPublish",
+        "flxDelete"
     ],
     "clipbounds": false,
     "containerweight": 100,

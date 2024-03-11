@@ -45,7 +45,9 @@
     "canUpdateUI": true,
     "canvasWidth": 1200,
     "children": [
-        "flxMainContainerStepCreation"
+        "flxMainContainerStepCreation",
+        "flxBlur",
+        "flxPopupNewStep"
     ],
     "containerweight": 100,
     "controllerInfo": {
@@ -53,6 +55,10 @@
             "channel": "desktop",
             "name": "frmStepCreationController"
         }
+    },
+    "currentBreakpoint": {
+        "kuid": "b1",
+        "width": 1366
     },
     "currentLocale": "default",
     "desktopweb": {

@@ -33,8 +33,6 @@
         "type": "string",
         "value": "100%"
     },
-    "android": {},
-    "androidwearos": {},
     "areflexpropsreferenced": false,
     "autogrowmode": 0,
     "canUpdateUI": true,
@@ -259,16 +257,12 @@
             }
         }
     },
-    "desktopweb": {},
     "enablescrolling": true,
     "id": "hamburgermenu",
     "info": null,
-    "ipad": {},
-    "iphone": {},
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kiosk": {},
     "kuid": "h52245ad3edf40f1b76656f8ffa9cf4f",
     "layouttype": 2,
     "masterType": 0,
@@ -281,24 +275,6 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "sourceUserWidget": "d252c589507e44fd8ed2ab19f3f7e081",
-    "spa": {},
-    "spaan": {},
-    "spaandroidtablet": {},
-    "spabb": {},
-    "spaip": {},
-    "spaipad": {},
-    "spamobile": {},
-    "spatablet": {},
-    "spawindowstablet": {},
-    "spawinphone8": {},
-    "tabrcandroid": {},
-    "vizProps": {
-        "hidewidgethierarchy": false
-    },
     "wType": "UserWidgetInstance",
-    "windows10": {},
-    "windows8": {},
-    "winphone10": {},
-    "winphone8": {},
     "zindex": 1
 }
