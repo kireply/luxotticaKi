@@ -13,7 +13,17 @@ define({
 //     };
     this.view.preShow = async () => {
       //try{
-        await this.fetchChannels(); // aspetta che fetchChannels sia completato
+//         await this.fetchChannels(); // aspetta che fetchChannels sia completato
+        if (gblNavigatedFromLogin === true){
+          this.channels = gblChannels;
+          gblNavigatedFromLogin = false;
+        } else {
+          await this.fetchChannels(); // aspetta che fetchChannels sia completato
+        }
+//         var previousForm = voltmx.application.getPreviousForm();
+//         voltmx.print("### PREVIOUS FORM: " + previousForm);
+//         voltmx.print("### GBL CHANNELS: " + JSON.stringify(gblChannels));
+      	
         voltmx.print("### CHANNELS INSIDE ON VIEW: " + JSON.stringify(this.channels));
         this.reloadData();
     };
@@ -101,6 +111,7 @@ define({
             gblChannelLogo = box.logo;
             gblChannelName = box.name;
             gblChannelId = box.id;
+            gblChannelProperties = box.properties_file;
             voltmx.print("### GLOBAL INFO: " + gblChannelName);
             voltmx.print("### GLOBAL LOGO: " + gblChannelLogo);
             var navigationManager = new voltmx.mvc.Navigation("frmFlows");
@@ -110,7 +121,7 @@ define({
       }
       else {
 //        voltmx.print("### INSIDE ELSE");
-       channel.channelLogo = "/add_circle_icon.png";
+       channel.channelLogo = "/plus.png";
        channel.channelInfo = "Add New Channel";
        channel.channelId = index;
        channel.imgInfoVisible = false;

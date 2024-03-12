@@ -4,7 +4,7 @@
     "isForked": true,
     "shadow": {
       "br": 13,
-      "color": "d6d6d6ff",
+      "color": "a1a1a1ff",
       "inner": false,
       "nm": 0,
       "x": 0,
@@ -31,7 +31,7 @@
     "isForked": true,
     "shadow": {
       "br": 13,
-      "color": "d6d6d6ff",
+      "color": "a1a1a1ff",
       "inner": false,
       "nm": 0,
       "x": 0,
@@ -49,7 +49,7 @@
     "isForked": true,
     "shadow": {
       "br": 13,
-      "color": "d6d6d6ff",
+      "color": "a1a1a1ff",
       "inner": false,
       "nm": 0,
       "x": 0,
@@ -61,7 +61,7 @@
     "isForked": true,
     "shadow": {
       "br": 13,
-      "color": "d6d6d6ff",
+      "color": "a1a1a1ff",
       "inner": false,
       "nm": 0,
       "x": 0,
@@ -72,7 +72,7 @@
   "kiosk": {
     "font_name": "None"
   },
-  "kuid": "s80ca86d49c54d3ea9a0e320162af7e9",
+  "kuid": "s2681d5297c34e188a9178f37b3fb4ff",
   "spaan": {
     "bottom_left_border_color": "000000ff",
     "bottom_left_border_style": "plain",
@@ -84,7 +84,7 @@
     "isForked": true,
     "shadow": {
       "br": 13,
-      "color": "d6d6d6ff",
+      "color": "a1a1a1ff",
       "inner": false,
       "nm": 0,
       "x": 0,
@@ -108,7 +108,7 @@
     "isForked": true,
     "shadow": {
       "br": 13,
-      "color": "d6d6d6ff",
+      "color": "a1a1a1ff",
       "inner": false,
       "nm": 0,
       "x": 0,
@@ -132,7 +132,7 @@
     "isForked": true,
     "shadow": {
       "br": 13,
-      "color": "d6d6d6ff",
+      "color": "a1a1a1ff",
       "inner": false,
       "nm": 0,
       "x": 0,
@@ -156,7 +156,7 @@
     "isForked": true,
     "shadow": {
       "br": 13,
-      "color": "d6d6d6ff",
+      "color": "a1a1a1ff",
       "inner": false,
       "nm": 0,
       "x": 0,
@@ -180,7 +180,7 @@
     "isForked": true,
     "shadow": {
       "br": 13,
-      "color": "d6d6d6ff",
+      "color": "a1a1a1ff",
       "inner": false,
       "nm": 0,
       "x": 0,
@@ -204,7 +204,7 @@
     "isForked": true,
     "shadow": {
       "br": 13,
-      "color": "d6d6d6ff",
+      "color": "a1a1a1ff",
       "inner": false,
       "nm": 0,
       "x": 0,
@@ -222,7 +222,7 @@
     "isForked": true,
     "shadow": {
       "br": 13,
-      "color": "d6d6d6ff",
+      "color": "a1a1a1ff",
       "inner": false,
       "nm": 0,
       "x": 0,
