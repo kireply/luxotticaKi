@@ -1,0 +1,21 @@
+{
+    "AS_FlexContainer_c63fa2d100f94ec581728dfc3760c62b": {
+        "id": "AS_FlexContainer_c63fa2d100f94ec581728dfc3760c62b",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onHover_i415126340bb46c78cd45f35acb01176",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if (context.eventType !== \"leave\"){\n  this.view.flxCreateNewStep.backgroundColor = \"000000\";\n  this.view.imgNewStep.src = \"/add_circle_icon_modified.png\";\n  this.view.lblStepCreationBlack.setVisibility(false);\n  this.view.lblStepCreationWhite.setVisibility(true);\n  //this.view.lblStepCreation.backgroundColor = \"ffffff\";\n} else {\n  this.view.flxCreateNewStep.backgroundColor = \"ffffff\";\n  this.view.imgNewStep.src = \"/plus.png\";\n  this.view.lblStepCreationWhite.setVisibility(false);\n  this.view.lblStepCreationBlack.setVisibility(true);\n  //this.view.lblStepCreation.backgroundColor = \"000000\";\n}\n",
+            "disabled": false
+        }]
+    }
+}

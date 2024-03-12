@@ -15,7 +15,7 @@
     ],
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "99.30%"
     },
     "_indicator_": "none",
     "_left_": {
@@ -132,7 +132,7 @@
     "selectedsectionindex": 0,
     "selectionbehavior": "default",
     "separatorcolor": "aaaaaa00",
-    "separatorrequired": true,
+    "separatorrequired": false,
     "separatorthickness": 1,
     "showscrollbars": false,
     "viewtype": "tableview",

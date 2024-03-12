@@ -1,0 +1,25 @@
+{
+    "AS_Form_fc4549be0d7c46c3bb1ad9fb481d3877": {
+        "id": "AS_Form_fc4549be0d7c46c3bb1ad9fb481d3877",
+        "type": "ACTION_SEQUENCE",
+        "name": "onResizedHandlerForFrmFlows",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onResized",
+        "actions": [{
+            "id": "ADD_SNIPPET_f3c6b9e44a3f4cfe824ad9e22ffc6b53",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.channelTemplate.imgLogo.src = gblChannelLogo;\nthis.view.channelTemplate.lblChannelInfo.text = gblChannelName + \" - #\" + gblChannelId;",
+            "parentId": null
+        }]
+    }
+}

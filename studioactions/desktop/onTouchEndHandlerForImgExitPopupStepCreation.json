@@ -1,0 +1,25 @@
+{
+    "AS_Image_a537d1c121c0420fa99f864c66f07508": {
+        "id": "AS_Image_a537d1c121c0420fa99f864c66f07508",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgExitPopupStepCreation",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onTouchEnd_e69aa08da7294549b80d429bebab65b9",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxBlur.setVisibility(false);\nthis.view.flxPopupNewStep.setVisibility(false);",
+            "callbackType": null
+        }]
+    }
+}

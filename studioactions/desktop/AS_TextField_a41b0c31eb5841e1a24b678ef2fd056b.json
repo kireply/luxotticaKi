@@ -1,0 +1,70 @@
+{
+    "AS_TextField_a41b0c31eb5841e1a24b678ef2fd056b": {
+        "id": "AS_TextField_a41b0c31eb5841e1a24b678ef2fd056b",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "contextObj": {
+            "name": "frmStepCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j27b7970c694429db6312f3b27f7428e"
+        },
+        "language": "js",
+        "eventType": "onTextChange",
+        "actions": [{
+            "id": "_g75f2dd4de1c4e5fac697690fc6f33ad",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.txtStepTitle.text",
+                "operator": "!==",
+                "rightValueType": "value",
+                "rightValue": "\"\"",
+                "leftItemKUID": "j27b7970c694429db6312f3b27f7428e",
+                "leftWidgetKUID": "e473d5f04273480fb0306f870505c004"
+            }, {
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.txtStepTitle.text",
+                "operator": "!==",
+                "rightValueType": "value",
+                "rightValue": "undefined",
+                "leftItemKUID": "j27b7970c694429db6312f3b27f7428e",
+                "leftWidgetKUID": "e473d5f04273480fb0306f870505c004"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_a43fce7c35d8469bb9eac61f05a6895b",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_e54787fc413b475a8f92c133298e17b0",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnProceed.setEnabled(false);\nthis.view.btnProceed.opacity = 0.5;\nvoltmx.print(\"### IL TESTO non ok: \" + this.view.txtStepTitle.text);",
+            "parentId": "_a43fce7c35d8469bb9eac61f05a6895b",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_hf96dc81e5534b0db65a22eb6bfa5120",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnProceed.setEnabled(true);\nthis.view.btnProceed.opacity = 1;\nvoltmx.print(\"### IL TESTO ok: \" + this.view.txtStepTitle.text);",
+            "parentId": "_g75f2dd4de1c4e5fac697690fc6f33ad",
+            "callbackType": null
+        }]
+    }
+}

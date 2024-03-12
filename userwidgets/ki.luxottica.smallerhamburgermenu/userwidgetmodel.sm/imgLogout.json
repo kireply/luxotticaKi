@@ -2,9 +2,13 @@
     "@class": "com.kony.gen.viz.model.component.KVizImage2",
     "DNDConfig": null,
     "_base64_": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "4%"
+    },
     "_height_": {
         "type": "string",
-        "value": "40dp"
+        "value": "50dp"
     },
     "_left_": {
         "type": "string",
@@ -24,15 +28,15 @@
     ],
     "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
     "_src_": "logout_true.png",
-    "_top_": {
-        "type": "string",
-        "value": "700dp"
-    },
     "_width_": {
         "type": "string",
         "value": "40dp"
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "id": "imgLogout",
     "imagescalemode": 1,

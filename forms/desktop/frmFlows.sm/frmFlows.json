@@ -97,6 +97,9 @@
     "kuid": "e6a8fc2377784d1595b361cc9412aea7",
     "layouttype": 2,
     "name": "kony.ui.Form2",
+    "nativewin": {
+        "ide_onResized": "AS_Form_fc4549be0d7c46c3bb1ad9fb481d3877"
+    },
     "needappmenu": false,
     "paddinginpixel": false,
     "platform": "desktopweb",

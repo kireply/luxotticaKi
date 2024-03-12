@@ -48,13 +48,37 @@
                 "srcKUID": "dc71668cc16f4695981806296357819d",
                 "wType": "Button"
             },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": "4%"
+                }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
             "height": {
                 "Default": {
                     "type": "string",
-                    "value": "50px"
+                    "value": "50dp"
+                }
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "-20%"
                 }
             },
             "responsiveData": {},
+            "right": {
+                "Default": {
+                    "type": "string",
+                    "value": "0%"
+                }
+            },
             "width": {
                 "Default": {
                     "type": "string",
@@ -74,10 +98,16 @@
             "left": {
                 "Default": {
                     "type": "string",
-                    "value": "80%"
+                    "value": "91%"
                 }
             },
-            "responsiveData": {}
+            "responsiveData": {},
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "15dp"
+                }
+            }
         },
         "imgLogout": {
             "__events__": {},
@@ -85,6 +115,12 @@
                 "kuid": "a5434198806548109d8ce1f5323042fe",
                 "srcKUID": "jaa0c3a1c660400285a65a88671ea804",
                 "wType": "Image"
+            },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": "4%"
+                }
             },
             "centerX": {
                 "Default": {
@@ -121,6 +157,12 @@
                 ]
             },
             "isVisible": true,
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
+                }
+            },
             "responsiveData": {}
         },
         "smallerhamburgermenu": {

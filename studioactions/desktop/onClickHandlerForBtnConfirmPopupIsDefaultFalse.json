@@ -52,6 +52,16 @@
             "parentId": null,
             "callbackType": null
         }, {
+            "id": "ADD_LOCAL_VARIABLE_de2ac693383d4849a4f73fb82329189a",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "idNewFlow",
+            "isGlobal": false,
+            "valuetype": "expression",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "_h9116474ecaf42daa5673c171acdb841",
             "type": "IF_CONDITION",
             "conditions": [{
@@ -152,32 +162,6 @@
                     "target": {
                         "type": "Services",
                         "propertyName": "channel_id",
-                        "dataType": "string",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "FLOW_create",
-                            "operationid": "121128"
-                        }
-                    }
-                },
-                "ME_Mapping_a176491f652846a5ae12dd5fe0d42f30": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_a176491f652846a5ae12dd5fe0d42f30",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "gblFlowStatus",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Services",
-                        "propertyName": "status",
                         "dataType": "string",
                         "forkedPlatform": "all",
                         "serviceconfig": {
@@ -386,9 +370,57 @@
                             "operationid": "121128"
                         }
                     }
+                },
+                "ME_Mapping_e3e99e2ea33f44d5a58faf8b50dc0608": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e3e99e2ea33f44d5a58faf8b50dc0608",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "status",
+                        "dataType": "string",
+                        "expression": "\"Draft\"",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
+                },
+                "ME_Mapping_fe1f13586bf14162aa4de1905e239703": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_fe1f13586bf14162aa4de1905e239703",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "layout_id",
+                        "dataType": "string",
+                        "expression": "\"1\"",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_b0a6c3cb94a54d62b1a4d9242928802f", "ME_Mapping_idfefa4c50f04234b68b40df4bf0fc1b", "ME_Mapping_afb6d143d70b4a25ac17b87bbead11e3", "ME_Mapping_a176491f652846a5ae12dd5fe0d42f30", "ME_Mapping_a47f61bfd69740d28e21ffe397b61636", "ME_Mapping_bbd05200e68a4d9eb70f7db76990dbbb", "ME_Mapping_b47b4780e97e496daffbc355eae31263", "ME_Mapping_j995e1233fe644f6a6a8ad920476193b", "ME_Mapping_ec916977ff9248f2a31e503be9baa2c6", "ME_Mapping_h5f5f695ef5743998d3bfb37befd1629", "ME_Mapping_ad0083e313ca443692c81f4f17460bb3"],
+            "mappingsOrder": ["ME_Mapping_b0a6c3cb94a54d62b1a4d9242928802f", "ME_Mapping_idfefa4c50f04234b68b40df4bf0fc1b", "ME_Mapping_afb6d143d70b4a25ac17b87bbead11e3", "ME_Mapping_a47f61bfd69740d28e21ffe397b61636", "ME_Mapping_bbd05200e68a4d9eb70f7db76990dbbb", "ME_Mapping_b47b4780e97e496daffbc355eae31263", "ME_Mapping_j995e1233fe644f6a6a8ad920476193b", "ME_Mapping_ec916977ff9248f2a31e503be9baa2c6", "ME_Mapping_h5f5f695ef5743998d3bfb37befd1629", "ME_Mapping_ad0083e313ca443692c81f4f17460bb3", "ME_Mapping_e3e99e2ea33f44d5a58faf8b50dc0608", "ME_Mapping_fe1f13586bf14162aa4de1905e239703"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -452,6 +484,19 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
+            "id": "NAVIGATE_TO_FORM__da0c3bedd8644ca0a3dc598ca710fabc",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmFlowCreation",
+            "formKUID": "d569d8ca39af43bea658ee877f5208b9",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_c0ca0b80d0ba452e92a30361746d4a30",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
             "id": "SHOW_ALERT_be433c5f7611451f8388ff00d58bbcda",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_INFO",
@@ -467,6 +512,138 @@
             "alertMessagei18n": null,
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
+        }, {
+            "id": "MODIFY_VARIABLE_ACTION_e70ccbac91664e24ac5444e2197db1b3",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "_ca68ff4608b94d54a230acd57beeb49f",
+            "callbackType": null,
+            "variable": "idNewFlow",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "expression",
+            "modifySet": "FLOW_create.FLOW[0].id",
+            "modifySetType": "string"
+        }, {
+            "id": "NAVIGATE_TO_FORM__c5d95b5e38d345d39635cd1cf688b1f4",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmStepCreation",
+            "formKUID": "j27b7970c694429db6312f3b27f7428e",
+            "projectName": "luxotticaKi",
+            "mappings": {
+                "ME_Mapping_j477ae4ec7104c6a972095142159be72": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_j477ae4ec7104c6a972095142159be72",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "isDefault",
+                        "propertyKey": "variable_isDefault",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_jbedbd2beac546ad80ab593168cad623": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_jbedbd2beac546ad80ab593168cad623",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "value",
+                        "propertyKey": "lbEnvironment_value",
+                        "widgetId": "lbEnvironment",
+                        "widgetPath": "this.view.lbEnvironment",
+                        "widgetType": "ListBox",
+                        "dataType": "string",
+                        "itemId": "frmFlowCreation",
+                        "collectionId": "selectedKeyValues",
+                        "widgetKUID": "eeb5663c2c75423fa650a145b1bfb895",
+                        "itemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_da020bd3799a4effbc77ddeead9868e2": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_da020bd3799a4effbc77ddeead9868e2",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "propertyKey": "txtFlowDescription_text",
+                        "widgetId": "txtFlowDescription",
+                        "widgetPath": "this.view.txtFlowDescription",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmFlowCreation",
+                        "widgetKUID": "h3833e9d81274cb4829ec0ca3c25286a",
+                        "itemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_ffa341181f104d3f80948bd9f70739a9": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ffa341181f104d3f80948bd9f70739a9",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "idNewFlow",
+                        "propertyKey": "variable_idNewFlow",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_j20ffb2e217a4968a8f8e058f78f5014": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_j20ffb2e217a4968a8f8e058f78f5014",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "value",
+                        "propertyKey": "lbCategory_value",
+                        "widgetId": "lbCategory",
+                        "widgetPath": "this.view.lbCategory",
+                        "widgetType": "ListBox",
+                        "dataType": "string",
+                        "itemId": "frmFlowCreation",
+                        "collectionId": "selectedKeyValues",
+                        "widgetKUID": "c3eee3d1ab8e4dff9749f9cb3ec04370",
+                        "itemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_j477ae4ec7104c6a972095142159be72", "ME_Mapping_jbedbd2beac546ad80ab593168cad623", "ME_Mapping_da020bd3799a4effbc77ddeead9868e2", "ME_Mapping_ffa341181f104d3f80948bd9f70739a9", "ME_Mapping_j20ffb2e217a4968a8f8e058f78f5014"],
+            "parentId": "_ca68ff4608b94d54a230acd57beeb49f",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "enableNavigationObj": true,
+            "navigationObj": "{\n    \"variable_isDefault\": isDefault,\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"variable_idNewFlow\": idNewFlow,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "isCustomInput": false
         }, {
             "id": "MODIFY_VARIABLE_ACTION_e90c0093c1e3439887a44f9ec0b22c45",
             "type": "MODIFY_VARIABLE_ACTION",
