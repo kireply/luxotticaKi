@@ -37,7 +37,7 @@
     "children": [
         "flxContainerHeader",
         "flxContainerMenu",
-        "smallerhamburgermenu"
+        "flxContainerSmallerMenu"
     ],
     "clipbounds": false,
     "containerweight": 100,

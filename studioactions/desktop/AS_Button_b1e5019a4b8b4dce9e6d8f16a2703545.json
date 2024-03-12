@@ -207,7 +207,7 @@
         }, {
             "id": "ADD_SNIPPET_a020aa8c17a245ca9b4757c7931362dc",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);",
+            "codeSnippet": "// this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\nself.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);",
             "parentId": "IF_CONDITION_ide_onClick_g8ee8f550ddd4132ae6787dddb6f0beb",
             "callbackType": null
         }, {
@@ -261,7 +261,7 @@
         }, {
             "id": "ADD_SNIPPET_b52e2c38fe0f4d5092a10bdfa6b5ced8",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);",
+            "codeSnippet": "// this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\nself.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);",
             "parentId": "ELSE_CONDITION_ide_onClick_d260f5b1817646b39c8350cacceb7ea3",
             "callbackType": null
         }]

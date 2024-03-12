@@ -1,6 +1,6 @@
 {
-    "AS_Button_ie32af34c22e44cda970993d47ad4587": {
-        "id": "AS_Button_ie32af34c22e44cda970993d47ad4587",
+    "AS_Button_f4c07130d878420996b5dbb14200358e": {
+        "id": "AS_Button_f4c07130d878420996b5dbb14200358e",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
@@ -15,9 +15,9 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "ADD_SNIPPET_e450a6fca35d410687b56097eb43bb08",
+            "id": "ADD_SNIPPET_c9f50a1750f94532bf383d3051ab2332",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// this.view.hamburgermenu.setVisibility(false);\n// this.view.smallerhamburgermenu.setVisibility(true);\n\nthis.view.flxContainerMenu.setVisibility(false);\nthis.view.flxContainerSmallerMenu.setVisibility(true);",
+            "codeSnippet": "this.view.flxContainerSmallerMenu.setVisibility(false);\nthis.view.flxContainerMenu.setVisibility(true);",
             "parentId": null
         }]
     }
