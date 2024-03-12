@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "65%"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
-        "value": "0"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -22,48 +22,39 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sc1daa0d82554341a381bf79b8ce645e",
+    "_skin_": "sa1c3035bfc24f758dc00b3f95748a56",
     "_top_": {
         "type": "string",
-        "value": "0"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "40%"
+        "value": "100%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "children": [
-        "flxContainerNewPopup"
+        "smallerhamburgermenu"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxPopupNewStep",
+    "id": "flxContainerSmallerMenu",
     "info": null,
     "iscustomlayout": false,
-    "ismodalcontainer": true,
+    "ismodalcontainer": false,
     "isvisible": false,
-    "kuid": "g8c7d4bd47164358aa84ad29e2bd62de",
+    "kuid": "bc735d24a75f4efeaf0fc3e9347e6628",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "frmStepCreation",
-    "pf": "frmStepCreation",
+    "parent": "flxMainContainerStepComposition",
+    "pf": "frmStepComposition",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1,
-    "zindex": 2
+    "widgetalignment": 1
 }

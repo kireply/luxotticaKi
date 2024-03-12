@@ -483,6 +483,19 @@
             "alertMessagei18n": null,
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
+        }, {
+            "id": "NAVIGATE_TO_FORM__e9dc5080395c465ca7a6d544bfaf029c",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmStepComposition",
+            "formKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "SHOW_ALERT_a7f81e02285c4d4a92f94fa24e7cb499",
+            "callbackType": "True",
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
         }]
     }
 }

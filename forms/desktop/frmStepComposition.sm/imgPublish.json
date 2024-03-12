@@ -4,7 +4,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "5%"
+        "value": "60%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -18,36 +22,40 @@
         0,
         0
     ],
-    "_right_": {
-        "type": "string",
-        "value": "3%"
-    },
     "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
-    "_src_": "close.png",
+    "_src_": "activate.png",
     "_top_": {
         "type": "string",
-        "value": "1%"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "5%"
+        "value": "60%"
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
-    "id": "imgExitLargePopup",
-    "ide_onTouchEnd": "AS_Image_c8bdbe5ab65e4bc0bc3071df13dd468d",
+    "id": "imgPublish",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "h3e2e0fa50ac4b5dbd0137227b635c6c",
+    "kuid": "icc9f588bb2844c3ab90adfef21509b3",
     "name": "kony.ui.Image2",
-    "parent": "flxPopupNewStep",
-    "pf": "frmStepCreation",
+    "parent": "flxPublish",
+    "pf": "frmStepComposition",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "srcType": 1,
     "wType": "Image",
-    "widgetalignment": 5
+    "widgetalignment": 5,
+    "zindex": 1
 }

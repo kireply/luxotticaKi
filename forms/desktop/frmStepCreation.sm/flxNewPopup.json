@@ -43,6 +43,7 @@
         "value": "50%"
     },
     "children": [
+        "imgExitPopupStepCreation",
         "lblNewStep",
         "lblStepTitle",
         "txtStepTitle",
