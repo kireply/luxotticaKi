@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_jdc919a999c54ee08e4157b31f26c5c7",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.channelTemplate.imgLogo.src = gblChannelLogo;\nthis.view.channelTemplate.lblChannelInfo.text = gblChannelName + \" - #\" + gblChannelId;\n\nvoltmx.print(\"### gblChannelId: \" + gblChannelId);\nvoltmx.print(\"### gblChannelName: \" + gblChannelName);\n",
+            "codeSnippet": "// this.view.channelTemplate.imgLogo.src = gblChannelLogo;\n// this.view.channelTemplate.lblChannelInfo.text = gblChannelName + \" - #\" + gblChannelId;\n\n\nthis.view.channelTemplatewithContract.channelLogo = gblChannelLogo;\nthis.view.channelTemplatewithContract.channelInfo = gblChannelName + \" - #\" + gblChannelId;\n\n\nvoltmx.print(\"### gblChannelId: \" + gblChannelId);\nvoltmx.print(\"### gblChannelName: \" + gblChannelName);\n",
             "parentId": null
         }, {
             "id": "ADD_SNIPPET_b78bdb154d4e4888b653bf0d2094cc1e",

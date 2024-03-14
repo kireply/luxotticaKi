@@ -38,7 +38,9 @@
         "flxContainerHeader",
         "flxContainerMenu",
         "flxContainerSmallerMenu",
-        "flxContainerStepCreation"
+        "flxContainerStepCreation",
+        "flxComponentsSide",
+        "flxSettingsSide"
     ],
     "clipbounds": false,
     "containerweight": 100,

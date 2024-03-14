@@ -1,0 +1,226 @@
+{
+    "AS_FlexContainer_ff4a80c6dd8c4ed7a9a07fdc8d015268": {
+        "id": "AS_FlexContainer_ff4a80c6dd8c4ed7a9a07fdc8d015268",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForRightSideStep",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_d706c50d5c1e45a19e99689cbcbb2331",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "right_width",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_c2a4c5e2594849308b8451ee4d26d83f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### ON CLICK RIGHT\");\nvoltmx.print(\"### WIDTH: \" + this.view.flxRightSide.width);\n\nright_width = parseInt(this.view.flxRightSide.width, 10); // 10 è la base numerica (decimale in questo caso)\n\n\nvoltmx.print(\"### NEW WIDTH: \" + right_width);\n",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "_g55a23df86e148aca34fae8a36d7e072",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "right_width",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "48"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_d63e407c7c1041ee8164c9852af75fbd",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### LEFT WIDTH: \" + self.view.flxLeftSide.width);\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(false);\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.setEnabled(false);",
+            "parentId": "_g55a23df86e148aca34fae8a36d7e072",
+            "callbackType": null
+        }, {
+            "id": "_fe73a8016d034b9fa2152732344c4d41",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxRightSide",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "c4fef085b1b0464f89985709475aa8b0",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "width": "48%",
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "250",
+                "delay": "0",
+                "iterationCount": "1"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "250"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_b6a5399d4d51452cb85ae83f3813fba4",
+            "animationId": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
+            "displayAnimationId": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
+            "forkedPlatform": "all",
+            "parentId": "_fe73a8016d034b9fa2152732344c4d41",
+            "callbackType": null,
+            "widgetPath": "this.view.flxRightSide"
+        }, {
+            "id": "SCALE_ACTION_de6b47ad6de543ba8f6596aa75e41bee",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxLeftSide",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "ef32f1f4c3c04df9bf584b0dbdd318fe",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "width": "48%",
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "250",
+                "delay": "0",
+                "iterationCount": "1"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "250"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
+            "animationId": "SCALE_ACTION_de6b47ad6de543ba8f6596aa75e41bee",
+            "displayAnimationId": "SCALE_ACTION_de6b47ad6de543ba8f6596aa75e41bee",
+            "forkedPlatform": "all",
+            "parentId": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
+            "callbackType": "Callback",
+            "widgetPath": "this.view.flxLeftSide"
+        }, {
+            "id": "ADD_SNIPPET_h92c6748836c455099250a4457824e13",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.ComponentsSide.segComponentsSideConfigurableContent.setData(gblConfigurableComponentsTemplates);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(gblSimpleComponentsTemplates);\n",
+            "parentId": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
+            "callbackType": "Callback"
+        }, {
+            "id": "ADD_SNIPPET_h1266a5463e84aaca868b4007e1da299",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### LEFT WIDTH: \" + self.view.flxLeftSide.width);\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(true);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(true);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(true);\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.setEnabled(true);",
+            "parentId": "SCALE_ACTION_de6b47ad6de543ba8f6596aa75e41bee",
+            "callbackType": "Callback"
+        }, {
+            "id": "SCALE_ACTION_b6a5399d4d51452cb85ae83f3813fba4",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxLeftSide",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "ef32f1f4c3c04df9bf584b0dbdd318fe",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "width": "16%",
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "250",
+                "delay": "0",
+                "iterationCount": "1"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "250"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
+            "animationId": "SCALE_ACTION_b6a5399d4d51452cb85ae83f3813fba4",
+            "displayAnimationId": "SCALE_ACTION_b6a5399d4d51452cb85ae83f3813fba4",
+            "forkedPlatform": "all",
+            "parentId": "_g55a23df86e148aca34fae8a36d7e072",
+            "callbackType": null,
+            "widgetPath": "this.view.flxLeftSide"
+        }, {
+            "id": "SCALE_ACTION_a5ee269f99014d2494228066a9e9fc03",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxRightSide",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "c4fef085b1b0464f89985709475aa8b0",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "width": "80%",
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "250",
+                "delay": "0",
+                "iterationCount": "1"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "250"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_b6a5399d4d51452cb85ae83f3813fba4",
+            "animationId": "SCALE_ACTION_a5ee269f99014d2494228066a9e9fc03",
+            "displayAnimationId": "SCALE_ACTION_a5ee269f99014d2494228066a9e9fc03",
+            "forkedPlatform": "all",
+            "parentId": "SCALE_ACTION_b6a5399d4d51452cb85ae83f3813fba4",
+            "callbackType": "Callback",
+            "widgetPath": "this.view.flxRightSide"
+        }, {
+            "id": "ADD_SNIPPET_i6751ba4d24846809c463f419b2753df",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "let filteredSimpleComponents = gblSimpleComponentsTemplates.filter(function(item) {\n  return item.lblLayout !== \"previewSection\";\n});\n\n\nlet filteredConfigurableComponents = gblConfigurableComponentsTemplates.filter(function(item) {\n  return item.lblLayout !== \"previewSection\";\n});\n\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(filteredSimpleComponents);\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setData(filteredConfigurableComponents);",
+            "parentId": "SCALE_ACTION_b6a5399d4d51452cb85ae83f3813fba4",
+            "callbackType": "Callback"
+        }]
+    }
+}

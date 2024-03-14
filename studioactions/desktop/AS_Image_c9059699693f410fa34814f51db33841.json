@@ -1,0 +1,30 @@
+{
+    "AS_Image_c9059699693f410fa34814f51db33841": {
+        "id": "AS_Image_c9059699693f410fa34814f51db33841",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_e96f0f8eb8614c80ae35845943974322",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.ComponentsSide.segComponentsSideConfigurableContent.setVisibility(false);\nthis.view.ComponentsSide.imgConfigurableSectionArrowUp.setVisibility(false);\nthis.view.ComponentsSide.imgConfigurableSectionArrowDown.setVisibility(true);",
+            "parentId": null
+        }]
+    }
+}
