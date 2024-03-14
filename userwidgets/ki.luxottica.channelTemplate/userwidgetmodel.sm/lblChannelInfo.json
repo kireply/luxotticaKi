@@ -5,10 +5,6 @@
         "type": "ref",
         "value": "preferred"
     },
-    "_left_": {
-        "type": "string",
-        "value": "97dp"
-    },
     "_margin_": [
         1,
         1,
@@ -25,7 +21,7 @@
     "_text_": "channelInfo",
     "_top_": {
         "type": "string",
-        "value": "126dp"
+        "value": "70%"
     },
     "_width_": {
         "type": "ref",
@@ -39,8 +35,12 @@
         }
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "47%"
+    },
     "containerweight": 100,
-    "contentalignment": 4,
+    "contentalignment": 5,
     "id": "lblChannelInfo",
     "info": null,
     "ipad": {

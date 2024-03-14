@@ -1,0 +1,25 @@
+{
+    "AS_Form_i2618a846db94b8a92c9b6b7f5005fa4": {
+        "id": "AS_Form_i2618a846db94b8a92c9b6b7f5005fa4",
+        "type": "ACTION_SEQUENCE",
+        "name": "postShowHandlerForFrmLabelManagement",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmLabelManagement",
+            "type": "forms",
+            "platform": null,
+            "KUID": "ea82afa625b648c0b1461a183c73e3f9"
+        },
+        "language": "js",
+        "eventType": "postShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_a6c0a35f149347c69a7245601f34b304",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.channelTemplate.imgLogo.src = gblChannelLogo;\nthis.view.channelTemplate.lblChannelInfo.text = gblChannelName + \" - #\" + gblChannelId;",
+            "parentId": null
+        }]
+    }
+}

@@ -120,6 +120,12 @@
                 "kuid": "a1f839c95ae647c2b001de0769335e55",
                 "srcKUID": "f9c731748ad848e282ba8a45e6acd2ce",
                 "wType": "Label"
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "58%"
+                }
             }
         },
         "lblChannelName": {

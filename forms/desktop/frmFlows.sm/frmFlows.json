@@ -54,7 +54,9 @@
         "flxBlur",
         "flxPopupDuplicateFlowSmall",
         "flxPopupDuplicateFlowLarge",
-        "flxPopupEditFlow"
+        "flxPopupEditFlow",
+        "flxPopupArchiveFlow",
+        "flxPopupActivateFlow"
     ],
     "containerweight": 100,
     "controllerInfo": {

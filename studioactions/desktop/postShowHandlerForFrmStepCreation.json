@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_a768a487df9d4d54863927ea31559b6f",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.imgLogo.src = gblChannelLogo;\nthis.view.lblFlowName.text = gblFlowName;\n",
+            "codeSnippet": "voltmx.print(\"### DENTRO SNIPPET \");\n\n//voltmx.print(\"### gblFlowName: \" + gblFlowName);\n\nthis.view.imgLogo.src = gblChannelLogo;\n//this.view.lblFlowName.text = gblFlowName;",
             "parentId": null
         }, {
             "id": "_a3fae88b1a014c5eaeaf225987d37dd9",
@@ -74,7 +74,7 @@
         }, {
             "id": "ADD_SNIPPET_cc696ae95a9448ee8edd6e50169cb1ef",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "if (this.view.lblIsDefaultFlow.text === \"true\") {\n  this.view.lblIsDefaultFlow.text = \"Yes\";\n} else {\n  this.view.lblIsDefaultFlow.text = \"No\";\n}\n\ngblFlowId = parseInt(this.view.lblFlowName.text);\n\nvar id = parseInt(this.view.lblFlowName.text);\n  if (id < 10) {\n    id = \"0000\" + id;\n  } else if (id < 100 && id >= 10) {\n    id = \"000\" + id;\n  } else if (id < 1000 && id >= 100) {\n    id = \"00\" + id;\n  } else if (id < 10000 && id >= 1000) {\n    id = \"0\" + id;\n  }\n\nthis.view.lblFlowName.text = \"#\" + gblChannelId + \"_\" + this.view.lblFlowCategory.text.substring(0, 3).toUpperCase() + \"_\" + id;  \n\ngblFlowName = this.view.lblFlowName.text;\n\nvoltmx.print(\"### global flow ID: \" + gblFlowId);\nvoltmx.print(\"### global flow Name: \" + gblFlowName);",
+            "codeSnippet": "voltmx.print(\"### DENTRO POSTSHOW STEP CREATION \");\n\nif (this.view.lblIsDefaultFlow.text === \"true\") {\n  this.view.lblIsDefaultFlow.text = \"Yes\";\n} else {\n  this.view.lblIsDefaultFlow.text = \"No\";\n}\n\nvoltmx.print(\"### global flow Name: \" + this.view.lblFlowName.text);\nvoltmx.print(\"### global flow Id: \" + parseInt(this.view.lblFlowName.text));\n\ngblFlowId = parseInt(this.view.lblFlowName.text);\n\nvar id = parseInt(this.view.lblFlowName.text);\n  if (id < 10) {\n    id = \"0000\" + id;\n  } else if (id < 100 && id >= 10) {\n    id = \"000\" + id;\n  } else if (id < 1000 && id >= 100) {\n    id = \"00\" + id;\n  } else if (id < 10000 && id >= 1000) {\n    id = \"0\" + id;\n  }\n\nthis.view.lblFlowName.text = \"#\" + gblChannelId + \"_\" + this.view.lblFlowCategory.text.substring(0, 3).toUpperCase() + \"_\" + id;  \n\ngblFlowName = this.view.lblFlowName.text;\n\nvoltmx.print(\"### global flow ID: \" + gblFlowId);\nvoltmx.print(\"### global flow Name: \" + gblFlowName);",
             "parentId": null,
             "callbackType": null
         }, {
@@ -300,9 +300,62 @@
                         "itemKUID": "j27b7970c694429db6312f3b27f7428e",
                         "forkedPlatform": "all"
                     }
+                },
+                "ME_Mapping_dbbdad7f7dec4f32947f325d4dab87e2": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_dbbdad7f7dec4f32947f325d4dab87e2",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "navigationobject",
+                        "propertyName": "variable_idNewFlow",
+                        "dataType": "string",
+                        "isSkinProperty": false,
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblFlowName",
+                        "widgetPath": "this.view.lblFlowName",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmStepCreation",
+                        "widgetKUID": "bbc96c76061b4ab4a5276173e31c85fa",
+                        "itemKUID": "j27b7970c694429db6312f3b27f7428e",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_bba10635391b47d1a292d1831360ef1e": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_bba10635391b47d1a292d1831360ef1e",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "navigationobject",
+                        "propertyName": "lbCategory_value",
+                        "dataType": "string",
+                        "collectionId": "selectedKeyValues",
+                        "isSkinProperty": false,
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblFlowCategory",
+                        "widgetPath": "this.view.lblFlowCategory",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmStepCreation",
+                        "widgetKUID": "c3dd5ccfb48e4fce8c878f498cf3091b",
+                        "itemKUID": "j27b7970c694429db6312f3b27f7428e",
+                        "forkedPlatform": "all"
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_d075b5cb5bbd489c955062410cdb19dc", "ME_Mapping_c006193687674f4faa6a060e91c26e0d", "ME_Mapping_gcf97aeaee1e47129e1be697a14e19d7"],
+            "mappingsOrder": ["ME_Mapping_d075b5cb5bbd489c955062410cdb19dc", "ME_Mapping_c006193687674f4faa6a060e91c26e0d", "ME_Mapping_gcf97aeaee1e47129e1be697a14e19d7", "ME_Mapping_dbbdad7f7dec4f32947f325d4dab87e2", "ME_Mapping_bba10635391b47d1a292d1831360ef1e"],
             "parentId": "_f7d0a19a2f804edfb7a55dcff2507f8b",
             "callbackType": null,
             "enableMappingEditor": true
@@ -388,9 +441,62 @@
                         "itemKUID": "j27b7970c694429db6312f3b27f7428e",
                         "forkedPlatform": "all"
                     }
+                },
+                "ME_Mapping_h19f0682320743b2a8a54de4561357dc": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h19f0682320743b2a8a54de4561357dc",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "navigationobject",
+                        "propertyName": "variable_idNewFlow",
+                        "dataType": "string",
+                        "isSkinProperty": false,
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblFlowName",
+                        "widgetPath": "this.view.lblFlowName",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmStepCreation",
+                        "widgetKUID": "bbc96c76061b4ab4a5276173e31c85fa",
+                        "itemKUID": "j27b7970c694429db6312f3b27f7428e",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_de6bbdec0a234a72b4c73ab134abd9b6": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_de6bbdec0a234a72b4c73ab134abd9b6",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "navigationobject",
+                        "propertyName": "lbCategory_value",
+                        "dataType": "string",
+                        "collectionId": "selectedKeyValues",
+                        "isSkinProperty": false,
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblFlowCategory",
+                        "widgetPath": "this.view.lblFlowCategory",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmStepCreation",
+                        "widgetKUID": "c3dd5ccfb48e4fce8c878f498cf3091b",
+                        "itemKUID": "j27b7970c694429db6312f3b27f7428e",
+                        "forkedPlatform": "all"
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_ge4181bc36be46c5994dbd67e5eb68f9", "ME_Mapping_cdb5d09e60df43ceaaf360527a616995", "ME_Mapping_fe3bb3f1d63e44928b8a4107662eef7b"],
+            "mappingsOrder": ["ME_Mapping_ge4181bc36be46c5994dbd67e5eb68f9", "ME_Mapping_cdb5d09e60df43ceaaf360527a616995", "ME_Mapping_fe3bb3f1d63e44928b8a4107662eef7b", "ME_Mapping_h19f0682320743b2a8a54de4561357dc", "ME_Mapping_de6bbdec0a234a72b4c73ab134abd9b6"],
             "parentId": "_a3fae88b1a014c5eaeaf225987d37dd9",
             "callbackType": null,
             "enableMappingEditor": true

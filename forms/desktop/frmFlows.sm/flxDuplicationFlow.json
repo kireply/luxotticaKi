@@ -56,7 +56,7 @@
         "lblIsDefaultFlow",
         "lblIsSupernova",
         "lblSelectStepsLayout",
-        "btnProceed",
+        "btnDuplicateFlow",
         "swIsDefaultFlow",
         "swIsSupernova",
         "flxStepsLayout"
