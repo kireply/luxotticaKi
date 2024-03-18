@@ -1,0 +1,24 @@
+{
+    "AS_Segment_a66395e399b84b5b9ad2d2f75ce69ddc": {
+        "id": "AS_Segment_a66395e399b84b5b9ad2d2f75ce69ddc",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "u1e01b86422a4ee8b69a872267f45fd1"
+        },
+        "language": "js",
+        "eventType": "onRowClick",
+        "actions": []
+    }
+}

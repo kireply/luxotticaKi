@@ -47,7 +47,7 @@
         }, {
             "id": "ADD_SNIPPET_d63e407c7c1041ee8164c9852af75fbd",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### LEFT WIDTH: \" + self.view.flxLeftSide.width);\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(false);\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.setEnabled(false);",
+            "codeSnippet": "voltmx.print(\"### LEFT WIDTH: \" + self.view.flxLeftSide.width);\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxSelectedComponent.setVisibility(false);\n\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.setEnabled(false);",
             "parentId": "_g55a23df86e148aca34fae8a36d7e072",
             "callbackType": null
         }, {
@@ -63,6 +63,12 @@
             "parentId": null,
             "callbackType": null,
             "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_i380c15f76ee4e2285ae1e27ac6d3ca0",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### SONO L'ELSE\");\n\n// this.view.settingsSide.flxEditPropertyValue.setVisibility(false);\n// this.view.settingsSide.txt.setVisibility(true);\n\nthis.view.settingsSide.editPropertyValue.setVisibility(false);\nthis.view.settingsSide.editPropertyValue.lblPropertyTitle.text = \"Label\";\nthis.view.settingsSide.editPropertyValue.txtPropertyValue.text = \"Insert a value\";\nthis.view.settingsSide.txt.setVisibility(true);\n",
+            "parentId": "_fe73a8016d034b9fa2152732344c4d41",
+            "callbackType": null
         }, {
             "id": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
             "type": "SCALE_ACTION",
@@ -140,9 +146,15 @@
             "parentId": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
             "callbackType": "Callback"
         }, {
+            "id": "ADD_SNIPPET_d4518de2d18b4d1b9c94bfbcb03d5e4d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.ComponentsSide.segComponentsSideConfigurableContent.setEnabled(false);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setEnabled(false);",
+            "parentId": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
+            "callbackType": "Callback"
+        }, {
             "id": "ADD_SNIPPET_h1266a5463e84aaca868b4007e1da299",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### LEFT WIDTH: \" + self.view.flxLeftSide.width);\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(true);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(true);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(true);\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.setEnabled(true);",
+            "codeSnippet": "voltmx.print(\"### LEFT WIDTH: \" + self.view.flxLeftSide.width);\n\n\nif (gblSelectedComponentLeft === true){\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxSelectedComponent.setVisibility(true);\n} else {\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(true);\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(true);\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(true);\n}\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.setEnabled(true);\n",
             "parentId": "SCALE_ACTION_de6b47ad6de543ba8f6596aa75e41bee",
             "callbackType": "Callback"
         }, {
@@ -219,6 +231,12 @@
             "id": "ADD_SNIPPET_i6751ba4d24846809c463f419b2753df",
             "type": "ADD_SNIPPET",
             "codeSnippet": "let filteredSimpleComponents = gblSimpleComponentsTemplates.filter(function(item) {\n  return item.lblLayout !== \"previewSection\";\n});\n\n\nlet filteredConfigurableComponents = gblConfigurableComponentsTemplates.filter(function(item) {\n  return item.lblLayout !== \"previewSection\";\n});\n\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(filteredSimpleComponents);\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setData(filteredConfigurableComponents);",
+            "parentId": "SCALE_ACTION_b6a5399d4d51452cb85ae83f3813fba4",
+            "callbackType": "Callback"
+        }, {
+            "id": "ADD_SNIPPET_j07b6e4357c64bcb9f3c6de9f942ebde",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.ComponentsSide.segComponentsSideConfigurableContent.setEnabled(true);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setEnabled(true);",
             "parentId": "SCALE_ACTION_b6a5399d4d51452cb85ae83f3813fba4",
             "callbackType": "Callback"
         }]

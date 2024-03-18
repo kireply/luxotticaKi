@@ -39,6 +39,48 @@
     "clipbounds": false,
     "containerweight": 0,
     "dataDiffs": {
+        "editPropertyValue": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "i195c09ae0a84884a0a79ab11feb656e",
+                "srcKUID": "ada481070ee042c78f3d88675c7a2d75",
+                "wType": "UserWidgetInstance"
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "isVisible": false,
+            "responsiveData": {},
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
+                }
+            }
+        },
+        "editPropertyValue.lblPropertyTitle": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ca9f95eadfbe4484978234524133fbc2",
+                "srcKUID": "idc973972fa746d8910b6e6dcb47baaa",
+                "wType": "Label"
+            }
+        },
+        "editPropertyValue.txtPropertyValue": {
+            "__events__": {
+                "desktopweb": {
+                    "ide_onEndEditing": "AS_TextField_ed684d92f81f429e9aa10bff30c19d3f"
+                }
+            },
+            "__info__": {
+                "kuid": "dd8b451e402b44bfadc77f5195422c31",
+                "srcKUID": "h3603132da934b8ea910582c8c40f006",
+                "wType": "TextField"
+            }
+        },
         "flxSettingsSideContent": {
             "__events__": {},
             "__info__": {
@@ -67,6 +109,7 @@
                     "value": "87%"
                 }
             },
+            "layoutType": 4,
             "left": {
                 "Default": {
                     "type": "string",
@@ -215,6 +258,19 @@
                 "kuid": "gf71b2aacf934d6ba4164b7a260cd1d2",
                 "srcKUID": "ccadfc3c26e34c1c9e61e3649f8ac01d",
                 "wType": "TextArea"
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "responsiveData": {},
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
+                }
             }
         }
     },

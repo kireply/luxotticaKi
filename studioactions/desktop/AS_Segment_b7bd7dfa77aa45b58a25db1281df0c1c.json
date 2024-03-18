@@ -1,0 +1,174 @@
+{
+    "AS_Segment_b7bd7dfa77aa45b58a25db1281df0c1c": {
+        "id": "AS_Segment_b7bd7dfa77aa45b58a25db1281df0c1c",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onRowClick",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_g960647d223a4820a63168d4ddc7d096",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "selected_item",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_i9cc739ddcfc4d49890e52dca7351142",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "selected_item_img",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_ab42919c6dcb42d4a1b56c4df934cdcd",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### SELECTED ITEM: \" + JSON.stringify(this.view.ComponentsSide.segComponentsSideSimpleContent.selectedRowItems[0]));\n\n\nselected_item = this.view.ComponentsSide.segComponentsSideSimpleContent.selectedRowItems[0].lblComponentName;\nselected_item_img = this.view.ComponentsSide.segComponentsSideSimpleContent.selectedRowItems[0].imgComponent;",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_cedd0d18430d46b98ac293f7e17b5e18",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_fb2e5cac193b4cf7b65a986bd2b7753d": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_fb2e5cac193b4cf7b65a986bd2b7753d",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "selected_item",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "component_name",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "PROPERTY_TEMPLATE_CustomQuery",
+                            "operationid": "123660"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_fb2e5cac193b4cf7b65a986bd2b7753d"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "PROPERTY_TEMPLATE_CustomQuery",
+                "operationid": "123660"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "disabled": false
+        }, {
+            "id": "_a6406074db5c424a9bc89859765ae47c",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "PROPERTY_TEMPLATE_CustomQuery !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "PROPERTY_TEMPLATE_CustomQuery.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_cedd0d18430d46b98ac293f7e17b5e18",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_e2dfe40657d6425da3ac1765f3f1d374",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_cedd0d18430d46b98ac293f7e17b5e18",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_hd4266764ab3425dbeeac0f083c6a48a",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Error occurred in Foundry layer while fetching properties. OPSTATUS: \"+PROPERTY_TEMPLATE_CustomQuery.opstatus);",
+            "parentId": "_e2dfe40657d6425da3ac1765f3f1d374",
+            "callbackType": null
+        }, {
+            "id": "_ecf128c1c2e64819946442606bbc55d5",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "PROPERTY_TEMPLATE_CustomQuery.records !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "PROPERTY_TEMPLATE_CustomQuery.records.length > 0"
+            }],
+            "parentId": "_a6406074db5c424a9bc89859765ae47c",
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_f0e95f10a6b043ccbd23534027184b83",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "_a6406074db5c424a9bc89859765ae47c",
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_ea60b2d5e5174218a180daa6ccb92acc",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### No property returned.\");",
+            "parentId": "_f0e95f10a6b043ccbd23534027184b83",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_dc904ecac4aa4051a7e3b00f564e1266",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### RESPONSE CUSTOM QUERY: \" + JSON.stringify(PROPERTY_TEMPLATE_CustomQuery.records));\n\n/*\n\n### SELECTED ITEM: {\"imgComponent\":\"https://www.salvatorepumo.it/wp-content/uploads/2024/01/logo-ray-ban-oggi.jpg\",\"lblComponentName\":\"RXC_BRAND_LOGO\",\"lblLayout\":\"previewSection\"}\n### RESPONSE CUSTOM QUERY: [{\"mode\":\"dropdown\",\"component_name\":\"RXC_BRAND_LOGO\",\"name\":\"position\",\"id\":\"60\",\"type\":\"string\",\"required\":\"true\"}]\n\n*/\n\nvar rightSegmentData = [];\nvar leftSegmentData = [];\n\n\nfor (let i = 0; i < PROPERTY_TEMPLATE_CustomQuery.records.length; i++) {\n\n    console.log(PROPERTY_TEMPLATE_CustomQuery.records[i]);\n  \n    if (PROPERTY_TEMPLATE_CustomQuery.records[i].required === 'true'){\n        propertyName = PROPERTY_TEMPLATE_CustomQuery.records[i].name;\n        let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + \": \";\n        let properties = {lblPropertyName: capitalizedName, lblPropertyValue: \"\"}; \n        rightSegmentData.push(properties);\n        console.log(rightSegmentData);\n        self.view.selectedComponent.flxSelectedComponentRight.segmentRight.setData(rightSegmentData);\n    }\n}\n\nlet selected_component_data = {lblComponentName: selected_item, imgComponent: selected_item_img};\nleftSegmentData.push(selected_component_data);\nself.view.selectedComponent.flxSelectedComponentLeft.segmentLeft.setData(leftSegmentData);\n\n\n\n\n//        template_configurable = {imgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].previewImage, lblComponentName: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].displayName, lblLayout: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].layout};\n//        gblConfigurableComponentsTemplates.push(template_configurable);\n//        console.log(gblConfigurableComponentsTemplates);\n//        self.view.ComponentsSide.segComponentsSideConfigurableContent.setData(gblConfigurableComponentsTemplates);\n\n",
+            "parentId": "_ecf128c1c2e64819946442606bbc55d5",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_a1e544cf3beb40b399ffe6bed7569613",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "let left_width = parseInt(self.view.flxLeftRight.flxLeftSide.width, 10);\nlet right_width = parseInt(self.view.flxLeftRight.flxRightSide.width, 10);\n\nif ( left_width > 48){\n  //vuol dire che il pannello di sinistra è aperto\n  self.view.flxSelectedComponent.setVisibility(true);\n  gblSelectedComponentLeft = true;\n  self.view.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(false);\n  self.view.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(false);\n  self.view.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(false);\n}\nif ( right_width > 48){\n  //vuol dire che il pannello di destra è aperto\n  self.view.flxSelectedComponentRight.setVisibility(true);\n  gblSelectedComponentRight = true;\n  self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.imgNoComponentsRight.setVisibility(false);\n  self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.lblNoComponentsRight.setVisibility(false);\n  self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.txtStartPhraseRight.setVisibility(false);\n}\n\n\n",
+            "parentId": "_ecf128c1c2e64819946442606bbc55d5",
+            "callbackType": null
+        }]
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "AS_Segment_gefc116d320f4651a1a8db5695b64003": {
+        "id": "AS_Segment_gefc116d320f4651a1a8db5695b64003",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onRowClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_h37f11a944e146268702aafa9d3b9832",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"###  CONTENUTO: \" + JSON.stringify(this.view.flxSelectedComponent.selectedComponent.flxSelectedComponentRight.segmentRight.data));",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_ab8147a9e3544b49b7b20e3c01c36fe8",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// voltmx.print(\"### SELECTED PROPERTY: \" + JSON.stringify(this.view.selectedComponent.segmentRight.selectedRowItems[0]));\nvoltmx.print(\"###  CONTENUTO SINISTRO: \" + JSON.stringify(this.view.flxSelectedComponent.selectedComponent.flxSelectedComponentRight.segmentRight.data));\n/*\n\n###  CONTENUTO DESTRO: [{\"lblPropertyName\":\"Attribute: \",\"lblPropertyValue\":\"\"},{\"lblPropertyName\":\"NestedComponents: \",\"lblPropertyValue\":\"\"}]\n\n*/\n\nlet left_width = parseInt(self.view.flxLeftRight.flxLeftSide.width, 10);\nedit_data = this.view.flxSelectedComponent.selectedComponent.flxSelectedComponentRight.segmentRight.data;\nconst modifiedPropertyNames = edit_data.map(item => ({\n  lblPropertyTitle: item.lblPropertyName.replace(/: $/, \"\")\n}));\nvoltmx.print(\"### SETTING DATA: \" + JSON.stringify(modifiedPropertyNames));\n\nif ( left_width > 48){\n  //vuol dire che il pannello di destra è aperto\n  this.view.settingsSide.txt.setVisibility(false);\n  this.view.settingsSide.segmentEditPropertyValue.setData(modifiedPropertyNames);\n//   this.view.settingsSide.lblPropertyTitle.text = this.view.selectedComponentRight.segmentRight.selectedRowItems[0].lblPropertyName;\n//   this.view.settingsSide.flxEditPropertyValue.setVisibility(true);\n  this.view.settingsSide.segmentEditPropertyValue.setVisibility(true);\n}\n\n\n",
+            "parentId": null,
+            "disabled": true
+        }, {
+            "id": "ADD_SNIPPET_fc86218f488c465dbf103d8d77dbc7e6",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "let left_width = parseInt(self.view.flxLeftRight.flxLeftSide.width, 10);\n\nif ( left_width > 48){\n  //vuol dire che il pannello di sinistra è aperto\n  this.view.settingsSide.txt.setVisibility(false);\n  this.view.settingsSide.editPropertyValue.lblPropertyTitle.text = this.view.selectedComponent.segmentRight.selectedRowItems[0].lblPropertyName;\n  this.view.settingsSide.editPropertyValue.setVisibility(true);\n}",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

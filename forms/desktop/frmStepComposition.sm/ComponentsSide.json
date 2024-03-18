@@ -288,7 +288,9 @@
             }
         },
         "segComponentsSideConfigurableContent": {
-            "__events__": {},
+            "__events__": {
+                "ide_onRowClick": "AS_Segment_b70fec27712e495b8922b5fd0c2feb30"
+            },
             "__info__": {
                 "kuid": "bbac0d7dfc334380a17d59e3a95bc56b",
                 "srcKUID": "e73a884fdb7e45369d9c4cb0822ca8a7",
@@ -296,7 +298,9 @@
             }
         },
         "segComponentsSideSimpleContent": {
-            "__events__": {},
+            "__events__": {
+                "ide_onRowClick": "AS_Segment_b7bd7dfa77aa45b58a25db1281df0c1c"
+            },
             "__info__": {
                 "kuid": "j5aed49b001c483195a9de8d2a6ec806",
                 "srcKUID": "c29c2bc540ad4e94a09bcc889d29b88b",

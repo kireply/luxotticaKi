@@ -41,7 +41,8 @@
     "children": [
         "imgNoComponentsRight",
         "lblNoComponentsRight",
-        "txtStartPhraseRight"
+        "txtStartPhraseRight",
+        "flxSelectedComponentRight"
     ],
     "clipbounds": false,
     "containerweight": 100,
