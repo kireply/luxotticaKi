@@ -1,0 +1,147 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s004b818566c4cf9be717e6e6354d06f",
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "areflexpropsreferenced": false,
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "clipbounds": false,
+    "containerweight": 0,
+    "dataDiffs": {
+        "flxSelectedComponentLeft": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b3755c2a98064ebbaa5342afd1002494",
+                "srcKUID": "d4b554f113e449c294cd937dbf512f62",
+                "wType": "FlexContainer"
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            }
+        },
+        "flxSelectedComponentRight": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "c53df31b5faf4c14a64a88772bb4a71d",
+                "srcKUID": "ab47ebd9b5dd42f2909cf350e56f0691",
+                "wType": "FlexContainer"
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            }
+        },
+        "segmentLeft": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "c3009e120f474294bca75faa3835a64a",
+                "srcKUID": "e89be6a4123c40b6a62add3253bb69ea",
+                "wType": "Segment"
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "responsiveData": {},
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "100%"
+                }
+            }
+        },
+        "segmentRight": {
+            "__events__": {
+                "ide_onRowClick": "AS_Segment_a75d87e2612e4518890242ebf10ef50c"
+            },
+            "__info__": {
+                "kuid": "je95b3c562514f2a84f45ceca199d9e1",
+                "srcKUID": "d1c39d337a244cf4b9096eacdfdee85e",
+                "wType": "Segment"
+            }
+        },
+        "selectedComponent": {
+            "__events__": {},
+            "__info__": {
+                "isRoot": true,
+                "kuid": "c392264ff30944b38e067130d45299ec",
+                "srcKUID": "f29becbe0f7244b5a6a3884a29095c5d",
+                "wType": "FlexContainer"
+            }
+        }
+    },
+    "enablescrolling": true,
+    "id": "selectedComponentRight",
+    "info": null,
+    "iscustomlayout": false,
+    "isdatareferenced": false,
+    "isvisible": true,
+    "kuid": "c392264ff30944b38e067130d45299ec",
+    "layouttype": 2,
+    "masterType": 0,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "flxSelectedComponentRight",
+    "pf": "frmStepComposition",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "sourceUserWidget": "f29becbe0f7244b5a6a3884a29095c5d",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

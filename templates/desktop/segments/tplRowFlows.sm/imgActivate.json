@@ -44,6 +44,7 @@
     "containerId": true,
     "containerweight": 100,
     "id": "imgActivate",
+    "ide_onTouchEnd": "AS_Image_i2d32670b77e4b9294cca1ff2bdacd6b",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",

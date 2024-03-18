@@ -1,0 +1,34 @@
+{
+    "AS_Image_ca4394f0519d4bc891700a34daa10401": {
+        "id": "AS_Image_ca4394f0519d4bc891700a34daa10401",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgArchive",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_ddb798a6e35a4a8bbce10ba92e3056f5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblArchiveIcon = true;",
+            "parentId": null
+        }]
+    }
+}

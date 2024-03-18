@@ -54,7 +54,9 @@
         "flxBlur",
         "flxPopupDuplicateFlowSmall",
         "flxPopupDuplicateFlowLarge",
-        "flxPopupEditFlow"
+        "flxPopupEditFlow",
+        "flxPopupArchiveFlow",
+        "flxPopupActivateFlow"
     ],
     "containerweight": 100,
     "controllerInfo": {
@@ -65,6 +67,7 @@
     },
     "currentLocale": "default",
     "desktopweb": {
+        "ide_onBreakpointChange": "AS_Form_hebf5757563148029e92dd7e138742ce",
         "needAppMenu": false
     },
     "device": "desktopweb",
@@ -97,9 +100,8 @@
     "kuid": "e6a8fc2377784d1595b361cc9412aea7",
     "layouttype": 2,
     "name": "kony.ui.Form2",
-    "nativewin": {
-        "ide_onResized": "AS_Form_fc4549be0d7c46c3bb1ad9fb481d3877"
-    },
+    "nativemac": {},
+    "nativewin": {},
     "needappmenu": false,
     "paddinginpixel": false,
     "platform": "desktopweb",

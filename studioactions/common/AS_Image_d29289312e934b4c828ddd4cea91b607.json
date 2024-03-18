@@ -1,0 +1,30 @@
+{
+    "AS_Image_d29289312e934b4c828ddd4cea91b607": {
+        "id": "AS_Image_d29289312e934b4c828ddd4cea91b607",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "e212b0bec95a4492b3fa5d8b70017d27"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_d4b1e4740bf342fd8e7da19359475710",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.imgConfigurableSectionArrowUp.setVisibility(false);\nself.view.segComponentsSideConfigurableContent.setVisibility(false);\nself.view.imgConfigurableSectionArrowDown.setVisibility(true);\n",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

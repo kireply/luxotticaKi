@@ -1,0 +1,24 @@
+{
+    "AS_FlexContainer_h13eb235effa435d9f366724a29128fd": {
+        "id": "AS_FlexContainer_h13eb235effa435d9f366724a29128fd",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_a4b1696485374f0ea75365b6f045189e",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// this.view.flxSelectedComponent.selectedComponent.f\n\n",
+            "parentId": null
+        }]
+    }
+}

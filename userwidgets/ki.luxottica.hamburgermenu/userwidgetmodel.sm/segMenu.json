@@ -111,6 +111,7 @@
     "groupcells": false,
     "hasSections": false,
     "id": "segMenu",
+    "ide_onRowClick": "AS_Segment_e648f1ddca0e46b5b5ede50576292380",
     "info": null,
     "ipad": {
         "psp": {
@@ -139,7 +140,7 @@
     "retainflexpositionproperties": false,
     "retainselection": false,
     "rowcounter": 3,
-    "rowfocusskin": "s6e7f07455ec411fbcf9e06217636f94",
+    "rowfocusskin": "sc696b91647a498ca38132117385a0c4",
     "rowskin": "sb33a9540d60480295e259124d56f0d6",
     "rowtemplate": null,
     "screenlevelwidget": false,

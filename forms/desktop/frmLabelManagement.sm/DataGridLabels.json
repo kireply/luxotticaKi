@@ -1,0 +1,190 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTable",
+    "DNDConfig": null,
+    "_data_": [
+        {
+            "col1": "RC 11",
+            "col2": "RC 12",
+            "col3": "RC 13",
+            "col4": "",
+            "col5": ""
+        },
+        {
+            "col1": "RC 21",
+            "col2": "RC 22",
+            "col3": "RC 23",
+            "col4": "",
+            "col5": ""
+        },
+        {
+            "col1": "RC 31",
+            "col2": "RC 32",
+            "col3": "RC 33",
+            "col4": "",
+            "col5": ""
+        },
+        {
+            "col1": "RC 41",
+            "col2": "RC 42",
+            "col3": "RC 43",
+            "col4": "",
+            "col5": ""
+        }
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "101.37%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "canUpdateUI": true,
+    "cellBorder": "1px solid #F4F4F4",
+    "columnheadersconfig": [
+        {
+            "columnContentAlignment": 5,
+            "columnHeaderTemplate": null,
+            "columnHeaderText": "Col 1",
+            "columnHeaderType": "text",
+            "columnID": "col1",
+            "columnOnClick": null,
+            "columnText": "Not Defined",
+            "columnType": "text",
+            "columnWidthInPercentage": 20,
+            "ide_onClick": null,
+            "isColumnSortable": false,
+            "kuid": "fff36a02573c47f9a448d69d82ecec05"
+        },
+        {
+            "columnContentAlignment": 5,
+            "columnHeaderTemplate": null,
+            "columnHeaderText": "Col 2",
+            "columnHeaderType": "text",
+            "columnID": "col2",
+            "columnOnClick": null,
+            "columnText": "Not Defined",
+            "columnType": "text",
+            "columnWidthInPercentage": 20,
+            "ide_onClick": null,
+            "isColumnSortable": false,
+            "kuid": "c53a54c5c58d48808df39a258675999b"
+        },
+        {
+            "columnContentAlignment": 5,
+            "columnHeaderTemplate": null,
+            "columnHeaderText": "Col 3",
+            "columnHeaderType": "text",
+            "columnID": "col3",
+            "columnOnClick": null,
+            "columnText": "Not Defined",
+            "columnType": "text",
+            "columnWidthInPercentage": 20,
+            "ide_onClick": null,
+            "isColumnSortable": false,
+            "kuid": "a5cda7a95be242f5b8a2d7d2d9be6760"
+        },
+        {
+            "columnContentAlignment": 5,
+            "columnHeaderTemplate": null,
+            "columnHeaderText": "Col 4",
+            "columnHeaderType": "text",
+            "columnID": "col4",
+            "columnOnClick": null,
+            "columnText": "Not Defined",
+            "columnType": "text",
+            "columnWidthInPercentage": 20,
+            "ide_onClick": null,
+            "isColumnSortable": false,
+            "kuid": "d11214dba71d428ca8a5041088942ed0"
+        },
+        {
+            "columnContentAlignment": 5,
+            "columnHeaderTemplate": null,
+            "columnHeaderText": "Col 5",
+            "columnHeaderType": "text",
+            "columnID": "col5",
+            "columnOnClick": null,
+            "columnText": "Not Defined",
+            "columnType": "text",
+            "columnWidthInPercentage": 20,
+            "ide_onClick": null,
+            "isColumnSortable": false,
+            "kuid": "da58198e93a64cad809b2591a50147de"
+        }
+    ],
+    "columnids": [
+        "col1",
+        "col2",
+        "col3",
+        "col4",
+        "col5"
+    ],
+    "columntype": [
+        "text",
+        "text",
+        "text",
+        "text",
+        "text"
+    ],
+    "containerweight": 100,
+    "contentalignment": 5,
+    "counter": "34",
+    "crInstance": null,
+    "desktopweb": {
+        "psp": {
+            "dockingHeader": false,
+            "enableScrollBar": 0
+        }
+    },
+    "dockingheader": false,
+    "enablescrollbar": 0,
+    "focusedindex": null,
+    "focuseditem": null,
+    "gridlinestyle": "solid",
+    "headerskin": "s312f20b10a64cdfa2cf3ee08887d454",
+    "id": "DataGridLabels",
+    "info": null,
+    "iscustomlayout": false,
+    "ismultiselect": false,
+    "isvisible": false,
+    "kuid": "b492450939a543eeb8f305f555539e99",
+    "name": "kony.ui.DataGrid",
+    "parent": "flxScrollSegLabels",
+    "pf": "frmLabelManagement",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "rowalternateskin": "s8c391bb9fb94914bf00603e819b232f",
+    "rowcount": 4,
+    "rowfocusskin": "scc50653861447dcae00da696d197e1a",
+    "rownormalskin": "s284a83edec94ab687331d75aeca0e9e",
+    "selectedcellindex": null,
+    "selectedcellitem": null,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditem": null,
+    "selecteditems": null,
+    "showcolumnheaders": true,
+    "wType": "DataGrid",
+    "zindex": 1
+}
