@@ -44,19 +44,15 @@
     "masterdata": [
         [
             "lb1",
-            "Show 10 entries"
+            "Show 5 entries"
         ],
         [
             "lb2",
-            "Active"
+            "Show 10 entries"
         ],
         [
             "lb3",
-            "Archived"
-        ],
-        [
-            "lb4",
-            "Draft"
+            "Show 25 entries"
         ]
     ],
     "name": "kony.ui.ListBox",
@@ -64,8 +60,12 @@
     "pf": "frmLabelManagement",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
+    "selectedkey": "lb1",
     "selectedkeys": null,
-    "selectedkeyvalue": null,
+    "selectedkeyvalue": [
+        "lb1",
+        "Show 5 entries"
+    ],
     "selectedkeyvalues": null,
     "size": 18,
     "viewconfig": {

@@ -41,7 +41,12 @@
         "flxSearchLabel",
         "flxDownloadLabels",
         "flxUploadLabels",
-        "flxScrollDataGridLabels"
+        "flxScrollSegLabels",
+        "flxScrollSegLabels2",
+        "lblPrevious",
+        "btn1",
+        "btn2",
+        "lblNext"
     ],
     "clipbounds": false,
     "containerweight": 100,

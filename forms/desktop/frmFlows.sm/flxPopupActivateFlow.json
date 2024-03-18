@@ -45,7 +45,7 @@
     "children": [
         "imgExitPopupActivateFlow",
         "lblActivateFlow",
-        "lblEnvironmentActivateFlow2",
+        "lblEnvironmentActivateFlow",
         "lbEnvironmentActivateFlow"
     ],
     "clipbounds": false,

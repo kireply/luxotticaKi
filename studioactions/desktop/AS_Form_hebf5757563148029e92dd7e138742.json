@@ -1,0 +1,28 @@
+{
+    "AS_Form_hebf5757563148029e92dd7e138742ce": {
+        "id": "AS_Form_hebf5757563148029e92dd7e138742ce",
+        "type": "ACTION_SEQUENCE",
+        "name": "AS_Form_hebf5757563148029e92dd7e138742",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "breakpoint"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onBreakpointChange",
+        "actions": [{
+            "id": "ADD_SNIPPET_c654f0ef169d46f6ab048a35f8b2418c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### DENTRO onBREAKPOINT\");\nthis.view.channelTemplate.imgLogo.src = gblChannelLogo;\nthis.view.channelTemplate.lblChannelInfo.text = gblChannelName + \" - #\" + gblChannelId;",
+            "parentId": null
+        }]
+    }
+}

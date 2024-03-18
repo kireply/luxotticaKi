@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_f3c6b9e44a3f4cfe824ad9e22ffc6b53",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.channelTemplate.imgLogo.src = gblChannelLogo;\nthis.view.channelTemplate.lblChannelInfo.text = gblChannelName + \" - #\" + gblChannelId;",
+            "codeSnippet": "voltmx.print(\"### DENTRO onRESIZED\");\n//this.view.channelTemplate.imgLogo.src = gblChannelLogo;\n//this.view.channelTemplate.lblChannelInfo.text = gblChannelName + \" - #\" + gblChannelId;",
             "parentId": null
         }]
     }

@@ -1,0 +1,24 @@
+{
+    "AS_Form_b53da784b3a24473a8c5f5d86856007d": {
+        "id": "AS_Form_b53da784b3a24473a8c5f5d86856007d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onRestored",
+        "actions": [{
+            "id": "ADD_SNIPPET_ha14e2cdbe5f4b8ea5f4e394634cdf78",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### DENTRO onRESTORED\");",
+            "parentId": null
+        }]
+    }
+}
