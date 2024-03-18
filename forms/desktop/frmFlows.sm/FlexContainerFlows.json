@@ -38,7 +38,6 @@
         "btnBack",
         "imgArrow",
         "lblListOfFlows",
-        "channelTemplate",
         "btnCreateNewFlow",
         "imgCreateNewFlow",
         "lbEnvironment",
@@ -47,7 +46,8 @@
         "flxHeaderSegFlows",
         "segFlows",
         "txtSearchFlowName",
-        "imgSearchFlowName"
+        "imgSearchFlowName",
+        "channelTemplatewithContract"
     ],
     "clipbounds": false,
     "containerweight": 100,
