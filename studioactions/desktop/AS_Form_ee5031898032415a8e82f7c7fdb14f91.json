@@ -1,0 +1,24 @@
+{
+    "AS_Form_ee5031898032415a8e82f7c7fdb14f91": {
+        "id": "AS_Form_ee5031898032415a8e82f7c7fdb14f91",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onMaximized",
+        "actions": [{
+            "id": "ADD_SNIPPET_f13820863b194079bfc019e63b422109",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### DENTRO onMAXIMIZE\");",
+            "parentId": null
+        }]
+    }
+}

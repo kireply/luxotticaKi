@@ -33,6 +33,10 @@
         "value": "24.73%"
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "id": "imgSimpleSectionArrowUp",
     "imagescalemode": 1,

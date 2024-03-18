@@ -1,0 +1,31 @@
+{
+    "AS_Image_d1df0cacdfce46a29ce3dce4c6d620f3": {
+        "id": "AS_Image_d1df0cacdfce46a29ce3dce4c6d620f3",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgExitPopupArchiveFlow",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_d71bbadee2054516a54be85d25534a3f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblArchiveIcon = false;\n\nthis.view.flxPopupArchiveFlow.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);",
+            "parentId": null
+        }]
+    }
+}

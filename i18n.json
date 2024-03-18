@@ -76,7 +76,12 @@
                 "i18n.Yes.text": "Yes"
             },
             "isCustomLocale": false,
-            "isSelected": true
+            "isSelected": true,
+            "layoutConfig": {
+                "mirrorContentAlignment": false,
+                "mirrorFlexPositionProperties": false,
+                "mirrorFlowHorizontalAlignment": false
+            }
         }
     }
 }

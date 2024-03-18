@@ -1,0 +1,34 @@
+{
+    "AS_Image_i2d32670b77e4b9294cca1ff2bdacd6b": {
+        "id": "AS_Image_i2d32670b77e4b9294cca1ff2bdacd6b",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgActivate",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowFlows",
+            "type": "templates",
+            "platform": "",
+            "KUID": "e1c2aaeef33a425ab23ed07dede6cbfe"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_a867f2c703814953b5689805bebd9857",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblActivateIcon = true;",
+            "parentId": null
+        }]
+    }
+}
