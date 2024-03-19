@@ -7,7 +7,6 @@
             "name": "eventobject"
         }],
         "contextObj": {
-            "name": "frmLabelManagement",
             "type": "forms",
             "platform": "",
             "KUID": "ea82afa625b648c0b1461a183c73e3f9"

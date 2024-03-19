@@ -22,7 +22,7 @@
         0
     ],
     "_placeholder_": "       Search",
-    "_skin_": "s11dd4415758429085db610cfc8bf67d",
+    "_skin_": "s68adc859e1f4a5d9c61e0e3db9ef65b",
     "_text_": "",
     "_top_": {
         "type": "string",
@@ -46,9 +46,8 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "keyboardstyle": "A",
     "keyboardtype": "A",
-    "kuid": "e34def6c8c6a461fa435fb6bd462aa1c",
+    "kuid": "e76c51b55d344d5697765c8f1a58aa3c",
     "mode": "A",
     "name": "kony.ui.TextBox2",
     "parent": "flxSearchLabel",
@@ -60,6 +59,5 @@
     "textinputmode": "A",
     "tooltip": "",
     "viewtype": "default",
-    "wType": "TextField",
-    "zindex": 1
+    "wType": "TextField"
 }

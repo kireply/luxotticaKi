@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "1.8800000000000026%"
+        "value": "1.88%"
     },
     "_margin_": [
         0,
@@ -22,7 +22,7 @@
         0
     ],
     "_placeholder_": "Please Select",
-    "_skin_": "scf7732e4e704ee88be9602cde5542e9",
+    "_skin_": "sf053a9db08d4e37918f8a4eaddd68a7",
     "_top_": {
         "type": "string",
         "value": "31%"
@@ -34,13 +34,14 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
+    "dropdownimage": "listboxarw.png",
     "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
     "groupcells": false,
     "id": "lbShowEntries",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "eab50e7dc9bf46de8d828d93a9959b30",
+    "kuid": "i17c6ff451b947ad9453c502fb1bd620",
     "masterdata": [
         [
             "lb1",
@@ -56,7 +57,7 @@
         ]
     ],
     "name": "kony.ui.ListBox",
-    "parent": "FlexContainerLabel",
+    "parent": "flxContainerLabel",
     "pf": "frmLabelManagement",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
@@ -74,6 +75,5 @@
         }
     },
     "viewtype": 0,
-    "wType": "ListBox",
-    "zindex": 1
+    "wType": "ListBox"
 }

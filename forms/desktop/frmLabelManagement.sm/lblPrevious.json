@@ -25,7 +25,7 @@
         "type": "string",
         "value": "16%"
     },
-    "_skin_": "s8b40b8434194950b037d906921b8e4c",
+    "_skin_": "s07225c4e37f4d739a5bf51f452294e8",
     "_text_": "Previous",
     "_width_": {
         "type": "string",
@@ -40,9 +40,8 @@
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "contentalignment": 4,
+    "contentalignment": 5,
     "id": "lblPrevious",
-    "ide_onTouchEnd": "AS_Label_d302ce96e51448d5810e2369e7d2de41",
     "info": null,
     "ipad": {
         "psp": {
@@ -56,13 +55,12 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a71d23a6a3644047a501a38ef87e7f3d",
+    "kuid": "j136b3759cde4bb5b9ffbe6e91c36daf",
     "name": "kony.ui.Label",
-    "parent": "FlexContainerLabel",
+    "parent": "flxContainerLabel",
     "pf": "frmLabelManagement",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",
-    "wType": "Label",
-    "zindex": 1
+    "wType": "Label"
 }

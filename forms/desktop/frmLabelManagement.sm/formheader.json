@@ -33,8 +33,6 @@
         "type": "string",
         "value": "100%"
     },
-    "android": {},
-    "androidwearos": {},
     "areflexpropsreferenced": false,
     "autogrowmode": 0,
     "canUpdateUI": true,
@@ -44,7 +42,7 @@
         "flxRightIcons": {
             "__events__": {},
             "__info__": {
-                "kuid": "fa72d6e78fed4e12a8a214097581b8f0",
+                "kuid": "b1d19c703b0b41c59266b760b7d8757c",
                 "srcKUID": "e531395b10bb422b84d41ec9195b85bb",
                 "wType": "FlexContainer"
             }
@@ -53,7 +51,7 @@
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "cc9e978014ff402fbf3360711aa71e9a",
+                "kuid": "df2710abf6fa4cf9aa12766ad0b2ba7c",
                 "srcKUID": "ba758399ff27410698c4c05e42566ed8",
                 "wType": "FlexContainer"
             },
@@ -114,7 +112,6 @@
                     "value": ""
                 }
             },
-            "responsiveData": {},
             "right": {
                 "Default": {
                     "type": "string",
@@ -137,81 +134,54 @@
         "imgChat": {
             "__events__": {},
             "__info__": {
-                "kuid": "a8e357b574d7487a90c9f2c8ef6a4a69",
+                "kuid": "b7b1a9f79d714b38843aa46b06c602da",
                 "srcKUID": "ce610084ab8844ddbb0450d4a5defa74",
                 "wType": "Image"
-            },
-            "src": "messenger.png"
+            }
         },
         "imgLogo": {
             "__events__": {},
             "__info__": {
-                "kuid": "e6181e3d347640968a2f9a492dbfbdaa",
+                "kuid": "cfca982705224925adc3d00e0970c911",
                 "srcKUID": "ce7abef35db14993952efc16beeea866",
                 "wType": "Image"
-            },
-            "src": "el_round_logo.png"
+            }
         },
         "imgNotification": {
             "__events__": {},
             "__info__": {
-                "kuid": "aec600c8ff294e9ea00e024dbde5e910",
+                "kuid": "bd9194f87b8a4dd5b0ca1699be381470",
                 "srcKUID": "id85c820b7a245b8b5e286e743059445",
                 "wType": "Image"
-            },
-            "src": "notification.png"
+            }
         },
         "imgProfile": {
             "__events__": {},
             "__info__": {
-                "kuid": "dc98e6393a74467a957104c58fa1c809",
+                "kuid": "i2f75c80391d42d38150314e37374465",
                 "srcKUID": "eba8d9cafd914ce0b4cbfeef2241d96a",
                 "wType": "Image"
-            },
-            "src": "user.png"
+            }
         }
     },
-    "desktopweb": {},
     "enablescrolling": true,
     "id": "formheader",
     "info": null,
-    "ipad": {},
-    "iphone": {},
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kiosk": {},
-    "kuid": "cc9e978014ff402fbf3360711aa71e9a",
+    "kuid": "df2710abf6fa4cf9aa12766ad0b2ba7c",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
     "parent": "flxContainerHeader",
     "pf": "frmLabelManagement",
-    "responsiveData": {},
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
     "sourceUserWidget": "ba758399ff27410698c4c05e42566ed8",
-    "spa": {},
-    "spaan": {},
-    "spaandroidtablet": {},
-    "spabb": {},
-    "spaip": {},
-    "spaipad": {},
-    "spamobile": {},
-    "spatablet": {},
-    "spawindowstablet": {},
-    "spawinphone8": {},
-    "tabrcandroid": {},
-    "vizProps": {
-        "hidewidgethierarchy": false
-    },
     "wType": "UserWidgetInstance",
-    "windows10": {},
-    "windows8": {},
-    "winphone10": {},
-    "winphone8": {},
     "zindex": 1
 }

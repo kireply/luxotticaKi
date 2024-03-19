@@ -7,7 +7,6 @@
             "name": "eventobject"
         }],
         "contextObj": {
-            "name": "frmLabelManagement",
             "type": "forms",
             "platform": null,
             "KUID": "ea82afa625b648c0b1461a183c73e3f9"
@@ -18,8 +17,6 @@
             "id": "_ide_onClick_d42eb938277a43529ab5f6a18048f784",
             "type": "STYLE_ACTION",
             "itemType": "FORM",
-            "itemId": "frmLabelManagement",
-            "widgetId": "btnDownloadLabels",
             "itemKUID": "ea82afa625b648c0b1461a183c73e3f9",
             "widgetKUID": "e7c5617974b14ba9a82755479c71f682",
             "wType": "Button",
@@ -46,8 +43,7 @@
             "displayAnimationId": "STYLE_ACTION_b6e0413654d844c8bc287dcc12d4bd9e",
             "forkedPlatform": "all",
             "callbackType": null,
-            "disabled": true,
-            "widgetPath": "this.view.btnDownloadLabels"
+            "disabled": true
         }, {
             "id": "LOADING_INDICATOR_ide_onClick_d123569fa9764bf6a3a50f6119e6c364",
             "selectedOption": "show",

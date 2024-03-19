@@ -13,7 +13,6 @@
             "name": "rowNumber"
         }],
         "contextObj": {
-            "name": "frmLabelManagement",
             "type": "forms",
             "platform": null,
             "KUID": "ea82afa625b648c0b1461a183c73e3f9"
@@ -46,9 +45,7 @@
         }, {
             "id": "NAVIGATE_TO_FORM__j30b30e98b364b6db3fcd74f94decfd3",
             "type": "NAVIGATE_TO_FORM",
-            "formId": "frmLabelManagement",
             "formKUID": "ea82afa625b648c0b1461a183c73e3f9",
-            "projectName": "luxotticaKi",
             "mappings": {},
             "mappingsOrder": [],
             "enableMappingEditor": true,

@@ -66,7 +66,7 @@
         }, {
             "id": "ADD_SNIPPET_i380c15f76ee4e2285ae1e27ac6d3ca0",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### SONO L'ELSE\");\n\n// this.view.settingsSide.flxEditPropertyValue.setVisibility(false);\n// this.view.settingsSide.txt.setVisibility(true);\n\nthis.view.settingsSide.editPropertyValue.setVisibility(false);\nthis.view.settingsSide.editPropertyValue.lblPropertyTitle.text = \"Label\";\nthis.view.settingsSide.editPropertyValue.txtPropertyValue.text = \"Insert a value\";\nthis.view.settingsSide.txt.setVisibility(true);\n",
+            "codeSnippet": "voltmx.print(\"### SONO L'ELSE\");\n\n// this.view.settingsSide.flxEditPropertyValue.setVisibility(false);\n// this.view.settingsSide.txt.setVisibility(true);\n\nthis.view.settingsSide.editPropertyValue.setVisibility(false);\nthis.view.settingsSide.editPropertyValue.lblPropertyTitle.text = \"Label\";\nthis.view.settingsSide.editPropertyValue.txtPropertyValue.text = \"\";\n// this.view.settingsSide.editPropertyValue.txtPropertyValue.placeholder = \"Insert a value\";\nthis.view.settingsSide.txt.setVisibility(true);\n",
             "parentId": "_fe73a8016d034b9fa2152732344c4d41",
             "callbackType": null
         }, {

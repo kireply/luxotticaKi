@@ -22,7 +22,8 @@
             "id": "ADD_SNIPPET_c654f0ef169d46f6ab048a35f8b2418c",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### DENTRO onBREAKPOINT\");\nthis.view.channelTemplate.imgLogo.src = gblChannelLogo;\nthis.view.channelTemplate.lblChannelInfo.text = gblChannelName + \" - #\" + gblChannelId;",
-            "parentId": null
+            "parentId": null,
+            "disabled": true
         }]
     }
 }

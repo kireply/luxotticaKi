@@ -21,8 +21,8 @@
         0,
         0
     ],
-    "_skin_": "sef2ed23b1de411693558f027937ad59",
-    "_text_": "        Upload Labels",
+    "_skin_": "s2d46b2ad2bb4c82ac5c930c7a507dcf",
+    "_text_": "     Upload Labels",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -40,7 +40,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "je7f681b700a4481856ef56ec832a96f",
+    "kuid": "g6be0ad2ecc247b4be5e42f057bcf6db",
     "name": "kony.ui.Button",
     "parent": "flxUploadLabels",
     "pf": "frmLabelManagement",

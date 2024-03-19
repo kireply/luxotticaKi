@@ -12,7 +12,6 @@
             "id": "_ide_onClick_ee082938949c4d2d9593f3db4f315be0",
             "type": "STYLE_ACTION",
             "itemType": "FORM",
-            "itemId": "frmLabelManagement",
             "itemKUID": "ea82afa625b648c0b1461a183c73e3f9",
             "widgetKUID": "cca2d6687c5a41f197ae04b5d2e4d77b",
             "wType": "Button",
