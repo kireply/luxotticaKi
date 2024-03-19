@@ -2,6 +2,7 @@
     "AS_Form_f0d0d7244cc443bbb201733178c9c051": {
         "id": "AS_Form_f0d0d7244cc443bbb201733178c9c051",
         "type": "ACTION_SEQUENCE",
+        "name": "onPreShowHandlerForFrmListOfFlows",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"

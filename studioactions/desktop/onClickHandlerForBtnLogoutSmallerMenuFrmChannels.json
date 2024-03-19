@@ -2,6 +2,7 @@
     "AS_Button_e8bc225472d749da80f61f2fcdcc031f": {
         "id": "AS_Button_e8bc225472d749da80f61f2fcdcc031f",
         "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnLogoutSmallerMenuFrmChannels",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"

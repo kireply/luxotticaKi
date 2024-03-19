@@ -2,6 +2,7 @@
     "AS_Button_e3c879dd49cd4371b44f6c6dc2d6053a": {
         "id": "AS_Button_e3c879dd49cd4371b44f6c6dc2d6053a",
         "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForButtonSubmitAddUser",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"

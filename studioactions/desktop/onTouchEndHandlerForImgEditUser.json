@@ -2,6 +2,7 @@
     "AS_Image_gff8e3c0e3134f35a537daf4144b31dd": {
         "id": "AS_Image_gff8e3c0e3134f35a537daf4144b31dd",
         "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgEditUser",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"

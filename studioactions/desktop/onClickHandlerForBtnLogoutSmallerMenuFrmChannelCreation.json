@@ -2,6 +2,7 @@
     "AS_Button_g99b356f839d45fd99e7e890d6e45675": {
         "id": "AS_Button_g99b356f839d45fd99e7e890d6e45675",
         "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnLogoutSmallerMenuFrmChannelCreation",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"

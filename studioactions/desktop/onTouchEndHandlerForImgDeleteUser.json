@@ -2,6 +2,7 @@
     "AS_Image_g502943a9d894227b880113422e361e0": {
         "id": "AS_Image_g502943a9d894227b880113422e361e0",
         "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgDeleteUser",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
