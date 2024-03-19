@@ -1,0 +1,33 @@
+{
+    "AS_Image_gff8e3c0e3134f35a537daf4144b31dd": {
+        "id": "AS_Image_gff8e3c0e3134f35a537daf4144b31dd",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgEditUser",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowUserGrid",
+            "type": "templates",
+            "platform": "",
+            "KUID": "f63a9c61bf664ac698bf57c1292899cb"
+        },
+        "language": "js",
+        "actions": [{
+            "id": "ADD_SNIPPET_gc3e663e097d4b5e874776b3ae4b2dde",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### click sulla matita\");\n//var ntf = new voltmx.mvc.Navigation(\"frmEditUser\");\n//ntf.navigate();\n// voltmx.print(\"### row click\");\n",
+            "parentId": null
+        }]
+    }
+}

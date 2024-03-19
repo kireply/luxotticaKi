@@ -1,0 +1,34 @@
+{
+    "AS_Image_db6b0c51fca742328dfe001f9bc2be63": {
+        "id": "AS_Image_db6b0c51fca742328dfe001f9bc2be63",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchStartHandlerForImgInfoChannels",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplChannels",
+            "type": "templates",
+            "platform": "",
+            "KUID": "aba515c415004b8a8053cbb7d8641599"
+        },
+        "language": "js",
+        "eventType": "onTouchStart",
+        "actions": [{
+            "id": "ADD_SNIPPET_dbb31237eda047819d1fc41527f088f8",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "/*\nvoltmx.print(\"### cliccata ICONA INFO MA IN TOUCH START\");\n\nthis.view.flxPopupChannelInfo.setVisibility(true);\n \nthis.view.txtChannelID.setEnabled(false);\nthis.view.lbChannelName.setEnabled(false);\nthis.view.txtChannelLogo.setEnabled(false);\nthis.view.txtChannelProperties.setEnabled(false);\n\nthis.view.flxPopupChannelInfo.txtChannelID.text = channel.lblChannelId.text;\nthis.view.flxPopupChannelInfo.txtChannelLogo.text = channel.imgLogo.src;\nthis.view.flxPopupChannelInfo.txtChannelProperties.text = channel.lblChannelProperties.text;\nthis.view.flxPopupChannelInfo.lbChannelName.masterData = [ [\"lb1\", channel.lblChannelName.text] ];\nthis.view.flxPopupChannelInfo.lbChannelName.selectedKey = \"lb1\";\n \nvoltmx.print(\"### finito con l'autocompletamento IN TOUCH START\");\n*/\n",
+            "parentId": null
+        }]
+    }
+}

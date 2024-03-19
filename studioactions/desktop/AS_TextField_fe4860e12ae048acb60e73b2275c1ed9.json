@@ -1,0 +1,27 @@
+{
+    "AS_TextField_fe4860e12ae048acb60e73b2275c1ed9": {
+        "id": "AS_TextField_fe4860e12ae048acb60e73b2275c1ed9",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onDone",
+        "actions": [{
+            "id": "ADD_SNIPPET_bbb6bc46bb7a4d32b8aa508e0a35503f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// this.view.selectedComponent.segmentRight.selectedRowItems[0].lblPropertyValue.text = \"\";\n\nif (this.view.selectedComponent.segmentRight.selectedRowItems[0].length !== 0){\n  this.view.selectedComponent.segmentRight.selectedRowItems[0].lblPropertyValue.text = this.view.settingsSide.txtPropertyValue.text;\n} else {\n  this.view.selectedComponentRight.segmentRight.selectedRowItems[0].lblPropertyValue.text = this.view.settingsSide.txtPropertyValue.text;\n}\n\n// this.view.settingsSide.lblPropertyTitle.text = this.view.selectedComponent.segmentRight.selectedRowItems[0].lblPropertyName;\n// this.view.settingsSide.flxEditPropertyValue.setVisibility(true);",
+            "parentId": null
+        }]
+    }
+}
