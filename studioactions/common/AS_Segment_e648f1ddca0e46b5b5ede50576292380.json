@@ -1,0 +1,40 @@
+{
+    "AS_Segment_e648f1ddca0e46b5b5ede50576292380": {
+        "id": "AS_Segment_e648f1ddca0e46b5b5ede50576292380",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "u9c48b958b804cb5be55e25f3f6f5dfb"
+        },
+        "language": "js",
+        "eventType": "onRowClick",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_dddffab066a740549b67ebaa11e020c3",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "menuOption",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "disabled": false
+        }, {
+            "id": "ADD_SNIPPET_ed339f95c3324cebbfb62923369144b6",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var menu = this.view.hamburgermenu.segMenu.selectedRowItems[0];\nmenuOption = menu.lblMenu;\nvoltmx.print(\"### menu: \" + menu);\nvoltmx.print(\"### opzione menu: \" + menuOption);\n\nif (menuOption === \"Labels\") {\n        var ntf = new voltmx.mvc.Navigation(\"frmLabelManagement\");\n        ntf.navigate();\n}",
+            "parentId": null,
+            "disabled": false
+        }]
+    }
+}

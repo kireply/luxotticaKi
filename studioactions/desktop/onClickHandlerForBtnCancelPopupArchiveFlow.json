@@ -1,0 +1,25 @@
+{
+    "AS_Button_a50942e68a3547479c63517cb78bd33e": {
+        "id": "AS_Button_a50942e68a3547479c63517cb78bd33e",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnCancelPopupArchiveFlow",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_i07bc1848e5d43aa99ae5e8c5df6f0fe",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblArchiveIcon = false;\n\nthis.view.flxPopupArchiveFlow.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);",
+            "parentId": null
+        }]
+    }
+}

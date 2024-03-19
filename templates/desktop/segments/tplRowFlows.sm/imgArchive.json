@@ -44,6 +44,7 @@
     "containerId": true,
     "containerweight": 100,
     "id": "imgArchive",
+    "ide_onTouchEnd": "AS_Image_ca4394f0519d4bc891700a34daa10401",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",

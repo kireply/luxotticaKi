@@ -192,7 +192,9 @@
             "src": "logout_true.png"
         },
         "segMenu": {
-            "__events__": {},
+            "__events__": {
+                "ide_onRowClick": "AS_Segment_j382c3f219f241c89119b65285b8f47c"
+            },
             "__info__": {
                 "kuid": "b0ddfcf9fd884ef6a5fc55993a4eda9a",
                 "srcKUID": "f6158cc0defe49f9b27229072ca607e4",
