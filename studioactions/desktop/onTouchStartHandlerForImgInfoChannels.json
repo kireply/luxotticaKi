@@ -2,6 +2,7 @@
     "AS_Image_db6b0c51fca742328dfe001f9bc2be63": {
         "id": "AS_Image_db6b0c51fca742328dfe001f9bc2be63",
         "type": "ACTION_SEQUENCE",
+        "name": "onTouchStartHandlerForImgInfoChannels",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"

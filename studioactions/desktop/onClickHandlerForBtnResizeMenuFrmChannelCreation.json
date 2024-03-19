@@ -2,6 +2,7 @@
     "AS_Button_ie32af34c22e44cda970993d47ad4587": {
         "id": "AS_Button_ie32af34c22e44cda970993d47ad4587",
         "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnResizeMenuFrmChannelCreation",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"

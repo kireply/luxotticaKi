@@ -1,21 +1,22 @@
 {
-    "AS_Button_d37992c621634ef4be7fbe7da4df8ed2": {
-        "id": "AS_Button_d37992c621634ef4be7fbe7da4df8ed2",
+    "AS_Button_f4c07130d878420996b5dbb14200358e": {
+        "id": "AS_Button_f4c07130d878420996b5dbb14200358e",
         "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnResizeSmallerMenuFrmChannelCreation",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
         }],
         "contextObj": {
-            "name": "frmChannels",
+            "name": "frmChannelCreation",
             "type": "forms",
             "platform": "",
-            "KUID": "c1e9143f6fef4291a170222e7c044c7c"
+            "KUID": "b995d95be2ee4d2181bb89391aa35ffb"
         },
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "ADD_SNIPPET_c192f6295d514261b8cfe74897fa5682",
+            "id": "ADD_SNIPPET_c9f50a1750f94532bf383d3051ab2332",
             "type": "ADD_SNIPPET",
             "codeSnippet": "this.view.flxContainerSmallerMenu.setVisibility(false);\nthis.view.flxContainerMenu.setVisibility(true);",
             "parentId": null

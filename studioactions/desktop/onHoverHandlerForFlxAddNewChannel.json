@@ -2,6 +2,7 @@
     "AS_FlexContainer_c7181d789f594cb1b7d0af9de086713e": {
         "id": "AS_FlexContainer_c7181d789f594cb1b7d0af9de086713e",
         "type": "ACTION_SEQUENCE",
+        "name": "onHoverHandlerForFlxAddNewChannel",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
