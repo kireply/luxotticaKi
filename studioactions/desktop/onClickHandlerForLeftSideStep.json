@@ -1,0 +1,251 @@
+{
+    "AS_FlexContainer_hf5da01409ce4fdeb8513d4c488b6ebc": {
+        "id": "AS_FlexContainer_hf5da01409ce4fdeb8513d4c488b6ebc",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForLeftSideStep",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_db7e3d27646a401a971fe64e89144214",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "left_width",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_g236dadfce5a472490e58e6cd384ec43",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### ON CLICK LEFT\");\nvoltmx.print(\"### WIDTH: \" + this.view.flxLeftSide.width);\n\nleft_width = parseInt(this.view.flxLeftSide.width, 10); // 10 è la base numerica (decimale in questo caso)\n\n\nvoltmx.print(\"### NEW WIDTH: \" + left_width);",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "_hb7050445e484103a7dc62f229b7536c",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "left_width",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "48"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_ga91b0773ce448f1a6a547703ea61af4",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### SONO L'IF\");",
+            "parentId": "_hb7050445e484103a7dc62f229b7536c",
+            "callbackType": null,
+            "disabled": true
+        }, {
+            "id": "ADD_SNIPPET_b4f3de59b6e649d5bb8570c41c90afef",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### RIGHT WIDTH: \" + self.view.flxRightSide.width);\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.imgNoComponentsRight.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.lblNoComponentsRight.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.txtStartPhraseRight.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.flxSelectedComponentRight.setVisibility(false);\n\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.setEnabled(false);\n",
+            "parentId": "_hb7050445e484103a7dc62f229b7536c",
+            "callbackType": null
+        }, {
+            "id": "SCALE_ACTION_fc16d9d088ce4a2892852d0454f05065",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxRightSide",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "c4fef085b1b0464f89985709475aa8b0",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "width": "16%",
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "250",
+                "delay": "0",
+                "iterationCount": "1"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "250"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_aba22b5d148a440c9cd1517b1fa9fdab",
+            "animationId": "SCALE_ACTION_fc16d9d088ce4a2892852d0454f05065",
+            "displayAnimationId": "SCALE_ACTION_fc16d9d088ce4a2892852d0454f05065",
+            "forkedPlatform": "all",
+            "parentId": "_hb7050445e484103a7dc62f229b7536c",
+            "callbackType": null,
+            "widgetPath": "this.view.flxRightSide"
+        }, {
+            "id": "SCALE_ACTION_f86b0eec3d45453588912915e44a1fbc",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxLeftSide",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "ef32f1f4c3c04df9bf584b0dbdd318fe",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "width": "80%",
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "250",
+                "delay": "0",
+                "iterationCount": "1"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "250"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_c9958e7c13c6429f97d773bcd5152d13",
+            "animationId": "SCALE_ACTION_f86b0eec3d45453588912915e44a1fbc",
+            "displayAnimationId": "SCALE_ACTION_f86b0eec3d45453588912915e44a1fbc",
+            "forkedPlatform": "all",
+            "parentId": "SCALE_ACTION_fc16d9d088ce4a2892852d0454f05065",
+            "callbackType": "Callback",
+            "widgetPath": "this.view.flxLeftSide"
+        }, {
+            "id": "ADD_SNIPPET_c7116c9babb941238f74b46f35492aaf",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "let filteredSimpleComponents = gblSimpleComponentsTemplates.filter(function(item) {\n  return item.lblLayout !== \"stepSection\";\n});\n\n\nlet filteredConfigurableComponents = gblConfigurableComponentsTemplates.filter(function(item) {\n  return item.lblLayout !== \"stepSection\";\n});\n\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(filteredSimpleComponents);\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setData(filteredConfigurableComponents);",
+            "parentId": "SCALE_ACTION_fc16d9d088ce4a2892852d0454f05065",
+            "callbackType": "Callback"
+        }, {
+            "id": "ADD_SNIPPET_j7c09ea791a34f32a2d0ae86ae2f5e26",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.ComponentsSide.segComponentsSideConfigurableContent.setEnabled(true);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setEnabled(true);",
+            "parentId": "SCALE_ACTION_fc16d9d088ce4a2892852d0454f05065",
+            "callbackType": "Callback"
+        }, {
+            "id": "_e136946791f344049ee6b4bfc669b21e",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_cad4a1ef076c4cb1ab5f000b753b8b6a",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### SONO L'ELSE\");\n\n\n// this.view.settingsSide.flxEditPropertyValue.setVisibility(false);\n// this.view.settingsSide.txt.setVisibility(true);\n\nthis.view.settingsSide.editPropertyValue.setVisibility(false);\nthis.view.settingsSide.editPropertyValue.lblPropertyTitle.text = \"Label\";\nthis.view.settingsSide.editPropertyValue.txtPropertyValue.text = \"Insert a value\";\nthis.view.settingsSide.txt.setVisibility(true);",
+            "parentId": "_e136946791f344049ee6b4bfc669b21e",
+            "callbackType": null
+        }, {
+            "id": "SCALE_ACTION_aba22b5d148a440c9cd1517b1fa9fdab",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxLeftSide",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "ef32f1f4c3c04df9bf584b0dbdd318fe",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "width": "48%",
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "250",
+                "delay": "0",
+                "iterationCount": "1"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "kony.anim.FILL_MODE_FORWARDS",
+                "duration": "250"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_f86b0eec3d45453588912915e44a1fbc",
+            "animationId": "SCALE_ACTION_aba22b5d148a440c9cd1517b1fa9fdab",
+            "displayAnimationId": "SCALE_ACTION_aba22b5d148a440c9cd1517b1fa9fdab",
+            "forkedPlatform": "all",
+            "parentId": "_e136946791f344049ee6b4bfc669b21e",
+            "callbackType": null,
+            "widgetPath": "this.view.flxLeftSide"
+        }, {
+            "id": "SCALE_ACTION_dde0810177964f00b9f17423a094e40f",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxRightSide",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "c4fef085b1b0464f89985709475aa8b0",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "width": "48%",
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "250",
+                "delay": "0",
+                "iterationCount": "1"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "250"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_aba22b5d148a440c9cd1517b1fa9fdab",
+            "animationId": "SCALE_ACTION_dde0810177964f00b9f17423a094e40f",
+            "displayAnimationId": "SCALE_ACTION_dde0810177964f00b9f17423a094e40f",
+            "forkedPlatform": "all",
+            "parentId": "SCALE_ACTION_aba22b5d148a440c9cd1517b1fa9fdab",
+            "callbackType": "Callback",
+            "widgetPath": "this.view.flxRightSide"
+        }, {
+            "id": "ADD_SNIPPET_j02cb12c06cd4d79b50d14b61a517613",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.ComponentsSide.segComponentsSideConfigurableContent.setData(gblConfigurableComponentsTemplates);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(gblSimpleComponentsTemplates);\n",
+            "parentId": "SCALE_ACTION_aba22b5d148a440c9cd1517b1fa9fdab",
+            "callbackType": "Callback"
+        }, {
+            "id": "ADD_SNIPPET_a370904dc2cc4515964f7486767b367d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.ComponentsSide.segComponentsSideConfigurableContent.setEnabled(false);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setEnabled(false);",
+            "parentId": "SCALE_ACTION_aba22b5d148a440c9cd1517b1fa9fdab",
+            "callbackType": "Callback"
+        }, {
+            "id": "ADD_SNIPPET_b00be2540d454cf785e850bbeecb9bf7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if (gblSelectedComponentRight === true){\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.flxSelectedComponentRight.setVisibility(true);\n} else {\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.imgNoComponentsRight.setVisibility(true);\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.lblNoComponentsRight.setVisibility(true);\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.txtStartPhraseRight.setVisibility(true);\n}\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.setEnabled(true);",
+            "parentId": "SCALE_ACTION_dde0810177964f00b9f17423a094e40f",
+            "callbackType": "Callback"
+        }]
+    }
+}

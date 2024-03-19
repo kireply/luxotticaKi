@@ -1,0 +1,30 @@
+{
+    "AS_TextField_h81a6377e7a746f6b93e5e6db70ac546": {
+        "id": "AS_TextField_h81a6377e7a746f6b93e5e6db70ac546",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplEditPropertyValue",
+            "type": "templates",
+            "KUID": "ia578e85beec4397897491d8fdb31a66"
+        },
+        "language": "js",
+        "eventType": "onEndEditing",
+        "actions": [{
+            "id": "ADD_SNIPPET_bb14f5f2811248bf9bace902c9ed8f08",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "data = this.view.settingsSide.segmentEditPropertyValue.data;\n\nvoltmx.print(\"### DATA: \" + JSON.stringify(data));\n\n",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

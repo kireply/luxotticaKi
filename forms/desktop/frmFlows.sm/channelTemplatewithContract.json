@@ -1,0 +1,56 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
+    "DNDConfig": null,
+    "_children_": [],
+    "_height_": {
+        "type": "string",
+        "value": "22.44%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "412dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 1,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
+    "_top_": {
+        "type": "string",
+        "value": "20dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "25.18%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 0,
+    "data": {
+        "imgInfoVisible": false
+    },
+    "id": "channelTemplatewithContract",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "fad1e2dccb8c4f82b19def37f40eb80b",
+    "masterType": 1,
+    "name": "kony.ui.UserWidgetInstance",
+    "parent": "FlexContainerFlows",
+    "pf": "frmFlows",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "sourceUserWidget": "h81bf31150bb49c9a2809843ee9d7596",
+    "wType": "UserWidgetInstance",
+    "zindex": 1
+}

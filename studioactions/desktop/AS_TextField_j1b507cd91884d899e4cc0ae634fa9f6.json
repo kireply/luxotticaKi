@@ -1,0 +1,29 @@
+{
+    "AS_TextField_j1b507cd91884d899e4cc0ae634fa9f6": {
+        "id": "AS_TextField_j1b507cd91884d899e4cc0ae634fa9f6",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplEditPropertyValue",
+            "type": "templates",
+            "KUID": "ia578e85beec4397897491d8fdb31a66"
+        },
+        "language": "js",
+        "eventType": "onEndEditing",
+        "actions": [{
+            "id": "ADD_SNIPPET_j3096948f6dd41949efb423445472d5d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"###  CONTENUTO SINISTRO: \" + JSON.stringify(this.view.flxSelectedComponent.selectedComponent.flxSelectedComponentRight.segmentRight.data));\n\n/*\n\n###  CONTENUTO DESTRO: [{\"lblPropertyName\":\"Attribute: \",\"lblPropertyValue\":\"\"},{\"lblPropertyName\":\"NestedComponents: \",\"lblPropertyValue\":\"\"}]\n\n*/\n\n// let left_width = parseInt(self.view.flxLeftRight.flxLeftSide.width, 10);\n// edit_data = this.view.flxSelectedComponent.selectedComponent.flxSelectedComponentRight.segmentRight.data;\n// const modifiedPropertyNames = edit_data.map(item => ({\n//   lblPropertyTitle: item.lblPropertyName.replace(/: $/, \"\")\n// }));\n// voltmx.print(\"### SETTING DATA: \" + JSON.stringify(modifiedPropertyNames));\n\n// if ( left_width > 48){\n//   //vuol dire che il pannello di destra è aperto\n//   this.view.settingsSide.txt.setVisibility(false);\n//   this.view.settingsSide.segmentEditPropertyValue.setData(modifiedPropertyNames);\n// //   this.view.settingsSide.lblPropertyTitle.text = this.view.selectedComponentRight.segmentRight.selectedRowItems[0].lblPropertyName;\n// //   this.view.settingsSide.flxEditPropertyValue.setVisibility(true);\n//   this.view.settingsSide.segmentEditPropertyValue.setVisibility(true);\n// }",
+            "parentId": null
+        }]
+    }
+}

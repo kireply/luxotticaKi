@@ -1,0 +1,30 @@
+{
+    "AS_TextField_i7c84b879ca14def96ab3013b7040eb5": {
+        "id": "AS_TextField_i7c84b879ca14def96ab3013b7040eb5",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplEditPropertyValue",
+            "type": "templates",
+            "KUID": "ia578e85beec4397897491d8fdb31a66"
+        },
+        "language": "js",
+        "eventType": "onTextChange",
+        "actions": [{
+            "id": "ADD_SNIPPET_bb2aaaecd47f47a2a8c8a82dc94baadc",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### PROVA\");",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}
