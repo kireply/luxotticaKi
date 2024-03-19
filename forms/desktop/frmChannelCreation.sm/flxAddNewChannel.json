@@ -44,12 +44,15 @@
     },
     "children": [
         "imgAddNewChannel",
-        "lblAddNewChannel"
+        "lblAddNewChannelBlack",
+        "lblAddNewChannelWhite"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "desktopweb": {
-        "psp": {}
+        "psp": {
+            "ide_onHover": "AS_FlexContainer_c7181d789f594cb1b7d0af9de086713e"
+        }
     },
     "disabledSkins": {
         "hoverSkin": "s0db037891274ea3b85d8ec218323593"

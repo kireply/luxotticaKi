@@ -1,0 +1,79 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizListBox",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "1.8800000000000026%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Please Select",
+    "_skin_": "scf7732e4e704ee88be9602cde5542e9",
+    "_top_": {
+        "type": "string",
+        "value": "31%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "17.44%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
+    "groupcells": false,
+    "id": "lbShowEntries",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "eab50e7dc9bf46de8d828d93a9959b30",
+    "masterdata": [
+        [
+            "lb1",
+            "Show 5 entries"
+        ],
+        [
+            "lb2",
+            "Show 10 entries"
+        ],
+        [
+            "lb3",
+            "Show 25 entries"
+        ]
+    ],
+    "name": "kony.ui.ListBox",
+    "parent": "FlexContainerLabel",
+    "pf": "frmLabelManagement",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "selectedkey": "lb1",
+    "selectedkeys": null,
+    "selectedkeyvalue": [
+        "lb1",
+        "Show 5 entries"
+    ],
+    "selectedkeyvalues": null,
+    "size": 18,
+    "viewconfig": {
+        "toggleViewConfig": {
+            "viewStyle": 0
+        }
+    },
+    "viewtype": 0,
+    "wType": "ListBox",
+    "zindex": 1
+}
