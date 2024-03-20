@@ -71,6 +71,14 @@
                 }
             }
         },
+        "flxLogout": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "c557671a73a3492caeae77cb6f7d0cbf",
+                "srcKUID": "bd4e6e8bdb8a4f2e87e20e3b2baa4851",
+                "wType": "FlexContainer"
+            }
+        },
         "imgLogout": {
             "__events__": {},
             "__info__": {
@@ -79,6 +87,14 @@
                 "wType": "Image"
             },
             "src": "logout_true.png"
+        },
+        "imgLogout1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "d549d6740db04b3eacbe8760b18a8a8a",
+                "srcKUID": "d2f68446c7fa4a9abe29e1b65700eab2",
+                "wType": "Image"
+            }
         },
         "segMenu": {
             "__events__": {},

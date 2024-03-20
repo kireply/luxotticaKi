@@ -55,11 +55,27 @@
                 "wType": "Button"
             }
         },
+        "flxLogout": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b35ab6c55a0249348d84ad38ee89f4d9",
+                "srcKUID": "bd4e6e8bdb8a4f2e87e20e3b2baa4851",
+                "wType": "FlexContainer"
+            }
+        },
         "imgLogout": {
             "__events__": {},
             "__info__": {
                 "kuid": "fc4d784974dc4908af51937dea21e697",
                 "srcKUID": "jaa0c3a1c660400285a65a88671ea804",
+                "wType": "Image"
+            }
+        },
+        "imgLogout1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "fa05b04b557c485395c202075ef15405",
+                "srcKUID": "d2f68446c7fa4a9abe29e1b65700eab2",
                 "wType": "Image"
             }
         },

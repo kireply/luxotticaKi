@@ -36,9 +36,8 @@
     "canUpdateUI": true,
     "children": [
         "segMenu",
-        "btnLogout",
         "btnResizeMenu",
-        "imgLogout"
+        "flxLogout"
     ],
     "clipbounds": false,
     "containerweight": 100,

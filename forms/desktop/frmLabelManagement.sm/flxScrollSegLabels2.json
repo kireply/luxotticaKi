@@ -53,7 +53,7 @@
     "dragg": false,
     "enablescrolling": true,
     "horizontalscrollindicator": true,
-    "id": "flxScrollLabels2",
+    "id": "flxScrollSegLabels2",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

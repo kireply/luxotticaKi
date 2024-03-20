@@ -1,0 +1,26 @@
+{
+    "AS_FlexContainer_aee33ec85c354bf4bd6c16344d1d7ce7": {
+        "id": "AS_FlexContainer_aee33ec85c354bf4bd6c16344d1d7ce7",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "u9c48b958b804cb5be55e25f3f6f5dfb"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_a01ed6d50e11439d817acd120c7e32e2",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if (context.eventType !== \"leave\"){\n  this.view.imgLogout.setVisibility(false);\n  this.view.imgLogout2.setVisibility(true);\n\n  this.view.btnLogout.skin = \"CopydefBtnNormal0b046094e85d745\";\n  \n} else {\n  \n  this.view.imgLogout2.setVisibility(false);\n  this.view.imgLogout.setVisibility(true);\n\n  this.view.btnLogout.skin = \"CopydefBtnNormal0fc5b48bdbdda49\";\n}\n",
+            "parentId": null
+        }]
+    }
+}

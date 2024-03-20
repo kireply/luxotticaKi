@@ -315,7 +315,7 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "e1f579ca6702404b931b56e95bd29eba",
     "masterdata": {},
     "name": "kony.ui.SegmentedUI2",
@@ -325,7 +325,7 @@
     "paginationconfig": {
         "position": "bottom"
     },
-    "parent": "flxChannelscopy",
+    "parent": "flxChannelsCopy2",
     "pf": "frmChannels",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

@@ -52,6 +52,7 @@
     "children": [
         "flxContainerChannelCreation",
         "flxAddChannel",
+        "flxBlur",
         "flxPopupCreateNewChannel"
     ],
     "containerweight": 100,

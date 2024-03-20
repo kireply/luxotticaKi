@@ -50,11 +50,17 @@
             },
             "bottom": {
                 "Default": {
-                    "type": "string",
-                    "value": "4%"
+                    "type": "number",
+                    "value": "0"
                 }
             },
             "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "centerY": {
                 "Default": {
                     "type": "string",
                     "value": "50%"
@@ -64,7 +70,7 @@
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "80%"
+                    "value": "100%"
                 }
             }
         },
@@ -89,6 +95,14 @@
                     "type": "string",
                     "value": "20dp"
                 }
+            }
+        },
+        "flxBtnLogout": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "f97731c5fa15443380c537fa77fc2ee4",
+                "srcKUID": "a0c260c49fa14d3aa934cade39c38bb0",
+                "wType": "FlexContainer"
             }
         },
         "hamburgermenu": {
@@ -190,6 +204,14 @@
             },
             "responsiveData": {},
             "src": "logout_true.png"
+        },
+        "imgLogout2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "h5b004af3efc46bb83cced908bf98e7b",
+                "srcKUID": "d183329a0090424e92fc74f21216b2bb",
+                "wType": "Image"
+            }
         },
         "segMenu": {
             "__events__": {

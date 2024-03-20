@@ -160,54 +160,52 @@
             "id": "IF_CONDITION_ide_onTextChange_dfe5c6d6c416416f8adc48dd9c5c1a42",
             "type": "IF_CONDITION",
             "conditions": [{
-                "leftValueType": "varvalue",
-                "leftValue": "channelID",
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.txtChannelInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
-                "rightValue": "\"\""
+                "rightValue": "\"\"",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "a709edb70a60483983498ef971327e19"
             }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelName",
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.txtChannelInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
-                "rightValue": "\"Select Channel Name\""
+                "rightValue": "undefined",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "a709edb70a60483983498ef971327e19"
             }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelID",
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.txtChannelPropertiesInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
-                "rightValue": "undefined"
+                "rightValue": "\"\"",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "ae6d0917eb824707883abe8c2ce5c352"
             }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelName",
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.txtChannelPropertiesInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
-                "rightValue": "\"\""
+                "rightValue": "undefined",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "ae6d0917eb824707883abe8c2ce5c352"
             }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelName",
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.lbChannelNameInsideFrmChannels.selectedKey",
                 "operator": "===",
                 "rightValueType": "value",
-                "rightValue": "undefined"
-            }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelProperties",
-                "operator": "===",
-                "rightValueType": "value",
-                "rightValue": "\"\""
-            }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelProperties",
-                "operator": "===",
-                "rightValueType": "value",
-                "rightValue": "undefined"
+                "rightValue": "\"lb1\"",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "e74135133adb4951972fe5130a0db4e5"
             }],
             "callbackType": null,
             "criteria": "any"
         }, {
             "id": "ADD_SNIPPET_ide_onTextChange_c5a41cd469ce491ba99c09b9de914a1d",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.btnSaveNewChannel.setEnabled(false);",
+            "codeSnippet": "this.view.btnSaveNewChannelInsideFrmChannels.setEnabled(false);\nthis.view.btnSaveNewChannelInsideFrmChannels.opacity = 0.5;",
             "parentId": "IF_CONDITION_ide_onTextChange_dfe5c6d6c416416f8adc48dd9c5c1a42",
             "callbackType": null
         }, {
@@ -224,7 +222,7 @@
                 "stepConfig": {
                     "timingFunction": "kony.anim.EASE"
                 },
-                "opacity": 50,
+                "opacity": "50",
                 "displayAnimationId": "",
                 "duration": "0",
                 "delay": "0",
@@ -237,11 +235,13 @@
                 "duration": "0"
             },
             "start": "Immediately",
+            "parentAnimation": "STYLE_ACTION_e3128572f78a4bddb605536cb2e77daa",
             "animationId": "STYLE_ACTION_db5a22f6c127411a8705f9d6dfb4f3b7",
             "displayAnimationId": "STYLE_ACTION_db5a22f6c127411a8705f9d6dfb4f3b7",
             "forkedPlatform": "all",
             "parentId": "IF_CONDITION_ide_onTextChange_dfe5c6d6c416416f8adc48dd9c5c1a42",
             "callbackType": null,
+            "disabled": true,
             "widgetPath": "this.view.btnSaveNewChannelInsideFrmChannels"
         }, {
             "id": "ELSE_CONDITION_ide_onTextChange_h3eb81d741654679b1406f29c8e0a26f",
@@ -258,7 +258,7 @@
         }, {
             "id": "ADD_SNIPPET_ide_onTextChange_f2b2bc8341a14f02a858dc32604c7abc",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.btnSaveNewChannel.setEnabled(true);",
+            "codeSnippet": "this.view.btnSaveNewChannelInsideFrmChannels.setEnabled(true);\nthis.view.btnSaveNewChannelInsideFrmChannels.opacity = 1;",
             "parentId": "ELSE_CONDITION_ide_onTextChange_h3eb81d741654679b1406f29c8e0a26f",
             "callbackType": null
         }, {
@@ -277,9 +277,9 @@
                 },
                 "opacity": "100",
                 "displayAnimationId": "",
-                "duration": "250",
+                "duration": "0",
                 "delay": "0",
-                "iterationCount": "1"
+                "iterationCount": ""
             },
             "config": {
                 "delay": "0",
@@ -294,6 +294,7 @@
             "forkedPlatform": "all",
             "parentId": "ELSE_CONDITION_ide_onTextChange_h3eb81d741654679b1406f29c8e0a26f",
             "callbackType": null,
+            "disabled": true,
             "widgetPath": "this.view.txtChannelInsideFrmChannels"
         }]
     }

@@ -1,0 +1,28 @@
+{
+    "AS_FlexContainer_c7181d789f594cb1b7d0af9de086713e": {
+        "id": "AS_FlexContainer_c7181d789f594cb1b7d0af9de086713e",
+        "type": "ACTION_SEQUENCE",
+        "name": "onHoverHandlerForFlxAddNewChannel",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "frmChannelCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b995d95be2ee4d2181bb89391aa35ffb"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_f451eb842d564729a61fe61ff71ce9c1",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if (context.eventType !== \"leave\"){\n  this.view.flxAddNewChannel.backgroundColor = \"000000\";\n  this.view.imgAddNewChannel.setVisibility(false);\n  this.view.imgAddNewChannel2.setVisibility(true);\n \n  this.view.lblAddNewChannelBlack.setVisibility(false);\n  this.view.lblAddNewChannelWhite.setVisibility(true);\n  \n} else {\n  this.view.flxAddNewChannel.backgroundColor = \"ffffff\";\n  this.view.imgAddNewChannel2.setVisibility(false);\n  this.view.imgAddNewChannel.setVisibility(true);\n \n  this.view.lblAddNewChannelWhite.setVisibility(false);\n  this.view.lblAddNewChannelBlack.setVisibility(true);\n}\n",
+            "parentId": null
+        }]
+    }
+}

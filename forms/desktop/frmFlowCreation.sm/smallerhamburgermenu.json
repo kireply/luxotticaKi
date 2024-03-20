@@ -57,6 +57,14 @@
                 "wType": "Button"
             }
         },
+        "flxLogout": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "c5b1065a2c78472cb78a4b2eb7c61ca0",
+                "srcKUID": "bd4e6e8bdb8a4f2e87e20e3b2baa4851",
+                "wType": "FlexContainer"
+            }
+        },
         "imgLogout": {
             "__events__": {},
             "__info__": {
@@ -65,6 +73,14 @@
                 "wType": "Image"
             },
             "src": "logout_true.png"
+        },
+        "imgLogout1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ae2c5a31b2004481bfbd1dbf6e9d8f70",
+                "srcKUID": "d2f68446c7fa4a9abe29e1b65700eab2",
+                "wType": "Image"
+            }
         },
         "segMenu": {
             "__events__": {},

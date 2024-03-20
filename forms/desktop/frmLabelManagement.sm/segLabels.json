@@ -6,490 +6,164 @@
             {
                 "lb2": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "it-IT"
+                    "text": "it-IT",
+                    "type": "Label"
                 },
                 "lb3": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "de-DE"
+                    "text": "de-DE",
+                    "type": "Label"
                 },
                 "lb4": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "fr-FR"
+                    "text": "fr-FR",
+                    "type": "Label"
                 },
                 "lb5": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "es-ES"
+                    "text": "es-ES",
+                    "type": "Label"
                 },
                 "lbl1": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "en-US"
+                    "text": "en-US",
+                    "type": "Label"
                 }
             },
             [
                 {
                     "lb1": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Workshop on Web Development",
+                        "type": "Label"
                     },
                     "lb2": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Workshop sullo sviluppo",
+                        "type": "Label"
                     },
                     "lb3": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Workshop zur Webentwicklung",
+                        "type": "Label"
                     },
                     "lb4": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Atelier sur le développement web",
+                        "type": "Label"
                     },
                     "lb5": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Taller de desarrollo web",
+                        "type": "Label"
                     }
                 },
                 {
                     "lb1": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Explore Our Services",
+                        "type": "Label"
                     },
                     "lb2": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Scopri i nostri servizi",
+                        "type": "Label"
                     },
                     "lb3": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Entdecken Sie unsere Dienstleistungen",
+                        "type": "Label"
                     },
                     "lb4": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Découvrez nos services",
+                        "type": "Label"
                     },
                     "lb5": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Explora nuestros servicios",
+                        "type": "Label"
                     }
                 },
                 {
                     "lb1": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Warning",
+                        "type": "Label"
                     },
                     "lb2": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Avvertimento",
+                        "type": "Label"
                     },
                     "lb3": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Warnung",
+                        "type": "Label"
                     },
                     "lb4": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Attention",
+                        "type": "Label"
                     },
                     "lb5": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Advertencia",
+                        "type": "Label"
                     }
                 },
                 {
                     "lb1": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Polarized",
+                        "type": "Label"
                     },
                     "lb2": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Polarizzate",
+                        "type": "Label"
                     },
                     "lb3": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Polarisiert",
+                        "type": "Label"
                     },
                     "lb4": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Verres polarisés",
+                        "type": "Label"
                     },
                     "lb5": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Polarizadas",
+                        "type": "Label"
                     }
                 },
                 {
                     "lb1": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Continue",
+                        "type": "Label"
                     },
                     "lb2": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Continua",
+                        "type": "Label"
                     },
                     "lb3": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Weiter",
+                        "type": "Label"
                     },
                     "lb4": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Continuer",
+                        "type": "Label"
                     },
                     "lb5": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                },
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                },
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                },
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                },
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                },
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                }
-            ]
-        ],
-        [
-            {
-                "lb2": {
-                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "it-IT"
-                },
-                "lb3": {
-                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "de-DE"
-                },
-                "lb4": {
-                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "fr-FR"
-                },
-                "lb5": {
-                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "es-ES"
-                },
-                "lbl1": {
-                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "en-US"
-                }
-            },
-            [
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                },
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                },
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                },
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                },
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                },
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                },
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                },
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                },
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    }
-                },
-                {
-                    "lb1": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb2": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb3": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb4": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
-                    },
-                    "lb5": {
-                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Label"
+                        "text": "Continúe",
+                        "type": "Label"
                     }
                 }
             ]
@@ -529,7 +203,7 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "containerweight": 100,
-    "counter": "19",
+    "counter": "04",
     "disabledSkins": {},
     "focusedindex": null,
     "focuseditem": null,
@@ -564,12 +238,12 @@
     "retainflexpositionproperties": false,
     "retainselection": false,
     "rowTemplateId": "f52fbfd9105d45b7a95d33b6887d33f0",
-    "rowcounter": 9,
+    "rowcounter": 4,
     "rowfocusskin": "s6e7f07455ec411fbcf9e06217636f94",
     "rowskin": "sc4f7e6361364d3f810bc500daa8a11e",
     "rowtemplate": "flxRowLabels",
     "screenlevelwidget": false,
-    "seccounter": 1,
+    "seccounter": 0,
     "sectionHeaderTemplateId": "f89da6b2ac544be79fbf40e9e4c93231",
     "sectionheaderskin": "s64f2a4ab45b4b1fb87d6b6429f052a8",
     "sectionheadertemplate": "flxHeaderRowLabels",

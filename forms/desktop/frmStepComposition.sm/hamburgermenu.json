@@ -50,15 +50,15 @@
             },
             "bottom": {
                 "Default": {
-                    "type": "string",
-                    "value": "4%"
+                    "type": "number",
+                    "value": "0"
                 }
             },
             "responsiveData": {},
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "80%"
+                    "value": "100%"
                 }
             }
         },
@@ -70,6 +70,14 @@
                 "kuid": "d973d74e98894a529ca62602b8d491a6",
                 "srcKUID": "g6220a13ecc543cfbd274408555deb6b",
                 "wType": "Button"
+            }
+        },
+        "flxBtnLogout": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ga0995820d7642c7aaf2303d259ec311",
+                "srcKUID": "a0c260c49fa14d3aa934cade39c38bb0",
+                "wType": "FlexContainer"
             }
         },
         "hamburgermenu": {
@@ -171,6 +179,17 @@
             },
             "responsiveData": {},
             "src": "logout_true.png"
+        },
+        "imgLogout2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ab704965250844b89b6516aab998b052",
+                "srcKUID": "d183329a0090424e92fc74f21216b2bb",
+                "wType": "Image"
+            },
+            "isVisible": false,
+            "responsiveData": {},
+            "src": "logout_modified.png"
         },
         "segMenu": {
             "__events__": {

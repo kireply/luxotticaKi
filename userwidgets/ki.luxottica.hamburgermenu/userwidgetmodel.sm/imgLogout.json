@@ -4,15 +4,15 @@
     "_base64_": null,
     "_bottom_": {
         "type": "string",
-        "value": "3.20%"
+        "value": "18.20%"
     },
     "_height_": {
         "type": "string",
-        "value": "50dp"
+        "value": "50%"
     },
     "_left_": {
         "type": "string",
-        "value": "20%"
+        "value": "14%"
     },
     "_margin_": [
         0,
@@ -30,9 +30,13 @@
     "_src_": "logout_true.png",
     "_width_": {
         "type": "string",
-        "value": "40dp"
+        "value": "20%"
     },
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "id": "imgLogout",
     "imagescalemode": 1,
@@ -41,7 +45,7 @@
     "isvisible": true,
     "kuid": "f6d6345317634850bef09677b329a6ec",
     "name": "kony.ui.Image2",
-    "parent": "hamburgermenu",
+    "parent": "flxBtnLogout",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

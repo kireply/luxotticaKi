@@ -72,6 +72,7 @@ define({
       const flex = new voltmx.ui.FlexContainer({
         id: `flex${index}${new Date().getTime()}`,
         height: `130dp`,
+        width: `11%`,
         responsiveConfig: {
           "span": {
             "640": 12,
@@ -84,7 +85,7 @@ define({
       //const tile = new com.hcl.demo.uifactory.Tile({
       const channel = new ki.luxottica.channelTemplatewithContract({
         id: `channel{index}${new Date().getTime()}`,
-        width: '100%',
+        width: '80%',
         height: '147%',
         centerX: '50%',
         centerY: '50%'
@@ -121,12 +122,13 @@ define({
       }
       else {
 //        voltmx.print("### INSIDE ELSE");
-       channel.channelLogo = "/plus.png";
+       channel.channelLogo = "/plus_modified.png";
        channel.channelInfo = "Add New Channel";
        channel.channelId = index;
        channel.imgInfoVisible = false;
        channel.onClickTeaser = () => {
          this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(true);
+         //this.view.btnSaveNewChannelInsideFrmChannels.setEsabled(false);
        }
 //        voltmx.print("### CHANNEL INFO: " + channel.channelInfo);
 //        voltmx.print("### CHANNEL LOGO: " + channel.channelLogo);

@@ -1,0 +1,127 @@
+{
+    "AS_Button_ce8e3f0dae2c4a1ca71ff64956e0825f": {
+        "id": "AS_Button_ce8e3f0dae2c4a1ca71ff64956e0825f",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "INVOKE_ASYNC_SERVICE_ide_onClick_j43d24e6e1ed4c18abd42e2f844e83ad",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "CHANNEL_create",
+                "operationid": "116976"
+            },
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "IF_CONDITION_ide_onClick_cc2ce7e6569649c6b4802a867165b2b7",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "CHANNEL_create!==null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "CHANNEL_create.opstatus===0"
+            }],
+            "parentId": "INVOKE_ASYNC_SERVICE_ide_onClick_j43d24e6e1ed4c18abd42e2f844e83ad",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_ide_onClick_c6b07babe319418f84018716079956b6",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": "Success",
+            "yesLabel": "Ok",
+            "alertMessage": "Channel succesfully created.",
+            "messageType": "constant",
+            "parentId": "IF_CONDITION_ide_onClick_cc2ce7e6569649c6b4802a867165b2b7",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_ide_onClick_hd8c613acc224a04aaeab85315461ce2",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### sono entrato nel true\");",
+            "parentId": "SHOW_ALERT_ide_onClick_c6b07babe319418f84018716079956b6",
+            "callbackType": "True"
+        }, {
+            "id": "NAVIGATE_TO_FORM__ide_onClick_cb4aa474b55544059c293750488145c2",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmChannels",
+            "formKUID": "c1e9143f6fef4291a170222e7c044c7c",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "IF_CONDITION_ide_onClick_cc2ce7e6569649c6b4802a867165b2b7",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "ELSE_CONDITION_ide_onClick_c66ce0ab02a34ead8ff8d5323aac7059",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_ASYNC_SERVICE_ide_onClick_j43d24e6e1ed4c18abd42e2f844e83ad",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_ide_onClick_j02f17875895466ea5ba383ae81be036",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Error",
+            "yesLabel": "OK",
+            "alertMessage": "Channel NOT created.",
+            "messageType": "constant",
+            "parentId": "ELSE_CONDITION_ide_onClick_c66ce0ab02a34ead8ff8d5323aac7059",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_ide_onClick_d0e1f6d065cf4e5cabd18cccce76d17d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### sono entrato nel FALSE\");",
+            "parentId": "SHOW_ALERT_ide_onClick_j02f17875895466ea5ba383ae81be036",
+            "callbackType": "True"
+        }, {
+            "id": "NAVIGATE_TO_FORM__ide_onClick_d09bc19055a14329a4c0f1581e326906",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmChannelCreation",
+            "formKUID": "b995d95be2ee4d2181bb89391aa35ffb",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "ELSE_CONDITION_ide_onClick_c66ce0ab02a34ead8ff8d5323aac7059",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }]
+    }
+}

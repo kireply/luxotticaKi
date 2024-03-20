@@ -57,6 +57,14 @@
                 "wType": "Button"
             }
         },
+        "flxBtnLogout": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "h82942382c8b4999bfb087931ecaf18f",
+                "srcKUID": "a0c260c49fa14d3aa934cade39c38bb0",
+                "wType": "FlexContainer"
+            }
+        },
         "hamburgermenu": {
             "__events__": {},
             "__info__": {
@@ -71,6 +79,14 @@
             "__info__": {
                 "kuid": "cc23b592bac344efba65cb633d9305bd",
                 "srcKUID": "f6d6345317634850bef09677b329a6ec",
+                "wType": "Image"
+            }
+        },
+        "imgLogout2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "af21cd8f6498436db216fa2a05f1bb52",
+                "srcKUID": "d183329a0090424e92fc74f21216b2bb",
                 "wType": "Image"
             }
         },

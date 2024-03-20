@@ -25,7 +25,7 @@
     "_text_": "Select or create your Channel",
     "_top_": {
         "type": "string",
-        "value": "140dp"
+        "value": "20%"
     },
     "_width_": {
         "type": "ref",
