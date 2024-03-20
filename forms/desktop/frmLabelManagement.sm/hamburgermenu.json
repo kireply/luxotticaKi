@@ -153,7 +153,8 @@
                 "kuid": "e5185f7ea72e49b4addf2865f3cdfee0",
                 "srcKUID": "f6d6345317634850bef09677b329a6ec",
                 "wType": "Image"
-            }
+            },
+            "src": "logout_true.png"
         },
         "imgLogout2": {
             "__events__": {},
@@ -164,7 +165,9 @@
             }
         },
         "segMenu": {
-            "__events__": {},
+            "__events__": {
+                "ide_onRowClick": "AS_Segment_f6fbecc2402c42eb87acff8c6d52d10f"
+            },
             "__info__": {
                 "kuid": "g75e04ff7eb54481b7f7ff5075ffcbda",
                 "srcKUID": "f6158cc0defe49f9b27229072ca607e4",

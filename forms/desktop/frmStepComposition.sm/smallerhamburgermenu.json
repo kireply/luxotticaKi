@@ -45,7 +45,20 @@
                 "kuid": "abf34814412d4e65a32cecd9a57841e6",
                 "srcKUID": "dc71668cc16f4695981806296357819d",
                 "wType": "Button"
-            }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "responsiveData": {}
         },
         "btnResizeMenu": {
             "__events__": {

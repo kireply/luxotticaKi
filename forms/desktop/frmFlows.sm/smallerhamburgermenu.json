@@ -48,11 +48,23 @@
                 "srcKUID": "dc71668cc16f4695981806296357819d",
                 "wType": "Button"
             },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
             "responsiveData": {},
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "70%"
+                    "value": "100%"
                 }
             }
         },
@@ -65,13 +77,31 @@
                 "srcKUID": "b78ca6f9cd4742d8b6d55eda7606510c",
                 "wType": "Button"
             },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "4%"
+                }
+            },
             "left": {
                 "Default": {
                     "type": "string",
-                    "value": "97%"
+                    "value": "93%"
                 }
             },
-            "responsiveData": {}
+            "responsiveData": {},
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "4%"
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "15%"
+                }
+            }
         },
         "flxLogout": {
             "__events__": {},
@@ -79,6 +109,13 @@
                 "kuid": "fa58c02dcddd4fddaadb70db174c8e00",
                 "srcKUID": "bd4e6e8bdb8a4f2e87e20e3b2baa4851",
                 "wType": "FlexContainer"
+            },
+            "responsiveData": {},
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "80%"
+                }
             }
         },
         "imgLogout": {

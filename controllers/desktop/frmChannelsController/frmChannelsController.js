@@ -120,6 +120,7 @@ define({
           }
         }
       }
+        
       else {
 //        voltmx.print("### INSIDE ELSE");
        channel.channelLogo = "/plus_modified.png";

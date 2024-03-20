@@ -60,16 +60,22 @@
                     "value": "50%"
                 }
             },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
             "height": {
                 "Default": {
                     "type": "string",
-                    "value": "50dp"
+                    "value": "100%"
                 }
             },
             "left": {
                 "Default": {
                     "type": "string",
-                    "value": "-20%"
+                    "value": "0%"
                 }
             },
             "responsiveData": {},
@@ -82,7 +88,7 @@
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "80%"
+                    "value": "100%"
                 }
             }
         },

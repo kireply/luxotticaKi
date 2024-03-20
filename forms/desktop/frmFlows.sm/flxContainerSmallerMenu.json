@@ -43,7 +43,7 @@
     "id": "flxContainerSmallerMenu",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "gf16702e70c44ae0a206273688e0df56",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
