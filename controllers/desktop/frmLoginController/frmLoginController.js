@@ -278,6 +278,14 @@ define({
           voltmx.print ("### Service response: "+JSON.stringify(response));
      	  var userFound = response.USER.some(user => user.email === email && user.password === password);
      	  if (userFound){
+            var userInfo = response.USER.filter(user => user.email === email);
+            gblUserName = userInfo[0].name;
+            gblUserSurname = userInfo[0].surname;
+            gblUserMail = userInfo[0].email;
+            voltmx.print("### userInfo: " + JSON.stringify(userInfo));
+            voltmx.print("### gblUserName: " + gblUserName);
+            voltmx.print("### gblUserSurname: " + gblUserSurname);
+            voltmx.print("### gblUserMail: " + gblUserMail);
             voltmx.application.dismissLoadingScreen();
             voltmx.print("### User found, welcome");
             voltmx.ui.Alert({

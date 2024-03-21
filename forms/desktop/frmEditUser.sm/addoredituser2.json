@@ -56,6 +56,12 @@
                 "kuid": "cfb9cec870d5478e803704445deb276b",
                 "srcKUID": "i96d52271fa042abae2accdb2961ca7c",
                 "wType": "Button"
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "5.00%"
+                }
             }
         },
         "flxMainCompileUser": {

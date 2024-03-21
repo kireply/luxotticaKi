@@ -549,6 +549,25 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
+            "id": "ADD_SNIPPET_bbbe4c1da7cb480e85ea1a1d2a831a29",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblEditIcon = false;\n\nself.view.flxPopupEditFlow.setVisibility(false);\nself.view.flxBlur.setVisibility(false);\n\n// E successivamente navigo nuovamente su form così da aggiornarlo",
+            "parentId": "_c80cbfea34364ab88f367e1d704561ed",
+            "callbackType": null
+        }, {
+            "id": "NAVIGATE_TO_FORM__a8150c10868847989c7d8889d935ae07",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmFlows",
+            "formKUID": "e6a8fc2377784d1595b361cc9412aea7",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_c80cbfea34364ab88f367e1d704561ed",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
             "id": "SHOW_ALERT_ide_onClick_i25eae0524d14f36954193ef655e1458",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_INFO",
@@ -564,6 +583,25 @@
             "alertMessagei18n": null,
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_cdb16084f43846bcabc8dd41a8c7a794",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblEditIcon = false;\n\nself.view.flxPopupEditFlow.setVisibility(false);\nself.view.flxBlur.setVisibility(false);\n\n// E successivamente navigo nuovamente su form così da aggiornarlo",
+            "parentId": "_h8c42bd9a1f842c3a251a34abc338e8f",
+            "callbackType": null
+        }, {
+            "id": "NAVIGATE_TO_FORM__d0fd6bdccff84769a1a602215d23e3bd",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmFlows",
+            "formKUID": "e6a8fc2377784d1595b361cc9412aea7",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_h8c42bd9a1f842c3a251a34abc338e8f",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
         }, {
             "id": "ADD_SNIPPET_ide_onClick_efd7c041bf9244df823582d082813bc3",
             "type": "ADD_SNIPPET",
