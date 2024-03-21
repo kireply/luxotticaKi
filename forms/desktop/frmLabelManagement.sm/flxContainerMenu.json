@@ -39,7 +39,8 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "hamburgermenu"
+        "hamburgermenu",
+        "flxMenuOptionSelected"
     ],
     "clipbounds": false,
     "containerweight": 100,

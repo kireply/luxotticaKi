@@ -263,6 +263,13 @@
                 "srcKUID": "c8c23f21358546719e96e74366017270",
                 "wType": "Image"
             },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "responsiveData": {},
             "src": "up_arrow_icon.png"
         },
         "lblComponents": {

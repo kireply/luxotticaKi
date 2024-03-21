@@ -116,7 +116,9 @@
             }
         },
         "flxBtnLogout": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_FlexContainer_a92f58bc0b6b4c0b9e988a6cf6e47254"
+            },
             "__info__": {
                 "kuid": "h493386c4e244a29b498a008793f3825",
                 "srcKUID": "a0c260c49fa14d3aa934cade39c38bb0",

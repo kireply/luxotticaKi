@@ -67,6 +67,7 @@
     "displayorientation": 1,
     "enabledforidletimeout": false,
     "id": "frmLabelManagement",
+    "ide_postShow": "AS_Form_d50b937705e1417dab512d2d53b41cf3",
     "info": null,
     "initdone": false,
     "inputaccessoryviewtype": 4,

@@ -26,10 +26,10 @@
         }, {
             "id": "ADD_SNIPPET_a4e58b55143343058c8f31f0cb4c29a6",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.settingsSide.editPropertyValue.txtPropertyValue.text = \"Insert a value\";",
+            "codeSnippet": "this.view.settingsSide.editPropertyValue.txtPropertyValue.text = \"\";",
             "parentId": null,
             "callbackType": null,
-            "disabled": true
+            "disabled": false
         }]
     }
 }
