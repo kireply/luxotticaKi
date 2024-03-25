@@ -80,7 +80,7 @@
             "height": {
                 "Default": {
                     "type": "string",
-                    "value": "4%"
+                    "value": "3%"
                 }
             },
             "left": {
@@ -93,13 +93,13 @@
             "top": {
                 "Default": {
                     "type": "string",
-                    "value": "3%"
+                    "value": "2%"
                 }
             },
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "15%"
+                    "value": "20%"
                 }
             }
         },

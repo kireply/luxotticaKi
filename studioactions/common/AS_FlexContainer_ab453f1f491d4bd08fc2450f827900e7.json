@@ -1,0 +1,26 @@
+{
+    "AS_FlexContainer_ab453f1f491d4bd08fc2450f827900e7": {
+        "id": "AS_FlexContainer_ab453f1f491d4bd08fc2450f827900e7",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "f3634d1fd4dd46249c068cd0d19e3491"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_j059ca02aab54ec2a99e4dc308e0db2c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if (context.eventType !== \"leave\"){\n  this.view.flxChannel.shadowDepth = 10;\n  this.view.flxChannel.shadowType = constants.VIEW_BOUNDS_SHADOW;\n  voltmx.print(\"### DENTRO HOVER CHANNEL\");\n  //this.view.flxChannel.blur = { \"enabled\": true, \"value\": 10 };\n} else {\n  \n  this.view.flxChannel.shadowDepth = 0;\n  this.view.flxChannel.shadowType = constants.VIEW_BOUNDS_SHADOW;\n  \n  //this.view.flxChannel.blur = { \"enabled\": false, \"value\": 0 };\n}",
+            "parentId": null
+        }]
+    }
+}

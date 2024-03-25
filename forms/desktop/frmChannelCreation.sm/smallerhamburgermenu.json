@@ -77,10 +77,17 @@
                     "value": "91%"
                 }
             },
+            "responsiveData": {},
             "top": {
                 "Default": {
                     "type": "string",
-                    "value": "14dp"
+                    "value": "2%"
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "20%"
                 }
             }
         },

@@ -279,32 +279,6 @@
                         }
                     }
                 },
-                "ME_Mapping_dec9f764a4954d5397b4a9df0c49ff3e": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_dec9f764a4954d5397b4a9df0c49ff3e",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "gblFlowDefaultFlag",
-                        "dataType": "boolean",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Services",
-                        "propertyName": "default_flag",
-                        "dataType": "boolean",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "FLOW_update",
-                            "operationid": "121542"
-                        }
-                    }
-                },
                 "ME_Mapping_g80ffa20a88240598390fa8b8d180b93": {
                     "channel": "desktop",
                     "id": "ME_Mapping_g80ffa20a88240598390fa8b8d180b93",
@@ -410,7 +384,7 @@
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_ec3a55cb880c4044ac7155541965c5e9", "ME_Mapping_c90c349ed29a4d08a59cd5666bc072e5", "ME_Mapping_ed109eb21899423b83cb7267abf2437c", "ME_Mapping_acee97c14c5d4b96915925fa39b8cfad", "ME_Mapping_d5f90da221b8405ba914a264be17e9c9", "ME_Mapping_ec5dced08a5d49ddb06d3aaa0304e7a4", "ME_Mapping_g0a2e21c721f40a7868ba376cd829295", "ME_Mapping_dec9f764a4954d5397b4a9df0c49ff3e", "ME_Mapping_g80ffa20a88240598390fa8b8d180b93", "ME_Mapping_c6800cc6150f4152ac978447ebe18fac", "ME_Mapping_e638b5294a574d98a7a4656b9458fdc2", "ME_Mapping_i0e0db342c2c46f6bf94f45d5984987d"],
+            "mappingsOrder": ["ME_Mapping_ec3a55cb880c4044ac7155541965c5e9", "ME_Mapping_c90c349ed29a4d08a59cd5666bc072e5", "ME_Mapping_ed109eb21899423b83cb7267abf2437c", "ME_Mapping_acee97c14c5d4b96915925fa39b8cfad", "ME_Mapping_d5f90da221b8405ba914a264be17e9c9", "ME_Mapping_ec5dced08a5d49ddb06d3aaa0304e7a4", "ME_Mapping_g0a2e21c721f40a7868ba376cd829295", "ME_Mapping_g80ffa20a88240598390fa8b8d180b93", "ME_Mapping_c6800cc6150f4152ac978447ebe18fac", "ME_Mapping_e638b5294a574d98a7a4656b9458fdc2", "ME_Mapping_i0e0db342c2c46f6bf94f45d5984987d"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",

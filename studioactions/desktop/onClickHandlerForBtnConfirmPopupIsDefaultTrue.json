@@ -40,7 +40,8 @@
             "datatype": "boolean",
             "value": "false",
             "parentId": null,
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }, {
             "id": "ADD_LOCAL_VARIABLE_aa1f4ea90ae740cc9907ec54afe1b06a",
             "type": "ADD_LOCAL_VARIABLE",
@@ -50,17 +51,8 @@
             "datatype": "boolean",
             "value": "false",
             "parentId": null,
-            "callbackType": null
-        }, {
-            "id": "ADD_LOCAL_VARIABLE_bfda003e73d34a6c9cc83649c56f5955",
-            "type": "ADD_LOCAL_VARIABLE",
-            "name": "idNewFlow",
-            "isGlobal": false,
-            "valuetype": "expression",
-            "datatype": "string",
-            "value": "\"\"",
-            "parentId": null,
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }, {
             "id": "_hc429af0eb384e1bbe13efcc12cafa81",
             "type": "IF_CONDITION",
@@ -75,7 +67,8 @@
             }],
             "parentId": null,
             "callbackType": null,
-            "criteria": "all"
+            "criteria": "all",
+            "disabled": true
         }, {
             "id": "_d67a89e950f94f9dbfab7cb34559468b",
             "type": "IF_CONDITION",
@@ -90,7 +83,8 @@
             }],
             "parentId": null,
             "callbackType": null,
-            "criteria": "all"
+            "criteria": "all",
+            "disabled": true
         }, {
             "id": "MODIFY_VARIABLE_ACTION_e4160d7ef1c24100a41594371f37c1ee",
             "type": "MODIFY_VARIABLE_ACTION",
@@ -356,58 +350,6 @@
                         }
                     }
                 },
-                "ME_Mapping_a8d5892c4638419295cf5de71e1a10c6": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_a8d5892c4638419295cf5de71e1a10c6",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "isDefault",
-                        "dataType": "boolean",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Services",
-                        "propertyName": "default_flag",
-                        "dataType": "boolean",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "FLOW_create",
-                            "operationid": "121128"
-                        }
-                    }
-                },
-                "ME_Mapping_i74356b523d04abba3eb3ab917d7acc4": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_i74356b523d04abba3eb3ab917d7acc4",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "isSupernova",
-                        "dataType": "boolean",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Services",
-                        "propertyName": "supernova",
-                        "dataType": "boolean",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "FLOW_create",
-                            "operationid": "121128"
-                        }
-                    }
-                },
                 "ME_Mapping_a87d9865b0744e42abd523925b1f5635": {
                     "channel": "desktop",
                     "id": "ME_Mapping_a87d9865b0744e42abd523925b1f5635",
@@ -455,9 +397,61 @@
                             "operationid": "121128"
                         }
                     }
+                },
+                "ME_Mapping_h69e55b25ba047b89ce2ebb6151be313": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h69e55b25ba047b89ce2ebb6151be313",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowDefault",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "default_flag",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
+                },
+                "ME_Mapping_cb07da67970b48a38352e1df5bbbf03c": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cb07da67970b48a38352e1df5bbbf03c",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowSupernova",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "supernova",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_iaffcc88a9eb4d47a1a40282db0abed7", "ME_Mapping_e23c2026bb3f494c84d6f1d3fb61cd95", "ME_Mapping_dfec04fe0e2d47aeaeaf203b378950da", "ME_Mapping_b34d35190eb743ea8f07ce1367430545", "ME_Mapping_cf95aa0b707741a6b6509174c19515cf", "ME_Mapping_a34b3630d78f4fe6a8e704827813b482", "ME_Mapping_i480ad06eeda49bc895011866fbf13ee", "ME_Mapping_ibc5ebb56d3141b7a9673dd41ee67241", "ME_Mapping_a8d5892c4638419295cf5de71e1a10c6", "ME_Mapping_i74356b523d04abba3eb3ab917d7acc4", "ME_Mapping_a87d9865b0744e42abd523925b1f5635", "ME_Mapping_c881b7d404c2490bbb5615a864b3eef5"],
+            "mappingsOrder": ["ME_Mapping_iaffcc88a9eb4d47a1a40282db0abed7", "ME_Mapping_e23c2026bb3f494c84d6f1d3fb61cd95", "ME_Mapping_dfec04fe0e2d47aeaeaf203b378950da", "ME_Mapping_b34d35190eb743ea8f07ce1367430545", "ME_Mapping_cf95aa0b707741a6b6509174c19515cf", "ME_Mapping_a34b3630d78f4fe6a8e704827813b482", "ME_Mapping_i480ad06eeda49bc895011866fbf13ee", "ME_Mapping_ibc5ebb56d3141b7a9673dd41ee67241", "ME_Mapping_a87d9865b0744e42abd523925b1f5635", "ME_Mapping_c881b7d404c2490bbb5615a864b3eef5", "ME_Mapping_h69e55b25ba047b89ce2ebb6151be313", "ME_Mapping_cb07da67970b48a38352e1df5bbbf03c"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -550,16 +544,11 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "MODIFY_VARIABLE_ACTION_cf61571683b94610b6fa5abf4db23204",
-            "type": "MODIFY_VARIABLE_ACTION",
+            "id": "ADD_SNIPPET_af051cc43719469aae280a0c59b85637",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblFlowId = FLOW_create.FLOW[0].id;\ngblFlowDescription = self.view.txtFlowDescription.text;\ngblFlowCategory = self.view.lbCategory.selectedKeyValue[1];\ngblFlowEnvironment = self.view.lbEnvironment.selectedKeyValue[1];",
             "parentId": "_ab3367875b0f484d99539d2182b23334",
-            "callbackType": null,
-            "variable": "idNewFlow",
-            "valueType": "set",
-            "isGlobal": false,
-            "dataType": "expression",
-            "modifySet": "FLOW_create.FLOW[0].id",
-            "modifySetType": "string"
+            "callbackType": null
         }, {
             "id": "NAVIGATE_TO_FORM__d63d7001c0c94f699952b25895034080",
             "type": "NAVIGATE_TO_FORM",
@@ -567,23 +556,6 @@
             "formKUID": "j27b7970c694429db6312f3b27f7428e",
             "projectName": "luxotticaKi",
             "mappings": {
-                "ME_Mapping_h919993f067d4abe885d2515e84690a5": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_h919993f067d4abe885d2515e84690a5",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "isDefault",
-                        "propertyKey": "variable_isDefault",
-                        "dataType": "boolean",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "forkedPlatform": "all"
-                    }
-                },
                 "ME_Mapping_f8094628ea8c44ad98c5917e8c9ca0de": {
                     "channel": "desktop",
                     "id": "ME_Mapping_f8094628ea8c44ad98c5917e8c9ca0de",
@@ -654,32 +626,15 @@
                     "target": {
                         "forkedPlatform": "all"
                     }
-                },
-                "ME_Mapping_b0230044146a49e8a764f27406316b44": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_b0230044146a49e8a764f27406316b44",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "idNewFlow",
-                        "propertyKey": "variable_idNewFlow",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "forkedPlatform": "all"
-                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_h919993f067d4abe885d2515e84690a5", "ME_Mapping_f8094628ea8c44ad98c5917e8c9ca0de", "ME_Mapping_fbc24ba9f85f470ca8aa39cfdc170e99", "ME_Mapping_de879b66a4374d049ef1a5e102888544", "ME_Mapping_b0230044146a49e8a764f27406316b44"],
+            "mappingsOrder": ["ME_Mapping_f8094628ea8c44ad98c5917e8c9ca0de", "ME_Mapping_fbc24ba9f85f470ca8aa39cfdc170e99", "ME_Mapping_de879b66a4374d049ef1a5e102888544"],
             "parentId": "_ab3367875b0f484d99539d2182b23334",
             "callbackType": null,
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"variable_isDefault\": isDefault,\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"variable_idNewFlow\": idNewFlow,\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnConfirmPopupIsDefaultTrue\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnConfirmPopupIsDefaultTrue\"\n    }\n}",
             "isCustomInput": false
         }]
     }

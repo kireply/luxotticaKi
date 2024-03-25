@@ -39,6 +39,11 @@
     ],
     "clipbounds": false,
     "containerweight": 100,
+    "desktopweb": {
+        "psp": {
+            "ide_onHover": "AS_FlexContainer_ab453f1f491d4bd08fc2450f827900e7"
+        }
+    },
     "enablescrolling": true,
     "id": "channelTemplatewithContract",
     "info": null,

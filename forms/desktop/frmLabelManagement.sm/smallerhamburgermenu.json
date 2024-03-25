@@ -66,6 +66,13 @@
                 "kuid": "had49b146b4346e7bcde0cc295bb3877",
                 "srcKUID": "b78ca6f9cd4742d8b6d55eda7606510c",
                 "wType": "Button"
+            },
+            "responsiveData": {},
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "20%"
+                }
             }
         },
         "flxLogout": {
