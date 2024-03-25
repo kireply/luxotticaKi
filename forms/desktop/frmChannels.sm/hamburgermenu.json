@@ -108,6 +108,12 @@
                 }
             },
             "responsiveData": {},
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "2%"
+                }
+            },
             "width": {
                 "Default": {
                     "type": "string",

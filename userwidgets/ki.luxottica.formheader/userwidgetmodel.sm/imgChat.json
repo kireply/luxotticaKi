@@ -35,7 +35,11 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "20%"
+        "value": "23%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
     },
     "containerweight": 100,
     "id": "imgChat",
