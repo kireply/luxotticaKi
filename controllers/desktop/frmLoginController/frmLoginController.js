@@ -4,7 +4,7 @@ define({
  verifyLoggeduser: function(){
    var integrationService = null;
    var sdkDefaultInstance = voltmx.sdk.getDefaultInstance();
-   var integrationService = sdkDefaultInstance.getIntegrationService("mariaDB");
+   integrationService = sdkDefaultInstance.getIntegrationService("mariaDB");
    
    var email = this.view.txtEmail.text;
    var password = this.view.txtPassword.text;

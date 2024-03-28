@@ -1,7 +1,8 @@
 {
-    "AS_TextField_a1c5855b1e1d41d9938a8c9844a86704": {
-        "id": "AS_TextField_a1c5855b1e1d41d9938a8c9844a86704",
+    "AS_TextField_aa430b0ff7224b308a6b03e29ffbf60b": {
+        "id": "AS_TextField_aa430b0ff7224b308a6b03e29ffbf60b",
         "type": "ACTION_SEQUENCE",
+        "name": "onEndEditingHandlerForTxtSearchLabel",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -16,11 +17,11 @@
             "KUID": "jcf530250ee04551b0014dcb7147f2fe"
         },
         "language": "js",
-        "eventType": "onBeginEditing",
+        "eventType": "onEndEditing",
         "actions": [{
-            "id": "ADD_SNIPPET_i8bbeb45d3664544b0fe12b2cc1d0e26",
+            "id": "ADD_SNIPPET_e62f4161ecc648e39e46c65b8189675e",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.imgSearchLabel.setVisibility(false);",
+            "codeSnippet": "this.view.imgSearchLabel.setVisibility(true);",
             "parentId": null
         }]
     }

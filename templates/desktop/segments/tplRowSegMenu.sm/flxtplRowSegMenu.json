@@ -47,6 +47,11 @@
             "name": "flxtplRowSegMenuController"
         }
     },
+    "desktopweb": {
+        "psp": {
+            "ide_onHover": "AS_FlexContainer_ffbb6ac349e240cc9b190149629d0310"
+        }
+    },
     "enablescrolling": true,
     "id": "flxtplRowSegMenu",
     "info": null,

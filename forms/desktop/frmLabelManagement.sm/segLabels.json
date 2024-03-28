@@ -6,27 +6,27 @@
             {
                 "lb2": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "it-IT",
+                    "text": "en-US",
                     "type": "Label"
                 },
                 "lb3": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "de-DE",
+                    "text": "it-IT",
                     "type": "Label"
                 },
                 "lb4": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "fr-FR",
+                    "text": "de-DE",
                     "type": "Label"
                 },
                 "lb5": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "es-ES",
+                    "text": "fr-FR",
                     "type": "Label"
                 },
                 "lbl1": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "en-US",
+                    "text": "Label Key",
                     "type": "Label"
                 }
             },
@@ -34,7 +34,7 @@
                 {
                     "lb1": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Workshop on Web Development",
+                        "text": "item_no.1",
                         "type": "Label"
                     },
                     "lb2": {
@@ -61,7 +61,7 @@
                 {
                     "lb1": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Explore Our Services",
+                        "text": "item_no.2",
                         "type": "Label"
                     },
                     "lb2": {
@@ -88,7 +88,7 @@
                 {
                     "lb1": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Warning",
+                        "text": "item_no.3",
                         "type": "Label"
                     },
                     "lb2": {
@@ -115,7 +115,7 @@
                 {
                     "lb1": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Polarized",
+                        "text": "item_no.4",
                         "type": "Label"
                     },
                     "lb2": {
@@ -142,7 +142,7 @@
                 {
                     "lb1": {
                         "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                        "text": "Continue",
+                        "text": "item_no.5",
                         "type": "Label"
                     },
                     "lb2": {
@@ -252,7 +252,7 @@
     "selectedindex": null,
     "selectedindices": null,
     "selecteditems": null,
-    "selectedsectionindex": 0,
+    "selectedsectionindex": null,
     "selectionbehavior": "default",
     "separatorcolor": "aaaaaa00",
     "separatorrequired": true,

@@ -144,8 +144,6 @@ define({
                         }
                     });
                   
-                  this.view.btnPrevious.setVisibility(true);
-                  this.view.btnNext.setVisibility(true);
                   this.view.btnPrevious.setEnabled(false);
                   this.view.btnPrevious.opacity = 0.5;
                   
