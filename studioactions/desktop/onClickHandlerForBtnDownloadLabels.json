@@ -1,7 +1,8 @@
 {
-    "AS_Button_h188f600d5e34f588bbc057444214d22": {
-        "id": "AS_Button_h188f600d5e34f588bbc057444214d22",
+    "AS_Button_c908178e2edb454e95bc214915b33efc": {
+        "id": "AS_Button_c908178e2edb454e95bc214915b33efc",
         "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnDownloadLabels",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -15,14 +16,14 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "INVOKE_FUNCTION__j9a02f713f8c488091c19deacf93ccf4",
+            "id": "INVOKE_FUNCTION__f8ad8f18c30d45fa82c231a6c8064d9a",
             "type": "INVOKE_FUNCTION",
-            "sequenceKUID": "getExcel",
-            "display": "getExcel",
+            "sequenceKUID": "exportData",
+            "display": "exportData",
             "inputparams": [],
             "parentId": null,
             "callbackType": null,
-            "disabled": false,
+            "disabled": null,
             "source": "controller"
         }]
     }

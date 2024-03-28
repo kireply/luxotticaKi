@@ -111,7 +111,9 @@ define({
 */
 
 
-define({ 
+define({
+  
+  // IMPORT
   getExcel: function () {
         var config = {
             selectMultipleFiles: false,
@@ -181,10 +183,65 @@ define({
         });  
 	},
   
+  
+  
   xlsxVersion: function() {
     //voltmx.print("### XLSX.version: " + XLSX.version);
     
     return; //XLSX.version;
-  }
+  }, 
+  
+  
+  // OUTPUT
+  exportData(){
+    let numRows, numColumns;
+    let tableData = [];
+    let k = 1;
+    let colHeaders = ['Col1', 'Col2', 'Col3', 'Col4', 'Col5', 'Col6', 'Col7', 'Col8', 'Col9', 'Col10'];
+    //
+    //	Calculating the exact number of rows and of columns according to the Breakpoint of the flex Container containg the cells
+    //
+    const currentBreakpoint = voltmx.application.getCurrentBreakpoint();
+    if (currentBreakpoint === 640){
+      numRows = 6;
+      numColumns = 2;
+    } else if(currentBreakpoint === 1024){
+      numRows = 4;
+      numColumns = 3;
+    } else {
+      numRows = 3;
+      numColumns = 4;
+    }
+    //
+    //	Parsing the list of cells
+	//
+    for (let i = 0; i < numRows; i++){
+      const rowData = {};
+      //
+      //	We build an "object" whose fields are named like the "Column Headers" and whose value is the content of the relevant cell
+      //
+      for (let j = 0; j < numColumns; j++){
+        rowData[colHeaders[j]] = this.view[`txt${k}`].text;
+        k++;
+      }
+      //
+      //	we push the  object representing the "row" onto the array representing the "worksheet"
+      //
+      tableData.push(rowData);
+    }
+    voltmx.print(JSON.stringify(tableData, ' ', 4));
+    //
+    //	Creating the Workbook and filling it
+    //
+    let worksheet = XLSX.utils.json_to_sheet(tableData);
+    let workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, this.view.txtWorksheetName.text);
+    //
+    //	Creating the file
+    //
+    XLSX.writeFile(workbook, this.view.txtFileName.text, { compression: true });
+  } 
+  
+  
 });
 

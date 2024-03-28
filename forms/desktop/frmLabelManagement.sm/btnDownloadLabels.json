@@ -39,6 +39,7 @@
     },
     "displaytext": true,
     "id": "btnDownloadLabels",
+    "ide_onClick": "AS_Button_c908178e2edb454e95bc214915b33efc",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

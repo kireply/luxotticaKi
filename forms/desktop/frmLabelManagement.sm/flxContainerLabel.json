@@ -51,7 +51,9 @@
         "btn2",
         "txtAreaJSON",
         "btnPrevious",
-        "btnNext"
+        "btnNext",
+        "txtWorksheetName",
+        "txtFileName"
     ],
     "clipbounds": false,
     "containerweight": 100,

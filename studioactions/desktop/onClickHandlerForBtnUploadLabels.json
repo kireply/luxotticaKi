@@ -1,0 +1,30 @@
+{
+    "AS_Button_h188f600d5e34f588bbc057444214d22": {
+        "id": "AS_Button_h188f600d5e34f588bbc057444214d22",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnUploadLabels",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmLabelManagement",
+            "type": "forms",
+            "platform": "",
+            "KUID": "jcf530250ee04551b0014dcb7147f2fe"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__j9a02f713f8c488091c19deacf93ccf4",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "getExcel",
+            "display": "getExcel",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": false,
+            "source": "controller"
+        }]
+    }
+}
