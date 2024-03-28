@@ -136,7 +136,9 @@ define({
                     gblLabelsList = rowObject;
                     voltmx.print("### gblLabels stringify: " + JSON.stringify(gblLabelsList));
                   	
-                  // saving the number of labels' columns (in order to know how many pages we have to show)
+                    gblLabelsColumns = 0;
+                    gblLabelsPage = 1;
+                    // saving the number of labels' columns (in order to know how many pages we have to show)
                     gblLabelsList.forEach(obj => {
                         const numColumns = Object.keys(obj).length;
                         if (numColumns > gblLabelsColumns) {
@@ -148,7 +150,11 @@ define({
                   this.view.btnPrevious.opacity = 0.5;
                   
                   var maxPages = Math.ceil(gblLabelsColumns / 5); // this method rounds up to the nearest integer
-              
+              	  voltmx.print("### max pages = " + maxPages);
+                  voltmx.print("### max pages full = " + (gblLabelsColumns / 5) );
+                  voltmx.print("### gblLabelsColumns = " + gblLabelsColumns);
+                  voltmx.print("### gblLabelsPage = " + gblLabelsPage);
+                  
                   if (gblLabelsPage === maxPages) { // only one page needed (the document only have 5 columns)
                     this.view.btnNext.setEnabled(false);
                     this.view.btnNext.opacity = 0.5;

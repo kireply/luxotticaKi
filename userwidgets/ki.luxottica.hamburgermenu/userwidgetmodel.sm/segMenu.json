@@ -101,6 +101,7 @@
         "rowTemplateId": "b8d1444c0e984258a22c977e348f2dbd",
         "rowtemplate": "flxtplRowSegMenu",
         "widgetdatamap": {
+            "flxHover": "flxHover",
             "flxtplRowSegMenu": "flxtplRowSegMenu",
             "imgMenuIcon": "imgMenuIcon",
             "lblMenu": "lblMenu"

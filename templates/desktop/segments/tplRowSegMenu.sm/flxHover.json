@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "60dp"
+        "value": "66dp"
     },
     "_left_": {
-        "type": "string",
-        "value": "0dp"
+        "type": "number",
+        "value": "-99"
     },
     "_margin_": [
         0,
@@ -22,48 +22,31 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
+    "_skin_": "sf69e7691ed34d0595c3cb94350d927a",
     "_top_": {
         "type": "string",
         "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "107.28%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "children": [
-        "imgMenuIcon",
-        "lblMenu",
-        "flxHover"
-    ],
+    "children": [],
     "clipbounds": false,
     "containerId": true,
     "containerweight": 100,
-    "controllerInfo": {
-        "default": {
-            "channel": "desktop",
-            "name": "flxtplRowSegMenuController"
-        }
-    },
-    "desktopweb": {
-        "psp": {}
-    },
-    "disabledSkins": {
-        "focusSkin": "s0cb847e327c44e5803180ea12f08513"
-    },
     "enablescrolling": true,
-    "id": "flxtplRowSegMenu",
+    "id": "flxHover",
     "info": null,
-    "isTemplate": true,
     "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "d2df7272088744d2a2e1bd69a79792b8",
-    "layouttype": 3,
+    "isvisible": false,
+    "kuid": "c62bdcada49446a499684743c77604c9",
+    "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "tplRowSegMenu",
+    "parent": "flxtplRowSegMenu",
     "pf": "tplRowSegMenu",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

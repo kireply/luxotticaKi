@@ -34,8 +34,10 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 5,
+    "disabledSkins": {
+        "focusSkin": "s51dd73ed1fe441782da22b28897e93d"
+    },
     "displaytext": true,
-    "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
     "id": "btnPrevious",
     "ide_onClick": "AS_Button_b6103a8f0ee9422eaff8d85fe47a1ec0",
     "info": null,

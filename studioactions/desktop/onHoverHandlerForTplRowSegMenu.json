@@ -21,7 +21,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_b8c0afd87cf5400581c4bc9194c64a1d",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxtplRowSegMenu.backgroundColor = \"000000\";",
+            "codeSnippet": "voltmx.print(\"### dentro a HOVER Segment \");\n\nself.view.flxtplRowSegMenu.backgroundColor = \"808080\";\nself.view.flxHover.setVisibility(true);",
             "parentId": null
         }]
     }
