@@ -1,10 +1,10 @@
 {
-  "background_color": "cc31ccff",
+  "background_color": "000000ff",
   "bg_type": "one",
   "border_color": "000000ff",
-  "border_style": "plain",
+  "border_style": "rc",
   "border_type": 0,
-  "border_width": 0,
+  "border_width": 1,
   "isDefaultSkin": false,
   "kuid": "sc696b91647a498ca38132117385a0c4",
   "wType": "Segment"

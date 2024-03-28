@@ -71,7 +71,7 @@ define({
       voltmx.print("### INDEX: " + JSON.stringify(index));
       const flex = new voltmx.ui.FlexContainer({
         id: `flex${index}${new Date().getTime()}`,
-        height: `130dp`,
+        height: `160dp`, //130
         width: `11%`,
         responsiveConfig: {
           "span": {
@@ -86,7 +86,7 @@ define({
       const channel = new ki.luxottica.channelTemplatewithContract({
         id: `channel{index}${new Date().getTime()}`,
         width: '80%',
-        height: '147%',
+        height: '100%', //147
         centerX: '50%',
         centerY: '50%'
       }, {}, {});
@@ -117,6 +117,17 @@ define({
             voltmx.print("### GLOBAL LOGO: " + gblChannelLogo);
             var navigationManager = new voltmx.mvc.Navigation("frmFlows");
             navigationManager.navigate();
+          }
+        };
+        channel.onHoverTeaser = (widgRef, context) => {
+          voltmx.print("### button hover event executed: " + context.eventType);
+ 
+          if (context.eventType !== "leave"){
+          	  channel.flxChannel.borderWidth = 1;
+              channel.flxChannel.borderColor = "000000";
+          } else {
+              channel.flxChannel.borderWidth = 0;
+          	  channel.flxChannel.borderColor = "ffffff";
           }
         }
       }

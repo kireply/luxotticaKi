@@ -43,10 +43,15 @@
         "flxUploadLabels",
         "flxScrollSegLabels",
         "flxScrollSegLabels2",
+        "flxScrollLabels",
+        "flxScrollLabels1",
+        "lblShow",
+        "lblEntries",
         "btn1",
         "btn2",
-        "lblPrevious",
-        "lblNext"
+        "txtAreaJSON",
+        "btnPrevious",
+        "btnNext"
     ],
     "clipbounds": false,
     "containerweight": 100,

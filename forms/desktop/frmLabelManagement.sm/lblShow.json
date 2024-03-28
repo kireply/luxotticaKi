@@ -1,13 +1,13 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "1%"
-    },
     "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_left_": {
         "type": "string",
-        "value": "3.30%"
+        "value": "2%"
     },
     "_margin_": [
         1,
@@ -21,15 +21,15 @@
         0,
         0
     ],
-    "_right_": {
+    "_skin_": "sc3f216d71bc4e1590774be3837853df",
+    "_text_": "Show",
+    "_top_": {
         "type": "string",
-        "value": "2%"
+        "value": "32%"
     },
-    "_skin_": "scbed6127b254cee97fd6c1fbf1c6f8b",
-    "_text_": "Next",
     "_width_": {
-        "type": "string",
-        "value": "5%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {
@@ -40,8 +40,8 @@
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "contentalignment": 5,
-    "id": "lblNext",
+    "contentalignment": 4,
+    "id": "lblShow",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "heeed0d0b5904d8089c75254bb97d658",
+    "kuid": "g654bfcc1bdc4f309b90e1343a591511",
     "name": "kony.ui.Label",
     "parent": "flxContainerLabel",
     "pf": "frmLabelManagement",

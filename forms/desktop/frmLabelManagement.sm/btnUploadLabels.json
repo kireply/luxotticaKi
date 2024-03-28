@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s2d46b2ad2bb4c82ac5c930c7a507dcf",
+    "_skin_": "s312918df4cf49f79a1eb496bf33ef82",
     "_text_": "     Upload Labels",
     "_top_": {
         "type": "string",
@@ -34,9 +34,12 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 5,
+    "disabledSkins": {
+        "focusSkin": "s6de8ee3e9e1463996d5dbb22b25b33b"
+    },
     "displaytext": true,
-    "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
     "id": "btnUploadLabels",
+    "ide_onClick": "AS_Button_h188f600d5e34f588bbc057444214d22",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

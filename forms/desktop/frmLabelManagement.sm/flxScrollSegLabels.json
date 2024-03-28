@@ -56,7 +56,7 @@
     "id": "flxScrollSegLabels",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "b80469e3544a433eaa0dafa95ba3e361",
     "layouttype": 2,
     "name": "kony.ui.FlexScrollContainer",

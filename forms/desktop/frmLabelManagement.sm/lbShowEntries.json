@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "1.88%"
+        "value": "7.279999999999999%"
     },
     "_margin_": [
         0,
@@ -29,15 +29,16 @@
     },
     "_width_": {
         "type": "string",
-        "value": "17.44%"
+        "value": "8%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "contentalignment": 4,
+    "contentalignment": 5,
     "dropdownimage": "listboxarw.png",
     "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
     "groupcells": false,
     "id": "lbShowEntries",
+    "ide_onSelection": "AS_ListBox_b0309251dff54d378c48540355e5e28a",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
@@ -45,15 +46,15 @@
     "masterdata": [
         [
             "lb1",
-            "Show 5 entries"
+            "5"
         ],
         [
             "lb2",
-            "Show 10 entries"
+            "10"
         ],
         [
             "lb3",
-            "Show 25 entries"
+            "20"
         ]
     ],
     "name": "kony.ui.ListBox",
@@ -65,7 +66,7 @@
     "selectedkeys": null,
     "selectedkeyvalue": [
         "lb1",
-        "Show 5 entries"
+        "5"
     ],
     "selectedkeyvalues": null,
     "size": 18,

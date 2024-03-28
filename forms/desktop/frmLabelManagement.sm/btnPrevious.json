@@ -1,19 +1,19 @@
 {
-    "@class": "com.kony.gen.viz.model.component.KVizLabel",
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "1%"
+        "value": "0.94%"
     },
     "_height_": {
         "type": "string",
         "value": "3.30%"
     },
     "_margin_": [
-        1,
-        1,
-        1,
-        1
+        6,
+        6,
+        6,
+        6
     ],
     "_padding_": [
         0,
@@ -23,44 +23,29 @@
     ],
     "_right_": {
         "type": "string",
-        "value": "16%"
+        "value": "15.96%"
     },
-    "_skin_": "s07225c4e37f4d739a5bf51f452294e8",
+    "_skin_": "sc78d72c900f4a2383d40ee297af824b",
     "_text_": "Previous",
     "_width_": {
         "type": "string",
         "value": "8%"
     },
-    "_wrapping_": 2,
-    "android": {
-        "textStyle": {
-            "letterSpacing": 0,
-            "strikeThrough": false
-        }
-    },
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 5,
-    "id": "lblPrevious",
+    "displaytext": true,
+    "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
+    "id": "btnPrevious",
+    "ide_onClick": "AS_Button_b6103a8f0ee9422eaff8d85fe47a1ec0",
     "info": null,
-    "ipad": {
-        "psp": {
-            "wrapping": 2
-        }
-    },
-    "iphone": {
-        "psp": {
-            "wrapping": 2
-        }
-    },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "j136b3759cde4bb5b9ffbe6e91c36daf",
-    "name": "kony.ui.Label",
+    "kuid": "g97cc7ce23a64622a47b6aa212b90974",
+    "name": "kony.ui.Button",
     "parent": "flxContainerLabel",
     "pf": "frmLabelManagement",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "tooltip": "",
-    "wType": "Label"
+    "wType": "Button"
 }

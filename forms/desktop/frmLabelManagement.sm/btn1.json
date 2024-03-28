@@ -23,7 +23,7 @@
     ],
     "_right_": {
         "type": "string",
-        "value": "12.51%"
+        "value": "12%"
     },
     "_skin_": "s061bf7434aa4855a1f14203d66995c6",
     "_text_": "1",
@@ -40,7 +40,7 @@
     "ide_onClick": "AS_Button_a4cd3aae7611454b80d2dcc3bf504ee9",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "g3eaa7f94313426399dca0d297d8e2ee",
     "name": "kony.ui.Button",
     "parent": "flxContainerLabel",

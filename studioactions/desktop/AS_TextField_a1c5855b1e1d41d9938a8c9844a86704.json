@@ -1,10 +1,13 @@
 {
-    "AS_Form_d50b937705e1417dab512d2d53b41cf3": {
-        "id": "AS_Form_d50b937705e1417dab512d2d53b41cf3",
+    "AS_TextField_a1c5855b1e1d41d9938a8c9844a86704": {
+        "id": "AS_TextField_a1c5855b1e1d41d9938a8c9844a86704",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
         }],
         "contextObj": {
             "name": "frmLabelManagement",
@@ -13,11 +16,11 @@
             "KUID": "jcf530250ee04551b0014dcb7147f2fe"
         },
         "language": "js",
-        "eventType": "postShow",
+        "eventType": "onBeginEditing",
         "actions": [{
-            "id": "ADD_SNIPPET_dbbab3499ef246dfa62bf10741f83231",
+            "id": "ADD_SNIPPET_i8bbeb45d3664544b0fe12b2cc1d0e26",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.channelTemplatewithContract.channelLogo = gblChannelLogo;\nthis.view.channelTemplatewithContract.channelInfo = gblChannelName + \" - #\" + gblChannelId;",
+            "codeSnippet": "this.view.imgSearchLabel.setVisibility(false);",
             "parentId": null
         }]
     }

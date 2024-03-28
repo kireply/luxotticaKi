@@ -34,8 +34,10 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 5,
+    "disabledSkins": {
+        "focusSkin": "s6de8ee3e9e1463996d5dbb22b25b33b"
+    },
     "displaytext": true,
-    "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
     "id": "btnDownloadLabels",
     "info": null,
     "iscustomlayout": false,
