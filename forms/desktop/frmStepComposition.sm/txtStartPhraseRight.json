@@ -30,7 +30,7 @@
     "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "0%"
+        "value": "53%"
     },
     "_width_": {
         "type": "string",
@@ -44,10 +44,6 @@
     "centerx": {
         "type": "string",
         "value": "50%"
-    },
-    "centery": {
-        "type": "string",
-        "value": "60%"
     },
     "closebuttontext": "",
     "containerheight": "",

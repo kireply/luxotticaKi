@@ -4,7 +4,7 @@ define({
  verifyLoggeduser: function(){
    var integrationService = null;
    var sdkDefaultInstance = voltmx.sdk.getDefaultInstance();
-   var integrationService = sdkDefaultInstance.getIntegrationService("mariaDB");
+   integrationService = sdkDefaultInstance.getIntegrationService("mariaDB");
    
    var email = this.view.txtEmail.text;
    var password = this.view.txtPassword.text;
@@ -131,6 +131,111 @@ define({
         "type": "string",
         "mode": "dropdown",
         "default": null
+      }
+    }
+  },
+  "RXC_BRAND_FOOTER": {
+    "displayName": "RXC_BRAND_FOOTER",
+    "layout": ["previewSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "position_values": [
+      "top-left",
+      "top-right",
+      "bottom-left",
+      "bottom-right",
+      "center"
+    ],
+    "props": {
+      "position": {
+        "required": true,
+        "type": "string",
+        "mode": "dropdown",
+        "default": null
+      }
+    }
+  },
+  "RXC_FRAME_IMAGE": {
+    "displayName": "RXC_FRAME_IMAGE",
+    "layout": ["previewSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "position_values": [
+      "top-left",
+      "top-right",
+      "bottom-left",
+      "bottom-right",
+      "center"
+    ],
+    "props": {
+      "position": {
+        "required": true,
+        "type": "string",
+        "mode": "dropdown"
+      }
+    }
+  },
+  "RXC_TITLE_DESCRIPTION": {
+    "displayName": "RXC_TITLE_DESCRIPTION",
+    "layout": ["stepSection"],
+    "previewImage": "",
+    "modalImage": "",
+    "props": {
+      "id": {
+        "required": true,
+        "type": "number"
+      },
+      "order": {
+        "required": false,
+        "type": "number",
+        "default": null
+      },
+      "title": {
+        "required": true,
+        "type": "string",
+        "default": null,
+        "mode": "label"
+      },
+      "description": {
+        "required": false,
+        "type": "string",
+        "mode": "label",
+        "default": null
+      },
+      "accordion": {
+        "required": false,
+        "type": "boolean",
+        "mode": "switch",
+        "default": "false"
+      },
+      "steps_addOns_label": {
+        "required": false,
+        "type": "string",
+        "mode": "label"
+      },
+      "accordionLabel": {
+        "required": false,
+        "default": "Already included in your lens",
+        "type": "string",
+        "mode": "label"
+      },
+      "uvProtection": {
+        "required": false,
+        "default": "UV protection",
+        "type": "string",
+        "mode": "label"
+      },
+      "antiScratch": {
+        "required": false,
+        "default": "Scratch resistant",
+        "type": "string",
+        "mode": "label"
+      },
+      "premium": {
+        "required": false,
+        "default": "Add anti-reflective and anti-smudge treatments ",
+        "type": "string",
+        "mode": "label"
       }
     }
   }

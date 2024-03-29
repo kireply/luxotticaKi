@@ -43,6 +43,11 @@
     ],
     "clipbounds": false,
     "containerweight": 100,
+    "desktopweb": {
+        "psp": {
+            "hoverSkin": "sb53096092d74cffb4f856aaa50fcac8"
+        }
+    },
     "enablescrolling": true,
     "id": "flxChannel",
     "info": null,

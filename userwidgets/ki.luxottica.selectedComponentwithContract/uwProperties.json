@@ -1,0 +1,152 @@
+{
+    "classname": "selectedComponentwithContract",
+    "definitions": {
+        "apis": {
+            "custom": [],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "acc09190429e41469bdb905345431ec5",
+                    "originalPropertyKey": "onRowClick",
+                    "propertyIndex": 1,
+                    "propertyKey": "onRowClickTeaser",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onRowClickTeaser",
+                        "srcWidget": "segmentLeft",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "Segment"
+                    },
+                    "srcWgtKUID": "j772813d0b8f4ced83bedd8c9f0c59aa",
+                    "translateAtInstance": false
+                }
+            ]
+        },
+        "groups": {
+            "apis": [],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "j0e08a79330241ee9b09e0e9699cf13e",
+                    "originalPropertyKey": "data",
+                    "propertyIndex": 1,
+                    "propertyKey": "leftData",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "leftData",
+                        "isHiddenInTool": false,
+                        "srcWidget": "segmentLeft",
+                        "type": "data",
+                        "uiConfig": {
+                            "Button": {
+                                "dataRetrieverId": "Masterdata-Segment",
+                                "dataUpdaterId": "Masterdata-Segment",
+                                "popupId": "Masterdata-Segment",
+                                "type": "SegmentMasterDataBtn"
+                            },
+                            "Label": {}
+                        },
+                        "uiRepresentation": "Label-Button",
+                        "wType": "Segment"
+                    },
+                    "srcWgtKUID": "j772813d0b8f4ced83bedd8c9f0c59aa"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "i9be350e09ca4f2b82d3f8196e543784",
+                    "originalPropertyKey": "data",
+                    "propertyIndex": 2,
+                    "propertyKey": "rightData",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "rightData",
+                        "isHiddenInTool": false,
+                        "srcWidget": "segmentRight",
+                        "type": "data",
+                        "uiConfig": {
+                            "Button": {
+                                "dataRetrieverId": "Masterdata-Segment",
+                                "dataUpdaterId": "Masterdata-Segment",
+                                "popupId": "Masterdata-Segment",
+                                "type": "SegmentMasterDataBtn"
+                            },
+                            "Label": {}
+                        },
+                        "uiRepresentation": "Label-Button",
+                        "wType": "Segment"
+                    },
+                    "srcWgtKUID": "a1e4319856884900b4874509960ba693"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "g26cdf2c761c4a8f8d04ba4265ef75f7",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 3,
+                    "propertyKey": "componentOrder",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "componentOrder",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblComponentOrder",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "b3b689907b7c42b6ae0c0c5720cbc0d3"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "cc85823ffbee4b94bfe2fc941044fb90",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 4,
+                    "propertyKey": "componentId",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "componentId",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblComponentId",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "i4033d7b536c4d9891e20ecf39a7d5e3"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "ki.luxottica",
+    "version": "1.0.0"
+}

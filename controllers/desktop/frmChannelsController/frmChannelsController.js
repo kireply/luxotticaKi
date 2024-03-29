@@ -34,6 +34,10 @@ define({
     this.view.flxChannels.removeAll();
     this.channels.forEach((box, index) => {this.addTile(box,index)});
     this.addTile(null, 99);
+//     content = this.view.flxChannels.widgets();
+//     content.forEach(function(widget) {
+//        debugger;  
+//     });
   },
   fetchChannels(){
     return new Promise((resolve, reject) => {
@@ -104,7 +108,7 @@ define({
             this.view.flxPopupChannelInfo.txtChannelLogo.text = channel.channelLogo;
             this.view.flxPopupChannelInfo.txtChannelProperties.text = channel.channelProperties;
             this.view.flxPopupChannelInfo.lbChannelName.masterData = [ ["lb1", channel.channelInfo] ];
-            this.view.flxPopupChannelInfo.lbChannelName.selectedKey = "lb1"
+            this.view.flxPopupChannelInfo.lbChannelName.selectedKey = "lb1";
             this.view.flxPopupChannelInfo.setVisibility(true);
           } else {
   //           voltmx.print("### NAVIGATE");
@@ -116,6 +120,18 @@ define({
             voltmx.print("### GLOBAL LOGO: " + gblChannelLogo);
             var navigationManager = new voltmx.mvc.Navigation("frmFlows");
             navigationManager.navigate();
+          }
+        };
+        channel.onHoverTeaser = (widgRef, context) => {
+          
+          voltmx.print("### button hover event executed: " + context.eventType);
+
+          if (context.eventType !== "leave"){
+          	  channel.flxChannel.borderWidth = 0;
+              channel.flxChannel.borderColor = "ffffff";
+          } else {
+              channel.flxChannel.borderWidth = 1;
+          	  channel.flxChannel.borderColor = "000000";
           }
         }
       }
@@ -140,5 +156,7 @@ define({
       this.view.flxChannels.add(flex);
     this.view.flxChannels.forceLayout();
   }
+  
+  
  
 });

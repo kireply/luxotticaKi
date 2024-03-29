@@ -262,7 +262,7 @@
     "cordovaModified": false,
     "createdVizVersion": "9.5.4",
     "createdgaversion": "9.5.4",
-    "currentgaversion": "9.5.16",
+    "currentgaversion": "9.5.23",
     "deeplinkkey": "None",
     "defaultZIndex": "1",
     "defaultlocalekey": "en_US",
@@ -375,7 +375,7 @@
             "version": "1.0"
         }
     },
-    "konyVizVersion": "9.5.16",
+    "konyVizVersion": "9.5.23",
     "lastmodifiedtime": "1706781991449",
     "location": "false",
     "mangoapptitlekey": ",,,,,,",
@@ -644,7 +644,7 @@
     "previewshowpassword": "false",
     "privateNetworkClientServer": "false",
     "project.type": "js",
-    "project_version": "sprint43",
+    "project_version": "sprint45",
     "protectedmodeenabled_android": "false",
     "protectedmodeenabled_androidwear": "false",
     "protectedmodeenabled_ios": "false",

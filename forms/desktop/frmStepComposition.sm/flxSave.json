@@ -45,6 +45,7 @@
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxSave",
+    "ide_onClick": "AS_FlexContainer_cc698d4b7844402698c9f1c65cd2003e",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

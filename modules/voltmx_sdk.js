@@ -1,5 +1,5 @@
  /*
-  * voltmx-sdk-ide Version 9.5.15
+  * voltmx-sdk-ide Version 9.5.22
   */
         
 //#ifdef iphone
@@ -540,7 +540,7 @@ voltmx.sdk.currentInstance = null;
 voltmx.sdk.isLicenseUrlAvailable = true;
 voltmx.sdk.isOAuthLogoutInProgress = false;
 voltmx.sdk.constants = voltmx.sdk.constants || {};
-voltmx.sdk.version = "9.5.15";
+voltmx.sdk.version = "9.5.22";
 voltmx.sdk.logsdk = new voltmxSdkLogger();
 voltmx.sdk.syncService = null;
 voltmx.sdk.dataStore = voltmx.sdk.dataStore || new voltmxDataStore();
@@ -5102,47 +5102,7 @@ voltmx.sdk.OnlineObjectService = function(voltmxRef, serviceName, serviceInfo) {
      */
     this.getBinaryContent = function(options, successCallback, failureCallback) {
         voltmx.sdk.logsdk.trace("Entering voltmx.sdk.OnlineObjectService.getBinaryContent");
-        if(options == null || options == undefined){
-            voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.null_or_undefined, "options" + voltmx.sdk.errormessages.null_or_undefined));
-            return;
-        }
-
-        var tmpDataUrl = this.getBinaryUrl();
-        var dataObject = options["dataObject"];
-        if(!(dataObject instanceof voltmx.sdk.dto.DataObject)) {
-            voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.invalid_dataobject_instance,voltmx.sdk.errormessages.invalid_dataobject_instance));
-            return;
-        }
-
-        if(!(options["queryParams"] == null || options["queryParams"] == undefined)) {
-            if(!(options["queryParams"] instanceof Object)){
-                voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.invalid_queryparams_instance,voltmx.sdk.errormessages.invalid_queryparams_instance));
-                return;
-            }
-        }
-
-        var objName = dataObject.getObjectName();
-        var binaryColName = options["binaryAttrName"];
-        if (binaryColName == null || binaryColName == undefined) {
-            voltmx.sdk.logsdk.error("### OnlineObjectService::getBinaryContent Error: Please provide column name to fetch binary content");
-            voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj("90000","Please provide column name to fetch binary content"));
-            return;
-        }
-        function getBinaryContentOperationHandler() {
-            currentObject.getMetadataOfObject(objName, {}, function (response) {
-                _getBinaryContent(options, tmpDataUrl, successCallback, failureCallback);
-            }, function (error) {
-                voltmx.sdk.logsdk.error("### OnlineObjectService::getBinaryContent Error:" , error);
-                voltmx.sdk.verifyAndCallClosure(failureCallback, error);
-            });
-        }
-
-        if (voltmx.sdk.skipAnonymousCall){
-            getBinaryContentOperationHandler();
-        }
-        else{
-            voltmx.sdk.claimsRefresh(getBinaryContentOperationHandler, failureCallback);
-        }
+        this._validateBinaryContentRequest(options, successCallback, failureCallback, "get", _getBinaryContent);
     };
 
     /**
@@ -5153,48 +5113,7 @@ voltmx.sdk.OnlineObjectService = function(voltmxRef, serviceName, serviceInfo) {
      */
     this.createBinaryContent = function(options, successCallback, failureCallback) {
         voltmx.sdk.logsdk.trace("Entering voltmx.sdk.OnlineObjectService.createBinaryContent");
-        var tmpDataUrl = this.getBinaryUrl();
-
-        if(options == null || options == undefined) {
-            voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.null_or_undefined,"options" + voltmx.sdk.errormessages.null_or_undefined));
-            return;
-        }
-
-        var dataObject = options["dataObject"];
-        if(!(dataObject instanceof voltmx.sdk.dto.DataObject)) {
-            voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.invalid_dataobject_instance,voltmx.sdk.errormessages.invalid_dataobject_instance));
-            return;
-        }
-
-        if(!(options["queryParams"] == null || options["queryParams"] == undefined)) {
-            if(!(options["queryParams"] instanceof Object)){
-                voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.invalid_queryparams_instance,voltmx.sdk.errormessages.invalid_queryparams_instance));
-                return;
-            }
-        }
-
-        var objName = dataObject.getObjectName();
-        var binaryColName = options["binaryAttrName"];
-        if (binaryColName == null || binaryColName == undefined) {
-            voltmx.sdk.logsdk.error("### OnlineObjectService::createBinaryContent Error: Please provide column name to create binary content");
-            voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj("900000","Please provide column name to create binary content"));
-            return;
-        }
-        function createBinaryContentOperationHandler() {
-            currentObject.getMetadataOfObject(objName, {}, function (response) {
-                _createBinaryContent(options, tmpDataUrl, successCallback, failureCallback);
-            }, function (error) {
-                voltmx.sdk.logsdk.error("### OnlineObjectService::createBinaryContent Error:" , error);
-                voltmx.sdk.verifyAndCallClosure(failureCallback, error);
-            });
-        }
-
-        if (voltmx.sdk.skipAnonymousCall){
-            createBinaryContentOperationHandler();
-        }
-        else{
-            voltmx.sdk.claimsRefresh(createBinaryContentOperationHandler, failureCallback);
-        }
+        this._validateBinaryContentRequest(options, successCallback, failureCallback, "create", _createBinaryContent);
     };
 
     /**
@@ -5205,50 +5124,75 @@ voltmx.sdk.OnlineObjectService = function(voltmxRef, serviceName, serviceInfo) {
      */
     this.updateBinaryContent = function(options, successCallback, failureCallback) {
         voltmx.sdk.logsdk.trace("Entering voltmx.sdk.OnlineObjectService.updateBinaryContent");
-        var tmpDataUrl = this.getBinaryUrl();
-
-        if(options == null || options == undefined) {
-            voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.null_or_undefined, "options" + voltmx.sdk.errormessages.null_or_undefined));
-            return;
-        }
-
-        var dataObject = options["dataObject"];
-        if(!(dataObject instanceof voltmx.sdk.dto.DataObject)) {
-            voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.invalid_dataobject_instance,voltmx.sdk.errormessages.invalid_dataobject_instance));
-            return;
-        }
-
-        if(!(options["queryParams"] == null || options["queryParams"] == undefined)) {
-            if(!(options["queryParams"] instanceof Object)){
-                voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.invalid_queryparams_instance,voltmx.sdk.errormessages.invalid_queryparams_instance));
-                return;
-            }
-        }
-
-        var objName = dataObject.getObjectName();
-        var binaryColName = options["binaryAttrName"];
-        if (binaryColName == null || binaryColName == undefined) {
-            voltmx.sdk.logsdk.error("### OnlineObjectService::updateBinaryContent Error: Please provide column name to create binary content");
-            voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj("90000","Please provide column name to create binary content"));
-            return;
-        }
-        function updateBinaryContentOperationHandler() {
-            currentObject.getMetadataOfObject(objName, {}, function (response) {
-                _updateBinaryContent(options, tmpDataUrl, successCallback, failureCallback);
-            }, function (error) {
-                voltmx.sdk.logsdk.error("### OnlineObjectService::updateBinaryContent Error:" , error);
-                voltmx.sdk.verifyAndCallClosure(failureCallback, error);
-            });
-        }
-
-        if (voltmx.sdk.skipAnonymousCall){
-            updateBinaryContentOperationHandler();
-        }
-        else{
-            voltmx.sdk.claimsRefresh(updateBinaryContentOperationHandler, failureCallback);
-        }
-
+        this._validateBinaryContentRequest(options, successCallback, failureCallback, "update", _updateBinaryContent);
     };
+
+    /**
+     * Helps to delete the binary content of the specified column on the Object
+     * @param {map} options - includes {"dataObject":{@link voltmx.sdk.dto.DataObject}, "binaryAttrName":columnName}
+     * @param successCallback
+     * @param failureCallback
+     */
+    this.deleteBinaryContent = function(options, successCallback, failureCallback) {
+        voltmx.sdk.logsdk.trace("Entering voltmx.sdk.OnlineObjectService.deleteBinaryContent");
+        this._validateBinaryContentRequest(options, successCallback, failureCallback, "delete", _deleteBinaryContent);
+    };
+
+    this._validateBinaryContentRequest = function(options, successCallback, failureCallback, operation, helperFunc) {
+      var legalOps = ["get", "create", "update", "delete"];
+      var opString = operation;
+      if(legalOps.includes(operation)) {
+        if(operation === "get") {
+          opString = "fetch";
+        } else if(operation === "update") {
+          opString = "create";
+        }
+      } else {
+        return;
+      }
+      var tmpDataUrl = this.getBinaryUrl();
+
+      if(options == null || options == undefined) {
+          voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.null_or_undefined,"options" + voltmx.sdk.errormessages.null_or_undefined));
+          return;
+      }
+
+      var dataObject = options["dataObject"];
+      if(!(dataObject instanceof voltmx.sdk.dto.DataObject)) {
+          voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.invalid_dataobject_instance,voltmx.sdk.errormessages.invalid_dataobject_instance));
+          return;
+      }
+
+      if(!(options["queryParams"] == null || options["queryParams"] == undefined)) {
+          if(!(options["queryParams"] instanceof Object)){
+              voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.invalid_queryparams_instance,voltmx.sdk.errormessages.invalid_queryparams_instance));
+              return;
+          }
+      }
+
+      var objName = dataObject.getObjectName();
+      var binaryColName = options["binaryAttrName"];
+      if (binaryColName == null || binaryColName == undefined) {
+          voltmx.sdk.logsdk.error("### OnlineObjectService::" + operation + "BinaryContent Error: Please provide column name to " + opString + " binary content");
+          voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj("90000","Please provide column name to " + opString + " binary content"));
+          return;
+      }
+      function binaryContentOperationHandler() {
+          currentObject.getMetadataOfObject(objName, {}, function (response) {
+              helperFunc(options, tmpDataUrl, successCallback, failureCallback);
+          }, function (error) {
+              voltmx.sdk.logsdk.error("### OnlineObjectService::" + operation + "BinaryContent Error:" , error);
+              voltmx.sdk.verifyAndCallClosure(failureCallback, error);
+          });
+      }
+
+      if (voltmx.sdk.skipAnonymousCall){
+          binaryContentOperationHandler();
+      }
+      else{
+          voltmx.sdk.claimsRefresh(binaryContentOperationHandler, failureCallback);
+      }
+    }
 
     function _getBinaryContent(options, tmpDataUrl, successCallback, failureCallback) {
         var dataObject = options["dataObject"];
@@ -5575,6 +5519,71 @@ voltmx.sdk.OnlineObjectService = function(voltmxRef, serviceName, serviceInfo) {
         }
 
         invokeObjectOperation(url, dataObject.getObjectName(), headers, formData, null,  invokeSuccessCallback,invokeFailureCallback, voltmx.sdk.util.checkAndFetchNetworkProviderOptions(options));
+    }
+
+    function _deleteBinaryContent(options, tmpDataUrl, successCallback, failureCallback) {
+        var dataObject = options["dataObject"];
+        var headers = options["headers"];
+        var binaryColName = options["binaryAttrName"];
+        var objName = dataObject.getObjectName();
+        var queryParams = options["queryParams"];
+        var url =  tmpDataUrl + "/" + objName;
+        var objMetadata = voltmx.sdk.ObjectServiceUtil.getCachedObjectMetadata(serviceName, objName);
+        if (objMetadata.primaryKey != undefined && objMetadata.primaryKey != null ) {
+            var pkCount = objMetadata.primaryKey.length;
+            if (pkCount == 0) {
+                voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.primarykey_unavailable,voltmx.sdk.errormessages.primarykey_unavailable));
+                return;
+            }
+            //reading primarykey and framing filter clause
+            var pkey = objMetadata.primaryKey[0];
+            if(dataObject.getRecord()[pkey] == undefined || dataObject.getRecord()[pkey] == null){
+                voltmx.sdk.logsdk.error("### OnlineObjectService::_deleteBinaryContent Error: Please provide primary key details to get Binary content.");
+                voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.primarykey_unavailable,voltmx.sdk.errormessages.primarykey_unavailable));
+                return;
+            }
+            url = url + "?" + pkey + "=" + dataObject.getRecord()[pkey];
+            //passing binary column name to server
+            if(binaryColName != null && binaryColName != undefined) {
+                url = url + "&fieldName=" + binaryColName;
+            }
+            if(queryParams != undefined && queryParams != null){
+                url = url + "&" + voltmx.sdk.util.objectToQueryParams(queryParams);
+            }
+
+        } else {
+            voltmx.sdk.verifyAndCallClosure(failureCallback, voltmx.sdk.error.getClientErrObj(voltmx.sdk.errorcodes.primarykey_unavailable,voltmx.sdk.errormessages.primarykey_unavailable));
+            return;
+        }
+        if (!headers) {
+            //if headers not sent by the deveolper
+            headers = {};
+        }
+
+        var isVoltmxApiVersionAvailable = false;
+        if (typeof(headers) !== 'undefined' && headers !== null) {
+            //check for x-voltmx-api-version case insensitive
+            for (var header in headers) {
+                if(header !== null && header !=='undefined'){
+                    if (header.toLowerCase() === voltmx.sdk.constants.API_VERSION_HEADER.toLowerCase())
+                        isVoltmxApiVersionAvailable = true
+                }
+            }
+            if (!isVoltmxApiVersionAvailable) {
+                headers[voltmx.sdk.constants.API_VERSION_HEADER] = currentObject.getVersion();
+            }
+        }
+        function invokeSuccessCallback(response){
+            voltmx.sdk.logsdk.debug("### OnlineObjectService::_deleteBinaryContent::invokeSuccessCallback Response:" , response);
+            voltmx.sdk.verifyAndCallClosure(successCallback,response);
+        }
+
+        function invokeFailureCallback(error){
+            voltmx.sdk.logsdk.error("### OnlineObjectService::_deleteBinaryContent::invokeFailureCallback Error:" , error);
+            voltmx.sdk.verifyAndCallClosure(failureCallback,error);
+        }
+
+        invokeObjectOperation(url, dataObject.getObjectName(), headers, null, voltmx.sdk.constants.HTTP_METHOD_DELETE, invokeSuccessCallback, invokeFailureCallback, voltmx.sdk.util.checkAndFetchNetworkProviderOptions(options));
     }
 
     function _create(options, tmpDataUrl, successCallback, failureCallback) {
@@ -6128,6 +6137,8 @@ function invokeObjectOperation(url, svcid, headers, formData, httpMethod, succes
 
     if (httpMethod === "GET") {
         networkProvider.get(url, null, defaultHeaders, networksuccess, networkerror, "formdata", networkProviderOptions);
+    } else if (httpMethod === "DELETE") {
+        networkProvider.invokeDeleteRequest(url, null, defaultHeaders, networksuccess, networkerror, null, networkProviderOptions);
     } else {
         networkProvider.post(url, formData, defaultHeaders,	networksuccess,	networkerror, "formdata", networkProviderOptions);
     }
@@ -8469,10 +8480,6 @@ voltmx.sdk.SyncV2Classes = (function(){
                 onProgress: function(obj) {
                     voltmx.sdk.logsdk.trace("VoltmxSyncProgressCallback : "+this.progressLog);
                     this.progressCallback(obj);
-                    var jsonObject = voltmx.sdk.OfflineObjects.createJSONObjectFromHashMap(obj, "syncProgressCallbackObject");
-                    if (jsonObject.phase === "Sync" && jsonObject.state === "Ended") {
-                        java.unref(this);
-                    }
                 }
             }
         );
@@ -9127,7 +9134,9 @@ voltmx.sdk.OfflineObjects.startSync = function(options, successCallback, failure
     function onProgress(obj) {
         voltmx.sdk.logsdk.info(LOG_PREFIX + ": Application Sync Progress Callback");
         var jsonObject = voltmx.sdk.OfflineObjects.createJSONObjectFromHashMap(obj, "applicationSyncProgressCallbackObject");
-        progressCallback(jsonObject);
+        if(progressCallback && typeof(progressCallback) === 'function'){
+			progressCallback(jsonObject);
+		}
     }
 };
 
@@ -9181,7 +9190,9 @@ voltmx.sdk.VMXObj.startSync = function (vmxObj, syncConfig, successCallback, fai
 	function onProgress(obj) {
 		voltmx.sdk.logsdk.info(LOG_PREFIX + ": Sync Progress Callback");
 		var jsonObject = voltmx.sdk.OfflineObjects.createJSONObjectFromHashMap(obj, "syncProgressCallbackObject");
-		progressCallback(jsonObject);
+		if(progressCallback && typeof(progressCallback) === 'function'){
+			progressCallback(jsonObject);
+		}
 	}
 };
 
@@ -9513,7 +9524,9 @@ voltmx.sdk.VMXObjSvc.startSync = function (vmxObjSvc, syncConfig, successCallbac
 	function onProgress(obj) {
 		voltmx.sdk.logsdk.info(LOG_PREFIX + ": Sync Progress Callback");
 		var jsonObject = voltmx.sdk.OfflineObjects.createJSONObjectFromHashMap(obj, "syncProgressCallbackObject");
-		progressCallback(jsonObject);
+		if(progressCallback && typeof(progressCallback) === 'function'){
+			progressCallback(jsonObject);
+		}
 	}
 };
 
@@ -11333,15 +11346,22 @@ function IntegrationService(voltmxRef, serviceName) {
     }
 
     function retryServiceCall(errorResponse) {
+        var canRetry=false;
         if (errorResponse[voltmx.sdk.constants.MF_CODE]) {
             // check for the mfcode for which,
             // retry should be done.
+            canRetry = false;
         } else {
             if (errorResponse[voltmx.sdk.constants.HTTP_STATUS_CODE] && errorResponse[voltmx.sdk.constants.HTTP_STATUS_CODE] === 401) {
-                voltmx.sdk.logsdk.debug("### IntegrationService::retryServiceCall received 401 from foundry, trying to refresh backend token");
-                return true;
+                if (errorResponse[voltmx.sdk.constants.MF_OPSTATUS] && errorResponse[voltmx.sdk.constants.MF_OPSTATUS] === 8009) {
+                    canRetry =  false;
+                } else {
+                    voltmx.sdk.logsdk.debug("### IntegrationService::retryServiceCall received httpStatusCode = 401 and opstatus != 8009 from foundry , trying to refresh backend token");
+                    canRetry =  true;
+                }
             }
         }
+        return canRetry;
     }
 
     function _invokeOperation(operationName, headers, data, isRetryNeeded, successCallback, failureCallback, options) {

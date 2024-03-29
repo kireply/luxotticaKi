@@ -261,7 +261,14 @@
                 "kuid": "dda1dea017c541aeaffb0df1ee0ce690",
                 "srcKUID": "c8c23f21358546719e96e74366017270",
                 "wType": "Image"
-            }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "responsiveData": {}
         },
         "lblComponents": {
             "__events__": {},

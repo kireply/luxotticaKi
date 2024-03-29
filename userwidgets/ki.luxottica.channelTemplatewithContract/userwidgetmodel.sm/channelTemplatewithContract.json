@@ -39,6 +39,9 @@
     ],
     "clipbounds": false,
     "containerweight": 100,
+    "desktopweb": {
+        "psp": {}
+    },
     "enablescrolling": true,
     "id": "channelTemplatewithContract",
     "info": null,

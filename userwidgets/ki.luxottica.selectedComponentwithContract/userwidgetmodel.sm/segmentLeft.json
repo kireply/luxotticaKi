@@ -1,0 +1,314 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_data_": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_indicator_": "none",
+    "_left_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_top_": {
+        "type": "string",
+        "value": "0%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerweight": 100,
+    "counter": "09",
+    "desktop": {
+        "_data_": [
+            {
+                "imgComponent": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "imagedrag.png"
+                },
+                "imgInfo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "info_icon.png"
+                },
+                "lblComponentName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "RXC_BRAND_LOGO"
+                },
+                "lblLayout": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgComponent": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "imagedrag.png"
+                },
+                "imgInfo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "info_icon.png"
+                },
+                "lblComponentName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "RXC_BRAND_LOGO"
+                },
+                "lblLayout": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgComponent": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "imagedrag.png"
+                },
+                "imgInfo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "info_icon.png"
+                },
+                "lblComponentName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "RXC_BRAND_LOGO"
+                },
+                "lblLayout": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgComponent": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "imagedrag.png"
+                },
+                "imgInfo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "info_icon.png"
+                },
+                "lblComponentName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "RXC_BRAND_LOGO"
+                },
+                "lblLayout": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgComponent": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "imagedrag.png"
+                },
+                "imgInfo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "info_icon.png"
+                },
+                "lblComponentName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "RXC_BRAND_LOGO"
+                },
+                "lblLayout": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgComponent": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "imagedrag.png"
+                },
+                "imgInfo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "info_icon.png"
+                },
+                "lblComponentName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "RXC_BRAND_LOGO"
+                },
+                "lblLayout": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgComponent": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "imagedrag.png"
+                },
+                "imgInfo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "info_icon.png"
+                },
+                "lblComponentName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "RXC_BRAND_LOGO"
+                },
+                "lblLayout": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgComponent": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "imagedrag.png"
+                },
+                "imgInfo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "info_icon.png"
+                },
+                "lblComponentName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "RXC_BRAND_LOGO"
+                },
+                "lblLayout": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgComponent": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "imagedrag.png"
+                },
+                "imgInfo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "info_icon.png"
+                },
+                "lblComponentName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "RXC_BRAND_LOGO"
+                },
+                "lblLayout": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            },
+            {
+                "imgComponent": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "imagedrag.png"
+                },
+                "imgInfo": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "info_icon.png"
+                },
+                "lblComponentName": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "RXC_BRAND_LOGO"
+                },
+                "lblLayout": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label"
+                }
+            }
+        ],
+        "rowTemplateId": "a856d526795c4bd5afc63cd14e5c49d5",
+        "rowtemplate": "flxDefaultComponent",
+        "widgetdatamap": {
+            "flxBackground": "flxBackground",
+            "flxDefaultComponent": "flxDefaultComponent",
+            "flxDefaultComponentContent": "flxDefaultComponentContent",
+            "flxImage": "flxImage",
+            "imgComponent": "imgComponent",
+            "imgInfo": "imgInfo",
+            "lblComponentName": "lblComponentName",
+            "lblLayout": "lblLayout"
+        }
+    },
+    "focusedindex": null,
+    "focuseditem": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segmentLeft",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "j772813d0b8f4ced83bedd8c9f0c59aa",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flxSelectedComponentLeft",
+    "pf": "userwidgetmodel",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowcounter": 9,
+    "rowfocusskin": "s6e7f07455ec411fbcf9e06217636f94",
+    "rowskin": "sc4f7e6361364d3f810bc500daa8a11e",
+    "rowtemplate": null,
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionheaderskin": "s64f2a4ab45b4b1fb87d6b6429f052a8",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": 0,
+    "selectionbehavior": "default",
+    "separatorcolor": "aaaaaa00",
+    "separatorrequired": false,
+    "separatorthickness": 1,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxBackground": "flxBackground",
+        "flxDefaultComponent": "flxDefaultComponent",
+        "flxDefaultComponentContent": "flxDefaultComponentContent",
+        "flxImage": "flxImage",
+        "imgComponent": "imgComponent",
+        "imgInfo": "imgInfo",
+        "lblComponentName": "lblComponentName",
+        "lblLayout": "lblLayout"
+    }
+}

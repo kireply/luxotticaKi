@@ -11,7 +11,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "e8add311f4ea46b28ed9125a483c2d59",
+                    "kuid": "b4dd9948ecfa46bfb17431d9a7016d15",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 1,
                     "propertyKey": "onClickTeaser",
@@ -19,6 +19,33 @@
                         "access": "readwrite",
                         "category": "action",
                         "displayName": "onClickTeaser",
+                        "srcWidget": "flxChannel",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "i24fb73ae8034ab3bcaa163e3dbe2e64",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "e7d9d226edd24c27bffd59445eea4baf",
+                    "originalPropertyKey": "onHover",
+                    "propertyIndex": 2,
+                    "propertyKey": "onHoverTeaser",
+                    "pw": {
+                        "access": "readwrite",
+                        "applicablePSPplatform": "desktopweb",
+                        "category": "action",
+                        "displayName": "onHoverTeaser",
+                        "pspPlatform": {
+                            "desktop": [
+                                "desktopweb"
+                            ],
+                            "mobile": [],
+                            "tablet": []
+                        },
                         "srcWidget": "flxChannel",
                         "type": "action",
                         "uiRepresentation": "Label-Label-Button-Button",
