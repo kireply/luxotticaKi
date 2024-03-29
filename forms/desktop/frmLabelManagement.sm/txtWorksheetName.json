@@ -23,7 +23,7 @@
     ],
     "_placeholder_": "Placeholder",
     "_skin_": "sa40b88ff98b4caba007b88d6781c0bc",
-    "_text_": "textWorksheetNameExample",
+    "_text_": "labels",
     "_top_": {
         "type": "string",
         "value": "30dp"
@@ -45,7 +45,7 @@
     "id": "txtWorksheetName",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "keyboardtype": "A",
     "kuid": "bccffbf91868491eac0438e17b6a8760",
     "mode": "A",

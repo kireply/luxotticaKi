@@ -192,16 +192,16 @@ define({
   }, 
   
   
-  // OUTPUT
+  // EXPORT
   exportData(){
-    let numRows, numColumns;
-    let tableData = [];
-    let k = 1;
-    let colHeaders = ['Col1', 'Col2', 'Col3', 'Col4', 'Col5', 'Col6', 'Col7', 'Col8', 'Col9', 'Col10'];
+    //let numRows, numColumns;
+    var tableData = [];
+    //let k = 1;
+    //let colHeaders = ['Col1', 'Col2', 'Col3', 'Col4', 'Col5', 'Col6', 'Col7', 'Col8', 'Col9', 'Col10'];
     //
     //	Calculating the exact number of rows and of columns according to the Breakpoint of the flex Container containg the cells
     //
-    const currentBreakpoint = voltmx.application.getCurrentBreakpoint();
+  /*  const currentBreakpoint = voltmx.application.getCurrentBreakpoint();
     if (currentBreakpoint === 640){
       numRows = 6;
       numColumns = 2;
@@ -228,14 +228,28 @@ define({
       //	we push the  object representing the "row" onto the array representing the "worksheet"
       //
       tableData.push(rowData);
-    }
-    voltmx.print(JSON.stringify(tableData, ' ', 4));
+    }  */
+    
+    var arrayOggetti = [
+        {a_b_test:"primo",environment:"Quality",layout_id: "1"},
+        {a_b_test:"secondo",environment:"Production",layout_id:"2"},
+        {a_b_test:"terzo",environment:"Development",layout_id:"3"},
+        {a_b_test:"quarto",environment:"Environment",layout_id:"4"}
+    ];
+    
+    //tableData.push(arrayOggetti);
+    voltmx.print("### arrayOggetti: " + JSON.stringify(arrayOggetti, ' ', 4));
+    voltmx.print("### gblLabelsList: " + JSON.stringify(gblLabelsList, ' ', 4));
     //
     //	Creating the Workbook and filling it
     //
-    let worksheet = XLSX.utils.json_to_sheet(tableData);
-    let workbook = XLSX.utils.book_new();
+    var worksheet = XLSX.utils.json_to_sheet(gblLabelsList);
+    var workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, this.view.txtWorksheetName.text);
+    
+    voltmx.print("### worksheet: " + JSON.stringify(worksheet) );
+    voltmx.print("### workbook: " + JSON.stringify(workbook) );
+    
     //
     //	Creating the file
     //
