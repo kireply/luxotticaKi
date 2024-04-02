@@ -39,16 +39,16 @@
         "value": "50%"
     },
     "children": [
-        "lblTitlePopup",
         "imgExitPopup",
-        "txtChannelID",
-        "txtChannelLogo",
-        "txtChannelProperties",
+        "lblTitlePopup",
         "lblChannelID",
+        "txtChannelID",
         "lblChannelName",
+        "lbChannelName",
         "lblChannelLogo",
+        "txtChannelLogo",
         "lblChannelProperties",
-        "lbChannelName"
+        "txtChannelProperties"
     ],
     "clipbounds": false,
     "containerweight": 100,

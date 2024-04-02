@@ -2,8 +2,8 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "4%"
     },
     "_margin_": [
         1,
@@ -24,8 +24,8 @@
         "value": "3%"
     },
     "_width_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "60%"
     },
     "_wrapping_": 2,
     "android": {

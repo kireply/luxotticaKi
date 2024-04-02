@@ -71,7 +71,7 @@ define({
       voltmx.print("### INDEX: " + JSON.stringify(index));
       const flex = new voltmx.ui.FlexContainer({
         id: `flex${index}${new Date().getTime()}`,
-        height: `160dp`, //130
+        height: `25%`, //130dp -> 160dp
         width: `11%`,
         responsiveConfig: {
           "span": {
@@ -85,8 +85,8 @@ define({
       //const tile = new com.hcl.demo.uifactory.Tile({
       const channel = new ki.luxottica.channelTemplatewithContract({
         id: `channel{index}${new Date().getTime()}`,
-        width: '80%',
-        height: '100%', //147
+        width: '70%',
+        height: '90%', //147% -> 100%
         centerX: '50%',
         centerY: '50%'
       }, {}, {});

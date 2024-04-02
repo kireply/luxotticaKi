@@ -24,10 +24,6 @@
     ],
     "_skin_": "sed7e6822833455c8804be039fa3926d",
     "_src_": "info_icon_modified.png",
-    "_top_": {
-        "type": "string",
-        "value": "0"
-    },
     "_width_": {
         "type": "string",
         "value": "8%"

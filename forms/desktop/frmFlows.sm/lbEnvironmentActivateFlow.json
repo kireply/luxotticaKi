@@ -68,7 +68,10 @@
     "retainflexpositionproperties": false,
     "selectedkey": "lb1",
     "selectedkeys": null,
-    "selectedkeyvalue": null,
+    "selectedkeyvalue": [
+        "lb1",
+        "Select the environment in which activate the flow"
+    ],
     "selectedkeyvalues": null,
     "size": 18,
     "viewconfig": {

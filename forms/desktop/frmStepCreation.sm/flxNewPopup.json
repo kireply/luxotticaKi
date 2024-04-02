@@ -40,7 +40,7 @@
     },
     "centery": {
         "type": "string",
-        "value": "50%"
+        "value": "49%"
     },
     "children": [
         "imgExitPopupStepCreation",

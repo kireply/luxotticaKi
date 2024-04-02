@@ -2,8 +2,8 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "40%"
     },
     "_left_": {
         "type": "string",
@@ -24,8 +24,8 @@
     "_skin_": "s7dbd208cec04b4ca1eb5a7583d7e772",
     "_text_": "Author",
     "_width_": {
-        "type": "ref",
-        "value": "preferred"
+        "type": "string",
+        "value": "10%"
     },
     "_wrapping_": 2,
     "android": {

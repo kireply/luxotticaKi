@@ -55,10 +55,10 @@
         "lblEnvironmentEdit",
         "lbEnvironmentEdit",
         "lblIsDefaultFlowEdit",
-        "lblIsSupernovaEdit",
-        "lblSelectStepsLayoutEdit",
         "swIsDefaultFlowEdit",
+        "lblIsSupernovaEdit",
         "swIsSupernovaEdit",
+        "lblSelectStepsLayoutEdit",
         "flxStepsLayoutEdit",
         "btnSaveEditedFlow"
     ],

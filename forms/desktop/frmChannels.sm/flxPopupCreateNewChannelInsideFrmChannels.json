@@ -47,17 +47,17 @@
         "value": "50%"
     },
     "children": [
-        "lblTitlePopupInsideFrmChannels",
         "imgExitPopupInsideFrmChannels",
-        "txtChannelInsideFrmChannels",
-        "txtChannelLogoInsideFrmChannels",
-        "txtChannelPropertiesInsideFrmChannels",
+        "lblTitlePopupInsideFrmChannels",
         "lblChannelInsideFrmChannels",
+        "txtChannelInsideFrmChannels",
         "lblChannelNameInsideFrmChannels",
+        "lbChannelNameInsideFrmChannels",
         "lblChannelLogoInsideFrmChannels",
+        "txtChannelLogoInsideFrmChannels",
         "lblChannelPropertiesInsideFrmChannels",
-        "btnSaveNewChannelInsideFrmChannels",
-        "lbChannelNameInsideFrmChannels"
+        "txtChannelPropertiesInsideFrmChannels",
+        "btnSaveNewChannelInsideFrmChannels"
     ],
     "clipbounds": false,
     "containerweight": 100,

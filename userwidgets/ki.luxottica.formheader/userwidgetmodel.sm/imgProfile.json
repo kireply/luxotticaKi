@@ -6,10 +6,6 @@
         "type": "string",
         "value": "90%"
     },
-    "_left_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_margin_": [
         0,
         0,
@@ -24,10 +20,6 @@
     ],
     "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
     "_src_": "user.png",
-    "_top_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_width_": {
         "type": "string",
         "value": "10%"
