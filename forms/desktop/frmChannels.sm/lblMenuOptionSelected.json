@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "18%"
+        "value": "17%"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "Channels",
     "_top_": {
         "type": "string",
-        "value": "11dp"
+        "value": "25%"
     },
     "_width_": {
         "type": "ref",

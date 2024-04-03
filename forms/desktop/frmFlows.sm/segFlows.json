@@ -798,6 +798,10 @@
     "isvisible": true,
     "kuid": "f8814bb1dffc4fc8a3ea46a257fbb77a",
     "masterdata": {},
+    "maxheight": {
+        "type": "number",
+        "value": "70"
+    },
     "name": "kony.ui.SegmentedUI2",
     "needpageindicator": true,
     "pageoffdotimage": "pageoffdot.png",

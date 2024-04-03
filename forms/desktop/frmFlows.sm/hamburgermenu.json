@@ -172,6 +172,7 @@
                     "value": ""
                 }
             },
+            "responsiveData": {},
             "right": {
                 "Default": {
                     "type": "string",
