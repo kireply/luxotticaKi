@@ -39,7 +39,11 @@
         "lblChannelInfo",
         "imgInfo",
         "lblChannelId",
-        "lblChannelProperties"
+        "lblChannelProperties",
+        "lblChannelGenericImage",
+        "lblChannelAssetsCDN",
+        "lblChannelProjectImage",
+        "lblChannelFrameOnlyLensUPC"
     ],
     "clipbounds": false,
     "containerweight": 100,

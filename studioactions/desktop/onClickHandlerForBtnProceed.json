@@ -727,7 +727,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
             "isCustomInput": false
         }, {
             "id": "ADD_SNIPPET_edefbd2510fb498b85d34842058f657d",
@@ -1300,7 +1300,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
             "isCustomInput": false
         }]
     }

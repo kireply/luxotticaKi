@@ -2,6 +2,7 @@
     "AS_Button_b1e5019a4b8b4dce9e6d8f16a2703545": {
         "id": "AS_Button_b1e5019a4b8b4dce9e6d8f16a2703545",
         "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnSaveFrmChannels",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -144,9 +145,137 @@
                             "operationid": "116976"
                         }
                     }
+                },
+                "ME_Mapping_e72c0d21c4fd4e7a8628f0c3561c9e6d": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e72c0d21c4fd4e7a8628f0c3561c9e6d",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelGenericImageInsideFrmChannels",
+                        "widgetPath": "this.view.txtChannelGenericImageInsideFrmChannels",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannels",
+                        "widgetKUID": "b7f8ab7fbf5c4469a919a63bcc0e4f27",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "generic_image",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "CHANNEL_create",
+                            "operationid": "116976"
+                        }
+                    }
+                },
+                "ME_Mapping_dd43ffbbc0684787955a07364138dde7": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_dd43ffbbc0684787955a07364138dde7",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelAssetsCDNInsideFrmChannels",
+                        "widgetPath": "this.view.txtChannelAssetsCDNInsideFrmChannels",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannels",
+                        "widgetKUID": "e06c4dcc75ec4b659a2c955c3fb2cdd4",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "assets_CDN",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "CHANNEL_create",
+                            "operationid": "116976"
+                        }
+                    }
+                },
+                "ME_Mapping_e5af3eba7556475090e8f3125f217653": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e5af3eba7556475090e8f3125f217653",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelProjectImageInsideFrmChannels",
+                        "widgetPath": "this.view.txtChannelProjectImageInsideFrmChannels",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannels",
+                        "widgetKUID": "cdbb56a6e98f47738a7e127868f2c6af",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "project_image",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "CHANNEL_create",
+                            "operationid": "116976"
+                        }
+                    }
+                },
+                "ME_Mapping_i630e81870f24e8eaf077671b9c658b1": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_i630e81870f24e8eaf077671b9c658b1",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelFramOnlyLensUPCInsideFrmChannels",
+                        "widgetPath": "this.view.txtChannelFramOnlyLensUPCInsideFrmChannels",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannels",
+                        "widgetKUID": "g8a78dde9bd2480791dbf297001c5360",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "frame_only_lens_UPC",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "CHANNEL_create",
+                            "operationid": "116976"
+                        }
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_j489158dc9514e188b7adce4bad216eb", "ME_Mapping_ca4e9b0fb6c049668881885f3ad60dab", "ME_Mapping_b03f183908cc44b9bc1b05cbca29cb66", "ME_Mapping_g4d2f31f90e040958b1ff56d81007700"],
+            "mappingsOrder": ["ME_Mapping_j489158dc9514e188b7adce4bad216eb", "ME_Mapping_ca4e9b0fb6c049668881885f3ad60dab", "ME_Mapping_b03f183908cc44b9bc1b05cbca29cb66", "ME_Mapping_g4d2f31f90e040958b1ff56d81007700", "ME_Mapping_e72c0d21c4fd4e7a8628f0c3561c9e6d", "ME_Mapping_dd43ffbbc0684787955a07364138dde7", "ME_Mapping_e5af3eba7556475090e8f3125f217653", "ME_Mapping_i630e81870f24e8eaf077671b9c658b1"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",

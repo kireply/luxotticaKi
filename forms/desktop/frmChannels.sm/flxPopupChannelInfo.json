@@ -6,7 +6,7 @@
     },
     "_height_": {
         "type": "string",
-        "value": "55%"
+        "value": "85.56%"
     },
     "_margin_": [
         0,
@@ -48,7 +48,15 @@
         "lblChannelLogo",
         "txtChannelLogo",
         "lblChannelProperties",
-        "txtChannelProperties"
+        "txtChannelProperties",
+        "lblChannelGenericImage",
+        "txtChannelGenericImage",
+        "lblChannelAssetsCDN",
+        "txtChannelAssetsCDN",
+        "lblChannelProjectImage",
+        "txtChannelProjectImage",
+        "lblChannelFrameOnlyLensUPC",
+        "txtChannelFrameOnlyLensUPC"
     ],
     "clipbounds": false,
     "containerweight": 100,

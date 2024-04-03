@@ -2,12 +2,12 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "4%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
-        "value": "9.06%"
+        "value": "10%"
     },
     "_margin_": [
         1,
@@ -25,11 +25,11 @@
     "_text_": "Channel ID",
     "_top_": {
         "type": "string",
-        "value": "21%"
+        "value": "9.51%"
     },
     "_width_": {
-        "type": "string",
-        "value": "20%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {

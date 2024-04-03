@@ -6,7 +6,7 @@
     },
     "_height_": {
         "type": "string",
-        "value": "65%"
+        "value": "85.56%"
     },
     "_left_": {
         "type": "string",
@@ -26,7 +26,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sbb5fcddbbb14add962da9f9a4e314c0",
+    "_skin_": "s8aee7e16a9640b4994aecc708d952b6",
     "_top_": {
         "type": "string",
         "value": "170%"
@@ -57,6 +57,14 @@
         "txtChannelLogoInsideFrmChannels",
         "lblChannelPropertiesInsideFrmChannels",
         "txtChannelPropertiesInsideFrmChannels",
+        "lblChannelGenericImageInsideFrmChannels",
+        "txtChannelGenericImageInsideFrmChannels",
+        "lblChannelAssetsCDNInsideFrmChannels",
+        "txtChannelAssetsCDNInsideFrmChannels",
+        "lblChannelProjectImageInsideFrmChannels",
+        "txtChannelProjectImageInsideFrmChannels",
+        "lblChannelFramOnlyLensUPCInsideFrmChannels",
+        "txtChannelFramOnlyLensUPCInsideFrmChannels",
         "btnSaveNewChannelInsideFrmChannels"
     ],
     "clipbounds": false,

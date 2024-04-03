@@ -6,7 +6,7 @@
     },
     "_height_": {
         "type": "string",
-        "value": "65%"
+        "value": "85.56%"
     },
     "_left_": {
         "type": "string",
@@ -27,10 +27,6 @@
     ],
     "_percent_": true,
     "_skin_": "sbb5fcddbbb14add962da9f9a4e314c0",
-    "_top_": {
-        "type": "string",
-        "value": "170%"
-    },
     "_width_": {
         "type": "string",
         "value": "33.67%"
@@ -47,17 +43,25 @@
         "value": "50%"
     },
     "children": [
-        "lblTitlePopup",
         "imgExitPopup",
-        "txtChannelID",
-        "txtChannelLogo",
-        "txtChannelProperties",
+        "lblTitlePopup",
         "lblChannelID",
+        "txtChannelID",
         "lblChannelName",
+        "lbChannelName",
         "lblChannelLogo",
+        "txtChannelLogo",
         "lblChannelProperties",
-        "btnSaveNewChannel",
-        "lbChannelName"
+        "txtChannelProperties",
+        "lblChannelGenericImage",
+        "txtChannelGenericImage",
+        "lblChannelAssetsCDN",
+        "txtChannelAssetsCDN",
+        "lblChannelProjectImage",
+        "txtChannelProjectImage",
+        "lblChannelFrameOnlyLensUPC",
+        "txtChannelFrameOnlyLensUPC",
+        "btnSaveNewChannel"
     ],
     "clipbounds": false,
     "containerweight": 100,

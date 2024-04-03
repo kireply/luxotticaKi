@@ -97,6 +97,10 @@ define({
         channel.channelIdentifier = box.id;
         channel.channelProperties = box.properties_file;
         channel.channelId = index;
+        channel.channelGenericImage = box.generic_image;
+        channel.channelAssetsCDN = box.assets_CDN;
+        channel.channelProjectImage = box.project_image;
+        channel.channelFrameOnlyLensUPC = box.frame_only_lens_UPC;
         channel.onClickTeaser = () => {
       	//TODO ACTIONS WHILE CLICKING ON THE TILE
           if (gblInfoIcon === true){
@@ -105,7 +109,11 @@ define({
             this.view.flxPopupChannelInfo.txtChannelLogo.text = channel.channelLogo;
             this.view.flxPopupChannelInfo.txtChannelProperties.text = channel.channelProperties;
             this.view.flxPopupChannelInfo.lbChannelName.masterData = [ ["lb1", channel.channelInfo] ];
-            this.view.flxPopupChannelInfo.lbChannelName.selectedKey = "lb1"
+            this.view.flxPopupChannelInfo.lbChannelName.selectedKey = "lb1";
+            this.view.flxPopupChannelInfo.txtChannelGenericImage.text = channel.channelGenericImage;
+            this.view.flxPopupChannelInfo.txtChannelAssetsCDN.text = channel.channelAssetsCDN;
+            this.view.flxPopupChannelInfo.txtChannelProjectImage.text = channel.channelProjectImage;
+            this.view.flxPopupChannelInfo.txtChannelFrameOnlyLensUPC.text = channel.channelFrameOnlyLensUPC;
             this.view.flxPopupChannelInfo.setVisibility(true);
           } else {
   //           voltmx.print("### NAVIGATE");

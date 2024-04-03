@@ -7,7 +7,7 @@
     },
     "_height_": {
         "type": "string",
-        "value": "8%"
+        "value": "5%"
     },
     "_left_": {
         "type": "string",
@@ -30,7 +30,7 @@
     "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "25.72%"
+        "value": "12.64%"
     },
     "_width_": {
         "type": "string",
@@ -41,6 +41,10 @@
     "autocorrect": false,
     "autofilter": false,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerheight": "",
     "containerheightmode": 1,
     "containerweight": 100,

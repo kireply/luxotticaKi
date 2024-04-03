@@ -7,7 +7,7 @@
     },
     "_height_": {
         "type": "string",
-        "value": "8%"
+        "value": "5%"
     },
     "_left_": {
         "type": "string",
@@ -29,13 +29,17 @@
     "_skin_": "s8824da42d464a4692f59cda2a2e8757",
     "_top_": {
         "type": "string",
-        "value": "40.02%"
+        "value": "22.020000000000003%"
     },
     "_width_": {
         "type": "string",
         "value": "80%"
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 4,
     "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
