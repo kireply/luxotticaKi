@@ -188,24 +188,8 @@
         }, {
             "id": "INVOKE_FUNCTION__gbce19bad4e248d59079f750b13daaa6",
             "type": "INVOKE_FUNCTION",
-            "sequenceKUID": "editProperty",
             "display": "editProperty",
-            "inputparams": [{
-                "name": "list",
-                "value": " customQueryOutputConfigurable"
-            }, {
-                "name": "rightSegmentData",
-                "value": " rightSegmentDataConfigurable"
-            }, {
-                "name": "leftSegmentData",
-                "value": " leftSegmentDataConfigurable"
-            }, {
-                "name": "selected_item",
-                "value": " selected_item_right"
-            }, {
-                "name": "selected_item_img",
-                "value": " selected_item_right_img"
-            }],
+            "inputparams": [],
             "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
             "callbackType": null,
             "disabled": null,
@@ -255,11 +239,9 @@
             "sequenceKUID": "selectComponent",
             "display": "selectComponent",
             "inputparams": [{
-                "name": "rightData",
-                "value": " rightSegmentDataConfigurable"
+                "name": "rightData"
             }, {
-                "name": "leftData",
-                "value": " leftSegmentDataConfigurable"
+                "name": "leftData"
             }],
             "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
             "callbackType": null,

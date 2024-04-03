@@ -28,7 +28,6 @@
         }, {
             "id": "INVOKE_FUNCTION__db248ba7c05b439798a172f88e201c03",
             "type": "INVOKE_FUNCTION",
-            "sequenceKUID": "saveStepComposition",
             "display": "saveStepComposition",
             "inputparams": [],
             "parentId": null,

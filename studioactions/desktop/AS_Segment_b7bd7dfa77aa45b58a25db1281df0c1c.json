@@ -203,24 +203,8 @@
         }, {
             "id": "INVOKE_FUNCTION__i006e8bc4201411e9b321bb58862c2c7",
             "type": "INVOKE_FUNCTION",
-            "sequenceKUID": "editProperty",
             "display": "editProperty",
-            "inputparams": [{
-                "name": "list",
-                "value": " customQueryOutput"
-            }, {
-                "name": "rightSegmentData",
-                "value": " rightSegmentData"
-            }, {
-                "name": "leftSegmentData",
-                "value": " leftSegmentData"
-            }, {
-                "name": "selected_item",
-                "value": " selected_item"
-            }, {
-                "name": "selected_item_img",
-                "value": " selected_item_img"
-            }],
+            "inputparams": [],
             "parentId": "_ecf128c1c2e64819946442606bbc55d5",
             "callbackType": null,
             "disabled": false,
@@ -252,11 +236,9 @@
             "sequenceKUID": "selectComponent",
             "display": "selectComponent",
             "inputparams": [{
-                "name": "rightData",
-                "value": " rightSegmentData"
+                "name": "rightData"
             }, {
-                "name": "leftData",
-                "value": " leftSegmentData"
+                "name": "leftData"
             }],
             "parentId": "_ecf128c1c2e64819946442606bbc55d5",
             "callbackType": null,
