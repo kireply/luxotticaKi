@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "0"
     },
     "_margin_": [
         1,
@@ -21,15 +21,15 @@
         0,
         0
     ],
-    "_skin_": "s92bc89f81fd4b228b02142d8f6eb89c",
+    "_skin_": "s65e1f90b6d84f7e9808897bf2fa9915",
     "_text_": "Label",
     "_top_": {
         "type": "string",
-        "value": "0%"
+        "value": "0"
     },
     "_width_": {
-        "type": "string",
-        "value": "90%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {
@@ -39,17 +39,9 @@
         }
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
-    "centery": {
-        "type": "string",
-        "value": "25%"
-    },
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblPropertyTitle",
+    "id": "lblPropertyTemplateIdDropdown",
     "info": null,
     "ipad": {
         "psp": {
@@ -62,10 +54,10 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "e2146e2be7aa4b11a1763a7406bbfb97",
+    "isvisible": false,
+    "kuid": "j5c26e0cd2c443949b8447c3f15fd5a7",
     "name": "kony.ui.Label",
-    "parent": "flxEditPropertyValue",
+    "parent": "flxEditPropertyValuewithDropdown",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

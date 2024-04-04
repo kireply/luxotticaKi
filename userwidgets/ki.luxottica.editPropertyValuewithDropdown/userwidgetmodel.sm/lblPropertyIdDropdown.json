@@ -41,7 +41,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblPropertyId",
+    "id": "lblPropertyIdDropdown",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,9 +55,9 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "f77314e8e40f4cc2a729e8d72ba0a05a",
+    "kuid": "be48ed66c9dc4765add821e0a49a35c4",
     "name": "kony.ui.Label",
-    "parent": "flxEditPropertyValueTextField",
+    "parent": "flxEditPropertyValuewithDropdown",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

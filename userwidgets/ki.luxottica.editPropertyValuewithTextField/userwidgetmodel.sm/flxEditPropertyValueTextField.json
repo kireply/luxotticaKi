@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "25%"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
@@ -35,19 +35,22 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "flxEditPropertyValueTextField"
+        "lblPropertyTitleTextField",
+        "txtPropertyValueTextField",
+        "lblPropertyTemplateId",
+        "lblPropertyId"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "editPropertyValuewithTextField",
+    "id": "flxEditPropertyValueTextField",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "bde2d61eb8544821842fd2cf3067edda",
-    "layouttype": 2,
+    "kuid": "f1027116356944bbaf313f40af2497cd",
+    "layouttype": 4,
     "name": "kony.ui.FlexContainer",
-    "parent": "userwidgetmodel",
+    "parent": "editPropertyValuewithTextField",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
@@ -55,6 +58,5 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1,
-    "zindex": 1
+    "widgetalignment": 1
 }

@@ -201,13 +201,29 @@
             "parentId": "_ecf128c1c2e64819946442606bbc55d5",
             "callbackType": null
         }, {
-            "id": "INVOKE_FUNCTION__i006e8bc4201411e9b321bb58862c2c7",
+            "id": "INVOKE_FUNCTION__ca5ae8b2cb694e369defea8299158b63",
             "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "editProperty",
             "display": "editProperty",
-            "inputparams": [],
+            "inputparams": [{
+                "name": "list",
+                "value": " customQueryOutput"
+            }, {
+                "name": "rightSegmentData",
+                "value": " rightSegmentData"
+            }, {
+                "name": "leftSegmentData",
+                "value": " leftSegmentData"
+            }, {
+                "name": "selected_item",
+                "value": " selected_item"
+            }, {
+                "name": "selected_item_img",
+                "value": " selected_item_img"
+            }],
             "parentId": "_ecf128c1c2e64819946442606bbc55d5",
             "callbackType": null,
-            "disabled": false,
+            "disabled": null,
             "source": "controller"
         }, {
             "id": "ADD_SNIPPET_j2bba86fbcda4ed08305127930f49ec3",
@@ -233,13 +249,8 @@
         }, {
             "id": "INVOKE_FUNCTION__fb56cf71170b4c7aa53eb84ba52c1148",
             "type": "INVOKE_FUNCTION",
-            "sequenceKUID": "selectComponent",
             "display": "selectComponent",
-            "inputparams": [{
-                "name": "rightData"
-            }, {
-                "name": "leftData"
-            }],
+            "inputparams": [],
             "parentId": "_ecf128c1c2e64819946442606bbc55d5",
             "callbackType": null,
             "disabled": true,

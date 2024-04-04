@@ -188,8 +188,24 @@
         }, {
             "id": "INVOKE_FUNCTION__gbce19bad4e248d59079f750b13daaa6",
             "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "editProperty",
             "display": "editProperty",
-            "inputparams": [],
+            "inputparams": [{
+                "name": "list",
+                "value": " customQueryOutputConfigurable"
+            }, {
+                "name": "rightSegmentData",
+                "value": " rightSegmentDataConfigurable"
+            }, {
+                "name": "leftSegmentData",
+                "value": " leftSegmentDataConfigurable"
+            }, {
+                "name": "selected_item",
+                "value": " selected_item_right"
+            }, {
+                "name": "selected_item_img",
+                "value": " selected_item_right_img"
+            }],
             "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
             "callbackType": null,
             "disabled": null,
@@ -199,7 +215,8 @@
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### FLX SCROLL SETTINGS NUMBER OF WIDGETS AFTER: \" + JSON.stringify(self.view.settingsSide.flxScrollSettingsContent.widgets().length));",
             "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }, {
             "id": "_e4cb257f71144b6c95f352e0764819bb",
             "type": "ELSE_CONDITION",

@@ -11,7 +11,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "j0eaa1810e094e70984b8edc00ef7bdd",
+                    "kuid": "ef3a2a564fac4f749990d5f2988ffd48",
                     "originalPropertyKey": "onEndEditing",
                     "propertyIndex": 1,
                     "propertyKey": "onEndEditing",
@@ -35,12 +35,12 @@
                                 "spa"
                             ]
                         },
-                        "srcWidget": "txtPropertyValue",
+                        "srcWidget": "txtPropertyValueTextField",
                         "type": "action",
                         "uiRepresentation": "Label-Label-Button-Button",
                         "wType": "TextField"
                     },
-                    "srcWgtKUID": "fab83549126149e286aecb262aa4a1d3",
+                    "srcWgtKUID": "ic258a5bb9b84e85bd3074a8f0d25ea8",
                     "translateAtInstance": false
                 }
             ]
@@ -57,7 +57,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "i14e9e2a4bdd4e4394b2e94a89478eef",
+                    "kuid": "c853eb866ddb4adda5b1383e0a220529",
                     "originalPropertyKey": "text",
                     "propertyIndex": 1,
                     "propertyKey": "propertyName",
@@ -68,17 +68,17 @@
                         "dependentKeysKUIDs": null,
                         "displayName": "propertyName",
                         "isHiddenInTool": false,
-                        "srcWidget": "lblPropertyTitle",
+                        "srcWidget": "lblPropertyTitleTextField",
                         "type": "string",
                         "uiRepresentation": "Label-Textbox",
                         "wType": "Label"
                     },
-                    "srcWgtKUID": "e2146e2be7aa4b11a1763a7406bbfb97"
+                    "srcWgtKUID": "cdf51e93049546aea64de1616899fb65"
                 },
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "f361f09ee7bc4525ac2ccf13963fcd99",
+                    "kuid": "hde111faf14e4c81a630618d553c5de2",
                     "originalPropertyKey": "text",
                     "propertyIndex": 2,
                     "propertyKey": "propertyValue",
@@ -89,17 +89,17 @@
                         "dependentKeysKUIDs": null,
                         "displayName": "propertyValue",
                         "isHiddenInTool": false,
-                        "srcWidget": "txtPropertyValue",
+                        "srcWidget": "txtPropertyValueTextField",
                         "type": "string",
                         "uiRepresentation": "Label-Textbox",
                         "wType": "TextField"
                     },
-                    "srcWgtKUID": "fab83549126149e286aecb262aa4a1d3"
+                    "srcWgtKUID": "ic258a5bb9b84e85bd3074a8f0d25ea8"
                 },
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "fd0613d2445543cd9e5e017822c6b233",
+                    "kuid": "j03365fb740342cba3ded9eec2164749",
                     "originalPropertyKey": "text",
                     "propertyIndex": 3,
                     "propertyKey": "propertyTemplateId",
@@ -115,28 +115,7 @@
                         "uiRepresentation": "Label-Textbox",
                         "wType": "Label"
                     },
-                    "srcWgtKUID": "f553318a602f47f997b198a6d71c1f01"
-                },
-                {
-                    "access": "Enable",
-                    "group": "General",
-                    "kuid": "c848868d0b7947ea86bcf13e925b5229",
-                    "originalPropertyKey": "text",
-                    "propertyIndex": 4,
-                    "propertyKey": "propertyId",
-                    "pw": {
-                        "access": "readwrite",
-                        "category": "look",
-                        "dependencyConditions": {},
-                        "dependentKeysKUIDs": null,
-                        "displayName": "propertyId",
-                        "isHiddenInTool": false,
-                        "srcWidget": "lblPropertyId",
-                        "type": "string",
-                        "uiRepresentation": "Label-Textbox",
-                        "wType": "Label"
-                    },
-                    "srcWgtKUID": "h7429079141147e78d8f0d1de2c88499"
+                    "srcWgtKUID": "a8b524d6c08f4014abfba5d1a64fd035"
                 }
             ]
         },

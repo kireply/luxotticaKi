@@ -11,8 +11,7 @@
         }],
         "contextObj": {
             "type": "userwidgets",
-            "KUID": "ueecb303f39f4c11be23d212dcfe9cea",
-            "name": "userwidgetmodel"
+            "KUID": "ueecb303f39f4c11be23d212dcfe9cea"
         },
         "language": "js",
         "eventType": "onEndEditing",

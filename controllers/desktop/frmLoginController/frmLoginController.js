@@ -20,8 +20,9 @@ define({
     "previewImage": "",
     "modalImage": "",
     "configurable": true,
+	"defaultComponent": false,
     "props": {
-      "svg": {
+		      "svg": {
         "required": false,
         "type": "boolean",
         "mode": "switch",
@@ -31,12 +32,6 @@ define({
         "required": true,
         "type": "string",
         "mode": "dropdown",
-        "default": null
-      },
-      "addTilesTitlePrefix": {
-        "required": false,
-        "type": "tuple",
-        "mode": "switch",
         "default": null
       },
       "activateMoneySavingsBadge": {
@@ -54,7 +49,7 @@ define({
       "viewMode": {
         "required": false,
         "type": "string",
-        "default": null,
+        "default": "immediate",
         "mode": "dropdown"
       },
       "nestedViewMode": {
@@ -75,17 +70,17 @@ define({
         "mode": "switch",
         "default": "true"
       },
-      "enableLargeIcons": {
-        "required": false,
-        "default": "true",
-        "mode": "switch",
-        "type": "boolean"
-      },
       "tilesFeaturesListLayout": {
         "mode": "dropdown",
         "required": false,
         "default": "BULLET_POINTS",
-        "type": "union"
+        "type": "string"
+      },
+      "enableLargeIcons": {
+        "required": false,
+        "default": "true",
+        "type": "boolean",
+        "mode": "switch"
       },
       "hideSign": {
         "required": false,
@@ -93,24 +88,52 @@ define({
         "type": "boolean",
         "mode": "switch"
       },
-      "includedLabel": {
-        "required": false,
-        "default": "Included",
-        "type": "string",
-        "mode": "label"
-      },
-      "clearTitle": {
-        "required": false,
-        "default": "Clear",
-        "type": "string",
-        "mode": "label"
-      },
-      "clearDescription": {
-        "required": false,
-        "default": "Traditional, transparent lenses perfect for everyday use",
-        "type": "string",
-        "mode": "label"
-      }
+      "labels": [
+        {
+          "key": "includedLabel",
+          "default": "Included"
+        },
+        {
+          "key": "clearTitle",
+          "default": "Clear"
+        },
+        {
+          "key": "clearDescription",
+          "default": "Traditional, transparent lenses perfect for everyday use"
+        },
+        {
+          "key": "bluelightTitle",
+          "default": "Blue-light filtering"
+        },
+        {
+          "key": "bluelightDescription",
+          "default": "Reduces exposure to blue light from digital screens, which can help prevent eye-fatigue."
+        },
+        {
+          "key": "transitionTitle",
+          "default": "Transition ® Signature ® GEN 8™"
+        },
+        {
+          "key": "transitionDescription",
+          "default": "One pair for indoors and outdoors with Transitions® lenses: quickly darken and fade to clear, so you never have to change glasses."
+        },
+        {
+          "key": "sunTitle",
+          "default": "Sun"
+        },
+        {
+          "key": "sunDescription",
+          "default": "Choose from different lens colors and tints."
+        },
+        {
+          "key": "proceedAsIs",
+          "default": "Proceed as is"
+        },
+        {
+          "key": "protectionPlanAsIs",
+          "default": "No, proceed without the Protection Plan"
+        }
+      ]
     }
   },
   "RXC_BRAND_LOGO": {
@@ -125,13 +148,15 @@ define({
       "bottom-right",
       "center"
     ],
+    "defaultComponent": false,
     "props": {
       "position": {
-        "required": true,
+        "required": false,
         "type": "string",
         "mode": "dropdown",
-        "default": null
-      }
+        "default": "bottom-left"
+      },
+      "labels": []
     }
   },
   "RXC_BRAND_FOOTER": {
@@ -146,13 +171,20 @@ define({
       "bottom-right",
       "center"
     ],
+    "defaultComponent": false,
     "props": {
       "position": {
-        "required": true,
+        "required": false,
         "type": "string",
         "mode": "dropdown",
-        "default": null
-      }
+        "default": "bottom-left"
+      },
+      "labels": [
+        {
+          "key": "frameSize",
+          "default": "Frame size"
+        }
+      ]
     }
   },
   "RXC_FRAME_IMAGE": {
@@ -167,12 +199,24 @@ define({
       "bottom-right",
       "center"
     ],
+    "defaultComponent": false,
     "props": {
       "position": {
-        "required": true,
+        "required": false,
         "type": "string",
-        "mode": "dropdown"
-      }
+        "mode": "dropdown",
+        "default": "center"
+      },
+      "labels": [
+        {
+          "key": "indoor",
+          "default": "indoor"
+        },
+        {
+          "key": "outdoor",
+          "default": "outdoor"
+        }
+      ]
     }
   },
   "RXC_TITLE_DESCRIPTION": {
@@ -180,63 +224,44 @@ define({
     "layout": ["stepSection"],
     "previewImage": "",
     "modalImage": "",
+    "defaultComponent": false,
     "props": {
-      "id": {
-        "required": true,
-        "type": "number"
-      },
-      "order": {
-        "required": false,
-        "type": "number",
-        "default": null
-      },
-      "title": {
-        "required": true,
-        "type": "string",
-        "default": null,
-        "mode": "label"
-      },
-      "description": {
-        "required": false,
-        "type": "string",
-        "mode": "label",
-        "default": null
-      },
       "accordion": {
         "required": false,
         "type": "boolean",
         "mode": "switch",
         "default": "false"
       },
-      "steps_addOns_label": {
-        "required": false,
-        "type": "string",
-        "mode": "label"
-      },
-      "accordionLabel": {
-        "required": false,
-        "default": "Already included in your lens",
-        "type": "string",
-        "mode": "label"
-      },
-      "uvProtection": {
-        "required": false,
-        "default": "UV protection",
-        "type": "string",
-        "mode": "label"
-      },
-      "antiScratch": {
-        "required": false,
-        "default": "Scratch resistant",
-        "type": "string",
-        "mode": "label"
-      },
-      "premium": {
-        "required": false,
-        "default": "Add anti-reflective and anti-smudge treatments ",
-        "type": "string",
-        "mode": "label"
-      }
+      "labels": [
+        {
+          "key": "title",
+          "default": null
+        },
+        {
+          "key": "description",
+          "default": null
+        },
+        {
+          "key": "steps_addOns_label",
+          "default": null
+        },
+        {
+          "key": "accordionLabel",
+          "default": "Already included in your lens"
+        },
+        {
+          "key": "uvProtection",
+          "default": "UV protection"
+        },
+        {
+          "key": "antiScratch",
+          "default": "Scratch resistant"
+        },
+        {
+          "key": "premium",
+          "default": "Add anti-reflective and anti-smudge treatments "
+        }
+      ]
     }
   }
  }`
@@ -274,7 +299,8 @@ define({
                 position_values: null,
                 viewModes: null,
                 tilesFeaturesListLayout: null,
-                targetDigitalOptometry: null
+                targetDigitalOptometry: null,
+                defaultComponent: null
             };
            
             component_template["name"] = componentKey;
@@ -299,6 +325,7 @@ define({
             });
             // Stampa i valori delle variabili per verificare
             console.log(component_template);
+//             debugger;
 			//aggiungi logica per invocare il DB con la create del component template
             voltmx.print("### CREATE COMPONENT TEMPLATE!");
             integrationService.invokeOperation("COMPONENT_TEMPLATE_create", {}, component_template, 
@@ -316,7 +343,30 @@ define({
                                                           default: null,
                                                           type: null,
                                                           mode: null
-                                                        };
+                                                        }
+                                                        // Controllo se la propKey corrente è 'labels'
+                                                        if (propKey === "labels"){
+                                                          if (component.props[propKey].length > 0) {
+                                                            component.props[propKey].forEach(label => {
+                                                              props_template["name"] = label.key;
+                                                              props_template["component_name"] = componentKey;
+                                                              props_template["required"] = false;
+                                                              props_template["default"] = label.default;
+                                                              props_template["type"] = "string";
+                                                              props_template["mode"] = "label";
+                                                              console.log(props_template);
+                                                              // logica per invocare il DB con la create del property template
+                                                              voltmx.print("### CREATE PROPERTY TEMPLATE FOR LABEL!");
+                                                              integrationService.invokeOperation("PROPERTY_TEMPLATE_create", {}, props_template, 
+                                                                                                 (response) => {
+                                                                voltmx.print("### Service response: " + JSON.stringify(response));            
+                                                              }, error => {
+                                                                voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                                                              }
+                                                              );
+                                                            });
+                                                          }
+                                                        } else {
                                                         props_template["name"] = propKey;
                                                         var prop = component.props[propKey];
                                                         console.log(`${propKey}: ${JSON.stringify(prop)}`);
@@ -329,7 +379,7 @@ define({
                                                         });
                                                         console.log(props_template);
 
-                                                        // aggiungi logica per invocare il DB con la create del property template
+                                                        // logica per invocare il DB con la create del property template
                                                         voltmx.print("### CREATE PROPERTY TEMPLATE!");
                                                         integrationService.invokeOperation("PROPERTY_TEMPLATE_create", {}, props_template, 
                                                                                            (response) => {
@@ -337,6 +387,8 @@ define({
                                                         }, error => {
                                                           voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
                                                         });
+                                                        }
+                                                        
                                                       });
                                                     }
 //                                                     component_ids[componentKey] = response.COMPONENT_TEMPLATE[0].id;

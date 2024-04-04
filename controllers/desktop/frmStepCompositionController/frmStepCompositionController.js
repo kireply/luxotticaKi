@@ -57,7 +57,7 @@ define({
         propComp.propertyName = item.lblPropertyName;
         propComp.onEndEditing = () => {
           let identify = selectedComp.id;
-          this.onEndEditingCallback(propComp, identify);
+          this.onEndEditingCallback(propComp, identify, false);
         }
         this.view.settingsSide.flxScrollSettingsContent.add(propComp);
       });
@@ -114,9 +114,15 @@ define({
     //       gblOrder += 1;
   },
 
-  onEndEditingCallback: function(propComp, identify){
+  onEndEditingCallback: function(propComp, identify, dropdown){
     voltmx.print("### IDENTIFY PASSED: " + identify);
-    value = propComp.propertyValue;
+    let value = null;
+    if (dropdown){
+       value = propComp.listBoxPropertyValue.selectedKeyValue[1];
+    } else {
+       value = propComp.propertyValue;
+    }
+//     voltmx.print("### VALUE: " + value);
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
     let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
     let lastComp = null;
@@ -199,6 +205,7 @@ define({
   editProperty: function(list, rightSegmentData, leftSegmentData, selected_item, selected_item_img){
 
     voltmx.print("### LIST: " + JSON.stringify(list));
+//     LIST: [{"mode":"dropdown","default":"bottom-left","component_name":"RXC_BRAND_FOOTER","name":"position","id":"129","type":"string","position_values":"top-left, top-right, bottom-left, bottom-right, center","required":"false"},{"mode":"label","default":"Frame size","component_name":"RXC_BRAND_FOOTER","name":"frameSize","id":"130","type":"string","position_values":"top-left, top-right, bottom-left, bottom-right, center","required":"false"}]
     voltmx.print("### RIGHT SEGMENT DATA: " + JSON.stringify(rightSegmentData));
     voltmx.print("### LEFT SEGMENT DATA: " + JSON.stringify(leftSegmentData));
     voltmx.print("### SELECTED ITEM: " + JSON.stringify(selected_item));
@@ -206,60 +213,110 @@ define({
 
 
     let index = 0;
-    //     string = `channel${new Date().getTime()}`;
-    //     console.log(string);
-
-    //     voltmx.print("### FLX SCROLL SETTINGS NUMBER OF WIDGETS BEFORE REMOVE ALL - INSIDE FUNCTION: " + JSON.stringify(this.view.settingsSide.flxScrollSettingsContent.widgets().length));
-
     this.view.settingsSide.flxScrollSettingsContent.removeAll();
-
-    //     voltmx.print("### FLX SCROLL SETTINGS NUMBER OF WIDGETS AFTER REMOVE ALL - INSIDE FUNCTION: " + JSON.stringify(this.view.settingsSide.flxScrollSettingsContent.widgets().length));
-
     this.view.settingsSide.flxScrollSettingsContent.setVisibility(true);
-
+	
+    const position_masterData = {
+      position: "position_values",
+      attribute: "availableAttributes",
+      viewMode: "viewModes",
+      nestedViewMode: "nestedViewModes",
+      tilesFeaturesListLayout: "tilesFeaturesListLayout",
+      targetDigitalOptometry: "targetDigitalOptometry"
+    }
 
     for (let i = 0; i < list.length; i++) {
 
       console.log(list[i]);
 
-      if (list[i].required === 'true'){
-        let propertyName = list[i].name;
-        let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + ": ";
-        let properties = {lblPropertyName: capitalizedName, lblPropertyValue: ""}; 
-        rightSegmentData.push(properties);
-        console.log(rightSegmentData);
-        const propComp = new ki.luxottica.editPropertyValuewithTextField({
+//       if (list[i].required === 'true'){
+      let propertyName = list[i].name;
+      let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + ": ";
+      let properties = {lblPropertyName: capitalizedName, lblPropertyValue: ""}; 
+//       rightSegmentData.push(properties);
+      gblLastInsertedComponent = selected_item;
+      console.log(rightSegmentData);
+      let propComp = null;
+      if (list[i].mode === "dropdown"){
+        propComp = new ki.luxottica.editPropertyValuewithDropdown({
           id: `prop${new Date().getTime()}`,
           top: '2%',
           centerX: '50%'
         }, {}, {});
-        //             voltmx.print("### PROPERTY COMPONENT CREATED!");
-        gblLastInsertedComponent = selected_item;
-        //             voltmx.print("### GBL LAST INSERTED COMPONENT: " + gblLastInsertedComponent);
-        propComp.propertyName = capitalizedName;
-        propComp.propertyTemplateId = list[i].id;
+        propComp.listBoxPlaceholder=`Please select a value`;
+        let masterDataValues = position_masterData[list[i].name];
+        let masterDataString = list[i][masterDataValues];
+        voltmx.print("### MASTER DATA STRING: " + JSON.stringify(masterDataString));
+        let valuesArray = masterDataString.split(", ");
+        let masterDataList = [];
+//         propComp.listBoxPropertyValue.placeholder="Please select a value";
+        valuesArray.forEach((value, index) => {
+          let id = `lb${index + 1}`;
+          masterDataList.push([id, value.trim()]);
+//           voltmx.print("### FINAL LIST: " + JSON.stringify(masterDataList));
+        });
+        propComp.listBoxMasterData = masterDataList;
+        if ("default" in list[i] && list[i].default !== null){
+          let key = masterDataList.find(elemento => elemento[1] === list[i].default)[0];
+          propComp.listBoxPropertyValue.selectedKey = key;
+        }
+        
+//         voltmx.print("### MASTER DATA: " + JSON.stringify(propComp.listBoxMasterData));
+        propComp.onSelection = () => {
+          this.onEndEditingCallback(propComp, null, true);
+        }
+        voltmx.print("### PLACEHOLDER: " + JSON.stringify(propComp.listBoxPlaceholder));
+      } else if (list[i].mode === "label") {
+        voltmx.print("### IS A LABEL");
+        propComp = new ki.luxottica.editPropertyValuewithTextField({
+          id: `prop${new Date().getTime()}`,
+          top: '2%',
+          centerX: '50%'
+        }, {}, {});
+        voltmx.print("### AFTER CREATION");
+        gblFlowId = 128;
+        let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
+        let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
+        let label_key = ``;
+        if (left_width > 48){
+          label_key = `${gblFlowId}_[${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${gblLeftOrder}_${i+1}]`;
+        }
+        if (right_width > 48){
+          label_key = `${gblFlowId}_[${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${gblRightOrder}_${i+1}]`;
+        }
+        voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
+        propComp.propertyValue = label_key;
+        properties["lblPropertyValue"] = label_key;
+//         propComp.txtEnabled = false;
+      } else {
+        propComp = new ki.luxottica.editPropertyValuewithTextField({
+          id: `prop${new Date().getTime()}`,
+          top: '2%',
+          centerX: '50%'
+        }, {}, {});
         propComp.onEndEditing = () => {
-          this.onEndEditingCallback(propComp, null);
+          this.onEndEditingCallback(propComp, null, false);
         }
-        this.view.settingsSide.flxScrollSettingsContent.add(propComp);
-        if (!gblPropertyTemplatesIds[list[i].component_name]) {
-          gblPropertyTemplatesIds[list[i].component_name] = [];
-        }
-        let elem = {};
-        elem[list[i].id] = list[i].name;
-        gblPropertyTemplatesIds[list[i].component_name].push(elem);
       }
+      
+      propComp.propertyName = capitalizedName;
+      propComp.propertyTemplateId = list[i].id;
+      this.view.settingsSide.flxScrollSettingsContent.add(propComp);
+      if (!gblPropertyTemplatesIds[list[i].component_name]) {
+        gblPropertyTemplatesIds[list[i].component_name] = [];
+      }
+      let elem = {};
+      elem[list[i].id] = list[i].name;
+      gblPropertyTemplatesIds[list[i].component_name].push(elem);
+//       }
       index +=1;
+      rightSegmentData.push(properties);
     }
     if (this.view.settingsSide.flxScrollSettingsContent.widgets().length > 0){
-
       this.view.settingsSide.txt.setVisibility(false);
-      // 	  voltmx.print("### SCROLL IS VISIBLE BEFORE? " + JSON.stringify(this.view.settingsSide.flxScrollSettingsContent.isVisible));
       this.view.settingsSide.flxScrollSettingsContent.setVisibility(true);
-      //       voltmx.print("### SCROLL IS VISIBLE AFTER? " + JSON.stringify(this.view.settingsSide.flxScrollSettingsContent.isVisible));
       this.view.settingsSide.flxScrollSettingsContent.forceLayout();
     }
-
     let selected_component_data = {lblComponentName: selected_item, imgComponent: selected_item_img};
     leftSegmentData.push(selected_component_data);
 
@@ -418,8 +475,9 @@ define({
       });
             } 
 
-  },
+  }
   
+  /*
   publish: async () => {
     var JSON_flow = {
         channel: null,
@@ -708,9 +766,9 @@ define({
       voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("FLOW_CustomQuery", {}, flow_id_param, (response) => {
         voltmx.print ("### Service response: "+JSON.stringify(response));
         voltmx.print("### RECORDS: " + JSON.stringify(response.records));
-        /*
-      RECORDS: [{"channel_name":"RayBan","layout_id":"1","sizes_stepSection":"step size","layout_type":"type","category":"Eyeglasses","sizes_previewSection":"preview si","layout_previewImage":"image","isSupernova":"false"}]
-      */
+        
+//       RECORDS: [{"channel_name":"RayBan","layout_id":"1","sizes_stepSection":"step size","layout_type":"type","category":"Eyeglasses","sizes_previewSection":"preview si","layout_previewImage":"image","isSupernova":"false"}]
+      
         JSON_flow["channel"] = response.records[0].channel_name;
         JSON_flow["category"] = response.records[0].category;
         JSON_flow["isSupernova"] = response.records[0].isSupernova;
@@ -861,6 +919,7 @@ define({
     
     
   }
+  */
 
 
 
