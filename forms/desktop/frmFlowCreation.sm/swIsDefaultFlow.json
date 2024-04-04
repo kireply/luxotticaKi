@@ -7,11 +7,11 @@
     },
     "_height_": {
         "type": "string",
-        "value": "3%"
+        "value": "2%"
     },
     "_left_": {
         "type": "string",
-        "value": "84%"
+        "value": "86%"
     },
     "_margin_": [
         0,
@@ -25,18 +25,14 @@
         0,
         0
     ],
-    "_right_": {
-        "type": "number",
-        "value": "5"
-    },
     "_skin_": "s63978a9c5f14fc9aec86118b5e423c7",
     "_top_": {
         "type": "string",
-        "value": "67%"
+        "value": "50%"
     },
     "_width_": {
         "type": "string",
-        "value": "8%"
+        "value": "7%"
     },
     "canUpdateUI": true,
     "containerweight": 100,

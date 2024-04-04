@@ -2,12 +2,12 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "3%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
-        "value": "4.97%"
+        "value": "5%"
     },
     "_margin_": [
         1,
@@ -25,11 +25,11 @@
     "_text_": "Environment",
     "_top_": {
         "type": "string",
-        "value": "52.83%"
+        "value": "38.83%"
     },
     "_width_": {
-        "type": "string",
-        "value": "17%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {

@@ -125,6 +125,166 @@
             "callbackType": null,
             "criteria": "all"
         }, {
+            "id": "_g81ea04afae24c34897147244a6e816d",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.swShowFrameOnly.selectedIndex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "0",
+                "leftItemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                "leftWidgetKUID": "c090b0b5d3e34ef689830dcf08e3ccd4"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_e4acaadb20814e679472021d2aee3893",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_d7ce716735e14ea7b390b11e57aa4045",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.swShowFramePlusLenses.selectedIndex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "0",
+                "leftItemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                "leftWidgetKUID": "f3e1abca37494a6681eaac8b35cd81d6"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_b84cbe7fe4cb4f12bab76c8f0909c8e3",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_f8f02e4f44c84fdd97c6e6ae512d62f1",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.swShowSavingsLabel.selectedIndex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "0",
+                "leftItemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                "leftWidgetKUID": "b3bccf33c89e4b849734d95179e0f2ce"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_f40857db9fdc4595b8635ab4faf1be97",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_dd0f997bcda942e9971c6a71d5ec61d8",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.swActivateDistanceAndReading.selectedIndex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "0",
+                "leftItemKUID": "d569d8ca39af43bea658ee877f5208b9",
+                "leftWidgetKUID": "cb04bb4b3ea0475dac73a169ecc45d93"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_b10903108ad244a39cbea65f0f8997e4",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_c83fd062bb734cbd8df79b0c6c22f35b",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblFlowDistanceReading = false;",
+            "parentId": "_b10903108ad244a39cbea65f0f8997e4",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_g2c0c7af50ad4514a5af92ae47bfb217",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblFlowDistanceReading = true;",
+            "parentId": "_dd0f997bcda942e9971c6a71d5ec61d8",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_e2d1e015ada1481994ea6cfd401bdc0e",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblFlowSavingsLabel = false;",
+            "parentId": "_f40857db9fdc4595b8635ab4faf1be97",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_dbccb2f4017c4100bcc2f5c7176d5ca7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblFlowSavingsLabel = true;",
+            "parentId": "_f8f02e4f44c84fdd97c6e6ae512d62f1",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_d5a22092964f4779987e61564be5f88f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblFlowFramePlusLenses = false;",
+            "parentId": "_b84cbe7fe4cb4f12bab76c8f0909c8e3",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_j71b87dba1c245f3897be9956b4edfbb",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblFlowFramePlusLenses = true;",
+            "parentId": "_d7ce716735e14ea7b390b11e57aa4045",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_ee6af83c4d144a0c980347313f07d67b",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblFlowFrameOnly = false;",
+            "parentId": "_e4acaadb20814e679472021d2aee3893",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_i5b5b9537ec14f9286c344e6a0f37305",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblFlowFrameOnly = true;",
+            "parentId": "_g81ea04afae24c34897147244a6e816d",
+            "callbackType": null
+        }, {
             "id": "ADD_SNIPPET_f0ac3064e7a142c292daa552766773fa",
             "type": "ADD_SNIPPET",
             "codeSnippet": "gblFlowSupernova = false;",
@@ -727,7 +887,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
             "isCustomInput": false
         }, {
             "id": "ADD_SNIPPET_edefbd2510fb498b85d34842058f657d",
@@ -1109,9 +1269,113 @@
                             "operationid": "121128"
                         }
                     }
+                },
+                "ME_Mapping_b60c8a01165346f5af7233ebff2669c0": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b60c8a01165346f5af7233ebff2669c0",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowFrameOnly",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "show_frame_only",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
+                },
+                "ME_Mapping_a0afcf12297e4d1a92983d535c366d91": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a0afcf12297e4d1a92983d535c366d91",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowFramePlusLenses",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "show_frame_plus_lenses",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
+                },
+                "ME_Mapping_cc66c730d8e943d4b6cc99563cce6549": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cc66c730d8e943d4b6cc99563cce6549",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowSavingsLabel",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "show_savings_label",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
+                },
+                "ME_Mapping_dea6932a5b8a43c78480390539386ae6": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_dea6932a5b8a43c78480390539386ae6",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowDistanceReading",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "activate_distance_and_reading",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_c90a3327ada64f839e646a25d9966428", "ME_Mapping_gd11f073140f4a5891c01b57774bfac9", "ME_Mapping_d6264b58602e4e8ab7d875d52cefa752", "ME_Mapping_d3d0c3f769da436ebc27f505d9bed9f4", "ME_Mapping_j6db8f8dc69040618eb2b980d1c78bc3", "ME_Mapping_aa1e052e0a7e4868be71e564640106c0", "ME_Mapping_i7242fc61e574d119e6182000c5f1a57", "ME_Mapping_h4cf41f348c9447eb7d36e7b3ac1c2e1", "ME_Mapping_hf4e34f22ff049d19b5aab6c1259aa14", "ME_Mapping_fdee164cbe0a4bc9bbf450bfb204414b", "ME_Mapping_dcda175524044288adf462d90eeb0cb0", "ME_Mapping_g2be388077e448e0ac513f052cb754bb"],
+            "mappingsOrder": ["ME_Mapping_c90a3327ada64f839e646a25d9966428", "ME_Mapping_gd11f073140f4a5891c01b57774bfac9", "ME_Mapping_d6264b58602e4e8ab7d875d52cefa752", "ME_Mapping_d3d0c3f769da436ebc27f505d9bed9f4", "ME_Mapping_j6db8f8dc69040618eb2b980d1c78bc3", "ME_Mapping_aa1e052e0a7e4868be71e564640106c0", "ME_Mapping_i7242fc61e574d119e6182000c5f1a57", "ME_Mapping_h4cf41f348c9447eb7d36e7b3ac1c2e1", "ME_Mapping_hf4e34f22ff049d19b5aab6c1259aa14", "ME_Mapping_fdee164cbe0a4bc9bbf450bfb204414b", "ME_Mapping_dcda175524044288adf462d90eeb0cb0", "ME_Mapping_g2be388077e448e0ac513f052cb754bb", "ME_Mapping_b60c8a01165346f5af7233ebff2669c0", "ME_Mapping_a0afcf12297e4d1a92983d535c366d91", "ME_Mapping_cc66c730d8e943d4b6cc99563cce6549", "ME_Mapping_dea6932a5b8a43c78480390539386ae6"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -1300,7 +1564,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
             "isCustomInput": false
         }]
     }

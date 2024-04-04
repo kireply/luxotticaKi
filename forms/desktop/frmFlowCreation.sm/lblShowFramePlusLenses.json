@@ -21,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "s0ded8ea6d4448e5a20010223ea0da7f",
-    "_text_": "Flow Description",
+    "_skin_": "sfd924d5e71e4497b04c55aaf3fce866",
+    "_text_": "Show Frame plus Lenses?",
     "_top_": {
         "type": "string",
-        "value": "16%"
+        "value": "65%"
     },
     "_width_": {
         "type": "ref",
@@ -41,7 +41,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblFlowDescription",
+    "id": "lblShowFramePlusLenses",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d7de597fc91c4bc8bf9c08347426b518",
+    "kuid": "d79254d591fc499383fb81bf767eb195",
     "name": "kony.ui.Label",
     "parent": "flxCreationFlow",
     "pf": "frmFlowCreation",

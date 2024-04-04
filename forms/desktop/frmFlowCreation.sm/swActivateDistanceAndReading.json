@@ -24,7 +24,7 @@
     "_skin_": "s651c8b6c2924a32be3cf51c99fe123e",
     "_top_": {
         "type": "string",
-        "value": "55%"
+        "value": "75%"
     },
     "_width_": {
         "type": "string",
@@ -32,17 +32,16 @@
     },
     "canUpdateUI": true,
     "containerweight": 100,
-    "id": "swIsSupernova",
+    "id": "swActivateDistanceAndReading",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "kiosk": {
         "render": false
     },
-    "kuid": "af3d5f2b694d42edaecbcf6d5e3fff7f",
+    "kuid": "cb04bb4b3ea0475dac73a169ecc45d93",
     "leftsidetext": " ",
     "name": "kony.ui.Switch",
-    "onslide": null,
     "osPlatform": "desktopweb",
     "osVersion": "iOS7",
     "parent": "flxCreationFlow",

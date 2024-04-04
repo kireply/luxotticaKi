@@ -2,8 +2,8 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "3%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
@@ -25,11 +25,11 @@
     "_text_": "Is Default flow?",
     "_top_": {
         "type": "string",
-        "value": "67%"
+        "value": "50%"
     },
     "_width_": {
-        "type": "string",
-        "value": "20%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {

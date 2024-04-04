@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "8%"
+        "value": "7%"
     },
     "_left_": {
         "type": "string",
@@ -40,7 +40,7 @@
     },
     "centery": {
         "type": "string",
-        "value": "15%"
+        "value": "9%"
     },
     "children": [
         "imgInfo",
