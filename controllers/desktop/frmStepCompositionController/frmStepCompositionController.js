@@ -4,13 +4,12 @@ define({
   component_instance_id : null,
   integrationService : voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB"),
 
-  selectComponent: function(rightData, leftData){
-    //       voltmx.print("### LEFT INDEX: " + JSON.stringify(left_index));
-    //       voltmx.print("### RIGHT INDEX: " + JSON.stringify(right_index));
+  selectComponent: function(rightData, leftData, modes){
     voltmx.print("### RIGHT DATA: " + JSON.stringify(rightData));
     voltmx.print("### LEFT DATA: " + JSON.stringify(leftData));
-    voltmx.print("### GLOBAL ORDER LEFT: " + gblLeftOrder);
-    voltmx.print("### GLOBAL ORDER RIGHT: " + gblRightOrder);
+    voltmx.print("### MODES: " + JSON.stringify(modes));
+//     voltmx.print("### GLOBAL ORDER LEFT: " + gblLeftOrder);
+//     voltmx.print("### GLOBAL ORDER RIGHT: " + gblRightOrder);
     const flex = new voltmx.ui.FlexContainer({
       id: `flex${new Date().getTime()}`,
       width: '96%',
@@ -38,7 +37,6 @@ define({
     }, {}, {});
 
     selectedComp.onRowClickTeaser = () => {
-      //          voltmx.print("### CIAO");
       this.view.settingsSide.flxScrollSettingsContent.removeAll();    
       this.view.settingsSide.flxScrollSettingsContent.setVisibility(true);
       //          this.view.settingsSide.txt.setVisibility(true);
@@ -47,18 +45,52 @@ define({
 
       props = selectedComp.rightData;
       props.forEach(item => {
-        const propComp = new ki.luxottica.editPropertyValuewithTextField({
-          id: `prop${new Date().getTime()}`,
-          top: '1%',
-          centerX: '50%',
-          bottom: '1%'
-        }, {}, {});
-
-        propComp.propertyName = item.lblPropertyName;
-        propComp.onEndEditing = () => {
-          let identify = selectedComp.id;
-          this.onEndEditingCallback(propComp, identify, false);
+        let propComp = null;
+        const found = modes.find(element => element.name === item.lblPropertyName); //found = {name: mode}
+        if (found.mode === "dropdown"){
+          propComp = new ki.luxottica.editPropertyValuewithDropdown({
+            id: `prop${new Date().getTime()}`,
+            top: '2%',
+            centerX: '50%'
+          }, {}, {});
+          propComp.listBoxMasterData = found.masterData;
+          propComp.listBoxPropertyValue.selectedKey = found.default;
+          propComp.onSelection = () => {
+            let identify = selectedComp.id;
+            this.onEndEditingCallback(propComp, identify, true, false);
+          }
+        } else if (found.mode === "label") {
+          propComp = new ki.luxottica.editPropertyValuewithTextField({
+            id: `prop${new Date().getTime()}`,
+            top: '2%',
+            centerX: '50%'
+          }, {}, {});
+//           gblFlowId = 128;
+          let label_key = item.lblPropertyValue;
+          propComp.propertyValue = label_key;
+          propComp.txtPropertyValueTextField.setEnabled(false);
+        } else if (found.mode === "switch") {
+          propComp = new ki.luxottica.editPropertyValuewithSwitch({
+            id: `prop${new Date().getTime()}`,
+            top: '2%',
+            centerX: '50%'
+          }, {}, {});
+          propComp.onSlide = () => {
+            let identify = selectedComp.id;
+            this.onEndEditingCallback(propComp, identify, false, true);
+          };	  
+        } else {
+          propComp = new ki.luxottica.editPropertyValuewithTextField({
+            id: `prop${new Date().getTime()}`,
+            top: '2%',
+            centerX: '50%'
+          }, {}, {});
+          propComp.onEndEditing = () => {
+            let identify = selectedComp.id;
+            this.onEndEditingCallback(propComp, identify, false, false);
+          }
         }
+        propComp.propertyName = item.lblPropertyName;
         this.view.settingsSide.flxScrollSettingsContent.add(propComp);
       });
 
@@ -109,20 +141,18 @@ define({
       gblRightOrder += 1;
     }
 
-    //       voltmx.print("### CREATO IL CHANNEL");
-
-    //       gblOrder += 1;
   },
 
-  onEndEditingCallback: function(propComp, identify, dropdown){
-    voltmx.print("### IDENTIFY PASSED: " + identify);
+  onEndEditingCallback: function(propComp, identify, dropdown, switched){
     let value = null;
     if (dropdown){
        value = propComp.listBoxPropertyValue.selectedKeyValue[1];
-    } else {
-       value = propComp.propertyValue;
+    } else if (switched){
+      value = propComp.propertyValue;
+  	}  else {
+      value = propComp.propertyValue;
     }
-//     voltmx.print("### VALUE: " + value);
+    //     voltmx.print("### VALUE: " + value);
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
     let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
     let lastComp = null;
@@ -132,30 +162,40 @@ define({
         // chiamata da editProperty
         lastComp = components.length > 0 ? components[components.length - 1] : null;
         let channelKey = Object.keys(lastComp).find(key => key.startsWith("channel"));
-        //         debugger;
         if (lastComp[channelKey]["leftData"][0].lblComponentName === gblLastInsertedComponent){
-          //                     debugger;
-          //           this.component_instance_id = lastComp[channelKey]["lblComponentId"].text;
           let newData = lastComp[channelKey]["rightData"];
           newData.forEach(item => {
             if (item.lblPropertyName === propComp.propertyName) {
-              item.lblPropertyValue = value; 
+              if (switched){
+                if (value === 0){
+                  item.lblPropertyValue = "True";
+                } else {
+                  item.lblPropertyValue = "False";
+                }
+              } else {
+                item.lblPropertyValue = value; 
+              }
             }
           });
           lastComp[channelKey].flxSelectedComponentRight.segmentRight.setData(newData);
         }
       } else {
         // chiamata da selectedComponent
-        //                   debugger;
         components.forEach((comp) => {
           let channelKey = Object.keys(comp).find(key => key.startsWith("channel"));
           if (channelKey === identify){
-            //                         debugger;
-            //             this.component_instance_id = comp[channelKey]["lblComponentId"].text;
             let newData = comp[channelKey]["rightData"];
             newData.forEach(item => {
               if (item.lblPropertyName === propComp.propertyName) {
-                item.lblPropertyValue = value;
+                if (switched){
+                  if (value === 0){
+                    item.lblPropertyValue = "True";
+                  } else {
+                    item.lblPropertyValue = "False";
+                  }
+                } else {
+                  item.lblPropertyValue = value; 
+                }
               }
             });
             comp[channelKey].flxSelectedComponentRight.segmentRight.setData(newData);
@@ -166,31 +206,44 @@ define({
     if ( right_width > 48){
       components = this.view.flxScrollRight.widgets();
       if (identify === null) {
+        // chiamata da editProperty
         lastComp = components.length > 0 ? components[components.length - 1] : null;
         let channelKey = Object.keys(lastComp).find(key => key.startsWith("channel"));
         if (lastComp[channelKey]["leftData"][0].lblComponentName === gblLastInsertedComponent){
-          //                     debugger;
-          //           this.component_instance_id = lastComp[channelKey]["lblComponentId"].text;
           let newData = lastComp[channelKey]["rightData"];
           newData.forEach(item => {
             if (item.lblPropertyName === propComp.propertyName) {
-              item.lblPropertyValue = value;
+              if (switched){
+                if (value === 0){
+                  item.lblPropertyValue = "True";
+                } else {
+                  item.lblPropertyValue = "False";
+                }
+              } else {
+                item.lblPropertyValue = value; 
+              }
             }
           });
 
           lastComp[channelKey].flxSelectedComponentRight.segmentRight.setData(newData);
         }
       } else {
-        //         debugger;
+        // chiamata da selectedComponent
         components.forEach((comp) => {
           let channelKey = Object.keys(comp).find(key => key.startsWith("channel"));
           if (channelKey === identify){
-            //             debugger;
-            //             this.component_instance_id = comp[channelKey]["lblComponentId"].text;
             let newData = comp[channelKey]["rightData"];
             newData.forEach(item => {
               if (item.lblPropertyName === propComp.propertyName) {
-                item.lblPropertyValue = value;
+                if (switched){
+                  if (value === 0){
+                    item.lblPropertyValue = "True";
+                  } else {
+                    item.lblPropertyValue = "False";
+                  }
+                } else {
+                  item.lblPropertyValue = value; 
+                }
               }
             });
             comp[channelKey].flxSelectedComponentRight.segmentRight.setData(newData);
@@ -198,8 +251,10 @@ define({
         });
       }
     }
-
-    propComp.propertyValue = "";
+	
+    if ((!switched) && (!dropdown)){
+      propComp.propertyValue = "";
+    }
   },
 
   editProperty: function(list, rightSegmentData, leftSegmentData, selected_item, selected_item_img){
@@ -213,6 +268,7 @@ define({
 
 
     let index = 0;
+    let modes = [];
     this.view.settingsSide.flxScrollSettingsContent.removeAll();
     this.view.settingsSide.flxScrollSettingsContent.setVisibility(true);
 	
@@ -256,25 +312,23 @@ define({
 //           voltmx.print("### FINAL LIST: " + JSON.stringify(masterDataList));
         });
         propComp.listBoxMasterData = masterDataList;
+        let key = "lb1";
         if ("default" in list[i] && list[i].default !== null){
-          let key = masterDataList.find(elemento => elemento[1] === list[i].default)[0];
-          propComp.listBoxPropertyValue.selectedKey = key;
+          key = masterDataList.find(elemento => elemento[1] === list[i].default)[0];
         }
-        
-//         voltmx.print("### MASTER DATA: " + JSON.stringify(propComp.listBoxMasterData));
+        propComp.listBoxPropertyValue.selectedKey = key;
+        modes.push({"name": capitalizedName, "mode": "dropdown", "masterData": masterDataList, "default": key});
         propComp.onSelection = () => {
-          this.onEndEditingCallback(propComp, null, true);
-        }
-        voltmx.print("### PLACEHOLDER: " + JSON.stringify(propComp.listBoxPlaceholder));
+          this.onEndEditingCallback(propComp, null, true, false);
+        };
+//         voltmx.print("### PLACEHOLDER: " + JSON.stringify(propComp.listBoxPlaceholder));
       } else if (list[i].mode === "label") {
-        voltmx.print("### IS A LABEL");
         propComp = new ki.luxottica.editPropertyValuewithTextField({
           id: `prop${new Date().getTime()}`,
           top: '2%',
           centerX: '50%'
         }, {}, {});
-        voltmx.print("### AFTER CREATION");
-        gblFlowId = 128;
+        gblFlowId = 128; //to comment in the global flow of the application
         let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
         let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
         let label_key = ``;
@@ -286,8 +340,18 @@ define({
         }
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
         propComp.propertyValue = label_key;
+        propComp.txtPropertyValueTextField.setEnabled(false);
         properties["lblPropertyValue"] = label_key;
-//         propComp.txtEnabled = false;
+		modes.push({"name": capitalizedName, "mode": "label"});        
+      } else if (list[i].mode === "switch"){
+        propComp = new ki.luxottica.editPropertyValuewithSwitch({
+          id: `prop${new Date().getTime()}`,
+          top: '2%',
+          centerX: '50%'
+        }, {}, {});
+        propComp.onSlide = () => {
+          this.onEndEditingCallback(propComp, null, false, true);
+        };
       } else {
         propComp = new ki.luxottica.editPropertyValuewithTextField({
           id: `prop${new Date().getTime()}`,
@@ -295,10 +359,10 @@ define({
           centerX: '50%'
         }, {}, {});
         propComp.onEndEditing = () => {
-          this.onEndEditingCallback(propComp, null, false);
-        }
+          this.onEndEditingCallback(propComp, null, false, false);
+        };
+        modes.push({"name": capitalizedName, "mode": "textfield"});
       }
-      
       propComp.propertyName = capitalizedName;
       propComp.propertyTemplateId = list[i].id;
       this.view.settingsSide.flxScrollSettingsContent.add(propComp);
@@ -320,7 +384,7 @@ define({
     let selected_component_data = {lblComponentName: selected_item, imgComponent: selected_item_img};
     leftSegmentData.push(selected_component_data);
 
-    this.selectComponent(rightSegmentData, leftSegmentData);
+    this.selectComponent(rightSegmentData, leftSegmentData, modes);
 
   },
 
@@ -514,6 +578,7 @@ define({
       components: []
     };
     
+    var JSON_default_new = gblDefaultComponents;
     var JSON_default = [
       {
         id: "RXC_EXIT_POPUP",
