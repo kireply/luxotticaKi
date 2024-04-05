@@ -352,6 +352,7 @@ define({
         propComp.onSlide = () => {
           this.onEndEditingCallback(propComp, null, false, true);
         };
+        modes.push({"name": capitalizedName, "mode": "switch"});
       } else {
         propComp = new ki.luxottica.editPropertyValuewithTextField({
           id: `prop${new Date().getTime()}`,
