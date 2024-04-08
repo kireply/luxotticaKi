@@ -42,7 +42,8 @@
         "imgNewStep",
         "imgNewStep2",
         "lblStepCreationBlack",
-        "lblStepCreationWhite"
+        "lblStepCreationWhite",
+        "btnNewStep"
     ],
     "clipbounds": false,
     "containerweight": 100,

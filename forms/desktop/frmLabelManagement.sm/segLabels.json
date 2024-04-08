@@ -6,28 +6,184 @@
             {
                 "lb2": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "en-US",
-                    "type": "Label"
+                    "text": "en-US"
                 },
                 "lb3": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "it-IT",
-                    "type": "Label"
+                    "text": "it-IT"
                 },
                 "lb4": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "de-DE",
-                    "type": "Label"
+                    "text": "de-DE"
                 },
                 "lb5": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "fr-FR",
-                    "type": "Label"
+                    "text": "fr-FR"
                 },
                 "lbl1": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "Label Key",
-                    "type": "Label"
+                    "text": "Label Key"
+                }
+            },
+            [
+                {
+                    "lb1": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "item_no.1",
+                        "type": "Label"
+                    },
+                    "lb2": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Workshop sullo sviluppo",
+                        "type": "Label"
+                    },
+                    "lb3": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Workshop zur Webentwicklung",
+                        "type": "Label"
+                    },
+                    "lb4": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Atelier sur le développement web",
+                        "type": "Label"
+                    },
+                    "lb5": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Taller de desarrollo web",
+                        "type": "Label"
+                    }
+                },
+                {
+                    "lb1": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "item_no.2",
+                        "type": "Label"
+                    },
+                    "lb2": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Scopri i nostri servizi",
+                        "type": "Label"
+                    },
+                    "lb3": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Entdecken Sie unsere Dienstleistungen",
+                        "type": "Label"
+                    },
+                    "lb4": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Découvrez nos services",
+                        "type": "Label"
+                    },
+                    "lb5": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Explora nuestros servicios",
+                        "type": "Label"
+                    }
+                },
+                {
+                    "lb1": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "item_no.3",
+                        "type": "Label"
+                    },
+                    "lb2": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Avvertimento",
+                        "type": "Label"
+                    },
+                    "lb3": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Warnung",
+                        "type": "Label"
+                    },
+                    "lb4": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Attention",
+                        "type": "Label"
+                    },
+                    "lb5": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Advertencia",
+                        "type": "Label"
+                    }
+                },
+                {
+                    "lb1": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "item_no.4",
+                        "type": "Label"
+                    },
+                    "lb2": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Polarizzate",
+                        "type": "Label"
+                    },
+                    "lb3": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Polarisiert",
+                        "type": "Label"
+                    },
+                    "lb4": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Verres polarisés",
+                        "type": "Label"
+                    },
+                    "lb5": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Polarizadas",
+                        "type": "Label"
+                    }
+                },
+                {
+                    "lb1": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "item_no.5",
+                        "type": "Label"
+                    },
+                    "lb2": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Continua",
+                        "type": "Label"
+                    },
+                    "lb3": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Weiter",
+                        "type": "Label"
+                    },
+                    "lb4": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Continuer",
+                        "type": "Label"
+                    },
+                    "lb5": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Continúe",
+                        "type": "Label"
+                    }
+                }
+            ]
+        ],
+        [
+            {
+                "lb2": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "en-US"
+                },
+                "lb3": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "it-IT"
+                },
+                "lb4": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "de-DE"
+                },
+                "lb5": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "fr-FR"
+                },
+                "lbl1": {
+                    "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                    "text": "Label Key"
                 }
             },
             [
@@ -203,7 +359,7 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "containerweight": 100,
-    "counter": "04",
+    "counter": "14",
     "disabledSkins": {},
     "focusedindex": null,
     "focuseditem": null,
@@ -243,7 +399,7 @@
     "rowskin": "s702838141914111a5a1fe3ea527cf11",
     "rowtemplate": "flxRowLabels",
     "screenlevelwidget": false,
-    "seccounter": 0,
+    "seccounter": 1,
     "sectionHeaderTemplateId": "f89da6b2ac544be79fbf40e9e4c93231",
     "sectionheaderskin": "s64f2a4ab45b4b1fb87d6b6429f052a8",
     "sectionheadertemplate": "flxHeaderRowLabels",
@@ -252,7 +408,7 @@
     "selectedindex": null,
     "selectedindices": null,
     "selecteditems": null,
-    "selectedsectionindex": 0,
+    "selectedsectionindex": null,
     "selectionbehavior": "default",
     "separatorcolor": "aaaaaa00",
     "separatorrequired": true,

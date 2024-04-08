@@ -3,11 +3,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "8%"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "0dp"
     },
     "_margin_": [
         6,
@@ -21,36 +21,31 @@
         0,
         0
     ],
-    "_skin_": "s45112357e134e1d994f67a398ae0ec5",
-    "_text_": "Proceed",
+    "_skin_": "s0f733c8c6b343128540d02f66dd96d9",
+    "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "93.98%"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "90%"
+        "value": "100%"
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50.06%"
-    },
     "containerweight": 100,
     "contentalignment": 5,
     "disabledSkins": {
         "focusSkin": "s6de8ee3e9e1463996d5dbb22b25b33b"
     },
     "displaytext": true,
-    "id": "btnProceed",
-    "ide_onClick": "AS_Button_d38cb80742af4d62b0612fc57f91aef6",
+    "id": "btnNewStep",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "b638a3e7287d4e628a71ce2782cc30c2",
+    "kuid": "hcc25772ca604cacafc6bc2878abd146",
     "name": "kony.ui.Button",
-    "parent": "flxCreationFlow",
-    "pf": "frmFlowCreation",
+    "parent": "flxCreateNewStep",
+    "pf": "frmStepCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "wType": "Button"

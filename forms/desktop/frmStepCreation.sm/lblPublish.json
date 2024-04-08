@@ -2,12 +2,8 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "3%"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "4.96%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_margin_": [
         1,
@@ -21,15 +17,15 @@
         0,
         0
     ],
-    "_skin_": "s0ded8ea6d4448e5a20010223ea0da7f",
-    "_text_": "Select steps layout",
-    "_top_": {
+    "_right_": {
         "type": "string",
-        "value": "79.5%"
+        "value": "10%"
     },
+    "_skin_": "s1012caad4a943de8b23ac040f5261b7",
+    "_text_": "Publish",
     "_width_": {
-        "type": "string",
-        "value": "25%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {
@@ -39,9 +35,13 @@
         }
     },
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblSelectStepsLayout",
+    "id": "lblPublish",
     "info": null,
     "ipad": {
         "psp": {
@@ -54,11 +54,11 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "b798721da0b741779ac840f711624ca3",
+    "isvisible": false,
+    "kuid": "ad57925b447b4b8ca932386d6e5e95ef",
     "name": "kony.ui.Label",
-    "parent": "flxCreationFlow",
-    "pf": "frmFlowCreation",
+    "parent": "flxPublish",
+    "pf": "frmStepCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",

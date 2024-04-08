@@ -38,7 +38,8 @@
         "imgAddNewChannel",
         "imgAddNewChannel2",
         "lblAddNewChannelBlack",
-        "lblAddNewChannelWhite"
+        "lblAddNewChannelWhite",
+        "btnNewChannel"
     ],
     "clipbounds": false,
     "containerweight": 100,

@@ -117,7 +117,7 @@
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "20dp"
+                    "value": "8%"
                 }
             }
         },

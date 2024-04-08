@@ -129,13 +129,21 @@ define({
                 let workbook = XLSX.read(data, {
                     type: "binary"
                 });
-                //voltmx.print("### DATA: " + data);
-                //voltmx.print("### WORKBOOK: " + JSON.stringify(workbook));
-                //voltmx.print(workbook);
+                voltmx.print("### DATA: " + data);
+                voltmx.print("### WORKBOOK: " + JSON.stringify(workbook));
+                voltmx.print(workbook);
                 workbook.SheetNames.forEach(sheet => {
                     let rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]);
                     voltmx.print("### rowObject: " + rowObject);
                     gblLabelsList = rowObject;
+                  
+                    let headerRow = {}; // New empty object for the header row
+
+                    // Saving header keys and their own values
+                    Object.keys(gblLabelsList[0]).forEach(function(key) {
+                      headerRow[key] = key;
+                    });
+                    gblLabelsList.unshift(headerRow);
                     voltmx.print("### gblLabels stringify: " + JSON.stringify(gblLabelsList));
                   	
                     gblLabelsColumns = 0;
@@ -170,7 +178,8 @@ define({
                   // setting the first 5 columns to display
                   var firstKeys = Object.keys(gblLabelsList[0]).slice(0, 5);
                   //voltmx.print("### firstKey: " + firstKeys);
-                  
+                                    
+				  //gblLabelsList2.splice(1, 0, headerRow); // Duplicating the Header so that it don't get lost in the mapping
                   this.view.segLabels.widgetDataMap = {lb1: firstKeys[0],lb2: firstKeys[1],lb3: firstKeys[2],lb4: firstKeys[3], lb5: firstKeys[4]};
 				  
                   var showLabels = parseInt(this.view.lbShowEntries.selectedKeyValue[1], 10);  // 10 is for the decimal
