@@ -1,0 +1,129 @@
+{
+    "classname": "editPropertyValuewithTextField",
+    "definitions": {
+        "apis": {
+            "custom": [],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "ef3a2a564fac4f749990d5f2988ffd48",
+                    "originalPropertyKey": "onEndEditing",
+                    "propertyIndex": 1,
+                    "propertyKey": "onEndEditing",
+                    "pw": {
+                        "access": "readwrite",
+                        "applicablePSPplatform": "desktopweb",
+                        "category": "action",
+                        "displayName": "onEndEditing",
+                        "forkablePlatforms": {
+                            "desktop": [
+                                "desktopweb"
+                            ],
+                            "mobile": [
+                                "iphone",
+                                "android",
+                                "spa"
+                            ],
+                            "tablet": [
+                                "ipad",
+                                "android",
+                                "spa"
+                            ]
+                        },
+                        "srcWidget": "txtPropertyValueTextField",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "TextField"
+                    },
+                    "srcWgtKUID": "ic258a5bb9b84e85bd3074a8f0d25ea8",
+                    "translateAtInstance": false
+                }
+            ]
+        },
+        "groups": {
+            "apis": [],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "c853eb866ddb4adda5b1383e0a220529",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 1,
+                    "propertyKey": "propertyName",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "propertyName",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblPropertyTitleTextField",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "cdf51e93049546aea64de1616899fb65"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "hde111faf14e4c81a630618d553c5de2",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 2,
+                    "propertyKey": "propertyValue",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "propertyValue",
+                        "isHiddenInTool": false,
+                        "srcWidget": "txtPropertyValueTextField",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "TextField"
+                    },
+                    "srcWgtKUID": "ic258a5bb9b84e85bd3074a8f0d25ea8"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "j03365fb740342cba3ded9eec2164749",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 3,
+                    "propertyKey": "propertyTemplateId",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "propertyTemplateId",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblPropertyTemplateId",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "a8b524d6c08f4014abfba5d1a64fd035"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "ki.luxottica",
+    "version": "1.0.0"
+}

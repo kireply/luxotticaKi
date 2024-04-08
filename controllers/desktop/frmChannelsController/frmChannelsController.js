@@ -34,6 +34,10 @@ define({
     this.view.flxChannels.removeAll();
     this.channels.forEach((box, index) => {this.addTile(box,index)});
     this.addTile(null, 99);
+//     content = this.view.flxChannels.widgets();
+//     content.forEach(function(widget) {
+//        debugger;  
+//     });
   },
   fetchChannels(){
     return new Promise((resolve, reject) => {
@@ -162,5 +166,7 @@ define({
       this.view.flxChannels.add(flex);
     this.view.flxChannels.forceLayout();
   }
+  
+  
  
 });

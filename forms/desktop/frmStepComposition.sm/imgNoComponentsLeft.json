@@ -26,7 +26,7 @@
     "_src_": "components.png",
     "_top_": {
         "type": "string",
-        "value": "24%"
+        "value": "7%"
     },
     "_width_": {
         "type": "string",
@@ -39,7 +39,7 @@
     },
     "centery": {
         "type": "string",
-        "value": "40%"
+        "value": "35%"
     },
     "containerweight": 100,
     "id": "imgNoComponentsLeft",

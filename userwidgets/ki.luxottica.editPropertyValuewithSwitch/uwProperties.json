@@ -1,0 +1,119 @@
+{
+    "classname": "editPropertyValuewithSwitch",
+    "definitions": {
+        "apis": {
+            "custom": [],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "acffe5be6a7642a487eb59985fa02e2b",
+                    "originalPropertyKey": "onSlide",
+                    "propertyIndex": 1,
+                    "propertyKey": "onSlide",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onSlide",
+                        "srcWidget": "switchPropertyValueSwitch",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "Switch"
+                    },
+                    "srcWgtKUID": "c9ef43f4c7fd48c8b3673ce906f52d0b",
+                    "translateAtInstance": false
+                }
+            ]
+        },
+        "groups": {
+            "apis": [],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "d320497b4ed04b75a7ca0763ce98bbcf",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 1,
+                    "propertyKey": "propertyName",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "propertyName",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblPropertyTitleSwitch",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "bd619c6238114f9db01520f8297bee72"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "bdaa8a4328c04ad182b19f9d2097f721",
+                    "originalPropertyKey": "selectedIndex",
+                    "propertyIndex": 2,
+                    "propertyKey": "propertyValue",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "propertyValue",
+                        "isHiddenInTool": false,
+                        "srcWidget": "switchPropertyValueSwitch",
+                        "type": "boolean",
+                        "uiConfig": {
+                            "Button": {
+                                "type": "SwitchToggle"
+                            },
+                            "Label": {}
+                        },
+                        "uiRepresentation": "Label-Button",
+                        "wType": "Switch"
+                    },
+                    "srcWgtKUID": "c9ef43f4c7fd48c8b3673ce906f52d0b"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "i53bbe01fd07466dafe426064fdad476",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 3,
+                    "propertyKey": "propertyTemplateId",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "propertyTemplateId",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblPropertyTemplateIdSwitch",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "g3bbe9a7db7f4454b9c9a431ed43ee2f"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "ki.luxottica",
+    "version": "1.0.0"
+}

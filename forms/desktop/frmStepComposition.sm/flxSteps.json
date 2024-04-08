@@ -39,7 +39,8 @@
         "value": "50%"
     },
     "children": [
-        "flxBoxFirstStep"
+        "flxBoxFirstStep",
+        "flxBoxPlus"
     ],
     "clipbounds": false,
     "containerweight": 100,
@@ -49,7 +50,7 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "je20478283b548cab205dc7b60f394b7",
-    "layouttype": 2,
+    "layouttype": 3,
     "name": "kony.ui.FlexContainer",
     "parent": "flxContainerStepCreation",
     "pf": "frmStepComposition",

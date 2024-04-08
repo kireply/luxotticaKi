@@ -1,0 +1,162 @@
+{
+    "classname": "editPropertyValuewithDropdown",
+    "definitions": {
+        "apis": {
+            "custom": [],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "de4d9bf3e2714f38b55e70e7a61ebf5e",
+                    "originalPropertyKey": "onSelection",
+                    "propertyIndex": 1,
+                    "propertyKey": "onSelection",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onSelection",
+                        "srcWidget": "listBoxPropertyValue",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "ListBox"
+                    },
+                    "srcWgtKUID": "ef306682883d460fae28e31d840694fe",
+                    "translateAtInstance": false
+                }
+            ]
+        },
+        "groups": {
+            "apis": [],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "b54a8ca86c9045ed9a12b6b5a45f1d7b",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 1,
+                    "propertyKey": "propertyName",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "propertyName",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblPropertyTitleDropdown",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "hf0b10aa32f74aac8ee46ec8de14a585"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "ied2dbf94e1549c69a3e270f16cb470e",
+                    "originalPropertyKey": "masterData",
+                    "propertyIndex": 2,
+                    "propertyKey": "listBoxMasterData",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "companionKeys": [
+                            {
+                                "isVisible": false,
+                                "key": "selectedKey",
+                                "originalKey": "selectedKey"
+                            },
+                            {
+                                "isVisible": false,
+                                "key": "selectedKeys",
+                                "originalKey": "selectedKeys"
+                            }
+                        ],
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "listBoxMasterData",
+                        "isHiddenInTool": false,
+                        "srcWidget": "listBoxPropertyValue",
+                        "type": "data",
+                        "uiConfig": {
+                            "Button": {
+                                "dataRetrieverId": "Masterdata-Groupwidget",
+                                "dataUpdaterId": "Masterdata-Groupwidget",
+                                "popupId": "Masterdata-Groupwidget",
+                                "type": "GroupWidgetMasterDataBtn"
+                            },
+                            "Label": {}
+                        },
+                        "uiRepresentation": "Label-Button",
+                        "wType": "ListBox"
+                    },
+                    "srcWgtKUID": "ef306682883d460fae28e31d840694fe"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "a4017765350747db89c6a289101ebc06",
+                    "originalPropertyKey": "selectedKey",
+                    "propertyIndex": 2,
+                    "propertyKey": "selectedKey",
+                    "pw": {
+                        "access": "readwrite",
+                        "isHiddenInTool": true,
+                        "srcWidget": "listBoxPropertyValue"
+                    },
+                    "srcWgtKUID": "ef306682883d460fae28e31d840694fe"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "d1c6488dab634c31a31690a4aa294cb9",
+                    "originalPropertyKey": "selectedKeys",
+                    "propertyIndex": 2,
+                    "propertyKey": "selectedKeys",
+                    "pw": {
+                        "access": "readwrite",
+                        "isHiddenInTool": true,
+                        "srcWidget": "listBoxPropertyValue"
+                    },
+                    "srcWgtKUID": "ef306682883d460fae28e31d840694fe"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "j0bf0739c90942759f0f372f6bf99567",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 3,
+                    "propertyKey": "propertyTemplateId",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "propertyTemplateId",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblPropertyTemplateIdDropdown",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "j5c26e0cd2c443949b8447c3f15fd5a7"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "ki.luxottica",
+    "version": "1.0.0"
+}

@@ -39,47 +39,28 @@
     "clipbounds": false,
     "containerweight": 0,
     "dataDiffs": {
-        "editPropertyValue": {
+        "flxScrollSettingsContent": {
             "__events__": {},
             "__info__": {
-                "kuid": "i195c09ae0a84884a0a79ab11feb656e",
-                "srcKUID": "ada481070ee042c78f3d88675c7a2d75",
-                "wType": "UserWidgetInstance"
+                "kuid": "f5d734ccab624ff89609c0f267da1b5c",
+                "srcKUID": "b54e17a1d3d04c3aa9273511727574be",
+                "wType": "FlexScrollContainer"
             },
-            "centerY": {
+            "bottom": {
                 "Default": {
                     "type": "string",
-                    "value": ""
+                    "value": "0%"
                 }
             },
-            "isVisible": false,
-            "responsiveData": {},
-            "top": {
+            "height": {
                 "Default": {
                     "type": "string",
-                    "value": "0dp"
-                }
-            }
-        },
-        "editPropertyValue.lblPropertyTitle": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "ca9f95eadfbe4484978234524133fbc2",
-                "srcKUID": "idc973972fa746d8910b6e6dcb47baaa",
-                "wType": "Label"
-            }
-        },
-        "editPropertyValue.txtPropertyValue": {
-            "__events__": {
-                "desktopweb": {
-                    "ide_onEndEditing": "AS_TextField_ed684d92f81f429e9aa10bff30c19d3f"
+                    "value": "100%"
                 }
             },
-            "__info__": {
-                "kuid": "dd8b451e402b44bfadc77f5195422c31",
-                "srcKUID": "h3603132da934b8ea910582c8c40f006",
-                "wType": "TextField"
-            }
+            "isVisible": true,
+            "layoutType": 4,
+            "responsiveData": {}
         },
         "flxSettingsSideContent": {
             "__events__": {},
@@ -109,7 +90,7 @@
                     "value": "87%"
                 }
             },
-            "layoutType": 4,
+            "layoutType": 2,
             "left": {
                 "Default": {
                     "type": "string",
