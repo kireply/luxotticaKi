@@ -39,7 +39,7 @@ define({
     selectedComp.onRowClickTeaser = () => {
       this.view.settingsSide.flxScrollSettingsContent.removeAll();    
       this.view.settingsSide.flxScrollSettingsContent.setVisibility(true);
-      //          this.view.settingsSide.txt.setVisibility(true);
+      this.view.settingsSide.txt.setVisibility(false);
 
       //          voltmx.print("### RIGHT DATA SELECTED COMPONENT: " + JSON.stringify(selectedComp.rightData));
 
@@ -54,7 +54,11 @@ define({
             centerX: '50%'
           }, {}, {});
           propComp.listBoxMasterData = found.masterData;
-          propComp.listBoxPropertyValue.selectedKey = found.default;
+          if (found.default !== null){
+            propComp.listBoxPropertyValue.selectedKey = found.default;  
+          } else {
+            propComp.listBoxPropertyValue.selectedKey = found.masterData[0][0];
+          }
           propComp.onSelection = () => {
             let identify = selectedComp.id;
             this.onEndEditingCallback(propComp, identify, true, false);
@@ -312,15 +316,29 @@ define({
 //           voltmx.print("### FINAL LIST: " + JSON.stringify(masterDataList));
         });
         propComp.listBoxMasterData = masterDataList;
-        let key = "lb1";
+        let key = null;
         if ("default" in list[i] && list[i].default !== null){
           key = masterDataList.find(elemento => elemento[1] === list[i].default)[0];
+          properties.lblPropertyValue = list[i].default;
+        } else {
+          key = "lb1";
+          const raw = masterDataList.find(elemento => elemento[0] === key);
+          voltmx.print("### RAW: " + JSON.stringify(raw));
+          properties.lblPropertyValue = raw[1];
         }
         propComp.listBoxPropertyValue.selectedKey = key;
+//         properties.lblPropertyValue = list[i].default;
         modes.push({"name": capitalizedName, "mode": "dropdown", "masterData": masterDataList, "default": key});
         propComp.onSelection = () => {
           this.onEndEditingCallback(propComp, null, true, false);
         };
+        if (!gblPropertyTemplatesIds[list[i].component_name]) {
+          gblPropertyTemplatesIds[list[i].component_name] = [];
+        }
+        let elem = {};
+        //       elem[list[i].id] = list[i].name;
+        elem[list[i].id] = { "name": list[i].name, "mode": "dropdown" };
+        gblPropertyTemplatesIds[list[i].component_name].push(elem);
 //         voltmx.print("### PLACEHOLDER: " + JSON.stringify(propComp.listBoxPlaceholder));
       } else if (list[i].mode === "label") {
         propComp = new ki.luxottica.editPropertyValuewithTextField({
@@ -333,16 +351,23 @@ define({
         let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
         let label_key = ``;
         if (left_width > 48){
-          label_key = `${gblFlowId}_[${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${gblLeftOrder}_${i+1}]`;
+          label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${gblLeftOrder}_${i+1}`;
         }
         if (right_width > 48){
-          label_key = `${gblFlowId}_[${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${gblRightOrder}_${i+1}]`;
+          label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${gblRightOrder}_${i+1}`;
         }
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
         propComp.propertyValue = label_key;
         propComp.txtPropertyValueTextField.setEnabled(false);
         properties["lblPropertyValue"] = label_key;
-		modes.push({"name": capitalizedName, "mode": "label"});        
+		modes.push({"name": capitalizedName, "mode": "label"});
+        if (!gblPropertyTemplatesIds[list[i].component_name]) {
+          gblPropertyTemplatesIds[list[i].component_name] = [];
+        }
+        let elem = {};
+        //       elem[list[i].id] = list[i].name;
+        elem[list[i].id] = { "name": list[i].name, "mode": "label" , "default": list[i].default};
+        gblPropertyTemplatesIds[list[i].component_name].push(elem);
       } else if (list[i].mode === "switch"){
         propComp = new ki.luxottica.editPropertyValuewithSwitch({
           id: `prop${new Date().getTime()}`,
@@ -353,6 +378,18 @@ define({
           this.onEndEditingCallback(propComp, null, false, true);
         };
         modes.push({"name": capitalizedName, "mode": "switch"});
+        if (!gblPropertyTemplatesIds[list[i].component_name]) {
+          gblPropertyTemplatesIds[list[i].component_name] = [];
+        }
+        let elem = {};
+        //       elem[list[i].id] = list[i].name;
+        elem[list[i].id] = { "name": list[i].name, "mode": "switch" };
+        gblPropertyTemplatesIds[list[i].component_name].push(elem);
+        if (propComp.propertyValue === 0){
+          properties["lblPropertyValue"] = "True";
+        } else {
+          properties["lblPropertyValue"] = "False";
+        }
       } else {
         propComp = new ki.luxottica.editPropertyValuewithTextField({
           id: `prop${new Date().getTime()}`,
@@ -363,16 +400,17 @@ define({
           this.onEndEditingCallback(propComp, null, false, false);
         };
         modes.push({"name": capitalizedName, "mode": "textfield"});
+        if (!gblPropertyTemplatesIds[list[i].component_name]) {
+          gblPropertyTemplatesIds[list[i].component_name] = [];
+        }
+        let elem = {};
+        //       elem[list[i].id] = list[i].name;
+        elem[list[i].id] = { "name": list[i].name, "mode": "textfield" };
+        gblPropertyTemplatesIds[list[i].component_name].push(elem);
       }
       propComp.propertyName = capitalizedName;
       propComp.propertyTemplateId = list[i].id;
       this.view.settingsSide.flxScrollSettingsContent.add(propComp);
-      if (!gblPropertyTemplatesIds[list[i].component_name]) {
-        gblPropertyTemplatesIds[list[i].component_name] = [];
-      }
-      let elem = {};
-      elem[list[i].id] = list[i].name;
-      gblPropertyTemplatesIds[list[i].component_name].push(elem);
 //       }
       index +=1;
       rightSegmentData.push(properties);
@@ -433,17 +471,56 @@ define({
           property_instance_left["component_instance_id"] = response.COMPONENT_INSTANCE[0].id;
           let props_left = widget[channelKey]["flxSelectedComponentRight"]["segmentRight"]["data"];
           props_left.forEach(function(prop_left) {
-            property_instance_left["value"] = prop_left.lblPropertyValue;
             let cleanedStr_left = prop_left.lblPropertyName.replace(/[^a-zA-Z0-9]+$/, '').replace(/^[^a-zA-Z0-9]+/, '');
 			let camelCaseStr_left = cleanedStr_left.charAt(0).toLowerCase() + cleanedStr_left.slice(1);
             let prop_name_left = camelCaseStr_left;
             let elementoTrovato_left = gblPropertyTemplatesIds[component_instance_left["template_name"]].find(item_left => {
-              let [id_left, tipoItem_left] = Object.entries(item_left)[0];
-              return tipoItem_left === prop_name_left;
+              let [id_left, obj_left] = Object.entries(item_left)[0];
+              return obj_left["name"] === prop_name_left;
             });
             let prop_id_left = Object.keys(elementoTrovato_left);
             property_instance_left["property_template_id"] = prop_id_left[0];
-            voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_left,
+            if (elementoTrovato_left[prop_id_left[0]].mode === "label"){
+              gblFlowId = 128; //to comment in the global flow of the application
+              let label = {
+                id: prop_left.lblPropertyValue,
+                flow_id: gblFlowId, 
+                en_GB: elementoTrovato_left[prop_id_left[0]].default
+              };
+//               debugger;
+              voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, label, 
+                                                                                               (response) => {
+                voltmx.print("### Service response: " + JSON.stringify(response));
+                property_instance_left["value"] = prop_left.lblPropertyValue;
+                property_instance_left["label_id"] = prop_left.lblPropertyValue;
+                voltmx.print("### PROP LEFT: " + JSON.stringify(property_instance_left));
+                voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_left,
+                                                                                                 (response) => {
+                  voltmx.print ("### Service response: "+JSON.stringify(response));
+                },
+                                                                                                 (error) => {
+                  voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                  //             voltmx.application.dismissLoadingScreen();
+                  voltmx.ui.Alert({
+                    "alertType": constants.ALERT_TYPE_INFO,
+                    "alertTitle": "Fail",
+                    "yesLabel": "Ok",
+                    "message": "Save not permitted: an error occurred.",
+                    "alertHandler": this.SHOW_ALERT_Failure_Callback
+                  }, {
+                    "iconPosition": constants.ALERT_ICON_POSITION_LEFT
+                  });
+                  gblFail = true;
+                }
+               );
+              }, 
+                                                                                               (error) => {
+                voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+              });
+            } else {
+              property_instance_left["value"] = prop_left.lblPropertyValue;
+              voltmx.print("### PROP LEFT: " + JSON.stringify(property_instance_left));
+              voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_left,
                                                                                              (response) => {
               voltmx.print ("### Service response: "+JSON.stringify(response));
             },
@@ -461,7 +538,8 @@ define({
               });
               gblFail = true;
             }
-           );  
+           );
+           } 
           });
         },
                                                                                          (error) => {
@@ -502,35 +580,75 @@ define({
           property_instance_right["component_instance_id"] = response.COMPONENT_INSTANCE[0].id;
           let props_right = widget[channelKey]["flxSelectedComponentRight"]["segmentRight"]["data"];
           props_right.forEach(function(prop_right) {
-            property_instance_right["value"] = prop_right.lblPropertyValue;
             let cleanedStr = prop_right.lblPropertyName.replace(/[^a-zA-Z0-9]+$/, '').replace(/^[^a-zA-Z0-9]+/, '');
 			let camelCaseStr = cleanedStr.charAt(0).toLowerCase() + cleanedStr.slice(1);
             let prop_name_right = camelCaseStr;
             let elementoTrovato_right = gblPropertyTemplatesIds[component_instance_right["template_name"]].find(item_right => {
-              let [id_right, tipoItem_right] = Object.entries(item_right)[0];
-              return tipoItem_right === prop_name_right;
+              let [id_right, obj_right] = Object.entries(item_right)[0];
+              return obj_right["name"] === prop_name_right;
             });
             let prop_id_right = Object.keys(elementoTrovato_right);
             property_instance_right["property_template_id"] = prop_id_right[0];
-            voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_right,
-                                                                                             (response) => {
-              voltmx.print ("### Service response: "+JSON.stringify(response));
-            },
-                                                                                             (error) => {
-              voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-              //                     voltmx.application.dismissLoadingScreen();
-              voltmx.ui.Alert({
-                "alertType": constants.ALERT_TYPE_INFO,
-                "alertTitle": "Fail",
-                "yesLabel": "Ok",
-                "message": "Save not permitted: an error occurred.",
-                "alertHandler": this.SHOW_ALERT_Failure_Callback
-              }, {
-                "iconPosition": constants.ALERT_ICON_POSITION_LEFT
+            if (elementoTrovato_right[prop_id_right[0]].mode === "label"){
+              gblFlowId = 128; //to comment in the global flow of the application
+              let label_right = {
+                id: prop_right.lblPropertyValue,
+                flow_id: gblFlowId, 
+                en_gb: elementoTrovato_right[prop_id_right[0]].default
+              };
+              // 			  debugger;
+              voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, label_right, 
+                                                                                               (response) => {
+                voltmx.print("### Service response: " + JSON.stringify(response));
+                property_instance_right["label_id"] = prop_right.lblPropertyValue;
+                property_instance_right["value"] = prop_right.lblPropertyValue;
+                voltmx.print("### PROP RIGHT: " + JSON.stringify(property_instance_right));
+                voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_right,
+                                                                                                 (response) => {
+                  voltmx.print ("### Service response: "+JSON.stringify(response));
+                },
+                                                                                                 (error) => {
+                  voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                  //             voltmx.application.dismissLoadingScreen();
+                  voltmx.ui.Alert({
+                    "alertType": constants.ALERT_TYPE_INFO,
+                    "alertTitle": "Fail",
+                    "yesLabel": "Ok",
+                    "message": "Save not permitted: an error occurred.",
+                    "alertHandler": this.SHOW_ALERT_Failure_Callback
+                  }, {
+                    "iconPosition": constants.ALERT_ICON_POSITION_LEFT
+                  });
+                  gblFail = true;
+                }
+                                                                                                );
+              }, 
+                                                                                               (error) => {
+                voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
               });
-              gblFail = true;
+            } else {
+              property_instance_right["value"] = prop_right.lblPropertyValue;
+              voltmx.print("### PROP RIGHT: " + JSON.stringify(property_instance_right));
+              voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_right,
+                                                                                               (response) => {
+                voltmx.print ("### Service response: "+JSON.stringify(response));
+              },
+                                                                                               (error) => {
+                voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                //             voltmx.application.dismissLoadingScreen();
+                voltmx.ui.Alert({
+                  "alertType": constants.ALERT_TYPE_INFO,
+                  "alertTitle": "Fail",
+                  "yesLabel": "Ok",
+                  "message": "Save not permitted: an error occurred.",
+                  "alertHandler": this.SHOW_ALERT_Failure_Callback
+                }, {
+                  "iconPosition": constants.ALERT_ICON_POSITION_LEFT
+                });
+                gblFail = true;
+              }
+             );
             }
-           );
           });
         },
                                                                                          (error) => {

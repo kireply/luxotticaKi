@@ -48,7 +48,7 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "be17b0deb21f45f18eb0d23c6966152c",
-    "layouttype": 3,
+    "layouttype": 4,
     "name": "kony.ui.FlexContainer",
     "parent": "editPropertyValuewithSwitch",
     "pf": "userwidgetmodel",
