@@ -1,0 +1,28 @@
+{
+    "AS_FlexContainer_ffbb6ac349e240cc9b190149629d0310": {
+        "id": "AS_FlexContainer_ffbb6ac349e240cc9b190149629d0310",
+        "type": "ACTION_SEQUENCE",
+        "name": "onHoverHandlerForTplRowSegMenu",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowSegMenu",
+            "type": "templates",
+            "platform": "",
+            "KUID": "b8d1444c0e984258a22c977e348f2dbd"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_b8c0afd87cf5400581c4bc9194c64a1d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### dentro a HOVER Segment \");\n\nself.view.flxtplRowSegMenu.backgroundColor = \"808080\";\nself.view.flxHover.setVisibility(true);",
+            "parentId": null
+        }]
+    }
+}

@@ -1,6 +1,15 @@
 {
   "android": {
-    "font_name": "default"
+    "font_name": "default",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000014",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
   },
   "androidwearos": {
     "font_name": "default"
@@ -12,13 +21,52 @@
   "border_type": 0,
   "border_width": 1,
   "desktopweb": {
-    "font_name": "Helvetica"
+    "bottom_left_border_color": "000000ff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "000000ff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000014",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    },
+    "top_left_border_color": "000000ff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "000000ff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
   },
   "ipad": {
-    "font_name": "System"
+    "font_name": "System",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000014",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
   },
   "iphone": {
-    "font_name": "System"
+    "font_name": "System",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000014",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
   },
   "isDefaultSkin": false,
   "kiosk": {
@@ -26,25 +74,160 @@
   },
   "kuid": "sc0e37d6e5b641cea3bf9e8a566fd57a",
   "spaan": {
-    "font_name": "Helvetica"
+    "bottom_left_border_color": "000000ff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "000000ff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000014",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    },
+    "top_left_border_color": "000000ff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "000000ff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
   },
   "spaandroidtablet": {
-    "font_name": "Helvetica"
+    "bottom_left_border_color": "000000ff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "000000ff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000014",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    },
+    "top_left_border_color": "000000ff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "000000ff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
   },
   "spaip": {
-    "font_name": "Helvetica"
+    "bottom_left_border_color": "000000ff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "000000ff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000014",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    },
+    "top_left_border_color": "000000ff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "000000ff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
   },
   "spaipad": {
-    "font_name": "Helvetica"
+    "bottom_left_border_color": "000000ff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "000000ff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000014",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    },
+    "top_left_border_color": "000000ff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "000000ff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
   },
   "spawindowstablet": {
-    "font_name": "Helvetica"
+    "bottom_left_border_color": "000000ff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "000000ff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000014",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    },
+    "top_left_border_color": "000000ff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "000000ff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
   },
   "spawinphone8": {
-    "font_name": "Helvetica"
+    "bottom_left_border_color": "000000ff",
+    "bottom_left_border_style": "plain",
+    "bottom_left_border_width": 1,
+    "bottom_right_border_color": "000000ff",
+    "bottom_right_border_style": "plain",
+    "bottom_right_border_width": 1,
+    "font_name": "Helvetica",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000014",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    },
+    "top_left_border_color": "000000ff",
+    "top_left_border_style": "plain",
+    "top_left_border_width": 1,
+    "top_right_border_color": "000000ff",
+    "top_right_border_style": "plain",
+    "top_right_border_width": 1
   },
   "tabrcandroid": {
-    "font_name": "default"
+    "font_name": "default",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "00000014",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
   },
   "wType": "FlexContainer",
   "watchos": {

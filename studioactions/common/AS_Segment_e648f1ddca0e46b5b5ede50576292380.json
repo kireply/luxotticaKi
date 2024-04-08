@@ -32,7 +32,7 @@
         }, {
             "id": "ADD_SNIPPET_ed339f95c3324cebbfb62923369144b6",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "var menu = this.view.hamburgermenu.segMenu.selectedRowItems[0];\nmenuOption = menu.lblMenu;\nvoltmx.print(\"### menu: \" + menu);\nvoltmx.print(\"### opzione menu: \" + menuOption);\n\nif (menuOption === \"Labels\") {\n        var ntf = new voltmx.mvc.Navigation(\"frmLabelManagement\");\n        ntf.navigate();\n}",
+            "codeSnippet": "var menu = this.view.hamburgermenu.segMenu.selectedRowItems[0];\nmenuOption = menu.lblMenu;\nvoltmx.print(\"### menu: \" + menu);\nvoltmx.print(\"### opzione menu: \" + menuOption);\n\nif (menuOption === \"Labels\") {\n        var ntf = new voltmx.mvc.Navigation(\"frmLabelManagement\");\n        ntf.navigate();\n  \t\tvoltmx.print(\"### IF SI, NAVIGO: \" + menuOption);\n}",
             "parentId": null,
             "disabled": false
         }]

@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "40dp"
+        "value": "10%"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "Channel Properties File",
     "_top_": {
         "type": "string",
-        "value": "375dp"
+        "value": "38.5%"
     },
     "_width_": {
         "type": "ref",

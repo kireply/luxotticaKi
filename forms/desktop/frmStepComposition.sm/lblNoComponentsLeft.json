@@ -25,7 +25,7 @@
     "_text_": "No components here!",
     "_top_": {
         "type": "string",
-        "value": "15%"
+        "value": "42%"
     },
     "_width_": {
         "type": "string",
@@ -42,10 +42,6 @@
     "centerx": {
         "type": "string",
         "value": "50%"
-    },
-    "centery": {
-        "type": "string",
-        "value": "48%"
     },
     "containerweight": 100,
     "contentalignment": 5,

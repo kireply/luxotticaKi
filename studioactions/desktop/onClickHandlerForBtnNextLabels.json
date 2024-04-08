@@ -1,0 +1,26 @@
+{
+    "AS_Button_fb1aeb0070aa434da35336e350637407": {
+        "id": "AS_Button_fb1aeb0070aa434da35336e350637407",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnNextLabels",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmLabelManagement",
+            "type": "forms",
+            "platform": "",
+            "KUID": "jcf530250ee04551b0014dcb7147f2fe"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_e8b231916c164c9c80093233f2e5ffa6",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "/* \nWhen clicking on \"Next\", the rows of the segment must display the next 5 rows in the gblLabesl list\n*/\nvar maxPages = Math.ceil(gblLabelsColumns / 5); // this method rounds up to the nearest integer\nvoltmx.print(\"col: \" + gblLabelsColumns);\nvoltmx.print(\"maxP: \" + maxPages);\n\nif (gblLabelsPage < maxPages) {\n  \n  this.view.btnPrevious.setEnabled(true);\n  this.view.btnPrevious.opacity = 1;\n  \n  ++gblLabelsPage; // moving to new page\n  var x = gblLabelsPage - 1;\n  var firstKeys = Object.keys(gblLabelsList[0]).slice( (5*x) , (5*gblLabelsPage) );\n\n  this.view.segLabels.widgetDataMap = {lb1: firstKeys[0],lb2: firstKeys[1],lb3: firstKeys[2],lb4: firstKeys[3], lb5: firstKeys[4]};\n\n  // checking for the selected number of labels to show\n  var showLabels = parseInt(this.view.lbShowEntries.selectedKeyValue[1], 10);  // 10 is for the decimal\n  var data = gblLabelsList.slice(0, ++showLabels); //++ because the first row is used for the header\n\n  this.view.segLabels.setData(data);\n  \n  this.view.btnPrevious.setEnabled(true);\n  this.view.btnPrevious.opacity = 1;\n  \n  if(gblLabelsPage === maxPages) { // last page reached\n    this.view.btnNext.setEnabled(false);\n    this.view.btnNext.opacity = 0.5;\n  }\n  \n} ",
+            "parentId": null,
+            "disabled": false
+        }]
+    }
+}

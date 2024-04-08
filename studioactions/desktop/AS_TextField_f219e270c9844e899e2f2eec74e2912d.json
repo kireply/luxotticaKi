@@ -1,0 +1,25 @@
+{
+    "AS_TextField_f219e270c9844e899e2f2eec74e2912d": {
+        "id": "AS_TextField_f219e270c9844e899e2f2eec74e2912d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmLabelManagement",
+            "type": "forms",
+            "platform": "",
+            "KUID": "jcf530250ee04551b0014dcb7147f2fe"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": []
+    }
+}

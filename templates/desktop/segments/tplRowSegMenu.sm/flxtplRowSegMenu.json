@@ -36,7 +36,8 @@
     "canUpdateUI": true,
     "children": [
         "imgMenuIcon",
-        "lblMenu"
+        "lblMenu",
+        "flxHover"
     ],
     "clipbounds": false,
     "containerId": true,
@@ -46,6 +47,12 @@
             "channel": "desktop",
             "name": "flxtplRowSegMenuController"
         }
+    },
+    "desktopweb": {
+        "psp": {}
+    },
+    "disabledSkins": {
+        "focusSkin": "s0cb847e327c44e5803180ea12f08513"
     },
     "enablescrolling": true,
     "id": "flxtplRowSegMenu",

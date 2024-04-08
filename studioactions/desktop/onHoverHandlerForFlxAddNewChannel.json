@@ -21,7 +21,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_f451eb842d564729a61fe61ff71ce9c1",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "if (context.eventType !== \"leave\"){\n  this.view.flxAddNewChannel.backgroundColor = \"000000\";\n  this.view.imgAddNewChannel.src = \"/add_circle_icon_modified.png\";\n  this.view.lblAddNewChannelBlack.setVisibility(false);\n  this.view.lblAddNewChannelWhite.setVisibility(true);\n  //this.view.lblStepCreation.backgroundColor = \"ffffff\";\n} else {\n  this.view.flxAddNewChannel.backgroundColor = \"ffffff\";\n  this.view.imgAddNewChannel.src = \"/plus.png\";\n  //this.view.imgAddNewChannel.height = \"30%\";\n  //this.view.imgAddNewChannel.width = \"30%\";\n  this.view.lblAddNewChannelWhite.setVisibility(false);\n  this.view.lblAddNewChannelBlack.setVisibility(true);\n  //this.view.lblStepCreation.backgroundColor = \"000000\";\n}\n",
+            "codeSnippet": "if (context.eventType !== \"leave\"){\n  this.view.flxAddNewChannel.backgroundColor = \"000000\";\n  this.view.imgAddNewChannel.setVisibility(false);\n  this.view.imgAddNewChannel2.setVisibility(true);\n \n  this.view.lblAddNewChannelBlack.setVisibility(false);\n  this.view.lblAddNewChannelWhite.setVisibility(true);\n  \n} else {\n  this.view.flxAddNewChannel.backgroundColor = \"ffffff\";\n  this.view.imgAddNewChannel2.setVisibility(false);\n  this.view.imgAddNewChannel.setVisibility(true);\n \n  this.view.lblAddNewChannelWhite.setVisibility(false);\n  this.view.lblAddNewChannelBlack.setVisibility(true);\n}\n",
             "parentId": null
         }]
     }

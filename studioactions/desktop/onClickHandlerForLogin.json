@@ -32,12 +32,6 @@
             "parentId": null,
             "callbackType": null
         }, {
-            "id": "ADD_SNIPPET_d6560fdfa29c40028f239395003b41bf",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "",
-            "parentId": null,
-            "callbackType": null
-        }, {
             "id": "INVOKE_SERVICE_f06d2240f82d44dea0e033697a625b94",
             "type": "INVOKE_IDENTITY_SERVICE",
             "mappings": {

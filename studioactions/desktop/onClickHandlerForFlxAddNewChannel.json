@@ -12,7 +12,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_ide_onClick_bbf226912ade44eb9b84eb2610c64a3c",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxPopupCreateNewChannel.setVisibility(true);\nthis.view.btnSaveNewChannel.setEnabled(false);"
+            "codeSnippet": "this.view.flxPopupCreateNewChannel.setVisibility(true);\nthis.view.btnSaveNewChannel.setEnabled(false);\nthis.view.btnSaveNewChannel.opacity = 0.5;\nthis.view.flxBlur.setVisibility(true);"
         }, {
             "id": "STYLE_ACTION_a3416a2f2acf4caa9ba1b48d42d92d49",
             "type": "STYLE_ACTION",
@@ -43,6 +43,7 @@
             "animationId": "STYLE_ACTION_a3416a2f2acf4caa9ba1b48d42d92d49",
             "displayAnimationId": "STYLE_ACTION_a3416a2f2acf4caa9ba1b48d42d92d49",
             "forkedPlatform": "all",
+            "disabled": true,
             "widgetPath": "this.view.btnSaveNewChannel"
         }]
     }

@@ -50,8 +50,8 @@
             },
             "bottom": {
                 "Default": {
-                    "type": "string",
-                    "value": "4%"
+                    "type": "number",
+                    "value": "0"
                 }
             },
             "centerX": {
@@ -69,7 +69,7 @@
             "height": {
                 "Default": {
                     "type": "string",
-                    "value": "50dp"
+                    "value": "100%"
                 }
             },
             "responsiveData": {},
@@ -82,7 +82,7 @@
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "80%"
+                    "value": "100%"
                 }
             }
         },
@@ -105,7 +105,29 @@
             "top": {
                 "Default": {
                     "type": "string",
-                    "value": "14dp"
+                    "value": "2%"
+                }
+            }
+        },
+        "flxBtnLogout": {
+            "__events__": {
+                "ide_onClick": "AS_FlexContainer_df1fbdf069574b89af52be2b3d841f18"
+            },
+            "__info__": {
+                "kuid": "da514ba8743f463f8eaee54b4693f5ef",
+                "srcKUID": "a0c260c49fa14d3aa934cade39c38bb0",
+                "wType": "FlexContainer"
+            },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": "3.20%"
+                }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
                 }
             }
         },
@@ -174,6 +196,7 @@
                     "value": ""
                 }
             },
+            "responsiveData": {},
             "right": {
                 "Default": {
                     "type": "string",
@@ -208,6 +231,17 @@
             },
             "responsiveData": {},
             "src": "logout_true.png"
+        },
+        "imgLogout2": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "e48b04c68e9a47d9af9cc23f8af8660e",
+                "srcKUID": "d183329a0090424e92fc74f21216b2bb",
+                "wType": "Image"
+            },
+            "isVisible": false,
+            "responsiveData": {},
+            "src": "logout_modified.png"
         },
         "segMenu": {
             "__events__": {},
@@ -250,7 +284,7 @@
             "height": {
                 "Default": {
                     "type": "string",
-                    "value": "100.08%"
+                    "value": "100%"
                 }
             },
             "left": {

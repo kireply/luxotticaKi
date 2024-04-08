@@ -52,7 +52,7 @@
         }, {
             "id": "ADD_SNIPPET_g56c3b1b0af347daa472294a0649b4b7",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "\nthis.view.txtChannelID.setEnabled(false);\nthis.view.lbChannelName.setEnabled(false);\nthis.view.txtChannelLogo.setEnabled(false);\nthis.view.txtChannelProperties.setEnabled(false);\n\n//this.view.segChannels.orientation = constants.BOX_LAYOUT_HORIZONTAL;\n//voltmx.print(\"### ORIENTAMENTO MODIFICATO.\");\n",
+            "codeSnippet": "this.view.txtChannelID.setEnabled(false);\nthis.view.lbChannelName.setEnabled(false);\nthis.view.txtChannelLogo.setEnabled(false);\nthis.view.txtChannelProperties.setEnabled(false);\nthis.view.txtChannelGenericImage.setEnabled(false);\nthis.view.txtChannelAssetsCDN.setEnabled(false);\nthis.view.txtChannelProjectImage.setEnabled(false);\nthis.view.txtChannelFrameOnlyLensUPC.setEnabled(false);\n\nthis.view.btnSaveNewChannelInsideFrmChannels.setEnabled(false);\nthis.view.btnSaveNewChannelInsideFrmChannels.opacity = 0.5;\n\n//this.view.segChannels.orientation = constants.BOX_LAYOUT_HORIZONTAL;\n//voltmx.print(\"### ORIENTAMENTO MODIFICATO.\");\n",
             "parentId": null,
             "callbackType": null
         }, {

@@ -5,8 +5,8 @@
         "value": "100%"
     },
     "_left_": {
-        "type": "string",
-        "value": "0dp"
+        "type": "number",
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -22,10 +22,10 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
+    "_skin_": "s8c943ad6bc64ba889e6e4153194717d",
     "_top_": {
-        "type": "string",
-        "value": "0dp"
+        "type": "number",
+        "value": "0"
     },
     "_width_": {
         "type": "string",
@@ -39,10 +39,19 @@
         "lblChannelInfo",
         "imgInfo",
         "lblChannelId",
-        "lblChannelProperties"
+        "lblChannelProperties",
+        "lblChannelGenericImage",
+        "lblChannelAssetsCDN",
+        "lblChannelProjectImage",
+        "lblChannelFrameOnlyLensUPC"
     ],
     "clipbounds": false,
     "containerweight": 100,
+    "desktopweb": {
+        "psp": {
+            "hoverSkin": "sb53096092d74cffb4f856aaa50fcac8"
+        }
+    },
     "enablescrolling": true,
     "id": "flxChannel",
     "info": null,

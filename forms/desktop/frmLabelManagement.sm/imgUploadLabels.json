@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
+    "_skin_": "s01b4ea6a1de47ed8a94c3676ee80258",
     "_src_": "upload.png",
     "_top_": {
         "type": "string",
@@ -40,7 +40,7 @@
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "gc6f19e96f764180ad66a9516d837baa",
+    "kuid": "a2b0f8a0cb9b4909bef4828702e05970",
     "name": "kony.ui.Image2",
     "parent": "flxUploadLabels",
     "pf": "frmLabelManagement",

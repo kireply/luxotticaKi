@@ -54,12 +54,12 @@
         "lblEnvironment2",
         "lbEnvironment2",
         "lblIsDefaultFlow",
-        "lblIsSupernova",
-        "lblSelectStepsLayout",
-        "btnDuplicateFlow",
         "swIsDefaultFlow",
+        "lblIsSupernova",
         "swIsSupernova",
-        "flxStepsLayout"
+        "lblSelectStepsLayout",
+        "flxStepsLayout",
+        "btnDuplicateFlow"
     ],
     "clipbounds": false,
     "containerweight": 100,

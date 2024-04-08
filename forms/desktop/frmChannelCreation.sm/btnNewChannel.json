@@ -1,0 +1,52 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s5a73f74e2d14609bf30149ef36802a4",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "disabledSkins": {
+        "focusSkin": "s6de8ee3e9e1463996d5dbb22b25b33b"
+    },
+    "displaytext": true,
+    "id": "btnNewChannel",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "b3ca7eebc9a643f2a7c2cfdf40b440e8",
+    "name": "kony.ui.Button",
+    "parent": "flxAddNewChannel",
+    "pf": "frmChannelCreation",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button"
+}

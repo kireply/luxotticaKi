@@ -32,7 +32,7 @@
     },
     "centery": {
         "type": "string",
-        "value": "50.00%"
+        "value": "50%"
     },
     "children": [
         "lblTitle",

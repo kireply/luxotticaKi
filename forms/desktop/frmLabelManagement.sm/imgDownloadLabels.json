@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "sfdb4023cdb5436b8f49759f92cae158",
+    "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
     "_src_": "download_modified.png",
     "_top_": {
         "type": "string",
@@ -40,7 +40,7 @@
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c89f9142d9fe4caca9707bb367d2531d",
+    "kuid": "ac14f4bf964b45cebdc3be7da5fd8b74",
     "name": "kony.ui.Image2",
     "parent": "flxDownloadLabels",
     "pf": "frmLabelManagement",
@@ -48,6 +48,5 @@
     "retainflexpositionproperties": false,
     "srcType": 1,
     "wType": "Image",
-    "widgetalignment": 5,
-    "zindex": 1
+    "widgetalignment": 5
 }

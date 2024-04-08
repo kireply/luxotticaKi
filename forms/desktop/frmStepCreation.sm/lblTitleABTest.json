@@ -23,10 +23,6 @@
     ],
     "_skin_": "s9f7a0fe28d54ebdbd1602be75c6c38b",
     "_text_": "A/B Test:",
-    "_top_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_width_": {
         "type": "string",
         "value": "15%"

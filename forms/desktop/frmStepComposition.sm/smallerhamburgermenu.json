@@ -45,7 +45,20 @@
                 "kuid": "abf34814412d4e65a32cecd9a57841e6",
                 "srcKUID": "dc71668cc16f4695981806296357819d",
                 "wType": "Button"
-            }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "responsiveData": {}
         },
         "btnResizeMenu": {
             "__events__": {
@@ -55,6 +68,23 @@
                 "kuid": "da3a61f3e1da4e439c10f96276d1eed4",
                 "srcKUID": "b78ca6f9cd4742d8b6d55eda7606510c",
                 "wType": "Button"
+            },
+            "responsiveData": {},
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "30%"
+                }
+            }
+        },
+        "flxLogout": {
+            "__events__": {
+                "ide_onClick": "AS_FlexContainer_d5d45fb6326b45eda7225bcaf21d42b6"
+            },
+            "__info__": {
+                "kuid": "h201cae6a03d4fc69ffdacfe3cba51e8",
+                "srcKUID": "bd4e6e8bdb8a4f2e87e20e3b2baa4851",
+                "wType": "FlexContainer"
             }
         },
         "imgLogout": {
@@ -65,6 +95,14 @@
                 "wType": "Image"
             },
             "src": "logout_true.png"
+        },
+        "imgLogout1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "dc6d316822c94a90a88a2d581aadba17",
+                "srcKUID": "d2f68446c7fa4a9abe29e1b65700eab2",
+                "wType": "Image"
+            }
         },
         "segMenu": {
             "__events__": {},

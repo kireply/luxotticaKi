@@ -1,0 +1,66 @@
+{
+    "AS_Segment_f6fbecc2402c42eb87acff8c6d52d10f": {
+        "id": "AS_Segment_f6fbecc2402c42eb87acff8c6d52d10f",
+        "type": "ACTION_SEQUENCE",
+        "name": "onRowClickHandlerForSegMenuFromFrmLabelsManagement",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "name": "frmLabelManagement",
+            "type": "forms",
+            "platform": "",
+            "KUID": "jcf530250ee04551b0014dcb7147f2fe"
+        },
+        "language": "js",
+        "eventType": "onRowClick",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_h8fc657468284f30855293ce242dd609",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "menuOption",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\""
+        }, {
+            "id": "ADD_SNIPPET_j6fbbefc598a43c6be57e2125b78f987",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var menu = this.view.hamburgermenu.segMenu.selectedRowItems[0];\nmenuOption = menu.lblMenu;\nvoltmx.print(\"### menu: \" + menu);\nvoltmx.print(\"### opzione menu: \" + menuOption);",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "_b8e0cfbab4184b178822b1c02c9b3e73",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "menuOption",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "\"Flows\""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "NAVIGATE_TO_FORM__j6d511ab0e0b4b49a8f4cfc2462b905c",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmFlows",
+            "formKUID": "e6a8fc2377784d1595b361cc9412aea7",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_b8e0cfbab4184b178822b1c02c9b3e73",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }]
+    }
+}

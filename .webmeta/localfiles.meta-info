@@ -1,7 +1,16 @@
 {
     "HEAD": "w9d15ff906224436a664f4da1285f0d7",
+    "w7ff281f172846a0a679c76842f8afd0": {
+        "extension": "js",
+        "kuid": "w7ff281f172846a0a679c76842f8afd0",
+        "name": "xlsxfullmin.js",
+        "parent": "w9d15ff906224436a664f4da1285f0d7",
+        "type": "F"
+    },
     "w9d15ff906224436a664f4da1285f0d7": {
-        "children": [],
+        "children": [
+            "w7ff281f172846a0a679c76842f8afd0"
+        ],
         "kuid": "w9d15ff906224436a664f4da1285f0d7",
         "name": "localfiles",
         "type": "L"

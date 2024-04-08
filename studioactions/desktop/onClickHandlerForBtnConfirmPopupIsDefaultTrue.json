@@ -32,6 +32,122 @@
             "parentId": null,
             "callbackType": null
         }, {
+            "id": "ADD_LOCAL_VARIABLE_db10ab36c81144beae2802d6ee1f4303",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "lastDefaultFlowId",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_geef066dcd204bcca8e335f413cb12c5",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "lastDefaultFlowChannelId",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_fd3c8602b9fa4678bda240ba07d3b0af",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "lastDefaultFlowDescription",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_bf877925603843718e25f5ff40654e56",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "lastDefaultFlowABTest",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "boolean",
+            "value": "false",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_b978d1aaaec2487db87597e243a8ceb5",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "lastDefaultFlowEnvironment",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_i54085b7a8c94aca9722ea402bde3f3f",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "lastDefaultFlowStatus",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_g0ea1e50515046b785f3c705c41694c5",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "lastDefaultFlowSupernova",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "boolean",
+            "value": "false",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ce6da8b09a334c2788429a30876bb785",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "lastDefaultFlowCategory",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_gcd8c09b310f471b9e3b581a81f347f9",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "lastDefaultFlowAuthor",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_e8de06ba7626436081fd1e146f1a3d71",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "lastDefaultFlowLastModified",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_j548cd1b2427471985d4f20781b51d53",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "lastDefaultFlowLayoutId",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_d0196c8494004857b230ce0272cf30a5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var lastDefaultFlow = gblFlowsList.filter(flow => flow.default_flag.includes(\"true\") );\n\n// saving data of last default flow in order to update it (as NOT default)\nvar lastDefaultId = lastDefaultFlow[0].id;\nlastDefaultFlowId = parseInt(lastDefaultId.split('_').pop());\nlastDefaultFlowChannelId = lastDefaultFlow[0].channel_id;\nlastDefaultFlowDescription = lastDefaultFlow[0].description;\nlastDefaultFlowABTest = lastDefaultFlow[0].a_b_test;\nlastDefaultFlowEnvironment = lastDefaultFlow[0].environment;\nlastDefaultFlowStatus = lastDefaultFlow[0].status;\nlastDefaultFlowSupernova = lastDefaultFlow[0].supernova;\nlastDefaultFlowCategory = lastDefaultFlow[0].category;\nlastDefaultFlowAuthor = lastDefaultFlow[0].author;\nlastDefaultFlowLastModified = lastDefaultFlow[0].last_modified;\nlastDefaultFlowLayoutId = lastDefaultFlow[0].layout_id;\n\nvoltmx.print(\"### lastDefaultFlowId: \" + lastDefaultFlowId);\n\nvoltmx.print(\"### lastDefaultFlow: \" + JSON.stringify(lastDefaultFlowId) );",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "ADD_LOCAL_VARIABLE_e4015c64fce2434c92c1fe567fac046a",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "isDefault",
@@ -40,7 +156,8 @@
             "datatype": "boolean",
             "value": "false",
             "parentId": null,
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }, {
             "id": "ADD_LOCAL_VARIABLE_aa1f4ea90ae740cc9907ec54afe1b06a",
             "type": "ADD_LOCAL_VARIABLE",
@@ -50,17 +167,8 @@
             "datatype": "boolean",
             "value": "false",
             "parentId": null,
-            "callbackType": null
-        }, {
-            "id": "ADD_LOCAL_VARIABLE_bfda003e73d34a6c9cc83649c56f5955",
-            "type": "ADD_LOCAL_VARIABLE",
-            "name": "idNewFlow",
-            "isGlobal": false,
-            "valuetype": "expression",
-            "datatype": "string",
-            "value": "\"\"",
-            "parentId": null,
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }, {
             "id": "_hc429af0eb384e1bbe13efcc12cafa81",
             "type": "IF_CONDITION",
@@ -75,7 +183,8 @@
             }],
             "parentId": null,
             "callbackType": null,
-            "criteria": "all"
+            "criteria": "all",
+            "disabled": true
         }, {
             "id": "_d67a89e950f94f9dbfab7cb34559468b",
             "type": "IF_CONDITION",
@@ -90,7 +199,8 @@
             }],
             "parentId": null,
             "callbackType": null,
-            "criteria": "all"
+            "criteria": "all",
+            "disabled": true
         }, {
             "id": "MODIFY_VARIABLE_ACTION_e4160d7ef1c24100a41594371f37c1ee",
             "type": "MODIFY_VARIABLE_ACTION",
@@ -356,58 +466,6 @@
                         }
                     }
                 },
-                "ME_Mapping_a8d5892c4638419295cf5de71e1a10c6": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_a8d5892c4638419295cf5de71e1a10c6",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "isDefault",
-                        "dataType": "boolean",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Services",
-                        "propertyName": "default_flag",
-                        "dataType": "boolean",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "FLOW_create",
-                            "operationid": "121128"
-                        }
-                    }
-                },
-                "ME_Mapping_i74356b523d04abba3eb3ab917d7acc4": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_i74356b523d04abba3eb3ab917d7acc4",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "isSupernova",
-                        "dataType": "boolean",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Services",
-                        "propertyName": "supernova",
-                        "dataType": "boolean",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "FLOW_create",
-                            "operationid": "121128"
-                        }
-                    }
-                },
                 "ME_Mapping_a87d9865b0744e42abd523925b1f5635": {
                     "channel": "desktop",
                     "id": "ME_Mapping_a87d9865b0744e42abd523925b1f5635",
@@ -455,9 +513,61 @@
                             "operationid": "121128"
                         }
                     }
+                },
+                "ME_Mapping_h69e55b25ba047b89ce2ebb6151be313": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h69e55b25ba047b89ce2ebb6151be313",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowDefault",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "default_flag",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
+                },
+                "ME_Mapping_cb07da67970b48a38352e1df5bbbf03c": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cb07da67970b48a38352e1df5bbbf03c",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowSupernova",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "supernova",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_iaffcc88a9eb4d47a1a40282db0abed7", "ME_Mapping_e23c2026bb3f494c84d6f1d3fb61cd95", "ME_Mapping_dfec04fe0e2d47aeaeaf203b378950da", "ME_Mapping_b34d35190eb743ea8f07ce1367430545", "ME_Mapping_cf95aa0b707741a6b6509174c19515cf", "ME_Mapping_a34b3630d78f4fe6a8e704827813b482", "ME_Mapping_i480ad06eeda49bc895011866fbf13ee", "ME_Mapping_ibc5ebb56d3141b7a9673dd41ee67241", "ME_Mapping_a8d5892c4638419295cf5de71e1a10c6", "ME_Mapping_i74356b523d04abba3eb3ab917d7acc4", "ME_Mapping_a87d9865b0744e42abd523925b1f5635", "ME_Mapping_c881b7d404c2490bbb5615a864b3eef5"],
+            "mappingsOrder": ["ME_Mapping_iaffcc88a9eb4d47a1a40282db0abed7", "ME_Mapping_e23c2026bb3f494c84d6f1d3fb61cd95", "ME_Mapping_dfec04fe0e2d47aeaeaf203b378950da", "ME_Mapping_b34d35190eb743ea8f07ce1367430545", "ME_Mapping_cf95aa0b707741a6b6509174c19515cf", "ME_Mapping_a34b3630d78f4fe6a8e704827813b482", "ME_Mapping_i480ad06eeda49bc895011866fbf13ee", "ME_Mapping_ibc5ebb56d3141b7a9673dd41ee67241", "ME_Mapping_a87d9865b0744e42abd523925b1f5635", "ME_Mapping_c881b7d404c2490bbb5615a864b3eef5", "ME_Mapping_h69e55b25ba047b89ce2ebb6151be313", "ME_Mapping_cb07da67970b48a38352e1df5bbbf03c"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -468,6 +578,383 @@
             "parentId": null,
             "callbackType": null,
             "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_c09e1f79cb664529b468ce50f7f092e4",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Updating flows..."
+        }, {
+            "id": "INVOKE_SERVICE_d21b02e9d1834f28b67776deeea0658d",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_ibf7d1ab0cc54a06bfbd5fc352a660f6": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ibf7d1ab0cc54a06bfbd5fc352a660f6",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "lastDefaultFlowId",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_e53fd4468a5548a29ae4482d76c432b2": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e53fd4468a5548a29ae4482d76c432b2",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "lastDefaultFlowChannelId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "channel_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_f41c6faf8c1444e3917b26cdd902b068": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f41c6faf8c1444e3917b26cdd902b068",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "lastDefaultFlowDescription",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "description",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_h6196fa27d0543a0a960bbac8c8ac762": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h6196fa27d0543a0a960bbac8c8ac762",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "lastDefaultFlowABTest",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "a_b_test",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_d9bc3ace9ee74618afabc6b16bcef2d6": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d9bc3ace9ee74618afabc6b16bcef2d6",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "lastDefaultFlowEnvironment",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "environment",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_ie93d462074b4ec3901fb01e08be918e": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ie93d462074b4ec3901fb01e08be918e",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "lastDefaultFlowStatus",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "status",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_a0cf5f946d884cea8a14d8a2d2434a1f": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a0cf5f946d884cea8a14d8a2d2434a1f",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "default_flag",
+                        "dataType": "boolean",
+                        "expression": "false",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_af2d4a26d6bd4be5b6fbf11744b15561": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_af2d4a26d6bd4be5b6fbf11744b15561",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "lastDefaultFlowSupernova",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "supernova",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_cdaa678b83674333b47f8fa11a90a9f8": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cdaa678b83674333b47f8fa11a90a9f8",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "lastDefaultFlowCategory",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "category",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_fa9323ad7b644d0bad96800d5cc734b4": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_fa9323ad7b644d0bad96800d5cc734b4",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "lastDefaultFlowAuthor",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "author",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_d9f273e9eb1147c493da311908ff11e7": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d9f273e9eb1147c493da311908ff11e7",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "lastDefaultFlowLastModified",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "last_modified",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_a098f14aac5d4ba4be809b4e26b895cd": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a098f14aac5d4ba4be809b4e26b895cd",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "lastDefaultFlowLayoutId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "layout_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_ibf7d1ab0cc54a06bfbd5fc352a660f6", "ME_Mapping_e53fd4468a5548a29ae4482d76c432b2", "ME_Mapping_f41c6faf8c1444e3917b26cdd902b068", "ME_Mapping_h6196fa27d0543a0a960bbac8c8ac762", "ME_Mapping_d9bc3ace9ee74618afabc6b16bcef2d6", "ME_Mapping_ie93d462074b4ec3901fb01e08be918e", "ME_Mapping_a0cf5f946d884cea8a14d8a2d2434a1f", "ME_Mapping_af2d4a26d6bd4be5b6fbf11744b15561", "ME_Mapping_cdaa678b83674333b47f8fa11a90a9f8", "ME_Mapping_fa9323ad7b644d0bad96800d5cc734b4", "ME_Mapping_d9f273e9eb1147c493da311908ff11e7", "ME_Mapping_a098f14aac5d4ba4be809b4e26b895cd"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "FLOW_update",
+                "operationid": "121542"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_e3b855f814b846b892f1def8fa14d916",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_SERVICE_d21b02e9d1834f28b67776deeea0658d",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_h57adf208ea043049c1f8d4a30c6bfd7",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "FLOW_update.opstatus !== 0"
+            }],
+            "parentId": "INVOKE_SERVICE_d21b02e9d1834f28b67776deeea0658d",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_b2109682b0b64c7f9bf9c3cb4dac285d",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Last Default Flow NOT updated correctly.",
+            "yesLabel": "Ok",
+            "alertMessage": "Last Default Flow NOT updated correctly.",
+            "messageType": "constant",
+            "parentId": "_h57adf208ea043049c1f8d4a30c6bfd7",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
         }, {
             "id": "LOADING_INDICATOR_f1d48e775360437490bddd2e8ad1b1f9",
             "selectedOption": "dismiss",
@@ -550,16 +1037,11 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "MODIFY_VARIABLE_ACTION_cf61571683b94610b6fa5abf4db23204",
-            "type": "MODIFY_VARIABLE_ACTION",
+            "id": "ADD_SNIPPET_af051cc43719469aae280a0c59b85637",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblFlowId = FLOW_create.FLOW[0].id;\ngblFlowDescription = self.view.txtFlowDescription.text;\ngblFlowCategory = self.view.lbCategory.selectedKeyValue[1];\ngblFlowEnvironment = self.view.lbEnvironment.selectedKeyValue[1];",
             "parentId": "_ab3367875b0f484d99539d2182b23334",
-            "callbackType": null,
-            "variable": "idNewFlow",
-            "valueType": "set",
-            "isGlobal": false,
-            "dataType": "expression",
-            "modifySet": "FLOW_create.FLOW[0].id",
-            "modifySetType": "string"
+            "callbackType": null
         }, {
             "id": "NAVIGATE_TO_FORM__d63d7001c0c94f699952b25895034080",
             "type": "NAVIGATE_TO_FORM",
@@ -567,23 +1049,6 @@
             "formKUID": "j27b7970c694429db6312f3b27f7428e",
             "projectName": "luxotticaKi",
             "mappings": {
-                "ME_Mapping_h919993f067d4abe885d2515e84690a5": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_h919993f067d4abe885d2515e84690a5",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "isDefault",
-                        "propertyKey": "variable_isDefault",
-                        "dataType": "boolean",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "forkedPlatform": "all"
-                    }
-                },
                 "ME_Mapping_f8094628ea8c44ad98c5917e8c9ca0de": {
                     "channel": "desktop",
                     "id": "ME_Mapping_f8094628ea8c44ad98c5917e8c9ca0de",
@@ -654,32 +1119,15 @@
                     "target": {
                         "forkedPlatform": "all"
                     }
-                },
-                "ME_Mapping_b0230044146a49e8a764f27406316b44": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_b0230044146a49e8a764f27406316b44",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "idNewFlow",
-                        "propertyKey": "variable_idNewFlow",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "forkedPlatform": "all"
-                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_h919993f067d4abe885d2515e84690a5", "ME_Mapping_f8094628ea8c44ad98c5917e8c9ca0de", "ME_Mapping_fbc24ba9f85f470ca8aa39cfdc170e99", "ME_Mapping_de879b66a4374d049ef1a5e102888544", "ME_Mapping_b0230044146a49e8a764f27406316b44"],
+            "mappingsOrder": ["ME_Mapping_f8094628ea8c44ad98c5917e8c9ca0de", "ME_Mapping_fbc24ba9f85f470ca8aa39cfdc170e99", "ME_Mapping_de879b66a4374d049ef1a5e102888544"],
             "parentId": "_ab3367875b0f484d99539d2182b23334",
             "callbackType": null,
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"variable_isDefault\": isDefault,\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"variable_idNewFlow\": idNewFlow,\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnConfirmPopupIsDefaultTrue\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
             "isCustomInput": false
         }]
     }

@@ -10,7 +10,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -26,7 +26,11 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s420e7b341f840e283d1aab6b181f44d",
+    "_right_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_skin_": "s8a8cbb1cc4845078aa811defdefb579",
     "_width_": {
         "type": "string",
         "value": "20.97%"
@@ -35,7 +39,8 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "hamburgermenu"
+        "hamburgermenu",
+        "flxMenuOptionSelected"
     ],
     "clipbounds": false,
     "containerweight": 100,
@@ -44,7 +49,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "hc8038665c03462c889dd5ae25992b53",
+    "kuid": "e962f5ed466b455bbe701dcca270e8dc",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxMainContainerLabel",

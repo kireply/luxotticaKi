@@ -12,8 +12,6 @@
             "id": "_ide_onClick_ff71e0cddd5d4e64a086d9b4461f456b",
             "type": "STYLE_ACTION",
             "itemType": "FORM",
-            "itemId": "frmLabelManagement",
-            "widgetId": "btnDownloadLabels",
             "itemKUID": "ea82afa625b648c0b1461a183c73e3f9",
             "widgetKUID": "e7c5617974b14ba9a82755479c71f682",
             "wType": "Button",
@@ -40,8 +38,7 @@
             "displayAnimationId": "STYLE_ACTION_b6e0413654d844c8bc287dcc12d4bd9e",
             "forkedPlatform": "all",
             "callbackType": null,
-            "disabled": true,
-            "widgetPath": "this.view.btnDownloadLabels"
+            "disabled": true
         }, {
             "id": "LOADING_INDICATOR_ide_onClick_g4554aa4c0734c58990a87e1a31a96de",
             "selectedOption": "show",

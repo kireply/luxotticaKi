@@ -23,9 +23,9 @@
     ],
     "_right_": {
         "type": "string",
-        "value": "8%"
+        "value": "7.50%"
     },
-    "_skin_": "sb695d6016e248fead41d5a2f8e0f44a",
+    "_skin_": "sb59a5c9ddd942d7bc92bcd267c2f646",
     "_text_": "2",
     "_width_": {
         "type": "string",
@@ -34,21 +34,18 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 5,
-    "disabledSkins": {
-        "focusSkin": "sec6b69f7b4d48ab8c1c3eef1b497df0"
-    },
     "displaytext": true,
+    "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
     "id": "btn2",
-    "ide_onClick": "AS_Button_j8aa913edaf84e7a9239cd6556d00b68",
+    "ide_onClick": "AS_Button_bde9faee16a04e4da1c85edcf8670180",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "geed6f5a6abc46eaa1b83a23a5793587",
+    "isvisible": false,
+    "kuid": "a598664a985f488495682d6d44b8bd59",
     "name": "kony.ui.Button",
-    "parent": "FlexContainerLabel",
+    "parent": "flxContainerLabel",
     "pf": "frmLabelManagement",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "wType": "Button",
-    "zindex": 1
+    "wType": "Button"
 }

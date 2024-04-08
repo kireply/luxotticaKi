@@ -4,11 +4,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "40dp"
+        "value": "20%"
     },
     "_left_": {
         "type": "string",
-        "value": "248dp"
+        "value": "75%"
     },
     "_margin_": [
         0,
@@ -26,11 +26,11 @@
     "_src_": "info_icon.png",
     "_top_": {
         "type": "string",
-        "value": "27dp"
+        "value": "13%"
     },
     "_width_": {
         "type": "string",
-        "value": "55dp"
+        "value": "10%"
     },
     "canUpdateUI": true,
     "containerweight": 100,

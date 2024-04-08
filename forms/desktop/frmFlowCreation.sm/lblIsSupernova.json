@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "5.00%"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "Is Supernova?",
     "_top_": {
         "type": "string",
-        "value": "71%"
+        "value": "55%"
     },
     "_width_": {
         "type": "ref",

@@ -66,6 +66,7 @@
         }
     },
     "currentLocale": "default",
+    "defaultunit": 3,
     "desktopweb": {
         "ide_onBreakpointChange": "AS_Form_hebf5757563148029e92dd7e138742ce",
         "needAppMenu": false

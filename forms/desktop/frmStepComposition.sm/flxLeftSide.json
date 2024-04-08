@@ -22,7 +22,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s23e4cf74cf646748bf6ca2abeed29d9",
+    "_skin_": "s4ff04f7860d41a4a9bea8f3400a7acd",
     "_top_": {
         "type": "string",
         "value": "0"
@@ -32,25 +32,28 @@
         "value": "48%"
     },
     "allboxes": [],
-    "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
+        "flxScrollLeft",
         "imgNoComponentsLeft",
         "lblNoComponentsLeft",
-        "txtStartPhraseLeft",
-        "flxSelectedComponent"
+        "txtStartPhraseLeft"
     ],
     "clipbounds": false,
     "containerweight": 100,
+    "desktopweb": {},
     "enablescrolling": true,
     "id": "flxLeftSide",
-    "ide_onClick": "AS_FlexContainer_hf5da01409ce4fdeb8513d4c488b6ebc",
+    "ide_onClick": "AS_FlexContainer_b4397f8bb66e4d3eb46194298682364e",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
+    "kiosk": {},
     "kuid": "ef32f1f4c3c04df9bf584b0dbdd318fe",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
+    "nativemac": {},
+    "nativewin": {},
     "parent": "flxLeftRight",
     "pf": "frmStepComposition",
     "retaincontentalignment": false,

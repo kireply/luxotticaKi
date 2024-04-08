@@ -39,12 +39,19 @@
         "value": "50%"
     },
     "children": [
-        "imgSave"
+        "imgSave",
+        "lblSave"
     ],
     "clipbounds": false,
     "containerweight": 100,
+    "desktopweb": {
+        "psp": {
+            "ide_onHover": "AS_FlexContainer_h9eadd482be44784b9fcfaa787eeeaf1"
+        }
+    },
     "enablescrolling": true,
     "id": "flxSave",
+    "ide_onClick": "AS_FlexContainer_cc698d4b7844402698c9f1c65cd2003e",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

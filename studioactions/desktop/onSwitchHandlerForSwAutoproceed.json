@@ -140,7 +140,7 @@
                 "stepConfig": {
                     "timingFunction": "kony.anim.EASE"
                 },
-                "height": "78%",
+                "height": "84%",
                 "opacity": "100",
                 "displayAnimationId": "",
                 "duration": "0",
@@ -171,7 +171,7 @@
             "widgetKUID": "f1278013c6334508a4539a2e97886722",
             "wType": "FlexContainer",
             "animationObject": {
-                "top": "60%",
+                "top": "56%",
                 "anchorPoint": {},
                 "stepConfig": {
                     "timingFunction": "kony.anim.EASE"

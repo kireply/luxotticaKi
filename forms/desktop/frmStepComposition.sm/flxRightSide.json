@@ -42,7 +42,7 @@
         "imgNoComponentsRight",
         "lblNoComponentsRight",
         "txtStartPhraseRight",
-        "flxSelectedComponentRight"
+        "flxScrollRight"
     ],
     "clipbounds": false,
     "containerweight": 100,

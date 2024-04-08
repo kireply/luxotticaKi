@@ -239,7 +239,8 @@
                 "kuid": "hb676c8baa4f4434ab27dffcee4fdd71",
                 "srcKUID": "bad562873cc143e287985eb3639fb543",
                 "wType": "Image"
-            }
+            },
+            "src": "up_arrow_icon.png"
         },
         "imgSimpleSectionArrowDown": {
             "__events__": {
@@ -261,7 +262,15 @@
                 "kuid": "dda1dea017c541aeaffb0df1ee0ce690",
                 "srcKUID": "c8c23f21358546719e96e74366017270",
                 "wType": "Image"
-            }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "responsiveData": {},
+            "src": "up_arrow_icon.png"
         },
         "lblComponents": {
             "__events__": {},

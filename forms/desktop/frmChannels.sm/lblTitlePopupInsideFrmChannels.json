@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "40dp"
+        "value": "8.90%"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "Create New Channel",
     "_top_": {
         "type": "string",
-        "value": "60dp"
+        "value": "2.97%"
     },
     "_width_": {
         "type": "ref",

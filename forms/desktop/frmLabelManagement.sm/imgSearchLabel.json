@@ -40,7 +40,7 @@
     "invokedProperty": "src",
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "aeeeec2d7ec046a4b6780e20e6f841c2",
+    "kuid": "a733213b7af2411d87c0e29688a02262",
     "name": "kony.ui.Image2",
     "parent": "flxSearchLabel",
     "pf": "frmLabelManagement",
@@ -48,6 +48,5 @@
     "retainflexpositionproperties": false,
     "srcType": 1,
     "wType": "Image",
-    "widgetalignment": 5,
-    "zindex": 1
+    "widgetalignment": 5
 }

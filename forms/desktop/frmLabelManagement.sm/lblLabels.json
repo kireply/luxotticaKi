@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "3%"
+        "value": "2%"
     },
     "_margin_": [
         1,
@@ -55,13 +55,12 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d89075525d8b4fe0a0001068b2252720",
+    "kuid": "a8aea4dcdbda4108944e80302384cf4a",
     "name": "kony.ui.Label",
-    "parent": "FlexContainerLabel",
+    "parent": "flxContainerLabel",
     "pf": "frmLabelManagement",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",
-    "wType": "Label",
-    "zindex": 1
+    "wType": "Label"
 }

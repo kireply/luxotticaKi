@@ -2,11 +2,15 @@
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "50dp"
+        "value": "5%"
     },
     "_height_": {
         "type": "string",
         "value": "53.58%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "1.88%"
     },
     "_margin_": [
         0,
@@ -24,9 +28,13 @@
     "_percent_": true,
     "_right_": {
         "type": "string",
-        "value": "32dp"
+        "value": "50%"
     },
     "_skin_": "s2f1ee016fac47b2b166f4f57338ccf0",
+    "_top_": {
+        "type": "string",
+        "value": "40.05%"
+    },
     "_width_": {
         "type": "string",
         "value": "95.10%"
@@ -37,7 +45,6 @@
     "bounces": true,
     "canUpdateUI": true,
     "children": [
-        "DataGridLabels",
         "segLabels"
     ],
     "clipbounds": false,
@@ -50,11 +57,11 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "c9a066b1464743829e2b3128398deec1",
+    "kuid": "b80469e3544a433eaa0dafa95ba3e361",
     "layouttype": 2,
     "name": "kony.ui.FlexScrollContainer",
     "pagingenabled": false,
-    "parent": "FlexContainerLabel",
+    "parent": "flxContainerLabel",
     "pf": "frmLabelManagement",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

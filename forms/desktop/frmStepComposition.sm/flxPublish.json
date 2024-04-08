@@ -45,6 +45,7 @@
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxPublish",
+    "ide_onClick": "AS_FlexContainer_dfddaaf8f8ec4dc9b857a467d5462184",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

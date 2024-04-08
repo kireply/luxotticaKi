@@ -50,15 +50,15 @@
         ],
         [
             "lb2",
-            "Product"
+            "Production"
         ],
         [
             "lb3",
             "Quality"
         ],
         [
-            "Key962774374",
-            "Environment"
+            "lb4",
+            "Development"
         ]
     ],
     "name": "kony.ui.ListBox",
@@ -66,8 +66,12 @@
     "pf": "frmFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
+    "selectedkey": "lb1",
     "selectedkeys": null,
-    "selectedkeyvalue": null,
+    "selectedkeyvalue": [
+        "lb1",
+        "Select the environment in which activate the flow"
+    ],
     "selectedkeyvalues": null,
     "size": 18,
     "viewconfig": {

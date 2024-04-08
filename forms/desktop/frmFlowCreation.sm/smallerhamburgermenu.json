@@ -4,7 +4,7 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "85%"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
@@ -26,12 +26,12 @@
     "_percent_": true,
     "_skin_": "s92c5d879f8142f08c34a981ec98d303",
     "_top_": {
-        "type": "number",
-        "value": "137"
+        "type": "string",
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "5%"
+        "value": "100%"
     },
     "areflexpropsreferenced": false,
     "autogrowmode": 0,
@@ -55,6 +55,27 @@
                 "kuid": "e98039413a8e480e95b3d13c2a9b3339",
                 "srcKUID": "b78ca6f9cd4742d8b6d55eda7606510c",
                 "wType": "Button"
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "87.83%"
+                }
+            },
+            "responsiveData": {},
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "20%"
+                }
+            }
+        },
+        "flxLogout": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "c5b1065a2c78472cb78a4b2eb7c61ca0",
+                "srcKUID": "bd4e6e8bdb8a4f2e87e20e3b2baa4851",
+                "wType": "FlexContainer"
             }
         },
         "imgLogout": {
@@ -65,6 +86,14 @@
                 "wType": "Image"
             },
             "src": "logout_true.png"
+        },
+        "imgLogout1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ae2c5a31b2004481bfbd1dbf6e9d8f70",
+                "srcKUID": "d2f68446c7fa4a9abe29e1b65700eab2",
+                "wType": "Image"
+            }
         },
         "segMenu": {
             "__events__": {},
@@ -122,6 +151,81 @@
                 "kuid": "g223859d69f84e76a538f499b1a645d0",
                 "srcKUID": "bfbe8f5520c44ccc8b1717d6cf7e95af",
                 "wType": "FlexContainer"
+            },
+            "autogrowMode": {
+                "Default": 0
+            },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "100%"
+                }
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
+                }
+            },
+            "maxHeight": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "maxWidth": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "minHeight": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "minWidth": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "right": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "100%"
+                }
             }
         }
     },

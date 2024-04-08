@@ -1,0 +1,24 @@
+{
+    "AS_Button_bde9faee16a04e4da1c85edcf8670180": {
+        "id": "AS_Button_bde9faee16a04e4da1c85edcf8670180",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmLabelManagement",
+            "type": "forms",
+            "platform": "",
+            "KUID": "jcf530250ee04551b0014dcb7147f2fe"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_cf0a562414224579be3b5882e954b969",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxScrollSegLabels.setVisibility(false);\nthis.view.flxScrollSegLabels2.setVisibility(true);\nthis.view.btn2.skin = \"CopydefBtnNormal0dd2dc097d3764d\";\nthis.view.btn1.skin = \"CopydefBtnNormal0h75d6d59d7ce4d\";",
+            "parentId": null
+        }]
+    }
+}

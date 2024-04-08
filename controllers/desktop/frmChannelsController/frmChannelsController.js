@@ -34,6 +34,10 @@ define({
     this.view.flxChannels.removeAll();
     this.channels.forEach((box, index) => {this.addTile(box,index)});
     this.addTile(null, 99);
+//     content = this.view.flxChannels.widgets();
+//     content.forEach(function(widget) {
+//        debugger;  
+//     });
   },
   fetchChannels(){
     return new Promise((resolve, reject) => {
@@ -71,7 +75,8 @@ define({
       voltmx.print("### INDEX: " + JSON.stringify(index));
       const flex = new voltmx.ui.FlexContainer({
         id: `flex${index}${new Date().getTime()}`,
-        height: `130dp`,
+        height: `25%`, //130dp -> 160dp
+        width: `11%`,
         responsiveConfig: {
           "span": {
             "640": 12,
@@ -84,8 +89,8 @@ define({
       //const tile = new com.hcl.demo.uifactory.Tile({
       const channel = new ki.luxottica.channelTemplatewithContract({
         id: `channel{index}${new Date().getTime()}`,
-        width: '100%',
-        height: '147%',
+        width: '70%',
+        height: '90%', //147% -> 100%
         centerX: '50%',
         centerY: '50%'
       }, {}, {});
@@ -96,6 +101,10 @@ define({
         channel.channelIdentifier = box.id;
         channel.channelProperties = box.properties_file;
         channel.channelId = index;
+        channel.channelGenericImage = box.generic_image;
+        channel.channelAssetsCDN = box.assets_CDN;
+        channel.channelProjectImage = box.project_image;
+        channel.channelFrameOnlyLensUPC = box.frame_only_lens_UPC;
         channel.onClickTeaser = () => {
       	//TODO ACTIONS WHILE CLICKING ON THE TILE
           if (gblInfoIcon === true){
@@ -104,7 +113,11 @@ define({
             this.view.flxPopupChannelInfo.txtChannelLogo.text = channel.channelLogo;
             this.view.flxPopupChannelInfo.txtChannelProperties.text = channel.channelProperties;
             this.view.flxPopupChannelInfo.lbChannelName.masterData = [ ["lb1", channel.channelInfo] ];
-            this.view.flxPopupChannelInfo.lbChannelName.selectedKey = "lb1"
+            this.view.flxPopupChannelInfo.lbChannelName.selectedKey = "lb1";
+            this.view.flxPopupChannelInfo.txtChannelGenericImage.text = channel.channelGenericImage;
+            this.view.flxPopupChannelInfo.txtChannelAssetsCDN.text = channel.channelAssetsCDN;
+            this.view.flxPopupChannelInfo.txtChannelProjectImage.text = channel.channelProjectImage;
+            this.view.flxPopupChannelInfo.txtChannelFrameOnlyLensUPC.text = channel.channelFrameOnlyLensUPC;
             this.view.flxPopupChannelInfo.setVisibility(true);
           } else {
   //           voltmx.print("### NAVIGATE");
@@ -117,16 +130,29 @@ define({
             var navigationManager = new voltmx.mvc.Navigation("frmFlows");
             navigationManager.navigate();
           }
+        };
+        channel.onHoverTeaser = (widgRef, context) => {
+          voltmx.print("### button hover event executed: " + context.eventType);
+ 
+          if (context.eventType !== "leave"){
+          	  channel.flxChannel.borderWidth = 1;
+              channel.flxChannel.borderColor = "000000";
+          } else {
+              channel.flxChannel.borderWidth = 0;
+          	  channel.flxChannel.borderColor = "ffffff";
+          }
         }
       }
+        
       else {
 //        voltmx.print("### INSIDE ELSE");
-       channel.channelLogo = "/plus.png";
+       channel.channelLogo = "/plus_modified.png";
        channel.channelInfo = "Add New Channel";
        channel.channelId = index;
        channel.imgInfoVisible = false;
        channel.onClickTeaser = () => {
          this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(true);
+         //this.view.btnSaveNewChannelInsideFrmChannels.setEsabled(false);
        }
 //        voltmx.print("### CHANNEL INFO: " + channel.channelInfo);
 //        voltmx.print("### CHANNEL LOGO: " + channel.channelLogo);
@@ -140,5 +166,7 @@ define({
       this.view.flxChannels.add(flex);
     this.view.flxChannels.forceLayout();
   }
+  
+  
  
 });

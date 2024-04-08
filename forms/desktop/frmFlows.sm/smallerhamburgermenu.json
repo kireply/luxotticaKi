@@ -48,11 +48,23 @@
                 "srcKUID": "dc71668cc16f4695981806296357819d",
                 "wType": "Button"
             },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
             "responsiveData": {},
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "70%"
+                    "value": "100%"
                 }
             }
         },
@@ -65,13 +77,46 @@
                 "srcKUID": "b78ca6f9cd4742d8b6d55eda7606510c",
                 "wType": "Button"
             },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "3%"
+                }
+            },
             "left": {
                 "Default": {
                     "type": "string",
-                    "value": "97%"
+                    "value": "93%"
                 }
             },
-            "responsiveData": {}
+            "responsiveData": {},
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "2%"
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "20%"
+                }
+            }
+        },
+        "flxLogout": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "fa58c02dcddd4fddaadb70db174c8e00",
+                "srcKUID": "bd4e6e8bdb8a4f2e87e20e3b2baa4851",
+                "wType": "FlexContainer"
+            },
+            "responsiveData": {},
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "80%"
+                }
+            }
         },
         "imgLogout": {
             "__events__": {},
@@ -88,6 +133,14 @@
             },
             "responsiveData": {},
             "src": "logout_true.png"
+        },
+        "imgLogout1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "fd0a6293f037496ca0b073138b0ba37e",
+                "srcKUID": "d2f68446c7fa4a9abe29e1b65700eab2",
+                "wType": "Image"
+            }
         },
         "segMenu": {
             "__events__": {},

@@ -160,54 +160,52 @@
             "id": "IF_CONDITION_ide_onTextChange_b0d0ab68828b4e30ba153a4735dd2ac4",
             "type": "IF_CONDITION",
             "conditions": [{
-                "leftValueType": "varvalue",
-                "leftValue": "channelID",
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.txtChannelInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
-                "rightValue": "\"\""
+                "rightValue": "\"\"",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "a709edb70a60483983498ef971327e19"
             }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelID",
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.txtChannelInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
-                "rightValue": "undefined"
+                "rightValue": "undefined",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "a709edb70a60483983498ef971327e19"
             }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelName",
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.txtChannelPropertiesInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
-                "rightValue": "\"\""
+                "rightValue": "\"\"",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "ae6d0917eb824707883abe8c2ce5c352"
             }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelName",
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.txtChannelPropertiesInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
-                "rightValue": "undefined"
+                "rightValue": "undefined",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "ae6d0917eb824707883abe8c2ce5c352"
             }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelName",
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.lbChannelNameInsideFrmChannels.selectedKey",
                 "operator": "===",
                 "rightValueType": "value",
-                "rightValue": "\"Select Channel Name\""
-            }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelProperties",
-                "operator": "===",
-                "rightValueType": "value",
-                "rightValue": "\"\""
-            }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelProperties",
-                "operator": "===",
-                "rightValueType": "value",
-                "rightValue": "undefined"
+                "rightValue": "\"lb1\"",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "e74135133adb4951972fe5130a0db4e5"
             }],
             "callbackType": null,
             "criteria": "any"
         }, {
             "id": "ADD_SNIPPET_ide_onTextChange_jb2c79d72b0548b1ab4160b72c86b7ac",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.btnSaveNewChannel.setEnabled(false);",
+            "codeSnippet": "this.view.btnSaveNewChannelInsideFrmChannels.setEnabled(false);\nthis.view.btnSaveNewChannelInsideFrmChannels.opacity = 0.5;",
             "parentId": "IF_CONDITION_ide_onTextChange_b0d0ab68828b4e30ba153a4735dd2ac4",
             "callbackType": null
         }, {
@@ -243,6 +241,7 @@
             "forkedPlatform": "all",
             "parentId": "IF_CONDITION_ide_onTextChange_b0d0ab68828b4e30ba153a4735dd2ac4",
             "callbackType": null,
+            "disabled": true,
             "widgetPath": "this.view.btnSaveNewChannelInsideFrmChannels"
         }, {
             "id": "ELSE_CONDITION_ide_onTextChange_d6bd6f08fff6454797fbaf90fd5b085e",
@@ -259,7 +258,7 @@
         }, {
             "id": "ADD_SNIPPET_ide_onTextChange_h49c438a9af247168f8e2dac334d6b13",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.btnSaveNewChannel.setEnabled(true);",
+            "codeSnippet": "this.view.btnSaveNewChannelInsideFrmChannels.setEnabled(true);\nthis.view.btnSaveNewChannelInsideFrmChannels.opacity = 1;",
             "parentId": "ELSE_CONDITION_ide_onTextChange_d6bd6f08fff6454797fbaf90fd5b085e",
             "callbackType": null
         }, {
@@ -289,11 +288,13 @@
                 "duration": "0"
             },
             "start": "Immediately",
+            "parentAnimation": "STYLE_ACTION_e908c9164b0949c69304c3caf63f2474",
             "animationId": "STYLE_ACTION_f77486343dc44627a6dafaee331665a2",
             "displayAnimationId": "STYLE_ACTION_f77486343dc44627a6dafaee331665a2",
             "forkedPlatform": "all",
             "parentId": "ELSE_CONDITION_ide_onTextChange_d6bd6f08fff6454797fbaf90fd5b085e",
             "callbackType": null,
+            "disabled": true,
             "widgetPath": "this.view.btnSaveNewChannelInsideFrmChannels"
         }]
     }

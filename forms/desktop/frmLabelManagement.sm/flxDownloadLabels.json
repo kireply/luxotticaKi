@@ -25,7 +25,7 @@
     "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_top_": {
         "type": "string",
-        "value": "31.1%"
+        "value": "31%"
     },
     "_width_": {
         "type": "string",
@@ -45,10 +45,10 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "f0ecb9db51164a49baedb3768eb09c1b",
+    "kuid": "g7232d3e2440493e92fe1e7e8dc44df6",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "FlexContainerLabel",
+    "parent": "flxContainerLabel",
     "pf": "frmLabelManagement",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

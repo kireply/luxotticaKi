@@ -6,11 +6,11 @@
     },
     "_height_": {
         "type": "string",
-        "value": "559dp"
+        "value": "85.56%"
     },
     "_left_": {
         "type": "string",
-        "value": "520dp"
+        "value": "20%"
     },
     "_margin_": [
         0,
@@ -26,10 +26,10 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sbb5fcddbbb14add962da9f9a4e314c0",
+    "_skin_": "s8aee7e16a9640b4994aecc708d952b6",
     "_top_": {
         "type": "string",
-        "value": "170dp"
+        "value": "170%"
     },
     "_width_": {
         "type": "string",
@@ -38,18 +38,34 @@
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
-        "lblTitlePopupInsideFrmChannels",
         "imgExitPopupInsideFrmChannels",
-        "txtChannelInsideFrmChannels",
-        "txtChannelLogoInsideFrmChannels",
-        "txtChannelPropertiesInsideFrmChannels",
+        "lblTitlePopupInsideFrmChannels",
         "lblChannelInsideFrmChannels",
+        "txtChannelInsideFrmChannels",
         "lblChannelNameInsideFrmChannels",
+        "lbChannelNameInsideFrmChannels",
         "lblChannelLogoInsideFrmChannels",
+        "txtChannelLogoInsideFrmChannels",
         "lblChannelPropertiesInsideFrmChannels",
-        "btnSaveNewChannelInsideFrmChannels",
-        "lbChannelNameInsideFrmChannels"
+        "txtChannelPropertiesInsideFrmChannels",
+        "lblChannelGenericImageInsideFrmChannels",
+        "txtChannelGenericImageInsideFrmChannels",
+        "lblChannelAssetsCDNInsideFrmChannels",
+        "txtChannelAssetsCDNInsideFrmChannels",
+        "lblChannelProjectImageInsideFrmChannels",
+        "txtChannelProjectImageInsideFrmChannels",
+        "lblChannelFramOnlyLensUPCInsideFrmChannels",
+        "txtChannelFramOnlyLensUPCInsideFrmChannels",
+        "btnSaveNewChannelInsideFrmChannels"
     ],
     "clipbounds": false,
     "containerweight": 100,

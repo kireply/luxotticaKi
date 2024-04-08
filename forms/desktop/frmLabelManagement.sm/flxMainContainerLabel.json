@@ -1,9 +1,5 @@
 {
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "0"
-    },
     "_height_": {
         "type": "string",
         "value": "100%"
@@ -42,7 +38,7 @@
         "flxContainerHeader",
         "flxContainerMenu",
         "flxContainerSmallerMenu",
-        "FlexContainerLabel"
+        "flxContainerLabel"
     ],
     "clipbounds": false,
     "containerweight": 100,
@@ -51,7 +47,7 @@
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e0dbe87641b549a5be9a8e89ae088ec2",
+    "kuid": "e030eb3d9f54480c9026eb9fcfee934b",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "frmLabelManagement",
@@ -62,6 +58,5 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1,
-    "zindex": 1
+    "widgetalignment": 1
 }

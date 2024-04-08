@@ -6,10 +6,6 @@
         "type": "string",
         "value": "22.44%"
     },
-    "_left_": {
-        "type": "string",
-        "value": "412dp"
-    },
     "_margin_": [
         0,
         0,
@@ -27,13 +23,17 @@
     "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_top_": {
         "type": "string",
-        "value": "20dp"
+        "value": "2%"
     },
     "_width_": {
         "type": "string",
         "value": "25.18%"
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 0,
     "data": {
         "imgInfoVisible": false

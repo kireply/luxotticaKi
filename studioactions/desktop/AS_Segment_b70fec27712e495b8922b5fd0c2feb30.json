@@ -31,6 +31,26 @@
             "parentId": null,
             "callbackType": null
         }, {
+            "id": "ADD_LOCAL_VARIABLE_bea185a781ac470288db5faf70e00110",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "leftSegmentDataConfigurable",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "[]",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_e8d40ecb08cc48fc9e20d63cec06742c",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "rightSegmentDataConfigurable",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "[]",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "ADD_LOCAL_VARIABLE_dcb52d4e8a324c27b4c57d6740618801",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "selected_item_right_img",
@@ -38,6 +58,16 @@
             "valuetype": "constant",
             "datatype": "string",
             "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_cd106e4649af4f1595f8b4d5e9ddb1a7",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "customQueryOutputConfigurable",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "[]",
             "parentId": null,
             "callbackType": null
         }, {
@@ -138,6 +168,56 @@
             "callbackType": null,
             "criteria": "all"
         }, {
+            "id": "ADD_SNIPPET_d0f4c7a37df84f06967e37e01de980e1",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "customQueryOutputConfigurable = PROPERTY_TEMPLATE_CustomQuery.records;\n\n\nvoltmx.print(\"### FLX SCROLL SETTINGS NUMBER OF WIDGETS BEFORE: \" + JSON.stringify(self.view.settingsSide.flxScrollSettingsContent.widgets().length));",
+            "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
+            "callbackType": null
+        }, {
+            "id": "MODIFY_VARIABLE_ACTION_e9c915d03233408ca9a9726b4ee778de",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
+            "callbackType": null,
+            "disabled": true,
+            "variable": "customQueryOutputConfigurable",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "constant",
+            "modifySet": "[]",
+            "modifySetType": "string"
+        }, {
+            "id": "INVOKE_FUNCTION__gbce19bad4e248d59079f750b13daaa6",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "editProperty",
+            "display": "editProperty",
+            "inputparams": [{
+                "name": "list",
+                "value": " customQueryOutputConfigurable"
+            }, {
+                "name": "rightSegmentData",
+                "value": " rightSegmentDataConfigurable"
+            }, {
+                "name": "leftSegmentData",
+                "value": " leftSegmentDataConfigurable"
+            }, {
+                "name": "selected_item",
+                "value": " selected_item_right"
+            }, {
+                "name": "selected_item_img",
+                "value": " selected_item_right_img"
+            }],
+            "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }, {
+            "id": "ADD_SNIPPET_g4170646779242abb4076506123d78a9",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### FLX SCROLL SETTINGS NUMBER OF WIDGETS AFTER: \" + JSON.stringify(self.view.settingsSide.flxScrollSettingsContent.widgets().length));",
+            "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
+            "callbackType": null,
+            "disabled": true
+        }, {
             "id": "_e4cb257f71144b6c95f352e0764819bb",
             "type": "ELSE_CONDITION",
             "conditions": [{
@@ -159,15 +239,33 @@
         }, {
             "id": "ADD_SNIPPET_e6894da42b894a6985a549aa3c160b10",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### RESPONSE CUSTOM QUERY: \" + JSON.stringify(PROPERTY_TEMPLATE_CustomQuery.records));\n\n/*\n\n### SELECTED ITEM: {\"imgComponent\":\"https://www.salvatorepumo.it/wp-content/uploads/2024/01/logo-ray-ban-oggi.jpg\",\"lblComponentName\":\"RXC_BRAND_LOGO\",\"lblLayout\":\"previewSection\"}\n### RESPONSE CUSTOM QUERY: [{\"mode\":\"dropdown\",\"component_name\":\"RXC_BRAND_LOGO\",\"name\":\"position\",\"id\":\"60\",\"type\":\"string\",\"required\":\"true\"}]\n\n*/\n\nvar rightSegmentData = [];\nvar leftSegmentData = [];\n\n\nfor (let i = 0; i < PROPERTY_TEMPLATE_CustomQuery.records.length; i++) {\n\n    console.log(PROPERTY_TEMPLATE_CustomQuery.records[i]);\n  \n    if (PROPERTY_TEMPLATE_CustomQuery.records[i].required === 'true'){\n        propertyName = PROPERTY_TEMPLATE_CustomQuery.records[i].name;\n        let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + \": \";\n        let properties = {lblPropertyName: capitalizedName, lblPropertyValue: \"\"}; \n        rightSegmentData.push(properties);\n        console.log(rightSegmentData);\n        self.view.selectedComponentRight.flxSelectedComponentRight.segmentRight.setData(rightSegmentData);\n//         self.view.selectedComponent.flxSelectedComponentRight.segmentRight.setData(rightSegmentData);\n    }\n}\n\nlet selected_component_data = {lblComponentName: selected_item_right, imgComponent: selected_item_right_img};\nleftSegmentData.push(selected_component_data);\nself.view.selectedComponentRight.flxSelectedComponentLeft.segmentLeft.setData(leftSegmentData);\n\n\n\n\n//        template_configurable = {imgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].previewImage, lblComponentName: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].displayName, lblLayout: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].layout};\n//        gblConfigurableComponentsTemplates.push(template_configurable);\n//        console.log(gblConfigurableComponentsTemplates);\n//        self.view.ComponentsSide.segComponentsSideConfigurableContent.setData(gblConfigurableComponentsTemplates);",
+            "codeSnippet": "voltmx.print(\"### RESPONSE CUSTOM QUERY: \" + JSON.stringify(PROPERTY_TEMPLATE_CustomQuery.records));\n\n/*\n\n### SELECTED ITEM: {\"imgComponent\":\"https://www.salvatorepumo.it/wp-content/uploads/2024/01/logo-ray-ban-oggi.jpg\",\"lblComponentName\":\"RXC_BRAND_LOGO\",\"lblLayout\":\"previewSection\"}\n### RESPONSE CUSTOM QUERY: [{\"mode\":\"dropdown\",\"component_name\":\"RXC_BRAND_LOGO\",\"name\":\"position\",\"id\":\"60\",\"type\":\"string\",\"required\":\"true\"}]\n\n*/\n\n// var rightSegmentData = [];\n// var leftSegmentData = [];\nlet index = 0;\nstring = `channel${new Date().getTime()}`;\nconsole.log(string);\n\nfor (let i = 0; i < PROPERTY_TEMPLATE_CustomQuery.records.length; i++) {\n\n    console.log(PROPERTY_TEMPLATE_CustomQuery.records[i]);\n  \n    if (PROPERTY_TEMPLATE_CustomQuery.records[i].required === 'true'){\n        propertyName = PROPERTY_TEMPLATE_CustomQuery.records[i].name;\n        let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + \": \";\n        let properties = {lblPropertyName: capitalizedName, lblPropertyValue: \"\"}; \n        rightSegmentDataConfigurable.push(properties);\n        console.log(rightSegmentDataConfigurable);\n        const propComp = new ki.luxottica.editPropertyValuewithTextField({\n        id: `channel${new Date().getTime()}`,\n        top: '2%',\n        centerX: '50%'\n      }, {}, {});\n      voltmx.print(\"### PROPERTY COMPONENT CREATED!\");\n      propComp.propertyName = capitalizedName;\n//       flex.add(propComp);\n      self.view.settingsSide.txt.setVisibility(false);\n      self.view.settingsSide.flxScrollSettingsContent.setVisibility(true);\n      self.view.settingsSide.flxScrollSettingsContent.add(propComp);\n      self.view.settingsSide.flxScrollSettingsContent.forceLayout();\n//         self.view.selectedComponent.flxSelectedComponentRight.segmentRight.setData(rightSegmentData);\n//         self.view.selectedComponentRight.flxSelectedComponentRight.segmentRight.setData(rightSegmentDataConfigurable);\n    }\n  \n    index +=1;\n}\n\nlet selected_component_data = {lblComponentName: selected_item_right, imgComponent: selected_item_right_img};\nleftSegmentDataConfigurable.push(selected_component_data);\n// self.view.selectedComponentRight.flxSelectedComponentLeft.segmentLeft.setData(leftSegmentDataConfigurable);\n\n\n\n\n//        template_configurable = {imgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].previewImage, lblComponentName: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].displayName, lblLayout: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].layout};\n//        gblConfigurableComponentsTemplates.push(template_configurable);\n//        console.log(gblConfigurableComponentsTemplates);\n//        self.view.ComponentsSide.segComponentsSideConfigurableContent.setData(gblConfigurableComponentsTemplates);",
             "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }, {
             "id": "ADD_SNIPPET_b397e3f09f03469e9e0075f4ad40d8a5",
             "type": "ADD_SNIPPET",
             "codeSnippet": "// self.view.flxSelectedComponentRight.setVisibility(true);\n// self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.imgNoComponentsRight.setVisibility(false);\n// self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.lblNoComponentsRight.setVisibility(false);\n// self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.txtStartPhraseRight.setVisibility(false);\n\nlet left_width = parseInt(self.view.flxLeftRight.flxLeftSide.width, 10);\nlet right_width = parseInt(self.view.flxLeftRight.flxRightSide.width, 10);\n\nif ( left_width > 48){\n  //vuol dire che il pannello di sinistra è aperto\n  self.view.flxSelectedComponent.setVisibility(true);\n  gblSelectedComponentLeft = true;\n  self.view.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(false);\n  self.view.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(false);\n  self.view.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(false);\n}\nif ( right_width > 48){\n  //vuol dire che il pannello di destra è aperto\n  self.view.flxSelectedComponentRight.setVisibility(true);\n  gblSelectedComponentRight = true;\n  self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.imgNoComponentsRight.setVisibility(false);\n  self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.lblNoComponentsRight.setVisibility(false);\n  self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.txtStartPhraseRight.setVisibility(false);\n}\n\n\n",
             "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
+        }, {
+            "id": "INVOKE_FUNCTION__a51dff9aa2704e83961d0d60e8b6ecfb",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "selectComponent",
+            "display": "selectComponent",
+            "inputparams": [{
+                "name": "rightData"
+            }, {
+                "name": "leftData"
+            }, {
+                "name": "modes"
+            }],
+            "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
+            "callbackType": null,
+            "disabled": true,
+            "source": "controller"
         }]
     }
 }

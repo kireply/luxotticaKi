@@ -428,9 +428,41 @@
                             "operationid": "122826"
                         }
                     }
+                },
+                "ME_Mapping_afb417c4c567482ea3bf1abdfa7d5192": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_afb417c4c567482ea3bf1abdfa7d5192",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtAutoproceedButtonLabel",
+                        "widgetPath": "this.view.txtAutoproceedButtonLabel",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmStepCreation",
+                        "widgetKUID": "j42a712a00194054a8e1dd1412638f2c",
+                        "itemKUID": "j27b7970c694429db6312f3b27f7428e",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "autoproceed_label",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_he0a898fcc4f49268a886ca5c7290f20", "ME_Mapping_dbb7b16a176f456b80e153ad493aa115", "ME_Mapping_ib147e8d43724d32b658283d47ce71e7", "ME_Mapping_f91a48d8b1d44e2ab4ae07ad73b8f0cc", "ME_Mapping_ja8c61bd15ec4d3f83a4bd15e22ef879", "ME_Mapping_aa764fb48819483bad4f140c1b7b2cc9", "ME_Mapping_cdc6025cea6f4a3397ab603941d88ed7", "ME_Mapping_c9a8b96bc85d433792326e7a5eb863f8", "ME_Mapping_d5608a31543d44b5a6818d05e4af43b9"],
+            "mappingsOrder": ["ME_Mapping_he0a898fcc4f49268a886ca5c7290f20", "ME_Mapping_dbb7b16a176f456b80e153ad493aa115", "ME_Mapping_ib147e8d43724d32b658283d47ce71e7", "ME_Mapping_f91a48d8b1d44e2ab4ae07ad73b8f0cc", "ME_Mapping_ja8c61bd15ec4d3f83a4bd15e22ef879", "ME_Mapping_aa764fb48819483bad4f140c1b7b2cc9", "ME_Mapping_cdc6025cea6f4a3397ab603941d88ed7", "ME_Mapping_c9a8b96bc85d433792326e7a5eb863f8", "ME_Mapping_d5608a31543d44b5a6818d05e4af43b9", "ME_Mapping_afb417c4c567482ea3bf1abdfa7d5192"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -590,7 +622,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lblStepTitle_text\": self.view.lblStepTitle.text,\n    \"lblStepTitle_isVisible\": self.view.lblStepTitle.isVisible,\n    \"txtStepTitle_text\": self.view.txtStepTitle.text,\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"lblStepTitle_text\": self.view.lblStepTitle.text,\n    \"lblStepTitle_isVisible\": self.view.lblStepTitle.isVisible,\n    \"txtStepTitle_text\": self.view.txtStepTitle.text,\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
             "isCustomInput": false
         }]
     }

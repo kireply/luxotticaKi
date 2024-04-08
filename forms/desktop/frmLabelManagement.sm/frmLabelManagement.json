@@ -20,7 +20,7 @@
         1,
         8
     ],
-    "_skin_": "s912736b215e4415bc56f9aba46f4c24",
+    "_skin_": "s0a112f8dc074766be147743ad86f104",
     "_title_": null,
     "addWidgetsdone": false,
     "allboxes": [],
@@ -56,7 +56,7 @@
     "controllerInfo": {
         "default": {
             "channel": "desktop",
-            "name": "frmLabelManagementController"
+            "name": "frmLabelsController"
         }
     },
     "currentLocale": "default",
@@ -67,7 +67,7 @@
     "displayorientation": 1,
     "enabledforidletimeout": false,
     "id": "frmLabelManagement",
-    "ide_postShow": "AS_Form_i2618a846db94b8a92c9b6b7f5005fa4",
+    "ide_postShow": "AS_Form_d50b937705e1417dab512d2d53b41cf3",
     "info": null,
     "initdone": false,
     "inputaccessoryviewtype": 4,
@@ -90,7 +90,7 @@
     "kiosk": {
         "needAppMenu": false
     },
-    "kuid": "ea82afa625b648c0b1461a183c73e3f9",
+    "kuid": "jcf530250ee04551b0014dcb7147f2fe",
     "layouttype": 2,
     "name": "kony.ui.Form2",
     "needappmenu": false,

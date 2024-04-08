@@ -4,7 +4,7 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "25dp"
+        "value": "4%"
     },
     "_left_": {
         "type": "string",
@@ -26,11 +26,11 @@
     "_src_": "left_arrow.png",
     "_top_": {
         "type": "string",
-        "value": "7%"
+        "value": "2.5%"
     },
     "_width_": {
         "type": "string",
-        "value": "35dp"
+        "value": "2%"
     },
     "canUpdateUI": true,
     "containerweight": 100,

@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "40dp"
+        "value": "10%"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "Channel Name",
     "_top_": {
         "type": "string",
-        "value": "200dp"
+        "value": "18.9%"
     },
     "_width_": {
         "type": "ref",

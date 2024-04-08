@@ -4,7 +4,7 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "90dp"
+        "value": "40%"
     },
     "_left_": {
         "type": "string",
@@ -26,13 +26,17 @@
     "_src_": "imagedrag.png",
     "_top_": {
         "type": "string",
-        "value": "40dp"
+        "value": "20%"
     },
     "_width_": {
         "type": "string",
-        "value": "102dp"
+        "value": "30%"
     },
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "id": "imgLogo",
     "imagescalemode": 1,

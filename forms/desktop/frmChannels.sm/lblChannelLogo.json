@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "40dp"
+        "value": "10%"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "Channel Logo",
     "_top_": {
         "type": "string",
-        "value": "290dp"
+        "value": "30.009999999999998%"
     },
     "_width_": {
         "type": "ref",

@@ -21,7 +21,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_c148ad972f534e5ca4471ea81a512caa",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "if (context.eventType !== \"leave\"){\n  this.view.flxCreateNewStep.backgroundColor = \"000000\";\n  this.view.imgNewStep.src = \"/add_circle_icon_modified.png\";\n  this.view.lblStepCreationBlack.setVisibility(false);\n  this.view.lblStepCreationWhite.setVisibility(true);\n  //this.view.lblStepCreation.backgroundColor = \"ffffff\";\n} else {\n  this.view.flxCreateNewStep.backgroundColor = \"ffffff\";\n  this.view.imgNewStep.src = \"/plus.png\";\n  this.view.imgNewStep.height = \"20%\";\n  this.view.imgNewStep.width = \"20%\";\n  this.view.lblStepCreationWhite.setVisibility(false);\n  this.view.lblStepCreationBlack.setVisibility(true);\n  //this.view.lblStepCreation.backgroundColor = \"000000\";\n}\n",
+            "codeSnippet": "if (context.eventType !== \"leave\"){\n  this.view.flxCreateNewStep.backgroundColor = \"000000\";\n  this.view.imgNewStep.setVisibility(false);\n  this.view.imgNewStep2.setVisibility(true);\n  this.view.lblStepCreationBlack.setVisibility(false);\n  this.view.lblStepCreationWhite.setVisibility(true);\n  //this.view.lblStepCreation.backgroundColor = \"ffffff\";\n} else {\n  this.view.flxCreateNewStep.backgroundColor = \"ffffff\";\n  this.view.imgNewStep2.setVisibility(false);\n  this.view.imgNewStep.setVisibility(true);\n  this.view.lblStepCreationWhite.setVisibility(false);\n  this.view.lblStepCreationBlack.setVisibility(true);\n  //this.view.lblStepCreation.backgroundColor = \"000000\";\n}\n",
             "parentId": null,
             "disabled": false
         }]

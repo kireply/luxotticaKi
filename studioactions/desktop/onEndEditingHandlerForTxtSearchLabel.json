@@ -1,0 +1,28 @@
+{
+    "AS_TextField_aa430b0ff7224b308a6b03e29ffbf60b": {
+        "id": "AS_TextField_aa430b0ff7224b308a6b03e29ffbf60b",
+        "type": "ACTION_SEQUENCE",
+        "name": "onEndEditingHandlerForTxtSearchLabel",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "contextObj": {
+            "name": "frmLabelManagement",
+            "type": "forms",
+            "platform": "",
+            "KUID": "jcf530250ee04551b0014dcb7147f2fe"
+        },
+        "language": "js",
+        "eventType": "onEndEditing",
+        "actions": [{
+            "id": "ADD_SNIPPET_e62f4161ecc648e39e46c65b8189675e",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.imgSearchLabel.setVisibility(true);",
+            "parentId": null
+        }]
+    }
+}

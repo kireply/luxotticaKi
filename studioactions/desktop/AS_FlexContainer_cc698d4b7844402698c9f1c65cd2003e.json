@@ -1,0 +1,69 @@
+{
+    "AS_FlexContainer_cc698d4b7844402698c9f1c65cd2003e": {
+        "id": "AS_FlexContainer_cc698d4b7844402698c9f1c65cd2003e",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "LOADING_INDICATOR_deeed631f9724e039823b0521e316c84",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Saving step ..."
+        }, {
+            "id": "INVOKE_FUNCTION__db248ba7c05b439798a172f88e201c03",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "saveStepComposition",
+            "display": "saveStepComposition",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }, {
+            "id": "_b7b3ed9396414cc89eda565b3d0ab2eb",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "gblFail",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "false"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_jfd9d6a03da441a5bb1295640d8869b7",
+            "selectedOption": "dismiss",
+            "parentId": "_b7b3ed9396414cc89eda565b3d0ab2eb",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "ADD_SNIPPET_a5e472cc32404e7a84542d3c81562d3c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.ui.Alert({\n  \"alertType\": constants.ALERT_TYPE_CONFIRMATION,\n  \"alertTitle\": \"Success\",\n  \"yesLabel\": \"Ok\",\n  \"message\": \"Save successfull.\",\n  \"alertHandler\": this.SHOW_ALERT_Success_Callback\n}, {\n  \"iconPosition\": constants.ALERT_ICON_POSITION_LEFT\n});",
+            "parentId": "_b7b3ed9396414cc89eda565b3d0ab2eb",
+            "callbackType": null
+        }]
+    }
+}

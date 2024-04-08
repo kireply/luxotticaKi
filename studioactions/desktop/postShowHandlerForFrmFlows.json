@@ -497,6 +497,22 @@
             "codeSnippet": "voltmx.print(\"### non sono entrato nell'if\");",
             "parentId": "_d6713007ec7a4fbeb342694c6e9e07bb",
             "callbackType": null
+        }, {
+            "id": "SHOW_ALERT_c03a9c5fbb6346ebbd79aaa5f8989506",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Something went wrong.",
+            "yesLabel": "Ok",
+            "alertMessage": "Something went wrong.",
+            "messageType": "constant",
+            "parentId": "_d6713007ec7a4fbeb342694c6e9e07bb",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
         }]
     }
 }

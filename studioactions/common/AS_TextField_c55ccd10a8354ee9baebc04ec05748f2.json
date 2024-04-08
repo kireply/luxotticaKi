@@ -1,0 +1,25 @@
+{
+    "AS_TextField_c55ccd10a8354ee9baebc04ec05748f2": {
+        "id": "AS_TextField_c55ccd10a8354ee9baebc04ec05748f2",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "contextObj": {
+            "type": "userwidgets",
+            "KUID": "ueecb303f39f4c11be23d212dcfe9cea"
+        },
+        "language": "js",
+        "eventType": "onEndEditing",
+        "actions": [{
+            "id": "ADD_SNIPPET_f71e8319fe0e479990351e1337855182",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// value = propComp.propertyValue;\nlet value = this.view.txtPropertyValue.text;\nvoltmx.print(\"### VALUE: \" + value);\n// let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);\nlet width = this.view.flxLeftSide.width;\nvoltmx.print(\"### WIDTH: \" + width);\nlet right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);\n\nif ( left_width > 48){\n  components = this.view.flxScrollLeft.widgets();\n  let lastComp = components.length > 0 ? components[components.length - 1] : null;\n\n  let channelKey = Object.keys(lastComp).find(key => key.startsWith(\"channel\"));\n  //                   voltmx.print(\"### CHANNEL KEY: \" + channelKey);\n  //                   voltmx.print(\"### LEFT DATA: \" + JSON.stringify(widget[channelKey][\"leftData\"]));\n  //                   debugger;\n  if (lastComp[channelKey][\"leftData\"][0].lblComponentName === gblLastInsertedComponent){\n    //                     debugger;\n    let newData = lastComp[channelKey][\"rightData\"];\n    newData.forEach(item => {\n      if (item.lblPropertyName === this.view.lblPropertyTitle.text) {\n        //                         voltmx.print(\"### TROVATO: \" + JSON.stringify(item));\n        item.lblPropertyValue = value;\n      }\n    });\n    //                   voltmx.print(\"### NEW DATA: \" + JSON.stringify(newData));\n    //                     debugger;\n    lastComp[channelKey].flxSelectedComponentRight.segmentRight.setData(newData);\n  }\n\n}\nif ( right_width > 48){\n  components = this.view.flxScrollRight.widgets();\n  let lastComp = components.length > 0 ? components[components.length - 1] : null;\n\n  let channelKey = Object.keys(lastComp).find(key => key.startsWith(\"channel\"));\n  //                   voltmx.print(\"### CHANNEL KEY: \" + channelKey);\n  //                   voltmx.print(\"### LEFT DATA: \" + JSON.stringify(widget[channelKey][\"leftData\"]));\n  //                   debugger;\n  if (lastComp[channelKey][\"leftData\"][0].lblComponentName === gblLastInsertedComponent){\n    //                     debugger;\n    let newData = lastComp[channelKey][\"rightData\"];\n    newData.forEach(item => {\n      if (item.lblPropertyName === this.view.lblPropertyTitle.text) {\n        //                         voltmx.print(\"### TROVATO: \" + JSON.stringify(item));\n        item.lblPropertyValue = value;\n      }\n    });\n    //                   voltmx.print(\"### NEW DATA: \" + JSON.stringify(newData));\n    //                     debugger;\n    lastComp[channelKey].flxSelectedComponentRight.segmentRight.setData(newData);\n  }\n\n}\npropComp.propertyValue = \"\";",
+            "parentId": null
+        }]
+    }
+}

@@ -21,7 +21,7 @@
     "_text_": "Create new flow",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "-1%"
     },
     "_width_": {
         "type": "ref",

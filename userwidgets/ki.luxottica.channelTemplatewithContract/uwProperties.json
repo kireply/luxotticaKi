@@ -11,7 +11,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "e8add311f4ea46b28ed9125a483c2d59",
+                    "kuid": "gd75e9066ce94ed6a46a003567383342",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 1,
                     "propertyKey": "onClickTeaser",
@@ -19,6 +19,33 @@
                         "access": "readwrite",
                         "category": "action",
                         "displayName": "onClickTeaser",
+                        "srcWidget": "flxChannel",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "i24fb73ae8034ab3bcaa163e3dbe2e64",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "e7ad2f80a84a4105ab4d2a705e69c77e",
+                    "originalPropertyKey": "onHover",
+                    "propertyIndex": 2,
+                    "propertyKey": "onHoverTeaser",
+                    "pw": {
+                        "access": "readwrite",
+                        "applicablePSPplatform": "desktopweb",
+                        "category": "action",
+                        "displayName": "onHoverTeaser",
+                        "pspPlatform": {
+                            "desktop": [
+                                "desktopweb"
+                            ],
+                            "mobile": [],
+                            "tablet": []
+                        },
                         "srcWidget": "flxChannel",
                         "type": "action",
                         "uiRepresentation": "Label-Label-Button-Button",
@@ -169,6 +196,110 @@
                         "wType": "Label"
                     },
                     "srcWgtKUID": "hc54a62e5990491393434c27d03f63b9"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "j7f22428791e4c4fa7a7f4cd440677dd",
+                    "originalPropertyKey": "hoverSkin",
+                    "propertyIndex": 7,
+                    "propertyKey": "flxChannelHover",
+                    "pw": {
+                        "access": "readwrite",
+                        "applicablePSPplatform": "desktopweb",
+                        "category": "skin",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "flxChannelHover",
+                        "isHiddenInTool": false,
+                        "srcWidget": "flxChannel",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "i24fb73ae8034ab3bcaa163e3dbe2e64"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "cf120d3fecb44c7daa3176f31fcbd4a2",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 8,
+                    "propertyKey": "channelGenericImage",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "channelGenericImage",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblChannelGenericImage",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "f56dd08babff41169417c568827991b1"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "i7beb3b0bc8b4b06854e593a99b8b64c",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 9,
+                    "propertyKey": "channelAssetsCDN",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "channelAssetsCDN",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblChannelAssetsCDN",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "b7db6aad83634ee1b95206ec88e485de"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "a66645bb75ba41f492915286ea87effa",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 10,
+                    "propertyKey": "channelProjectImage",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "channelProjectImage",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblChannelProjectImage",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "h813cbadeb6d4cd8b0a1bbab65a4f75d"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "hd3aed7b741444aca89a4696596ee47d",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 11,
+                    "propertyKey": "channelFrameOnlyLensUPC",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "channelFrameOnlyLensUPC",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblChannelFrameOnlyLensUPC",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "e5cd9ee55d4949febd347179b57ae668"
                 }
             ]
         },

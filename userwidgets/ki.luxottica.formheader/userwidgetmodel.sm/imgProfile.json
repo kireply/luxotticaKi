@@ -4,11 +4,7 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "50dp"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "0dp"
+        "value": "90%"
     },
     "_margin_": [
         0,
@@ -24,18 +20,18 @@
     ],
     "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
     "_src_": "user.png",
-    "_top_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_width_": {
         "type": "string",
-        "value": "30dp"
+        "value": "10%"
     },
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "20%"
+        "value": "23%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
     },
     "containerweight": 100,
     "id": "imgProfile",

@@ -4,7 +4,7 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "85%"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
@@ -26,12 +26,12 @@
     "_percent_": true,
     "_skin_": "s92c5d879f8142f08c34a981ec98d303",
     "_top_": {
-        "type": "number",
-        "value": "137"
+        "type": "string",
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "5%"
+        "value": "100%"
     },
     "areflexpropsreferenced": false,
     "autogrowmode": 0,
@@ -45,7 +45,20 @@
                 "kuid": "i3eae57204eb4328b8cc58a3ad157a3e",
                 "srcKUID": "dc71668cc16f4695981806296357819d",
                 "wType": "Button"
-            }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "responsiveData": {}
         },
         "btnResizeMenu": {
             "__events__": {
@@ -55,7 +68,35 @@
                 "kuid": "a2f86d9bcfb54d6896c23198a99a4c21",
                 "srcKUID": "b78ca6f9cd4742d8b6d55eda7606510c",
                 "wType": "Button"
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "87.83%"
+                }
+            },
+            "responsiveData": {},
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "20%"
+                }
             }
+        },
+        "flxLogout": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "b4bff94967444136bf0922c063a955aa",
+                "srcKUID": "bd4e6e8bdb8a4f2e87e20e3b2baa4851",
+                "wType": "FlexContainer"
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "responsiveData": {}
         },
         "imgLogout": {
             "__events__": {},
@@ -65,6 +106,14 @@
                 "wType": "Image"
             },
             "src": "logout_true.png"
+        },
+        "imgLogout1": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "d989827d04b244a69b4b53056c75f701",
+                "srcKUID": "d2f68446c7fa4a9abe29e1b65700eab2",
+                "wType": "Image"
+            }
         },
         "segMenu": {
             "__events__": {},
@@ -122,6 +171,82 @@
                 "kuid": "f57e87933d0745ddb6016d9db6006526",
                 "srcKUID": "bfbe8f5520c44ccc8b1717d6cf7e95af",
                 "wType": "FlexContainer"
+            },
+            "autogrowMode": {
+                "Default": 0
+            },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "100%"
+                }
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
+                }
+            },
+            "maxHeight": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "maxWidth": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "minHeight": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "minWidth": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "responsiveData": {},
+            "right": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "0dp"
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "100%"
+                }
             }
         }
     },

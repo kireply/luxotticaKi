@@ -22,7 +22,7 @@
   "font_name": "iphoneSystem",
   "font_size": 120,
   "font_style": "normal",
-  "font_weight": "400",
+  "font_weight": "bold",
   "ipad": {
     "font_size": 120,
     "isForked": false

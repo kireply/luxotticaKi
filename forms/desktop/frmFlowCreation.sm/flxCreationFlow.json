@@ -40,7 +40,7 @@
     },
     "centery": {
         "type": "string",
-        "value": "51.79%"
+        "value": "48.79%"
     },
     "children": [
         "lblCreateNewFlow",
@@ -52,9 +52,17 @@
         "lblEnvironment",
         "lbEnvironment",
         "lblIsDefaultFlow",
-        "lblIsSupernova",
         "swIsDefaultFlow",
+        "lblIsSupernova",
         "swIsSupernova",
+        "lblShowFrameOnly",
+        "swShowFrameOnly",
+        "lblShowFramePlusLenses",
+        "swShowFramePlusLenses",
+        "lblShowSavingsLabel",
+        "swShowSavingsLabel",
+        "lblActivateDistanceAndReading",
+        "swActivateDistanceAndReading",
         "lblSelectStepsLayout",
         "flxStepsLayout",
         "btnProceed"

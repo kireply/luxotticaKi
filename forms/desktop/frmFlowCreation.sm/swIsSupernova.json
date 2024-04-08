@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "3%"
+        "value": "2%"
     },
     "_left_": {
         "type": "string",
@@ -21,18 +21,14 @@
         0,
         0
     ],
-    "_right_": {
-        "type": "string",
-        "value": "0%"
-    },
     "_skin_": "s651c8b6c2924a32be3cf51c99fe123e",
     "_top_": {
         "type": "string",
-        "value": "71.05%"
+        "value": "55%"
     },
     "_width_": {
         "type": "string",
-        "value": "8%"
+        "value": "7%"
     },
     "canUpdateUI": true,
     "containerweight": 100,

@@ -52,6 +52,7 @@
     "children": [
         "flxContainerChannelCreation",
         "flxAddChannel",
+        "flxBlur",
         "flxPopupCreateNewChannel"
     ],
     "containerweight": 100,
@@ -60,6 +61,10 @@
             "channel": "desktop",
             "name": "frmChannelCreationController"
         }
+    },
+    "currentBreakpoint": {
+        "kuid": "b1",
+        "width": 1366
     },
     "currentLocale": "default",
     "desktopweb": {

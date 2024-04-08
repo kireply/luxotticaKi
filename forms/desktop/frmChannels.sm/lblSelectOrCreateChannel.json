@@ -21,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "sc237b7a06d14a4a9d01a638fe3a4309",
+    "_skin_": "s3b77673da1f4e78873214f9998cc543",
     "_text_": "Select or create your Channel",
     "_top_": {
         "type": "string",
-        "value": "140dp"
+        "value": "18%"
     },
     "_width_": {
         "type": "ref",
