@@ -48,6 +48,7 @@
     },
     "enablescrolling": true,
     "id": "flxBtnLogout",
+    "ide_onClick": "AS_FlexContainer_ac859d92bf574050a60c0d9881129a98",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

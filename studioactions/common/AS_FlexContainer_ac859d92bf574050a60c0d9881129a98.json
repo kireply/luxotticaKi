@@ -1,0 +1,23 @@
+{
+    "AS_FlexContainer_ac859d92bf574050a60c0d9881129a98": {
+        "id": "AS_FlexContainer_ac859d92bf574050a60c0d9881129a98",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "u9c48b958b804cb5be55e25f3f6f5dfb"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_b04d297a82154abc9bc411cf2831ee0b",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var ntf = new voltmx.mvc.Navigation(\"frmLogin\");\nntf.navigate();\nvoltmx.print(\"### Logging out...\");",
+            "parentId": null
+        }]
+    }
+}

@@ -125,6 +125,10 @@ define({
             gblChannelName = box.name;
             gblChannelId = box.id;
             gblChannelProperties = box.properties_file;
+            gblChannelGenericImage = box.generic_image;
+            gblChannelAssetsCDN = box.assets_CDN;
+            gblChannelProjectImage = box.project_image;
+            gblChannelFrameOnlyLensUPC = box.frame_only_lens_UPC;
             voltmx.print("### GLOBAL INFO: " + gblChannelName);
             voltmx.print("### GLOBAL LOGO: " + gblChannelLogo);
             var navigationManager = new voltmx.mvc.Navigation("frmFlows");

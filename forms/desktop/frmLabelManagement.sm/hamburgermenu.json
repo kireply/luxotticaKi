@@ -57,6 +57,11 @@
         },
         "flxBtnLogout": {
             "__events__": {
+                "desktopweb": {
+                    "psp": {
+                        "ide_onHover": "AS_FlexContainer_h4a1904ee2424da291f87209fc180416"
+                    }
+                },
                 "ide_onClick": "AS_FlexContainer_aee99a64c10d4286909f97dbcae8d508"
             },
             "__info__": {

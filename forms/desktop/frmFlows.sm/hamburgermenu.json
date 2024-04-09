@@ -40,69 +40,27 @@
     "containerweight": 0,
     "dataDiffs": {
         "btnLogout": {
-            "__events__": {
-                "ide_onClick": "AS_Button_d1f2eb4288454081bae81597a4000e4c"
-            },
+            "__events__": {},
             "__info__": {
-                "kuid": "f2f0b63afa4b4ed9adf4ded9607430ed",
+                "kuid": "g14b94864be042b7aa658a5434e32942",
                 "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
                 "wType": "Button"
-            },
-            "bottom": {
-                "Default": {
-                    "type": "number",
-                    "value": "0"
-                }
-            },
-            "centerX": {
-                "Default": {
-                    "type": "string",
-                    "value": "50%"
-                }
-            },
-            "centerY": {
-                "Default": {
-                    "type": "string",
-                    "value": "50%"
-                }
-            },
-            "responsiveData": {},
-            "width": {
-                "Default": {
-                    "type": "string",
-                    "value": "100%"
-                }
             }
         },
         "btnResizeMenu": {
             "__events__": {
-                "ide_onClick": "AS_Button_e48cd4656f4142ff801990763626eecd"
+                "ide_onClick": "AS_Button_b7cbed1d283b4924a7f883e5b2d90989"
             },
             "__info__": {
-                "kuid": "af599d960a764c35be40813f1879fc78",
+                "kuid": "c242e041db71413cb48882623fb6626d",
                 "srcKUID": "g6220a13ecc543cfbd274408555deb6b",
                 "wType": "Button"
-            },
-            "left": {
-                "Default": {
-                    "type": "string",
-                    "value": "97%"
-                }
-            },
-            "responsiveData": {},
-            "width": {
-                "Default": {
-                    "type": "string",
-                    "value": "8%"
-                }
             }
         },
         "flxBtnLogout": {
-            "__events__": {
-                "ide_onClick": "AS_FlexContainer_e337f025cfc5432a85e60f9c007277f5"
-            },
+            "__events__": {},
             "__info__": {
-                "kuid": "f97731c5fa15443380c537fa77fc2ee4",
+                "kuid": "fba313007a204f7f8f7159a7663f15ad",
                 "srcKUID": "a0c260c49fa14d3aa934cade39c38bb0",
                 "wType": "FlexContainer"
             }
@@ -111,7 +69,7 @@
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "cf4a58de973d4b06a7a53d1d9e2a880e",
+                "kuid": "ab7a6be1a94a44e8bf1036e1e70d2ab6",
                 "srcKUID": "d252c589507e44fd8ed2ab19f3f7e081",
                 "wType": "FlexContainer"
             },
@@ -172,7 +130,6 @@
                     "value": ""
                 }
             },
-            "responsiveData": {},
             "right": {
                 "Default": {
                     "type": "string",
@@ -195,121 +152,26 @@
         "imgLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "dacbdbfdb6ee4134922b880d254c3737",
+                "kuid": "jf0ed1c96d244e7c9f2053c5fca05b6a",
                 "srcKUID": "f6d6345317634850bef09677b329a6ec",
                 "wType": "Image"
             },
-            "bottom": {
-                "Default": {
-                    "type": "string",
-                    "value": "4%"
-                }
-            },
-            "responsiveData": {},
             "src": "logout_true.png"
         },
         "imgLogout2": {
             "__events__": {},
             "__info__": {
-                "kuid": "h5b004af3efc46bb83cced908bf98e7b",
+                "kuid": "gaaf474512934b258c1fb5af17688f38",
                 "srcKUID": "d183329a0090424e92fc74f21216b2bb",
                 "wType": "Image"
             }
         },
         "segMenu": {
-            "__events__": {
-                "ide_onRowClick": "AS_Segment_j382c3f219f241c89119b65285b8f47c"
-            },
+            "__events__": {},
             "__info__": {
-                "kuid": "b0ddfcf9fd884ef6a5fc55993a4eda9a",
+                "kuid": "a895ced7398e41939898ab7c42e19be9",
                 "srcKUID": "f6158cc0defe49f9b27229072ca607e4",
                 "wType": "Segment"
-            },
-            "autogrowMode": {
-                "Default": 0
-            },
-            "data": {
-                "desktop": [
-                    {
-                        "imgMenuIcon": {
-                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "flow.png",
-                            "type": "Image"
-                        },
-                        "lblMenu": {
-                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                            "text": "Flows",
-                            "type": "Label"
-                        }
-                    },
-                    {
-                        "imgMenuIcon": {
-                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "labels.png",
-                            "type": "Image"
-                        },
-                        "lblMenu": {
-                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                            "text": "Labels",
-                            "type": "Label"
-                        }
-                    },
-                    {
-                        "imgMenuIcon": {
-                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "style_icon.png",
-                            "type": "Image"
-                        },
-                        "lblMenu": {
-                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                            "text": "Style",
-                            "type": "Label"
-                        }
-                    },
-                    {
-                        "imgMenuIcon": {
-                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "audience_icon.png",
-                            "type": "Image"
-                        },
-                        "lblMenu": {
-                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                            "text": "Users management",
-                            "type": "Label"
-                        }
-                    },
-                    {
-                        "imgMenuIcon": {
-                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "settings.png",
-                            "type": "Image"
-                        },
-                        "lblMenu": {
-                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                            "text": "Channel settings",
-                            "type": "Label"
-                        }
-                    }
-                ]
-            },
-            "height": {
-                "Default": {
-                    "type": "string",
-                    "value": "100%"
-                }
-            },
-            "left": {
-                "Default": {
-                    "type": "string",
-                    "value": "0dp"
-                }
-            },
-            "responsiveData": {},
-            "top": {
-                "Default": {
-                    "type": "string",
-                    "value": "0dp"
-                }
             }
         }
     },
@@ -319,7 +181,7 @@
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kuid": "cf4a58de973d4b06a7a53d1d9e2a880e",
+    "kuid": "ab7a6be1a94a44e8bf1036e1e70d2ab6",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",

@@ -1,0 +1,24 @@
+{
+    "AS_Button_b7cbed1d283b4924a7f883e5b2d90989": {
+        "id": "AS_Button_b7cbed1d283b4924a7f883e5b2d90989",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_a6365b8db72841f0a193d71bd4373f1c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxContainerMenu.setVisibility(false);\nthis.view.flxContainerSmallerMenu.setVisibility(true);",
+            "parentId": null
+        }]
+    }
+}

@@ -46,7 +46,7 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "containerweight": 100,
-    "counter": "03",
+    "counter": "04",
     "desktop": {
         "_data_": [
             {
@@ -73,6 +73,13 @@
             {
                 "imgMenuIcon": {
                     "@class": "com.viz.ide.model.segment.ImageSegmentData",
+                    "src": "audience_icon.png",
+                    "type": "Image"
+                }
+            },
+            {
+                "imgMenuIcon": {
+                    "@class": "com.viz.ide.model.segment.ImageSegmentData",
                     "src": "settings.png",
                     "type": "Image"
                 }
@@ -90,6 +97,7 @@
     "groupcells": false,
     "hasSections": false,
     "id": "segMenu",
+    "ide_onRowClick": "AS_Segment_b33062cbc5cc463c8bd086ae68474f85",
     "info": null,
     "ipad": {
         "psp": {
@@ -117,7 +125,7 @@
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainselection": false,
-    "rowcounter": 3,
+    "rowcounter": 4,
     "rowfocusskin": "s6e7f07455ec411fbcf9e06217636f94",
     "rowskin": "sb33a9540d60480295e259124d56f0d6",
     "rowtemplate": null,

@@ -1,0 +1,28 @@
+{
+    "AS_FlexContainer_a063f4b44f444b0db2ffa39b7a33aff7": {
+        "id": "AS_FlexContainer_a063f4b44f444b0db2ffa39b7a33aff7",
+        "type": "ACTION_SEQUENCE",
+        "name": "onHoverHandlerForFlxBtnSaveChannelSettings",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "frmChannelSettings",
+            "type": "forms",
+            "platform": "",
+            "KUID": "f28936f5ab0247249d1030e011355180"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_a5571f30b33e405a99009fbdf3d24376",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnSave.opacity = 0.7;",
+            "parentId": null
+        }]
+    }
+}

@@ -20,19 +20,9 @@
         "language": "js",
         "eventType": "onRowClick",
         "actions": [{
-            "id": "ADD_LOCAL_VARIABLE_dddffab066a740549b67ebaa11e020c3",
-            "type": "ADD_LOCAL_VARIABLE",
-            "name": "menuOption",
-            "isGlobal": false,
-            "valuetype": "constant",
-            "datatype": "string",
-            "value": "\"\"",
-            "parentId": null,
-            "disabled": false
-        }, {
             "id": "ADD_SNIPPET_ed339f95c3324cebbfb62923369144b6",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "var menu = this.view.hamburgermenu.segMenu.selectedRowItems[0];\nmenuOption = menu.lblMenu;\nvoltmx.print(\"### menu: \" + menu);\nvoltmx.print(\"### opzione menu: \" + menuOption);\n\nif (menuOption === \"Labels\") {\n        var ntf = new voltmx.mvc.Navigation(\"frmLabelManagement\");\n        ntf.navigate();\n  \t\tvoltmx.print(\"### IF SI, NAVIGO: \" + menuOption);\n}",
+            "codeSnippet": "var menu = this.view.segMenu.selectedRowItems[0];\nvar menuOption = menu.lblMenu;\nvoltmx.print(\"### Menu: \" + JSON.stringify(menu) );\nvoltmx.print(\"### Menu option: \" + \"-\" + menuOption + \"-\");\n\nif (menuOption === \"Flows\") {\n        var ntf = new voltmx.mvc.Navigation(\"frmFlows\");\n        ntf.navigate();\n  \t\tvoltmx.print(\"### Navigate to: \" + menuOption);\n}\nif (menuOption === \"Labels\") {\n        var ntf = new voltmx.mvc.Navigation(\"frmLabelManagement\");\n        ntf.navigate();\n  \t\tvoltmx.print(\"### Navigate to: \" + menuOption);\n}\nif (menuOption === \"Channel settings\") {\n        var ntf = new voltmx.mvc.Navigation(\"frmChannelSettings\");\n        ntf.navigate();\n  \t\tvoltmx.print(\"### Navigate to: \" + menuOption);\n}\n",
             "parentId": null,
             "disabled": false
         }]

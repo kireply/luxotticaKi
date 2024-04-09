@@ -1,0 +1,23 @@
+{
+    "AS_FlexContainer_f4ebc40d819049249ada5dd9c58776b9": {
+        "id": "AS_FlexContainer_f4ebc40d819049249ada5dd9c58776b9",
+        "type": "ACTION_SEQUENCE",
+        "name": "onHoverHandlerForFlxLogoutMenuChannelSettings",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "frmChannelSettings",
+            "type": "forms",
+            "platform": null,
+            "KUID": "f28936f5ab0247249d1030e011355180"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": []
+    }
+}

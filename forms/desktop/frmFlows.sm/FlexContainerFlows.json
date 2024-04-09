@@ -40,14 +40,14 @@
         "lblListOfFlows",
         "btnCreateNewFlow",
         "imgCreateNewFlow",
-        "lbEnvironment",
         "lbStatus",
-        "lbCategory",
+        "lbEnvironment",
         "flxHeaderSegFlows",
         "segFlows",
         "txtSearchFlowName",
         "imgSearchFlowName",
-        "channelTemplatewithContract"
+        "channelTemplatewithContract",
+        "lbCategory"
     ],
     "clipbounds": false,
     "containerweight": 100,

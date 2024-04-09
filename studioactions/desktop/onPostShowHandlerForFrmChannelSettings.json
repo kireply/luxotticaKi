@@ -1,0 +1,26 @@
+{
+    "AS_Form_i999ea0df0b0438998fb165da445d480": {
+        "id": "AS_Form_i999ea0df0b0438998fb165da445d480",
+        "type": "ACTION_SEQUENCE",
+        "name": "onPostShowHandlerForFrmChannelSettings",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmChannelSettings",
+            "type": "forms",
+            "platform": null,
+            "KUID": "f28936f5ab0247249d1030e011355180"
+        },
+        "language": "js",
+        "eventType": "postShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_jefdaa54ebd3451baa392e04daabe04d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.channelTemplatewithContract.channelLogo = gblChannelLogo;\nthis.view.channelTemplatewithContract.channelInfo = gblChannelName + \" - #\" + gblChannelId;\n\nthis.view.btnSave.setEnabled(true);\nthis.view.btnSave.opacity = 1;\n\n\nthis.view.lblChannelID.opacity = 0.5;\nthis.view.txtChannelID.setEnabled(false);\nthis.view.txtChannelID.opacity = 0.5;\n\nthis.view.lblChannelName.opacity = 0.5;\nthis.view.txtChannelName.setEnabled(false);\nthis.view.txtChannelName.opacity = 0.5;\n\n\nthis.view.txtChannelID.text = gblChannelId;\nthis.view.txtChannelName.text = gblChannelName;\nthis.view.txtChannelLogo.text = gblChannelLogo;\nthis.view.txtChannelProperties.text = gblChannelProperties;\nthis.view.txtChannelGenericImage.text = gblChannelGenericImage;\nthis.view.txtChannelAssetsCDN.text = gblChannelAssetsCDN;\nthis.view.txtChannelProjectImage.text = gblChannelProjectImage;\nthis.view.txtChannelFrameOnlyLensUPC.text = gblChannelFrameOnlyLensUPC;",
+            "parentId": null,
+            "disabled": false
+        }]
+    }
+}
