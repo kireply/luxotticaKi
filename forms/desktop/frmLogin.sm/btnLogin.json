@@ -3,7 +3,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "10%"
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
     },
     "_margin_": [
         6,
@@ -21,17 +25,13 @@
     "_text_": "Log in",
     "_top_": {
         "type": "string",
-        "value": "5%"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "70%"
+        "value": "100%"
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerweight": 100,
     "contentalignment": 5,
     "disabledSkins": {
@@ -39,13 +39,13 @@
     },
     "displaytext": true,
     "id": "btnLogin",
-    "ide_onClick": "AS_Button_ib6896ab65fa46aaae953a950c2c3745",
+    "ide_onClick": "AS_Button_ad0082f400754848ae5e50980f422794",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "a24457ee33af4a0daa5e9f4c6abc30bf",
     "name": "kony.ui.Button",
-    "parent": "flxLoginWrapper",
+    "parent": "flxBtnLogin",
     "pf": "frmLogin",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

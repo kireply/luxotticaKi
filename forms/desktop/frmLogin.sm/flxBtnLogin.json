@@ -1,12 +1,12 @@
 {
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "3%"
-    },
     "_height_": {
         "type": "string",
-        "value": "7%"
+        "value": "10%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -22,10 +22,14 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sd35318c0ce04dfd9d14f6f9935c8647",
+    "_skin_": "sdebcd6402a14268bdae05dd16def42f",
+    "_top_": {
+        "type": "string",
+        "value": "5%"
+    },
     "_width_": {
         "type": "string",
-        "value": "80%"
+        "value": "70%"
     },
     "allboxes": [],
     "autogrowmode": 0,
@@ -35,28 +39,25 @@
         "value": "50%"
     },
     "children": [
-        "btnLogout",
-        "imgLogout",
-        "imgLogout1"
+        "btnLogin"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "desktopweb": {
         "psp": {
-            "ide_onHover": "AS_FlexContainer_ff808813e6e540ed996cddf9c1c24863"
+            "ide_onHover": "AS_FlexContainer_e7d190b5006e481a9929370cf2a7144e"
         }
     },
     "enablescrolling": true,
-    "id": "flxLogout",
-    "ide_onClick": "AS_FlexContainer_ea5928af8c394582a37c800e5dcbbd75",
+    "id": "flxBtnLogin",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "bd4e6e8bdb8a4f2e87e20e3b2baa4851",
+    "kuid": "eb313b8c786b4fcf94cf19276ba3805c",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "smallerhamburgermenu",
-    "pf": "userwidgetmodel",
+    "parent": "flxLoginWrapper",
+    "pf": "frmLogin",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

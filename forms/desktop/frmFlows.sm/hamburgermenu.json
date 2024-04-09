@@ -58,7 +58,11 @@
             }
         },
         "flxBtnLogout": {
-            "__events__": {},
+            "__events__": {
+                "desktopweb": {
+                    "psp": {}
+                }
+            },
             "__info__": {
                 "kuid": "fba313007a204f7f8f7159a7663f15ad",
                 "srcKUID": "a0c260c49fa14d3aa934cade39c38bb0",

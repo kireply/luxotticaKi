@@ -5,10 +5,6 @@
         "type": "string",
         "value": "7%"
     },
-    "_left_": {
-        "type": "string",
-        "value": "76.01%"
-    },
     "_margin_": [
         0,
         0,
@@ -22,6 +18,10 @@
         0
     ],
     "_placeholder_": "Please Select",
+    "_right_": {
+        "type": "string",
+        "value": "3%"
+    },
     "_skin_": "scf7732e4e704ee88be9602cde5542e9",
     "_top_": {
         "type": "string",

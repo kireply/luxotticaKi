@@ -1,8 +1,8 @@
 {
-    "AS_FlexContainer_a063f4b44f444b0db2ffa39b7a33aff7": {
-        "id": "AS_FlexContainer_a063f4b44f444b0db2ffa39b7a33aff7",
+    "AS_FlexContainer_ie63e1f9724941ee864b18d994cfd6ac": {
+        "id": "AS_FlexContainer_ie63e1f9724941ee864b18d994cfd6ac",
         "type": "ACTION_SEQUENCE",
-        "name": "onHoverHandlerForFlxBtnSaveChannelSettings",
+        "name": "onHoverHandlerForFlxBtnCreateNewFlow",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -11,24 +11,26 @@
             "name": "context"
         }],
         "contextObj": {
-            "name": "frmChannelSettings",
+            "name": "frmFlows",
             "type": "forms",
             "platform": "",
-            "KUID": "f28936f5ab0247249d1030e011355180"
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
         },
         "language": "js",
         "eventType": "onHover",
         "actions": [{
-            "id": "_d79479a636804a0c8e07d92ad7806129",
+            "id": "_eb2bc9994df44c62a41779d3a749106d",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
                 "leftValue": "context.eventType !== \"leave\""
             }],
             "parentId": null,
-            "criteria": "all"
+            "callbackType": null,
+            "criteria": "all",
+            "disabled": true
         }, {
-            "id": "_g5434bc002b046c9a058da30c4b9764b",
+            "id": "_e6908abc30fc4abda823ee90fbb80203",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -39,18 +41,19 @@
             }],
             "parentId": null,
             "callbackType": null,
-            "criteria": "all"
+            "criteria": "all",
+            "disabled": true
         }, {
-            "id": "ADD_SNIPPET_fc727b98c5a94ed9aa6691e85ea5c875",
+            "id": "ADD_SNIPPET_f5ce1c13606c41adbadbb5982d36b411",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.btnSave.opacity = 1;",
-            "parentId": "_g5434bc002b046c9a058da30c4b9764b",
+            "codeSnippet": "this.view.btnCreateNewFlow.opacity = 1;\nthis.view.imgCreateNewFlow.opacity = 1;",
+            "parentId": "_e6908abc30fc4abda823ee90fbb80203",
             "callbackType": null
         }, {
-            "id": "ADD_SNIPPET_a5571f30b33e405a99009fbdf3d24376",
+            "id": "ADD_SNIPPET_ba0082dd402443709b809bdf0b537da5",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.btnSave.opacity = 0.7;",
-            "parentId": "_d79479a636804a0c8e07d92ad7806129",
+            "codeSnippet": "this.view.btnCreateNewFlow.opacity = 0.7;\nthis.view.imgCreateNewFlow.opacity = 0.2;",
+            "parentId": "_eb2bc9994df44c62a41779d3a749106d",
             "callbackType": null
         }]
     }

@@ -1,8 +1,8 @@
 {
-    "AS_FlexContainer_a063f4b44f444b0db2ffa39b7a33aff7": {
-        "id": "AS_FlexContainer_a063f4b44f444b0db2ffa39b7a33aff7",
+    "AS_FlexContainer_e7d190b5006e481a9929370cf2a7144e": {
+        "id": "AS_FlexContainer_e7d190b5006e481a9929370cf2a7144e",
         "type": "ACTION_SEQUENCE",
-        "name": "onHoverHandlerForFlxBtnSaveChannelSettings",
+        "name": "onHoverHandlerForFlxBtnLogIn",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -11,24 +11,25 @@
             "name": "context"
         }],
         "contextObj": {
-            "name": "frmChannelSettings",
+            "name": "frmLogin",
             "type": "forms",
             "platform": "",
-            "KUID": "f28936f5ab0247249d1030e011355180"
+            "KUID": "hc1489bebc2c4f38b8ba6309c7ed6c02"
         },
         "language": "js",
         "eventType": "onHover",
         "actions": [{
-            "id": "_d79479a636804a0c8e07d92ad7806129",
+            "id": "_fcd2aa66a55341eaa65117031d0615c6",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
                 "leftValue": "context.eventType !== \"leave\""
             }],
             "parentId": null,
+            "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "_g5434bc002b046c9a058da30c4b9764b",
+            "id": "_g07b0f950f5c4a8b95ce1c078e1f08d3",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -41,16 +42,16 @@
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "ADD_SNIPPET_fc727b98c5a94ed9aa6691e85ea5c875",
+            "id": "ADD_SNIPPET_fbd1a9c0a1004d0d932847b9cfd78474",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.btnSave.opacity = 1;",
-            "parentId": "_g5434bc002b046c9a058da30c4b9764b",
+            "codeSnippet": "this.view.btnLogin.opacity = 1;",
+            "parentId": "_g07b0f950f5c4a8b95ce1c078e1f08d3",
             "callbackType": null
         }, {
-            "id": "ADD_SNIPPET_a5571f30b33e405a99009fbdf3d24376",
+            "id": "ADD_SNIPPET_id69ce3ff3b24a43a5ec91bd903ed135",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.btnSave.opacity = 0.7;",
-            "parentId": "_d79479a636804a0c8e07d92ad7806129",
+            "codeSnippet": "this.view.btnLogin.opacity = 0.7;",
+            "parentId": "_fcd2aa66a55341eaa65117031d0615c6",
             "callbackType": null
         }]
     }

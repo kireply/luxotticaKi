@@ -61,7 +61,9 @@
             "responsiveData": {}
         },
         "btnResizeMenu": {
-            "__events__": {},
+            "__events__": {
+                "onClick": "AS_Button_af4fa3d8252e4ad293298853a122b7da"
+            },
             "__info__": {
                 "kuid": "had49b146b4346e7bcde0cc295bb3877",
                 "srcKUID": "b78ca6f9cd4742d8b6d55eda7606510c",

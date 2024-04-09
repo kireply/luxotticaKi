@@ -1,12 +1,12 @@
 {
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "3%"
-    },
     "_height_": {
         "type": "string",
-        "value": "7%"
+        "value": "8%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "5%"
     },
     "_margin_": [
         0,
@@ -22,41 +22,38 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sd35318c0ce04dfd9d14f6f9935c8647",
+    "_skin_": "s4bb6e5eef824184abfaa90011bb7fef",
+    "_top_": {
+        "type": "string",
+        "value": "94%"
+    },
     "_width_": {
         "type": "string",
-        "value": "80%"
+        "value": "90%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
     "children": [
-        "btnLogout",
-        "imgLogout",
-        "imgLogout1"
+        "btnProceed"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "desktopweb": {
         "psp": {
-            "ide_onHover": "AS_FlexContainer_ff808813e6e540ed996cddf9c1c24863"
+            "ide_onHover": "AS_FlexContainer_db99a88b5f5a404b9252b04a2e9c8291"
         }
     },
     "enablescrolling": true,
-    "id": "flxLogout",
-    "ide_onClick": "AS_FlexContainer_ea5928af8c394582a37c800e5dcbbd75",
+    "id": "flxBtnProceed",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "bd4e6e8bdb8a4f2e87e20e3b2baa4851",
+    "kuid": "f9789cd22b7e4aaf9d7db5d3f4916dc9",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "smallerhamburgermenu",
-    "pf": "userwidgetmodel",
+    "parent": "flxCreationFlow",
+    "pf": "frmFlowCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
