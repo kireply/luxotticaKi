@@ -762,6 +762,7 @@ define({
 
 
     flex.layoutType = voltmx.flex.FLOW_VERTICAL;
+    flex.enableScrolling = true;
     this.view.flxRightSide.add(flex);
   }
   
