@@ -1,0 +1,24 @@
+{
+    "AS_FlexContainer_hb212ee54d5f45ef959326257e03cbaa": {
+        "id": "AS_FlexContainer_hb212ee54d5f45ef959326257e03cbaa",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_i3dcf95af4d240b896e5c80a18b42293",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "let steps_widgets = self.view.flxSteps.widgets();\n\nvoltmx.print(\"### FLEX STEPS NUMBER OF WIDGETS: \" + JSON.stringify(steps_widgets.length));\n\nif (steps_widgets.length > 2){\n  this.view.flxRightSide.flxScrollRight.setVisibility(true);\n  let flxScrolls = this.view.flxRightSide.widgets();\n//   flxScrolls.forEach(function(scroll) {\n//     debugger;\n//   });\n  for (let stepNumber = 2; stepNumber <= gblLastInsertedStep; stepNumber++) {\n    let currentStepId = 'boxStep' + stepNumber;\n    let currentScrollId = 'flexScrollRight' + stepNumber;\n    let widget = steps_widgets.find(w => w.id === currentStepId);\n    if (widget) {\n      widget.flxBoxStep.backgroundColor = \"FFFFFF00\";\n      widget.imgDeleteStep.isVisible = false;\n      widget.imgEditStep.isVisible = false;\n      widget.lblStepOrder.fontColor = \"00000000\";\n      widget.lblStepTitle.fontColor = \"00000000\";   \n    }\n    let scroll = flxScrolls.find(s => s.id === currentScrollId);\n//     debugger;\n    if (scroll) {\n      scroll.isVisible = false;\n    }\n  }\n  this.view.flxBoxFirstStep.backgroundColor = \"00000000\";\n  this.view.flxBoxFirstStep.imgDeleteStep.isVisible = true;\n  this.view.flxBoxFirstStep.imgEditStep.isVisible = true;\n  this.view.flxBoxFirstStep.lblStepOrder.fontColor = \"FFFFFF00\";\n  this.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = \"FFFFFF00\";\n  this.view.flxRightSide.flxScrollRight.setVisibility(true);\n  gblCurrentStepOrder = 1;\n  voltmx.print(\"### CURRENT STEP ORDER: \" + JSON.stringify(gblCurrentStepOrder));\n}\n\n\n",
+            "parentId": null
+        }]
+    }
+}

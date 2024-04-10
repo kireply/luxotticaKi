@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "50%"
     },
     "_left_": {
         "type": "string",
@@ -22,45 +22,44 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s2f1ee016fac47b2b166f4f57338ccf0",
+    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "45.94%"
     },
     "_width_": {
         "type": "string",
         "value": "100%"
     },
     "allboxes": [],
-    "allowhorizontalbounce": false,
-    "allowverticalbounce": true,
-    "bounces": true,
+    "autogrowmode": 0,
     "canUpdateUI": true,
-    "children": [],
+    "children": [
+        "lblAutoskip",
+        "swAutoskip",
+        "lblHasGreyout",
+        "swHasGreyout",
+        "lblAnalyticsId",
+        "lbAnalytics",
+        "btnProceed"
+    ],
     "clipbounds": false,
     "containerweight": 100,
-    "decelerat": false,
-    "dragg": false,
     "enablescrolling": true,
-    "horizontalscrollindicator": true,
-    "id": "flxScrollRight",
+    "id": "flxAutoproceedTrue",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": false,
-    "kuid": "e521ae96019f40ed902c5af9911aa359",
-    "layouttype": 4,
-    "name": "kony.ui.FlexScrollContainer",
-    "pagingenabled": false,
-    "parent": "flxRightSide",
+    "isvisible": true,
+    "kuid": "eab41ec66b7f4ab081275a7bac4483d0",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "flxNewPopup",
     "pf": "frmStepComposition",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
-    "scrolldirection": 2,
     "snapgridsize": 10,
     "snaptogrid": true,
-    "track": false,
-    "verticalscrollindicator": true,
-    "wType": "FlexScrollContainer",
+    "wType": "FlexContainer",
     "widgetalignment": 1
 }

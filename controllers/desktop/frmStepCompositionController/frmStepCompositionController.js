@@ -139,10 +139,22 @@ define({
       this.view.flxContainerStepCreation.flxLeftRight.flxRightSide.imgNoComponentsRight.setVisibility(false);
       this.view.flxContainerStepCreation.flxLeftRight.flxRightSide.lblNoComponentsRight.setVisibility(false);
       this.view.flxContainerStepCreation.flxLeftRight.flxRightSide.txtStartPhraseRight.setVisibility(false);
-      this.view.flxScrollRight.setVisibility(true);
-      this.view.flxScrollRight.add(flex);
-      this.view.flxScrollRight.forceLayout();
-      gblRightOrder += 1;
+      
+      debugger;
+      if (gblCurrentStepOrder > 1){
+        let right_widgets = this.view.flxRightSide.widgets();
+        let targetWidget = right_widgets.find(widget => widget.id === "flexScrollRight" + gblCurrentStepOrder);
+        if (targetWidget){
+          targetWidget.add(flex);
+          targetWidget.forceLayout();
+        }
+      } else {
+        this.view.flxScrollRight.setVisibility(true);
+        this.view.flxScrollRight.add(flex);
+        this.view.flxScrollRight.forceLayout();
+        gblRightOrder += 1;
+      }
+      
     }
 
   },
@@ -658,6 +670,99 @@ define({
       });
             } 
 
+  },
+  
+  addNewStep: function(left_position){
+    let index = gblLastInsertedStep + 1;
+
+    gblLastInsertedStep += 1;
+    gblCurrentStepOrder = gblLastInsertedStep;
+    
+    let left_position_percentage = left_position + "%";
+    
+    const box = new ki.luxottica.boxStep({
+      id: `boxStep${index}`,
+      left: `${left_position_percentage}`,
+      centerY: '50%'
+    }, {}, {});
+
+    box.stepOrder = "Step " + index;
+    box.stepTitle = gblCurrentStepTitle;
+    
+    box.onClickTeaser = () => {
+      let steps_widgets = this.view.flxSteps.widgets();
+      let flxScrolls = this.view.flxRightSide.widgets();
+      let current_id = box.id;
+      
+      let numberAsString = current_id.replace("boxStep", "");
+      let stepNumber = parseInt(numberAsString, 10);
+      let current_scroll = 'flexScrollRight' + stepNumber;
+      for (let i = 1; i <= gblLastInsertedStep; i++) {
+        let expectedId = 'boxStep' + i;
+        let expectedScroll = 'flexScrollRight' + i;
+        // Procedi solo se non stiamo trattando il widget corrente
+        if (expectedId !== current_id) {
+          let widget = steps_widgets.find(w => w.id === expectedId);
+          if (widget) {
+            widget.flxBoxStep.backgroundColor = "FFFFFF00"; 
+            widget.imgDeleteStep.isVisible = false;
+            widget.imgEditStep.isVisible = false;
+            widget.lblStepOrder.fontColor = "00000000";
+            widget.lblStepTitle.fontColor = "00000000";
+            let scroll = flxScrolls.find(s => s.id === expectedScroll);
+//             debugger;
+            if (scroll) {
+              scroll.isVisible = false;
+            }
+          } else {
+            let widget_new = steps_widgets.find(w => w.id === "flxBoxFirstStep");
+            if (widget_new) {
+              widget_new.backgroundColor = "FFFFFF00"; 
+              widget_new.imgDeleteStep.isVisible = false;
+              widget_new.imgEditStep.isVisible = false;
+              widget_new.lblStepOrder.fontColor = "00000000";
+              widget_new.lblStepTitleIntoStepComposition.fontColor = "00000000";
+              this.view.flxRightSide.flxScrollRight.setVisibility(false);
+            }
+          }
+        } else {
+          let widget = steps_widgets.find(w => w.id === current_id);
+          widget.flxBoxStep.backgroundColor = "00000000";
+          widget.imgDeleteStep.isVisible = true;
+          widget.imgEditStep.isVisible = true;
+          widget.lblStepOrder.fontColor = "FFFFFF00";
+          widget.lblStepTitle.fontColor = "FFFFFF00";
+          let scroll = flxScrolls.find(s => s.id === current_scroll);
+//           debugger;
+            if (scroll) {
+              scroll.isVisible = true;
+            }
+          gblCurrentStepOrder = stepNumber;
+          voltmx.print("### CURRENT STEP ORDER: " + JSON.stringify(gblCurrentStepOrder));
+        } 
+      }
+    };
+    
+    this.view.flxSteps.add(box);
+
+    this.view.flxScrollRight.setVisibility(false);
+
+    const flex = new voltmx.ui.FlexScrollContainer({
+      id: `flexScrollRight${index}`,
+      width: '100%',
+      height: '100%',
+      responsiveConfig: {
+        "span": {
+          "640": 12,
+          "1024": 6,
+          "1366": 12
+        }
+      }
+    }, {}, {});
+
+
+    flex.layoutType = voltmx.flex.FLOW_VERTICAL;
+    this.view.flxRightSide.add(flex);
   }
   
   /*

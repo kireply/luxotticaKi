@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "80.24%"
+        "value": "97%"
     },
     "_left_": {
         "type": "string",
-        "value": "51%"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -22,40 +22,49 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sd0be49efa234792a18ea7eca99f26e4",
+    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_top_": {
         "type": "string",
-        "value": "0%"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "14.15%"
+        "value": "90%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "centery": {
+    "centerx": {
         "type": "string",
         "value": "50%"
     },
+    "centery": {
+        "type": "string",
+        "value": "49%"
+    },
     "children": [
-        "lblStepTitleIntoStepComposition",
-        "lblStepOrder",
-        "imgEditStep",
-        "imgDeleteStep"
+        "imgExitPopupStepCreation",
+        "lblNewStep",
+        "lblStepTitle",
+        "txtStepTitle",
+        "lblIsPrescriptionStep",
+        "swIsPrescriptionStep",
+        "lblAutoproceed",
+        "swAutoproceed",
+        "flxAutoproceedTrue",
+        "flxAutoproceedFalse"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxBoxFirstStep",
-    "ide_onClick": "AS_FlexContainer_hb212ee54d5f45ef959326257e03cbaa",
+    "id": "flxNewPopup",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ed506658078f4b6684761ecf8bbf0f35",
+    "kuid": "i4b8781dbc26442a909fe95af7b867e4",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxSteps",
+    "parent": "flxContainerNewPopup",
     "pf": "frmStepComposition",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
@@ -63,5 +72,6 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 1
 }

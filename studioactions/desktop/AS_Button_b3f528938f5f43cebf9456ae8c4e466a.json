@@ -1,68 +1,66 @@
 {
-    "AS_Button_fc1580a841e04b58b90e8f39b0d6fb0f": {
-        "id": "AS_Button_fc1580a841e04b58b90e8f39b0d6fb0f",
+    "AS_Button_b3f528938f5f43cebf9456ae8c4e466a": {
+        "id": "AS_Button_b3f528938f5f43cebf9456ae8c4e466a",
         "type": "ACTION_SEQUENCE",
-        "name": "onClickHandlerForBtnCreate",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
         }],
-        "contextObj": {
-            "name": "frmStepCreation",
-            "type": "forms",
-            "platform": "",
-            "KUID": "j27b7970c694429db6312f3b27f7428e"
-        },
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "ADD_LOCAL_VARIABLE_a7ca749401f440f89e102731f57d7b06",
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_abaf0f2d7d4545d2bda343153bee3a60",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "isPrescriptionStep",
             "isGlobal": false,
             "valuetype": "constant",
             "datatype": "boolean",
             "value": "false",
-            "parentId": null,
             "callbackType": null
         }, {
-            "id": "ADD_SNIPPET_bb60a19761814eebb21d7ef91ba81504",
+            "id": "ADD_SNIPPET_ide_onClick_i15e6eec1b354e56927c75d0bb65e0d6",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### Flow ID: \" + gblFlowId);\nvoltmx.print(\"### Flow Name: \" + gblFlowName);",
-            "parentId": null,
+            "codeSnippet": "voltmx.print(\"### Flow ID: \" + gblFlowId);\nvoltmx.print(\"### Flow Name: \" + gblFlowName);\n\n\n//to comment in the global flow\ngblFlowId = 128;\n// gblFlowName = ",
             "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_f1a9c4713ad845b0bf032f3e3011e2ce",
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_hb196422aba5483e8f785fa073bc457d",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "Autoproceed",
             "isGlobal": false,
             "valuetype": "constant",
             "datatype": "boolean",
             "value": "false",
-            "parentId": null,
             "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_d67815a60aa14cfe84ccff3df8142dbf",
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_d126188fd04f4d5a90a3731478f16d28",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "Autoskip",
             "isGlobal": false,
             "valuetype": "constant",
             "datatype": "boolean",
             "value": "false",
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_f8e84d23716e4699ac474d5447b4587d",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "left_position",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
             "parentId": null,
             "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_a22e2010640149feae680990fbed168e",
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_i546fe5da76c45e2b17d25c59302a0d4",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "hasGreyout",
             "isGlobal": false,
             "valuetype": "constant",
             "datatype": "boolean",
             "value": "false",
-            "parentId": null,
             "callbackType": null
         }, {
-            "id": "_f2a4c2de0176433891f7f391846808e3",
+            "id": "IF_CONDITION_ide_onClick_ae655a3d435c4c01853e134cab32d8dd",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -70,94 +68,15 @@
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "0",
-                "leftItemKUID": "j27b7970c694429db6312f3b27f7428e",
-                "leftWidgetKUID": "ff848519c44f47d4b3a524dc97a2a129"
+                "leftItemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                "leftWidgetKUID": "ff7ae455dcff4c51a9d0bb73c2c1e326"
             }],
-            "parentId": null,
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "_a6f6854ed1eb4169b4de354f7e1eea0c",
-            "type": "IF_CONDITION",
-            "conditions": [{
-                "leftValueType": "widgetprop",
-                "leftValue": "this.view.swAutoproceed.selectedIndex",
-                "operator": "===",
-                "rightValueType": "value",
-                "rightValue": "0",
-                "leftItemKUID": "j27b7970c694429db6312f3b27f7428e",
-                "leftWidgetKUID": "b9f952995a0646759eeea20ffac3ba2e"
-            }],
-            "parentId": null,
-            "callbackType": null,
-            "criteria": "all"
-        }, {
-            "id": "_i0e16a3255b1443398cdb106c2ea3288",
-            "type": "IF_CONDITION",
-            "conditions": [{
-                "leftValueType": "widgetprop",
-                "leftValue": "this.view.swAutoskip.selectedIndex",
-                "operator": "===",
-                "rightValueType": "value",
-                "rightValue": "0",
-                "leftItemKUID": "j27b7970c694429db6312f3b27f7428e",
-                "leftWidgetKUID": "h5fe9ed3588c4bfd8cd8cc35f3d680f8"
-            }],
-            "parentId": null,
-            "callbackType": null,
-            "criteria": "all"
-        }, {
-            "id": "_f89361b9b76a4cc79a0a76b17d9327f5",
-            "type": "IF_CONDITION",
-            "conditions": [{
-                "leftValueType": "widgetprop",
-                "leftValue": "this.view.swHasGreyout.selectedIndex",
-                "operator": "===",
-                "rightValueType": "value",
-                "rightValue": "0",
-                "leftItemKUID": "j27b7970c694429db6312f3b27f7428e",
-                "leftWidgetKUID": "g68adb38b42a4f8fbc85d850357ab886"
-            }],
-            "parentId": null,
-            "callbackType": null,
-            "criteria": "all"
-        }, {
-            "id": "MODIFY_VARIABLE_ACTION_af511ca89b2b47b5ac5fb5492469c532",
+            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_b6a5fe5c1d8641fb915e4c9fcebf8fe4",
             "type": "MODIFY_VARIABLE_ACTION",
-            "parentId": "_f89361b9b76a4cc79a0a76b17d9327f5",
-            "callbackType": null,
-            "variable": "hasGreyout",
-            "valueType": "set",
-            "isGlobal": false,
-            "dataType": "constant",
-            "modifySet": "true",
-            "modifySetType": "boolean"
-        }, {
-            "id": "MODIFY_VARIABLE_ACTION_c6bc3187fd7c478297135d8814791a23",
-            "type": "MODIFY_VARIABLE_ACTION",
-            "parentId": "_i0e16a3255b1443398cdb106c2ea3288",
-            "callbackType": null,
-            "variable": "Autoskip",
-            "valueType": "set",
-            "isGlobal": false,
-            "dataType": "constant",
-            "modifySet": "true",
-            "modifySetType": "boolean"
-        }, {
-            "id": "MODIFY_VARIABLE_ACTION_a1a67cea4df1445888f933a5ffac13e7",
-            "type": "MODIFY_VARIABLE_ACTION",
-            "parentId": "_a6f6854ed1eb4169b4de354f7e1eea0c",
-            "callbackType": null,
-            "variable": "Autoproceed",
-            "valueType": "set",
-            "isGlobal": false,
-            "dataType": "constant",
-            "modifySet": "true",
-            "modifySetType": "boolean"
-        }, {
-            "id": "MODIFY_VARIABLE_ACTION_ha175b826ae84c62bcf480fd6633d48d",
-            "type": "MODIFY_VARIABLE_ACTION",
-            "parentId": "_f2a4c2de0176433891f7f391846808e3",
+            "parentId": "IF_CONDITION_ide_onClick_ae655a3d435c4c01853e134cab32d8dd",
             "callbackType": null,
             "variable": "isPrescriptionStep",
             "valueType": "set",
@@ -166,9 +85,83 @@
             "modifySet": "true",
             "modifySetType": "boolean"
         }, {
-            "id": "LOADING_INDICATOR_baadadbcaf054118af755446d2538031",
+            "id": "IF_CONDITION_ide_onClick_fb3506793cf6449796150cee086729ed",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.swAutoproceed.selectedIndex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "0",
+                "leftItemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                "leftWidgetKUID": "ec66118f7d154f50983946f8fe646e79"
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_b8d63a772aad4a69a77b16c1150ddaa7",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "IF_CONDITION_ide_onClick_fb3506793cf6449796150cee086729ed",
+            "callbackType": null,
+            "variable": "Autoproceed",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "constant",
+            "modifySet": "true",
+            "modifySetType": "boolean"
+        }, {
+            "id": "IF_CONDITION_ide_onClick_fe992002a4634b189b7383157aa3a82b",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.swAutoskip.selectedIndex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "0",
+                "leftItemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                "leftWidgetKUID": "c2238355f5ff406992bd94e22f05205b"
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_j67600fd63ce4fd98345098a2c948832",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "IF_CONDITION_ide_onClick_fe992002a4634b189b7383157aa3a82b",
+            "callbackType": null,
+            "variable": "Autoskip",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "constant",
+            "modifySet": "true",
+            "modifySetType": "boolean"
+        }, {
+            "id": "IF_CONDITION_ide_onClick_d64a0ac73d4c4ebebb16eac55026faab",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.swHasGreyout.selectedIndex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "0",
+                "leftItemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                "leftWidgetKUID": "e490eadcf58b4b99a1825ca725e02637"
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_gf5ee9758fdf4b6ba75b495dc4d459e2",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "IF_CONDITION_ide_onClick_d64a0ac73d4c4ebebb16eac55026faab",
+            "callbackType": null,
+            "variable": "hasGreyout",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "constant",
+            "modifySet": "true",
+            "modifySetType": "boolean"
+        }, {
+            "id": "LOADING_INDICATOR_ide_onClick_i27f66c6dc7246c6b03709ae9145f3f3",
             "selectedOption": "show",
-            "parentId": null,
             "type": "LOADING_INDICATOR",
             "callbackType": null,
             "skin": "none",
@@ -177,7 +170,7 @@
             "showProgressIndicator": "true",
             "text": "Creating new step..."
         }, {
-            "id": "INVOKE_SERVICE_g6c997bf3d044fad9a0a3d3900fd7c3c",
+            "id": "INVOKE_ASYNC_SERVICE_ide_onClick_f72088244f4643abb77990d7f7c540ec",
             "type": "INVOKE_ASYNC_SERVICE",
             "inputparams": null,
             "httpheaders": null,
@@ -249,9 +242,9 @@
                         "widgetPath": "this.view.txtStepTitle",
                         "widgetType": "TextField",
                         "dataType": "string",
-                        "itemId": "frmStepCreation",
-                        "widgetKUID": "e473d5f04273480fb0306f870505c004",
-                        "itemKUID": "j27b7970c694429db6312f3b27f7428e",
+                        "itemId": "frmStepComposition",
+                        "widgetKUID": "e3fdc4c158a54a83858fc7b60becf5c8",
+                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
                         "forkedPlatform": "all"
                     },
                     "target": {
@@ -385,10 +378,10 @@
                         "widgetPath": "this.view.lbAnalytics",
                         "widgetType": "ListBox",
                         "dataType": "string",
-                        "itemId": "frmStepCreation",
+                        "itemId": "frmStepComposition",
                         "collectionId": "selectedKeyValues",
-                        "widgetKUID": "ac095de62ad74234b49f698e1d5c7f0d",
-                        "itemKUID": "j27b7970c694429db6312f3b27f7428e",
+                        "widgetKUID": "i1f970a20b3b4363bfa5e4c90ae30116",
+                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
                         "forkedPlatform": "all"
                     },
                     "target": {
@@ -418,7 +411,7 @@
                         "type": "Services",
                         "propertyName": "order",
                         "dataType": "number",
-                        "expression": "\"1\"",
+                        "expression": " gblCurrentStepOrder",
                         "forkedPlatform": "all",
                         "serviceconfig": {
                             "servicename": "mariaDB",
@@ -442,9 +435,9 @@
                         "widgetPath": "this.view.txtAutoproceedButtonLabel",
                         "widgetType": "TextField",
                         "dataType": "string",
-                        "itemId": "frmStepCreation",
-                        "widgetKUID": "j42a712a00194054a8e1dd1412638f2c",
-                        "itemKUID": "j27b7970c694429db6312f3b27f7428e",
+                        "itemId": "frmStepComposition",
+                        "widgetKUID": "g22f6a3248d44d578c22ddaa092fc775",
+                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
                         "forkedPlatform": "all"
                     },
                     "target": {
@@ -472,9 +465,9 @@
             },
             "enableMappingEditor": true
         }, {
-            "id": "LOADING_INDICATOR_d5781371ac2f4349b1717866b23c3b94",
+            "id": "LOADING_INDICATOR_ide_onClick_f7e3fc02444847a39d14133698090a71",
             "selectedOption": "dismiss",
-            "parentId": "INVOKE_SERVICE_g6c997bf3d044fad9a0a3d3900fd7c3c",
+            "parentId": "INVOKE_ASYNC_SERVICE_ide_onClick_f72088244f4643abb77990d7f7c540ec",
             "type": "LOADING_INDICATOR",
             "callbackType": "Callback",
             "skin": "none",
@@ -482,7 +475,7 @@
             "isBlocked": "true",
             "showProgressIndicator": "true"
         }, {
-            "id": "_ae8ca7c746de467e9010cc3102f190cf",
+            "id": "IF_CONDITION_ide_onClick_e50f348c670146019b0b62f9557f9c4f",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
@@ -491,11 +484,76 @@
                 "leftValueType": "expression",
                 "leftValue": "STEP_create.opstatus === 0"
             }],
-            "parentId": "INVOKE_SERVICE_g6c997bf3d044fad9a0a3d3900fd7c3c",
+            "parentId": "INVOKE_ASYNC_SERVICE_ide_onClick_f72088244f4643abb77990d7f7c540ec",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "_a49afc55204f4fbfaa6bf593c8003f20",
+            "id": "SHOW_ALERT_ide_onClick_d7c8b58950334fccb80378e4b813e09f",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": "New step created.",
+            "yesLabel": "Ok",
+            "alertMessage": "New step successfully created!",
+            "messageType": "constant",
+            "parentId": "IF_CONDITION_ide_onClick_e50f348c670146019b0b62f9557f9c4f",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_da012665f1084d8c9f41e9674eb2224b",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.flxPopupNewStep.setVisibility(false);\nself.view.flxPopupNewStep.flxContainerNewPopup.flxNewPopup.txtStepTitle.text = \"\";\n\nlet steps_widgets = self.view.flxSteps.widgets();\n\nvoltmx.print(\"### FLEX STEPS NUMBER OF WIDGETS: \" + JSON.stringify(steps_widgets.length));\n\nif (steps_widgets.length <= 2){\n  self.view.flxBoxFirstStep.backgroundColor = \"FFFFFF00\";\n  self.view.flxBoxFirstStep.imgDeleteStep.setVisibility(false);\n  self.view.flxBoxFirstStep.imgEditStep.setVisibility(false);\n  self.view.flxBoxFirstStep.lblStepOrder.fontColor = \"00000000\";\n  self.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = \"00000000\";\n  left_position = parseInt(self.view.flxBoxFirstStep.left, 10) + parseInt(self.view.flxBoxFirstStep.width, 10) + 2;\n} else {\n  let lastStep = 'boxStep' + gblLastInsertedStep;\n  steps_widgets.forEach(widget => {\n    if (widget.id === lastStep) {\n      widget.flxBoxStep.backgroundColor = \"FFFFFF00\";\n      widget.imgDeleteStep.isVisible = false;\n      widget.imgEditStep.isVisible = false;\n      widget.lblStepOrder.fontColor = \"00000000\";\n      widget.lblStepTitle.fontColor = \"00000000\";\n      left_position = parseInt(widget.left, 10) + parseInt(widget.width, 10) + 2;\n    }\n  });\n}\n\n",
+            "parentId": "IF_CONDITION_ide_onClick_e50f348c670146019b0b62f9557f9c4f",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_FUNCTION__b316d0dc59d848efa8d909c17ab94017",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "addNewStep",
+            "display": "addNewStep",
+            "inputparams": [{
+                "name": "left_position",
+                "value": " left_position"
+            }],
+            "parentId": "IF_CONDITION_ide_onClick_e50f348c670146019b0b62f9557f9c4f",
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }, {
+            "id": "MOVE_ACTION_bd2a0a7cf4844638bb078d56f47ea333",
+            "type": "MOVE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxBoxPlus",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "ea6dceaeab5f4c67aa135a70e77f7f91",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "left": "83%",
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                }
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "500"
+            },
+            "start": "Immediately",
+            "animationId": "MOVE_ACTION_bd2a0a7cf4844638bb078d56f47ea333",
+            "displayAnimationId": "MOVE_ACTION_bd2a0a7cf4844638bb078d56f47ea333",
+            "forkedPlatform": "all",
+            "parentId": "IF_CONDITION_ide_onClick_e50f348c670146019b0b62f9557f9c4f",
+            "callbackType": null,
+            "disabled": true,
+            "widgetPath": "this.view.flxBoxPlus"
+        }, {
+            "id": "ELSE_CONDITION_ide_onClick_i321dae74bcb4034aa3a84fb360dc57b",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -504,18 +562,18 @@
                 "rightValueType": "widgetprop",
                 "rightValue": ""
             }],
-            "parentId": "INVOKE_SERVICE_g6c997bf3d044fad9a0a3d3900fd7c3c",
+            "parentId": "INVOKE_ASYNC_SERVICE_ide_onClick_f72088244f4643abb77990d7f7c540ec",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "SHOW_ALERT_f152b0633fa84ff685cb181cf0556ac2",
+            "id": "SHOW_ALERT_ide_onClick_bf94f7c23c89466d964d8d97e56a94da",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
             "alertTitle": "New step NOTcreated.",
             "yesLabel": "Ok",
             "alertMessage": "New step NOT created!",
             "messageType": "constant",
-            "parentId": "_a49afc55204f4fbfaa6bf593c8003f20",
+            "parentId": "ELSE_CONDITION_ide_onClick_i321dae74bcb4034aa3a84fb360dc57b",
             "callbackType": null,
             "alertTitlei18n": null,
             "yesLabeli18n": null,
@@ -523,107 +581,6 @@
             "alertMessagei18n": null,
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
-        }, {
-            "id": "SHOW_ALERT_a7f81e02285c4d4a92f94fa24e7cb499",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_INFO",
-            "alertTitle": "New step created.",
-            "yesLabel": "Ok",
-            "alertMessage": "New step successfully created!",
-            "messageType": "constant",
-            "parentId": "_ae8ca7c746de467e9010cc3102f190cf",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
-            "id": "NAVIGATE_TO_FORM__e9dc5080395c465ca7a6d544bfaf029c",
-            "type": "NAVIGATE_TO_FORM",
-            "formId": "frmStepComposition",
-            "formKUID": "j7b99cee3df84132ae59e348dbb47442",
-            "projectName": "luxotticaKi",
-            "mappings": {
-                "ME_Mapping_d3fc2181f2a347cd80cd8757aa9eb1a4": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_d3fc2181f2a347cd80cd8757aa9eb1a4",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Forms",
-                        "propertyName": "text",
-                        "propertyKey": "lblStepTitle_text",
-                        "widgetId": "lblStepTitle",
-                        "widgetPath": "this.view.lblStepTitle",
-                        "widgetType": "Label",
-                        "dataType": "string",
-                        "itemId": "frmStepCreation",
-                        "widgetKUID": "g1094a11c42a4745b0568c5a692cd73e",
-                        "itemKUID": "j27b7970c694429db6312f3b27f7428e",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "forkedPlatform": "all"
-                    }
-                },
-                "ME_Mapping_ia0b855fa91a4306ab959939a69f2506": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_ia0b855fa91a4306ab959939a69f2506",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Forms",
-                        "propertyName": "isVisible",
-                        "propertyKey": "lblStepTitle_isVisible",
-                        "widgetId": "lblStepTitle",
-                        "widgetPath": "this.view.lblStepTitle",
-                        "widgetType": "Label",
-                        "dataType": "boolean",
-                        "itemId": "frmStepCreation",
-                        "widgetKUID": "g1094a11c42a4745b0568c5a692cd73e",
-                        "itemKUID": "j27b7970c694429db6312f3b27f7428e",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "forkedPlatform": "all"
-                    }
-                },
-                "ME_Mapping_i0338f1f13594671889cc82b109ca7f4": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_i0338f1f13594671889cc82b109ca7f4",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Forms",
-                        "propertyName": "text",
-                        "propertyKey": "txtStepTitle_text",
-                        "widgetId": "txtStepTitle",
-                        "widgetPath": "this.view.txtStepTitle",
-                        "widgetType": "TextField",
-                        "dataType": "string",
-                        "itemId": "frmStepCreation",
-                        "widgetKUID": "e473d5f04273480fb0306f870505c004",
-                        "itemKUID": "j27b7970c694429db6312f3b27f7428e",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "forkedPlatform": "all"
-                    }
-                }
-            },
-            "mappingsOrder": ["ME_Mapping_d3fc2181f2a347cd80cd8757aa9eb1a4", "ME_Mapping_ia0b855fa91a4306ab959939a69f2506", "ME_Mapping_i0338f1f13594671889cc82b109ca7f4"],
-            "parentId": "SHOW_ALERT_a7f81e02285c4d4a92f94fa24e7cb499",
-            "callbackType": "True",
-            "enableMappingEditor": true,
-            "package": "",
-            "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lblStepTitle_text\": self.view.lblStepTitle.text,\n    \"lblStepTitle_isVisible\": self.view.lblStepTitle.isVisible,\n    \"txtStepTitle_text\": self.view.txtStepTitle.text,\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
-            "isCustomInput": false
         }]
     }
 }
