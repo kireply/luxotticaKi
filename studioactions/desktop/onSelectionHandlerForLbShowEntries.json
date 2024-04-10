@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_e0721febc8594f2b90a6446cd776ab17",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "var x = gblLabelsPage - 1;\n  var firstKeys = Object.keys(gblLabelsList[0]).slice( (5*x) , (5*gblLabelsPage) );\n\n  this.view.segLabels.widgetDataMap = {lb1: firstKeys[0],lb2: firstKeys[1],lb3: firstKeys[2],lb4: firstKeys[3], lb5: firstKeys[4]};\n\n  // checking for the selected number of labels to show\n  var showLabels = parseInt(this.view.lbShowEntries.selectedKeyValue[1], 10);  // 10 is for the decimal\n  var data = gblLabelsList.slice(0, ++showLabels); //++ because the first row is used for the header\n\n  this.view.segLabels.setData(data);",
+            "codeSnippet": "var x = gblLabelsPage - 1; // in order to make the formula work\n// taking only 5 keys at a time\nvar firstKeys = Object.keys(gblLabelsList[0]).slice( (5*x) , (5*gblLabelsPage) );\n\nthis.view.segLabels.widgetDataMap = {lb1: firstKeys[0],lb2: firstKeys[1],lb3: firstKeys[2],lb4: firstKeys[3], lb5: firstKeys[4]};\n\n// in case the user wants all the labels\nvar data = gblLabelsList;  \n// checking for the selected number of labels to show\nif (this.view.lbShowEntries.selectedKeyValue[1] !== \"all\") {\n  \n  var showLabels = parseInt(this.view.lbShowEntries.selectedKeyValue[1], 10);  // 10 is for the decimal\n  //when labels file is uploaded one row is used just to map the header\n  data = gblLabelsList.slice(0, (gblLabelsFileUploaded ? ++showLabels : showLabels) );\n\n}\n\nthis.view.segLabels.setData(data);",
             "parentId": null
         }]
     }

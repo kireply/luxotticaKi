@@ -148,6 +148,7 @@ define({
                   	
                     gblLabelsColumns = 0;
                     gblLabelsPage = 1;
+                    gblLabelsFileUploaded = true;
                     // saving the number of labels' columns (in order to know how many pages we have to show)
                     gblLabelsList.forEach(obj => {
                         const numColumns = Object.keys(obj).length;
