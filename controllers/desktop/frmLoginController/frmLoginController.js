@@ -617,7 +617,9 @@ define({
           voltmx.application.showLoadingScreen(null, "Searching user ...", constants.LOADING_SCREEN_POSITION_ONLY_CENTER, true, true, null);
           voltmx.print ("### Service response: "+JSON.stringify(response));
      	  var userFound = response.USER.some(user => user.email === email && user.password === password);
+     	  voltmx.print("### USER email: " + email);
      	  if (userFound){
+            gblUserMail = email;
             voltmx.application.dismissLoadingScreen();
             voltmx.print("### User found, welcome");
             voltmx.ui.Alert({

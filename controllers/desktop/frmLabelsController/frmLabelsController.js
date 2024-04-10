@@ -129,8 +129,8 @@ define({
                 let workbook = XLSX.read(data, {
                     type: "binary"
                 });
-                voltmx.print("### DATA: " + data);
-                voltmx.print("### WORKBOOK: " + JSON.stringify(workbook));
+                //voltmx.print("### DATA: " + data);
+                //voltmx.print("### WORKBOOK: " + JSON.stringify(workbook));
                 voltmx.print(workbook);
                 workbook.SheetNames.forEach(sheet => {
                     let rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]);

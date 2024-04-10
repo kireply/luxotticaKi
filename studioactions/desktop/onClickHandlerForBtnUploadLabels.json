@@ -25,6 +25,25 @@
             "callbackType": null,
             "disabled": false,
             "source": "controller"
+        }, {
+            "id": "LOOP_ACTION_bf6813d9357246a499739b2a14129ddb",
+            "type": "LOOP_ACTION",
+            "parentId": null,
+            "callbackType": null,
+            "varType": "set",
+            "variable": "a",
+            "startType": "set",
+            "startValue": 0,
+            "endType": "set",
+            "endValue": 3,
+            "stepBy": 1,
+            "direction": "inc"
+        }, {
+            "id": "ADD_SNIPPET_c63332fa41394c74946e7debe42c0b86",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### a: \" + a);",
+            "parentId": "LOOP_ACTION_bf6813d9357246a499739b2a14129ddb",
+            "callbackType": null
         }]
     }
 }
