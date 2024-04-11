@@ -26,7 +26,18 @@
             "type": "ADD_SNIPPET",
             "codeSnippet": "this.publish();",
             "parentId": null,
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
+        }, {
+            "id": "INVOKE_FUNCTION__fe831bd128dc4a7499780b611b1ce8c9",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "publish",
+            "display": "publish",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "module"
         }]
     }
 }

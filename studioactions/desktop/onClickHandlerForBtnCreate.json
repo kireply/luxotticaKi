@@ -540,6 +540,12 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
+            "id": "ADD_SNIPPET_f3a9633a979d4aa4bee2fa3c55ed93aa",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"STEP_flow_CustomQuery\", {}, {flow_id : gblFlowId}, (response) => {\n      voltmx.print(\"### Service response: \"+JSON.stringify(response));\n      response.records.forEach(record => {\n        gblIdOrderSteps[record.id] = record.order;\n      });\n    }, (error) => {\n      voltmx.print(\"### Error in the invocation of the service: \" + JSON.stringify(error));\n    });",
+            "parentId": "SHOW_ALERT_a7f81e02285c4d4a92f94fa24e7cb499",
+            "callbackType": "True"
+        }, {
             "id": "NAVIGATE_TO_FORM__e9dc5080395c465ca7a6d544bfaf029c",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmStepComposition",
@@ -622,7 +628,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lblStepTitle_text\": self.view.lblStepTitle.text,\n    \"lblStepTitle_isVisible\": self.view.lblStepTitle.isVisible,\n    \"txtStepTitle_text\": self.view.txtStepTitle.text,\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"lblStepTitle_text\": self.view.lblStepTitle.text,\n    \"lblStepTitle_isVisible\": self.view.lblStepTitle.isVisible,\n    \"txtStepTitle_text\": self.view.txtStepTitle.text,\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
             "isCustomInput": false
         }]
     }

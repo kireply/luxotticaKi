@@ -62,7 +62,9 @@
             "type": "INVOKE_FUNCTION",
             "sequenceKUID": "addNewStep",
             "display": "addNewStep",
-            "inputparams": [],
+            "inputparams": [{
+                "name": "left_position"
+            }],
             "parentId": "MOVE_ACTION_d0f641a580a147e98110b8906335cab4",
             "callbackType": "Callback",
             "disabled": null,

@@ -411,7 +411,7 @@
                         "type": "Services",
                         "propertyName": "order",
                         "dataType": "number",
-                        "expression": " gblCurrentStepOrder",
+                        "expression": "gblCurrentStepOrder + 1",
                         "forkedPlatform": "all",
                         "serviceconfig": {
                             "servicename": "mariaDB",

@@ -39,8 +39,8 @@
         "value": "50%"
     },
     "children": [
-        "flxBoxFirstStep",
-        "flxBoxPlus"
+        "flxBoxPlus",
+        "flxBoxFirstStep"
     ],
     "clipbounds": true,
     "containerweight": 100,
