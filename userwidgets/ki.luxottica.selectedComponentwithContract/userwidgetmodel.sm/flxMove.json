@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "60dp"
+        "value": "30%"
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "1%"
     },
     "_margin_": [
         0,
@@ -22,47 +22,44 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s254531aaef54a5b8bd9d59ed2138616",
+    "_skin_": "sf25ff8c4f15480fae55164db4149b7a",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "20%"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "2%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
-        "lblPropertyName",
-        "lblPropertyValue"
+        "imgArrowUp",
+        "imgArrowDown"
     ],
     "clipbounds": false,
-    "containerId": true,
     "containerweight": 100,
-    "controllerInfo": {
-        "default": {
-            "channel": "desktop",
-            "name": "flxPropertySelectedComponentController"
-        }
-    },
     "enablescrolling": true,
-    "id": "flxPropertySelectedComponent",
+    "id": "flxMove",
     "info": null,
-    "isTemplate": true,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ee8794b34cc9447bafd7dd95fca11e56",
-    "layouttype": 3,
+    "kuid": "b8c1e026708947eb8679aeefa873c07f",
+    "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "tplPropertySelectedComponent",
-    "pf": "tplPropertySelectedComponent",
+    "parent": "selectedComponentwithContract",
+    "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 1
 }

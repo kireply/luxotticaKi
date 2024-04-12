@@ -21,7 +21,7 @@
         "type": "string",
         "value": "10%"
     },
-    "_skin_": "s99ac6c651b84fbea02a10a4e0efda26",
+    "_skin_": "s82947f7288d4c0cb3624c9f4e56c541",
     "_text_": "Save",
     "_width_": {
         "type": "ref",
@@ -41,7 +41,7 @@
     },
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblSave",
+    "id": "lblPublish",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,9 +55,9 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "a7c3524e912049f58c857b6dde793525",
+    "kuid": "b995e392f57a4a7d83b3573632c8f1d3",
     "name": "kony.ui.Label",
-    "parent": "flxSave",
+    "parent": "flxPublish",
     "pf": "frmStepComposition",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

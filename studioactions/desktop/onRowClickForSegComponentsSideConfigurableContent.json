@@ -2,6 +2,7 @@
     "AS_Segment_b70fec27712e495b8922b5fd0c2feb30": {
         "id": "AS_Segment_b70fec27712e495b8922b5fd0c2feb30",
         "type": "ACTION_SEQUENCE",
+        "name": "onRowClickForSegComponentsSideConfigurableContent",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"

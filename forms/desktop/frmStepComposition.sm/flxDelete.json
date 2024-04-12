@@ -4,10 +4,6 @@
         "type": "string",
         "value": "40%"
     },
-    "_left_": {
-        "type": "string",
-        "value": "93%"
-    },
     "_margin_": [
         0,
         0,
@@ -22,6 +18,10 @@
         0
     ],
     "_percent_": true,
+    "_right_": {
+        "type": "string",
+        "value": "4%"
+    },
     "_skin_": "s38defa7e18d47d1a5e0b2df1ef0f0e3",
     "_top_": {
         "type": "string",
@@ -39,10 +39,17 @@
         "value": "50%"
     },
     "children": [
-        "imgDelete"
+        "imgDelete",
+        "lblDelete",
+        "btnDelete"
     ],
     "clipbounds": false,
     "containerweight": 100,
+    "desktopweb": {
+        "psp": {
+            "ide_onHover": "AS_FlexContainer_da5d2d9d10ce419e9d38097980e97857"
+        }
+    },
     "enablescrolling": true,
     "id": "flxDelete",
     "info": null,

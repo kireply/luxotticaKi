@@ -252,6 +252,7 @@
     "groupcells": false,
     "hasSections": false,
     "id": "segmentLeft",
+    "ide_onTouchEnd": "AS_Segment_b269d19b30e0476193d4f8cb2c0b3f39",
     "info": null,
     "ipad": {
         "psp": {

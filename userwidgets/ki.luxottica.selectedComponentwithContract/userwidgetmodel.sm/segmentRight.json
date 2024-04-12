@@ -163,6 +163,7 @@
     "groupcells": false,
     "hasSections": false,
     "id": "segmentRight",
+    "ide_onTouchEnd": "AS_Segment_ef7ba5fc880d43b2a77f9481ea21f90f",
     "info": null,
     "ipad": {
         "psp": {
@@ -192,7 +193,7 @@
     "retainselection": false,
     "rowcounter": 9,
     "rowfocusskin": "s6e7f07455ec411fbcf9e06217636f94",
-    "rowskin": "sc4f7e6361364d3f810bc500daa8a11e",
+    "rowskin": "s62136c42b3a47cc8231100dbc9fe4b2",
     "rowtemplate": null,
     "screenlevelwidget": false,
     "seccounter": 0,

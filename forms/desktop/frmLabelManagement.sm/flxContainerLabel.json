@@ -51,6 +51,7 @@
         "btn2",
         "txtAreaJSON",
         "btnPrevious",
+        "lblSpace",
         "btnNext",
         "txtWorksheetName",
         "txtFileName"

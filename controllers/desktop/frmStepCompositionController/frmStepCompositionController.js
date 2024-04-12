@@ -29,7 +29,7 @@ define({
     //       voltmx.print("### BUILDED FLEX");
     //const tile = new com.hcl.demo.uifactory.Tile({
     const selectedComp = new ki.luxottica.selectedComponentwithContract({
-      id: `channel${new Date().getTime()}`,
+      id: `channel${new Date().getTime()}`,  //per renderlo univoco
       width: '100%',
       height: '100%',
       centerX: '50%',

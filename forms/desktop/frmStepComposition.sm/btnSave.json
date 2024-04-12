@@ -1,13 +1,13 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizButton",
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "1%"
-    },
     "_height_": {
         "type": "string",
-        "value": "3.30%"
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
     },
     "_margin_": [
         6,
@@ -21,32 +21,31 @@
         0,
         0
     ],
-    "_right_": {
+    "_skin_": "s4948920ebb9427aaaa2d68b5a542805",
+    "_text_": "",
+    "_top_": {
         "type": "string",
-        "value": "9%"
+        "value": "0dp"
     },
-    "_skin_": "sc78d72c900f4a2383d40ee297af824b",
-    "_text_": "Previous",
     "_width_": {
         "type": "string",
-        "value": "8%"
+        "value": "100%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 5,
     "disabledSkins": {
-        "focusSkin": "s51dd73ed1fe441782da22b28897e93d"
+        "focusSkin": "s6de8ee3e9e1463996d5dbb22b25b33b"
     },
     "displaytext": true,
-    "id": "btnPrevious",
-    "ide_onClick": "AS_Button_b6103a8f0ee9422eaff8d85fe47a1ec0",
+    "id": "btnSave",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "g97cc7ce23a64622a47b6aa212b90974",
+    "kuid": "bb83b41afc9a4679b6a794c99811c925",
     "name": "kony.ui.Button",
-    "parent": "flxContainerLabel",
-    "pf": "frmLabelManagement",
+    "parent": "flxSave",
+    "pf": "frmStepComposition",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "wType": "Button"

@@ -113,7 +113,7 @@ define({
 
 define({
   
-  // IMPORT
+  // IMPORT function
   getExcel: function () {
         var config = {
             selectMultipleFiles: false,
@@ -202,10 +202,10 @@ define({
   }, 
   
   
-  // EXPORT
+  // EXPORT function
   exportData(){
     //let numRows, numColumns;
-    var tableData = [];
+    //var tableData = [];
     //let k = 1;
     //let colHeaders = ['Col1', 'Col2', 'Col3', 'Col4', 'Col5', 'Col6', 'Col7', 'Col8', 'Col9', 'Col10'];
     //
@@ -240,19 +240,9 @@ define({
       tableData.push(rowData);
     }  */
     
-    var arrayOggetti = [
-        {a_b_test:"primo",environment:"Quality",layout_id: "1"},
-        {a_b_test:"secondo",environment:"Production",layout_id:"2"},
-        {a_b_test:"terzo",environment:"Development",layout_id:"3"},
-        {a_b_test:"quarto",environment:"Environment",layout_id:"4"}
-    ];
+    //voltmx.print("### gblLabelsList: " + JSON.stringify(gblLabelsList, ' ', 4));
     
-    //tableData.push(arrayOggetti);
-    voltmx.print("### arrayOggetti: " + JSON.stringify(arrayOggetti, ' ', 4));
-    voltmx.print("### gblLabelsList: " + JSON.stringify(gblLabelsList, ' ', 4));
-    //
     //	Creating the Workbook and filling it
-    //
     var worksheet = XLSX.utils.json_to_sheet(gblLabelsList);
     var workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, this.view.txtWorksheetName.text);
@@ -260,9 +250,7 @@ define({
     voltmx.print("### worksheet: " + JSON.stringify(worksheet) );
     voltmx.print("### workbook: " + JSON.stringify(workbook) );
     
-    //
     //	Creating the file
-    //
     XLSX.writeFile(workbook, this.view.txtFileName.text, { compression: true });
   } 
   

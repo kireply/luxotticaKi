@@ -21,8 +21,8 @@
         "type": "string",
         "value": "10%"
     },
-    "_skin_": "s99ac6c651b84fbea02a10a4e0efda26",
-    "_text_": "Save",
+    "_skin_": "s3c0c61a39ca4f4e834a457df48f4c9e",
+    "_text_": "Delete",
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -41,7 +41,7 @@
     },
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblSave",
+    "id": "lblDelete",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,9 +55,9 @@
     },
     "iscustomlayout": false,
     "isvisible": false,
-    "kuid": "a7c3524e912049f58c857b6dde793525",
+    "kuid": "b71b7f31350a47369602d5f5a492080e",
     "name": "kony.ui.Label",
-    "parent": "flxSave",
+    "parent": "flxDelete",
     "pf": "frmStepComposition",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
