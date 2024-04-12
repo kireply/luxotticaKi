@@ -1,19 +1,19 @@
 define({ 
 
   //Type your controller code here
-  component_instance_id : null,
+  //   component_instance_id : null,
   integrationService : voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB"),
+  modes: {},
 
-  selectComponent: function(rightData, leftData, modes, instance){
+  selectComponent: function(rightData, leftData, instance){
     voltmx.print("### RIGHT DATA: " + JSON.stringify(rightData));
     voltmx.print("### LEFT DATA: " + JSON.stringify(leftData));
-    voltmx.print("### MODES: " + JSON.stringify(modes));
-//     voltmx.print("### GLOBAL ORDER LEFT: " + gblLeftOrder);
-//     voltmx.print("### GLOBAL ORDER RIGHT: " + gblRightOrder);
+    voltmx.print("### MODES: " + JSON.stringify(this.modes));
+
     const flex = new voltmx.ui.FlexContainer({
       id: `flex${new Date().getTime()}`,
       width: '96%',
-      height: '27%',
+      height: '40%',
       top: '2%',
       bottom: '2%',
       left: '2%',
@@ -25,15 +25,13 @@ define({
           "1366": 12
         }
       },
-    }, {}, {});
+    }, {}, {}); 
     //       voltmx.print("### BUILDED FLEX");
     //const tile = new com.hcl.demo.uifactory.Tile({
     const selectedComp = new ki.luxottica.selectedComponentwithContract({
-      id: `channel${new Date().getTime()}`,
+      id: `component${new Date().getTime()}`,
       width: '100%',
-      height: '100%',
-      centerX: '50%',
-      centerY: '50%',
+      height: '100%'
     }, {}, {});
 
     selectedComp.onRowClickTeaser = () => {
@@ -46,7 +44,9 @@ define({
       props = selectedComp.rightData;
       props.forEach(item => {
         let propComp = null;
-        const found = modes.find(element => element.name === item.lblPropertyName); //found = {name: mode}
+        let searchKey = selectedComp.leftData[0].lblComponentName + instance + (gblCurrentStepOrder).toString();
+        const found = this.modes[searchKey].find(element => element.name === item.lblPropertyName); //found = {name: mode}
+        debugger;
         if (found.mode === "dropdown"){
           propComp = new ki.luxottica.editPropertyValuewithDropdown({
             id: `prop${new Date().getTime()}`,
@@ -97,16 +97,85 @@ define({
         propComp.propertyName = item.lblPropertyName;
         this.view.settingsSide.flxScrollSettingsContent.add(propComp);
       });
+      
+      selectedComp.arrowsVisible = true;
+      selectedComp.cloneDeleteVisible = true;
+    };
+    
+    selectedComp.onClickUp = () => {
+      let scroll_widgets = null;
+      let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
+      let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
+      // initially I have to understand in which flex I am
+      // if I am in the left side
+      if (left_width > 48) {
+        scroll_widgets = this.view.flxScrollLeft.widgets();
+      }
+      // if I am in the right side
+      if (right_width > 48){
+        if (gblCurrentStepOrder === 1){
+          scroll_widgets = this.view.flxScrollRight.widgets();
+        } else {
+          let right_widgets = this.view.flxRightSide.widgets();
+          // find the current flex
+          let targetWidget = right_widgets.find(widget => widget.id === "flxScrollRight" + gblCurrentStepOrder);
+          if (targetWidget){
+            scroll_widgets = targetWidget.widgets();
+          }
+        }
+      }
+      
+      // find the current widget index
+      let currentWidgetIndex = scroll_widgets.findIndex(widget => widget.hasOwnProperty(selectedComp.id));
+      let currentWidgetProperty = null;
+      let previousWidgetProperty = null;
+      if (currentWidgetIndex !== -1) {
+        // obtain the currrent widget from the previously find index
+        let currentWidget = scroll_widgets[currentWidgetIndex];
+        // obtain the associated property
+        currentWidgetProperty = currentWidget[selectedComp.id];
 
-
+        // obtain the previous widget
+        let previousWidget = currentWidgetIndex > 0 ? scroll_widgets[currentWidgetIndex - 1] : null;
+        let previousWidgetKey = Object.keys(previousWidget).find(key => key.startsWith("component"));
+        if (previousWidgetKey) {
+            previousWidgetProperty = previousWidget[previousWidgetKey];
+        }
+//         console.log("Found Widget:", currentWidget);
+//         console.log("Previous Widget:", previousWidget);
+      } else {
+        console.log("Widget non trovato.");
+      }
+      
+      let currentLeftData = currentWidgetProperty.leftData;
+      let currentRightData = currentWidgetProperty.rightData;
+      let currentOrder = currentWidgetProperty.componentOrder;
+      
+      let previousLeftData = previousWidgetProperty.leftData;
+      let previousRightData = previousWidgetProperty.rightData;
+      let previousOrder = previousWidgetProperty.componentOrder;
+      
+      previousWidgetProperty.leftData = currentLeftData;
+      previousWidgetProperty.rightData = currentRightData;
+      previousWidgetProperty.componentOrder = currentOrder;
+      
+      currentWidgetProperty.leftData = previousLeftData;
+      currentWidgetProperty.rightData = previousRightData;
+      currentWidgetProperty.componentOrder = previousOrder;
+      
+      selectedComp.arrowsVisible = false;
+      selectedComp.cloneDeleteVisible = false;
+      
+      this.view.settingsSide.flxScrollSettingsContent.removeAll();
+      this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
+      this.view.settingsSide.txt.setVisibility(true);
+      
     };
 
-    //self.view.selectedComponent.flxSelectedComponentRight.segmentRight.setData(rightSegmentData);
-    // self.view.selectedComponent.flxSelectedComponentLeft.segmentLeft.setData(leftSegmentData);
     selectedComp.flxSelectedComponentLeft.segmentLeft.setData(leftData);
     selectedComp.flxSelectedComponentRight.segmentRight.setData(rightData);
     //       selectedComp.componentOrder = gblOrder.toString();
-    selectedComp.componentId = this.component_instance_id;
+//     selectedComp.componentId = this.component_instance_id;
 
 
     flex.add(selectedComp);      
@@ -116,13 +185,7 @@ define({
 
     if ( left_width > 48){
       //vuol dire che il pannello di sinistra è aperto
-      //   self.view.flxSelectedComponent.setVisibility(true);
       voltmx.print("### IF LEFT WIDTH");
-      //         gblSelectedComponentLeft = true;
-//       let count = this.view.flxScrollLeft.widgets().filter(widget =>
-//                                                Object.keys(widget).some(key => key.startsWith("channel"))
-//                                               ).length;
-//       selectedComp.componentOrder = (count + 1).toString();
       selectedComp.componentOrder = instance;
       voltmx.print("### COMPONENT ORDER: " + selectedComp.componentOrder);
       this.view.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(false);
@@ -134,25 +197,16 @@ define({
     }
     if ( right_width > 48){
       //vuol dire che il pannello di destra è aperto
-      //   self.view.flxSelectedComponentRight.setVisibility(true);
       voltmx.print("### IF RIGHT WIDTH");
-      //         gblSelectedComponentRight = true;
       voltmx.print("### COMPONENT ORDER: " + selectedComp.componentOrder);
       
       this.view.flxContainerStepCreation.flxLeftRight.flxRightSide.imgNoComponentsRight.setVisibility(false);
       this.view.flxContainerStepCreation.flxLeftRight.flxRightSide.lblNoComponentsRight.setVisibility(false);
       this.view.flxContainerStepCreation.flxLeftRight.flxRightSide.txtStartPhraseRight.setVisibility(false);
-//       debugger;
       if (gblCurrentStepOrder > 1){
         let right_widgets = this.view.flxRightSide.widgets();
         let targetWidget = right_widgets.find(widget => widget.id === "flxScrollRight" + gblCurrentStepOrder);
         if (targetWidget){
-//           let components_inside = targetWidget.widgets();
-//           let count = components_inside.filter(widget =>
-//                                                Object.keys(widget).some(key => key.startsWith("channel"))
-//                                               ).length;
-// //           debugger;
-//           selectedComp.componentOrder = (count + 1).toString();
           targetWidget.add(flex);
           targetWidget.forceLayout();
         }
@@ -160,10 +214,6 @@ define({
         this.view.flxScrollRight.setVisibility(true);
         this.view.flxScrollRight.add(flex);
         this.view.flxScrollRight.forceLayout();
-//         let count = this.view.flxScrollRight.widgets().filter(widget =>
-//                                                Object.keys(widget).some(key => key.startsWith("channel"))
-//                                               ).length;
-//         selectedComp.componentOrder = (count + 1).toString();
       }
       selectedComp.componentOrder = instance;
       
@@ -180,7 +230,6 @@ define({
   	}  else {
       value = propComp.propertyValue;
     }
-    //     voltmx.print("### VALUE: " + value);
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
     let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
     let lastComp = null;
@@ -189,7 +238,7 @@ define({
       if (identify === null){
         // chiamata da editProperty
         lastComp = components.length > 0 ? components[components.length - 1] : null;
-        let channelKey = Object.keys(lastComp).find(key => key.startsWith("channel"));
+        let channelKey = Object.keys(lastComp).find(key => key.startsWith("component"));
         if (lastComp[channelKey]["leftData"][0].lblComponentName === gblLastInsertedComponent){
           let newData = lastComp[channelKey]["rightData"];
           newData.forEach(item => {
@@ -210,7 +259,7 @@ define({
       } else {
         // chiamata da selectedComponent
         components.forEach((comp) => {
-          let channelKey = Object.keys(comp).find(key => key.startsWith("channel"));
+          let channelKey = Object.keys(comp).find(key => key.startsWith("component"));
           if (channelKey === identify){
             let newData = comp[channelKey]["rightData"];
             newData.forEach(item => {
@@ -236,7 +285,7 @@ define({
       if (identify === null) {
         // chiamata da editProperty
         lastComp = components.length > 0 ? components[components.length - 1] : null;
-        let channelKey = Object.keys(lastComp).find(key => key.startsWith("channel"));
+        let channelKey = Object.keys(lastComp).find(key => key.startsWith("component"));
         if (lastComp[channelKey]["leftData"][0].lblComponentName === gblLastInsertedComponent){
           let newData = lastComp[channelKey]["rightData"];
           newData.forEach(item => {
@@ -258,7 +307,7 @@ define({
       } else {
         // chiamata da selectedComponent
         components.forEach((comp) => {
-          let channelKey = Object.keys(comp).find(key => key.startsWith("channel"));
+          let channelKey = Object.keys(comp).find(key => key.startsWith("component"));
           if (channelKey === identify){
             let newData = comp[channelKey]["rightData"];
             newData.forEach(item => {
@@ -296,7 +345,7 @@ define({
 
 
     let index = 0;
-    let modes = [];
+    //     let modes = [];
     this.view.settingsSide.flxScrollSettingsContent.removeAll();
     this.view.settingsSide.flxScrollSettingsContent.setVisibility(true);
     let instance = null;
@@ -304,7 +353,7 @@ define({
     let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
     if (left_width > 48){
       let count = this.view.flxScrollLeft.widgets().filter(widget =>
-                                               Object.keys(widget).some(key => key.startsWith("channel"))
+                                               Object.keys(widget).some(key => key.startsWith("component"))
                                               ).length;
           instance = (count + 1).toString();
     }
@@ -316,19 +365,20 @@ define({
         if (targetWidget){
           let components_inside = targetWidget.widgets();
           let count = components_inside.filter(widget =>
-                                               Object.keys(widget).some(key => key.startsWith("channel"))
+                                               Object.keys(widget).some(key => key.startsWith("component"))
                                               ).length;
           instance = (count + 1).toString();
         }
       } else {
         let count = this.view.flxScrollRight.widgets().filter(widget =>
-                                                              Object.keys(widget).some(key => key.startsWith("channel"))
+                                                              Object.keys(widget).some(key => key.startsWith("component"))
                                                              ).length; 
         instance = (count + 1).toString();
       }
     }
     
-    
+    let compKey = selected_item + instance + (gblCurrentStepOrder).toString();
+    this.modes[compKey] = [];
 	
     const position_masterData = {
       position: "position_values",
@@ -343,11 +393,9 @@ define({
 
       console.log(list[i]);
 
-//       if (list[i].required === 'true'){
       let propertyName = list[i].name;
       let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + ": ";
       let properties = {lblPropertyName: capitalizedName, lblPropertyValue: ""}; 
-//       rightSegmentData.push(properties);
       gblLastInsertedComponent = selected_item;
       console.log(rightSegmentData);
       let propComp = null;
@@ -363,11 +411,9 @@ define({
         voltmx.print("### MASTER DATA STRING: " + JSON.stringify(masterDataString));
         let valuesArray = masterDataString.split(", ");
         let masterDataList = [];
-//         propComp.listBoxPropertyValue.placeholder="Please select a value";
         valuesArray.forEach((value, index) => {
           let id = `lb${index + 1}`;
           masterDataList.push([id, value.trim()]);
-//           voltmx.print("### FINAL LIST: " + JSON.stringify(masterDataList));
         });
         propComp.listBoxMasterData = masterDataList;
         let key = null;
@@ -381,8 +427,7 @@ define({
           properties.lblPropertyValue = raw[1];
         }
         propComp.listBoxPropertyValue.selectedKey = key;
-//         properties.lblPropertyValue = list[i].default;
-        modes.push({"name": capitalizedName, "mode": "dropdown", "masterData": masterDataList, "default": key});
+        this.modes[compKey].push({"name": capitalizedName, "mode": "dropdown", "masterData": masterDataList, "default": key});
         propComp.onSelection = () => {
           this.onEndEditingCallback(propComp, null, true, false);
         };
@@ -390,10 +435,8 @@ define({
           gblPropertyTemplatesIds[list[i].component_name] = [];
         }
         let elem = {};
-        //       elem[list[i].id] = list[i].name;
         elem[list[i].id] = { "name": list[i].name, "mode": "dropdown" };
         gblPropertyTemplatesIds[list[i].component_name].push(elem);
-//         voltmx.print("### PLACEHOLDER: " + JSON.stringify(propComp.listBoxPlaceholder));
       } else if (list[i].mode === "label") {
         propComp = new ki.luxottica.editPropertyValuewithTextField({
           id: `prop${new Date().getTime()}`,
@@ -401,25 +444,16 @@ define({
           centerX: '50%'
         }, {}, {});
         gblFlowId = 128; //to comment in the global flow of the application
-//         let label_key = ``;
-//         if (left_width > 48){
         let label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`;
-//         }
-//         if (right_width > 48){
-          
-//           label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`;
-//         } 
-        
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
         propComp.propertyValue = label_key;
         propComp.txtPropertyValueTextField.setEnabled(false);
         properties["lblPropertyValue"] = label_key;
-		modes.push({"name": capitalizedName, "mode": "label"});
+		this.modes[compKey].push({"name": capitalizedName, "mode": "label"});
         if (!gblPropertyTemplatesIds[list[i].component_name]) {
           gblPropertyTemplatesIds[list[i].component_name] = [];
         }
         let elem = {};
-        //       elem[list[i].id] = list[i].name;
         elem[list[i].id] = { "name": list[i].name, "mode": "label" , "default": list[i].default};
         gblPropertyTemplatesIds[list[i].component_name].push(elem);
       } else if (list[i].mode === "switch"){
@@ -431,12 +465,11 @@ define({
         propComp.onSlide = () => {
           this.onEndEditingCallback(propComp, null, false, true);
         };
-        modes.push({"name": capitalizedName, "mode": "switch"});
+        this.modes[compKey].push({"name": capitalizedName, "mode": "switch"});
         if (!gblPropertyTemplatesIds[list[i].component_name]) {
           gblPropertyTemplatesIds[list[i].component_name] = [];
         }
         let elem = {};
-        //       elem[list[i].id] = list[i].name;
         elem[list[i].id] = { "name": list[i].name, "mode": "switch" };
         gblPropertyTemplatesIds[list[i].component_name].push(elem);
         if (propComp.propertyValue === 0){
@@ -453,7 +486,7 @@ define({
         propComp.onEndEditing = () => {
           this.onEndEditingCallback(propComp, null, false, false);
         };
-        modes.push({"name": capitalizedName, "mode": "textfield"});
+        this.modes[compKey].push({"name": capitalizedName, "mode": "textfield"});
         if (!gblPropertyTemplatesIds[list[i].component_name]) {
           gblPropertyTemplatesIds[list[i].component_name] = [];
         }
@@ -465,7 +498,6 @@ define({
       propComp.propertyName = capitalizedName;
       propComp.propertyTemplateId = list[i].id;
       this.view.settingsSide.flxScrollSettingsContent.add(propComp);
-//       }
       index +=1;
       rightSegmentData.push(properties);
     }
@@ -477,7 +509,7 @@ define({
     let selected_component_data = {lblComponentName: selected_item, imgComponent: selected_item_img};
     leftSegmentData.push(selected_component_data);
 
-    this.selectComponent(rightSegmentData, leftSegmentData, modes, instance);
+    this.selectComponent(rightSegmentData, leftSegmentData, instance);
 
   },
 
@@ -492,12 +524,8 @@ define({
   saveStepComposition: function(){
     voltmx.print("### GBL PROPERTY TEMPLATES IDS: " + JSON.stringify(gblPropertyTemplatesIds));
     let left_widgets = this.view.flxScrollLeft.widgets();
-//     let right_widgets = this.view.flxScrollRight.widgets();
     let steps = this.view.flxRightSide.widgets();
-//     var numberPart = this.view.lblStepOrder.text.match(/\d+/);
     gblFlowId = 128; //to comment in the global flow of the application
-
-
     if (left_widgets.length > 0){
       voltmx.print("### SONO A SINISTRA");
       left_widgets.forEach(function(widget) {
@@ -512,7 +540,7 @@ define({
           value: null,
           label_id: null
         };
-        let channelKey = Object.keys(widget).find(key => key.startsWith("channel"));
+        let channelKey = Object.keys(widget).find(key => key.startsWith("component"));
         component_instance_left["template_name"] = widget[channelKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
         let numberPart = this.view.lblStepOrder.text.match(/\d+/);
         let number = parseInt(numberPart[0], 10);
@@ -542,7 +570,6 @@ define({
                 flow_id: gblFlowId, 
                 en_GB: elementoTrovato_left[prop_id_left[0]].default
               };
-//               debugger;
               voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, label, 
                                                                                                (response) => {
                 voltmx.print("### Service response: " + JSON.stringify(response));
@@ -556,7 +583,6 @@ define({
                 },
                                                                                                  (error) => {
                   voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-                  //             voltmx.application.dismissLoadingScreen();
                   voltmx.ui.Alert({
                     "alertType": constants.ALERT_TYPE_INFO,
                     "alertTitle": "Fail",
@@ -638,7 +664,7 @@ define({
             value: null,
             label_id: null
           };
-          let channelKey = Object.keys(widget).find(key => key.startsWith("channel"));
+          let channelKey = Object.keys(widget).find(key => key.startsWith("component"));
           component_instance_right["template_name"] = widget[channelKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
           
           component_instance_right["step_id"] = number;  
@@ -666,7 +692,6 @@ define({
                   flow_id: gblFlowId, 
                   en_GB: elementoTrovato_right[prop_id_right[0]].default
                 };
-                // 			  debugger;
                 voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, label_right, 
                                                                                                  (response) => {
                   voltmx.print("### Service response: " + JSON.stringify(response));
@@ -680,7 +705,6 @@ define({
                   },
                                                                                                    (error) => {
                     voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-                    //             voltmx.application.dismissLoadingScreen();
                     voltmx.ui.Alert({
                       "alertType": constants.ALERT_TYPE_INFO,
                       "alertTitle": "Fail",
@@ -707,7 +731,6 @@ define({
                 },
                                                                                                  (error) => {
                   voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-                  //             voltmx.application.dismissLoadingScreen();
                   voltmx.ui.Alert({
                     "alertType": constants.ALERT_TYPE_INFO,
                     "alertTitle": "Fail",
@@ -760,7 +783,6 @@ define({
     box.stepTitle = gblCurrentStepTitle;
     
     box.onClickTeaser = () => {
-//       debugger;
       let steps_widgets = this.view.flxSteps.widgets();
       let flxScrolls = this.view.flxRightSide.widgets();
       let current_id = box.id;
@@ -781,7 +803,6 @@ define({
             widget.lblStepOrder.fontColor = "00000000";
             widget.lblStepTitle.fontColor = "00000000";
             let scroll = flxScrolls.find(s => s.id === expectedScroll);
-//             debugger;
             if (scroll) {
               scroll.isVisible = false;
             }
@@ -804,7 +825,6 @@ define({
           widget.lblStepOrder.fontColor = "FFFFFF00";
           widget.lblStepTitle.fontColor = "FFFFFF00";
           let scroll = flxScrolls.find(s => s.id === current_scroll);
-//           debugger;
             if (scroll) {
               scroll.isVisible = true;
             }
@@ -838,7 +858,6 @@ define({
     flex.layoutType = voltmx.flex.FLOW_VERTICAL;
     flex.enableScrolling = true;
     flex.scrollDirection = voltmx.flex.SCROLL_VERTICAL;
-//     debugger;
     this.view.flxRightSide.add(flex);
     this.view.settingsSide.flxScrollSettingsContent.removeAll();
     this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);

@@ -39,7 +39,9 @@
         "value": "50%"
     },
     "children": [
-        "flxSelectedComponentwithContract"
+        "flxSelectedComponentwithContract",
+        "flxMove",
+        "flxCommands"
     ],
     "clipbounds": false,
     "containerweight": 100,

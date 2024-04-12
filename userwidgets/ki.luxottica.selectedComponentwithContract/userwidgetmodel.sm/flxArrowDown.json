@@ -1,12 +1,16 @@
 {
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0"
+    },
     "_height_": {
         "type": "string",
-        "value": "85%"
+        "value": "50%"
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -22,10 +26,10 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s730ad04f43b4d50a64b8280e9333da0",
+    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_width_": {
         "type": "string",
-        "value": "95%"
+        "value": "100%"
     },
     "allboxes": [],
     "autogrowmode": 0,
@@ -34,27 +38,20 @@
         "type": "string",
         "value": "50%"
     },
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "children": [
-        "flxSelectedComponentLeft",
-        "flxSelectedComponentRight",
-        "lblComponentOrder",
-        "lblComponentId"
+        "imgArrowDown"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxSelectedComponentwithContract",
+    "id": "flxArrowDown",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d9cb54b23b2a49e49138db9fd496da5c",
+    "kuid": "g3e1ab7f71ee4f48a5a6e59c953a5290",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "selectedComponentwithContract",
+    "parent": "flxMove",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

@@ -11,7 +11,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "acc09190429e41469bdb905345431ec5",
+                    "kuid": "c0b1c91b3c5042c9af3d87e15350dbe4",
                     "originalPropertyKey": "onRowClick",
                     "propertyIndex": 1,
                     "propertyKey": "onRowClickTeaser",
@@ -25,6 +25,44 @@
                         "wType": "Segment"
                     },
                     "srcWgtKUID": "j772813d0b8f4ced83bedd8c9f0c59aa",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "a1c7afc0ff814d18886b02b54ae5c948",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 2,
+                    "propertyKey": "onClickUp",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onClickUp",
+                        "srcWidget": "flxArrowUp",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "eb54e72409254617bf623ca4cb12affc",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "idccb29e3c8942b380c12efb6439bc66",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 3,
+                    "propertyKey": "onClickDown",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onClickDown",
+                        "srcWidget": "flxArrowDown",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g3e1ab7f71ee4f48a5a6e59c953a5290",
                     "translateAtInstance": false
                 }
             ]
@@ -139,6 +177,48 @@
                         "wType": "Label"
                     },
                     "srcWgtKUID": "i4033d7b536c4d9891e20ecf39a7d5e3"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "e4e2ec432da04ebe9d32973e2095e508",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 5,
+                    "propertyKey": "arrowsVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "arrowsVisible",
+                        "isHiddenInTool": false,
+                        "srcWidget": "flxMove",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "b83cb42971e94476b83609ca4aa1e8fb"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "f0d38905c13a4554afc868a8f0962608",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 6,
+                    "propertyKey": "cloneDeleteVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "cloneDeleteVisible",
+                        "isHiddenInTool": false,
+                        "srcWidget": "flxCommands",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "ffa0ec0a068d42c48399698d69a3f650"
                 }
             ]
         },
