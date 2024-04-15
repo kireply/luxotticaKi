@@ -1,0 +1,192 @@
+{
+    "AS_Switch_a7c45881395a49a6aeb1ffb4b20dd568": {
+        "id": "AS_Switch_a7c45881395a49a6aeb1ffb4b20dd568",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "eventType": "onSlide",
+        "actions": [{
+            "id": "IF_CONDITION_ide_onSlide_aa95bb36df984446b09c89778b119703",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.swAutoproceed.selectedIndex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "1",
+                "leftItemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                "leftWidgetKUID": "ec66118f7d154f50983946f8fe646e79"
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_ide_onSlide_j62b91e9366a4a34890a977686565753",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxAutoproceedFalse.setVisibility(true);",
+            "parentId": "IF_CONDITION_ide_onSlide_aa95bb36df984446b09c89778b119703",
+            "callbackType": null
+        }, {
+            "id": "_ide_onSlide_c57862887fa8482b9b1cefc5f36065ba",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxPopupNewStep",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "d2ff5f30c7a54b3989efc0339ca9ff4d",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "height": "84%",
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "0",
+                "delay": "0",
+                "iterationCount": ""
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 0,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "0"
+            },
+            "start": "Immediately",
+            "parentAnimation": "MOVE_ACTION_a42c7d8254c14a8f89c5f3ed13358d98",
+            "animationId": "SCALE_ACTION_eecc8c43ed344bbe9eab6fd61c95aacd",
+            "displayAnimationId": "SCALE_ACTION_eecc8c43ed344bbe9eab6fd61c95aacd",
+            "forkedPlatform": "all",
+            "parentId": "IF_CONDITION_ide_onSlide_aa95bb36df984446b09c89778b119703",
+            "callbackType": null,
+            "widgetPath": "this.view.flxPopupNewStep"
+        }, {
+            "id": "_ide_onSlide_ef05ce6997f0458688d41bc09607b496",
+            "type": "MOVE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxAutoproceedTrue",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "eab41ec66b7f4ab081275a7bac4483d0",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "top": "56%",
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "0",
+                "delay": "0",
+                "iterationCount": ""
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 0,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "0"
+            },
+            "start": "Immediately",
+            "parentAnimation": "TRANSFORM_ACTION_bb054f0c70c64f57aa3cf18b7611f0d7",
+            "animationId": "MOVE_ACTION_b532a24e78914c3cbf685d6673442616",
+            "displayAnimationId": "MOVE_ACTION_b532a24e78914c3cbf685d6673442616",
+            "forkedPlatform": "all",
+            "parentId": "IF_CONDITION_ide_onSlide_aa95bb36df984446b09c89778b119703",
+            "callbackType": null,
+            "widgetPath": "this.view.flxAutoproceedTrue"
+        }, {
+            "id": "ELSE_CONDITION_ide_onSlide_hf863fdcf5284341b650e4d657bf0d7c",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_ide_onSlide_da94e9f2a0954f07b1f6b969d539a0d6",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxAutoproceedFalse.setVisibility(false);",
+            "parentId": "ELSE_CONDITION_ide_onSlide_hf863fdcf5284341b650e4d657bf0d7c",
+            "callbackType": null
+        }, {
+            "id": "_ide_onSlide_a5ba462890ef448a8cc5e64c2eef2a22",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxPopupNewStep",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "d2ff5f30c7a54b3989efc0339ca9ff4d",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "height": "65%",
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "0",
+                "delay": "0",
+                "iterationCount": ""
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 0,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "0"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_eecc8c43ed344bbe9eab6fd61c95aacd",
+            "animationId": "SCALE_ACTION_da08fe85f3f74c789526fb5dc5f6b30e",
+            "displayAnimationId": "SCALE_ACTION_da08fe85f3f74c789526fb5dc5f6b30e",
+            "forkedPlatform": "all",
+            "parentId": "ELSE_CONDITION_ide_onSlide_hf863fdcf5284341b650e4d657bf0d7c",
+            "callbackType": null,
+            "widgetPath": "this.view.flxPopupNewStep"
+        }, {
+            "id": "_ide_onSlide_f3d0ea7e9b91446099f060e4364f854d",
+            "type": "MOVE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxAutoproceedTrue",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "eab41ec66b7f4ab081275a7bac4483d0",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "top": "45%",
+                "left": "",
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "0",
+                "delay": "0",
+                "iterationCount": ""
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 0,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "0"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_da08fe85f3f74c789526fb5dc5f6b30e",
+            "animationId": "MOVE_ACTION_fb0eb834a0b8485e8bbd75b8d1917cac",
+            "displayAnimationId": "MOVE_ACTION_fb0eb834a0b8485e8bbd75b8d1917cac",
+            "forkedPlatform": "all",
+            "parentId": "ELSE_CONDITION_ide_onSlide_hf863fdcf5284341b650e4d657bf0d7c",
+            "callbackType": null,
+            "widgetPath": "this.view.flxAutoproceedTrue"
+        }]
+    }
+}

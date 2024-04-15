@@ -40,7 +40,8 @@
     },
     "children": [
         "flxSelectedComponentwithContract",
-        "flxMove"
+        "flxMove",
+        "flxCommands"
     ],
     "clipbounds": false,
     "containerweight": 100,

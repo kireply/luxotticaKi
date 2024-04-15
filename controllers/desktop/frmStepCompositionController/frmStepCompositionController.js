@@ -1,19 +1,19 @@
 define({ 
 
   //Type your controller code here
-  component_instance_id : null,
+  //   component_instance_id : null,
   integrationService : voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB"),
+  modes: {},
 
-  selectComponent: function(rightData, leftData, modes){
+  selectComponent: function(rightData, leftData, instance){
     voltmx.print("### RIGHT DATA: " + JSON.stringify(rightData));
     voltmx.print("### LEFT DATA: " + JSON.stringify(leftData));
-    voltmx.print("### MODES: " + JSON.stringify(modes));
-//     voltmx.print("### GLOBAL ORDER LEFT: " + gblLeftOrder);
-//     voltmx.print("### GLOBAL ORDER RIGHT: " + gblRightOrder);
+    voltmx.print("### MODES: " + JSON.stringify(this.modes));
+
     const flex = new voltmx.ui.FlexContainer({
       id: `flex${new Date().getTime()}`,
       width: '96%',
-      height: '27%',
+      height: '40%',
       top: '2%',
       bottom: '2%',
       left: '2%',
@@ -25,15 +25,13 @@ define({
           "1366": 12
         }
       },
-    }, {}, {});
+    }, {}, {}); 
     //       voltmx.print("### BUILDED FLEX");
     //const tile = new com.hcl.demo.uifactory.Tile({
     const selectedComp = new ki.luxottica.selectedComponentwithContract({
-      id: `channel${new Date().getTime()}`,  //per renderlo univoco
+      id: `component${new Date().getTime()}`,
       width: '100%',
-      height: '100%',
-      centerX: '50%',
-      centerY: '50%',
+      height: '100%'
     }, {}, {});
 
     selectedComp.onRowClickTeaser = () => {
@@ -44,71 +42,88 @@ define({
       //          voltmx.print("### RIGHT DATA SELECTED COMPONENT: " + JSON.stringify(selectedComp.rightData));
 
       props = selectedComp.rightData;
-      props.forEach(item => {
-        let propComp = null;
-        const found = modes.find(element => element.name === item.lblPropertyName); //found = {name: mode}
-        if (found.mode === "dropdown"){
-          propComp = new ki.luxottica.editPropertyValuewithDropdown({
-            id: `prop${new Date().getTime()}`,
-            top: '2%',
-            centerX: '50%'
-          }, {}, {});
-          propComp.listBoxMasterData = found.masterData;
-          if (found.default !== null){
-            propComp.listBoxPropertyValue.selectedKey = found.default;  
+//       let searchKey = selectedComp.leftData[0].lblComponentName + instance + (gblCurrentStepOrder).toString();
+      let searchKey = selectedComp.leftData[0].lblComponentName;
+      let foundComponentConfig = Object.keys(this.modes).find(key => key.startsWith(searchKey));
+      if (foundComponentConfig) {
+        props.forEach(item => {
+          let propComp = null;
+          const found = this.modes[foundComponentConfig].find(element => element.name === item.lblPropertyName); //found = {name: mode}
+          if (found.mode === "dropdown"){
+            propComp = new ki.luxottica.editPropertyValuewithDropdown({
+              id: `prop${new Date().getTime()}`,
+              top: '2%',
+              centerX: '50%'
+            }, {}, {});
+            propComp.listBoxMasterData = found.masterData;
+            if (found.default !== null){
+              propComp.listBoxPropertyValue.selectedKey = found.default;  
+            } else {
+              propComp.listBoxPropertyValue.selectedKey = found.masterData[0][0];
+            }
+            propComp.onSelection = () => {
+              let identify = selectedComp.id;
+              this.onEndEditingCallback(propComp, identify, true, false);
+            }
+          } else if (found.mode === "label") {
+            propComp = new ki.luxottica.editPropertyValuewithTextField({
+              id: `prop${new Date().getTime()}`,
+              top: '2%',
+              centerX: '50%'
+            }, {}, {});
+            //           gblFlowId = 128;
+            let label_key = item.lblPropertyValue;
+            propComp.propertyValue = label_key;
+            propComp.txtPropertyValueTextField.setEnabled(false);
+          } else if (found.mode === "switch") {
+            propComp = new ki.luxottica.editPropertyValuewithSwitch({
+              id: `prop${new Date().getTime()}`,
+              top: '2%',
+              centerX: '50%'
+            }, {}, {});
+            propComp.onSlide = () => {
+              let identify = selectedComp.id;
+              this.onEndEditingCallback(propComp, identify, false, true);
+            };	  
           } else {
-            propComp.listBoxPropertyValue.selectedKey = found.masterData[0][0];
+            propComp = new ki.luxottica.editPropertyValuewithTextField({
+              id: `prop${new Date().getTime()}`,
+              top: '2%',
+              centerX: '50%'
+            }, {}, {});
+            propComp.onEndEditing = () => {
+              let identify = selectedComp.id;
+              this.onEndEditingCallback(propComp, identify, false, false);
+            }
           }
-          propComp.onSelection = () => {
-            let identify = selectedComp.id;
-            this.onEndEditingCallback(propComp, identify, true, false);
-          }
-        } else if (found.mode === "label") {
-          propComp = new ki.luxottica.editPropertyValuewithTextField({
-            id: `prop${new Date().getTime()}`,
-            top: '2%',
-            centerX: '50%'
-          }, {}, {});
-//           gblFlowId = 128;
-          let label_key = item.lblPropertyValue;
-          propComp.propertyValue = label_key;
-          propComp.txtPropertyValueTextField.setEnabled(false);
-        } else if (found.mode === "switch") {
-          propComp = new ki.luxottica.editPropertyValuewithSwitch({
-            id: `prop${new Date().getTime()}`,
-            top: '2%',
-            centerX: '50%'
-          }, {}, {});
-          propComp.onSlide = () => {
-            let identify = selectedComp.id;
-            this.onEndEditingCallback(propComp, identify, false, true);
-          };	  
-        } else {
-          propComp = new ki.luxottica.editPropertyValuewithTextField({
-            id: `prop${new Date().getTime()}`,
-            top: '2%',
-            centerX: '50%'
-          }, {}, {});
-          propComp.onEndEditing = () => {
-            let identify = selectedComp.id;
-            this.onEndEditingCallback(propComp, identify, false, false);
-          }
-        }
-        propComp.propertyName = item.lblPropertyName;
-        this.view.settingsSide.flxScrollSettingsContent.add(propComp);
-      });
-
-
+          propComp.propertyName = item.lblPropertyName;
+          this.view.settingsSide.flxScrollSettingsContent.add(propComp);
+        });
+      }
+      
+      this.showOrHideMoveCloneDelete(selectedComp);
+      
     };
+    
+    selectedComp.onClickUp = () => {
+      this.clickedArrow("up", selectedComp);
+    };
+    
+    selectedComp.onClickDown = () => {
+      this.clickedArrow("down", selectedComp);
+    };
+    
+    /*selectedComp.onClickClone = () => {
+      this.cloneComponent(selectedComp.id);
+    };
+    
+    selectedComp.onClickDelete = () => {
+      this.deleteComponent();
+    };*/
 
-    //self.view.selectedComponent.flxSelectedComponentRight.segmentRight.setData(rightSegmentData);
-    // self.view.selectedComponent.flxSelectedComponentLeft.segmentLeft.setData(leftSegmentData);
     selectedComp.flxSelectedComponentLeft.segmentLeft.setData(leftData);
     selectedComp.flxSelectedComponentRight.segmentRight.setData(rightData);
-    //       selectedComp.componentOrder = gblOrder.toString();
-    selectedComp.componentId = this.component_instance_id;
-
-
+    
     flex.add(selectedComp);      
 
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
@@ -116,10 +131,8 @@ define({
 
     if ( left_width > 48){
       //vuol dire che il pannello di sinistra è aperto
-      //   self.view.flxSelectedComponent.setVisibility(true);
       voltmx.print("### IF LEFT WIDTH");
-      //         gblSelectedComponentLeft = true;
-      selectedComp.componentOrder = gblLeftOrder.toString();
+      selectedComp.componentOrder = instance;
       voltmx.print("### COMPONENT ORDER: " + selectedComp.componentOrder);
       this.view.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(false);
       this.view.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(false);
@@ -127,23 +140,32 @@ define({
       this.view.flxScrollLeft.setVisibility(true);
       this.view.flxScrollLeft.add(flex);
       this.view.flxScrollLeft.forceLayout();
-      gblLeftOrder += 1;
     }
     if ( right_width > 48){
       //vuol dire che il pannello di destra è aperto
-      //   self.view.flxSelectedComponentRight.setVisibility(true);
       voltmx.print("### IF RIGHT WIDTH");
-      //         gblSelectedComponentRight = true;
-      selectedComp.componentOrder = gblRightOrder.toString();
       voltmx.print("### COMPONENT ORDER: " + selectedComp.componentOrder);
+      
       this.view.flxContainerStepCreation.flxLeftRight.flxRightSide.imgNoComponentsRight.setVisibility(false);
       this.view.flxContainerStepCreation.flxLeftRight.flxRightSide.lblNoComponentsRight.setVisibility(false);
       this.view.flxContainerStepCreation.flxLeftRight.flxRightSide.txtStartPhraseRight.setVisibility(false);
-      this.view.flxScrollRight.setVisibility(true);
-      this.view.flxScrollRight.add(flex);
-      this.view.flxScrollRight.forceLayout();
-      gblRightOrder += 1;
+      if (gblCurrentStepOrder > 1){
+        let right_widgets = this.view.flxRightSide.widgets();
+        let targetWidget = right_widgets.find(widget => widget.id === "flxScrollRight" + gblCurrentStepOrder);
+        if (targetWidget){
+          targetWidget.add(flex);
+          targetWidget.forceLayout();
+        }
+      } else {
+        this.view.flxScrollRight.setVisibility(true);
+        this.view.flxScrollRight.add(flex);
+        this.view.flxScrollRight.forceLayout();
+      }
+      selectedComp.componentOrder = instance;
+      
     }
+    
+    this.showOrHideMoveCloneDelete(selectedComp);
 
   },
 
@@ -156,7 +178,6 @@ define({
   	}  else {
       value = propComp.propertyValue;
     }
-    //     voltmx.print("### VALUE: " + value);
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
     let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
     let lastComp = null;
@@ -165,7 +186,7 @@ define({
       if (identify === null){
         // chiamata da editProperty
         lastComp = components.length > 0 ? components[components.length - 1] : null;
-        let channelKey = Object.keys(lastComp).find(key => key.startsWith("channel"));
+        let channelKey = Object.keys(lastComp).find(key => key.startsWith("component"));
         if (lastComp[channelKey]["leftData"][0].lblComponentName === gblLastInsertedComponent){
           let newData = lastComp[channelKey]["rightData"];
           newData.forEach(item => {
@@ -186,7 +207,7 @@ define({
       } else {
         // chiamata da selectedComponent
         components.forEach((comp) => {
-          let channelKey = Object.keys(comp).find(key => key.startsWith("channel"));
+          let channelKey = Object.keys(comp).find(key => key.startsWith("component"));
           if (channelKey === identify){
             let newData = comp[channelKey]["rightData"];
             newData.forEach(item => {
@@ -212,7 +233,7 @@ define({
       if (identify === null) {
         // chiamata da editProperty
         lastComp = components.length > 0 ? components[components.length - 1] : null;
-        let channelKey = Object.keys(lastComp).find(key => key.startsWith("channel"));
+        let channelKey = Object.keys(lastComp).find(key => key.startsWith("component"));
         if (lastComp[channelKey]["leftData"][0].lblComponentName === gblLastInsertedComponent){
           let newData = lastComp[channelKey]["rightData"];
           newData.forEach(item => {
@@ -234,7 +255,7 @@ define({
       } else {
         // chiamata da selectedComponent
         components.forEach((comp) => {
-          let channelKey = Object.keys(comp).find(key => key.startsWith("channel"));
+          let channelKey = Object.keys(comp).find(key => key.startsWith("component"));
           if (channelKey === identify){
             let newData = comp[channelKey]["rightData"];
             newData.forEach(item => {
@@ -272,9 +293,40 @@ define({
 
 
     let index = 0;
-    let modes = [];
+    //     let modes = [];
     this.view.settingsSide.flxScrollSettingsContent.removeAll();
     this.view.settingsSide.flxScrollSettingsContent.setVisibility(true);
+    let instance = null;
+    let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
+    let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
+    if (left_width > 48){
+      let count = this.view.flxScrollLeft.widgets().filter(widget =>
+                                               Object.keys(widget).some(key => key.startsWith("component"))
+                                              ).length;
+          instance = (count + 1).toString();
+    }
+    
+    if (right_width > 48) {
+      if (gblCurrentStepOrder > 1){
+        let right_widgets = this.view.flxRightSide.widgets();
+        let targetWidget = right_widgets.find(widget => widget.id === "flxScrollRight" + gblCurrentStepOrder);
+        if (targetWidget){
+          let components_inside = targetWidget.widgets();
+          let count = components_inside.filter(widget =>
+                                               Object.keys(widget).some(key => key.startsWith("component"))
+                                              ).length;
+          instance = (count + 1).toString();
+        }
+      } else {
+        let count = this.view.flxScrollRight.widgets().filter(widget =>
+                                                              Object.keys(widget).some(key => key.startsWith("component"))
+                                                             ).length; 
+        instance = (count + 1).toString();
+      }
+    }
+    
+    let compKey = selected_item + "_" + instance + "_" + (gblCurrentStepOrder).toString();
+    this.modes[compKey] = [];
 	
     const position_masterData = {
       position: "position_values",
@@ -284,17 +336,15 @@ define({
       tilesFeaturesListLayout: "tilesFeaturesListLayout",
       targetDigitalOptometry: "targetDigitalOptometry"
     }
-
+	gblLastInsertedComponent = selected_item;
     for (let i = 0; i < list.length; i++) {
 
       console.log(list[i]);
 
-//       if (list[i].required === 'true'){
       let propertyName = list[i].name;
       let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + ": ";
       let properties = {lblPropertyName: capitalizedName, lblPropertyValue: ""}; 
-//       rightSegmentData.push(properties);
-      gblLastInsertedComponent = selected_item;
+//       gblLastInsertedComponent = selected_item;
       console.log(rightSegmentData);
       let propComp = null;
       if (list[i].mode === "dropdown"){
@@ -309,11 +359,9 @@ define({
         voltmx.print("### MASTER DATA STRING: " + JSON.stringify(masterDataString));
         let valuesArray = masterDataString.split(", ");
         let masterDataList = [];
-//         propComp.listBoxPropertyValue.placeholder="Please select a value";
         valuesArray.forEach((value, index) => {
           let id = `lb${index + 1}`;
           masterDataList.push([id, value.trim()]);
-//           voltmx.print("### FINAL LIST: " + JSON.stringify(masterDataList));
         });
         propComp.listBoxMasterData = masterDataList;
         let key = null;
@@ -327,8 +375,7 @@ define({
           properties.lblPropertyValue = raw[1];
         }
         propComp.listBoxPropertyValue.selectedKey = key;
-//         properties.lblPropertyValue = list[i].default;
-        modes.push({"name": capitalizedName, "mode": "dropdown", "masterData": masterDataList, "default": key});
+        this.modes[compKey].push({"name": capitalizedName, "mode": "dropdown", "masterData": masterDataList, "default": key});
         propComp.onSelection = () => {
           this.onEndEditingCallback(propComp, null, true, false);
         };
@@ -336,10 +383,8 @@ define({
           gblPropertyTemplatesIds[list[i].component_name] = [];
         }
         let elem = {};
-        //       elem[list[i].id] = list[i].name;
         elem[list[i].id] = { "name": list[i].name, "mode": "dropdown" };
         gblPropertyTemplatesIds[list[i].component_name].push(elem);
-//         voltmx.print("### PLACEHOLDER: " + JSON.stringify(propComp.listBoxPlaceholder));
       } else if (list[i].mode === "label") {
         propComp = new ki.luxottica.editPropertyValuewithTextField({
           id: `prop${new Date().getTime()}`,
@@ -347,25 +392,16 @@ define({
           centerX: '50%'
         }, {}, {});
         gblFlowId = 128; //to comment in the global flow of the application
-        let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
-        let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
-        let label_key = ``;
-        if (left_width > 48){
-          label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${gblLeftOrder}_${i+1}`;
-        }
-        if (right_width > 48){
-          label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${gblRightOrder}_${i+1}`;
-        }
+        let label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`;
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
         propComp.propertyValue = label_key;
         propComp.txtPropertyValueTextField.setEnabled(false);
         properties["lblPropertyValue"] = label_key;
-		modes.push({"name": capitalizedName, "mode": "label"});
+		this.modes[compKey].push({"name": capitalizedName, "mode": "label"});
         if (!gblPropertyTemplatesIds[list[i].component_name]) {
           gblPropertyTemplatesIds[list[i].component_name] = [];
         }
         let elem = {};
-        //       elem[list[i].id] = list[i].name;
         elem[list[i].id] = { "name": list[i].name, "mode": "label" , "default": list[i].default};
         gblPropertyTemplatesIds[list[i].component_name].push(elem);
       } else if (list[i].mode === "switch"){
@@ -377,12 +413,11 @@ define({
         propComp.onSlide = () => {
           this.onEndEditingCallback(propComp, null, false, true);
         };
-        modes.push({"name": capitalizedName, "mode": "switch"});
+        this.modes[compKey].push({"name": capitalizedName, "mode": "switch"});
         if (!gblPropertyTemplatesIds[list[i].component_name]) {
           gblPropertyTemplatesIds[list[i].component_name] = [];
         }
         let elem = {};
-        //       elem[list[i].id] = list[i].name;
         elem[list[i].id] = { "name": list[i].name, "mode": "switch" };
         gblPropertyTemplatesIds[list[i].component_name].push(elem);
         if (propComp.propertyValue === 0){
@@ -399,7 +434,7 @@ define({
         propComp.onEndEditing = () => {
           this.onEndEditingCallback(propComp, null, false, false);
         };
-        modes.push({"name": capitalizedName, "mode": "textfield"});
+        this.modes[compKey].push({"name": capitalizedName, "mode": "textfield"});
         if (!gblPropertyTemplatesIds[list[i].component_name]) {
           gblPropertyTemplatesIds[list[i].component_name] = [];
         }
@@ -411,7 +446,6 @@ define({
       propComp.propertyName = capitalizedName;
       propComp.propertyTemplateId = list[i].id;
       this.view.settingsSide.flxScrollSettingsContent.add(propComp);
-//       }
       index +=1;
       rightSegmentData.push(properties);
     }
@@ -423,7 +457,7 @@ define({
     let selected_component_data = {lblComponentName: selected_item, imgComponent: selected_item_img};
     leftSegmentData.push(selected_component_data);
 
-    this.selectComponent(rightSegmentData, leftSegmentData, modes);
+    this.selectComponent(rightSegmentData, leftSegmentData, instance);
 
   },
 
@@ -438,10 +472,8 @@ define({
   saveStepComposition: function(){
     voltmx.print("### GBL PROPERTY TEMPLATES IDS: " + JSON.stringify(gblPropertyTemplatesIds));
     let left_widgets = this.view.flxScrollLeft.widgets();
-    let right_widgets = this.view.flxScrollRight.widgets();
-    var numberPart = this.view.lblStepOrder.text.match(/\d+/);
-
-
+    let steps = this.view.flxRightSide.widgets();
+    gblFlowId = 128; //to comment in the global flow of the application
     if (left_widgets.length > 0){
       voltmx.print("### SONO A SINISTRA");
       left_widgets.forEach(function(widget) {
@@ -456,8 +488,9 @@ define({
           value: null,
           label_id: null
         };
-        let channelKey = Object.keys(widget).find(key => key.startsWith("channel"));
+        let channelKey = Object.keys(widget).find(key => key.startsWith("component"));
         component_instance_left["template_name"] = widget[channelKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
+        let numberPart = this.view.lblStepOrder.text.match(/\d+/);
         let number = parseInt(numberPart[0], 10);
         if (numberPart){
           component_instance_left["step_id"] = number;  
@@ -479,20 +512,18 @@ define({
               return obj_left["name"] === prop_name_left;
             });
             let prop_id_left = Object.keys(elementoTrovato_left);
-            property_instance_left["property_template_id"] = prop_id_left[0];
             if (elementoTrovato_left[prop_id_left[0]].mode === "label"){
-              gblFlowId = 128; //to comment in the global flow of the application
               let label = {
                 id: prop_left.lblPropertyValue,
                 flow_id: gblFlowId, 
                 en_GB: elementoTrovato_left[prop_id_left[0]].default
               };
-//               debugger;
               voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, label, 
                                                                                                (response) => {
                 voltmx.print("### Service response: " + JSON.stringify(response));
                 property_instance_left["value"] = prop_left.lblPropertyValue;
                 property_instance_left["label_id"] = prop_left.lblPropertyValue;
+                property_instance_left["property_template_id"] = prop_id_left[0];
                 voltmx.print("### PROP LEFT: " + JSON.stringify(property_instance_left));
                 voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_left,
                                                                                                  (response) => {
@@ -500,7 +531,6 @@ define({
                 },
                                                                                                  (error) => {
                   voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-                  //             voltmx.application.dismissLoadingScreen();
                   voltmx.ui.Alert({
                     "alertType": constants.ALERT_TYPE_INFO,
                     "alertTitle": "Fail",
@@ -519,6 +549,7 @@ define({
               });
             } else {
               property_instance_left["value"] = prop_left.lblPropertyValue;
+              property_instance_left["property_template_id"] = prop_id_left[0];
               voltmx.print("### PROP LEFT: " + JSON.stringify(property_instance_left));
               voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_left,
                                                                                              (response) => {
@@ -550,58 +581,97 @@ define({
            
     } 
 
-    if (right_widgets.length > 0){
-      voltmx.print("### SONO A DESTRA");
-      
-      right_widgets.forEach(function(widget) {
-        var component_instance_right = {
-          template_name: null,
-          step_id: null,
-          order: null
-        };
-        var property_instance_right = {
-          property_template_id: null,
-          component_instance_id: null,
-          value: null,
-          label_id: null
-        };
-        let channelKey = Object.keys(widget).find(key => key.startsWith("channel"));
-        component_instance_right["template_name"] = widget[channelKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
-        let number = parseInt(numberPart[0], 10);
-        if (numberPart){
-          component_instance_right["step_id"] = number;  
+    
+    let associatedId = null;
+    let scrolls = steps.filter(step => step.id.startsWith("flxScrollRight"));
+    scrolls.forEach(scroll => {
+      let number = 0;
+      if (scroll.id === "flxScrollRight"){
+        number = 1;
+      } else {
+        let match = scroll.id.match(/flxScrollRight(\d+)$/);
+        if (match) {
+          let temp = match[1];
+          let entry = Object.entries(gblIdOrderSteps).find(([id, order]) => order === temp);
+          number = entry ? entry[0] : undefined;
         }
-        component_instance_right["order"] = widget[channelKey]["lblComponentOrder"].text;
+      }
+      let right_widgets = scroll.widgets();
+      if (right_widgets.length > 0){
+        voltmx.print("### SONO A DESTRA DENTRO " + `${scroll.id}`);
 
-        voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_right,
-                                                                                         (response) => {
-          voltmx.print("### Service response: "+JSON.stringify(response));
-          widget[channelKey]["lblComponentId"].text = response.COMPONENT_INSTANCE[0].id;
-          property_instance_right["component_instance_id"] = response.COMPONENT_INSTANCE[0].id;
-          let props_right = widget[channelKey]["flxSelectedComponentRight"]["segmentRight"]["data"];
-          props_right.forEach(function(prop_right) {
-            let cleanedStr = prop_right.lblPropertyName.replace(/[^a-zA-Z0-9]+$/, '').replace(/^[^a-zA-Z0-9]+/, '');
-			let camelCaseStr = cleanedStr.charAt(0).toLowerCase() + cleanedStr.slice(1);
-            let prop_name_right = camelCaseStr;
-            let elementoTrovato_right = gblPropertyTemplatesIds[component_instance_right["template_name"]].find(item_right => {
-              let [id_right, obj_right] = Object.entries(item_right)[0];
-              return obj_right["name"] === prop_name_right;
-            });
-            let prop_id_right = Object.keys(elementoTrovato_right);
-            property_instance_right["property_template_id"] = prop_id_right[0];
-            if (elementoTrovato_right[prop_id_right[0]].mode === "label"){
-              gblFlowId = 128; //to comment in the global flow of the application
-              let label_right = {
-                id: prop_right.lblPropertyValue,
-                flow_id: gblFlowId, 
-                en_gb: elementoTrovato_right[prop_id_right[0]].default
-              };
-              // 			  debugger;
-              voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, label_right, 
-                                                                                               (response) => {
-                voltmx.print("### Service response: " + JSON.stringify(response));
-                property_instance_right["label_id"] = prop_right.lblPropertyValue;
+        right_widgets.forEach(function(widget) {
+          var component_instance_right = {
+            template_name: null,
+            step_id: null,
+            order: null
+          };
+          var property_instance_right = {
+            property_template_id: null,
+            component_instance_id: null,
+            value: null,
+            label_id: null
+          };
+          let channelKey = Object.keys(widget).find(key => key.startsWith("component"));
+          component_instance_right["template_name"] = widget[channelKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
+          
+          component_instance_right["step_id"] = number;  
+          
+          component_instance_right["order"] = widget[channelKey]["lblComponentOrder"].text;
+
+          voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_right,
+                                                                                           (response) => {
+            voltmx.print("### Service response: "+JSON.stringify(response));
+            widget[channelKey]["lblComponentId"].text = response.COMPONENT_INSTANCE[0].id;
+            property_instance_right["component_instance_id"] = response.COMPONENT_INSTANCE[0].id;
+            let props_right = widget[channelKey]["flxSelectedComponentRight"]["segmentRight"]["data"];
+            props_right.forEach(function(prop_right) {
+              let cleanedStr = prop_right.lblPropertyName.replace(/[^a-zA-Z0-9]+$/, '').replace(/^[^a-zA-Z0-9]+/, '');
+              let camelCaseStr = cleanedStr.charAt(0).toLowerCase() + cleanedStr.slice(1);
+              let prop_name_right = camelCaseStr;
+              let elementoTrovato_right = gblPropertyTemplatesIds[component_instance_right["template_name"]].find(item_right => {
+                let [id_right, obj_right] = Object.entries(item_right)[0];
+                return obj_right["name"] === prop_name_right;
+              });
+              let prop_id_right = Object.keys(elementoTrovato_right);
+              if (elementoTrovato_right[prop_id_right[0]].mode === "label"){
+                let label_right = {
+                  id: prop_right.lblPropertyValue,
+                  flow_id: gblFlowId, 
+                  en_GB: elementoTrovato_right[prop_id_right[0]].default
+                };
+                voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, label_right, 
+                                                                                                 (response) => {
+                  voltmx.print("### Service response: " + JSON.stringify(response));
+                  property_instance_right["label_id"] = prop_right.lblPropertyValue;
+                  property_instance_right["value"] = prop_right.lblPropertyValue;
+                  property_instance_right["property_template_id"] = prop_id_right[0];
+                  voltmx.print("### PROP RIGHT: " + JSON.stringify(property_instance_right));
+                  voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_right,
+                                                                                                   (response) => {
+                    voltmx.print ("### Service response: "+JSON.stringify(response));
+                  },
+                                                                                                   (error) => {
+                    voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                    voltmx.ui.Alert({
+                      "alertType": constants.ALERT_TYPE_INFO,
+                      "alertTitle": "Fail",
+                      "yesLabel": "Ok",
+                      "message": "Save not permitted: an error occurred.",
+                      "alertHandler": this.SHOW_ALERT_Failure_Callback
+                    }, {
+                      "iconPosition": constants.ALERT_ICON_POSITION_LEFT
+                    });
+                    gblFail = true;
+                  }
+                                                                                                  );
+                }, 
+                                                                                                 (error) => {
+                  voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                });
+              } else {
                 property_instance_right["value"] = prop_right.lblPropertyValue;
+                property_instance_right["property_template_id"] = prop_id_right[0];
                 voltmx.print("### PROP RIGHT: " + JSON.stringify(property_instance_right));
                 voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_right,
                                                                                                  (response) => {
@@ -609,7 +679,6 @@ define({
                 },
                                                                                                  (error) => {
                   voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-                  //             voltmx.application.dismissLoadingScreen();
                   voltmx.ui.Alert({
                     "alertType": constants.ALERT_TYPE_INFO,
                     "alertTitle": "Fail",
@@ -622,492 +691,392 @@ define({
                   gblFail = true;
                 }
                                                                                                 );
-              }, 
-                                                                                               (error) => {
-                voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-              });
-            } else {
-              property_instance_right["value"] = prop_right.lblPropertyValue;
-              voltmx.print("### PROP RIGHT: " + JSON.stringify(property_instance_right));
-              voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_right,
-                                                                                               (response) => {
-                voltmx.print ("### Service response: "+JSON.stringify(response));
-              },
-                                                                                               (error) => {
-                voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-                //             voltmx.application.dismissLoadingScreen();
-                voltmx.ui.Alert({
-                  "alertType": constants.ALERT_TYPE_INFO,
-                  "alertTitle": "Fail",
-                  "yesLabel": "Ok",
-                  "message": "Save not permitted: an error occurred.",
-                  "alertHandler": this.SHOW_ALERT_Failure_Callback
-                }, {
-                  "iconPosition": constants.ALERT_ICON_POSITION_LEFT
-                });
-                gblFail = true;
               }
-             );
-            }
+            });
+          },
+                                                                                           (error) => {
+            voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+            gblFail = true;
           });
-        },
-                                                                                         (error) => {
-          voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-          gblFail = true;
         });
-      });
-            } 
+      } 
+    });
+  },
+  
+  addNewStep: function(left_position){
+    let index = gblLastInsertedStep + 1;
 
+    gblLastInsertedStep += 1;
+    gblCurrentStepOrder = gblLastInsertedStep;
+    
+    
+    voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("STEP_flow_CustomQuery", {}, {flow_id : gblFlowId}, (response) => {
+      voltmx.print("### Service response: "+JSON.stringify(response));
+      response.records.forEach(record => {
+        gblIdOrderSteps[record.id] = record.order;
+      });
+    }, (error) => {
+      voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+    });
+    
+    let left_position_percentage = left_position + "%";
+    
+    const box = new ki.luxottica.boxStep({
+      id: `boxStep${index}`,
+      left: `${left_position_percentage}`,
+      centerY: '50%'
+    }, {}, {});
+
+    box.stepOrder = "Step " + index;
+    box.stepTitle = gblCurrentStepTitle;
+    
+    box.onClickTeaser = () => {
+      let steps_widgets = this.view.flxSteps.widgets();
+      let flxScrolls = this.view.flxRightSide.widgets();
+      let current_id = box.id;
+      
+      let numberAsString = current_id.replace("boxStep", "");
+      let stepNumber = parseInt(numberAsString, 10);
+      let current_scroll = 'flxScrollRight' + stepNumber;
+      for (let i = 1; i <= gblLastInsertedStep; i++) {
+        let expectedId = 'boxStep' + i;
+        let expectedScroll = 'flxScrollRight' + i;
+        // Procedi solo se non stiamo trattando il widget corrente
+        if (expectedId !== current_id) {
+          let widget = steps_widgets.find(w => w.id === expectedId);
+          if (widget) {
+            widget.flxBoxStep.backgroundColor = "FFFFFF00"; 
+            widget.imgDeleteStep.isVisible = false;
+            widget.imgEditStep.isVisible = false;
+            widget.lblStepOrder.fontColor = "00000000";
+            widget.lblStepTitle.fontColor = "00000000";
+            let scroll = flxScrolls.find(s => s.id === expectedScroll);
+            if (scroll) {
+              scroll.isVisible = false;
+            }
+          } else {
+            let widget_new = steps_widgets.find(w => w.id === "flxBoxFirstStep");
+            if (widget_new) {
+              widget_new.backgroundColor = "FFFFFF00"; 
+              widget_new.imgDeleteStep.isVisible = false;
+              widget_new.imgEditStep.isVisible = false;
+              widget_new.lblStepOrder.fontColor = "00000000";
+              widget_new.lblStepTitleIntoStepComposition.fontColor = "00000000";
+              this.view.flxRightSide.flxScrollRight.setVisibility(false);
+            }
+          }
+        } else {
+          let widget = steps_widgets.find(w => w.id === current_id);
+          widget.flxBoxStep.backgroundColor = "00000000";
+          widget.imgDeleteStep.isVisible = true;
+          widget.imgEditStep.isVisible = true;
+          widget.lblStepOrder.fontColor = "FFFFFF00";
+          widget.lblStepTitle.fontColor = "FFFFFF00";
+          let scroll = flxScrolls.find(s => s.id === current_scroll);
+            if (scroll) {
+              scroll.isVisible = true;
+            }
+          gblCurrentStepOrder = stepNumber;
+          voltmx.print("### CURRENT STEP ORDER: " + JSON.stringify(gblCurrentStepOrder));
+        } 
+      }
+      this.view.settingsSide.flxScrollSettingsContent.removeAll();
+      this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
+      this.view.settingsSide.txt.setVisibility(true);
+    };
+    
+    this.view.flxSteps.add(box);
+
+    this.view.flxScrollRight.setVisibility(false);
+
+    const flex = new voltmx.ui.FlexScrollContainer({
+      id: `flxScrollRight${index}`,
+      width: '100%',
+      height: '100%',
+      responsiveConfig: {
+        "span": {
+          "640": 12,
+          "1024": 6,
+          "1366": 12
+        }
+      }
+    }, {}, {});
+
+
+    flex.layoutType = voltmx.flex.FLOW_VERTICAL;
+    flex.enableScrolling = true;
+    flex.scrollDirection = voltmx.flex.SCROLL_VERTICAL;
+    this.view.flxRightSide.add(flex);
+    this.view.settingsSide.flxScrollSettingsContent.removeAll();
+    this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
+    this.view.settingsSide.txt.setVisibility(true);
+  },
+  
+  findCurrentFlexScroll: function(){
+    let scroll = null;
+    let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
+    let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
+    // initially I have to understand in which flex I am
+    // if I am in the left side
+    if (left_width > 48) {
+      scroll = this.view.flxScrollLeft;
+    }
+    // if I am in the right side
+    if (right_width > 48){
+      if (gblCurrentStepOrder === 1){
+        scroll = this.view.flxScrollRight;
+      } else {
+        let right_widgets = this.view.flxRightSide.widgets();
+        // find the current flex
+        let targetWidget = right_widgets.find(widget => widget.id === "flxScrollRight" + gblCurrentStepOrder);
+        if (targetWidget){
+          scroll = targetWidget;
+        }
+      }
+    }
+    return scroll
+  }, 
+  
+  clickedArrow: function(direction, selectedComp){
+    let scroll = this.findCurrentFlexScroll();
+    let scroll_widgets = scroll.widgets();
+
+    // find the current widget index
+    let currentWidgetIndex = scroll_widgets.findIndex(widget => widget.hasOwnProperty(selectedComp.id));
+    let currentWidgetProperty = null;
+    let previousWidgetProperty = null;
+    let nextWidgetProperty = null;
+    if (currentWidgetIndex !== -1) {
+      // obtain the currrent widget from the previously find index
+      let currentWidget = scroll_widgets[currentWidgetIndex];
+      // obtain the associated property
+      currentWidgetProperty = currentWidget[selectedComp.id];
+	  
+      if (direction === "up"){
+        // obtain the previous widget
+        let previousWidget = currentWidgetIndex >= 0 ? scroll_widgets[currentWidgetIndex - 1] : null;
+        let previousWidgetKey = Object.keys(previousWidget).find(key => key.startsWith("component"));
+        if (previousWidgetKey) {
+          previousWidgetProperty = previousWidget[previousWidgetKey];
+        } 
+      } else {
+        // obtain the next widget
+        debugger;
+        let nextWidget = currentWidgetIndex >= 0 ? scroll_widgets[currentWidgetIndex + 1] : null;
+        let nextWidgetKey = Object.keys(nextWidget).find(key => key.startsWith("component"));
+        if (nextWidgetKey) {
+          nextWidgetProperty = nextWidget[nextWidgetKey];
+        }
+      }
+      //         console.log("Found Widget:", currentWidget);
+      //         console.log("Previous Widget:", previousWidget);
+    } else {
+      console.log("Widget non trovato.");
+    }
+
+    let currentLeftData = currentWidgetProperty.leftData;
+    let currentRightData = currentWidgetProperty.rightData;
+    let currentOrder = currentWidgetProperty.componentOrder;
+    if (direction === "up"){
+      // swapping data between previous and current components
+      let previousLeftData = previousWidgetProperty.leftData;
+      let previousRightData = previousWidgetProperty.rightData;
+      let previousOrder = previousWidgetProperty.componentOrder;
+      
+      // changing last inserted component name
+      if (currentLeftData[0].lblComponentName === gblLastInsertedComponent){
+         gblLastInsertedComponent = previousLeftData[0].lblComponentName;
+      }
+
+      // adjusting keys for label properties
+      currentRightData.forEach(item => {
+        // using a regex to check format with at least three underscores
+        if (/^[^_]+_.*_.*_.*$/.test(item.lblPropertyValue)) {
+          let parts = item.lblPropertyValue.split('_');
+          if (parts.length >= 4) {
+            // edit the second last element
+            parts[parts.length - 2] = previousOrder;
+            // recompose the modified string
+            item.lblPropertyValue = parts.join('_');
+          }
+        }
+      });
+
+      // adjusting keys for label properties
+      previousRightData.forEach(item => {
+        // using a regex to check format with at least three underscores
+        if (/^[^_]+_.*_.*_.*$/.test(item.lblPropertyValue)) {
+          let parts = item.lblPropertyValue.split('_');
+          if (parts.length >= 4) {
+            // edit the second last element
+            parts[parts.length - 2] = currentOrder;
+            // recompose the modified string
+            item.lblPropertyValue = parts.join('_');
+          }
+        }
+      });
+
+      previousWidgetProperty.leftData = currentLeftData;
+      previousWidgetProperty.rightData = currentRightData;
+
+      currentWidgetProperty.leftData = previousLeftData;
+      currentWidgetProperty.rightData = previousRightData;  
+    } else {
+      // swapping data between next and current components
+      let nextLeftData = nextWidgetProperty.leftData;
+      let nextRightData = nextWidgetProperty.rightData;
+      let nextOrder = nextWidgetProperty.componentOrder;
+      
+      // changing last inserted component name
+      if (nextLeftData[0].lblComponentName === gblLastInsertedComponent){
+         gblLastInsertedComponent = currentLeftData[0].lblComponentName;
+      }
+
+      // adjusting keys for label properties
+      currentRightData.forEach(item => {
+        // using a regex to check format with at least three underscores
+        if (/^[^_]+_.*_.*_.*$/.test(item.lblPropertyValue)) {
+          let parts = item.lblPropertyValue.split('_');
+          if (parts.length >= 4) {
+            // edit the second last element
+            parts[parts.length - 2] = nextOrder;
+            // recompose the modified string
+            item.lblPropertyValue = parts.join('_');
+          }
+        }
+      });
+
+      // adjusting keys for label properties
+      nextRightData.forEach(item => {
+        // using a regex to check format with at least three underscores
+        if (/^[^_]+_.*_.*_.*$/.test(item.lblPropertyValue)) {
+          let parts = item.lblPropertyValue.split('_');
+          if (parts.length >= 4) {
+            // edit the second last element
+            parts[parts.length - 2] = currentOrder;
+            // recompose the modified string
+            item.lblPropertyValue = parts.join('_');
+          }
+        }
+      });
+
+      nextWidgetProperty.leftData = currentLeftData;
+      nextWidgetProperty.rightData = currentRightData;
+
+      currentWidgetProperty.leftData = nextLeftData;
+      currentWidgetProperty.rightData = nextRightData;
+    }
+
+    // graphic stuffs
+    selectedComp.arrowUpVisible = false;
+    selectedComp.arrowDownVisible = false;
+    selectedComp.flxMoveVisible = false;
+    selectedComp.cloneDeleteVisible = false;
+    this.view.settingsSide.flxScrollSettingsContent.removeAll();
+    this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
+    this.view.settingsSide.txt.setVisibility(true);
+  },
+  
+  showOrHideMoveCloneDelete: function(selectedComp){
+    let scroll = this.findCurrentFlexScroll();
+    let scroll_widgets = scroll.widgets();
+    let max = 0;
+    scroll_widgets.forEach( widget => {
+      let widget_key = Object.keys(widget).find(key => key.startsWith("component"));
+      let order = parseInt(widget[widget_key].componentOrder, 10);
+      if (order > max){
+        max = order;
+      }
+    });
+    if (selectedComp.componentOrder === "1"){
+        selectedComp.arrowDownVisible = true;
+      } else if (selectedComp.componentOrder === (max).toString()){
+        selectedComp.arrowUpVisible = true;
+      } else {
+        selectedComp.arrowUpVisible = true;
+        selectedComp.arrowDownVisible = true;
+      }
+      
+      selectedComp.flxMoveVisible = true;
+      selectedComp.cloneDeleteVisible = true;
+      
+      // hiding other components' arrows and clone/delete box
+      scroll_widgets.forEach( widg => {
+        let widget_key = Object.keys(widg).find(key => key.startsWith("component"));
+        if (widg[widget_key].id !== selectedComp.id){
+          widg[widget_key].arrowUpVisible = false;
+          widg[widget_key].arrowDownVisible = false;
+          widg[widget_key].flxMoveVisible = false;
+          widg[widget_key].cloneDeleteVisible = false;
+        }
+      });
+  }, 
+  
+  cloneComponent: function(id){
+    let scroll = this.findCurrentFlexScroll();
+    let scroll_widgets = scroll.widgets();
+    let new_scroll_widgets = [];
+    
+    scroll_widgets.forEach( widget => {
+      let widget_key = Object.keys(widget).find(key => key.startsWith("component"));
+      new_scroll_widgets.push([widget[widget_key].leftData, widget[widget_key].rightData]);
+      if(widget[widget_key].id === id){
+        new_scroll_widgets.push([widget[widget_key].leftData, widget[widget_key].rightData]);
+      }
+    });
+    
+    scroll.removeAll();
+    new_scroll_widgets.forEach( (new_widget, index) => {
+      let instance = (index + 1).toString();
+      new_widget[1].forEach(prop => {
+        if (/^[^_]+_.*_.*_.*$/.test(prop.lblPropertyValue)) {
+          let parts = prop.lblPropertyValue.split("_");
+          if (parts.length >= 4) { 
+            parts[parts.length - 2] = instance; 
+            prop.lblPropertyValue = parts.join("_"); 
+          }
+        }
+      });
+      gblLastInsertedComponent = new_widget[0][0].lblComponentName;
+//       debugger;
+      this.selectComponent(new_widget[1], new_widget[0], instance);
+    });
+  }, 
+  
+  deleteComponent: function(id){
+    let scroll = this.findCurrentFlexScroll();
+    let scroll_widgets = scroll.widgets();
+    let new_scroll_widgets = [];
+    
+    scroll_widgets.forEach( widget => {
+      let widget_key = Object.keys(widget).find(key => key.startsWith("component"));
+      if(widget[widget_key].id != id){
+        new_scroll_widgets.push([widget[widget_key].leftData, widget[widget_key].rightData]);
+      }
+    });
+    
+    scroll.removeAll();
+    new_scroll_widgets.forEach( (new_widget, index) => {
+      let instance = (index + 1).toString();
+      new_widget[1].forEach(prop => {
+        if (/^[^_]+_.*_.*_.*$/.test(prop.lblPropertyValue)) {
+          let parts = prop.lblPropertyValue.split("_");
+          if (parts.length >= 4) { 
+            parts[parts.length - 2] = instance; 
+            prop.lblPropertyValue = parts.join("_"); 
+          }
+        }
+      });
+      gblLastInsertedComponent = new_widget[0][0].lblComponentName;
+//       debugger;
+      this.selectComponent(new_widget[1], new_widget[0], instance);
+    });
   }
   
-  /*
-  publish: async () => {
-    var JSON_flow = {
-        channel: null,
-        category: null,
-        isSupernova: null,
-        layout: {
-          id: null,
-          type: null,
-          sizes: {
-            previewSection: null,
-            stepSection: null
-          },
-          previewImage: null
-        }
-      };
-    var JSON_preview = {
-      components: []
-    };
-    
-    var JSON_step = {
-      steps: []
-    };
-    
-    var JSON_step_composition = {
-      definingAttributes : {
-        order: null,
-        title: null,
-        autoProceed: null,
-        autoProceedLabel: null,
-        autoSkip: null,
-        hasGreyout: null,
-        analytics_ID: null
-      },
-      components: []
-    };
-    
-    var JSON_default_new = gblDefaultComponents;
-    var JSON_default = [
-      {
-        id: "RXC_EXIT_POPUP",
-        exitTitle: "Are you sure you want to exit?",
-        exitSubtitle: "Your lens selection will not be saved",
-        exitYes: "Yes, exit",
-        exitContinueEditing: "No, continue",
-        exitSave: "Save and continue shopping",
-      },
-      {
-        id: "RXC_CRASH_POPUP",
-        errorTitle: "Something went wrong...",
-        errorDescription:
-        "We’re experiencing some technical difficulties, we apologize. In the meantime, if you have any questions or need assistance, feel free to <a href='#'>contact our customer service.</a>",
-        buttonLabel: "Back",
-      },
-      {
-        id: "RXC_HOW_TO_READ_YOUR_PRESCRIPTION_MODAL",
-        title: "How to read your prescription",
-        subtitle:
-        "If you have a prescription for eyeglasses, the prescription information will typically include the following:",
-        rightEye_name: " OD (Right Eye)",
-        rightEye_description:
-        'OD stands for "oculus dexter" which is Latin for "right eye".',
-        leftEye_name: " OS (Left Eye)",
-        leftEye_description:
-        'OS stands for "oculus sinister" which is Latin for “left eye”.',
-        sphere_name: "Sphere (SPH) - also known as Power (PWR)",
-        sphere_description:
-        "They mean the same thing: the strength of your prescription. If you're nearsighted you will have a minus (-) before your values, and if you’re or farsighted you will have a plus (+).",
-        cylinder_name: "Cylinder (CYL)",
-        cylinder_description:
-        "This is for people with astigmatism. This is when one part of the eye needs more correction than the rest. The Cylinder value is written with a minus (-) sign.",
-        axis_name: "Axis",
-        axis_description:
-        "This is only for people with astigmatism. The axis is a number between 0 and 180 and determines the orientation of the Cylinder (CYL).",
-        add_name: "Add",
-        add_description:
-        "This indicates the additional magnifying power that is added to the lens to correct presbyopia, a common age-related condition that affects near vision.",
-        infoText:
-        "If any of this information isn’t included in your prescription, you can leave the field blank.",
-        customerService:
-        "Not sure about something? Call our Customer Service experts",
-      },
-      {
-        id: "RXC_MANUAL_INPUT_READERS",
-      },
-      {
-        id: "RXC_PD_MODAL",
-      },
-      {
-        id: "RXC_PD_OPTY_MODAL",
-      },
-      {
-        id: "RXC_PRESCRIPTION_DETAILS_MODAL",
-        title: "Your prescription details",
-        edit: "Edit prescription",
-        sphere: "SPH",
-        cylinder: "CYL",
-        axis: "Axis",
-        add: "ADD",
-        pd: "PD",
-        od: "OD",
-        right: "Right",
-        left: "Left",
-        os: "OS",
-        vertical: "Vertical Prism (Δ)",
-        baseDirection: "Base Direction",
-        horizontal: "Horizontal Prism (Δ)",
-      },
-      {
-        id: "RXC_0_POWER_POPUP",
-        continueModal_titleNoAdd: "ARE YOU SURE YOU WANT TO CONTINUE?",
-        continueModal_messageNoAdd:
-        "Please make sure to enter the Addition (ADD) value if it is listed in your prescription, otherwise please proceed without.",
-        continueModal_continueNoAdd: "Continue without (add)",
-        continueModal_title: "Send prescription later",
-        continueModal_message:
-        "By clicking on continue, you will be skipping the prescription step. We’ll ask for it after your order, either by uploading it or having us call your doctor.",
-        continueModal_continue: "Yes, continue",
-        continueModal_cancel: "No, go back",
-        noPowerModal_title: "continue with non-prescription lenses",
-        noPowerModal_subtitle:
-        "You have not entered a prescription for your glasses. Would you like to proceed with non-prescription lenses?",
-        noPowerModal_continue: "yes, continue",
-        noPowerModal_cancel: "no, cancel",
-      },
-      {
-        id: "RXC_PRESCRIPTION_PANEL",
-        pupillaryDistanceSubtitle:
-        "You can select the default settings of 61 for women and 64 for men if you have an average or low prescription. If you have a strong prescription or if you want to know your exact Pupillary Distance, please ",
-        selectNewFrame: "Select new frame",
-        title: "Enter your prescription",
-        description:
-        "Insert the parameters you find on your prescription in the table below.",
-        rightEye_initials: "OD",
-        rightEye_name: "(Right)",
-        leftEye_initials: "OS",
-        leftEye_name: "(Left)",
-        sphere: "SPH (Sphere)",
-        cylinder: "CYL (Cylinder)",
-        axis: "Axis",
-        add: "Add",
-        selectPlaceholder: "None",
-        vertical: "Vertical (Δ)",
-        baseDirection: "Base Direction",
-        horizontal: "Horizontal (Δ)",
-        pupillaryDistance: "PD (Pupillary distance)",
-        pdLeft: "Left",
-        pdRight: "Right",
-        iHaveTwoPd: "I have 2 Pupillary Distance numbers",
-        commentsTitle: "Comments",
-        applyButton: "Continue",
-        applyButtonSave: "Save and continue",
-        howToRead: "How to read your prescription",
-        pupillaryDistanceWarningValue:
-        "Please input your pupillary distance, if you don’t have it you can use the default from the above or you can ",
-        pupillaryDistanceMisurePDAction: "measure your Pupillary Distance.",
-        pupillaryDistanceMisurePDActionHowToRead: "measure your PD",
-        pupillaryDistanceWarningTooltip: "Provide text for this tooltip",
-        moreOptions: "More options",
-        incompatibleFrame:
-        "We're sorry - the frames you’ve chosen aren't compatible with your prescription.<br/>Please select another style. Have questions? You can <a href='https?://www.glasses.com/gl-us/contact-us'>contact our Customer Service</a> team.",
-        incompatibleLenses:
-        "We're sorry, the prescription you've entered isn't compatible with our lenses offered online. Find a store near you or contact our <a href='https?://www.glasses.com/gl-us/contact-us'>Customer Service</a> team for more information.",
-        incompatibleLensTypeErrorSingle:
-        "You selected single vision lenses, but your saved prescription is for progressive lenses. We have updated your prescription below. Please check that it’s still valid.",
-        incompatibleLensTypeErrorProgressive:
-        "You selected progressive lenses, but your saved prescription is for single vision lenses. We have updated your prescription below. Please check that it’s still valid.",
-        clearAll: "clear all",
-        alerts_pdValueWarningDigitalOptometrySmaller:
-        "The selected Pupillary Distance is smaller than average, we suggest double checking your prescription. You can leave the default values written above or you can ",
-        alerts_pdValueWarningDigitalOptometryLarger:
-        "The selected Pupillary Distance is larger than average, we suggest double checking your prescription. You can leave the default values written above or you can ",
-        alerts_pdValueWarningSmaller:
-        "The selected Pupillary Distance is smaller than average, we suggest double checking your prescription.</b></br>You can leave the default setting of 63 which is the average measurement for adults.<br>If we need any more information about your prescription, one of our experts will be in touch.",
-        alerts_pdValueWarningLarger:
-        "The selected Pupillary Distance is larger than average, we suggest double checking your prescription.</b></br>You can leave the default setting of 63 which is the average measurement for adults.<br>If we need any more information about your prescription, one of our experts will be in touch.",
-        alerts_pdValueWarning2:
-        "The selected Pupillary Distance is smaller than average, we suggest double checking your prescription. If you don’t have the Pupillary Distance here .",
-        alerts_missingBaseDir: "Please choose the base direction for your prism",
-        alerts_missingPrismValues: "Please choose the prism value",
-        alerts_missingValues: "Complete the missing values",
-        alerts_incompatibleWithPrescriptionTitle:
-        "Sorry! The frame you’ve chosen isn’t compatible with your prescription",
-        alerts_incompatibleWithPackagesTitle:
-        "Sorry! The prescription you've chosen isn't compatible with any of our available lenses for this frame",
-        alerts_shopCompatible: "Shop compatible frames",
-        alerts_clearAll: "Clear all",
-        alerts_agreementTextMobile:
-        "By clicking this box, I confirm that the prescription values entered above are taken from a valid (not expired) prescription issued to me, signed by a licensed optometrist or ophthalmologist.",
-        alerts_axisRangeError:
-        "The AXIS values you’ve inserted are not correct! These values must be between 1 and 180.",
-        alerts_axisZeroError:
-        "The AXIS values you’ve inserted are not correct! If CYL value is higher or lower than 0,  AXIS values can’t be 0.",
-        alerts_sphPositiveNegativeWarning:
-        "You’ve inserted 1 positive and 1 negative value, which is very rare. <br>We suggest double checking your prescription. If this is correct, you can proceed.",
-        alerts_pdValueWarning:
-        "The selected Pupillary Distance is outside the normal range, we suggest double checking your prescription. You can leave the default setting of 63 which is the average measurement for adults. \nIf we need any more information about your prescription, one of our experts will be in touch.",
-        alerts_requiredToProceed: "This is required to proceed",
-        alerts_incompatibleWithPrescriptionBody:
-        "but don’t worry, compatible frames are available",
-        alerts_agreementText:
-        "By clicking this box, I confirm that the prescription values entered above are taken from a valid (not expired) prescription issued to me, signed by a licensed optometrist or ophthalmologist.",
-        digitalOptometry_title: "How to measure your Pupillary Distance",
-        digitalOptometry_appSubtitle:
-        "Your Pupillary Distance, or PD, is the distance in millimeters (mm) from the center of one pupil to the center of the other. It indicates exactly which part of the lens you look through, ensuring optimal comfort and clarity. You can measure with the app or manually.",
-        digitalOptometry_manuallySubtitle:
-        "Your Pupillary Distance, or PD, is the distance in millimeters (mm) from the center of one pupil to the center of the other. You can measure with the app or manually.",
-        digitalOptometry_toggle_app: "WITH THE APP",
-        digitalOptometry_toggle_manually: "MANUALLY",
-        digitalOptometry_opthyDesc:
-        "<b>Get your glasses just right with Opthy.</b><br/><p>Opthy measures your Pupillary Distance, allowing you to find the most comfortable, personalized fit.</p><p>App available on iPhone X and above.</p>",
-        digitalOptometry_manuallyContent:
-        "<div>If you want, you can measure your Pupillary Distance (PD) yourself by following these steps?:</div><ul><li>Grab a small ruler in one hand, and have your pencil and paper handy.</li><li>Now position yourself approximately 8 inches (20 cm) away from a mirror.</li><li>Close your left eye and align the 0 over the center of your right pupil.</li><li>Measure the distance from your right to your left pupil.</li><li>The number that lines up directly over your left pupil is your PD (an average PD for an adult ranges between 58 and 65).</li></ul>",
-        issueDate_label: "Issue date (MM/YYYY)",
-        issueDate_missingError: "Please insert date",
-        issueDate_formatError: "The date entered is not valid",
-        issueDate_tooltipText:
-        "Before submitting your prescription, please check the expiration date to make sure it is current and valid. We only accept prescriptions that have been issued within the last 2 years. By selecting the tick box and continuing below, you agree to our privacy policy and T&Cs.",
-        samePrescriptionBothEyesLabel: "Same prescription for both eyes",
-        addPrismValues: "My prescription includes prism values",
-        whatIsIt: "What is PD (Pupillary Distance)",
-        editTitle: "Edit your prescription",
-        withoutPrescriptionFromMyAccount:
-        "You don’t have a prescription saved in your account. Add your prescription below and save it for future purchases or go back and choose another method.",
-        californian_toggle: "Are you a California resident?",
-        californian_info:
-        "Please note that besides adding prescription values manually, California residents are also required to electronically transmit their valid prescription.",
-        californian_infoCMD:
-        "Please note that besides adding prescription values manually, <b>California residents are also required to electronically transmit their valid prescription</b>. Choose an option to proceed.",
-        californian_chooseTitle: "CHOOSE HOW TO SEND YOUR PRESCRIPTION",
-        californian_uploadTitle: "UPLOAD YOUR PRESCRIPTION",
-        californian_uploadDesc:
-        "We accept the following file formats?: .pdf, .png, .jpeg, .gif, .tiff, .bmp, .docx (max 10 MB) and IWork pages.",
-        californian_uploadButton: "Upload",
-        californian_callMyDoc: "CALL MY DOCTOR",
-        californian_callMyDocButton: "FIND YOUR DOCTOR",
-        californian_yes: "YES",
-        californian_no: "NO",
-        californian_modalMissingPrescription_title: "Missing prescription values",
-        californian_modalMissingPrescription_subtitle:
-        "If you don’t fill the values we won’t be able to suggest the right lens for you",
-        californian_modalMissingPrescription_bottonYes: "YES, CONTINUE",
-        californian_modalMissingPrescription_bottonNo: "NO, GO BACK",
-        proceedCheckbox:
-        "By clicking this box, I confirm that the prescription values entered above are taken from a unexpired written prescription issued to me, signed by a licensed optometrist or ophthalmologist.",
-        proceedCheckboxError: "Required to proceed",
-        savePrescriptionInAccount: "Save prescription in My Account",
-        newPrescriptionNameError: "Prescription name field cannot be empty",
-        prescriptionName: "Prescription name",
-      },
-      {
-        id: "RXC_CALL_MY_DOCTOR",
-      },
-      {
-        id: "RXC_UPLOAD_PRESCRIPTION",
-      },
-      {
-        id: "RXC_USE_SAVED_PRESCRIPTION",
-        title: "Select your prescription",
-        subtitle:
-        "Choose the preferred prescription and we’ll take care of the rest. \n Can’t find it?",
-        subtitleAdd: "Add a new prescription",
-        prescriptionName: "Prescription name",
-        addPrescriptionButton: "Add new prescription",
-        uploadedOn: "Last updated: ",
-        today: "Today",
-        yesterday: "Yesterday",
-        justUpdated: "Just updated",
-        olderThanYearBanner:
-        "This prescription was uploaded 1 year ago. Please check if it is still valid.",
-        showPrescription: "show prescription",
-      }
-    ];
-    
-    gblFlowId = "128";
-    
-    var flow_id_param = {
-      flow_id : gblFlowId
-    };
-    
-    var component_params = {
-      flow_id : gblFlowId,
-      section_type: null
-    };
-        
-    
-    const getJSONFlow = (flow_id_param) => new Promise((resolve, reject) => {
-      voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("FLOW_CustomQuery", {}, flow_id_param, (response) => {
-        voltmx.print ("### Service response: "+JSON.stringify(response));
-        voltmx.print("### RECORDS: " + JSON.stringify(response.records));
-        
-//       RECORDS: [{"channel_name":"RayBan","layout_id":"1","sizes_stepSection":"step size","layout_type":"type","category":"Eyeglasses","sizes_previewSection":"preview si","layout_previewImage":"image","isSupernova":"false"}]
-      
-        JSON_flow["channel"] = response.records[0].channel_name;
-        JSON_flow["category"] = response.records[0].category;
-        JSON_flow["isSupernova"] = response.records[0].isSupernova;
-        JSON_flow["layout"]["id"] = response.records[0].layout_id;
-        JSON_flow["layout"]["type"] = response.records[0].layout_type;
-        JSON_flow["layout"]["sizes"]["previewSection"] = response.records[0].sizes_previewSection;
-        JSON_flow["layout"]["sizes"]["stepSection"] = response.records[0].sizes_stepSection;
-        JSON_flow["layout"]["previewImage"] = response.records[0].layout_previewImage;
-
-        voltmx.print("### JSON FLOW: " + JSON.stringify(JSON_flow));
-      	resolve(JSON_flow);
-        
-      }, (error) => {
-        voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-        reject(error);
-      });
-    });
-    
-    JSON_flow = await getJSONFlow(flow_id_param);
-    
-      component_params["section_type"] = "previewSection";
-    
-      const getPreviewFlow = (component_params) => new Promise((resolve, reject) => {
-        voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("Components_CustomQuery", {}, component_params, (response) => {
-        voltmx.print ("### Service response: "+JSON.stringify(response));
-        voltmx.print("### RECORDS: " + JSON.stringify(response.records));
-        let component = {};
-        //       let records_test = [{"property_template_name":"position","component_template_name":"RXC_BRAND_FOOTER","property_value":"ciao"},{"property_template_name":"test","component_template_name":"RXC_BRAND_FOOTER","property_value":"test_value"}, {"property_template_name":"position","component_template_name":"RXC_BRAND_LOGO","property_value":"top-left"}, {"property_template_name":"position","component_template_name":"RXC_BRAND_IMAGE","property_value":"top-left"}];
-        response.records.forEach((record) => {
-          voltmx.print("### RECORD: " + JSON.stringify(record));
-          let uniqueKey = `${record.component_template_name}_${record.component_order}`;
-          if (!component[uniqueKey]) {
-            component[uniqueKey] = { id: record.component_template_name, properties: [] };
-          }
-          component[uniqueKey].properties.push({
-            name: record.property_template_name,
-            value: record.property_value
-          });      
-        });
-//         Object.values(component).forEach(item => JSON_preview["components"].push(item));
-          let componentsArrayPreview = Object.values(component).map(component_item => {
-            let transformedComponentPreview = {
-              id: component_item.id
-            };
-            // Aggiungi ciascuna proprietà come chiave diretta del componente
-            component_item.properties.forEach(prop => {
-              transformedComponentPreview[prop.name] = prop.value;
-            });
-            return transformedComponentPreview;
-          });
-          // Aggiungi l'array dei componenti a JSON_step_composition["components"]
-          JSON_preview["components"] = componentsArrayPreview;
-        voltmx.print("### JSON PREVIEW: " + JSON.stringify(JSON_preview["components"]));
-        resolve(JSON_preview);
-      }, (error) => {
-        voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-        reject(error);
-    });
-        
-      });
-    
-    JSON_preview = await getPreviewFlow(component_params);
-    
-    const getStepFlow = (flow_id_param) => new Promise((resolve, reject) => {
-    voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("STEP_flow_CustomQuery", {}, flow_id_param, (response) => {
-      voltmx.print ("### Service response: "+JSON.stringify(response));
-      voltmx.print("### RECORDS: " + JSON.stringify(response.records));
-      // Mappatura dei nomi delle chiavi dall'input a JSON_step_composition
-      const keyMapping = {
-        "order": "order",
-        "title": "title",
-        "autoproceed": "autoProceed",
-        "autoproceed_label": "autoProceedLabel",
-        "autoskip": "autoSkip",
-        "has_greyout": "hasGreyout",
-        "analytics_id": "analytics_ID"
-      };
-      // Mappatura dinamica dei valori
-      Object.keys(JSON_step_composition["definingAttributes"]).forEach(attr => {
-        // Trova la chiave corrispondente in input usando keyMapping
-        const inputKey = Object.keys(keyMapping).find(key => keyMapping[key] === attr);
-        // Assegna il valore dall'input, se esiste; altrimenti, lascia null
-        JSON_step_composition["definingAttributes"][attr] = response.records[0][inputKey] || null;
-      });
-      voltmx.print("### JSON STEP COMPOSITION: " + JSON.stringify(JSON_step_composition));
-      resolve(JSON_step_composition);
-    }, (error) => {
-      voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-    });
-    });
-                                                       
-    JSON_step_composition = await getStepFlow(flow_id_param);
-    
-    component_params["section_type"] = "stepSection";
-    const getSectionFlow = (component_params) => new Promise((resolve, reject) => {
-    voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("Components_CustomQuery", {}, component_params, (response) => {
-      voltmx.print ("### Service response: "+JSON.stringify(response));
-      voltmx.print("### RECORDS: " + JSON.stringify(response.records));
-      let component = {};
-//       let records_test = [{"property_template_name":"position","component_template_name":"RXC_BRAND_FOOTER","property_value":"ciao"},{"property_template_name":"test","component_template_name":"RXC_BRAND_FOOTER","property_value":"test_value"}, {"property_template_name":"position","component_template_name":"RXC_BRAND_LOGO","property_value":"top-left"}, {"property_template_name":"position","component_template_name":"RXC_BRAND_IMAGE","property_value":"top-left"}];
-      response.records.forEach((record) => {
-      	voltmx.print("### RECORD: " + JSON.stringify(record));
-        let uniqueKey = `${record.component_template_name}_${record.component_order}`;
-        if (!component[uniqueKey]) {
-            component[uniqueKey] = { id: record.component_template_name, order: parseInt(record.component_order, 10), properties: [] };
-        }
-        component[uniqueKey].properties.push({
-          name: record.property_template_name,
-          value: record.property_value
-        });      
-      });
-//       Object.values(component).forEach(item => JSON_step_composition["components"].push(item));
-      // Trasforma l'oggetto dei componenti in un array e aggiusta la struttura secondo le esigenze
-      let componentsArray = Object.values(component).map(component_item => {
-        let transformedComponent = {
-          id: component_item.id,
-          order: component_item.order
-        };
-        // Aggiungi ciascuna proprietà come chiave diretta del componente
-        component_item.properties.forEach(prop => {
-          transformedComponent[prop.name] = prop.value;
-        });
-        return transformedComponent;
-      });
-      // Aggiungi l'array dei componenti a JSON_step_composition["components"]
-      JSON_step_composition["components"] = componentsArray;
-      
-      voltmx.print("### JSON STEP COMPOSITION: " + JSON.stringify(JSON_step_composition["components"]));
-      JSON_step["steps"].push(JSON_step_composition);
-      resolve(JSON_step);
-    }, (error) => {
-      voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-    });
-    });
-    
-    JSON_step = await getSectionFlow(component_params);
-    
-    
-    var JSON_output = {
-      definingAttributes: JSON_flow,
-      previewSection: JSON_preview,
-      stepSection: JSON_step,
-      defaultComponents: JSON_default
-    };
-
-    voltmx.print("### JSON OUTPUT: " + JSON.stringify(JSON_output));
-    
-    
-    
-  }
-  */
-
-
-
-
-
-
+  
+  
+  
+  
+  
+  
 });

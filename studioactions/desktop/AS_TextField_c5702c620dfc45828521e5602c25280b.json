@@ -1,0 +1,27 @@
+{
+    "AS_TextField_c5702c620dfc45828521e5602c25280b": {
+        "id": "AS_TextField_c5702c620dfc45828521e5602c25280b",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onEndEditing",
+        "actions": [{
+            "id": "ADD_SNIPPET_a0ac0748e88549faaf5d2c8e57dfbb8d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblCurrentStepTitle = this.view.txtStepTitle.text;",
+            "parentId": null
+        }]
+    }
+}

@@ -55,9 +55,9 @@
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepComposition",
-            "widgetId": "flxBoxFirstStep",
+            "widgetId": "flxBoxPlus",
             "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
-            "widgetKUID": "ed506658078f4b6684761ecf8bbf0f35",
+            "widgetKUID": "ea6dceaeab5f4c67aa135a70e77f7f91",
             "wType": "FlexContainer",
             "animationObject": {
                 "left": "19%",
@@ -79,7 +79,7 @@
             "forkedPlatform": "all",
             "parentId": "_g55a23df86e148aca34fae8a36d7e072",
             "callbackType": null,
-            "widgetPath": "this.view.flxBoxFirstStep"
+            "widgetPath": "this.view.flxBoxPlus"
         }, {
             "id": "_fe73a8016d034b9fa2152732344c4d41",
             "type": "ELSE_CONDITION",
@@ -139,9 +139,9 @@
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepComposition",
-            "widgetId": "flxBoxFirstStep",
+            "widgetId": "flxBoxPlus",
             "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
-            "widgetKUID": "ed506658078f4b6684761ecf8bbf0f35",
+            "widgetKUID": "ea6dceaeab5f4c67aa135a70e77f7f91",
             "wType": "FlexContainer",
             "animationObject": {
                 "left": "51%",
@@ -163,7 +163,51 @@
             "forkedPlatform": "all",
             "parentId": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
             "callbackType": "Callback",
+            "widgetPath": "this.view.flxBoxPlus"
+        }, {
+            "id": "MOVE_ACTION_jf88785d7d4d407b9d7b0d04c9fc6b7e",
+            "type": "MOVE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxBoxFirstStep",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "ed506658078f4b6684761ecf8bbf0f35",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "left": "67%",
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                }
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "500"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
+            "animationId": "MOVE_ACTION_jf88785d7d4d407b9d7b0d04c9fc6b7e",
+            "displayAnimationId": "MOVE_ACTION_jf88785d7d4d407b9d7b0d04c9fc6b7e",
+            "forkedPlatform": "all",
+            "parentId": "MOVE_ACTION_cbbb198d96c44a47bdcba5dc4d8ee6b3",
+            "callbackType": "Callback",
+            "disabled": false,
             "widgetPath": "this.view.flxBoxFirstStep"
+        }, {
+            "id": "ADD_SNIPPET_a8c95b05209c4a35b59ccd7c9d4ffba5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "let steps_widgets = self.view.flxSteps.widgets();\nlet left_position = 0;\nlet left_position_percentage = null;\nvoltmx.print(\"### FLEX STEPS NUMBER OF WIDGETS: \" + JSON.stringify(steps_widgets.length));\n  \nfor (let i = 2; i < steps_widgets.length; i++) {\n  let widget = steps_widgets[i];\n  if (widget.id === \"boxStep2\"){\n    left_position = parseInt(self.view.flxBoxFirstStep.left, 10) + parseInt(self.view.flxBoxFirstStep.width, 10) + 2;\n    left_position_percentage = left_position + \"%\";\n\n  } else {\n    let previous_widget = steps_widgets[i-1];\n    left_position = parseInt(previous_widget.left, 10) + parseInt(previous_widget.width, 10) + 2;\n    left_position_percentage = left_position + \"%\";\n  }\n  let animationDef = {\n    \"0\": {\n      \"left\": widget.left\n    },\n    \"100\": {\n      \"left\": left_position_percentage\n    }\n  };\n  let animDef = voltmx.ui.createAnimation(animationDef);\n  widget.animate(animDef, {\n    \"duration\": 0.5,\n    \"iterationCount\": 1,\n    \"delay\": 0,\n    \"fillMode\": voltmx.anim.FILL_MODE_FORWARDS\n  });\n}  \n\n\n",
+            "parentId": "MOVE_ACTION_jf88785d7d4d407b9d7b0d04c9fc6b7e",
+            "callbackType": "Callback"
+        }, {
+            "id": "ADD_SNIPPET_a2b989dbedf74cfbb290e137ddb593e7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "debugger;\nlet left_position_last = parseInt(lastWidget.left, 10) + parseInt(lastWidget.width, 10) + 2;\nlet left_position_percentage_last = left_position_last + \"%\";\nlet animationDefPlus = {\n  \"0\": {\n    \"left\": self.view.flxBoxPlus.left\n  },\n  \"100\": {\n    \"left\": left_position_percentage_last\n  }\n};\nlet animDefPlus = voltmx.ui.createAnimation(animationDefPlus);\nself.view.flxBoxPlus.animate(animDefPlus, {\n  \"duration\": 0.5,\n  \"iterationCount\": 1,\n  \"delay\": 0,\n  \"fillMode\": voltmx.anim.FILL_MODE_FORWARDS\n});    ",
+            "parentId": "MOVE_ACTION_cbbb198d96c44a47bdcba5dc4d8ee6b3",
+            "callbackType": "Callback",
+            "disabled": true
         }, {
             "id": "SCALE_ACTION_de6b47ad6de543ba8f6596aa75e41bee",
             "type": "SCALE_ACTION",
@@ -199,36 +243,6 @@
             "parentId": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
             "callbackType": "Callback",
             "widgetPath": "this.view.flxLeftSide"
-        }, {
-            "id": "MOVE_ACTION_jf88785d7d4d407b9d7b0d04c9fc6b7e",
-            "type": "MOVE_ACTION",
-            "itemType": "FORM",
-            "itemId": "frmStepComposition",
-            "widgetId": "flxBoxPlus",
-            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
-            "widgetKUID": "ea6dceaeab5f4c67aa135a70e77f7f91",
-            "wType": "FlexContainer",
-            "animationObject": {
-                "left": "2%",
-                "anchorPoint": {},
-                "stepConfig": {
-                    "timingFunction": "kony.anim.EASE"
-                }
-            },
-            "config": {
-                "delay": "0",
-                "iterationCount": 1,
-                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "250"
-            },
-            "start": "Immediately",
-            "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
-            "animationId": "MOVE_ACTION_jf88785d7d4d407b9d7b0d04c9fc6b7e",
-            "displayAnimationId": "MOVE_ACTION_jf88785d7d4d407b9d7b0d04c9fc6b7e",
-            "forkedPlatform": "all",
-            "parentId": "MOVE_ACTION_cbbb198d96c44a47bdcba5dc4d8ee6b3",
-            "callbackType": "Callback",
-            "widgetPath": "this.view.flxBoxPlus"
         }, {
             "id": "ADD_SNIPPET_h92c6748836c455099250a4457824e13",
             "type": "ADD_SNIPPET",
@@ -322,12 +336,12 @@
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepComposition",
-            "widgetId": "flxBoxPlus",
+            "widgetId": "flxBoxFirstStep",
             "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
-            "widgetKUID": "ea6dceaeab5f4c67aa135a70e77f7f91",
+            "widgetKUID": "ed506658078f4b6684761ecf8bbf0f35",
             "wType": "FlexContainer",
             "animationObject": {
-                "left": "2%",
+                "left": "35%",
                 "anchorPoint": {},
                 "stepConfig": {
                     "timingFunction": "kony.anim.EASE"
@@ -346,7 +360,52 @@
             "forkedPlatform": "all",
             "parentId": "MOVE_ACTION_e06380ff5be441ba8db1461fb2a3ad17",
             "callbackType": "Callback",
+            "disabled": false,
+            "widgetPath": "this.view.flxBoxFirstStep"
+        }, {
+            "id": "ADD_SNIPPET_d65ace6656d64b5782df8356de2885a1",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "let steps_widgets = self.view.flxSteps.widgets();\nlet left_position = 0;\nlet left_position_percentage = null;\nvoltmx.print(\"### FLEX STEPS NUMBER OF WIDGETS: \" + JSON.stringify(steps_widgets.length));\n\n\n\nfor (let i = 2; i < steps_widgets.length; i++) {\n  let widget = steps_widgets[i];\n  if (widget.id === \"boxStep2\"){\n    left_position = parseInt(self.view.flxBoxFirstStep.left, 10) + parseInt(self.view.flxBoxFirstStep.width, 10) + 2;\n    left_position_percentage = left_position + \"%\";\n  } else {\n    let previous_widget = steps_widgets[i-1];\n    left_position = parseInt(previous_widget.left, 10) + parseInt(previous_widget.width, 10) + 2;\n    left_position_percentage = left_position + \"%\"; \n  }\n  let animationDef = {\n    \"0\": {\n      \"left\": widget.left\n    },\n    \"100\": {\n      \"left\": left_position_percentage\n    }\n  };\n  let animDef = voltmx.ui.createAnimation(animationDef);\n  widget.animate(animDef, {\n    \"duration\": 0.5,\n    \"iterationCount\": 1,\n    \"delay\": 0,\n    \"fillMode\": voltmx.anim.FILL_MODE_FORWARDS\n  });\n}\n\n\n",
+            "parentId": "MOVE_ACTION_dd5cd71148034ab281bd84caf8887e40",
+            "callbackType": "Callback"
+        }, {
+            "id": "MOVE_ACTION_jec0e3346c2342be90e0e101e971f8a1",
+            "type": "MOVE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxBoxPlus",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "ea6dceaeab5f4c67aa135a70e77f7f91",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "right": "1%",
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                }
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "500"
+            },
+            "start": "Immediately",
+            "parentAnimation": "MOVE_ACTION_e06380ff5be441ba8db1461fb2a3ad17",
+            "animationId": "MOVE_ACTION_jec0e3346c2342be90e0e101e971f8a1",
+            "displayAnimationId": "MOVE_ACTION_jec0e3346c2342be90e0e101e971f8a1",
+            "forkedPlatform": "all",
+            "parentId": "MOVE_ACTION_e06380ff5be441ba8db1461fb2a3ad17",
+            "callbackType": "Callback",
+            "disabled": true,
             "widgetPath": "this.view.flxBoxPlus"
+        }, {
+            "id": "ADD_SNIPPET_aec649c8a0f944d1bb9e166b16f80e27",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "debugger;\nlet left_position_last = parseInt(lastWidget.left, 10) + parseInt(lastWidget.width, 10) + 2;\nlet left_position_percentage_last = left_position_last + \"%\";\nlet animationDefPlus = {\n  \"0\": {\n    \"left\": self.view.flxBoxPlus.left\n  },\n  \"100\": {\n    \"left\": left_position_percentage_last\n  }\n};\nlet animDefPlus = voltmx.ui.createAnimation(animationDefPlus);\nself.view.flxBoxPlus.animate(animDefPlus, {\n  \"duration\": 0.5,\n  \"iterationCount\": 1,\n  \"delay\": 0,\n  \"fillMode\": voltmx.anim.FILL_MODE_FORWARDS\n});     ",
+            "parentId": "MOVE_ACTION_e06380ff5be441ba8db1461fb2a3ad17",
+            "callbackType": "Callback",
+            "disabled": true
         }, {
             "id": "ADD_SNIPPET_i6751ba4d24846809c463f419b2753df",
             "type": "ADD_SNIPPET",

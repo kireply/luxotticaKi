@@ -11,7 +11,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "acc09190429e41469bdb905345431ec5",
+                    "kuid": "h3b13e8c4545478eb62cd28df809f5f7",
                     "originalPropertyKey": "onRowClick",
                     "propertyIndex": 1,
                     "propertyKey": "onRowClickTeaser",
@@ -25,6 +25,82 @@
                         "wType": "Segment"
                     },
                     "srcWgtKUID": "j772813d0b8f4ced83bedd8c9f0c59aa",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "g06763d0af5f4bf3b77c331486d5670b",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 2,
+                    "propertyKey": "onClickUp",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onClickUp",
+                        "srcWidget": "flxArrowUp",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "eb54e72409254617bf623ca4cb12affc",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "jf54110653764a68a4f803d154960219",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 3,
+                    "propertyKey": "onClickDown",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onClickDown",
+                        "srcWidget": "flxArrowDown",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g3e1ab7f71ee4f48a5a6e59c953a5290",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "ec50a2cae1a04119b0008d4f435a51c6",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 4,
+                    "propertyKey": "onClickClone",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onClickClone",
+                        "srcWidget": "flxClone",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "b96b3e253ef44bdda1fc3f1f7198a794",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "bcad3471e22449429f5e84c0b39bec7c",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 5,
+                    "propertyKey": "onClickDelete",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onClickDelete",
+                        "srcWidget": "flxDelete",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "b608fb20cd9c44c6bb6546b1051f68df",
                     "translateAtInstance": false
                 }
             ]
@@ -139,6 +215,90 @@
                         "wType": "Label"
                     },
                     "srcWgtKUID": "i4033d7b536c4d9891e20ecf39a7d5e3"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "f0d38905c13a4554afc868a8f0962608",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 6,
+                    "propertyKey": "cloneDeleteVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "cloneDeleteVisible",
+                        "isHiddenInTool": false,
+                        "srcWidget": "flxCommands",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "ffa0ec0a068d42c48399698d69a3f650"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "c57eaa28b59e461b9392d12c34ad0a7c",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 7,
+                    "propertyKey": "arrowUpVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "arrowUpVisible",
+                        "isHiddenInTool": false,
+                        "srcWidget": "flxArrowUp",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "eb54e72409254617bf623ca4cb12affc"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "f0232181550941ea9d7de9486717da98",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 8,
+                    "propertyKey": "arrowDownVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "arrowDownVisible",
+                        "isHiddenInTool": false,
+                        "srcWidget": "flxArrowDown",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g3e1ab7f71ee4f48a5a6e59c953a5290"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "a56ce27aa5034b9a8e28adf42703fefc",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 9,
+                    "propertyKey": "flxMoveVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "flxMoveVisible",
+                        "isHiddenInTool": false,
+                        "srcWidget": "flxMove",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "b83cb42971e94476b83609ca4aa1e8fb"
                 }
             ]
         },

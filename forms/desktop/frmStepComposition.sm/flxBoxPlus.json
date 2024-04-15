@@ -6,7 +6,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "2%"
+        "value": "51%"
     },
     "_margin_": [
         0,
@@ -45,6 +45,7 @@
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxBoxPlus",
+    "ide_onClick": "AS_FlexContainer_eb532aaab75b486c8b59ae3c34accad0",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

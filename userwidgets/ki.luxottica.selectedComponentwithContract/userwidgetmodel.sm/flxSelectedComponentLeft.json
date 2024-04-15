@@ -6,11 +6,11 @@
     },
     "_height_": {
         "type": "string",
-        "value": "90%"
+        "value": "95%"
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "10dp"
     },
     "_margin_": [
         0,
@@ -29,7 +29,7 @@
     "_skin_": "see2b7e3c73e48c2a5feb846f5949dbc",
     "_width_": {
         "type": "string",
-        "value": "50%"
+        "value": "37.74%"
     },
     "allboxes": [],
     "autogrowmode": 0,

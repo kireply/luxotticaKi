@@ -4,7 +4,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "30%"
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -21,27 +25,23 @@
     "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
     "_src_": "arrow_up_modified.png",
     "_top_": {
-        "type": "number",
-        "value": "0"
+        "type": "string",
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "80%"
+        "value": "100%"
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerweight": 100,
     "id": "imgArrowUp",
     "imagescalemode": 1,
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "f301fd27488c4dd29fc09b7cb8d85346",
+    "kuid": "f230e775b0d244bab5ac3f52300f2278",
     "name": "kony.ui.Image2",
-    "parent": "flxMove",
+    "parent": "flxArrowUp",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

@@ -4,7 +4,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "30%"
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -22,26 +26,22 @@
     "_src_": "arrow_down_modified.png",
     "_top_": {
         "type": "string",
-        "value": "70%"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "80%"
+        "value": "100%"
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerweight": 100,
     "id": "imgArrowDown",
     "imagescalemode": 1,
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d4a7e72b633b467994008b61426b471e",
+    "kuid": "c0fbf6b9644b48b29c0204bf315f4fef",
     "name": "kony.ui.Image2",
-    "parent": "flxMove",
+    "parent": "flxArrowDown",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "90%"
+        "value": "95%"
     },
     "_left_": {
         "type": "string",
-        "value": "50%"
+        "value": "38.52%"
     },
     "_margin_": [
         0,
@@ -25,7 +25,7 @@
     "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_width_": {
         "type": "string",
-        "value": "50%"
+        "value": "60.09%"
     },
     "allboxes": [],
     "autogrowmode": 0,
