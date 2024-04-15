@@ -47,7 +47,7 @@
     "id": "flxArrowUp",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "eb54e72409254617bf623ca4cb12affc",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",

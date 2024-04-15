@@ -42,142 +42,82 @@ define({
       //          voltmx.print("### RIGHT DATA SELECTED COMPONENT: " + JSON.stringify(selectedComp.rightData));
 
       props = selectedComp.rightData;
-      props.forEach(item => {
-        let propComp = null;
-        let searchKey = selectedComp.leftData[0].lblComponentName + instance + (gblCurrentStepOrder).toString();
-        const found = this.modes[searchKey].find(element => element.name === item.lblPropertyName); //found = {name: mode}
-        debugger;
-        if (found.mode === "dropdown"){
-          propComp = new ki.luxottica.editPropertyValuewithDropdown({
-            id: `prop${new Date().getTime()}`,
-            top: '2%',
-            centerX: '50%'
-          }, {}, {});
-          propComp.listBoxMasterData = found.masterData;
-          if (found.default !== null){
-            propComp.listBoxPropertyValue.selectedKey = found.default;  
+//       let searchKey = selectedComp.leftData[0].lblComponentName + instance + (gblCurrentStepOrder).toString();
+      let searchKey = selectedComp.leftData[0].lblComponentName;
+      let foundComponentConfig = Object.keys(this.modes).find(key => key.startsWith(searchKey));
+      if (foundComponentConfig) {
+        props.forEach(item => {
+          let propComp = null;
+          const found = this.modes[foundComponentConfig].find(element => element.name === item.lblPropertyName); //found = {name: mode}
+          if (found.mode === "dropdown"){
+            propComp = new ki.luxottica.editPropertyValuewithDropdown({
+              id: `prop${new Date().getTime()}`,
+              top: '2%',
+              centerX: '50%'
+            }, {}, {});
+            propComp.listBoxMasterData = found.masterData;
+            if (found.default !== null){
+              propComp.listBoxPropertyValue.selectedKey = found.default;  
+            } else {
+              propComp.listBoxPropertyValue.selectedKey = found.masterData[0][0];
+            }
+            propComp.onSelection = () => {
+              let identify = selectedComp.id;
+              this.onEndEditingCallback(propComp, identify, true, false);
+            }
+          } else if (found.mode === "label") {
+            propComp = new ki.luxottica.editPropertyValuewithTextField({
+              id: `prop${new Date().getTime()}`,
+              top: '2%',
+              centerX: '50%'
+            }, {}, {});
+            //           gblFlowId = 128;
+            let label_key = item.lblPropertyValue;
+            propComp.propertyValue = label_key;
+            propComp.txtPropertyValueTextField.setEnabled(false);
+          } else if (found.mode === "switch") {
+            propComp = new ki.luxottica.editPropertyValuewithSwitch({
+              id: `prop${new Date().getTime()}`,
+              top: '2%',
+              centerX: '50%'
+            }, {}, {});
+            propComp.onSlide = () => {
+              let identify = selectedComp.id;
+              this.onEndEditingCallback(propComp, identify, false, true);
+            };	  
           } else {
-            propComp.listBoxPropertyValue.selectedKey = found.masterData[0][0];
+            propComp = new ki.luxottica.editPropertyValuewithTextField({
+              id: `prop${new Date().getTime()}`,
+              top: '2%',
+              centerX: '50%'
+            }, {}, {});
+            propComp.onEndEditing = () => {
+              let identify = selectedComp.id;
+              this.onEndEditingCallback(propComp, identify, false, false);
+            }
           }
-          propComp.onSelection = () => {
-            let identify = selectedComp.id;
-            this.onEndEditingCallback(propComp, identify, true, false);
-          }
-        } else if (found.mode === "label") {
-          propComp = new ki.luxottica.editPropertyValuewithTextField({
-            id: `prop${new Date().getTime()}`,
-            top: '2%',
-            centerX: '50%'
-          }, {}, {});
-//           gblFlowId = 128;
-          let label_key = item.lblPropertyValue;
-          propComp.propertyValue = label_key;
-          propComp.txtPropertyValueTextField.setEnabled(false);
-        } else if (found.mode === "switch") {
-          propComp = new ki.luxottica.editPropertyValuewithSwitch({
-            id: `prop${new Date().getTime()}`,
-            top: '2%',
-            centerX: '50%'
-          }, {}, {});
-          propComp.onSlide = () => {
-            let identify = selectedComp.id;
-            this.onEndEditingCallback(propComp, identify, false, true);
-          };	  
-        } else {
-          propComp = new ki.luxottica.editPropertyValuewithTextField({
-            id: `prop${new Date().getTime()}`,
-            top: '2%',
-            centerX: '50%'
-          }, {}, {});
-          propComp.onEndEditing = () => {
-            let identify = selectedComp.id;
-            this.onEndEditingCallback(propComp, identify, false, false);
-          }
-        }
-        propComp.propertyName = item.lblPropertyName;
-        this.view.settingsSide.flxScrollSettingsContent.add(propComp);
-      });
+          propComp.propertyName = item.lblPropertyName;
+          this.view.settingsSide.flxScrollSettingsContent.add(propComp);
+        });
+      }
       
-      selectedComp.arrowsVisible = true;
-      selectedComp.cloneDeleteVisible = true;
+      this.showOrHideMoveCloneDelete(selectedComp);
+      
     };
     
     selectedComp.onClickUp = () => {
-      let scroll_widgets = null;
-      let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
-      let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
-      // initially I have to understand in which flex I am
-      // if I am in the left side
-      if (left_width > 48) {
-        scroll_widgets = this.view.flxScrollLeft.widgets();
-      }
-      // if I am in the right side
-      if (right_width > 48){
-        if (gblCurrentStepOrder === 1){
-          scroll_widgets = this.view.flxScrollRight.widgets();
-        } else {
-          let right_widgets = this.view.flxRightSide.widgets();
-          // find the current flex
-          let targetWidget = right_widgets.find(widget => widget.id === "flxScrollRight" + gblCurrentStepOrder);
-          if (targetWidget){
-            scroll_widgets = targetWidget.widgets();
-          }
-        }
-      }
-      
-      // find the current widget index
-      let currentWidgetIndex = scroll_widgets.findIndex(widget => widget.hasOwnProperty(selectedComp.id));
-      let currentWidgetProperty = null;
-      let previousWidgetProperty = null;
-      if (currentWidgetIndex !== -1) {
-        // obtain the currrent widget from the previously find index
-        let currentWidget = scroll_widgets[currentWidgetIndex];
-        // obtain the associated property
-        currentWidgetProperty = currentWidget[selectedComp.id];
-
-        // obtain the previous widget
-        let previousWidget = currentWidgetIndex > 0 ? scroll_widgets[currentWidgetIndex - 1] : null;
-        let previousWidgetKey = Object.keys(previousWidget).find(key => key.startsWith("component"));
-        if (previousWidgetKey) {
-            previousWidgetProperty = previousWidget[previousWidgetKey];
-        }
-//         console.log("Found Widget:", currentWidget);
-//         console.log("Previous Widget:", previousWidget);
-      } else {
-        console.log("Widget non trovato.");
-      }
-      
-      let currentLeftData = currentWidgetProperty.leftData;
-      let currentRightData = currentWidgetProperty.rightData;
-      let currentOrder = currentWidgetProperty.componentOrder;
-      
-      let previousLeftData = previousWidgetProperty.leftData;
-      let previousRightData = previousWidgetProperty.rightData;
-      let previousOrder = previousWidgetProperty.componentOrder;
-      
-      previousWidgetProperty.leftData = currentLeftData;
-      previousWidgetProperty.rightData = currentRightData;
-      previousWidgetProperty.componentOrder = currentOrder;
-      
-      currentWidgetProperty.leftData = previousLeftData;
-      currentWidgetProperty.rightData = previousRightData;
-      currentWidgetProperty.componentOrder = previousOrder;
-      
-      selectedComp.arrowsVisible = false;
-      selectedComp.cloneDeleteVisible = false;
-      
-      this.view.settingsSide.flxScrollSettingsContent.removeAll();
-      this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
-      this.view.settingsSide.txt.setVisibility(true);
-      
+      this.clickedArrow("up", selectedComp);
     };
+    
+    selectedComp.onClickDown = () => {
+      this.clickedArrow("down", selectedComp);
+    }
 
     selectedComp.flxSelectedComponentLeft.segmentLeft.setData(leftData);
     selectedComp.flxSelectedComponentRight.segmentRight.setData(rightData);
     //       selectedComp.componentOrder = gblOrder.toString();
 //     selectedComp.componentId = this.component_instance_id;
-
-
+    
     flex.add(selectedComp);      
 
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
@@ -218,6 +158,8 @@ define({
       selectedComp.componentOrder = instance;
       
     }
+    
+    this.showOrHideMoveCloneDelete(selectedComp);
 
   },
 
@@ -377,7 +319,7 @@ define({
       }
     }
     
-    let compKey = selected_item + instance + (gblCurrentStepOrder).toString();
+    let compKey = selected_item + "_" + instance + "_" + (gblCurrentStepOrder).toString();
     this.modes[compKey] = [];
 	
     const position_masterData = {
@@ -862,13 +804,197 @@ define({
     this.view.settingsSide.flxScrollSettingsContent.removeAll();
     this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
     this.view.settingsSide.txt.setVisibility(true);
+  },
+  
+  findTheCurrentFlexScroll: function(){
+    let scroll_widgets = null;
+    let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
+    let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
+    // initially I have to understand in which flex I am
+    // if I am in the left side
+    if (left_width > 48) {
+      scroll_widgets = this.view.flxScrollLeft.widgets();
+    }
+    // if I am in the right side
+    if (right_width > 48){
+      if (gblCurrentStepOrder === 1){
+        scroll_widgets = this.view.flxScrollRight.widgets();
+      } else {
+        let right_widgets = this.view.flxRightSide.widgets();
+        // find the current flex
+        let targetWidget = right_widgets.find(widget => widget.id === "flxScrollRight" + gblCurrentStepOrder);
+        if (targetWidget){
+          scroll_widgets = targetWidget.widgets();
+        }
+      }
+    }
+    
+    return scroll_widgets
+  }, 
+  
+  clickedArrow: function(direction, selectedComp){
+    let scroll_widgets = this.findTheCurrentFlexScroll();
+
+    // find the current widget index
+    let currentWidgetIndex = scroll_widgets.findIndex(widget => widget.hasOwnProperty(selectedComp.id));
+    let currentWidgetProperty = null;
+    let previousWidgetProperty = null;
+    let nextWidgetProperty = null;
+    if (currentWidgetIndex !== -1) {
+      // obtain the currrent widget from the previously find index
+      let currentWidget = scroll_widgets[currentWidgetIndex];
+      // obtain the associated property
+      currentWidgetProperty = currentWidget[selectedComp.id];
+	  
+      if (direction === "up"){
+        // obtain the previous widget
+        let previousWidget = currentWidgetIndex >= 0 ? scroll_widgets[currentWidgetIndex - 1] : null;
+        let previousWidgetKey = Object.keys(previousWidget).find(key => key.startsWith("component"));
+        if (previousWidgetKey) {
+          previousWidgetProperty = previousWidget[previousWidgetKey];
+        } 
+      } else {
+        // obtain the next widget
+        debugger;
+        let nextWidget = currentWidgetIndex >= 0 ? scroll_widgets[currentWidgetIndex + 1] : null;
+        let nextWidgetKey = Object.keys(nextWidget).find(key => key.startsWith("component"));
+        if (nextWidgetKey) {
+          nextWidgetProperty = nextWidget[nextWidgetKey];
+        }
+      }
+      //         console.log("Found Widget:", currentWidget);
+      //         console.log("Previous Widget:", previousWidget);
+    } else {
+      console.log("Widget non trovato.");
+    }
+
+    let currentLeftData = currentWidgetProperty.leftData;
+    let currentRightData = currentWidgetProperty.rightData;
+    let currentOrder = currentWidgetProperty.componentOrder;
+    if (direction === "up"){
+      // swapping data between previous and current components
+      let previousLeftData = previousWidgetProperty.leftData;
+      let previousRightData = previousWidgetProperty.rightData;
+      let previousOrder = previousWidgetProperty.componentOrder;
+      
+      // changing last inserted component name
+      if (currentLeftData[0].lblComponentName === gblLastInsertedComponent){
+         gblLastInsertedComponent = previousLeftData[0].lblComponentName;
+      }
+
+      // adjusting keys for label properties
+      currentRightData.forEach(item => {
+        // using a regex to check format with at least three underscores
+        if (/^[^_]+_.*_.*_.*$/.test(item.lblPropertyValue)) {
+          let parts = item.lblPropertyValue.split('_');
+          if (parts.length >= 4) {
+            // edit the second last element
+            parts[parts.length - 2] = previousOrder;
+            // recompose the modified string
+            item.lblPropertyValue = parts.join('_');
+          }
+        }
+      });
+
+      // adjusting keys for label properties
+      previousRightData.forEach(item => {
+        // using a regex to check format with at least three underscores
+        if (/^[^_]+_.*_.*_.*$/.test(item.lblPropertyValue)) {
+          let parts = item.lblPropertyValue.split('_');
+          if (parts.length >= 4) {
+            // edit the second last element
+            parts[parts.length - 2] = currentOrder;
+            // recompose the modified string
+            item.lblPropertyValue = parts.join('_');
+          }
+        }
+      });
+
+      previousWidgetProperty.leftData = currentLeftData;
+      previousWidgetProperty.rightData = currentRightData;
+
+      currentWidgetProperty.leftData = previousLeftData;
+      currentWidgetProperty.rightData = previousRightData;  
+    } else {
+      // swapping data between next and current components
+      let nextLeftData = nextWidgetProperty.leftData;
+      let nextRightData = nextWidgetProperty.rightData;
+      let nextOrder = nextWidgetProperty.componentOrder;
+      
+      // changing last inserted component name
+      if (nextLeftData[0].lblComponentName === gblLastInsertedComponent){
+         gblLastInsertedComponent = currentLeftData[0].lblComponentName;
+      }
+
+      // adjusting keys for label properties
+      currentRightData.forEach(item => {
+        // using a regex to check format with at least three underscores
+        if (/^[^_]+_.*_.*_.*$/.test(item.lblPropertyValue)) {
+          let parts = item.lblPropertyValue.split('_');
+          if (parts.length >= 4) {
+            // edit the second last element
+            parts[parts.length - 2] = nextOrder;
+            // recompose the modified string
+            item.lblPropertyValue = parts.join('_');
+          }
+        }
+      });
+
+      // adjusting keys for label properties
+      nextRightData.forEach(item => {
+        // using a regex to check format with at least three underscores
+        if (/^[^_]+_.*_.*_.*$/.test(item.lblPropertyValue)) {
+          let parts = item.lblPropertyValue.split('_');
+          if (parts.length >= 4) {
+            // edit the second last element
+            parts[parts.length - 2] = currentOrder;
+            // recompose the modified string
+            item.lblPropertyValue = parts.join('_');
+          }
+        }
+      });
+
+      nextWidgetProperty.leftData = currentLeftData;
+      nextWidgetProperty.rightData = currentRightData;
+
+      currentWidgetProperty.leftData = nextLeftData;
+      currentWidgetProperty.rightData = nextRightData;
+    }
+
+    // graphic stuffs
+    selectedComp.arrowUpVisible = false;
+    selectedComp.arrowDownVisible = false;
+    selectedComp.flxMoveVisible = false;
+    selectedComp.cloneDeleteVisible = false;
+    this.view.settingsSide.flxScrollSettingsContent.removeAll();
+    this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
+    this.view.settingsSide.txt.setVisibility(true);
+  },
+  
+  showOrHideMoveCloneDelete: function(selectedComp){
+    if (selectedComp.componentOrder === "1"){
+        selectedComp.arrowDownVisible = true;
+      } else if (selectedComp.leftData[0].lblComponentName === gblLastInsertedComponent){
+        selectedComp.arrowUpVisible = true;
+      } else {
+        selectedComp.arrowUpVisible = true;
+        selectedComp.arrowDownVisible = true;
+      }
+      
+      selectedComp.flxMoveVisible = true;
+      selectedComp.cloneDeleteVisible = true;
+      
+      // hiding other components' arrows and clone/delete box
+      let scroll_widgets = this.findTheCurrentFlexScroll();
+      scroll_widgets.forEach( widg => {
+        let widget_key = Object.keys(widg).find(key => key.startsWith("component"));
+        if (widg[widget_key].id !== selectedComp.id){
+          widg[widget_key].arrowUpVisible = false;
+          widg[widget_key].arrowDownVisible = false;
+          widg[widget_key].flxMoveVisible = false;
+          widg[widget_key].cloneDeleteVisible = false;
+        }
+      });
   }
   
-  
-
-
-
-
-
-
 });

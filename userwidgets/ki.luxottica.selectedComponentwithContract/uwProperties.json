@@ -181,27 +181,6 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "e4e2ec432da04ebe9d32973e2095e508",
-                    "originalPropertyKey": "isVisible",
-                    "propertyIndex": 5,
-                    "propertyKey": "arrowsVisible",
-                    "pw": {
-                        "access": "readwrite",
-                        "category": "look",
-                        "dependencyConditions": {},
-                        "dependentKeysKUIDs": null,
-                        "displayName": "arrowsVisible",
-                        "isHiddenInTool": false,
-                        "srcWidget": "flxMove",
-                        "type": "boolean",
-                        "uiRepresentation": "Label-Radiobuttongroup",
-                        "wType": "FlexContainer"
-                    },
-                    "srcWgtKUID": "b83cb42971e94476b83609ca4aa1e8fb"
-                },
-                {
-                    "access": "Enable",
-                    "group": "General",
                     "kuid": "f0d38905c13a4554afc868a8f0962608",
                     "originalPropertyKey": "isVisible",
                     "propertyIndex": 6,
@@ -219,6 +198,69 @@
                         "wType": "FlexContainer"
                     },
                     "srcWgtKUID": "ffa0ec0a068d42c48399698d69a3f650"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "c57eaa28b59e461b9392d12c34ad0a7c",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 7,
+                    "propertyKey": "arrowUpVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "arrowUpVisible",
+                        "isHiddenInTool": false,
+                        "srcWidget": "flxArrowUp",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "eb54e72409254617bf623ca4cb12affc"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "f0232181550941ea9d7de9486717da98",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 8,
+                    "propertyKey": "arrowDownVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "arrowDownVisible",
+                        "isHiddenInTool": false,
+                        "srcWidget": "flxArrowDown",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "g3e1ab7f71ee4f48a5a6e59c953a5290"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "a56ce27aa5034b9a8e28adf42703fefc",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 9,
+                    "propertyKey": "flxMoveVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "flxMoveVisible",
+                        "isHiddenInTool": false,
+                        "srcWidget": "flxMove",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "b83cb42971e94476b83609ca4aa1e8fb"
                 }
             ]
         },
