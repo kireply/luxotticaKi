@@ -11,7 +11,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "c0b1c91b3c5042c9af3d87e15350dbe4",
+                    "kuid": "h3b13e8c4545478eb62cd28df809f5f7",
                     "originalPropertyKey": "onRowClick",
                     "propertyIndex": 1,
                     "propertyKey": "onRowClickTeaser",
@@ -30,7 +30,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "a1c7afc0ff814d18886b02b54ae5c948",
+                    "kuid": "g06763d0af5f4bf3b77c331486d5670b",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 2,
                     "propertyKey": "onClickUp",
@@ -49,7 +49,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "idccb29e3c8942b380c12efb6439bc66",
+                    "kuid": "jf54110653764a68a4f803d154960219",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 3,
                     "propertyKey": "onClickDown",
@@ -63,6 +63,44 @@
                         "wType": "FlexContainer"
                     },
                     "srcWgtKUID": "g3e1ab7f71ee4f48a5a6e59c953a5290",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "ec50a2cae1a04119b0008d4f435a51c6",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 4,
+                    "propertyKey": "onClickClone",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onClickClone",
+                        "srcWidget": "flxClone",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "b96b3e253ef44bdda1fc3f1f7198a794",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "bcad3471e22449429f5e84c0b39bec7c",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 5,
+                    "propertyKey": "onClickDelete",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onClickDelete",
+                        "srcWidget": "flxDelete",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "b608fb20cd9c44c6bb6546b1051f68df",
                     "translateAtInstance": false
                 }
             ]

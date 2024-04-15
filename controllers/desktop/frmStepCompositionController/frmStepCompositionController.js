@@ -111,12 +111,18 @@ define({
     
     selectedComp.onClickDown = () => {
       this.clickedArrow("down", selectedComp);
-    }
+    };
+    
+    /*selectedComp.onClickClone = () => {
+      this.cloneComponent(selectedComp.id);
+    };
+    
+    selectedComp.onClickDelete = () => {
+      this.deleteComponent();
+    };*/
 
     selectedComp.flxSelectedComponentLeft.segmentLeft.setData(leftData);
     selectedComp.flxSelectedComponentRight.segmentRight.setData(rightData);
-    //       selectedComp.componentOrder = gblOrder.toString();
-//     selectedComp.componentId = this.component_instance_id;
     
     flex.add(selectedComp);      
 
@@ -330,7 +336,7 @@ define({
       tilesFeaturesListLayout: "tilesFeaturesListLayout",
       targetDigitalOptometry: "targetDigitalOptometry"
     }
-
+	gblLastInsertedComponent = selected_item;
     for (let i = 0; i < list.length; i++) {
 
       console.log(list[i]);
@@ -338,7 +344,7 @@ define({
       let propertyName = list[i].name;
       let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + ": ";
       let properties = {lblPropertyName: capitalizedName, lblPropertyValue: ""}; 
-      gblLastInsertedComponent = selected_item;
+//       gblLastInsertedComponent = selected_item;
       console.log(rightSegmentData);
       let propComp = null;
       if (list[i].mode === "dropdown"){
@@ -806,34 +812,34 @@ define({
     this.view.settingsSide.txt.setVisibility(true);
   },
   
-  findTheCurrentFlexScroll: function(){
-    let scroll_widgets = null;
+  findCurrentFlexScroll: function(){
+    let scroll = null;
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
     let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
     // initially I have to understand in which flex I am
     // if I am in the left side
     if (left_width > 48) {
-      scroll_widgets = this.view.flxScrollLeft.widgets();
+      scroll = this.view.flxScrollLeft;
     }
     // if I am in the right side
     if (right_width > 48){
       if (gblCurrentStepOrder === 1){
-        scroll_widgets = this.view.flxScrollRight.widgets();
+        scroll = this.view.flxScrollRight;
       } else {
         let right_widgets = this.view.flxRightSide.widgets();
         // find the current flex
         let targetWidget = right_widgets.find(widget => widget.id === "flxScrollRight" + gblCurrentStepOrder);
         if (targetWidget){
-          scroll_widgets = targetWidget.widgets();
+          scroll = targetWidget;
         }
       }
     }
-    
-    return scroll_widgets
+    return scroll
   }, 
   
   clickedArrow: function(direction, selectedComp){
-    let scroll_widgets = this.findTheCurrentFlexScroll();
+    let scroll = this.findCurrentFlexScroll();
+    let scroll_widgets = scroll.widgets();
 
     // find the current widget index
     let currentWidgetIndex = scroll_widgets.findIndex(widget => widget.hasOwnProperty(selectedComp.id));
@@ -972,9 +978,19 @@ define({
   },
   
   showOrHideMoveCloneDelete: function(selectedComp){
+    let scroll = this.findCurrentFlexScroll();
+    let scroll_widgets = scroll.widgets();
+    let max = 0;
+    scroll_widgets.forEach( widget => {
+      let widget_key = Object.keys(widget).find(key => key.startsWith("component"));
+      let order = parseInt(widget[widget_key].componentOrder, 10);
+      if (order > max){
+        max = order;
+      }
+    });
     if (selectedComp.componentOrder === "1"){
         selectedComp.arrowDownVisible = true;
-      } else if (selectedComp.leftData[0].lblComponentName === gblLastInsertedComponent){
+      } else if (selectedComp.componentOrder === (max).toString()){
         selectedComp.arrowUpVisible = true;
       } else {
         selectedComp.arrowUpVisible = true;
@@ -985,7 +1001,6 @@ define({
       selectedComp.cloneDeleteVisible = true;
       
       // hiding other components' arrows and clone/delete box
-      let scroll_widgets = this.findTheCurrentFlexScroll();
       scroll_widgets.forEach( widg => {
         let widget_key = Object.keys(widg).find(key => key.startsWith("component"));
         if (widg[widget_key].id !== selectedComp.id){
@@ -995,6 +1010,73 @@ define({
           widg[widget_key].cloneDeleteVisible = false;
         }
       });
+  }, 
+  
+  cloneComponent: function(id){
+    let scroll = this.findCurrentFlexScroll();
+    let scroll_widgets = scroll.widgets();
+    let new_scroll_widgets = [];
+    
+    scroll_widgets.forEach( widget => {
+      let widget_key = Object.keys(widget).find(key => key.startsWith("component"));
+      new_scroll_widgets.push([widget[widget_key].leftData, widget[widget_key].rightData]);
+      if(widget[widget_key].id === id){
+        new_scroll_widgets.push([widget[widget_key].leftData, widget[widget_key].rightData]);
+      }
+    });
+    
+    scroll.removeAll();
+    new_scroll_widgets.forEach( (new_widget, index) => {
+      let instance = (index + 1).toString();
+      new_widget[1].forEach(prop => {
+        if (/^[^_]+_.*_.*_.*$/.test(prop.lblPropertyValue)) {
+          let parts = prop.lblPropertyValue.split("_");
+          if (parts.length >= 4) { 
+            parts[parts.length - 2] = instance; 
+            prop.lblPropertyValue = parts.join("_"); 
+          }
+        }
+      });
+      gblLastInsertedComponent = new_widget[0][0].lblComponentName;
+//       debugger;
+      this.selectComponent(new_widget[1], new_widget[0], instance);
+    });
+  }, 
+  
+  deleteComponent: function(id){
+    let scroll = this.findCurrentFlexScroll();
+    let scroll_widgets = scroll.widgets();
+    let new_scroll_widgets = [];
+    
+    scroll_widgets.forEach( widget => {
+      let widget_key = Object.keys(widget).find(key => key.startsWith("component"));
+      if(widget[widget_key].id != id){
+        new_scroll_widgets.push([widget[widget_key].leftData, widget[widget_key].rightData]);
+      }
+    });
+    
+    scroll.removeAll();
+    new_scroll_widgets.forEach( (new_widget, index) => {
+      let instance = (index + 1).toString();
+      new_widget[1].forEach(prop => {
+        if (/^[^_]+_.*_.*_.*$/.test(prop.lblPropertyValue)) {
+          let parts = prop.lblPropertyValue.split("_");
+          if (parts.length >= 4) { 
+            parts[parts.length - 2] = instance; 
+            prop.lblPropertyValue = parts.join("_"); 
+          }
+        }
+      });
+      gblLastInsertedComponent = new_widget[0][0].lblComponentName;
+//       debugger;
+      this.selectComponent(new_widget[1], new_widget[0], instance);
+    });
   }
+  
+  
+  
+  
+  
+  
   
 });
