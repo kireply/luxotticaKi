@@ -262,6 +262,8 @@
                 "name": "leftData"
             }, {
                 "name": "instance"
+            }, {
+                "name": "nested"
             }],
             "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
             "callbackType": null,

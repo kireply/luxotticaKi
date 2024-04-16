@@ -46,7 +46,8 @@
         "flxSelectedComponentLeft",
         "flxSelectedComponentRight",
         "lblComponentOrder",
-        "lblComponentId"
+        "lblComponentId",
+        "flxAddNestedBtn"
     ],
     "clipbounds": false,
     "containerweight": 100,

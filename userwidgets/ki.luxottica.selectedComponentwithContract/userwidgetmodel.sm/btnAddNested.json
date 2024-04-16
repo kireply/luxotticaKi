@@ -1,20 +1,19 @@
 {
-    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
     "DNDConfig": null,
-    "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "80%"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
-        "value": "20%"
+        "value": "0dp"
     },
     "_margin_": [
-        0,
-        0,
-        0,
-        0
+        6,
+        6,
+        6,
+        6
     ],
     "_padding_": [
         0,
@@ -22,34 +21,30 @@
         0,
         0
     ],
-    "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
-    "_src_": "copy_white.png",
+    "_skin_": "s255e0f02c314307b27118a60acb62cd",
+    "_text_": "     Add nested",
     "_top_": {
         "type": "string",
         "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "80%"
+        "value": "100%"
     },
     "canUpdateUI": true,
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerweight": 100,
-    "id": "imgClone",
-    "imagescalemode": 1,
+    "contentalignment": 5,
+    "displaytext": true,
+    "focusskin": null,
+    "id": "btnAddNested",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d8be58c45d6246f1aa906dd128a5b883",
-    "name": "kony.ui.Image2",
-    "parent": "flxClone",
+    "kuid": "b08182dfd6c94b2286fb106fa7527fc9",
+    "name": "kony.ui.Button",
+    "parent": "flxAddNestedBtn",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "srcType": 1,
-    "wType": "Image",
-    "widgetalignment": 5
+    "wType": "Button"
 }

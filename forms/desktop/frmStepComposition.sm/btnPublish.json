@@ -39,6 +39,7 @@
     },
     "displaytext": true,
     "id": "btnPublish",
+    "ide_onClick": "AS_Button_d2ab75f189544d439b78e34b3500f23a",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

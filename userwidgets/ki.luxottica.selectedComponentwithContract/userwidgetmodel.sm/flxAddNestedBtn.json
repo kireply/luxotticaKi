@@ -1,12 +1,16 @@
 {
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "2%"
+    },
     "_height_": {
         "type": "string",
-        "value": "80.24%"
+        "value": "14.38%"
     },
     "_left_": {
         "type": "string",
-        "value": "51%"
+        "value": "32%"
     },
     "_margin_": [
         0,
@@ -22,38 +26,30 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sa75c44a69034021a86f05742a075425",
-    "_top_": {
-        "type": "string",
-        "value": "0%"
-    },
+    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_width_": {
         "type": "string",
-        "value": "14.15%"
+        "value": "14.64%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "children": [
-        "imgAddNewStep"
+        "btnAddNested",
+        "imgAddNested"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxBoxPlus",
-    "ide_onClick": "AS_FlexContainer_aab196c50bda49668d505c0f7687d388",
+    "id": "flxAddNestedBtn",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "ea6dceaeab5f4c67aa135a70e77f7f91",
+    "isvisible": false,
+    "kuid": "d1fca24171b4450e8002c5cffda05691",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxSteps",
-    "pf": "frmStepComposition",
+    "parent": "flxSelectedComponentwithContract",
+    "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

@@ -2,6 +2,7 @@
     "AS_Button_ad0082f400754848ae5e50980f422794": {
         "id": "AS_Button_ad0082f400754848ae5e50980f422794",
         "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnLogin",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"

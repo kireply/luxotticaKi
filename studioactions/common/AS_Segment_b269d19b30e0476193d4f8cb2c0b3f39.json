@@ -23,7 +23,8 @@
             "id": "ADD_SNIPPET_cbc92b31d330407696d65ce479e0cca9",
             "type": "ADD_SNIPPET",
             "codeSnippet": "this.view.flxMove.setVisibility(true);",
-            "parentId": null
+            "parentId": null,
+            "disabled": true
         }]
     }
 }

@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "12.94%"
+        "value": "13%"
     },
     "_left_": {
         "type": "string",
-        "value": "0%"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -22,17 +22,19 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
+    "_skin_": "s2f1ee016fac47b2b166f4f57338ccf0",
     "_top_": {
         "type": "string",
-        "value": "0"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100.23%"
+        "value": "100%"
     },
     "allboxes": [],
-    "autogrowmode": 0,
+    "allowhorizontalbounce": false,
+    "allowverticalbounce": true,
+    "bounces": true,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
@@ -42,23 +44,30 @@
         "flxBoxPlus",
         "flxBoxFirstStep"
     ],
-    "clipbounds": true,
+    "clipbounds": false,
     "containerweight": 100,
+    "decelerat": false,
+    "dragg": false,
     "enablescrolling": true,
+    "horizontalscrollindicator": true,
     "id": "flxSteps",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "je20478283b548cab205dc7b60f394b7",
+    "kuid": "f7cf362afaca48f68c682b9738763925",
     "layouttype": 2,
-    "name": "kony.ui.FlexContainer",
+    "name": "kony.ui.FlexScrollContainer",
+    "pagingenabled": false,
     "parent": "flxContainerStepCreation",
     "pf": "frmStepComposition",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
+    "scrolldirection": 1,
     "snapgridsize": 10,
     "snaptogrid": true,
-    "wType": "FlexContainer",
+    "track": false,
+    "verticalscrollindicator": true,
+    "wType": "FlexScrollContainer",
     "widgetalignment": 1
 }

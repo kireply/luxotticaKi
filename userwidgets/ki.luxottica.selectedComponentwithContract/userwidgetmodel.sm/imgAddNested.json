@@ -4,11 +4,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "80%"
+        "value": "70%"
     },
     "_left_": {
         "type": "string",
-        "value": "20%"
+        "value": "10.34%"
     },
     "_margin_": [
         0,
@@ -23,14 +23,14 @@
         0
     ],
     "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
-    "_src_": "copy_white.png",
+    "_src_": "nest_modified.png",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "-36dp"
     },
     "_width_": {
         "type": "string",
-        "value": "80%"
+        "value": "10%"
     },
     "canUpdateUI": true,
     "centery": {
@@ -38,14 +38,14 @@
         "value": "50%"
     },
     "containerweight": 100,
-    "id": "imgClone",
+    "id": "imgAddNested",
     "imagescalemode": 1,
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d8be58c45d6246f1aa906dd128a5b883",
+    "kuid": "d6f3c3f057694baf99c7db63f5ba04f3",
     "name": "kony.ui.Image2",
-    "parent": "flxClone",
+    "parent": "flxAddNestedBtn",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

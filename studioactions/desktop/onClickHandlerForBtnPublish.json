@@ -1,0 +1,30 @@
+{
+    "AS_Button_d2ab75f189544d439b78e34b3500f23a": {
+        "id": "AS_Button_d2ab75f189544d439b78e34b3500f23a",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnPublish",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__b635658a6a6f47fea7e4b9419b4a874e",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "publish",
+            "display": "publish",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": null,
+            "source": "module"
+        }]
+    }
+}

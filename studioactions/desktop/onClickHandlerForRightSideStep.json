@@ -47,7 +47,7 @@
         }, {
             "id": "ADD_SNIPPET_d63e407c7c1041ee8164c9852af75fbd",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### LEFT WIDTH: \" + self.view.flxLeftSide.width);\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(false);\n// self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxSelectedComponent.setVisibility(false);\n\ncontent = self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxScrollLeft.widgets();\n\nvoltmx.print(\"### TYPE OF LEFT CONTENT: \" + typeof content);\n\ncontent.forEach(function(widget) {\n   voltmx.print(\"### WIDGET ID: \" + JSON.stringify(widget.id));\n//    debugger; // Questo fermerà l'esecuzione qui permettendoti di ispezionare `widget`\n  if (widget.id && widget.id.includes(\"flex\")) {\n  \tvoltmx.print(\"### SELECTED COMPONENT\");\n    widget.isVisible = false;\n//   \tdebugger; // Questo fermerà l'esecuzione qui permettendoti di ispezionare `widget`\n  }\n});\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.setEnabled(false);",
+            "codeSnippet": "voltmx.print(\"### LEFT WIDTH: \" + self.view.flxLeftSide.width);\n\nthis.view.flxComponentsSide.opacity = 1;\nthis.view.flxRightSide.skin = \"HalfSelectedSide\";\n\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(false);\n// self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxSelectedComponent.setVisibility(false);\n\ncontent = self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxScrollLeft.widgets();\n\nvoltmx.print(\"### TYPE OF LEFT CONTENT: \" + typeof content);\n\ncontent.forEach(function(widget) {\n   voltmx.print(\"### WIDGET ID: \" + JSON.stringify(widget.id));\n//    debugger; // Questo fermerà l'esecuzione qui permettendoti di ispezionare `widget`\n  if (widget.id && widget.id.includes(\"flex\")) {\n  \tvoltmx.print(\"### SELECTED COMPONENT\");\n    widget.isVisible = false;\n//   \tdebugger; // Questo fermerà l'esecuzione qui permettendoti di ispezionare `widget`\n  }\n});\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.setEnabled(false);",
             "parentId": "_g55a23df86e148aca34fae8a36d7e072",
             "callbackType": null
         }, {
@@ -96,7 +96,7 @@
         }, {
             "id": "ADD_SNIPPET_i380c15f76ee4e2285ae1e27ac6d3ca0",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### SONO L'ELSE\");\n\n// this.view.settingsSide.flxEditPropertyValue.setVisibility(false);\n// this.view.settingsSide.txt.setVisibility(true);\n\n// this.view.settingsSide.editPropertyValue.setVisibility(false);\n// this.view.settingsSide.editPropertyValue.lblPropertyTitle.text = \"Label\";\n// this.view.settingsSide.editPropertyValue.txtPropertyValue.text = \"\";\n// this.view.settingsSide.editPropertyValue.txtPropertyValue.placeholder = \"Insert a value\";\nthis.view.settingsSide.flxScrollSettingsContent.setVisibility(false);\nthis.view.settingsSide.flxScrollSettingsContent.removeAll();\nthis.view.settingsSide.txt.setVisibility(true);\n",
+            "codeSnippet": "voltmx.print(\"### SONO L'ELSE\");\n\nthis.view.flxComponentsSide.opacity = 0.5;\nthis.view.flxRightSide.skin = \"HalfNotSelectedSide\";\n\n\n// this.view.settingsSide.flxEditPropertyValue.setVisibility(false);\n// this.view.settingsSide.txt.setVisibility(true);\n\n// this.view.settingsSide.editPropertyValue.setVisibility(false);\n// this.view.settingsSide.editPropertyValue.lblPropertyTitle.text = \"Label\";\n// this.view.settingsSide.editPropertyValue.txtPropertyValue.text = \"\";\n// this.view.settingsSide.editPropertyValue.txtPropertyValue.placeholder = \"Insert a value\";\nthis.view.settingsSide.flxScrollSettingsContent.setVisibility(false);\nthis.view.settingsSide.flxScrollSettingsContent.removeAll();\nthis.view.settingsSide.txt.setVisibility(true);\n",
             "parentId": "_fe73a8016d034b9fa2152732344c4d41",
             "callbackType": null
         }, {
@@ -139,36 +139,6 @@
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepComposition",
-            "widgetId": "flxBoxPlus",
-            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
-            "widgetKUID": "ea6dceaeab5f4c67aa135a70e77f7f91",
-            "wType": "FlexContainer",
-            "animationObject": {
-                "left": "51%",
-                "anchorPoint": {},
-                "stepConfig": {
-                    "timingFunction": "kony.anim.EASE"
-                }
-            },
-            "config": {
-                "delay": "0",
-                "iterationCount": 1,
-                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "500"
-            },
-            "start": "Immediately",
-            "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
-            "animationId": "MOVE_ACTION_cbbb198d96c44a47bdcba5dc4d8ee6b3",
-            "displayAnimationId": "MOVE_ACTION_cbbb198d96c44a47bdcba5dc4d8ee6b3",
-            "forkedPlatform": "all",
-            "parentId": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
-            "callbackType": "Callback",
-            "widgetPath": "this.view.flxBoxPlus"
-        }, {
-            "id": "MOVE_ACTION_jf88785d7d4d407b9d7b0d04c9fc6b7e",
-            "type": "MOVE_ACTION",
-            "itemType": "FORM",
-            "itemId": "frmStepComposition",
             "widgetId": "flxBoxFirstStep",
             "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
             "widgetKUID": "ed506658078f4b6684761ecf8bbf0f35",
@@ -188,17 +158,47 @@
             },
             "start": "Immediately",
             "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
+            "animationId": "MOVE_ACTION_cbbb198d96c44a47bdcba5dc4d8ee6b3",
+            "displayAnimationId": "MOVE_ACTION_cbbb198d96c44a47bdcba5dc4d8ee6b3",
+            "forkedPlatform": "all",
+            "parentId": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
+            "callbackType": "Callback",
+            "widgetPath": "this.view.flxBoxFirstStep"
+        }, {
+            "id": "MOVE_ACTION_jf88785d7d4d407b9d7b0d04c9fc6b7e",
+            "type": "MOVE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxBoxPlus",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "ea6dceaeab5f4c67aa135a70e77f7f91",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "left": "51%",
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                }
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "500"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
             "animationId": "MOVE_ACTION_jf88785d7d4d407b9d7b0d04c9fc6b7e",
             "displayAnimationId": "MOVE_ACTION_jf88785d7d4d407b9d7b0d04c9fc6b7e",
             "forkedPlatform": "all",
             "parentId": "MOVE_ACTION_cbbb198d96c44a47bdcba5dc4d8ee6b3",
             "callbackType": "Callback",
             "disabled": false,
-            "widgetPath": "this.view.flxBoxFirstStep"
+            "widgetPath": "this.view.flxBoxPlus"
         }, {
             "id": "ADD_SNIPPET_a8c95b05209c4a35b59ccd7c9d4ffba5",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "let steps_widgets = self.view.flxSteps.widgets();\nlet left_position = 0;\nlet left_position_percentage = null;\nvoltmx.print(\"### FLEX STEPS NUMBER OF WIDGETS: \" + JSON.stringify(steps_widgets.length));\n  \nfor (let i = 2; i < steps_widgets.length; i++) {\n  let widget = steps_widgets[i];\n  if (widget.id === \"boxStep2\"){\n    left_position = parseInt(self.view.flxBoxFirstStep.left, 10) + parseInt(self.view.flxBoxFirstStep.width, 10) + 2;\n    left_position_percentage = left_position + \"%\";\n\n  } else {\n    let previous_widget = steps_widgets[i-1];\n    left_position = parseInt(previous_widget.left, 10) + parseInt(previous_widget.width, 10) + 2;\n    left_position_percentage = left_position + \"%\";\n  }\n  let animationDef = {\n    \"0\": {\n      \"left\": widget.left\n    },\n    \"100\": {\n      \"left\": left_position_percentage\n    }\n  };\n  let animDef = voltmx.ui.createAnimation(animationDef);\n  widget.animate(animDef, {\n    \"duration\": 0.5,\n    \"iterationCount\": 1,\n    \"delay\": 0,\n    \"fillMode\": voltmx.anim.FILL_MODE_FORWARDS\n  });\n}  \n\n\n",
+            "codeSnippet": "let steps_widgets = self.view.flxSteps.widgets();\nlet left_position = 0;\nlet left_position_percentage = null;\nvoltmx.print(\"### FLEX STEPS NUMBER OF WIDGETS: \" + JSON.stringify(steps_widgets.length));\n  \nfor (let i = 2; i < steps_widgets.length; i++) {\n  let widget = steps_widgets[i];\n  if (widget.id === \"boxStep2\"){\n    left_position = parseInt(self.view.flxBoxFirstStep.left, 10) + parseInt(self.view.flxBoxFirstStep.width, 10) + 2;\n    left_position_percentage = left_position + \"%\";\n\n  } else {\n    let previous_widget = steps_widgets[i-1];\n    left_position = parseInt(previous_widget.left, 10) + parseInt(previous_widget.width, 10) + 2;\n    left_position_percentage = left_position + \"%\";\n  }\n  let animationDef = {\n    \"0\": {\n      \"left\": widget.left\n    },\n    \"100\": {\n      \"left\": left_position_percentage\n    }\n  };\n  let animDef = voltmx.ui.createAnimation(animationDef);\n  widget.animate(animDef, {\n    \"duration\": 0.5,\n    \"iterationCount\": 1,\n    \"delay\": 0,\n    \"fillMode\": voltmx.anim.FILL_MODE_FORWARDS\n  });\n}  \n\n// now hiding the selected components' arrows, clone/delete box and \"add nested button\"\n\nlet scroll_widgets = self.view.flxRightSide.flxScrollRight.widgets();\nvoltmx.print(\"### scroll_widgets: -\" + (scroll_widgets) + \"-\");\n//voltmx.print(\"### scroll_widgets: -\" + JSON.stringify(scroll_widgets) + \"-\");\n\nscroll_widgets.forEach( widg => {\n  let widget_key = Object.keys(widg).find(key => key.startsWith(\"component\"));\n  let chiavi = Object.keys(widg);\n  voltmx.print(\"### chiavi: -\" + chiavi + \"-\");\n  voltmx.print(\"### widget_key: -\" + widget_key + \"-\");\n\n  widg[widget_key].arrowUpVisible = false;\n  widg[widget_key].arrowDownVisible = false;\n  widg[widget_key].flxMoveVisible = false;\n  widg[widget_key].cloneDeleteVisible = false;\n  widg[widget_key].flxAddNestedVisible = false;\n});\n\nvoltmx.print(\"### FINITO A DESTRA\");\n",
             "parentId": "MOVE_ACTION_jf88785d7d4d407b9d7b0d04c9fc6b7e",
             "callbackType": "Callback"
         }, {

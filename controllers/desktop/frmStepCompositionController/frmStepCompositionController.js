@@ -5,7 +5,7 @@ define({
   integrationService : voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB"),
   modes: {},
 
-  selectComponent: function(rightData, leftData, instance){
+  selectComponent: function(rightData, leftData, instance, nested){
     voltmx.print("### RIGHT DATA: " + JSON.stringify(rightData));
     voltmx.print("### LEFT DATA: " + JSON.stringify(leftData));
     voltmx.print("### MODES: " + JSON.stringify(this.modes));
@@ -34,7 +34,8 @@ define({
       height: '100%'
     }, {}, {});
 
-    selectedComp.onRowClickTeaser = () => {
+    //whenever a component in one of the two halves is clicked
+    const selectedCompEventHandler = () => {
       this.view.settingsSide.flxScrollSettingsContent.removeAll();    
       this.view.settingsSide.flxScrollSettingsContent.setVisibility(true);
       this.view.settingsSide.txt.setVisibility(false);
@@ -64,7 +65,7 @@ define({
             propComp.onSelection = () => {
               let identify = selectedComp.id;
               this.onEndEditingCallback(propComp, identify, true, false);
-            }
+            };
           } else if (found.mode === "label") {
             propComp = new ki.luxottica.editPropertyValuewithTextField({
               id: `prop${new Date().getTime()}`,
@@ -94,7 +95,7 @@ define({
             propComp.onEndEditing = () => {
               let identify = selectedComp.id;
               this.onEndEditingCallback(propComp, identify, false, false);
-            }
+            };
           }
           propComp.propertyName = item.lblPropertyName;
           this.view.settingsSide.flxScrollSettingsContent.add(propComp);
@@ -104,6 +105,11 @@ define({
       this.showOrHideMoveCloneDelete(selectedComp);
       
     };
+    
+    // the click on any part of the selected component execute the same eventHandler.
+    selectedComp.onRowClickTeaser = selectedCompEventHandler;
+    selectedComp.onRowClickTeaserRight = selectedCompEventHandler;
+    selectedComp.onSelectedCompClickTeaser = selectedCompEventHandler;
     
     selectedComp.onClickUp = () => {
       this.clickedArrow("up", selectedComp);
@@ -124,6 +130,10 @@ define({
     selectedComp.flxSelectedComponentLeft.segmentLeft.setData(leftData);
     selectedComp.flxSelectedComponentRight.segmentRight.setData(rightData);
     
+    if (nested === true) {
+      selectedComp.flxAddNestedVisible = true;
+    }
+    
     flex.add(selectedComp);      
 
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
@@ -140,6 +150,7 @@ define({
       this.view.flxScrollLeft.setVisibility(true);
       this.view.flxScrollLeft.add(flex);
       this.view.flxScrollLeft.forceLayout();
+      this.showOrHideMoveCloneDelete(selectedComp);
     }
     if ( right_width > 48){
       //vuol dire che il pannello di destra è aperto
@@ -162,12 +173,12 @@ define({
         this.view.flxScrollRight.forceLayout();
       }
       selectedComp.componentOrder = instance;
-      
+      this.showOrHideMoveCloneDelete(selectedComp);
     }
     
-    this.showOrHideMoveCloneDelete(selectedComp);
+      this.showOrHideMoveCloneDelete(selectedComp);
 
-  },
+  }, //end of function "selectComponent"
 
   onEndEditingCallback: function(propComp, identify, dropdown, switched){
     let value = null;
@@ -299,6 +310,7 @@ define({
     let instance = null;
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
     let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
+    
     if (left_width > 48){
       let count = this.view.flxScrollLeft.widgets().filter(widget =>
                                                Object.keys(widget).some(key => key.startsWith("component"))
@@ -335,13 +347,20 @@ define({
       nestedViewMode: "nestedViewModes",
       tilesFeaturesListLayout: "tilesFeaturesListLayout",
       targetDigitalOptometry: "targetDigitalOptometry"
-    }
-	gblLastInsertedComponent = selected_item;
+    };
+    
+    let nested = false;
+    gblLastInsertedComponent = selected_item;
     for (let i = 0; i < list.length; i++) {
 
       console.log(list[i]);
 
       let propertyName = list[i].name;
+      if(propertyName === "nestedComponents") {
+        nested = true;
+        continue;
+      }
+      
       let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + ": ";
       let properties = {lblPropertyName: capitalizedName, lblPropertyValue: ""}; 
 //       gblLastInsertedComponent = selected_item;
@@ -457,7 +476,7 @@ define({
     let selected_component_data = {lblComponentName: selected_item, imgComponent: selected_item_img};
     leftSegmentData.push(selected_component_data);
 
-    this.selectComponent(rightSegmentData, leftSegmentData, instance);
+    this.selectComponent(rightSegmentData, leftSegmentData, instance, nested);
 
   },
 
@@ -972,6 +991,7 @@ define({
     selectedComp.arrowDownVisible = false;
     selectedComp.flxMoveVisible = false;
     selectedComp.cloneDeleteVisible = false;
+    selectedComp.flxAddNestedVisible = false;
     this.view.settingsSide.flxScrollSettingsContent.removeAll();
     this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
     this.view.settingsSide.txt.setVisibility(true);
@@ -999,8 +1019,9 @@ define({
       
       selectedComp.flxMoveVisible = true;
       selectedComp.cloneDeleteVisible = true;
+      selectedComp.flxAddNestedVisible = true;
       
-      // hiding other components' arrows and clone/delete box
+      // hiding other components' arrows, clone/delete box and "add nested button"
       scroll_widgets.forEach( widg => {
         let widget_key = Object.keys(widg).find(key => key.startsWith("component"));
         if (widg[widget_key].id !== selectedComp.id){
@@ -1008,6 +1029,7 @@ define({
           widg[widget_key].arrowDownVisible = false;
           widg[widget_key].flxMoveVisible = false;
           widg[widget_key].cloneDeleteVisible = false;
+          widg[widget_key].flxAddNestedVisible = false;
         }
       });
   }, 

@@ -2,6 +2,7 @@
     "AS_FlexContainer_dfddaaf8f8ec4dc9b857a467d5462184": {
         "id": "AS_FlexContainer_dfddaaf8f8ec4dc9b857a467d5462184",
         "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForFlxPublish",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -36,7 +37,7 @@
             "inputparams": [],
             "parentId": null,
             "callbackType": null,
-            "disabled": null,
+            "disabled": true,
             "source": "module"
         }]
     }

@@ -2,6 +2,7 @@
     "AS_FlexContainer_cc698d4b7844402698c9f1c65cd2003e": {
         "id": "AS_FlexContainer_cc698d4b7844402698c9f1c65cd2003e",
         "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForFlxSave",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -33,7 +34,7 @@
             "inputparams": [],
             "parentId": null,
             "callbackType": null,
-            "disabled": null,
+            "disabled": true,
             "source": "controller"
         }, {
             "id": "_b7b3ed9396414cc89eda565b3d0ab2eb",
@@ -47,7 +48,8 @@
             }],
             "parentId": null,
             "callbackType": null,
-            "criteria": "all"
+            "criteria": "all",
+            "disabled": true
         }, {
             "id": "LOADING_INDICATOR_jfd9d6a03da441a5bb1295640d8869b7",
             "selectedOption": "dismiss",

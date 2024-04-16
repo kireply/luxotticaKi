@@ -11,7 +11,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "h3b13e8c4545478eb62cd28df809f5f7",
+                    "kuid": "i9f8bff88bf542ea97c01d8bcf27a388",
                     "originalPropertyKey": "onRowClick",
                     "propertyIndex": 1,
                     "propertyKey": "onRowClickTeaser",
@@ -30,7 +30,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "g06763d0af5f4bf3b77c331486d5670b",
+                    "kuid": "c3e5e463e1f1412fb59abee37cc26aa6",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 2,
                     "propertyKey": "onClickUp",
@@ -49,7 +49,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "jf54110653764a68a4f803d154960219",
+                    "kuid": "f29c7a20d36f440f8a6ecc40e3a5c053",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 3,
                     "propertyKey": "onClickDown",
@@ -68,7 +68,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "ec50a2cae1a04119b0008d4f435a51c6",
+                    "kuid": "dd5918a7c23f4a1b870f86c4b7e65970",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 4,
                     "propertyKey": "onClickClone",
@@ -87,7 +87,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "bcad3471e22449429f5e84c0b39bec7c",
+                    "kuid": "b1f6268475f546a7aa94929e332522fc",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 5,
                     "propertyKey": "onClickDelete",
@@ -101,6 +101,63 @@
                         "wType": "FlexContainer"
                     },
                     "srcWgtKUID": "b608fb20cd9c44c6bb6546b1051f68df",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "fd7448bef09b4e658a8db6bf044a2d8c",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 6,
+                    "propertyKey": "onClickAddNested",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onClickAddNested",
+                        "srcWidget": "flxAddNestedBtn",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "d1fca24171b4450e8002c5cffda05691",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "f1904826210345dd85c7356e1e50c311",
+                    "originalPropertyKey": "onRowClick",
+                    "propertyIndex": 7,
+                    "propertyKey": "onRowClickTeaserRight",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onRowClickTeaserRight",
+                        "srcWidget": "segmentRight",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "Segment"
+                    },
+                    "srcWgtKUID": "a1e4319856884900b4874509960ba693",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "gde1c85d883e44bc9b1a43999d00b460",
+                    "originalPropertyKey": "onClick",
+                    "propertyIndex": 8,
+                    "propertyKey": "onSelectedCompClickTeaser",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onSelectedCompClickTeaser",
+                        "srcWidget": "flxSelectedComponentwithContract",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "d9cb54b23b2a49e49138db9fd496da5c",
                     "translateAtInstance": false
                 }
             ]
@@ -299,6 +356,27 @@
                         "wType": "FlexContainer"
                     },
                     "srcWgtKUID": "b83cb42971e94476b83609ca4aa1e8fb"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "f8781953f67341b7854040f14293d24a",
+                    "originalPropertyKey": "isVisible",
+                    "propertyIndex": 10,
+                    "propertyKey": "flxAddNestedVisible",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "flxAddNestedVisible",
+                        "isHiddenInTool": false,
+                        "srcWidget": "flxAddNestedBtn",
+                        "type": "boolean",
+                        "uiRepresentation": "Label-Radiobuttongroup",
+                        "wType": "FlexContainer"
+                    },
+                    "srcWgtKUID": "d1fca24171b4450e8002c5cffda05691"
                 }
             ]
         },

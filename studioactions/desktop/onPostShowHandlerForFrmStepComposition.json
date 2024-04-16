@@ -16,6 +16,12 @@
         "language": "js",
         "eventType": "postShow",
         "actions": [{
+            "id": "ADD_SNIPPET_a57a87fd15d04e04bc9c7984b8ebeb2c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// Disabling text areas.\n\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n\nthis.view.flxComponentsSide.opacity = 0.5;",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "LOADING_INDICATOR_b45d96d08c544473a3f4bbe700a74ec4",
             "selectedOption": "show",
             "parentId": null,
