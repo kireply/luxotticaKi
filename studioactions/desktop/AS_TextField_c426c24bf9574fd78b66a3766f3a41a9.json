@@ -1,0 +1,20 @@
+{
+    "AS_TextField_c426c24bf9574fd78b66a3766f3a41a9": {
+        "id": "AS_TextField_c426c24bf9574fd78b66a3766f3a41a9",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "language": "js",
+        "eventType": "onEndEditing",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onEndEditing_fa32a7e8d94a4b2592d6ac372618a534",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblCurrentStepTitle = this.view.txtStepTitle.text;"
+        }]
+    }
+}

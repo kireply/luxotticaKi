@@ -11,7 +11,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "i9f8bff88bf542ea97c01d8bcf27a388",
+                    "kuid": "a477e38c97c94ba49e3654ecf3abf7b1",
                     "originalPropertyKey": "onRowClick",
                     "propertyIndex": 1,
                     "propertyKey": "onRowClickTeaser",
@@ -30,7 +30,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "c3e5e463e1f1412fb59abee37cc26aa6",
+                    "kuid": "addcb7e2838b42b69c13a58f7e4f9f1c",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 2,
                     "propertyKey": "onClickUp",
@@ -49,7 +49,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "f29c7a20d36f440f8a6ecc40e3a5c053",
+                    "kuid": "j52d28a6231243d89b8545d6650136c5",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 3,
                     "propertyKey": "onClickDown",
@@ -68,7 +68,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "dd5918a7c23f4a1b870f86c4b7e65970",
+                    "kuid": "fcad1066315f47888c37c0b07974a8de",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 4,
                     "propertyKey": "onClickClone",
@@ -87,7 +87,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "b1f6268475f546a7aa94929e332522fc",
+                    "kuid": "c67b5868806b4fd6aa4ad86663f8ce5e",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 5,
                     "propertyKey": "onClickDelete",
@@ -106,7 +106,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "fd7448bef09b4e658a8db6bf044a2d8c",
+                    "kuid": "ad7d4271c25e4a9d9045b4ebbc8a4b8a",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 6,
                     "propertyKey": "onClickAddNested",
@@ -114,18 +114,18 @@
                         "access": "readwrite",
                         "category": "action",
                         "displayName": "onClickAddNested",
-                        "srcWidget": "flxAddNestedBtn",
+                        "srcWidget": "btnAddNested",
                         "type": "action",
                         "uiRepresentation": "Label-Label-Button-Button",
-                        "wType": "FlexContainer"
+                        "wType": "Button"
                     },
-                    "srcWgtKUID": "d1fca24171b4450e8002c5cffda05691",
+                    "srcWgtKUID": "b08182dfd6c94b2286fb106fa7527fc9",
                     "translateAtInstance": false
                 },
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "f1904826210345dd85c7356e1e50c311",
+                    "kuid": "gc72d0ec90a840be94e5f86f75dfa245",
                     "originalPropertyKey": "onRowClick",
                     "propertyIndex": 7,
                     "propertyKey": "onRowClickTeaserRight",
@@ -144,7 +144,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "gde1c85d883e44bc9b1a43999d00b460",
+                    "kuid": "f0123ab4fd2347219d838a5dd67dffc0",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 8,
                     "propertyKey": "onSelectedCompClickTeaser",

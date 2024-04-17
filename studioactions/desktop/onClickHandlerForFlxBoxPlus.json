@@ -2,6 +2,7 @@
     "AS_FlexContainer_aab196c50bda49668d505c0f7687d388": {
         "id": "AS_FlexContainer_aab196c50bda49668d505c0f7687d388",
         "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForFlxBoxPlus",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -58,7 +59,7 @@
         }, {
             "id": "ADD_SNIPPET_ide_onClick_j4dbdccc86fe40099f55891179b5f7f7",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);\n\nif (right_width > 48){\n  this.view.flxPopupNewStep.setVisibility(true);\t \n}",
+            "codeSnippet": "let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);\n\nif (right_width > 48){\n  this.view.flxPopupNewStep.setVisibility(true);\n  this.view.flxNewStepBlur.setVisibility(true);\n}",
             "callbackType": null
         }]
     }

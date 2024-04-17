@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_a57a87fd15d04e04bc9c7984b8ebeb2c",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// Disabling text areas.\n\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n\nthis.view.flxComponentsSide.opacity = 0.5;",
+            "codeSnippet": "// Disabling text areas.\n\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n\nthis.view.flxComponentsSide.opacity = 0.5;\n",
             "parentId": null,
             "callbackType": null
         }, {

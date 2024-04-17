@@ -42,11 +42,11 @@
     "containerweight": 100,
     "contentalignment": 4,
     "desktopweb": {
-        "ide_onEndEditing": "AS_TextField_c5702c620dfc45828521e5602c25280b"
+        "ide_onEndEditing": "AS_TextField_c426c24bf9574fd78b66a3766f3a41a9"
     },
     "focusskin": "s4ae88d6059f41ebb18f1220b211dfc3",
     "id": "txtStepTitle",
-    "ide_onTextChange": "AS_TextField_ac2cd172e14746c6aa7f91a211245513",
+    "ide_onTextChange": "AS_TextField_a99e1cc7c78e4d56905b2879a5142db3",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

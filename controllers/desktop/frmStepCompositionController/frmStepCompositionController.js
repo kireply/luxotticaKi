@@ -4,6 +4,9 @@ define({
   //   component_instance_id : null,
   integrationService : voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB"),
   modes: {},
+  
+  
+  
 
   selectComponent: function(rightData, leftData, instance, nested){
     voltmx.print("### RIGHT DATA: " + JSON.stringify(rightData));
@@ -30,8 +33,8 @@ define({
     //const tile = new com.hcl.demo.uifactory.Tile({
     const selectedComp = new ki.luxottica.selectedComponentwithContract({
       id: `component${new Date().getTime()}`,
-      width: '100%',
-      height: '100%'
+      width: (!this.view.flxNestedBlur.isVisible ? '100%' : "90%"), // if true, user is selecting a nested
+      height: (!this.view.flxNestedBlur.isVisible ? '100%' : "90%") // if true, user is selecting a nested
     }, {}, {});
 
     //whenever a component in one of the two halves is clicked
@@ -39,7 +42,7 @@ define({
       this.view.settingsSide.flxScrollSettingsContent.removeAll();    
       this.view.settingsSide.flxScrollSettingsContent.setVisibility(true);
       this.view.settingsSide.txt.setVisibility(false);
-
+      
       //          voltmx.print("### RIGHT DATA SELECTED COMPONENT: " + JSON.stringify(selectedComp.rightData));
 
       props = selectedComp.rightData;
@@ -119,6 +122,11 @@ define({
       this.clickedArrow("down", selectedComp);
     };
     
+    selectedComp.onClickAddNested = () => {
+      this.view.flxNestedBlur.setVisibility(true);
+      nestedSelection = true;
+    };
+    
     /*selectedComp.onClickClone = () => {
       this.cloneComponent(selectedComp.id);
     };
@@ -176,10 +184,14 @@ define({
       this.showOrHideMoveCloneDelete(selectedComp);
     }
     
+      this.view.flxNestedBlur.setVisibility(false);
       this.showOrHideMoveCloneDelete(selectedComp);
 
   }, //end of function "selectComponent"
 
+  
+  
+  
   onEndEditingCallback: function(propComp, identify, dropdown, switched){
     let value = null;
     if (dropdown){
@@ -293,6 +305,11 @@ define({
     }
   },
 
+  
+  
+  
+  
+  
   editProperty: function(list, rightSegmentData, leftSegmentData, selected_item, selected_item_img){
 
     voltmx.print("### LIST: " + JSON.stringify(list));
@@ -301,7 +318,7 @@ define({
     voltmx.print("### LEFT SEGMENT DATA: " + JSON.stringify(leftSegmentData));
     voltmx.print("### SELECTED ITEM: " + JSON.stringify(selected_item));
     voltmx.print("### SELECTED ITEM IMG: " + JSON.stringify(selected_item_img));
-
+    
 
     let index = 0;
     //     let modes = [];
@@ -360,6 +377,7 @@ define({
         nested = true;
         continue;
       }
+      
       
       let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + ": ";
       let properties = {lblPropertyName: capitalizedName, lblPropertyValue: ""}; 
@@ -480,14 +498,23 @@ define({
 
   },
 
+  
+  
+  
+  
+  
   SHOW_ALERT_Failure_Callback: function() {
     voltmx.print("### FAIL ALERT CALLBACK");
   },
+  
+  
   
   SHOW_ALERT_Success_Callback: function() {
     voltmx.print("### SUCCESS ALERT CALLBACK");
   },
 
+  
+  
   saveStepComposition: function(){
     voltmx.print("### GBL PROPERTY TEMPLATES IDS: " + JSON.stringify(gblPropertyTemplatesIds));
     let left_widgets = this.view.flxScrollLeft.widgets();
@@ -722,6 +749,11 @@ define({
     });
   },
   
+  
+  
+  
+  
+  
   addNewStep: function(left_position){
     let index = gblLastInsertedStep + 1;
 
@@ -831,6 +863,10 @@ define({
     this.view.settingsSide.txt.setVisibility(true);
   },
   
+  
+  
+  
+  
   findCurrentFlexScroll: function(){
     let scroll = null;
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
@@ -855,6 +891,10 @@ define({
     }
     return scroll
   }, 
+  
+  
+  
+  
   
   clickedArrow: function(direction, selectedComp){
     let scroll = this.findCurrentFlexScroll();
@@ -997,6 +1037,11 @@ define({
     this.view.settingsSide.txt.setVisibility(true);
   },
   
+  
+  
+  
+  
+  
   showOrHideMoveCloneDelete: function(selectedComp){
     let scroll = this.findCurrentFlexScroll();
     let scroll_widgets = scroll.widgets();
@@ -1034,6 +1079,11 @@ define({
       });
   }, 
   
+  
+  
+  
+  
+  
   cloneComponent: function(id){
     let scroll = this.findCurrentFlexScroll();
     let scroll_widgets = scroll.widgets();
@@ -1064,6 +1114,11 @@ define({
       this.selectComponent(new_widget[1], new_widget[0], instance);
     });
   }, 
+  
+  
+  
+  
+  
   
   deleteComponent: function(id){
     let scroll = this.findCurrentFlexScroll();

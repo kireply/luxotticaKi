@@ -1,6 +1,6 @@
 {
-    "AS_Button_b3f528938f5f43cebf9456ae8c4e466a": {
-        "id": "AS_Button_b3f528938f5f43cebf9456ae8c4e466a",
+    "AS_Button_bbc3b93e9af444f1ad5db2a470d72408": {
+        "id": "AS_Button_bbc3b93e9af444f1ad5db2a470d72408",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
@@ -9,7 +9,7 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "ADD_LOCAL_VARIABLE_ide_onClick_abaf0f2d7d4545d2bda343153bee3a60",
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_dc61eefa9c0a47d8857432cdbd89dcda",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "isPrescriptionStep",
             "isGlobal": false,
@@ -18,12 +18,12 @@
             "value": "false",
             "callbackType": null
         }, {
-            "id": "ADD_SNIPPET_ide_onClick_i15e6eec1b354e56927c75d0bb65e0d6",
+            "id": "ADD_SNIPPET_ide_onClick_eaae3a1f76174ea09bc7de6ad7e400bd",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### Flow ID: \" + gblFlowId);\nvoltmx.print(\"### Flow Name: \" + gblFlowName);\n\n\n//to comment in the global flow\ngblFlowId = 128;\n// gblFlowName = ",
             "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_ide_onClick_hb196422aba5483e8f785fa073bc457d",
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_f7df8b7a76f24493b289b964ccf7f20e",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "Autoproceed",
             "isGlobal": false,
@@ -32,7 +32,7 @@
             "value": "false",
             "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_ide_onClick_d126188fd04f4d5a90a3731478f16d28",
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_g335a1e745ef4543b719b2d6d14fdec3",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "Autoskip",
             "isGlobal": false,
@@ -41,17 +41,16 @@
             "value": "false",
             "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_f8e84d23716e4699ac474d5447b4587d",
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_b7248009e7824835afcfbd1a0763c362",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "left_position",
             "isGlobal": false,
             "valuetype": "constant",
             "datatype": "number",
             "value": "0",
-            "parentId": null,
             "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_ide_onClick_i546fe5da76c45e2b17d25c59302a0d4",
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_c9ca60d2461e49fabcd70b9c895d54b3",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "hasGreyout",
             "isGlobal": false,
@@ -60,7 +59,7 @@
             "value": "false",
             "callbackType": null
         }, {
-            "id": "IF_CONDITION_ide_onClick_ae655a3d435c4c01853e134cab32d8dd",
+            "id": "IF_CONDITION_ide_onClick_ja8cc02b83b846e291703c31b11ca3b7",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -74,9 +73,9 @@
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_b6a5fe5c1d8641fb915e4c9fcebf8fe4",
+            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_j9b6221b6daa49ae8e7e2838aecbf02e",
             "type": "MODIFY_VARIABLE_ACTION",
-            "parentId": "IF_CONDITION_ide_onClick_ae655a3d435c4c01853e134cab32d8dd",
+            "parentId": "IF_CONDITION_ide_onClick_ja8cc02b83b846e291703c31b11ca3b7",
             "callbackType": null,
             "variable": "isPrescriptionStep",
             "valueType": "set",
@@ -85,7 +84,7 @@
             "modifySet": "true",
             "modifySetType": "boolean"
         }, {
-            "id": "IF_CONDITION_ide_onClick_fb3506793cf6449796150cee086729ed",
+            "id": "IF_CONDITION_ide_onClick_cdf42b7e4a3e4c2fba283ac6cb22aa90",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -99,9 +98,9 @@
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_b8d63a772aad4a69a77b16c1150ddaa7",
+            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_i985c3f4279a42cbbf4b25bedefba738",
             "type": "MODIFY_VARIABLE_ACTION",
-            "parentId": "IF_CONDITION_ide_onClick_fb3506793cf6449796150cee086729ed",
+            "parentId": "IF_CONDITION_ide_onClick_cdf42b7e4a3e4c2fba283ac6cb22aa90",
             "callbackType": null,
             "variable": "Autoproceed",
             "valueType": "set",
@@ -110,7 +109,7 @@
             "modifySet": "true",
             "modifySetType": "boolean"
         }, {
-            "id": "IF_CONDITION_ide_onClick_fe992002a4634b189b7383157aa3a82b",
+            "id": "IF_CONDITION_ide_onClick_ff8161e4b2c540a2ac8dab413fae54e9",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -124,9 +123,9 @@
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_j67600fd63ce4fd98345098a2c948832",
+            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_c15a10074f914a899589e8738f79965c",
             "type": "MODIFY_VARIABLE_ACTION",
-            "parentId": "IF_CONDITION_ide_onClick_fe992002a4634b189b7383157aa3a82b",
+            "parentId": "IF_CONDITION_ide_onClick_ff8161e4b2c540a2ac8dab413fae54e9",
             "callbackType": null,
             "variable": "Autoskip",
             "valueType": "set",
@@ -135,7 +134,7 @@
             "modifySet": "true",
             "modifySetType": "boolean"
         }, {
-            "id": "IF_CONDITION_ide_onClick_d64a0ac73d4c4ebebb16eac55026faab",
+            "id": "IF_CONDITION_ide_onClick_dd34586244d64d4098a9b13478d4c008",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -149,9 +148,9 @@
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_gf5ee9758fdf4b6ba75b495dc4d459e2",
+            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_d64745b9f427478380a99c038f910f92",
             "type": "MODIFY_VARIABLE_ACTION",
-            "parentId": "IF_CONDITION_ide_onClick_d64a0ac73d4c4ebebb16eac55026faab",
+            "parentId": "IF_CONDITION_ide_onClick_dd34586244d64d4098a9b13478d4c008",
             "callbackType": null,
             "variable": "hasGreyout",
             "valueType": "set",
@@ -160,7 +159,7 @@
             "modifySet": "true",
             "modifySetType": "boolean"
         }, {
-            "id": "LOADING_INDICATOR_ide_onClick_i27f66c6dc7246c6b03709ae9145f3f3",
+            "id": "LOADING_INDICATOR_ide_onClick_faae8dafed3141f7a3a0b03ade8277cf",
             "selectedOption": "show",
             "type": "LOADING_INDICATOR",
             "callbackType": null,
@@ -170,7 +169,7 @@
             "showProgressIndicator": "true",
             "text": "Creating new step..."
         }, {
-            "id": "INVOKE_ASYNC_SERVICE_ide_onClick_f72088244f4643abb77990d7f7c540ec",
+            "id": "INVOKE_ASYNC_SERVICE_ide_onClick_ja20b16ddd2e4adb82d2dbfdb7540901",
             "type": "INVOKE_ASYNC_SERVICE",
             "inputparams": null,
             "httpheaders": null,
@@ -465,9 +464,9 @@
             },
             "enableMappingEditor": true
         }, {
-            "id": "LOADING_INDICATOR_ide_onClick_f7e3fc02444847a39d14133698090a71",
+            "id": "LOADING_INDICATOR_ide_onClick_fcedc38f97ad4f67b98d74161822729e",
             "selectedOption": "dismiss",
-            "parentId": "INVOKE_ASYNC_SERVICE_ide_onClick_f72088244f4643abb77990d7f7c540ec",
+            "parentId": "INVOKE_ASYNC_SERVICE_ide_onClick_ja20b16ddd2e4adb82d2dbfdb7540901",
             "type": "LOADING_INDICATOR",
             "callbackType": "Callback",
             "skin": "none",
@@ -475,7 +474,7 @@
             "isBlocked": "true",
             "showProgressIndicator": "true"
         }, {
-            "id": "IF_CONDITION_ide_onClick_e50f348c670146019b0b62f9557f9c4f",
+            "id": "IF_CONDITION_ide_onClick_c56ae5b169a34ffc8ce3de6f6ec73810",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
@@ -484,18 +483,18 @@
                 "leftValueType": "expression",
                 "leftValue": "STEP_create.opstatus === 0"
             }],
-            "parentId": "INVOKE_ASYNC_SERVICE_ide_onClick_f72088244f4643abb77990d7f7c540ec",
+            "parentId": "INVOKE_ASYNC_SERVICE_ide_onClick_ja20b16ddd2e4adb82d2dbfdb7540901",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "SHOW_ALERT_ide_onClick_d7c8b58950334fccb80378e4b813e09f",
+            "id": "SHOW_ALERT_ide_onClick_cc433374b7814bedae97dde55d99bb2c",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_INFO",
             "alertTitle": "New step created.",
             "yesLabel": "Ok",
             "alertMessage": "New step successfully created!",
             "messageType": "constant",
-            "parentId": "IF_CONDITION_ide_onClick_e50f348c670146019b0b62f9557f9c4f",
+            "parentId": "IF_CONDITION_ide_onClick_c56ae5b169a34ffc8ce3de6f6ec73810",
             "callbackType": null,
             "alertTitlei18n": null,
             "yesLabeli18n": null,
@@ -504,13 +503,13 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "ADD_SNIPPET_da012665f1084d8c9f41e9674eb2224b",
+            "id": "ADD_SNIPPET_ide_onClick_e40318a1c32745c8850eaa3414268822",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "self.view.flxPopupNewStep.setVisibility(false);\nself.view.flxPopupNewStep.flxContainerNewPopup.flxNewPopup.txtStepTitle.text = \"\";\n\nlet steps_widgets = self.view.flxSteps.widgets();\n\nvoltmx.print(\"### FLEX STEPS NUMBER OF WIDGETS: \" + JSON.stringify(steps_widgets.length));\n\nif (steps_widgets.length <= 2){\n  self.view.flxBoxFirstStep.backgroundColor = \"FFFFFF00\";\n  self.view.flxBoxFirstStep.imgDeleteStep.setVisibility(false);\n  self.view.flxBoxFirstStep.imgEditStep.setVisibility(false);\n  self.view.flxBoxFirstStep.lblStepOrder.fontColor = \"00000000\";\n  self.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = \"00000000\";\n  left_position = parseInt(self.view.flxBoxFirstStep.left, 10) + parseInt(self.view.flxBoxFirstStep.width, 10) + 2;\n} else {\n  let lastStep = 'boxStep' + gblLastInsertedStep;\n  steps_widgets.forEach(widget => {\n    if (widget.id === lastStep) {\n      widget.flxBoxStep.backgroundColor = \"FFFFFF00\";\n      widget.imgDeleteStep.isVisible = false;\n      widget.imgEditStep.isVisible = false;\n      widget.lblStepOrder.fontColor = \"00000000\";\n      widget.lblStepTitle.fontColor = \"00000000\";\n      left_position = parseInt(widget.left, 10) + parseInt(widget.width, 10) + 2;\n    }\n  });\n}\n\n",
-            "parentId": "IF_CONDITION_ide_onClick_e50f348c670146019b0b62f9557f9c4f",
+            "codeSnippet": "self.view.flxPopupNewStep.setVisibility(false);\nthis.view.flxNewStepBlur.setVisibility(false);\nself.view.flxPopupNewStep.flxContainerNewPopup.flxNewPopup.txtStepTitle.text = \"\";\n\nlet steps_widgets = self.view.flxSteps.widgets();\n\nvoltmx.print(\"### FLEX STEPS NUMBER OF WIDGETS: \" + JSON.stringify(steps_widgets.length));\n\nif (steps_widgets.length <= 2){\n  self.view.flxBoxFirstStep.backgroundColor = \"FFFFFF00\";\n  self.view.flxBoxFirstStep.imgDeleteStep.setVisibility(false);\n  self.view.flxBoxFirstStep.imgEditStep.setVisibility(false);\n  self.view.flxBoxFirstStep.lblStepOrder.fontColor = \"00000000\";\n  self.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = \"00000000\";\n  left_position = parseInt(self.view.flxBoxFirstStep.left, 10) + parseInt(self.view.flxBoxFirstStep.width, 10) + 2;\n} else {\n  let lastStep = 'boxStep' + gblLastInsertedStep;\n  steps_widgets.forEach(widget => {\n    if (widget.id === lastStep) {\n      widget.flxBoxStep.backgroundColor = \"FFFFFF00\";\n      widget.imgDeleteStep.isVisible = false;\n      widget.imgEditStep.isVisible = false;\n      widget.lblStepOrder.fontColor = \"00000000\";\n      widget.lblStepTitle.fontColor = \"00000000\";\n      left_position = parseInt(widget.left, 10) + parseInt(widget.width, 10) + 2;\n    }\n  });\n}\n\n",
+            "parentId": "IF_CONDITION_ide_onClick_c56ae5b169a34ffc8ce3de6f6ec73810",
             "callbackType": null
         }, {
-            "id": "INVOKE_FUNCTION__b316d0dc59d848efa8d909c17ab94017",
+            "id": "INVOKE_FUNCTION__ide_onClick_a828063804a344698423584f66ee870d",
             "type": "INVOKE_FUNCTION",
             "sequenceKUID": "addNewStep",
             "display": "addNewStep",
@@ -518,12 +517,12 @@
                 "name": "left_position",
                 "value": " left_position"
             }],
-            "parentId": "IF_CONDITION_ide_onClick_e50f348c670146019b0b62f9557f9c4f",
+            "parentId": "IF_CONDITION_ide_onClick_c56ae5b169a34ffc8ce3de6f6ec73810",
             "callbackType": null,
             "disabled": null,
             "source": "controller"
         }, {
-            "id": "MOVE_ACTION_bd2a0a7cf4844638bb078d56f47ea333",
+            "id": "_ide_onClick_ha30b9bd8f1a4855bf3737245c5bb7e4",
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepComposition",
@@ -548,12 +547,12 @@
             "animationId": "MOVE_ACTION_bd2a0a7cf4844638bb078d56f47ea333",
             "displayAnimationId": "MOVE_ACTION_bd2a0a7cf4844638bb078d56f47ea333",
             "forkedPlatform": "all",
-            "parentId": "IF_CONDITION_ide_onClick_e50f348c670146019b0b62f9557f9c4f",
+            "parentId": "IF_CONDITION_ide_onClick_c56ae5b169a34ffc8ce3de6f6ec73810",
             "callbackType": null,
             "disabled": true,
             "widgetPath": "this.view.flxBoxPlus"
         }, {
-            "id": "ELSE_CONDITION_ide_onClick_i321dae74bcb4034aa3a84fb360dc57b",
+            "id": "ELSE_CONDITION_ide_onClick_ad2ad00ac5db457dafc9bf35cf94cdff",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -562,18 +561,18 @@
                 "rightValueType": "widgetprop",
                 "rightValue": ""
             }],
-            "parentId": "INVOKE_ASYNC_SERVICE_ide_onClick_f72088244f4643abb77990d7f7c540ec",
+            "parentId": "INVOKE_ASYNC_SERVICE_ide_onClick_ja20b16ddd2e4adb82d2dbfdb7540901",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "SHOW_ALERT_ide_onClick_bf94f7c23c89466d964d8d97e56a94da",
+            "id": "SHOW_ALERT_ide_onClick_gfb3a5759b2c410ba8a6f2499c04123c",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
             "alertTitle": "New step NOTcreated.",
             "yesLabel": "Ok",
             "alertMessage": "New step NOT created!",
             "messageType": "constant",
-            "parentId": "ELSE_CONDITION_ide_onClick_i321dae74bcb4034aa3a84fb360dc57b",
+            "parentId": "ELSE_CONDITION_ide_onClick_ad2ad00ac5db457dafc9bf35cf94cdff",
             "callbackType": null,
             "alertTitlei18n": null,
             "yesLabeli18n": null,

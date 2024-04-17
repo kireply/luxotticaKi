@@ -22,6 +22,42 @@
         "language": "js",
         "eventType": "onRowClick",
         "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_i3f68d616fa849ad9e25d363e66e4734",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "nestedSelection",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "boolean",
+            "value": "false",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "_ea745ad3c92949f38396903896279c82",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.flxNestedBlur.isVisible",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "true",
+                "leftItemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                "leftWidgetKUID": "j2bc703066314aa0a1cd4cfb9382e9cb"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "MODIFY_VARIABLE_ACTION_e16978fa7b884b8ebb80e91864e091bd",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "_ea745ad3c92949f38396903896279c82",
+            "callbackType": null,
+            "variable": "nestedSelection",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "constant",
+            "modifySet": "true",
+            "modifySetType": "boolean"
+        }, {
             "id": "ADD_LOCAL_VARIABLE_bc4c4caf53814aff8e0ba4ebf090b894",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "selected_item_right",
@@ -74,7 +110,7 @@
         }, {
             "id": "ADD_SNIPPET_c90984a1c03a4694a2f455534513af6c",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### SELECTED ITEM: \" + JSON.stringify(this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0]));\n\n\nselected_item_right = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].lblComponentName;\nselected_item_right_img = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].imgComponent;",
+            "codeSnippet": "voltmx.print(\"### SELECTED ITEM: \" + JSON.stringify(this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0]));\n\n\nselected_item_right = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].lblComponentName;\nselected_item_right_img = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].imgComponent;\n",
             "parentId": null,
             "callbackType": null
         }, {

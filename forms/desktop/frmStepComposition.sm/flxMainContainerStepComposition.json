@@ -41,7 +41,7 @@
         "flxContainerStepCreation",
         "flxComponentsSide",
         "flxSettingsSide",
-        "flxPopupNewStep"
+        "flxNestedBlur"
     ],
     "clipbounds": false,
     "containerweight": 100,

@@ -1,0 +1,23 @@
+{
+    "AS_Button_d4833410623a4f26a4f736380b270961": {
+        "id": "AS_Button_d4833410623a4f26a4f736380b270961",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "jdedde07e2c54b3c95128446196b0812"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_bdf3a3b9bdbf41c6940273cac8df0660",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxNestedBlur.setVisibility(true);",
+            "parentId": null
+        }]
+    }
+}
