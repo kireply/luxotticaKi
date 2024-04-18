@@ -36,7 +36,15 @@ define({
       width: (!this.view.flxNestedBlur.isVisible ? '100%' : "90%"), // if true, user is selecting a nested
       height: (!this.view.flxNestedBlur.isVisible ? '100%' : "90%") // if true, user is selecting a nested
     }, {}, {});
+    
+    if ( (parseInt(selectedComp.width, 10)) === 90) {  // if the component is nested
+      let componentArray = this.modes[gblFatherNest];
+      let nestedComponentsObj = componentArray.find(item => item.hasOwnProperty('nestedComponents'));
+      if ( nestedComponentsObj ){nestedComponentsObj.nestedComponents.push(selectedComp.id); }
+    }
 
+    debugger;
+    
     //whenever a component in one of the two halves is clicked
     const selectedCompEventHandler = () => {
       this.view.settingsSide.flxScrollSettingsContent.removeAll();    
@@ -124,7 +132,8 @@ define({
     
     selectedComp.onClickAddNested = () => {
       this.view.flxNestedBlur.setVisibility(true);
-      nestedSelection = true;
+      gblFatherNest = selectedComp.leftData[0].lblComponentName + "_" + selectedComp.componentOrder + "_" + gblCurrentStepOrder;
+      //nestedSelection = true;
     };
     
     /*selectedComp.onClickClone = () => {
@@ -373,8 +382,9 @@ define({
       console.log(list[i]);
 
       let propertyName = list[i].name;
-      if(propertyName === "nestedComponents") {
+      if(propertyName === "nestedComponents") { //nestedComponents / configurable
         nested = true;
+        this.modes[compKey].push({"nestedComponents": [] })
         continue;
       }
       
@@ -515,6 +525,8 @@ define({
 
   
   
+  // function invoked when Save Button is clicked (invoked from action editor)
+  
   saveStepComposition: function(){
     voltmx.print("### GBL PROPERTY TEMPLATES IDS: " + JSON.stringify(gblPropertyTemplatesIds));
     let left_widgets = this.view.flxScrollLeft.widgets();
@@ -643,6 +655,7 @@ define({
         }
       }
       let right_widgets = scroll.widgets();
+      
       if (right_widgets.length > 0){
         voltmx.print("### SONO A DESTRA DENTRO " + `${scroll.id}`);
 
@@ -747,7 +760,8 @@ define({
         });
       } 
     });
-  },
+  },   // end of function saveStepComposition
+  
   
   
   
