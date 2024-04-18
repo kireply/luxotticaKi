@@ -47,6 +47,46 @@
             "callbackType": null,
             "criteria": "all"
         }, {
+            "id": "ADD_LOCAL_VARIABLE_b008dbc351a6403d807dd4dec5da0e82",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "componentArray",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_a9947a7a7a6940e3aab09b628e3e502f",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "nestedComponentsObj",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_c32b5c728f014085b2988a8a35ee52cb",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "compSelected",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_db5d8a23c9094058b16db67076821e29",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "modi",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "MODIFY_VARIABLE_ACTION_e16978fa7b884b8ebb80e91864e091bd",
             "type": "MODIFY_VARIABLE_ACTION",
             "parentId": "_ea745ad3c92949f38396903896279c82",

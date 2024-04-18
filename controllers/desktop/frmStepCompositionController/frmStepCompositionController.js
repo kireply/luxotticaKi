@@ -37,9 +37,14 @@ define({
       height: (!this.view.flxNestedBlur.isVisible ? '100%' : "90%") // if true, user is selecting a nested
     }, {}, {});
     
+    
+    //let componentArray;
+    //let nestedComponentsObj;
     if ( (parseInt(selectedComp.width, 10)) === 90) {  // if the component is nested
-      let componentArray = this.modes[gblFatherNest];
-      let nestedComponentsObj = componentArray.find(item => item.hasOwnProperty('nestedComponents'));
+      componentArray = this.modes[gblFatherNest];
+      modi = this.modes;
+      compSelected = selectedComp;
+      nestedComponentsObj = componentArray.find(item => item.hasOwnProperty('nestedComponents'));
       if ( nestedComponentsObj ){nestedComponentsObj.nestedComponents.push(selectedComp.id); }
     }
 
@@ -686,20 +691,26 @@ define({
 
           // recupera la list associata alla chiave "nestedComponents" (dizionario) di completeKey
           
-          this.modes[completeKey];
+          //let m = this.modes[completeKey];
+          voltmx.print("### this.modes: " + JSON.stringify(modi[completeKey]) );
+          voltmx.print("### completeKey: " + completeKey );
+          voltmx.print("### nestedComponentsObj: " + nestedComponentsObj );
+          voltmx.print("### componentArray: " + componentArray );
+          voltmx.print("### selectedComp: " + compSelected );
           
-          letnestedComponentsObj = componentArray.find(item =>item.hasOwnProperty('nestedComponents'));
+          nestedComponentsObj = componentArray.find(item =>item.hasOwnProperty('nestedComponents'));
+          
           
           if (nestedComponentsObj) {
-            nestedComponentsObj.nestedComponents.push(selectedComp.id);
+            nestedComponentsObj.nestedComponents.push(compSelected.id);
           }
           
           
           voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_right,
                                                                                            (response) => {
-            voltmx.print("### Service response: "+JSON.stringify(response));
+            voltmx.print("### Service response SONO A DESTRA DENTRO: "+JSON.stringify(response));
             
-            //da qui in giù solo aggiungere. Da qua vengono salvate le properties di un componente con il suo valore.
+            //da qui in giù solo aggiungere. Da qua vengono salvate le properties di un componente e i relativi valori.
             widget[componentKey]["lblComponentId"].text = response.COMPONENT_INSTANCE[0].id;  // chiave primaria nel DB, a cui Nested Component deve puntare per trovare il padre
             property_instance_right["component_instance_id"] = response.COMPONENT_INSTANCE[0].id;
             let props_right = widget[componentKey]["flxSelectedComponentRight"]["segmentRight"]["data"];
