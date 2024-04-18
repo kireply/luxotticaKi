@@ -218,9 +218,9 @@ define({
       if (identify === null){
         // chiamata da editProperty
         lastComp = components.length > 0 ? components[components.length - 1] : null;
-        let channelKey = Object.keys(lastComp).find(key => key.startsWith("component"));
-        if (lastComp[channelKey]["leftData"][0].lblComponentName === gblLastInsertedComponent){
-          let newData = lastComp[channelKey]["rightData"];
+        let componentKey = Object.keys(lastComp).find(key => key.startsWith("component"));
+        if (lastComp[componentKey]["leftData"][0].lblComponentName === gblLastInsertedComponent){
+          let newData = lastComp[componentKey]["rightData"];
           newData.forEach(item => {
             if (item.lblPropertyName === propComp.propertyName) {
               if (switched){
@@ -234,14 +234,14 @@ define({
               }
             }
           });
-          lastComp[channelKey].flxSelectedComponentRight.segmentRight.setData(newData);
+          lastComp[componentKey].flxSelectedComponentRight.segmentRight.setData(newData);
         }
       } else {
         // chiamata da selectedComponent
         components.forEach((comp) => {
-          let channelKey = Object.keys(comp).find(key => key.startsWith("component"));
-          if (channelKey === identify){
-            let newData = comp[channelKey]["rightData"];
+          let componentKey = Object.keys(comp).find(key => key.startsWith("component"));
+          if (componentKey === identify){
+            let newData = comp[componentKey]["rightData"];
             newData.forEach(item => {
               if (item.lblPropertyName === propComp.propertyName) {
                 if (switched){
@@ -255,7 +255,7 @@ define({
                 }
               }
             });
-            comp[channelKey].flxSelectedComponentRight.segmentRight.setData(newData);
+            comp[componentKey].flxSelectedComponentRight.segmentRight.setData(newData);
           }
         });
       }
@@ -265,9 +265,9 @@ define({
       if (identify === null) {
         // chiamata da editProperty
         lastComp = components.length > 0 ? components[components.length - 1] : null;
-        let channelKey = Object.keys(lastComp).find(key => key.startsWith("component"));
-        if (lastComp[channelKey]["leftData"][0].lblComponentName === gblLastInsertedComponent){
-          let newData = lastComp[channelKey]["rightData"];
+        let componentKey = Object.keys(lastComp).find(key => key.startsWith("component"));
+        if (lastComp[componentKey]["leftData"][0].lblComponentName === gblLastInsertedComponent){
+          let newData = lastComp[componentKey]["rightData"];
           newData.forEach(item => {
             if (item.lblPropertyName === propComp.propertyName) {
               if (switched){
@@ -282,14 +282,14 @@ define({
             }
           });
 
-          lastComp[channelKey].flxSelectedComponentRight.segmentRight.setData(newData);
+          lastComp[componentKey].flxSelectedComponentRight.segmentRight.setData(newData);
         }
       } else {
         // chiamata da selectedComponent
         components.forEach((comp) => {
-          let channelKey = Object.keys(comp).find(key => key.startsWith("component"));
-          if (channelKey === identify){
-            let newData = comp[channelKey]["rightData"];
+          let componentKey = Object.keys(comp).find(key => key.startsWith("component"));
+          if (componentKey === identify){
+            let newData = comp[componentKey]["rightData"];
             newData.forEach(item => {
               if (item.lblPropertyName === propComp.propertyName) {
                 if (switched){
@@ -303,7 +303,7 @@ define({
                 }
               }
             });
-            comp[channelKey].flxSelectedComponentRight.segmentRight.setData(newData);
+            comp[componentKey].flxSelectedComponentRight.segmentRight.setData(newData);
           }
         });
       }
@@ -546,21 +546,22 @@ define({
           value: null,
           label_id: null
         };
-        let channelKey = Object.keys(widget).find(key => key.startsWith("component"));
-        component_instance_left["template_name"] = widget[channelKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
+        let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
+        component_instance_left["template_name"] = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
+        // numberPart è l'id dello step
         let numberPart = this.view.lblStepOrder.text.match(/\d+/);
         let number = parseInt(numberPart[0], 10);
         if (numberPart){
           component_instance_left["step_id"] = number;  
         }
-        component_instance_left["order"] = widget[channelKey]["lblComponentOrder"].text;
+        component_instance_left["order"] = widget[componentKey]["lblComponentOrder"].text;
 
         voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_left,
                                                                                          (response) => {
           voltmx.print("### Service response: "+JSON.stringify(response));
-          widget[channelKey]["lblComponentId"].text = response.COMPONENT_INSTANCE[0].id;
+          widget[componentKey]["lblComponentId"].text = response.COMPONENT_INSTANCE[0].id;
           property_instance_left["component_instance_id"] = response.COMPONENT_INSTANCE[0].id;
-          let props_left = widget[channelKey]["flxSelectedComponentRight"]["segmentRight"]["data"];
+          let props_left = widget[componentKey]["flxSelectedComponentRight"]["segmentRight"]["data"];
           props_left.forEach(function(prop_left) {
             let cleanedStr_left = prop_left.lblPropertyName.replace(/[^a-zA-Z0-9]+$/, '').replace(/^[^a-zA-Z0-9]+/, '');
 			let camelCaseStr_left = cleanedStr_left.charAt(0).toLowerCase() + cleanedStr_left.slice(1);
@@ -656,6 +657,8 @@ define({
       }
       let right_widgets = scroll.widgets();
       
+      
+      // modifica qui per i Nested Components
       if (right_widgets.length > 0){
         voltmx.print("### SONO A DESTRA DENTRO " + `${scroll.id}`);
 
@@ -671,19 +674,35 @@ define({
             value: null,
             label_id: null
           };
-          let channelKey = Object.keys(widget).find(key => key.startsWith("component"));
-          component_instance_right["template_name"] = widget[channelKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
+          let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
+          component_instance_right["template_name"] = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
           
           component_instance_right["step_id"] = number;  
           
-          component_instance_right["order"] = widget[channelKey]["lblComponentOrder"].text;
+          component_instance_right["order"] = widget[componentKey]["lblComponentOrder"].text;
+          
+          // es. RXC_ATTRIBUTE_TILE_LIST_2_1  (dove 2 è l'ordine e 1 il numero di Step)
+          let completeKey = component_instance_right["template_name"] + "_" + component_instance_right["order"] + "_" + component_instance_right["step_id"];
 
+          // recupera la list associata alla chiave "nestedComponents" (dizionario) di completeKey
+          
+          this.modes[completeKey];
+          
+          letnestedComponentsObj = componentArray.find(item =>item.hasOwnProperty('nestedComponents'));
+          
+          if (nestedComponentsObj) {
+            nestedComponentsObj.nestedComponents.push(selectedComp.id);
+          }
+          
+          
           voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_right,
                                                                                            (response) => {
             voltmx.print("### Service response: "+JSON.stringify(response));
-            widget[channelKey]["lblComponentId"].text = response.COMPONENT_INSTANCE[0].id;
+            
+            //da qui in giù solo aggiungere. Da qua vengono salvate le properties di un componente con il suo valore.
+            widget[componentKey]["lblComponentId"].text = response.COMPONENT_INSTANCE[0].id;  // chiave primaria nel DB, a cui Nested Component deve puntare per trovare il padre
             property_instance_right["component_instance_id"] = response.COMPONENT_INSTANCE[0].id;
-            let props_right = widget[channelKey]["flxSelectedComponentRight"]["segmentRight"]["data"];
+            let props_right = widget[componentKey]["flxSelectedComponentRight"]["segmentRight"]["data"];
             props_right.forEach(function(prop_right) {
               let cleanedStr = prop_right.lblPropertyName.replace(/[^a-zA-Z0-9]+$/, '').replace(/^[^a-zA-Z0-9]+/, '');
               let camelCaseStr = cleanedStr.charAt(0).toLowerCase() + cleanedStr.slice(1);
