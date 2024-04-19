@@ -141,13 +141,13 @@ define({
       //nestedSelection = true;
     };
     
-    /*selectedComp.onClickClone = () => {
+    selectedComp.onClickClone = () => {
       this.cloneComponent(selectedComp.id);
     };
     
     selectedComp.onClickDelete = () => {
-      this.deleteComponent();
-    };*/
+      this.deleteComponent(selectedComp.id);
+    };
 
     selectedComp.flxSelectedComponentLeft.segmentLeft.setData(leftData);
     selectedComp.flxSelectedComponentRight.segmentRight.setData(rightData);
@@ -443,7 +443,7 @@ define({
           top: '2%',
           centerX: '50%'
         }, {}, {});
-        gblFlowId = 128; //to comment in the global flow of the application
+        //gblFlowId = 128; //to comment in the global flow of the application
         let label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`;
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
         propComp.propertyValue = label_key;
@@ -536,7 +536,7 @@ define({
     voltmx.print("### GBL PROPERTY TEMPLATES IDS: " + JSON.stringify(gblPropertyTemplatesIds));
     let left_widgets = this.view.flxScrollLeft.widgets();
     let steps = this.view.flxRightSide.widgets();
-    gblFlowId = 128; //to comment in the global flow of the application
+    //gblFlowId = 128; //to comment in the global flow of the application
     if (left_widgets.length > 0){
       voltmx.print("### SONO A SINISTRA");
       left_widgets.forEach(function(widget) {
@@ -554,11 +554,17 @@ define({
         let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
         component_instance_left["template_name"] = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
         // numberPart è l'id dello step
-        let numberPart = this.view.lblStepOrder.text.match(/\d+/);
-        let number = parseInt(numberPart[0], 10);
+     /*   let numberPart = 1; //this.view.flxBoxFirstStep.lblStepOrder.text.match(/\d+/);
+      let number = parseInt(numberPart[0], 10);
         if (numberPart){
           component_instance_left["step_id"] = number;  
-        }
+        } */
+        
+        let entry = Object.entries(gblIdOrderSteps).find(([id, order]) => order === "1");
+        let number = entry ? entry[0] : undefined;
+        
+        component_instance_left["step_id"] = number;
+        debugger;
         component_instance_left["order"] = widget[componentKey]["lblComponentOrder"].text;
 
         voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_left,
@@ -651,7 +657,8 @@ define({
     scrolls.forEach(scroll => {
       let number = 0;
       if (scroll.id === "flxScrollRight"){
-        number = 1;
+        let entry = Object.entries(gblIdOrderSteps).find(([id, order]) => order === "1");
+        number = entry ? entry[0] : undefined;
       } else {
         let match = scroll.id.match(/flxScrollRight(\d+)$/);
         if (match) {
@@ -683,18 +690,17 @@ define({
           component_instance_right["template_name"] = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
           
           component_instance_right["step_id"] = number;  
-          
+          debugger;
           component_instance_right["order"] = widget[componentKey]["lblComponentOrder"].text;
           
           // es. RXC_ATTRIBUTE_TILE_LIST_2_1  (dove 2 è l'ordine e 1 il numero di Step)
-          let completeKey = component_instance_right["template_name"] + "_" + component_instance_right["order"] + "_" + component_instance_right["step_id"];
+      /*    let completeKey = component_instance_right["template_name"] + "_" + component_instance_right["order"] + "_" + component_instance_right["step_id"];
 
           // recupera la list associata alla chiave "nestedComponents" (dizionario) di completeKey
           
-          //let m = this.modes[completeKey];
-          voltmx.print("### this.modes: " + JSON.stringify(modi[completeKey]) );
+          let m = modi[completeKey];
+          voltmx.print("### this.modes[completeKey]: " + JSON.stringify(modi[completeKey]) );
           voltmx.print("### completeKey: " + completeKey );
-          voltmx.print("### nestedComponentsObj: " + nestedComponentsObj );
           voltmx.print("### componentArray: " + componentArray );
           voltmx.print("### selectedComp: " + compSelected );
           
@@ -705,6 +711,9 @@ define({
             nestedComponentsObj.nestedComponents.push(compSelected.id);
           }
           
+          voltmx.print("### nestedComponentsObj: " + nestedComponentsObj );
+          
+      */    
           
           voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_right,
                                                                                            (response) => {
@@ -821,6 +830,7 @@ define({
       left: `${left_position_percentage}`,
       centerY: '50%'
     }, {}, {});
+    
 
     box.stepOrder = "Step " + index;
     box.stepTitle = gblCurrentStepTitle;
@@ -879,6 +889,29 @@ define({
       this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
       this.view.settingsSide.txt.setVisibility(true);
     };
+    
+    
+    
+    box.onTouchEndDeleteTeaser = () => {
+      let scroll = this.findCurrentFlexScroll();
+      this.view.flxRightSide.remove(scroll);
+      this.view.flxScrollRight.setVisibility(true);
+      
+      let widget = this.view.flxSteps.widgets().find(w => w.id === box.id);
+      
+      this.view.flxSteps.flxBoxFirstStep.backgroundColor = "00000000";
+      this.view.flxSteps.flxBoxFirstStep.imgDeleteStep.isVisible = true;
+      this.view.flxSteps.flxBoxFirstStep.imgEditStep.isVisible = true;
+      this.view.flxSteps.flxBoxFirstStep.lblStepOrder.fontColor = "FFFFFF00";
+      this.view.flxSteps.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = "FFFFFF00";
+      
+      this.view.flxSteps.remove(widget);
+      
+      gblCurrentStepOrder = 1;
+
+    };
+    
+    
     
     this.view.flxSteps.add(box);
 
@@ -1155,7 +1188,7 @@ define({
       });
       gblLastInsertedComponent = new_widget[0][0].lblComponentName;
 //       debugger;
-      this.selectComponent(new_widget[1], new_widget[0], instance);
+      this.selectComponent(new_widget[1], new_widget[0], instance, false);
     });
   }, 
   
@@ -1190,7 +1223,7 @@ define({
       });
       gblLastInsertedComponent = new_widget[0][0].lblComponentName;
 //       debugger;
-      this.selectComponent(new_widget[1], new_widget[0], instance);
+      this.selectComponent(new_widget[1], new_widget[0], instance, false);
     });
   }
   

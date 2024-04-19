@@ -11,7 +11,7 @@
                 {
                     "access": "Enable",
                     "group": "General",
-                    "kuid": "d5e40ca4b16a42ae83a2221d3b95ac99",
+                    "kuid": "b45866ae206d4a069eb75aa83a7becaa",
                     "originalPropertyKey": "onClick",
                     "propertyIndex": 1,
                     "propertyKey": "onClickTeaser",
@@ -25,6 +25,44 @@
                         "wType": "FlexContainer"
                     },
                     "srcWgtKUID": "hca38cf6f959458d8f05840cacd2079a",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "df8aa6f66b43493682b62a2c67961a39",
+                    "originalPropertyKey": "onTouchEnd",
+                    "propertyIndex": 2,
+                    "propertyKey": "onTouchEndDeleteTeaser",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onTouchEndDeleteTeaser",
+                        "srcWidget": "imgDeleteStep",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "i5687ceac2cb416ab81df5ee218c17aa",
+                    "translateAtInstance": false
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "b33f08367eb049d0be73c75baf81a7b6",
+                    "originalPropertyKey": "onTouchEnd",
+                    "propertyIndex": 3,
+                    "propertyKey": "onTouchEndEditTeaser",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onTouchEndEditTeaser",
+                        "srcWidget": "imgEditStep",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "Image"
+                    },
+                    "srcWgtKUID": "i0c3e3bce04949168fa26cb0faacfdc4",
                     "translateAtInstance": false
                 }
             ]
