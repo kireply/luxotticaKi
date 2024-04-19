@@ -39,14 +39,14 @@
         "imgArrow",
         "lblListOfFlows",
         "flxBtnCreateNewFlow",
+        "lbCategory",
         "lbStatus",
         "lbEnvironment",
         "flxHeaderSegFlows",
         "segFlows",
         "txtSearchFlowName",
         "imgSearchFlowName",
-        "channelTemplatewithContract",
-        "lbCategory"
+        "channelTemplatewithContract"
     ],
     "clipbounds": false,
     "containerweight": 100,

@@ -2221,133 +2221,162 @@ define({
 //         var value = obj[Object.keys(obj)[1]].displayName;
 //         voltmx.print("### NAME: " + value);
      
-     
-        var data = JSON.parse(JSON_string);
-
-        Object.keys(data).forEach(componentKey => {
-            var component = data[componentKey];
-            console.log(`### ${componentKey} ###`);
-          
-            // Definizioni iniziali delle variabili
-            var component_template = {
-                name: null,
-                displayName: null,
-                layout: null,
-                previewImage: null,
-                modalImage: null,
-                availableAttributes: null,
-                nestedViewModes: null,
-                configurable: null,
-                position_values: null,
-                viewModes: null,
-                tilesFeaturesListLayout: null,
-                targetDigitalOptometry: null,
-                defaultComponent: null
-            };
-           
-            component_template["name"] = componentKey;
-
-            // Stampa tutte le proprietà e assegna i valori alle variabili se necessario
-            Object.keys(component).forEach(prop => {
-                if (prop !== "props") {
-                    // Controlla se la proprietà è un array
-                    if (Array.isArray(component[prop])) {
-                        // Concatena gli elementi dell'array in una stringa unica separata da virgole
-                        console.log(`${prop}: ${component[prop].join(', ')}`);
-                        if (component_template.hasOwnProperty(prop)) { // Assegna a component_template se prop è una chiave di component_template
-                          component_template[prop] = component[prop].join(', ');
-                        }
-                    } else {
-                        console.log(`${prop}: ${JSON.stringify(component[prop])}`);
-                        if (component_template.hasOwnProperty(prop)) { // Assegna a component_template se prop è una chiave di component_template                          
-                          component_template[prop] = component[prop];
-                        }
-                    }
-                }
-            });
-            // Stampa i valori delle variabili per verificare
-            console.log(component_template);
-//             debugger;
-			//aggiungi logica per invocare il DB con la create del component template
-            voltmx.print("### CREATE COMPONENT TEMPLATE!");
-            integrationService.invokeOperation("COMPONENT_TEMPLATE_create", {}, component_template, 
+       integrationService.invokeOperation("COMPONENT_TEMPLATE_LENGTH_CustomQuery", {},{}, 
                                                (response) => {
-               										voltmx.print ("### Service response: "+JSON.stringify(response));
-              										let isADefaultComponent = response.COMPONENT_TEMPLATE[0].defaultComponent;
-                                                    if (component.props) {
-                                                      if (isADefaultComponent === "false"){
-                                                        // Il componente non è di default
-                                                        console.log(`### Gestione delle props di ${componentKey} che non è un componente di default`);
-                                                        // EACH PROPERTY
-                                                        Object.keys(component.props).forEach(propKey => {
-                                                          var props_template = {
-                                                            name: null, 
-                                                            component_name: componentKey,
-                                                            required: null,
-                                                            default: null,
-                                                            type: null,
-                                                            mode: null
-                                                          }
-                                                          // Controllo se la propKey corrente è 'labels'
-                                                          if (propKey === "labels"){
-                                                            if (component.props[propKey].length > 0) {
-                                                              component.props[propKey].forEach(label => {
-                                                                props_template["name"] = label.key;
-                                                                props_template["component_name"] = componentKey;
-                                                                props_template["required"] = false;
-                                                                props_template["default"] = label.default;
-                                                                props_template["type"] = "string";
-                                                                props_template["mode"] = "label";
-                                                                console.log(props_template);
-                                                                // logica per invocare il DB con la create del property template
-                                                                voltmx.print("### CREATE PROPERTY TEMPLATE FOR LABEL!");
-                                                                integrationService.invokeOperation("PROPERTY_TEMPLATE_create", {}, props_template, 
-                                                                                                   (response) => {
-                                                                  voltmx.print("### Service response: " + JSON.stringify(response));            
-                                                                }, error => {
-                                                                  voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-                                                                }
-                                                                                                  );
-                                                              });
-                                                            }
-                                                          } else {
-                                                            props_template["name"] = propKey;
-                                                            var prop = component.props[propKey];
-                                                            console.log(`${propKey}: ${JSON.stringify(prop)}`);
-                                                            Object.keys(prop).forEach(propValues => {
-                                                              value = prop[propValues];
-                                                              voltmx.print(`### PROP VALUE: ${propValues} = ${JSON.stringify(value)}`);
-                                                              if (props_template.hasOwnProperty(propValues)){
-                                                                props_template[propValues] = value;
-                                                              }  
-                                                            });
-                                                            console.log(props_template);
+         
+         voltmx.print("### Success response: " + JSON.stringify(response));
+         
+         if (response.records[0]["number"] > 0) {
+           
+           integrationService.invokeOperation("DEFAULT_COMPONENTS_CustomQuery", {},{}, 
+                                               (default_response) => {
+             voltmx.print("### Success response: " + JSON.stringify(default_response));
+             
+             let structuredData = Object.values(default_response.records.reduce((acc, record) => {
+               // Se non esiste già un oggetto per il nome del componente, crealo
+               if (!acc[record.component_name]) {
+                 acc[record.component_name] = { id: record.component_name };
+               }
+               // Aggiungi ogni proprietà del record come chiave dell'oggetto del componente
+               acc[record.component_name][record.name] = record.default;
 
-                                                            // logica per invocare il DB con la create del property template
-                                                            voltmx.print("### CREATE PROPERTY TEMPLATE!");
-                                                            integrationService.invokeOperation("PROPERTY_TEMPLATE_create", {}, props_template, 
-                                                                                               (response) => {
-                                                              voltmx.print ("### Service response: "+JSON.stringify(response));            
-                                                            }, error => {
-                                                              voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-                                                            });
-                                                          }
+               return acc;
+             }, {}) );
+             gblDefaultComponents = structuredData;
+             
+           }, (error) => {
+             voltmx.print("### Error ");
+           });
+           
+         } else {
+           
+           var data = JSON.parse(JSON_string);
 
-                                                        });
-                                                      } else {
-                                                        let result = { id: componentKey };
-                                                        component.props.labels.forEach(label => {
-                                                          result[label.key] = label.default;
-                                                        });
-                                                        gblDefaultComponents.push(result);
-                                                        voltmx.print("### GBL DEFAULT COMPONENTS: " + JSON.stringify(gblDefaultComponents));
-                                                      }
-                                                    }
-            }, error => {
-            	voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-            });
+           Object.keys(data).forEach(componentKey => {
+             var component = data[componentKey];
+             console.log(`### ${componentKey} ###`);
+
+             // Definizioni iniziali delle variabili
+             var component_template = {
+               name: null,
+               displayName: null,
+               layout: null,
+               previewImage: null,
+               modalImage: null,
+               availableAttributes: null,
+               nestedViewModes: null,
+               configurable: null,
+               position_values: null,
+               viewModes: null,
+               tilesFeaturesListLayout: null,
+               targetDigitalOptometry: null,
+               defaultComponent: null
+             };
+
+             component_template["name"] = componentKey;
+
+             // Stampa tutte le proprietà e assegna i valori alle variabili se necessario
+             Object.keys(component).forEach(prop => {
+               if (prop !== "props") {
+                 // Controlla se la proprietà è un array
+                 if (Array.isArray(component[prop])) {
+                   // Concatena gli elementi dell'array in una stringa unica separata da virgole
+                   console.log(`${prop}: ${component[prop].join(', ')}`);
+                   if (component_template.hasOwnProperty(prop)) { // Assegna a component_template se prop è una chiave di component_template
+                     component_template[prop] = component[prop].join(', ');
+                   }
+                 } else {
+                   console.log(`${prop}: ${JSON.stringify(component[prop])}`);
+                   if (component_template.hasOwnProperty(prop)) { // Assegna a component_template se prop è una chiave di component_template                          
+                     component_template[prop] = component[prop];
+                   }
+                 }
+               }
+             });
+             // Stampa i valori delle variabili per verificare
+             console.log(component_template);
+             //             debugger;
+             //aggiungi logica per invocare il DB con la create del component template
+             voltmx.print("### CREATE COMPONENT TEMPLATE!");
+             integrationService.invokeOperation("COMPONENT_TEMPLATE_create", {}, component_template, 
+                                                (response) => {
+               voltmx.print ("### Service response: "+JSON.stringify(response));
+               let isADefaultComponent = response.COMPONENT_TEMPLATE[0].defaultComponent;
+               if (component.props) {
+
+                 // Il componente non è di default
+                 console.log(`### Gestione delle props di ${componentKey} che non è un componente di default`);
+                 // EACH PROPERTY
+                 Object.keys(component.props).forEach(propKey => {
+                   var props_template = {
+                     name: null, 
+                     component_name: componentKey,
+                     required: null,
+                     default: null,
+                     type: null,
+                     mode: null
+                   }
+                   // Controllo se la propKey corrente è 'labels'
+                   if (propKey === "labels"){
+                     if (component.props[propKey].length > 0) {
+                       component.props[propKey].forEach(label => {
+                         props_template["name"] = label.key;
+                         props_template["component_name"] = componentKey;
+                         props_template["required"] = false;
+                         props_template["default"] = label.default;
+                         props_template["type"] = "string";
+                         props_template["mode"] = "label";
+                         console.log(props_template);
+                         // logica per invocare il DB con la create del property template
+                         voltmx.print("### CREATE PROPERTY TEMPLATE FOR LABEL!");
+                         integrationService.invokeOperation("PROPERTY_TEMPLATE_create", {}, props_template, 
+                                                            (response) => {
+                           voltmx.print("### Service response: " + JSON.stringify(response));            
+                         }, error => {
+                           voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                         }
+                                                           );
+                       });
+                     }
+                   } else {
+                     props_template["name"] = propKey;
+                     var prop = component.props[propKey];
+                     console.log(`${propKey}: ${JSON.stringify(prop)}`);
+                     Object.keys(prop).forEach(propValues => {
+                       value = prop[propValues];
+                       voltmx.print(`### PROP VALUE: ${propValues} = ${JSON.stringify(value)}`);
+                       if (props_template.hasOwnProperty(propValues)){
+                         props_template[propValues] = value;
+                       }  
+                     });
+                     console.log(props_template);
+
+                     // logica per invocare il DB con la create del property template
+                     voltmx.print("### CREATE PROPERTY TEMPLATE!");
+                     integrationService.invokeOperation("PROPERTY_TEMPLATE_create", {}, props_template, 
+                                                        (response) => {
+                       voltmx.print ("### Service response: "+JSON.stringify(response));            
+                     }, error => {
+                       voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                     });
+                   }
+
+                 });
+
+               }
+             }, error => {
+               voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+             });
             
         });
+       }
+         
+       }, error => {
+            	voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+            }
+            
+        );
+     
       
      
       integrationService.invokeOperation("CHANNEL_get",{},{},
