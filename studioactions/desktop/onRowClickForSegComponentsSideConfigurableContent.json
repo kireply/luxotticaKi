@@ -1,0 +1,350 @@
+{
+    "AS_Segment_b70fec27712e495b8922b5fd0c2feb30": {
+        "id": "AS_Segment_b70fec27712e495b8922b5fd0c2feb30",
+        "type": "ACTION_SEQUENCE",
+        "name": "onRowClickForSegComponentsSideConfigurableContent",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onRowClick",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_i3f68d616fa849ad9e25d363e66e4734",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "nestedSelection",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "boolean",
+            "value": "false",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "_ea745ad3c92949f38396903896279c82",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.flxNestedBlur.isVisible",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "true",
+                "leftItemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                "leftWidgetKUID": "j2bc703066314aa0a1cd4cfb9382e9cb"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_b008dbc351a6403d807dd4dec5da0e82",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "componentArray",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_a9947a7a7a6940e3aab09b628e3e502f",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "nestedComponentsObj",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_c32b5c728f014085b2988a8a35ee52cb",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "compSelected",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_db5d8a23c9094058b16db67076821e29",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "modi",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "MODIFY_VARIABLE_ACTION_e16978fa7b884b8ebb80e91864e091bd",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "_ea745ad3c92949f38396903896279c82",
+            "callbackType": null,
+            "variable": "nestedSelection",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "constant",
+            "modifySet": "true",
+            "modifySetType": "boolean"
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_bc4c4caf53814aff8e0ba4ebf090b894",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "selected_item_right",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_bea185a781ac470288db5faf70e00110",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "leftSegmentDataConfigurable",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "[]",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_e8d40ecb08cc48fc9e20d63cec06742c",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "rightSegmentDataConfigurable",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "[]",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_dcb52d4e8a324c27b4c57d6740618801",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "selected_item_right_img",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_cd106e4649af4f1595f8b4d5e9ddb1a7",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "customQueryOutputConfigurable",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "[]",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_c90984a1c03a4694a2f455534513af6c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### SELECTED ITEM: \" + JSON.stringify(this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0]));\n\n\nselected_item_right = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].lblComponentName;\nselected_item_right_img = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].imgComponent;\n",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_dc33cb2d38f447b79efe50fa044e521d",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_bca6c04b9d544258a3a934905cf4c9f8": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_bca6c04b9d544258a3a934905cf4c9f8",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "selected_item_right",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "component_name",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "PROPERTY_TEMPLATE_CustomQuery",
+                            "operationid": "123660"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_bca6c04b9d544258a3a934905cf4c9f8"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "PROPERTY_TEMPLATE_CustomQuery",
+                "operationid": "123660"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_c2746b8d796a482cadc3dcabc93825ef",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "PROPERTY_TEMPLATE_CustomQuery !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "PROPERTY_TEMPLATE_CustomQuery.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_dc33cb2d38f447b79efe50fa044e521d",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_db11324c29c9408ea679ddf0d3dac29d",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_dc33cb2d38f447b79efe50fa044e521d",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_afcc9a484bed436a99ed7ae0e909d4da",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Error occurred in Foundry layer while fetching properties. OPSTATUS: \"+PROPERTY_TEMPLATE_CustomQuery.opstatus);\n",
+            "parentId": "_db11324c29c9408ea679ddf0d3dac29d",
+            "callbackType": null
+        }, {
+            "id": "_fefcd5e562134a6f8c0e55e49dabd429",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "PROPERTY_TEMPLATE_CustomQuery.records !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "PROPERTY_TEMPLATE_CustomQuery.records.length > 0"
+            }],
+            "parentId": "_c2746b8d796a482cadc3dcabc93825ef",
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_d0f4c7a37df84f06967e37e01de980e1",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "customQueryOutputConfigurable = PROPERTY_TEMPLATE_CustomQuery.records;\n\n\nvoltmx.print(\"### FLX SCROLL SETTINGS NUMBER OF WIDGETS BEFORE: \" + JSON.stringify(self.view.settingsSide.flxScrollSettingsContent.widgets().length));",
+            "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
+            "callbackType": null
+        }, {
+            "id": "MODIFY_VARIABLE_ACTION_e9c915d03233408ca9a9726b4ee778de",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
+            "callbackType": null,
+            "disabled": true,
+            "variable": "customQueryOutputConfigurable",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "constant",
+            "modifySet": "[]",
+            "modifySetType": "string"
+        }, {
+            "id": "INVOKE_FUNCTION__gbce19bad4e248d59079f750b13daaa6",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "editProperty",
+            "display": "editProperty",
+            "inputparams": [{
+                "name": "list",
+                "value": " customQueryOutputConfigurable"
+            }, {
+                "name": "rightSegmentData",
+                "value": " rightSegmentDataConfigurable"
+            }, {
+                "name": "leftSegmentData",
+                "value": " leftSegmentDataConfigurable"
+            }, {
+                "name": "selected_item",
+                "value": " selected_item_right"
+            }, {
+                "name": "selected_item_img",
+                "value": " selected_item_right_img"
+            }],
+            "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }, {
+            "id": "ADD_SNIPPET_g4170646779242abb4076506123d78a9",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### FLX SCROLL SETTINGS NUMBER OF WIDGETS AFTER: \" + JSON.stringify(self.view.settingsSide.flxScrollSettingsContent.widgets().length));",
+            "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
+            "callbackType": null,
+            "disabled": true
+        }, {
+            "id": "_e4cb257f71144b6c95f352e0764819bb",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "_c2746b8d796a482cadc3dcabc93825ef",
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_g8c08621d7734f79a1b598b313cbf722",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### No property returned.\");",
+            "parentId": "_e4cb257f71144b6c95f352e0764819bb",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_e6894da42b894a6985a549aa3c160b10",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### RESPONSE CUSTOM QUERY: \" + JSON.stringify(PROPERTY_TEMPLATE_CustomQuery.records));\n\n/*\n\n### SELECTED ITEM: {\"imgComponent\":\"https://www.salvatorepumo.it/wp-content/uploads/2024/01/logo-ray-ban-oggi.jpg\",\"lblComponentName\":\"RXC_BRAND_LOGO\",\"lblLayout\":\"previewSection\"}\n### RESPONSE CUSTOM QUERY: [{\"mode\":\"dropdown\",\"component_name\":\"RXC_BRAND_LOGO\",\"name\":\"position\",\"id\":\"60\",\"type\":\"string\",\"required\":\"true\"}]\n\n*/\n\n// var rightSegmentData = [];\n// var leftSegmentData = [];\nlet index = 0;\nstring = `channel${new Date().getTime()}`;\nconsole.log(string);\n\nfor (let i = 0; i < PROPERTY_TEMPLATE_CustomQuery.records.length; i++) {\n\n    console.log(PROPERTY_TEMPLATE_CustomQuery.records[i]);\n  \n    if (PROPERTY_TEMPLATE_CustomQuery.records[i].required === 'true'){\n        propertyName = PROPERTY_TEMPLATE_CustomQuery.records[i].name;\n        let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + \": \";\n        let properties = {lblPropertyName: capitalizedName, lblPropertyValue: \"\"}; \n        rightSegmentDataConfigurable.push(properties);\n        console.log(rightSegmentDataConfigurable);\n        const propComp = new ki.luxottica.editPropertyValuewithTextField({\n        id: `channel${new Date().getTime()}`,\n        top: '2%',\n        centerX: '50%'\n      }, {}, {});\n      voltmx.print(\"### PROPERTY COMPONENT CREATED!\");\n      propComp.propertyName = capitalizedName;\n//       flex.add(propComp);\n      self.view.settingsSide.txt.setVisibility(false);\n      self.view.settingsSide.flxScrollSettingsContent.setVisibility(true);\n      self.view.settingsSide.flxScrollSettingsContent.add(propComp);\n      self.view.settingsSide.flxScrollSettingsContent.forceLayout();\n//         self.view.selectedComponent.flxSelectedComponentRight.segmentRight.setData(rightSegmentData);\n//         self.view.selectedComponentRight.flxSelectedComponentRight.segmentRight.setData(rightSegmentDataConfigurable);\n    }\n  \n    index +=1;\n}\n\nlet selected_component_data = {lblComponentName: selected_item_right, imgComponent: selected_item_right_img};\nleftSegmentDataConfigurable.push(selected_component_data);\n// self.view.selectedComponentRight.flxSelectedComponentLeft.segmentLeft.setData(leftSegmentDataConfigurable);\n\n\n\n\n//        template_configurable = {imgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].previewImage, lblComponentName: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].displayName, lblLayout: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].layout};\n//        gblConfigurableComponentsTemplates.push(template_configurable);\n//        console.log(gblConfigurableComponentsTemplates);\n//        self.view.ComponentsSide.segComponentsSideConfigurableContent.setData(gblConfigurableComponentsTemplates);",
+            "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
+            "callbackType": null,
+            "disabled": true
+        }, {
+            "id": "ADD_SNIPPET_b397e3f09f03469e9e0075f4ad40d8a5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// self.view.flxSelectedComponentRight.setVisibility(true);\n// self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.imgNoComponentsRight.setVisibility(false);\n// self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.lblNoComponentsRight.setVisibility(false);\n// self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.txtStartPhraseRight.setVisibility(false);\n\nlet left_width = parseInt(self.view.flxLeftRight.flxLeftSide.width, 10);\nlet right_width = parseInt(self.view.flxLeftRight.flxRightSide.width, 10);\n\nif ( left_width > 48){\n  //vuol dire che il pannello di sinistra è aperto\n  self.view.flxSelectedComponent.setVisibility(true);\n  gblSelectedComponentLeft = true;\n  self.view.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(false);\n  self.view.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(false);\n  self.view.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(false);\n}\nif ( right_width > 48){\n  //vuol dire che il pannello di destra è aperto\n  self.view.flxSelectedComponentRight.setVisibility(true);\n  gblSelectedComponentRight = true;\n  self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.imgNoComponentsRight.setVisibility(false);\n  self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.lblNoComponentsRight.setVisibility(false);\n  self.view.flxContainerStepCreation.flxLeftRight.flxRightSide.txtStartPhraseRight.setVisibility(false);\n}\n\n\n",
+            "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
+            "callbackType": null,
+            "disabled": true
+        }, {
+            "id": "INVOKE_FUNCTION__a51dff9aa2704e83961d0d60e8b6ecfb",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "selectComponent",
+            "display": "selectComponent",
+            "inputparams": [{
+                "name": "rightData"
+            }, {
+                "name": "leftData"
+            }, {
+                "name": "instance"
+            }, {
+                "name": "nested"
+            }],
+            "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
+            "callbackType": null,
+            "disabled": true,
+            "source": "controller"
+        }]
+    }
+}

@@ -65,7 +65,7 @@
         "swActivateDistanceAndReading",
         "lblSelectStepsLayout",
         "flxStepsLayout",
-        "btnProceed"
+        "flxBtnProceed"
     ],
     "clipbounds": false,
     "containerweight": 100,

@@ -1,0 +1,62 @@
+{
+    "AS_TextField_a99e1cc7c78e4d56905b2879a5142db3": {
+        "id": "AS_TextField_a99e1cc7c78e4d56905b2879a5142db3",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "language": "js",
+        "eventType": "onTextChange",
+        "actions": [{
+            "id": "IF_CONDITION_ide_onTextChange_b58aa042022644bfab47cd12f6e38221",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.txtStepTitle.text",
+                "operator": "!==",
+                "rightValueType": "value",
+                "rightValue": "\"\"",
+                "leftItemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                "leftWidgetKUID": "e3fdc4c158a54a83858fc7b60becf5c8"
+            }, {
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.txtStepTitle.text",
+                "operator": "!==",
+                "rightValueType": "value",
+                "rightValue": "undefined",
+                "leftItemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                "leftWidgetKUID": "e3fdc4c158a54a83858fc7b60becf5c8"
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_ide_onTextChange_e84fd68232cc44b28915632dc30a1b70",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnProceed.setEnabled(true);\nthis.view.btnProceed.opacity = 1;\nvoltmx.print(\"### IL TESTO ok: \" + this.view.txtStepTitle.text);",
+            "parentId": "IF_CONDITION_ide_onTextChange_b58aa042022644bfab47cd12f6e38221",
+            "callbackType": null
+        }, {
+            "id": "ELSE_CONDITION_ide_onTextChange_ba4b68a43e8a4631a6039e3d65d4f7da",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_ide_onTextChange_ja4ad562572943fe888b80d043310403",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnProceed.setEnabled(false);\nthis.view.btnProceed.opacity = 0.5;\nvoltmx.print(\"### IL TESTO non ok: \" + this.view.txtStepTitle.text);",
+            "parentId": "ELSE_CONDITION_ide_onTextChange_ba4b68a43e8a4631a6039e3d65d4f7da",
+            "callbackType": null
+        }]
+    }
+}

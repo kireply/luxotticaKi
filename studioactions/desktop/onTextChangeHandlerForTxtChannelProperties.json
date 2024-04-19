@@ -1,0 +1,63 @@
+{
+    "AS_TextField_f0a514a6ca0447cc94f868d96d870d2b": {
+        "id": "AS_TextField_f0a514a6ca0447cc94f868d96d870d2b",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTextChangeHandlerForTxtChannelProperties",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "contextObj": {
+            "name": "frmChannelSettings",
+            "type": "forms",
+            "platform": null,
+            "KUID": "f28936f5ab0247249d1030e011355180"
+        },
+        "language": "js",
+        "eventType": "onTextChange",
+        "actions": [{
+            "id": "_fc41ecdaa3184c86a2de6927dd754de4",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.txtChannelProperties.text",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "\"\"",
+                "leftItemKUID": "f28936f5ab0247249d1030e011355180",
+                "leftWidgetKUID": "ed9e44fd2cb445bea25417d8c44f2eba"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_d34925f7c9f54c599768d1580fd496b5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnSave.opacity = 0.5;\nthis.view.btnSave.setEnabled(false);",
+            "parentId": "_fc41ecdaa3184c86a2de6927dd754de4",
+            "callbackType": null
+        }, {
+            "id": "_a3f2ebfc573c4c638e75b7e78bff131f",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_d9e73ff75b2e4b34a18a1ef43b9a2118",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnSave.opacity = 1;\nthis.view.btnSave.setEnabled(true);",
+            "parentId": "_a3f2ebfc573c4c638e75b7e78bff131f",
+            "callbackType": null
+        }]
+    }
+}

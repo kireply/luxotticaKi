@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "4%"
+        "value": "3%"
     },
     "_height_": {
         "type": "string",
@@ -48,6 +48,7 @@
     },
     "enablescrolling": true,
     "id": "flxLogout",
+    "ide_onClick": "AS_FlexContainer_ea5928af8c394582a37c800e5dcbbd75",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

@@ -3,11 +3,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "8%"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
-        "value": "75.98%"
+        "value": "0dp"
     },
     "_margin_": [
         6,
@@ -21,19 +21,15 @@
         0,
         0
     ],
-    "_right_": {
-        "type": "string",
-        "value": "5%"
-    },
     "_skin_": "s19dde20e5f64e9c8ed0e33578f4d7cd",
     "_text_": "       Create new flow",
     "_top_": {
         "type": "string",
-        "value": "23.10%"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "19%"
+        "value": "100%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
@@ -47,13 +43,13 @@
     },
     "displaytext": true,
     "id": "btnCreateNewFlow",
-    "ide_onClick": "AS_Button_c1ed2a7016914408a99801cddc13cd98",
+    "ide_onClick": "AS_Button_ff0e997ce87b469cb5275d990ff6e15e",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "b3ef5d8147e4422b83e6a0d9681b0f62",
     "name": "kony.ui.Button",
-    "parent": "FlexContainerFlows",
+    "parent": "flxBtnCreateNewFlow",
     "pf": "frmFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

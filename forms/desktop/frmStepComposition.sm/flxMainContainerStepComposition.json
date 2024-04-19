@@ -41,7 +41,8 @@
         "flxContainerStepCreation",
         "flxComponentsSide",
         "flxSettingsSide",
-        "flxComponentImage"
+        "flxComponentImage",
+        "flxNestedBlur"
     ],
     "clipbounds": false,
     "containerweight": 100,

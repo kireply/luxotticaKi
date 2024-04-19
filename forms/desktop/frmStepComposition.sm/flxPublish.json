@@ -22,6 +22,10 @@
         0
     ],
     "_percent_": true,
+    "_right_": {
+        "type": "string",
+        "value": "9%"
+    },
     "_skin_": "sfc7a0028a874c3dad7fa68057f1ec3f",
     "_top_": {
         "type": "string",
@@ -39,10 +43,17 @@
         "value": "50%"
     },
     "children": [
-        "imgPublish"
+        "imgPublish",
+        "lblPublish",
+        "btnPublish"
     ],
     "clipbounds": false,
     "containerweight": 100,
+    "desktopweb": {
+        "psp": {
+            "ide_onHover": "AS_FlexContainer_ec44414977e94b9d8d3c7ee39c050f33"
+        }
+    },
     "enablescrolling": true,
     "id": "flxPublish",
     "ide_onClick": "AS_FlexContainer_dfddaaf8f8ec4dc9b857a467d5462184",

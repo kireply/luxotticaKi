@@ -6,7 +6,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "51%"
+        "value": "66%"
     },
     "_margin_": [
         0,
@@ -48,6 +48,7 @@
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxBoxFirstStep",
+    "ide_onClick": "AS_FlexContainer_a6af7481806545e9805f9c327100362f",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

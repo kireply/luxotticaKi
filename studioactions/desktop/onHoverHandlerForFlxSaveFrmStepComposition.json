@@ -1,0 +1,176 @@
+{
+    "AS_FlexContainer_h9eadd482be44784b9fcfaa787eeeaf1": {
+        "id": "AS_FlexContainer_h9eadd482be44784b9fcfaa787eeeaf1",
+        "type": "ACTION_SEQUENCE",
+        "name": "onHoverHandlerForFlxSaveFrmStepComposition",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "IF_CONDITION_ed52f37f70cb466c895f9430454ec3d9",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "context.eventType !== \"leave\""
+            }],
+            "parentId": null,
+            "criteria": "all"
+        }, {
+            "id": "_h954d0a5f77f43c1a8d48d16a7f9ebdc",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepCreation",
+            "widgetId": "flxSave",
+            "itemKUID": "j27b7970c694429db6312f3b27f7428e",
+            "widgetKUID": "e834ac37ab854b5393537ac5b06497b2",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "width": "6%"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 0,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "0"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_f1357fc0abfe487e9b152cc2ce5544f5",
+            "animationId": "_h954d0a5f77f43c1a8d48d16a7f9ebdc",
+            "displayAnimationId": "SCALE_ACTION_eea34d334c354b9b9838bed2b0f147a6",
+            "forkedPlatform": "all",
+            "parentId": "IF_CONDITION_ed52f37f70cb466c895f9430454ec3d9",
+            "callbackType": null,
+            "widgetPath": "this.view.flxSave"
+        }, {
+            "id": "_g2b7e67d43894540bb746730f61ffb8e",
+            "type": "MOVE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "imgSave",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "he8e3a1cede74cb985698933038507b7",
+            "wType": "Image",
+            "animationObject": {
+                "left": "3px",
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                }
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 0,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "0"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_f1357fc0abfe487e9b152cc2ce5544f5",
+            "animationId": "_g2b7e67d43894540bb746730f61ffb8e",
+            "displayAnimationId": "MOVE_ACTION_f8c7faf04b874026b544f107d69532da",
+            "forkedPlatform": "all",
+            "parentId": "IF_CONDITION_ed52f37f70cb466c895f9430454ec3d9",
+            "callbackType": null,
+            "widgetPath": "this.view.imgSave"
+        }, {
+            "id": "ADD_SNIPPET_ef6193ee24964fbe95eb754885af6072",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.lblSave.setVisibility(true);\nthis.view.flxPublish.setEnabled(false);\nthis.view.flxDelete.setEnabled(false);",
+            "parentId": "IF_CONDITION_ed52f37f70cb466c895f9430454ec3d9",
+            "callbackType": null
+        }, {
+            "id": "ELSE_CONDITION_f2b414f34c0a4064ab70a89a15e0abaa",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "criteria": "all"
+        }, {
+            "id": "_h2023d8c172643ad8098b6a6124038b5",
+            "type": "MOVE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "imgSave",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "he8e3a1cede74cb985698933038507b7",
+            "wType": "Image",
+            "animationObject": {
+                "left": "10px",
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                }
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 0,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "0"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_f1357fc0abfe487e9b152cc2ce5544f5",
+            "animationId": "_h2023d8c172643ad8098b6a6124038b5",
+            "displayAnimationId": "MOVE_ACTION_j6d54dc8bfbb4da8995a4d43465f0550",
+            "forkedPlatform": "all",
+            "parentId": "ELSE_CONDITION_f2b414f34c0a4064ab70a89a15e0abaa",
+            "callbackType": null,
+            "widgetPath": "this.view.imgSave"
+        }, {
+            "id": "_c5b1069b1a75496b8cc06a84f233dde2",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepCreation",
+            "widgetId": "flxSave",
+            "itemKUID": "j27b7970c694429db6312f3b27f7428e",
+            "widgetKUID": "e834ac37ab854b5393537ac5b06497b2",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "width": "3.5%"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 0,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "0"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_eea34d334c354b9b9838bed2b0f147a6",
+            "animationId": "_c5b1069b1a75496b8cc06a84f233dde2",
+            "displayAnimationId": "SCALE_ACTION_f1357fc0abfe487e9b152cc2ce5544f5",
+            "forkedPlatform": "all",
+            "parentId": "ELSE_CONDITION_f2b414f34c0a4064ab70a89a15e0abaa",
+            "callbackType": null,
+            "widgetPath": "this.view.flxSave"
+        }, {
+            "id": "ADD_SNIPPET_i4a8229f61e6449fbdbc65e79743ba38",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.lblSave.setVisibility(false);\nthis.view.flxPublish.setEnabled(true);\nthis.view.flxDelete.setEnabled(true);",
+            "parentId": "ELSE_CONDITION_f2b414f34c0a4064ab70a89a15e0abaa",
+            "callbackType": null
+        }]
+    }
+}

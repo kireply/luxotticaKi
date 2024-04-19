@@ -55,6 +55,10 @@
         [
             "lb3",
             "20"
+        ],
+        [
+            "lb4",
+            "all"
         ]
     ],
     "name": "kony.ui.ListBox",

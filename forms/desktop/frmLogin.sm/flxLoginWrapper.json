@@ -41,7 +41,7 @@
         "lblInsertEmailPass",
         "txtEmail",
         "txtPassword",
-        "btnLogin"
+        "flxBtnLogin"
     ],
     "clipbounds": false,
     "containerweight": 100,

@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_ide_onTouchEnd_e69aa08da7294549b80d429bebab65b9",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxBlur.setVisibility(false);\nthis.view.flxPopupNewStep.setVisibility(false);",
+            "codeSnippet": "this.view.flxPopupNewStep.setVisibility(false);\nthis.view.flxNewStepBlur.setVisibility(false);",
             "callbackType": null
         }]
     }

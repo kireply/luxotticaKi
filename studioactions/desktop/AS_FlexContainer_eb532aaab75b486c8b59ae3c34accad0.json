@@ -1,0 +1,74 @@
+{
+    "AS_FlexContainer_eb532aaab75b486c8b59ae3c34accad0": {
+        "id": "AS_FlexContainer_eb532aaab75b486c8b59ae3c34accad0",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_b7a921e7ffc540b2a6a853bf94373c70",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxBoxFirstStep.backgroundColor = \"FFFFFFFF\";\n\nthis.view.flxBoxFirstStep.imgDeleteStep.setVisibility(false);\nthis.view.flxBoxFirstStep.imgEditStep.setVisibility(false);\nthis.view.flxBoxFirstStep.lblStepOrder.fontColor = \"00000000\";\nthis.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = \"00000000\";\n// this.view.flxBoxFirstStep.lblStepOrder.opacity = 1;\n// debugger;",
+            "parentId": null,
+            "callbackType": null,
+            "disabled": true
+        }, {
+            "id": "MOVE_ACTION_d0f641a580a147e98110b8906335cab4",
+            "type": "MOVE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxBoxPlus",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "ea6dceaeab5f4c67aa135a70e77f7f91",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "left": "83%",
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                }
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "500"
+            },
+            "start": "Immediately",
+            "animationId": "MOVE_ACTION_d0f641a580a147e98110b8906335cab4",
+            "displayAnimationId": "MOVE_ACTION_d0f641a580a147e98110b8906335cab4",
+            "forkedPlatform": "all",
+            "parentId": null,
+            "callbackType": null,
+            "disabled": true,
+            "widgetPath": "this.view.flxBoxPlus"
+        }, {
+            "id": "ADD_SNIPPET_j014baaf77d0418faf7b11a0d70d46fd",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);\n\nif (right_width > 48){\n  this.view.flxPopupNewStep.setVisibility(true);\t \n}",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "INVOKE_FUNCTION__gc11c106ba8941d5a16f1dd90577dfca",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "addNewStep",
+            "display": "addNewStep",
+            "inputparams": [{
+                "name": "left_position"
+            }],
+            "parentId": "MOVE_ACTION_d0f641a580a147e98110b8906335cab4",
+            "callbackType": "Callback",
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

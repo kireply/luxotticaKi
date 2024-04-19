@@ -19,10 +19,10 @@
     ],
     "_right_": {
         "type": "string",
-        "value": "10dp"
+        "value": "10%"
     },
     "_skin_": "s99ac6c651b84fbea02a10a4e0efda26",
-    "_text_": "Label",
+    "_text_": "Save",
     "_width_": {
         "type": "ref",
         "value": "preferred"

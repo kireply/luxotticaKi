@@ -46,7 +46,7 @@
     "id": "flxScrollRight",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "e521ae96019f40ed902c5af9911aa359",
     "layouttype": 4,
     "name": "kony.ui.FlexScrollContainer",

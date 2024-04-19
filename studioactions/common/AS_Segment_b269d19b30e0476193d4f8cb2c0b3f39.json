@@ -1,0 +1,30 @@
+{
+    "AS_Segment_b269d19b30e0476193d4f8cb2c0b3f39": {
+        "id": "AS_Segment_b269d19b30e0476193d4f8cb2c0b3f39",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "jdedde07e2c54b3c95128446196b0812"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_cbc92b31d330407696d65ce479e0cca9",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxMove.setVisibility(true);",
+            "parentId": null,
+            "disabled": true
+        }]
+    }
+}

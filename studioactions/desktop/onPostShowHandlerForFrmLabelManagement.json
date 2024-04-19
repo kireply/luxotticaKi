@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_dbbab3499ef246dfa62bf10741f83231",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.channelTemplatewithContract.channelLogo = gblChannelLogo;\nthis.view.channelTemplatewithContract.channelInfo = gblChannelName + \" - #\" + gblChannelId;\n",
+            "codeSnippet": "this.view.channelTemplatewithContract.channelLogo = gblChannelLogo;\nthis.view.channelTemplatewithContract.channelInfo = gblChannelName + \" - #\" + gblChannelId;\ngblLabelsFileUploaded = false;",
             "parentId": null
         }, {
             "id": "LOADING_INDICATOR_he91b2ec1d1d4740ae5b18daaed0f03b",
@@ -39,9 +39,9 @@
             "httpconfigs": null,
             "isasynchronous": true,
             "mappings": {
-                "ME_Mapping_f2895839c79845f9b8a3b73a22f6c013": {
+                "ME_Mapping_f2454cbe96b64e10a1ae9faa6c2dda21": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_f2895839c79845f9b8a3b73a22f6c013",
+                    "id": "ME_Mapping_f2454cbe96b64e10a1ae9faa6c2dda21",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -60,18 +60,18 @@
                             "servicename": "mariaDB",
                             "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                             "type": "integration",
-                            "operationname": "LABEL_CustomQuery",
+                            "operationname": "LABEL_CustomQueryGet",
                             "operationid": "125149"
                         }
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_f2895839c79845f9b8a3b73a22f6c013"],
+            "mappingsOrder": ["ME_Mapping_f2454cbe96b64e10a1ae9faa6c2dda21"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                 "type": "integration",
-                "operationname": "LABEL_CustomQuery",
+                "operationname": "LABEL_CustomQueryGet",
                 "operationid": "125149"
             },
             "parentId": null,
@@ -92,10 +92,10 @@
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
-                "leftValue": "LABEL_CustomQuery !== null"
+                "leftValue": "LABEL_CustomQueryGet !== null"
             }, {
                 "leftValueType": "expression",
-                "leftValue": "LABEL_CustomQuery.opstatus === 0"
+                "leftValue": "LABEL_CustomQueryGet.opstatus === 0"
             }],
             "parentId": "INVOKE_SERVICE_ad5dc89ad6064a67a65c6dce6aa855e0",
             "callbackType": "Callback",
@@ -132,7 +132,7 @@
         }, {
             "id": "ADD_SNIPPET_c58a5bb496fc4f9796e9bc97d453b805",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### records CustomQuery: \" + LABEL_CustomQuery.records);\n\nvoltmx.print(\"### record CustomQuery stringify: \" + JSON.stringify(LABEL_CustomQuery.records) );\n\n// I configure the data in order putting the id as first key and removing the flow_id key\n\nvar list = LABEL_CustomQuery.records.map(elemento => {\n    var newElement = { id: elemento.id };\n    for (var key in elemento) {\n        if (key !== \"flow_id\" && key !== \"id\") {\n            newElement[key] = elemento[key];\n        }\n    }\n    return newElement;\n});\n\nvoltmx.print(\"### list: \" + JSON.stringify(list) );\n\ngblLabelsList = list;\n\n// saving the number of labels' columns (in order to know how many pages we have to show)\ngblLabelsList.forEach(obj => {\n  const numColumns = Object.keys(obj).length;\n  if (numColumns > gblLabelsColumns) {\n    gblLabelsColumns = numColumns;\n  }\n});\n\nself.view.btnPrevious.setEnabled(false);\nself.view.btnPrevious.opacity = 0.5;\n\nvar maxPages = Math.ceil(gblLabelsColumns / 5); // this method rounds up to the nearest integer\n\nif (gblLabelsPage === maxPages) { // only one page needed (the document only have 5 columns)\n  this.view.btnNext.setEnabled(false);\n  this.view.btnNext.opacity = 0.5;\n}\n\n\n// setting the first 5 columns to display\nvar firstKeys = Object.keys(gblLabelsList[0]).slice(0, 5);\n//voltmx.print(\"### firstKey: \" + firstKeys);\n\nself.view.segLabels.widgetDataMap = {lb1: firstKeys[0],lb2: firstKeys[1],lb3: firstKeys[2],lb4: firstKeys[3], lb5: firstKeys[4]};\n\nvar showLabels = parseInt(self.view.lbShowEntries.selectedKeyValue[1], 10);  // 10 is for the decimal\nvar data = gblLabelsList.slice(0, showLabels); \n\nself.view.segLabels.setData(data);",
+            "codeSnippet": "voltmx.print(\"### records CustomQueryGet: \" + LABEL_CustomQueryGet.records);\n\nvoltmx.print(\"### record CustomQueryGet stringify: \" + JSON.stringify(LABEL_CustomQueryGet.records) );\n\n// I configure the data in order, putting the id as first key and removing the flow_id key\nvar list = LABEL_CustomQueryGet.records.map(elemento => {\n    var newElement = { id: elemento.id };\n    for (var key in elemento) {\n        if (key !== \"flow_id\" && key !== \"id\") {\n            newElement[key] = elemento[key];\n        }\n    }\n    return newElement;\n});\n\nvoltmx.print(\"### list: \" + JSON.stringify(list) );\n\ngblLabelsList = list;\n\n// saving the number of labels' columns (in order to know how many pages we have to show)\ngblLabelsList.forEach(obj => {\n  const numColumns = Object.keys(obj).length;\n  if (numColumns > gblLabelsColumns) {\n    gblLabelsColumns = numColumns;\n  }\n});\n\nself.view.btnPrevious.setEnabled(false);\nself.view.btnPrevious.opacity = 0.5;\n\nvar maxPages = Math.ceil(gblLabelsColumns / 5); // this method rounds up to the nearest integer\n\nif (gblLabelsPage === maxPages) { // only one page needed (the document only have 5 columns)\n  this.view.btnNext.setEnabled(false);\n  this.view.btnNext.opacity = 0.5;\n}\n\n\n// setting the first 5 columns to display\nvar firstKeys = Object.keys(gblLabelsList[0]).slice(0, 5);\n//voltmx.print(\"### firstKey: \" + firstKeys);\n\nself.view.segLabels.widgetDataMap = {lb1: firstKeys[0],lb2: firstKeys[1],lb3: firstKeys[2],lb4: firstKeys[3], lb5: firstKeys[4]};\n\nvar showLabels = parseInt(self.view.lbShowEntries.selectedKeyValue[1], 10);  // 10 is for the decimal\nvar data = gblLabelsList.slice(0, showLabels); \n\nself.view.segLabels.setData(data);",
             "parentId": "_f073bf4079f2448390431625ac29f085",
             "callbackType": null
         }]

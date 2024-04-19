@@ -1,0 +1,585 @@
+{
+    "AS_Button_bbc3b93e9af444f1ad5db2a470d72408": {
+        "id": "AS_Button_bbc3b93e9af444f1ad5db2a470d72408",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_dc61eefa9c0a47d8857432cdbd89dcda",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "isPrescriptionStep",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "boolean",
+            "value": "false",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_ide_onClick_eaae3a1f76174ea09bc7de6ad7e400bd",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Flow ID: \" + gblFlowId);\nvoltmx.print(\"### Flow Name: \" + gblFlowName);\n\n\n//to comment in the global flow\ngblFlowId = 128;\n// gblFlowName = ",
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_f7df8b7a76f24493b289b964ccf7f20e",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "Autoproceed",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "boolean",
+            "value": "false",
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_g335a1e745ef4543b719b2d6d14fdec3",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "Autoskip",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "boolean",
+            "value": "false",
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_b7248009e7824835afcfbd1a0763c362",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "left_position",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_c9ca60d2461e49fabcd70b9c895d54b3",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "hasGreyout",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "boolean",
+            "value": "false",
+            "callbackType": null
+        }, {
+            "id": "IF_CONDITION_ide_onClick_ja8cc02b83b846e291703c31b11ca3b7",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.swIsPrescriptionStep.selectedIndex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "0",
+                "leftItemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                "leftWidgetKUID": "ff7ae455dcff4c51a9d0bb73c2c1e326"
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_j9b6221b6daa49ae8e7e2838aecbf02e",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "IF_CONDITION_ide_onClick_ja8cc02b83b846e291703c31b11ca3b7",
+            "callbackType": null,
+            "variable": "isPrescriptionStep",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "constant",
+            "modifySet": "true",
+            "modifySetType": "boolean"
+        }, {
+            "id": "IF_CONDITION_ide_onClick_cdf42b7e4a3e4c2fba283ac6cb22aa90",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.swAutoproceed.selectedIndex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "0",
+                "leftItemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                "leftWidgetKUID": "ec66118f7d154f50983946f8fe646e79"
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_i985c3f4279a42cbbf4b25bedefba738",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "IF_CONDITION_ide_onClick_cdf42b7e4a3e4c2fba283ac6cb22aa90",
+            "callbackType": null,
+            "variable": "Autoproceed",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "constant",
+            "modifySet": "true",
+            "modifySetType": "boolean"
+        }, {
+            "id": "IF_CONDITION_ide_onClick_ff8161e4b2c540a2ac8dab413fae54e9",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.swAutoskip.selectedIndex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "0",
+                "leftItemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                "leftWidgetKUID": "c2238355f5ff406992bd94e22f05205b"
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_c15a10074f914a899589e8738f79965c",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "IF_CONDITION_ide_onClick_ff8161e4b2c540a2ac8dab413fae54e9",
+            "callbackType": null,
+            "variable": "Autoskip",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "constant",
+            "modifySet": "true",
+            "modifySetType": "boolean"
+        }, {
+            "id": "IF_CONDITION_ide_onClick_dd34586244d64d4098a9b13478d4c008",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.swHasGreyout.selectedIndex",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "0",
+                "leftItemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                "leftWidgetKUID": "e490eadcf58b4b99a1825ca725e02637"
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "MODIFY_VARIABLE_ACTION_ide_onClick_d64745b9f427478380a99c038f910f92",
+            "type": "MODIFY_VARIABLE_ACTION",
+            "parentId": "IF_CONDITION_ide_onClick_dd34586244d64d4098a9b13478d4c008",
+            "callbackType": null,
+            "variable": "hasGreyout",
+            "valueType": "set",
+            "isGlobal": false,
+            "dataType": "constant",
+            "modifySet": "true",
+            "modifySetType": "boolean"
+        }, {
+            "id": "LOADING_INDICATOR_ide_onClick_faae8dafed3141f7a3a0b03ade8277cf",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Creating new step..."
+        }, {
+            "id": "INVOKE_ASYNC_SERVICE_ide_onClick_ja20b16ddd2e4adb82d2dbfdb7540901",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_he0a898fcc4f49268a886ca5c7290f20": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_he0a898fcc4f49268a886ca5c7290f20",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_dbb7b16a176f456b80e153ad493aa115": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_dbb7b16a176f456b80e153ad493aa115",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "number",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_ib147e8d43724d32b658283d47ce71e7": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ib147e8d43724d32b658283d47ce71e7",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtStepTitle",
+                        "widgetPath": "this.view.txtStepTitle",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmStepComposition",
+                        "widgetKUID": "e3fdc4c158a54a83858fc7b60becf5c8",
+                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "title",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_f91a48d8b1d44e2ab4ae07ad73b8f0cc": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f91a48d8b1d44e2ab4ae07ad73b8f0cc",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "isPrescriptionStep",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "prescription_step",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_ja8c61bd15ec4d3f83a4bd15e22ef879": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ja8c61bd15ec4d3f83a4bd15e22ef879",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "Autoproceed",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "autoproceed",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_aa764fb48819483bad4f140c1b7b2cc9": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_aa764fb48819483bad4f140c1b7b2cc9",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "Autoskip",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "autoskip",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_cdc6025cea6f4a3397ab603941d88ed7": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cdc6025cea6f4a3397ab603941d88ed7",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "hasGreyout",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "has_greyout",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_c9a8b96bc85d433792326e7a5eb863f8": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_c9a8b96bc85d433792326e7a5eb863f8",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "value",
+                        "widgetId": "lbAnalytics",
+                        "widgetPath": "this.view.lbAnalytics",
+                        "widgetType": "ListBox",
+                        "dataType": "string",
+                        "itemId": "frmStepComposition",
+                        "collectionId": "selectedKeyValues",
+                        "widgetKUID": "i1f970a20b3b4363bfa5e4c90ae30116",
+                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "analytics_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_d5608a31543d44b5a6818d05e4af43b9": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d5608a31543d44b5a6818d05e4af43b9",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "order",
+                        "dataType": "number",
+                        "expression": "gblCurrentStepOrder + 1",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_afb417c4c567482ea3bf1abdfa7d5192": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_afb417c4c567482ea3bf1abdfa7d5192",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtAutoproceedButtonLabel",
+                        "widgetPath": "this.view.txtAutoproceedButtonLabel",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmStepComposition",
+                        "widgetKUID": "g22f6a3248d44d578c22ddaa092fc775",
+                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "autoproceed_label",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_he0a898fcc4f49268a886ca5c7290f20", "ME_Mapping_dbb7b16a176f456b80e153ad493aa115", "ME_Mapping_ib147e8d43724d32b658283d47ce71e7", "ME_Mapping_f91a48d8b1d44e2ab4ae07ad73b8f0cc", "ME_Mapping_ja8c61bd15ec4d3f83a4bd15e22ef879", "ME_Mapping_aa764fb48819483bad4f140c1b7b2cc9", "ME_Mapping_cdc6025cea6f4a3397ab603941d88ed7", "ME_Mapping_c9a8b96bc85d433792326e7a5eb863f8", "ME_Mapping_d5608a31543d44b5a6818d05e4af43b9", "ME_Mapping_afb417c4c567482ea3bf1abdfa7d5192"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "STEP_create",
+                "operationid": "122826"
+            },
+            "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_ide_onClick_fcedc38f97ad4f67b98d74161822729e",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_ASYNC_SERVICE_ide_onClick_ja20b16ddd2e4adb82d2dbfdb7540901",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "IF_CONDITION_ide_onClick_c56ae5b169a34ffc8ce3de6f6ec73810",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "STEP_create !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "STEP_create.opstatus === 0"
+            }],
+            "parentId": "INVOKE_ASYNC_SERVICE_ide_onClick_ja20b16ddd2e4adb82d2dbfdb7540901",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_ide_onClick_cc433374b7814bedae97dde55d99bb2c",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": "New step created.",
+            "yesLabel": "Ok",
+            "alertMessage": "New step successfully created!",
+            "messageType": "constant",
+            "parentId": "IF_CONDITION_ide_onClick_c56ae5b169a34ffc8ce3de6f6ec73810",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_ide_onClick_e40318a1c32745c8850eaa3414268822",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.flxPopupNewStep.setVisibility(false);\nself.view.flxNewStepBlur.setVisibility(false);\nself.view.flxPopupNewStep.flxContainerNewPopup.flxNewPopup.txtStepTitle.text = \"\";\n\nlet steps_widgets = self.view.flxSteps.widgets();\n\nvoltmx.print(\"### FLEX STEPS NUMBER OF WIDGETS: \" + JSON.stringify(steps_widgets.length));\n\nif (steps_widgets.length <= 2){\n  self.view.flxBoxFirstStep.backgroundColor = \"FFFFFF00\";\n  self.view.flxBoxFirstStep.imgDeleteStep.setVisibility(false);\n  self.view.flxBoxFirstStep.imgEditStep.setVisibility(false);\n  self.view.flxBoxFirstStep.lblStepOrder.fontColor = \"00000000\";\n  self.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = \"00000000\";\n  left_position = parseInt(self.view.flxBoxFirstStep.left, 10) + parseInt(self.view.flxBoxFirstStep.width, 10) + 2;\n} else {\n  let lastStep = 'boxStep' + gblLastInsertedStep;\n  steps_widgets.forEach(widget => {\n    if (widget.id === lastStep) {\n      widget.flxBoxStep.backgroundColor = \"FFFFFF00\";\n      widget.imgDeleteStep.isVisible = false;\n      widget.imgEditStep.isVisible = false;\n      widget.lblStepOrder.fontColor = \"00000000\";\n      widget.lblStepTitle.fontColor = \"00000000\";\n      left_position = parseInt(widget.left, 10) + parseInt(widget.width, 10) + 2;\n    }\n  });\n}\n\n",
+            "parentId": "IF_CONDITION_ide_onClick_c56ae5b169a34ffc8ce3de6f6ec73810",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_FUNCTION__ide_onClick_a828063804a344698423584f66ee870d",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "addNewStep",
+            "display": "addNewStep",
+            "inputparams": [{
+                "name": "left_position",
+                "value": " left_position"
+            }],
+            "parentId": "IF_CONDITION_ide_onClick_c56ae5b169a34ffc8ce3de6f6ec73810",
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }, {
+            "id": "_ide_onClick_ha30b9bd8f1a4855bf3737245c5bb7e4",
+            "type": "MOVE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxBoxPlus",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "ea6dceaeab5f4c67aa135a70e77f7f91",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "left": "83%",
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                }
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "500"
+            },
+            "start": "Immediately",
+            "animationId": "MOVE_ACTION_bd2a0a7cf4844638bb078d56f47ea333",
+            "displayAnimationId": "MOVE_ACTION_bd2a0a7cf4844638bb078d56f47ea333",
+            "forkedPlatform": "all",
+            "parentId": "IF_CONDITION_ide_onClick_c56ae5b169a34ffc8ce3de6f6ec73810",
+            "callbackType": null,
+            "disabled": true,
+            "widgetPath": "this.view.flxBoxPlus"
+        }, {
+            "id": "ELSE_CONDITION_ide_onClick_ad2ad00ac5db457dafc9bf35cf94cdff",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_ASYNC_SERVICE_ide_onClick_ja20b16ddd2e4adb82d2dbfdb7540901",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_ide_onClick_gfb3a5759b2c410ba8a6f2499c04123c",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "New step NOTcreated.",
+            "yesLabel": "Ok",
+            "alertMessage": "New step NOT created!",
+            "messageType": "constant",
+            "parentId": "ELSE_CONDITION_ide_onClick_ad2ad00ac5db457dafc9bf35cf94cdff",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }]
+    }
+}

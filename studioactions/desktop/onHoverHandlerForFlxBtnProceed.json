@@ -1,0 +1,56 @@
+{
+    "AS_FlexContainer_db99a88b5f5a404b9252b04a2e9c8291": {
+        "id": "AS_FlexContainer_db99a88b5f5a404b9252b04a2e9c8291",
+        "type": "ACTION_SEQUENCE",
+        "name": "onHoverHandlerForFlxBtnProceed",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "frmFlowCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "d569d8ca39af43bea658ee877f5208b9"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "IF_CONDITION_f9f95c1586514954b2b4e8a8a4994ab1",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "context.eventType !== \"leave\""
+            }],
+            "parentId": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_c2f17942d9884a6f97ad50d91adff368",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnProceed.opacity = 0.7;",
+            "parentId": "IF_CONDITION_f9f95c1586514954b2b4e8a8a4994ab1",
+            "callbackType": null
+        }, {
+            "id": "ELSE_CONDITION_gef41750f4604b45991ce05e6b0c8f1a",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_cf5a0efceda04b3d8563a880e6c11de1",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnProceed.opacity = 1;",
+            "parentId": "ELSE_CONDITION_gef41750f4604b45991ce05e6b0c8f1a",
+            "callbackType": null
+        }]
+    }
+}

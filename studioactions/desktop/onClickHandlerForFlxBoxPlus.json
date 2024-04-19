@@ -1,0 +1,66 @@
+{
+    "AS_FlexContainer_aab196c50bda49668d505c0f7687d388": {
+        "id": "AS_FlexContainer_aab196c50bda49668d505c0f7687d388",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForFlxBoxPlus",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_b7f7bfc05d54478b906c2dfc7a843a0b",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxBoxFirstStep.backgroundColor = \"FFFFFFFF\";\n\nthis.view.flxBoxFirstStep.imgDeleteStep.setVisibility(false);\nthis.view.flxBoxFirstStep.imgEditStep.setVisibility(false);\nthis.view.flxBoxFirstStep.lblStepOrder.fontColor = \"00000000\";\nthis.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = \"00000000\";\n// this.view.flxBoxFirstStep.lblStepOrder.opacity = 1;\n// debugger;",
+            "callbackType": null,
+            "disabled": true
+        }, {
+            "id": "_ide_onClick_he816e3615164b5ba410c6447648bc3a",
+            "type": "MOVE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxBoxPlus",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "ea6dceaeab5f4c67aa135a70e77f7f91",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "left": "83%",
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                }
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "500"
+            },
+            "start": "Immediately",
+            "animationId": "MOVE_ACTION_d0f641a580a147e98110b8906335cab4",
+            "displayAnimationId": "MOVE_ACTION_d0f641a580a147e98110b8906335cab4",
+            "forkedPlatform": "all",
+            "callbackType": null,
+            "disabled": true,
+            "widgetPath": "this.view.flxBoxPlus"
+        }, {
+            "id": "INVOKE_FUNCTION__ide_onClick_e1f1856679234b37b561409beda3e9c1",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "addNewStep",
+            "display": "addNewStep",
+            "inputparams": [{
+                "name": "left_position"
+            }],
+            "parentId": "_ide_onClick_he816e3615164b5ba410c6447648bc3a",
+            "callbackType": "Callback",
+            "disabled": null,
+            "source": "controller"
+        }, {
+            "id": "ADD_SNIPPET_ide_onClick_j4dbdccc86fe40099f55891179b5f7f7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);\n\nif (right_width > 48){\n  this.view.flxPopupNewStep.setVisibility(true);\n  this.view.flxNewStepBlur.setVisibility(true);\n}",
+            "callbackType": null
+        }]
+    }
+}

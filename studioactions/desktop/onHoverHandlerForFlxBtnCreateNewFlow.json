@@ -1,0 +1,60 @@
+{
+    "AS_FlexContainer_ie63e1f9724941ee864b18d994cfd6ac": {
+        "id": "AS_FlexContainer_ie63e1f9724941ee864b18d994cfd6ac",
+        "type": "ACTION_SEQUENCE",
+        "name": "onHoverHandlerForFlxBtnCreateNewFlow",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "_eb2bc9994df44c62a41779d3a749106d",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "context.eventType !== \"leave\""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all",
+            "disabled": true
+        }, {
+            "id": "_e6908abc30fc4abda823ee90fbb80203",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all",
+            "disabled": true
+        }, {
+            "id": "ADD_SNIPPET_f5ce1c13606c41adbadbb5982d36b411",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnCreateNewFlow.opacity = 1;\nthis.view.imgCreateNewFlow.opacity = 1;",
+            "parentId": "_e6908abc30fc4abda823ee90fbb80203",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_ba0082dd402443709b809bdf0b537da5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnCreateNewFlow.opacity = 0.7;\nthis.view.imgCreateNewFlow.opacity = 0.2;",
+            "parentId": "_eb2bc9994df44c62a41779d3a749106d",
+            "callbackType": null
+        }]
+    }
+}
