@@ -2,11 +2,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "85.56%"
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "320dp"
     },
     "_margin_": [
         0,
@@ -25,11 +25,11 @@
     "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "130dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "76.13%"
     },
     "allboxes": [],
     "autogrowmode": 0,
@@ -37,9 +37,9 @@
     "children": [
         "lblListUsers",
         "btnAddUser",
+        "btnDeleteUser",
         "segListUsers",
-        "flxHeaderUserGrid",
-        "btnDeleteUser"
+        "flxHeaderUserGrid"
     ],
     "clipbounds": false,
     "containerweight": 100,

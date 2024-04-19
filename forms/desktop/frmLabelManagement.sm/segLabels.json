@@ -6,23 +6,28 @@
             {
                 "lb2": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "en-US"
+                    "text": "en-US",
+                    "type": "Label"
                 },
                 "lb3": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "it-IT"
+                    "text": "it-IT",
+                    "type": "Label"
                 },
                 "lb4": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "de-DE"
+                    "text": "de-DE",
+                    "type": "Label"
                 },
                 "lb5": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "fr-FR"
+                    "text": "fr-FR",
+                    "type": "Label"
                 },
                 "lbl1": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "Label Key"
+                    "text": "Label Key",
+                    "type": "Label"
                 }
             },
             [
@@ -160,6 +165,60 @@
                         "text": "Continúe",
                         "type": "Label"
                     }
+                },
+                {
+                    "lb1": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "item_no.6",
+                        "type": "Label"
+                    },
+                    "lb2": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Axis",
+                        "type": "Label"
+                    },
+                    "lb3": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Asse",
+                        "type": "Label"
+                    },
+                    "lb4": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Achse",
+                        "type": "Label"
+                    },
+                    "lb5": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Axe",
+                        "type": "Label"
+                    }
+                },
+                {
+                    "lb1": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "item_no.7",
+                        "type": "Label"
+                    },
+                    "lb2": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Prescription",
+                        "type": "Label"
+                    },
+                    "lb3": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "",
+                        "type": "Label"
+                    },
+                    "lb4": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "Verschreibung",
+                        "type": "Label"
+                    },
+                    "lb5": {
+                        "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                        "text": "",
+                        "type": "Label"
+                    }
                 }
             ]
         ],
@@ -167,23 +226,28 @@
             {
                 "lb2": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "en-US"
+                    "text": "en-US",
+                    "type": "Label"
                 },
                 "lb3": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "it-IT"
+                    "text": "it-IT",
+                    "type": "Label"
                 },
                 "lb4": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "de-DE"
+                    "text": "de-DE",
+                    "type": "Label"
                 },
                 "lb5": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "fr-FR"
+                    "text": "fr-FR",
+                    "type": "Label"
                 },
                 "lbl1": {
                     "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                    "text": "Label Key"
+                    "text": "Label Key",
+                    "type": "Label"
                 }
             },
             [
@@ -395,24 +459,24 @@
     "retainselection": false,
     "rowTemplateId": "f52fbfd9105d45b7a95d33b6887d33f0",
     "rowcounter": 4,
-    "rowfocusskin": "s6e7f07455ec411fbcf9e06217636f94",
+    "rowfocusskin": "s5dafcbde8604a8689f689e59d067173",
     "rowskin": "s702838141914111a5a1fe3ea527cf11",
     "rowtemplate": "flxRowLabels",
     "screenlevelwidget": false,
     "seccounter": 1,
     "sectionHeaderTemplateId": "f89da6b2ac544be79fbf40e9e4c93231",
-    "sectionheaderskin": "s64f2a4ab45b4b1fb87d6b6429f052a8",
+    "sectionheaderskin": "sd4b5a6846184e47bf3147bcfae1406d",
     "sectionheadertemplate": "flxHeaderRowLabels",
     "selectedRows": null,
     "selectedState": false,
     "selectedindex": null,
     "selectedindices": null,
     "selecteditems": null,
-    "selectedsectionindex": null,
+    "selectedsectionindex": 0,
     "selectionbehavior": "default",
     "separatorcolor": "aaaaaa00",
     "separatorrequired": true,
-    "separatorthickness": 1,
+    "separatorthickness": 0,
     "showscrollbars": false,
     "viewtype": "tableview",
     "vizProps": {},

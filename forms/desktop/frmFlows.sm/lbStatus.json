@@ -34,7 +34,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
+    "focusskin": "s7eec229b8f6498eb6b2717e735f1d93",
     "groupcells": false,
     "id": "lbStatus",
     "ide_onSelection": "AS_ListBox_cb80936331d8418986fb85e3e6ff75bf",

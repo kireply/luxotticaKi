@@ -109,15 +109,15 @@ define({
       	//TODO ACTIONS WHILE CLICKING ON THE TILE
           if (gblInfoIcon === true){
   //           voltmx.print("### SET VISIBILITY");         
-            this.view.flxPopupChannelInfo.txtChannelID.text = channel.channelIdentifier;
-            this.view.flxPopupChannelInfo.txtChannelLogo.text = channel.channelLogo;
-            this.view.flxPopupChannelInfo.txtChannelProperties.text = channel.channelProperties;
-            this.view.flxPopupChannelInfo.lbChannelName.masterData = [ ["lb1", channel.channelInfo] ];
-            this.view.flxPopupChannelInfo.lbChannelName.selectedKey = "lb1";
-            this.view.flxPopupChannelInfo.txtChannelGenericImage.text = channel.channelGenericImage;
-            this.view.flxPopupChannelInfo.txtChannelAssetsCDN.text = channel.channelAssetsCDN;
-            this.view.flxPopupChannelInfo.txtChannelProjectImage.text = channel.channelProjectImage;
-            this.view.flxPopupChannelInfo.txtChannelFrameOnlyLensUPC.text = channel.channelFrameOnlyLensUPC;
+            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.txtChannelID.text = channel.channelIdentifier;
+            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.txtChannelLogo.text = channel.channelLogo;
+            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelProperties.text = channel.channelProperties;
+            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.lbChannelName.masterData = [ ["lb1", channel.channelInfo] ];
+            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.lbChannelName.selectedKey = "lb1";
+            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelGenericImage.text = channel.channelGenericImage;
+            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelAssetsCDN.text = channel.channelAssetsCDN;
+            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelProjectImage.text = channel.channelProjectImage;
+            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelFrameOnlyLensUPC.text = channel.channelFrameOnlyLensUPC;
             this.view.flxPopupChannelInfo.setVisibility(true);
           } else {
   //           voltmx.print("### NAVIGATE");

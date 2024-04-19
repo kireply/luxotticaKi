@@ -66,11 +66,17 @@
                     "value": "50%"
                 }
             },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "104.08%"
+                }
+            },
             "responsiveData": {},
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "100%"
+                    "value": "100.32%"
                 }
             }
         },
@@ -86,15 +92,24 @@
             "left": {
                 "Default": {
                     "type": "string",
-                    "value": "97%"
+                    "value": "95%"
                 }
             },
             "responsiveData": {},
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "3%"
+                }
+            },
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "8%"
+                    "value": "11%"
                 }
+            },
+            "zIndex": {
+                "Default": 10
             }
         },
         "flxBtnLogout": {

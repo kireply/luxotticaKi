@@ -34,8 +34,10 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 5,
+    "disabledSkins": {
+        "focusSkin": "s6de8ee3e9e1463996d5dbb22b25b33b"
+    },
     "displaytext": true,
-    "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
     "id": "btnConfirmPopupIsDefaultTrue",
     "ide_onClick": "AS_Button_e549ac866e8e4e61b1ec5f052dfb169c",
     "info": null,

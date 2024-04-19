@@ -1,0 +1,19 @@
+{
+  "background_color": "ffffffff",
+  "bg_type": "one",
+  "border_color": "333333ff",
+  "border_style": "plain",
+  "border_type": 0,
+  "border_width": 1,
+  "desktopweb": {
+    "font_name": "Montserrat-Regular"
+  },
+  "font_color": "333333ff",
+  "font_name": "iphoneSystem",
+  "font_size": 107,
+  "font_style": "normal",
+  "font_weight": "400",
+  "isDefaultSkin": false,
+  "kuid": "sbeb816e92b8470b815da3fc2d907da6",
+  "wType": "TextField"
+}

@@ -10,10 +10,12 @@
   "background_color": "ffffffff",
   "bg_type": "one",
   "border_color": "333333ff",
-  "border_style": "plain",
+  "border_radius": 8,
+  "border_style": "custom",
   "border_type": 0,
   "border_width": 1,
   "desktopweb": {
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
     "isForked": false
   },

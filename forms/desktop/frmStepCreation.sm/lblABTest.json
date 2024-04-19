@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "26.380000000000003%"
+        "value": "17.599848128623375%"
     },
     "_margin_": [
         1,
@@ -35,10 +35,6 @@
         }
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "18%"
-    },
     "centery": {
         "type": "string",
         "value": "50%"

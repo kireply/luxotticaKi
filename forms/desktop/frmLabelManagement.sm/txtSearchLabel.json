@@ -3,11 +3,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "32px"
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "-13dp"
     },
     "_margin_": [
         0,
@@ -26,11 +26,11 @@
     "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "4dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "113.45%"
     },
     "autocapitalize": "none",
     "autocomplete": false,
@@ -45,7 +45,7 @@
         "ide_onBeginEditing": "AS_TextField_a1c5855b1e1d41d9938a8c9844a86704",
         "ide_onEndEditing": "AS_TextField_aa430b0ff7224b308a6b03e29ffbf60b"
     },
-    "focusskin": "s4ae88d6059f41ebb18f1220b211dfc3",
+    "focusskin": "s80dd33f88c44ac8a824f1864c353935",
     "id": "txtSearchLabel",
     "ide_onTextChange": "AS_TextField_jc969307cb1a416a972a3d68736b0257",
     "info": null,

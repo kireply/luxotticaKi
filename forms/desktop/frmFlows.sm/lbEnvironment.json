@@ -35,7 +35,7 @@
     "containerweight": 100,
     "contentalignment": 4,
     "dropdownimage": "listboxarw.png",
-    "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
+    "focusskin": "s308a6524d2946688ffb1373104d449d",
     "groupcells": false,
     "id": "lbEnvironment",
     "ide_onSelection": "AS_ListBox_c69c17062ced474193d38d55a2a87c18",

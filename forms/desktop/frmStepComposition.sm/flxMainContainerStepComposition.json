@@ -40,7 +40,8 @@
         "flxContainerSmallerMenu",
         "flxContainerStepCreation",
         "flxComponentsSide",
-        "flxSettingsSide"
+        "flxSettingsSide",
+        "flxComponentImage"
     ],
     "clipbounds": false,
     "containerweight": 100,

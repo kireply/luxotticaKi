@@ -18,7 +18,7 @@
     "_pxMenuIndex": [
         2,
         1,
-        3
+        4
     ],
     "_skin_": "sea778dcbfbb4c21abc4235521fcacfd",
     "_title_": null,
@@ -50,7 +50,9 @@
     "canUpdateUI": true,
     "canvasWidth": 1200,
     "children": [
-        "flxMainDeleteUser"
+        "flxMainDeleteUser",
+        "fxlMainContainerDeleteUsers",
+        "CopyfxlMainContainerChannels0jf333950c2b24b"
     ],
     "containerweight": 100,
     "controllerInfo": {

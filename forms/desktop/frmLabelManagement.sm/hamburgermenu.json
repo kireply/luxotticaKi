@@ -48,11 +48,19 @@
             }
         },
         "btnResizeMenu": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_Button_a474c19938a84862a493af56ee812196"
+            },
             "__info__": {
                 "kuid": "a3fddfd3119349c08fb18d44108a7b9e",
                 "srcKUID": "g6220a13ecc543cfbd274408555deb6b",
                 "wType": "Button"
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "2%"
+                }
             }
         },
         "flxBtnLogout": {
@@ -100,6 +108,7 @@
                     "value": "100%"
                 }
             },
+            "isVisible": true,
             "left": {
                 "Default": {
                     "type": "string",
@@ -130,6 +139,7 @@
                     "value": ""
                 }
             },
+            "responsiveData": {},
             "right": {
                 "Default": {
                     "type": "string",

@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "17%"
+        "value": "19%"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "Channels",
     "_top_": {
         "type": "string",
-        "value": "25%"
+        "value": "26%"
     },
     "_width_": {
         "type": "ref",
@@ -62,5 +62,6 @@
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",
-    "wType": "Label"
+    "wType": "Label",
+    "zindex": 10
 }

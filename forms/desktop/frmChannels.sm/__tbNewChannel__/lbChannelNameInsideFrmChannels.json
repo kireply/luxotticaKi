@@ -1,0 +1,89 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizListBox",
+    "DNDConfig": null,
+    "_blur_": {
+        "enabled": false,
+        "value": 0
+    },
+    "_height_": {
+        "type": "string",
+        "value": "6%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "9.06%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Please Select",
+    "_skin_": "sa250cf5e6094a3bb07d4255cb0414f6",
+    "_top_": {
+        "type": "string",
+        "value": "29.03%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "80%"
+    },
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50.22%"
+    },
+    "containerweight": 100,
+    "contentalignment": 4,
+    "focusskin": "s2fd60615bac48c08c630c68d83ae22c",
+    "groupcells": false,
+    "id": "lbChannelNameInsideFrmChannels",
+    "ide_onSelection": "AS_ListBox_d05bc7f39c45432f94849535eb12511d",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "e74135133adb4951972fe5130a0db4e5",
+    "masterdata": [
+        [
+            "lb1",
+            "Select Channel Name"
+        ],
+        [
+            "lb2",
+            "Rayban"
+        ],
+        [
+            "lb3",
+            "Prada"
+        ],
+        [
+            "lb4",
+            "DolceGabbana"
+        ]
+    ],
+    "name": "kony.ui.ListBox",
+    "parent": "TabNewChannel1",
+    "pf": "frmChannels",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "selectedkeys": null,
+    "selectedkeyvalue": null,
+    "selectedkeyvalues": null,
+    "size": 18,
+    "tabpaneId": "tbNewChannel",
+    "viewconfig": {
+        "toggleViewConfig": {
+            "viewStyle": 0
+        }
+    },
+    "viewtype": 0,
+    "wType": "ListBox",
+    "zindex": 1
+}

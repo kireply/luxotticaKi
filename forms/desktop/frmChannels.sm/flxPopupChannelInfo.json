@@ -41,22 +41,7 @@
     "children": [
         "imgExitPopup",
         "lblTitlePopup",
-        "lblChannelID",
-        "txtChannelID",
-        "lblChannelName",
-        "lbChannelName",
-        "lblChannelLogo",
-        "txtChannelLogo",
-        "lblChannelProperties",
-        "txtChannelProperties",
-        "lblChannelGenericImage",
-        "txtChannelGenericImage",
-        "lblChannelAssetsCDN",
-        "txtChannelAssetsCDN",
-        "lblChannelProjectImage",
-        "txtChannelProjectImage",
-        "lblChannelFrameOnlyLensUPC",
-        "txtChannelFrameOnlyLensUPC"
+        "tbChannelInfo"
     ],
     "clipbounds": false,
     "containerweight": 100,

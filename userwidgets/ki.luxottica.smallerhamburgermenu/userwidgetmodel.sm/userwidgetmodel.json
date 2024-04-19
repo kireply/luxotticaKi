@@ -67,5 +67,8 @@
     "retainscrollposition": false,
     "titlebar": true,
     "type": 3,
+    "vizProps": {
+        "globalRespDesignEnabled": true
+    },
     "wType": "Form"
 }

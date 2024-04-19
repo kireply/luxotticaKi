@@ -16,13 +16,13 @@
         6
     ],
     "_padding_": [
-        0,
+        10,
         0,
         0,
         0
     ],
     "_skin_": "s312918df4cf49f79a1eb496bf33ef82",
-    "_text_": "     Upload Labels",
+    "_text_": "Upload file",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -45,6 +45,7 @@
     "isvisible": true,
     "kuid": "g6be0ad2ecc247b4be5e42f057bcf6db",
     "name": "kony.ui.Button",
+    "paddinginpixel": false,
     "parent": "flxUploadLabels",
     "pf": "frmLabelManagement",
     "retaincontentalignment": false,

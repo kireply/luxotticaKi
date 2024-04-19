@@ -1,0 +1,68 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizLabel",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "10%"
+    },
+    "_margin_": [
+        1,
+        1,
+        1,
+        1
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s5ce4f5343c4401c8413f460dd771a28",
+    "_text_": "Channel ID",
+    "_top_": {
+        "type": "string",
+        "value": "8.51%"
+    },
+    "_width_": {
+        "type": "ref",
+        "value": "preferred"
+    },
+    "_wrapping_": 2,
+    "android": {
+        "textStyle": {
+            "letterSpacing": 0,
+            "strikeThrough": false
+        }
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "id": "lblChannelInsideFrmChannels",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
+    "iphone": {
+        "psp": {
+            "wrapping": 2
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "c2bb7c09fdac49ccaf2ef9781511a2f9",
+    "name": "kony.ui.Label",
+    "parent": "TabNewChannel1",
+    "pf": "frmChannels",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "tabpaneId": "tbNewChannel",
+    "tooltip": "",
+    "wType": "Label",
+    "zindex": 1
+}

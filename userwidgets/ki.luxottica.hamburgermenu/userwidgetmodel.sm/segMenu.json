@@ -107,10 +107,7 @@
             "lblMenu": "lblMenu"
         }
     },
-    "disabledSkins": {
-        "rowFocusSkin": "sc696b91647a498ca38132117385a0c4",
-        "rowSkin": "sb33a9540d60480295e259124d56f0d6"
-    },
+    "disabledSkins": {},
     "focusedindex": null,
     "focuseditem": null,
     "groupcells": false,
@@ -146,7 +143,6 @@
     "retainselection": false,
     "rowcounter": 3,
     "rowfocusskin": null,
-    "rowskin": "sb33a9540d60480295e259124d56f0d6",
     "rowtemplate": null,
     "screenlevelwidget": false,
     "seccounter": 0,

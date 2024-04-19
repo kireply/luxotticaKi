@@ -72,14 +72,14 @@
             "left": {
                 "Default": {
                     "type": "string",
-                    "value": "87.83%"
+                    "value": "83%"
                 }
             },
             "responsiveData": {},
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "20%"
+                    "value": "30%"
                 }
             }
         },

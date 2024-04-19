@@ -1,7 +1,47 @@
 {
     "NativeFunctionAPI": {
         "iOS": {},
-        "Android": {}
+        "Android": {},
+        "Desktop": {
+            "1.0.0": {
+                "VoltMXApplication-Desktop-1.0.0": {
+                    "title": "VoltMXApplication",
+                    "platform": "Desktop",
+                    "os": "1.0.0",
+                    "ci": true,
+                    "isDefault": true,
+                    "filename": "VoltMXApplication-1.0.0.zip",
+                    "enable": true
+                },
+                "VoltMXForm-Desktop-1.0.0": {
+                    "title": "VoltMXForm",
+                    "platform": "Desktop",
+                    "os": "1.0.0",
+                    "ci": true,
+                    "isDefault": true,
+                    "filename": "VoltMXForm-1.0.0.zip",
+                    "enable": true
+                },
+                "VoltMXDB-Desktop-1.0.0": {
+                    "title": "VoltMXDB",
+                    "platform": "Desktop",
+                    "os": "1.0.0",
+                    "ci": true,
+                    "isDefault": false,
+                    "filename": "VoltMXDB-1.0.0.zip",
+                    "enable": false
+                },
+                "VoltMXIO-Desktop-1.0.0": {
+                    "title": "VoltMXIO",
+                    "platform": "Desktop",
+                    "os": "1.0.0",
+                    "ci": true,
+                    "isDefault": false,
+                    "filename": "VoltMXIO-1.0.0.zip",
+                    "enable": false
+                }
+            }
+        }
     },
     "Metadata": {
         "Version": {

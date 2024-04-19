@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "4dp"
     },
     "_margin_": [
         6,
@@ -16,13 +16,13 @@
         6
     ],
     "_padding_": [
-        0,
+        12,
         0,
         0,
         0
     ],
     "_skin_": "s2d46b2ad2bb4c82ac5c930c7a507dcf",
-    "_text_": "     Download Labels",
+    "_text_": "Download labels",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -45,6 +45,7 @@
     "isvisible": true,
     "kuid": "be22d87b43fa4d888c6953d6e3431e4b",
     "name": "kony.ui.Button",
+    "paddinginpixel": false,
     "parent": "flxDownloadLabels",
     "pf": "frmLabelManagement",
     "retaincontentalignment": false,

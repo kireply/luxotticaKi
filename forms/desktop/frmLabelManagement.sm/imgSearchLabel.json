@@ -4,11 +4,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "70%"
+        "value": "20px"
     },
     "_left_": {
         "type": "string",
-        "value": "3%"
+        "value": "-0.14%"
     },
     "_margin_": [
         0,
@@ -26,11 +26,11 @@
     "_src_": "search.png",
     "_top_": {
         "type": "string",
-        "value": "12%"
+        "value": "24.69%"
     },
     "_width_": {
         "type": "string",
-        "value": "10%"
+        "value": "20px"
     },
     "canUpdateUI": true,
     "containerweight": 100,

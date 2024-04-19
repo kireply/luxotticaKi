@@ -1,11 +1,13 @@
 {
   "android": {
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
-    "isForked": false
+    "isForked": true
   },
   "androidwearos": {
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
-    "isForked": false
+    "isForked": true
   },
   "background_color": "00000000",
   "bg_type": "one",
@@ -20,6 +22,7 @@
     "bottom_right_border_color": "424242ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
     "isCustomCSSEnabled": false,
     "isForked": true,
@@ -37,17 +40,20 @@
   "font_style": "normal",
   "font_weight": "400",
   "ipad": {
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
-    "isForked": false
+    "isForked": true
   },
   "iphone": {
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
-    "isForked": false
+    "isForked": true
   },
   "isDefaultSkin": false,
   "kiosk": {
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
-    "isForked": false
+    "isForked": true
   },
   "kuid": "s2ffcb820fc94b7387b01ea0ace06ee7",
   "spaan": {
@@ -57,6 +63,7 @@
     "bottom_right_border_color": "424242ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
     "isCustomCSSEnabled": false,
     "isForked": true,
@@ -74,6 +81,7 @@
     "bottom_right_border_color": "424242ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
     "isCustomCSSEnabled": false,
     "isForked": true,
@@ -91,6 +99,7 @@
     "bottom_right_border_color": "424242ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
     "isCustomCSSEnabled": false,
     "isForked": true,
@@ -108,6 +117,7 @@
     "bottom_right_border_color": "424242ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
     "isCustomCSSEnabled": false,
     "isForked": true,
@@ -125,6 +135,7 @@
     "bottom_right_border_color": "424242ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
     "isCustomCSSEnabled": false,
     "isForked": true,
@@ -142,6 +153,7 @@
     "bottom_right_border_color": "424242ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
     "isCustomCSSEnabled": false,
     "isForked": true,
@@ -153,20 +165,24 @@
     "top_right_border_width": 0
   },
   "tabrcandroid": {
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
-    "isForked": false
+    "isForked": true
   },
   "wType": "Label",
   "watchos": {
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
-    "isForked": false
+    "isForked": true
   },
   "windows8": {
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
-    "isForked": false
+    "isForked": true
   },
   "winphone8": {
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
-    "isForked": false
+    "isForked": true
   }
 }

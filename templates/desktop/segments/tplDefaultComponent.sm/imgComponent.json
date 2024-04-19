@@ -22,7 +22,7 @@
         0,
         0
     ],
-    "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
+    "_skin_": "s519592a34ab4656810cb99640c206c2",
     "_src_": "imagedrag.png",
     "_top_": {
         "type": "string",
@@ -30,7 +30,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "190dp"
+        "value": "54%"
     },
     "canUpdateUI": true,
     "centerx": {

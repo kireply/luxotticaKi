@@ -4,7 +4,7 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "40dp"
+        "value": "34dp"
     },
     "_left_": {
         "type": "string",
@@ -26,11 +26,11 @@
     "_src_": "info_icon.png",
     "_top_": {
         "type": "string",
-        "value": "-6dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "55dp"
+        "value": "36dp"
     },
     "canUpdateUI": true,
     "containerId": true,
@@ -51,5 +51,5 @@
     "srcType": 1,
     "wType": "Image",
     "widgetalignment": 5,
-    "zindex": 1
+    "zindex": 10
 }

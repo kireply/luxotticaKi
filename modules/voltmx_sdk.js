@@ -1,5 +1,5 @@
  /*
-  * voltmx-sdk-ide Version 9.5.22
+  * voltmx-sdk-ide Version 9.5.24
   */
         
 //#ifdef iphone
@@ -540,7 +540,7 @@ voltmx.sdk.currentInstance = null;
 voltmx.sdk.isLicenseUrlAvailable = true;
 voltmx.sdk.isOAuthLogoutInProgress = false;
 voltmx.sdk.constants = voltmx.sdk.constants || {};
-voltmx.sdk.version = "9.5.22";
+voltmx.sdk.version = "9.5.24";
 voltmx.sdk.logsdk = new voltmxSdkLogger();
 voltmx.sdk.syncService = null;
 voltmx.sdk.dataStore = voltmx.sdk.dataStore || new voltmxDataStore();
@@ -645,6 +645,7 @@ function getLatestServiceDocIfAvailable(data, callback){
         headers["X-HTTP-Method-Override"] = "GET";
 
         populateHeaderWithFoundryAppVersion(headers);
+        populateHeaderWithVanityUrl(headers);
 
         voltmx.sdk.logsdk.perf("Executing network call for getLatestServiceDocIfAvailable");
 
@@ -662,7 +663,11 @@ function getLatestServiceDocIfAvailable(data, callback){
 
                 //Saving latest metadata(appKey, appSecret and serviceDoc) in DS
                 //for next app launch
-                voltmx.sdk.util.saveMetadatainDs(voltmxRef.mainRef.appKey, voltmxRef.mainRef.appSecret, successResponse);
+                if (!voltmx.sdk.isNullOrUndefined(voltmxRef.mainRef.vanityUrl)) {
+                    voltmx.sdk.util.saveMetadataWithVanityUrlinDs(voltmxRef.mainRef.appKey, voltmxRef.mainRef.appSecret, successResponse, voltmxRef.mainRef.vanityUrl);
+                } else {
+                    voltmx.sdk.util.saveMetadatainDs(voltmxRef.mainRef.appKey, voltmxRef.mainRef.appSecret, successResponse);
+                }
 
                 voltmx.sdk.logsdk.perf("Executing Finished network call for getLatestServiceDocIfAvailable");
                 voltmx.sdk.verifyAndCallClosure(callback);
@@ -856,12 +861,16 @@ voltmx.sdk.prototype.init = function(appKey, appSecret, serviceUrl, successCallb
 
     //Resetting the value.
     voltmx.sdk.setFoundryAppVersion(null);
-
     if (!voltmx.sdk.isNullOrUndefined(initOptions) && initOptions["MFAppVersion"]){
         voltmx.sdk.setFoundryAppVersion(initOptions["MFAppVersion"]);
     }
-
     populateHeaderWithFoundryAppVersion(headers);
+
+    voltmx.sdk.setVanityUrl(null);
+    if (!voltmx.sdk.isNullOrUndefined(initOptions) && initOptions["vanityUrl"]){
+        voltmx.sdk.setVanityUrl(initOptions["vanityUrl"]);
+    }
+    populateHeaderWithVanityUrl(headers);
 
     voltmx.sdk.logsdk.perf("Executing network call for fetching servicedoc");
     networkProvider.post(
@@ -1717,6 +1726,7 @@ voltmx.sdk.constants =
         /**Headers**/
         APP_KEY_HEADER : "X-Voltmx-App-Key",
         APP_SECRET_HEADER : "X-Voltmx-App-Secret",
+        VANITYURL_HEADER : "X-Voltmx-VanityUrl",
         KONY_AUTHORIZATION_HEADER : "X-Voltmx-Authorization",
         AUTHORIZATION_HEADER : "Authorization",
         REPORTING_HEADER : "X-Voltmx-ReportingParams",
@@ -7094,6 +7104,12 @@ function doesMFSupportsAppversioning(){
 function populateHeaderWithFoundryAppVersion(headers){
     if (doesMFSupportsAppversioning() && !voltmx.sdk.isNullOrUndefined(headers) && !voltmx.sdk.isNullOrUndefined(voltmx.sdk.getFoundryAppVersion())){
         headers[voltmx.sdk.constants.APP_VERSION_HEADER] = voltmx.sdk.getFoundryAppVersion();
+    }
+}
+
+function populateHeaderWithVanityUrl(headers){
+    if (!voltmx.sdk.isNullOrUndefined(headers) && !voltmx.sdk.isNullOrUndefined(voltmx.sdk.getVanityUrl())){
+        headers[voltmx.sdk.constants.VANITYURL_HEADER] = voltmx.sdk.getVanityUrl();
     }
 }
 
@@ -17463,16 +17479,19 @@ voltmx.setupsdks = function (initConfig, successCallBack, errorCallBack) {
                 var appKey = voltmx.sdk.util.decryptAppConfig(dsAppMetaData.appKey);
                 var appSecret = voltmx.sdk.util.decryptAppConfig(dsAppMetaData.appSecret);
                 var serviceUrl = voltmx.sdk.util.decryptAppConfig(dsAppMetaData.serviceUrl);
+                var vanityUrl = voltmx.sdk.util.decryptAppConfig(dsAppMetaData.vanityUrl);
 
                 if (!voltmx.sdk.isNullOrUndefined(appKey)
                     || !voltmx.sdk.isNullOrUndefined(appSecret)
                     || !voltmx.sdk.isNullOrUndefined(serviceUrl)
+                    || !voltmx.sdk.isNullOrUndefined(vanityUrl)
                     || !voltmx.sdk.isNullOrUndefined(dsAppServiceDoc)) {
 
                     //update the decrypted values back in dsAppMetaData
                     dsAppMetaData.appKey = appKey;
                     dsAppMetaData.appSecret = appSecret;
                     dsAppMetaData.serviceUrl = serviceUrl;
+                    dsAppMetaData.vanityUrl = vanityUrl;
 
                 } else {
                     voltmx.sdk.logsdk.debug("Failed to retrieve config data form Cache");
@@ -17593,7 +17612,8 @@ voltmx.setupsdks = function (initConfig, successCallBack, errorCallBack) {
     acceptedMfAppMetaData = {
         "appKey": initConfig.appKey,
         "appSecret": initConfig.appSecret,
-        "serviceUrl": initConfig.serviceUrl
+        "serviceUrl": initConfig.serviceUrl,
+        "vanityUrl": initConfig.vanityUrl
     };
 
     // Fetching data from cache
@@ -17670,6 +17690,7 @@ voltmx.setupsdks = function (initConfig, successCallBack, errorCallBack) {
     try {
         // Pass the appkey, appSecret, SvcDoc to initWithServiceDoc
         VMXFoundry.initWithServiceDoc(acceptedMfAppMetaData.appKey, acceptedMfAppMetaData.appSecret, acceptedSvcDoc);
+        voltmxRef.mainRef.vanityUrl = acceptedMfAppMetaData.vanityUrl;
         // set eventtypes for APM
         KNYMetricsService = VMXMetricsService = initializeMetricsForAPM(KNYMobileFabric, initConfig.eventTypes);
         if (voltmx.sdk.getPlatformName() !== voltmx.sdk.constants.PLATFORM_THIN_CLIENT) {
@@ -18911,6 +18932,27 @@ voltmx.sdk.util.saveMetadatainDs = function (appKey, appSecret, servConfig) {
 };
 
 /**
+ * Saving App metadata along with Vanity Url in storage for Persistence
+ * If Vanity Url is not configured, saveMetadatainDs is called where only appKey,appSecret,serviceUrl are stored
+ * If Vanity Url is configured, saveMetadataWithVanityUrlinDs is called which stores appkey,appSecret,serviceUrl and vanityUrl
+ */
+voltmx.sdk.util.saveMetadataWithVanityUrlinDs = function (appKey, appSecret, servConfig, vanityUrl) {
+    var appId = {
+        "appKey": voltmx.sdk.util.encryptAppConfig(appKey),
+        "appSecret": voltmx.sdk.util.encryptAppConfig(appSecret),
+        "serviceUrl": voltmx.sdk.util.encryptAppConfig(servConfig.selflink),
+        "vanityUrl": voltmx.sdk.util.encryptAppConfig(vanityUrl)
+    };
+
+    voltmx.sdk.dataStore.setItem(voltmx.sdk.constants.TOOLS_ETAG_ID, servConfig.service_doc_etag);
+    voltmx.sdk.logsdk.debug("Update done. Current version = " + voltmx.sdk.getCurrentInstance().mainRef.config.service_doc_etag + " Updated to " + servConfig.service_doc_etag);
+    voltmx.sdk.dataStore.setItem(voltmx.sdk.util.prefixAppid(voltmx.sdk.constants.MOBILE_FABRIC_SERVICE_DOC), voltmx.sdk.util.encryptAppConfig(JSON.stringify(servConfig)));
+    voltmx.sdk.dataStore.setItem(appConfig.appId, JSON.stringify(appId));
+    voltmx.sdk.dataStore.setItem(voltmx.sdk.util.prefixAppid(voltmx.sdk.constants.ENCRYPTION_APPCONFIG_FLAG), true);
+    voltmx.sdk.logsdk.info("### saveMetadatainDs:: metadata saved successfuly in dataStore");
+};
+
+/**
  * Deleting App metadata from datastore(cache)
  */
 voltmx.sdk.util.deleteMetadatafromDs = function () {
@@ -18964,6 +19006,15 @@ voltmx.sdk.setFoundryAppVersion = function(version){
 };
 
 /**
+ * Sets Vanity Url which is sent by developer during manual init
+ */
+var vanityUrl;
+
+voltmx.sdk.setVanityUrl = function(url){
+    vanityUrl = url;
+};
+
+/**
  * Returns the default Foundry application version. For auto init app version will be available in appConfig,
  * for manual init developer has to send Foundry version explicitly.
  *
@@ -18980,6 +19031,23 @@ voltmx.sdk.getFoundryAppVersion = function(){
         }
         return appConfig.runtimeAppVersion;
     }
+};
+
+/**
+ * Returns the Vanity Url configured. For auto init Vanity Url will be available in appConfig,
+ * for manual init developer has to send Vanity Url explicitly.
+ *
+ * Vanity Url in manual init has more priority over the one which is specified in Iris.
+ * @return {*}
+ */
+voltmx.sdk.getVanityUrl = function(){
+    if (!voltmx.sdk.isNullOrUndefined(vanityUrl)){
+        return vanityUrl;
+    }
+    else if (!voltmx.sdk.isNullOrUndefined(appConfig) && !voltmx.sdk.isNullOrUndefined(appConfig.vanityUrl)){
+        return appConfig.vanityUrl;
+    }
+    return;
 };
 
 /**
@@ -19223,6 +19291,8 @@ voltmx.sdk.util.loadMetadataFromDs = function (dsAppMetaData, dsAppServiceDoc) {
             var appKey = voltmx.sdk.util.decryptAppConfig(dsAppMetaData.appKey);
             var appSecret = voltmx.sdk.util.decryptAppConfig(dsAppMetaData.appSecret);
             var serviceUrl = voltmx.sdk.util.decryptAppConfig(dsAppMetaData.serviceUrl);
+            var vanityUrl = voltmx.sdk.isNullOrUndefined(dsAppMetaData.vanityUrl) ? null :
+                            voltmx.sdk.util.decryptAppConfig(dsAppMetaData.vanityUrl);
 
             if (voltmx.sdk.util.isNullOrEmptyString(appKey) || voltmx.sdk.util.isNullOrEmptyString(appSecret)
                 || voltmx.sdk.util.isNullOrEmptyString(serviceUrl)) {
@@ -19230,12 +19300,14 @@ voltmx.sdk.util.loadMetadataFromDs = function (dsAppMetaData, dsAppServiceDoc) {
                 dsAppMetaData.appKey = appConfig.appKey;
                 dsAppMetaData.appSecret = appConfig.appSecret;
                 dsAppMetaData.serviceUrl = appConfig.serviceUrl;
+                dsAppMetaData.vanityUrl = appConfig.vanityUrl;
                 voltmx.sdk.logsdk.info("Using appKey, appSecret and serviceUrl from Startup.js appConfig");
                 voltmx.sdk.util.recordCustomEvent("Decrypted appKey,appSecret and serviceUrl equals NULL", "fallback startup.js appConfig", "loadMetadataFromDS", "update metadata run time", null);
             } else {
                 dsAppMetaData.appKey = appKey;
                 dsAppMetaData.appSecret = appSecret;
                 dsAppMetaData.serviceUrl = serviceUrl;
+                dsAppMetaData.vanityUrl = vanityUrl;
             }
         } else {
             voltmx.sdk.util.recordCustomEvent("RETRIEVE DS APP METADATA", "DS_AppMetaData not found.", "", "decipher", null);

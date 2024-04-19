@@ -1,0 +1,60 @@
+{
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "86%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s7f84447d26843c3a9f053c5ab19ba7c",
+    "_top_": {
+        "type": "string",
+        "value": "14%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "20.97%"
+    },
+    "allboxes": [],
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "children": [
+        "hamburgermenu",
+        "flxMenuOptionSelected"
+    ],
+    "clipbounds": false,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "flxContainerMenu",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": false,
+    "kuid": "a3b952d2bb6447fa97ef11428acba366",
+    "layouttype": 2,
+    "name": "kony.ui.FlexContainer",
+    "parent": "fxlMainContainerDeleteUsers",
+    "pf": "frmDeleteUser",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "wType": "FlexContainer",
+    "widgetalignment": 1
+}

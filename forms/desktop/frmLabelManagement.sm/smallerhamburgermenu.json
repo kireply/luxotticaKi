@@ -61,17 +61,25 @@
             "responsiveData": {}
         },
         "btnResizeMenu": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_Button_h5c7375fbc8d4245b0171d7795b6e4a8"
+            },
             "__info__": {
                 "kuid": "had49b146b4346e7bcde0cc295bb3877",
                 "srcKUID": "b78ca6f9cd4742d8b6d55eda7606510c",
                 "wType": "Button"
             },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "85%"
+                }
+            },
             "responsiveData": {},
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "20%"
+                    "value": "30%"
                 }
             }
         },

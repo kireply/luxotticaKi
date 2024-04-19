@@ -15,6 +15,7 @@
   "border_type": 0,
   "border_width": 4,
   "desktopweb": {
+    "font_name": "Montserrat-ExtraLight",
     "font_size": 119,
     "isForked": false
   },

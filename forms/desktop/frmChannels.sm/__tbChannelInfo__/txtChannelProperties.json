@@ -1,0 +1,69 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "6%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "8.86%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Upload property file url",
+    "_skin_": "s721b851d26d4c7ab143459151fe7fe4",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "14.17%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "80%"
+    },
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50.02%"
+    },
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "focusskin": "s4ae88d6059f41ebb18f1220b211dfc3",
+    "id": "txtChannelProperties",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardtype": "A",
+    "kuid": "ic014398e46d47cfb4b5412af9d8a222",
+    "mode": "A",
+    "name": "kony.ui.TextBox2",
+    "parent": "TabChannelInfo2",
+    "pf": "frmChannels",
+    "placeholderskin": "sfd700440c644c55be0d2d9437fdf50f",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": false,
+    "tabpaneId": "tbChannelInfo",
+    "textinputmode": "A",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField",
+    "zindex": 1
+}

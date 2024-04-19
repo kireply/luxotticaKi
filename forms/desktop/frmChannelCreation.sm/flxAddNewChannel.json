@@ -28,11 +28,11 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "49.92%"
+        "value": "50%"
     },
     "centery": {
         "type": "string",
-        "value": "73.65%"
+        "value": "63.650000000000006%"
     },
     "children": [
         "imgAddNewChannel",

@@ -16,7 +16,7 @@
         0
     ],
     "_padding_": [
-        3,
+        2,
         0,
         0,
         0
@@ -34,7 +34,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
+    "focusskin": "s25c439af9174e54b9e16b2ed36519b1",
     "groupcells": false,
     "id": "lbCategory",
     "ide_onSelection": "AS_ListBox_f9c5eb2774f74d0ab010cca5f256dff6",
@@ -61,6 +61,7 @@
         ]
     ],
     "name": "kony.ui.ListBox",
+    "paddinginpixel": false,
     "parent": "FlexContainerFlows",
     "pf": "frmFlows",
     "retaincontentalignment": false,

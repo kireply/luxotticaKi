@@ -1,0 +1,294 @@
+{
+    "AS_ListBox_d05bc7f39c45432f94849535eb12511d": {
+        "id": "AS_ListBox_d05bc7f39c45432f94849535eb12511d",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "eventType": "onSelection",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_ide_onSelection_e1e31c8f414b481baf44fc99ccdac265",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "channelID",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\""
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ide_onSelection_f33642437788455db7b28e74cec6000e",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "channelName",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\""
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ide_onSelection_a56526917d76438e9ab67690547601dc",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "channelLogo",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\""
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ide_onSelection_b7805f25d419440686fd185630b88197",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "channelProperties",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\""
+        }, {
+            "id": "ADD_MAPPING_ide_onSelection_ac2ca474d74944319d74b574d8c8ffc0",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_f5013f871f39453fb597773c3b5a9cde": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f5013f871f39453fb597773c3b5a9cde",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelInsideFrmChannels",
+                        "widgetPath": "this.view.tbNewChannel.txtChannelInsideFrmChannels",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannels",
+                        "widgetKUID": "a709edb70a60483983498ef971327e19",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Variables",
+                        "propertyName": "channelID",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_j2a73a4b959e40c198254afceabcc128": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_j2a73a4b959e40c198254afceabcc128",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelLogoInsideFrmChannels",
+                        "widgetPath": "this.view.tbNewChannel.txtChannelLogoInsideFrmChannels",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannels",
+                        "widgetKUID": "dfd79c43a830418d946cdccb44fd4b83",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Variables",
+                        "propertyName": "channelLogo",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_i67de98ef14847989b5c06c6a49a4831": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_i67de98ef14847989b5c06c6a49a4831",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "value",
+                        "widgetId": "lbChannelNameInsideFrmChannels",
+                        "widgetPath": "this.view.tbNewChannel.lbChannelNameInsideFrmChannels",
+                        "widgetType": "ListBox",
+                        "dataType": "string",
+                        "itemId": "frmChannels",
+                        "collectionId": "selectedKeyValues",
+                        "widgetKUID": "e74135133adb4951972fe5130a0db4e5",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Variables",
+                        "propertyName": "channelName",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_e340db2c946a4d54abc614d49a04e171": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e340db2c946a4d54abc614d49a04e171",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelPropertiesInsideFrmChannels",
+                        "widgetPath": "this.view.tbNewChannel.txtChannelPropertiesInsideFrmChannels",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannels",
+                        "widgetKUID": "ae6d0917eb824707883abe8c2ce5c352",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Variables",
+                        "propertyName": "channelProperties",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_f5013f871f39453fb597773c3b5a9cde", "ME_Mapping_j2a73a4b959e40c198254afceabcc128", "ME_Mapping_i67de98ef14847989b5c06c6a49a4831", "ME_Mapping_e340db2c946a4d54abc614d49a04e171"],
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "IF_CONDITION_ide_onSelection_cc344913036a4832aa884671ef84bc6e",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.tbNewChannel.txtChannelInsideFrmChannels.text",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "\"\"",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "a709edb70a60483983498ef971327e19"
+            }, {
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.tbNewChannel.txtChannelInsideFrmChannels.text",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "undefined",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "a709edb70a60483983498ef971327e19"
+            }, {
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.tbNewChannel.txtChannelPropertiesInsideFrmChannels.text",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "\"\"",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "ae6d0917eb824707883abe8c2ce5c352"
+            }, {
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.tbNewChannel.txtChannelPropertiesInsideFrmChannels.text",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "undefined",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "ae6d0917eb824707883abe8c2ce5c352"
+            }, {
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.tbNewChannel.lbChannelNameInsideFrmChannels.selectedKey",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "\"lb1\"",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "e74135133adb4951972fe5130a0db4e5"
+            }],
+            "callbackType": null,
+            "criteria": "any"
+        }, {
+            "id": "ADD_SNIPPET_ide_onSelection_d90a99c391104ed09cc5fc86826032ab",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnSaveNewChannelInsideFrmChannels.setEnabled(false);\nthis.view.btnSaveNewChannelInsideFrmChannels.opacity = 0.5;",
+            "parentId": "IF_CONDITION_ide_onSelection_cc344913036a4832aa884671ef84bc6e",
+            "callbackType": null
+        }, {
+            "id": "_ide_onSelection_j0b7bdef012046b5ae637890bdf535b2",
+            "type": "STYLE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmChannels",
+            "widgetId": "btnSaveNewChannelInsideFrmChannels",
+            "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+            "widgetKUID": "j0858120438c4d45b43b1ff72d7c1a7b",
+            "wType": "Button",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "opacity": "50",
+                "displayAnimationId": "",
+                "duration": "0",
+                "delay": "0",
+                "iterationCount": ""
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 0,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "0"
+            },
+            "start": "Immediately",
+            "parentAnimation": "STYLE_ACTION_ja0eeacf1a2d4e0793b40ca483e0930b",
+            "animationId": "STYLE_ACTION_b4f40d9e881f4b1f9ea10c46da9856d7",
+            "displayAnimationId": "STYLE_ACTION_b4f40d9e881f4b1f9ea10c46da9856d7",
+            "forkedPlatform": "all",
+            "parentId": "IF_CONDITION_ide_onSelection_cc344913036a4832aa884671ef84bc6e",
+            "callbackType": null,
+            "disabled": true,
+            "widgetPath": "this.view.btnSaveNewChannelInsideFrmChannels"
+        }, {
+            "id": "ELSE_CONDITION_ide_onSelection_a1686e5e77344e5bb931da350d47c657",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_ide_onSelection_fdaaa2ad8b9c4589abac99d39061322b",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnSaveNewChannelInsideFrmChannels.setEnabled(true);\nthis.view.btnSaveNewChannelInsideFrmChannels.opacity = 1;",
+            "parentId": "ELSE_CONDITION_ide_onSelection_a1686e5e77344e5bb931da350d47c657",
+            "callbackType": null
+        }, {
+            "id": "_ide_onSelection_b3fcbda4d4eb43b6ab1e240d0986506c",
+            "type": "STYLE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmChannels",
+            "widgetId": "btnSaveNewChannelInsideFrmChannels",
+            "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+            "widgetKUID": "j0858120438c4d45b43b1ff72d7c1a7b",
+            "wType": "Button",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "0",
+                "delay": "0",
+                "iterationCount": ""
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 0,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "0"
+            },
+            "start": "Immediately",
+            "parentAnimation": "STYLE_ACTION_b4f40d9e881f4b1f9ea10c46da9856d7",
+            "animationId": "STYLE_ACTION_ja0eeacf1a2d4e0793b40ca483e0930b",
+            "displayAnimationId": "STYLE_ACTION_ja0eeacf1a2d4e0793b40ca483e0930b",
+            "forkedPlatform": "all",
+            "parentId": "ELSE_CONDITION_ide_onSelection_a1686e5e77344e5bb931da350d47c657",
+            "callbackType": null,
+            "disabled": true,
+            "widgetPath": "this.view.btnSaveNewChannelInsideFrmChannels"
+        }]
+    }
+}

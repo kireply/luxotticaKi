@@ -4,11 +4,7 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "100%"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "0dp"
+        "value": "85.56%"
     },
     "_margin_": [
         0,
@@ -24,18 +20,26 @@
         0
     ],
     "_percent_": true,
+    "_right_": {
+        "type": "string",
+        "value": "-10dp"
+    },
     "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "130dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "78.33%"
     },
     "areflexpropsreferenced": false,
     "autogrowmode": 0,
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "56.67%"
+    },
     "clipbounds": false,
     "containerweight": 0,
     "dataDiffs": {
@@ -46,6 +50,52 @@
                 "kuid": "ae46d283a60140d784f93e6aa0e63e6a",
                 "srcKUID": "g236eb3c6baa409e93b0df3a81440988",
                 "wType": "FlexContainer"
+            },
+            "autogrowMode": {
+                "Default": 0
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": "56.67%"
+                }
+            },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "85.56%"
+                }
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "responsiveData": {},
+            "right": {
+                "Default": {
+                    "type": "string",
+                    "value": "-10dp"
+                }
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "130dp"
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "78.33%"
+                }
             }
         },
         "btnAddEdit": {
@@ -70,7 +120,26 @@
                 "kuid": "b00161129d194b64be26ac68dc384310",
                 "srcKUID": "d18e0d97d1474117b2e86775d8a97d57",
                 "wType": "FlexContainer"
-            }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "centerY": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "0%"
+                }
+            },
+            "responsiveData": {}
         },
         "lblTitle": {
             "__events__": {},

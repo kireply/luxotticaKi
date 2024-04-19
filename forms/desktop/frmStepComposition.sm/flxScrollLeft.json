@@ -43,6 +43,9 @@
     "desktopweb": {
         "render": true
     },
+    "disabledSkins": {
+        "focusSkin": "sbb92a1e4ef5403fa3014345752b1cd6"
+    },
     "dragg": false,
     "enablescrolling": true,
     "horizontalscrollindicator": true,

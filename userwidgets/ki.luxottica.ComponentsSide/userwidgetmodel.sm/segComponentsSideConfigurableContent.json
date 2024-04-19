@@ -30,7 +30,7 @@
     ],
     "_orientation_": 2,
     "_padding_": [
-        0,
+        2,
         0,
         0,
         0
@@ -472,7 +472,7 @@
     "selectionbehavior": "default",
     "separatorcolor": "aaaaaa00",
     "separatorrequired": true,
-    "separatorthickness": 1,
+    "separatorthickness": 0,
     "showscrollbars": false,
     "viewtype": "tableview",
     "vizProps": {},

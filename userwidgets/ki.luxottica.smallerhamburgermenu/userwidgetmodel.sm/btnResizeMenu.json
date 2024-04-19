@@ -3,11 +3,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "3%"
+        "value": "4%"
     },
     "_left_": {
         "type": "string",
-        "value": "86.83%"
+        "value": "78.83%"
     },
     "_margin_": [
         6,
@@ -16,7 +16,7 @@
         6
     ],
     "_padding_": [
-        0,
+        3,
         0,
         0,
         0
@@ -29,7 +29,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "30%"
+        "value": "40%"
     },
     "canUpdateUI": true,
     "containerweight": 100,

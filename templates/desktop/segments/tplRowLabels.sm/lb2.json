@@ -71,5 +71,8 @@
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",
+    "vizProps": {
+        "lock": false
+    },
     "wType": "Label"
 }

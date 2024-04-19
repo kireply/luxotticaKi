@@ -51,9 +51,7 @@
     "desktopweb": {
         "psp": {}
     },
-    "disabledSkins": {
-        "focusSkin": "s0cb847e327c44e5803180ea12f08513"
-    },
+    "disabledSkins": {},
     "enablescrolling": true,
     "id": "flxtplRowSegMenu",
     "info": null,

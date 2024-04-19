@@ -80,13 +80,13 @@
             "height": {
                 "Default": {
                     "type": "string",
-                    "value": "3%"
+                    "value": "4%"
                 }
             },
             "left": {
                 "Default": {
                     "type": "string",
-                    "value": "93%"
+                    "value": "84%"
                 }
             },
             "responsiveData": {},
@@ -99,8 +99,11 @@
             "width": {
                 "Default": {
                     "type": "string",
-                    "value": "20%"
+                    "value": "30%"
                 }
+            },
+            "zIndex": {
+                "Default": 10
             }
         },
         "flxLogout": {

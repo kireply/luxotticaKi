@@ -14,11 +14,12 @@
   "border_type": 0,
   "border_width": 0,
   "desktopweb": {
+    "font_name": "Montserrat-Regular",
     "font_size": 115,
     "isForked": false
   },
   "fontSizeInPx": false,
-  "font_color": "333333ff",
+  "font_color": "222222ff",
   "font_name": "iphoneSystem",
   "font_size": 115,
   "font_style": "normal",

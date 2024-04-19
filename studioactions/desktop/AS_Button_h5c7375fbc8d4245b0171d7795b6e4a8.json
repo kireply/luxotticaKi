@@ -1,0 +1,24 @@
+{
+    "AS_Button_h5c7375fbc8d4245b0171d7795b6e4a8": {
+        "id": "AS_Button_h5c7375fbc8d4245b0171d7795b6e4a8",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmLabelManagement",
+            "type": "forms",
+            "platform": "",
+            "KUID": "jcf530250ee04551b0014dcb7147f2fe"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_d8545bc8763c4da3b03dc56548dd3850",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxContainerMenu.setVisibility(true);\nthis.view.flxContainerSmallerMenu.setVisibility(false);\nthis.view.flxContainerLabel.width = \"78.33%\";",
+            "parentId": null
+        }]
+    }
+}

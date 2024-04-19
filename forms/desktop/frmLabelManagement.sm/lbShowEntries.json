@@ -16,7 +16,7 @@
         0
     ],
     "_padding_": [
-        3,
+        1,
         0,
         0,
         0
@@ -29,13 +29,13 @@
     },
     "_width_": {
         "type": "string",
-        "value": "8%"
+        "value": "4%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 5,
     "dropdownimage": "listboxarw.png",
-    "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
+    "focusskin": "s98655295f6346668019c914e2a6bc39",
     "groupcells": false,
     "id": "lbShowEntries",
     "ide_onSelection": "AS_ListBox_b0309251dff54d378c48540355e5e28a",
@@ -58,6 +58,7 @@
         ]
     ],
     "name": "kony.ui.ListBox",
+    "paddinginpixel": false,
     "parent": "flxContainerLabel",
     "pf": "frmLabelManagement",
     "retaincontentalignment": false,

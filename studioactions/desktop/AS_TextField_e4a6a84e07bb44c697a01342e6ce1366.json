@@ -61,7 +61,7 @@
                         "type": "Forms",
                         "propertyName": "text",
                         "widgetId": "txtChannelInsideFrmChannels",
-                        "widgetPath": "this.view.txtChannelInsideFrmChannels",
+                        "widgetPath": "this.view.tbNewChannel.txtChannelInsideFrmChannels",
                         "widgetType": "TextField",
                         "dataType": "string",
                         "itemId": "frmChannels",
@@ -86,7 +86,7 @@
                         "type": "Forms",
                         "propertyName": "text",
                         "widgetId": "txtChannelLogoInsideFrmChannels",
-                        "widgetPath": "this.view.txtChannelLogoInsideFrmChannels",
+                        "widgetPath": "this.view.tbNewChannel.txtChannelLogoInsideFrmChannels",
                         "widgetType": "TextField",
                         "dataType": "string",
                         "itemId": "frmChannels",
@@ -111,7 +111,7 @@
                         "type": "Forms",
                         "propertyName": "text",
                         "widgetId": "txtChannelPropertiesInsideFrmChannels",
-                        "widgetPath": "this.view.txtChannelPropertiesInsideFrmChannels",
+                        "widgetPath": "this.view.tbNewChannel.txtChannelPropertiesInsideFrmChannels",
                         "widgetType": "TextField",
                         "dataType": "string",
                         "itemId": "frmChannels",
@@ -136,7 +136,7 @@
                         "type": "Forms",
                         "propertyName": "value",
                         "widgetId": "lbChannelNameInsideFrmChannels",
-                        "widgetPath": "this.view.lbChannelNameInsideFrmChannels",
+                        "widgetPath": "this.view.tbNewChannel.lbChannelNameInsideFrmChannels",
                         "widgetType": "ListBox",
                         "dataType": "string",
                         "itemId": "frmChannels",
@@ -161,7 +161,7 @@
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
-                "leftValue": "this.view.txtChannelInsideFrmChannels.text",
+                "leftValue": "this.view.tbNewChannel.txtChannelInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "\"\"",
@@ -169,7 +169,7 @@
                 "leftWidgetKUID": "a709edb70a60483983498ef971327e19"
             }, {
                 "leftValueType": "widgetprop",
-                "leftValue": "this.view.txtChannelInsideFrmChannels.text",
+                "leftValue": "this.view.tbNewChannel.txtChannelInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "undefined",
@@ -177,7 +177,7 @@
                 "leftWidgetKUID": "a709edb70a60483983498ef971327e19"
             }, {
                 "leftValueType": "widgetprop",
-                "leftValue": "this.view.txtChannelPropertiesInsideFrmChannels.text",
+                "leftValue": "this.view.tbNewChannel.txtChannelPropertiesInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "\"\"",
@@ -185,7 +185,7 @@
                 "leftWidgetKUID": "ae6d0917eb824707883abe8c2ce5c352"
             }, {
                 "leftValueType": "widgetprop",
-                "leftValue": "this.view.txtChannelPropertiesInsideFrmChannels.text",
+                "leftValue": "this.view.tbNewChannel.txtChannelPropertiesInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "undefined",
@@ -193,7 +193,7 @@
                 "leftWidgetKUID": "ae6d0917eb824707883abe8c2ce5c352"
             }, {
                 "leftValueType": "widgetprop",
-                "leftValue": "this.view.lbChannelNameInsideFrmChannels.selectedKey",
+                "leftValue": "this.view.tbNewChannel.lbChannelNameInsideFrmChannels.selectedKey",
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "\"lb1\"",

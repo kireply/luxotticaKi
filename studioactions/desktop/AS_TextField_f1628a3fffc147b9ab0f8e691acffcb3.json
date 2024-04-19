@@ -61,7 +61,7 @@
                         "type": "Forms",
                         "propertyName": "text",
                         "widgetId": "txtChannelID",
-                        "widgetPath": "this.view.txtChannelID",
+                        "widgetPath": "this.view.tbChannelInfo.txtChannelID",
                         "widgetType": "TextField",
                         "dataType": "string",
                         "itemId": "frmChannels",
@@ -86,7 +86,7 @@
                         "type": "Forms",
                         "propertyName": "text",
                         "widgetId": "txtChannelLogo",
-                        "widgetPath": "this.view.txtChannelLogo",
+                        "widgetPath": "this.view.tbChannelInfo.txtChannelLogo",
                         "widgetType": "TextField",
                         "dataType": "string",
                         "itemId": "frmChannels",
@@ -111,7 +111,7 @@
                         "type": "Forms",
                         "propertyName": "text",
                         "widgetId": "txtChannelProperties",
-                        "widgetPath": "this.view.txtChannelProperties",
+                        "widgetPath": "this.view.tbChannelInfo.txtChannelProperties",
                         "widgetType": "TextField",
                         "dataType": "string",
                         "itemId": "frmChannels",
@@ -136,7 +136,7 @@
                         "type": "Forms",
                         "propertyName": "value",
                         "widgetId": "lbChannelName",
-                        "widgetPath": "this.view.lbChannelName",
+                        "widgetPath": "this.view.tbChannelInfo.lbChannelName",
                         "widgetType": "ListBox",
                         "dataType": "string",
                         "itemId": "frmChannels",
@@ -243,7 +243,7 @@
             "forkedPlatform": "all",
             "parentId": "IF_CONDITION_ide_onTextChange_ca60098775954770884f3edfc36c66c2",
             "callbackType": null,
-            "widgetPath": "this.view.txtChannelID"
+            "widgetPath": "this.view.tbChannelInfo.txtChannelID"
         }, {
             "id": "ELSE_CONDITION_ide_onTextChange_c7c80e77beac4158b0b256bfca246c32",
             "type": "ELSE_CONDITION",
@@ -295,7 +295,7 @@
             "forkedPlatform": "all",
             "parentId": "ELSE_CONDITION_ide_onTextChange_c7c80e77beac4158b0b256bfca246c32",
             "callbackType": null,
-            "widgetPath": "this.view.txtChannelID"
+            "widgetPath": "this.view.tbChannelInfo.txtChannelID"
         }]
     }
 }

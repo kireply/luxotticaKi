@@ -6,7 +6,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "187dp"
     },
     "_margin_": [
         0,
@@ -25,18 +25,18 @@
     "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_top_": {
         "type": "string",
-        "value": "27.49%"
+        "value": "24.49%"
     },
     "_width_": {
         "type": "string",
-        "value": "70%"
+        "value": "69.16%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "54%"
+        "value": "50%"
     },
     "children": [
         "lblTitleABTest",

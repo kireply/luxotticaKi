@@ -1,8 +1,8 @@
 {
   "android": {
-    "font_name": "default",
-    "font_size": 169,
-    "font_weight": "bold",
+    "font_name": "Montserrat-Bold",
+    "font_size": 64,
+    "font_weight": "normal",
     "isForked": true,
     "text_shadow": {
       "br": 0,
@@ -13,9 +13,9 @@
     }
   },
   "androidwearos": {
-    "font_name": "default",
-    "font_size": 169,
-    "font_weight": "bold",
+    "font_name": "Montserrat-Bold",
+    "font_size": 96,
+    "font_weight": "normal",
     "isForked": true
   },
   "background_color": "00000000",
@@ -25,9 +25,9 @@
   "border_type": 0,
   "border_width": 0,
   "desktopweb": {
-    "font_name": "Helvetica",
+    "font_name": "Montserrat-Bold",
     "font_size": 169,
-    "font_weight": "bold",
+    "font_weight": "normal",
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -45,15 +45,15 @@
       "y": 0
     }
   },
-  "fontSizeInPx": false,
+  "fontSizeInPx": true,
   "font_color": "000000ff",
   "font_name": "Helvetica",
   "font_size": 160,
   "font_style": "normal",
   "font_weight": "normal",
   "ipad": {
-    "font_name": "System",
-    "font_size": 169,
+    "font_name": "Montserrat-Bold",
+    "font_size": 96,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -72,8 +72,8 @@
     }
   },
   "iphone": {
-    "font_name": "System",
-    "font_size": 169,
+    "font_name": "Montserrat-Bold",
+    "font_size": 68,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -93,16 +93,16 @@
   },
   "isDefaultSkin": false,
   "kiosk": {
-    "font_name": "None",
+    "font_name": "Montserrat-Bold",
     "font_size": 169,
-    "font_weight": "bold",
+    "font_weight": "normal",
     "isForked": true
   },
   "kuid": "s3b77673da1f4e78873214f9998cc543",
   "spaan": {
-    "font_name": "Helvetica",
-    "font_size": 169,
-    "font_weight": "bold",
+    "font_name": "Montserrat-Bold",
+    "font_size": 180,
+    "font_weight": "normal",
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -121,9 +121,9 @@
     }
   },
   "spaandroidtablet": {
-    "font_name": "Helvetica",
-    "font_size": 169,
-    "font_weight": "bold",
+    "font_name": "Montserrat-Bold",
+    "font_size": 150,
+    "font_weight": "normal",
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -142,9 +142,9 @@
     }
   },
   "spaip": {
-    "font_name": "Helvetica",
-    "font_size": 169,
-    "font_weight": "bold",
+    "font_name": "Montserrat-Bold",
+    "font_size": 185,
+    "font_weight": "normal",
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -163,9 +163,9 @@
     }
   },
   "spaipad": {
-    "font_name": "Helvetica",
-    "font_size": 169,
-    "font_weight": "bold",
+    "font_name": "Montserrat-Bold",
+    "font_size": 159,
+    "font_weight": "normal",
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -184,9 +184,9 @@
     }
   },
   "spawindowstablet": {
-    "font_name": "Helvetica",
-    "font_size": 169,
-    "font_weight": "bold",
+    "font_name": "Montserrat-Bold",
+    "font_size": 159,
+    "font_weight": "normal",
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -205,9 +205,9 @@
     }
   },
   "spawinphone8": {
-    "font_name": "Helvetica",
-    "font_size": 169,
-    "font_weight": "bold",
+    "font_name": "Montserrat-Bold",
+    "font_size": 225,
+    "font_weight": "normal",
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -226,9 +226,9 @@
     }
   },
   "tabrcandroid": {
-    "font_name": "default",
-    "font_size": 169,
-    "font_weight": "bold",
+    "font_name": "Montserrat-Bold",
+    "font_size": 160,
+    "font_weight": "normal",
     "isForked": true,
     "text_shadow": {
       "br": 0,
@@ -240,21 +240,21 @@
   },
   "wType": "Label",
   "watchos": {
-    "font_name": "System",
-    "font_size": 169,
-    "font_weight": "bold",
+    "font_name": "Montserrat-Bold",
+    "font_size": 96,
+    "font_weight": "normal",
     "isForked": true
   },
   "windows8": {
-    "font_name": "None",
-    "font_size": 169,
-    "font_weight": "bold",
+    "font_name": "Montserrat-Bold",
+    "font_size": 66,
+    "font_weight": "normal",
     "isForked": true
   },
   "winphone8": {
-    "font_name": "None",
-    "font_size": 169,
-    "font_weight": "bold",
+    "font_name": "Montserrat-Bold",
+    "font_size": 90,
+    "font_weight": "normal",
     "isForked": true
   }
 }

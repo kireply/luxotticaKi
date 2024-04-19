@@ -249,12 +249,12 @@
         }, {
             "id": "INVOKE_FUNCTION__fb56cf71170b4c7aa53eb84ba52c1148",
             "type": "INVOKE_FUNCTION",
-            "display": "selectComponent",
+            "display": "<>",
             "inputparams": [],
             "parentId": "_ecf128c1c2e64819946442606bbc55d5",
             "callbackType": null,
             "disabled": true,
-            "source": "controller"
+            "source": "module"
         }, {
             "id": "ADD_SNIPPET_hf883dfac5c44ed88cc47ecfade1a384",
             "type": "ADD_SNIPPET",

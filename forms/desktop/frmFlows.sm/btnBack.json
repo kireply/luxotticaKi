@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "3%"
     },
     "_margin_": [
         6,
@@ -25,7 +25,7 @@
     "_text_": "     Back",
     "_top_": {
         "type": "string",
-        "value": "6%"
+        "value": "4%"
     },
     "_width_": {
         "type": "string",
@@ -45,6 +45,7 @@
     "isvisible": true,
     "kuid": "f66ca181a043404a9966eff0d3920f8a",
     "name": "kony.ui.Button",
+    "paddinginpixel": false,
     "parent": "FlexContainerFlows",
     "pf": "frmFlows",
     "retaincontentalignment": false,

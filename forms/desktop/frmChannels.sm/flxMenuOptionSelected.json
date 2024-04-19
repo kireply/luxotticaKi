@@ -25,7 +25,7 @@
     "_skin_": "sd24ce50f02a41979a80264d6d39c4b3",
     "_top_": {
         "type": "string",
-        "value": "2%"
+        "value": "1.04%"
     },
     "_width_": {
         "type": "string",
@@ -36,7 +36,7 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "49.03%"
+        "value": "48.72%"
     },
     "children": [
         "imgMenuOptionSelected",
@@ -60,5 +60,6 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 10
 }

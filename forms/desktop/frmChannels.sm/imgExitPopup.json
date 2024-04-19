@@ -4,7 +4,7 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "10%"
+        "value": "5.16%"
     },
     "_left_": {
         "type": "string",
@@ -22,15 +22,15 @@
         0,
         0
     ],
-    "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
-    "_src_": "close.png",
+    "_skin_": "sf1c44148c52453ab93a233b169e9af0",
+    "_src_": "add_icon.png",
     "_top_": {
         "type": "string",
-        "value": "-2%"
+        "value": "0.77%"
     },
     "_width_": {
         "type": "string",
-        "value": "10%"
+        "value": "10.00%"
     },
     "canUpdateUI": true,
     "containerweight": 100,

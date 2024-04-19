@@ -1,0 +1,14 @@
+{
+  "background_color": "f0f0f0ff",
+  "bg_type": "one",
+  "border_color": "000000ff",
+  "border_style": "plain",
+  "border_type": 0,
+  "border_width": 0,
+  "desktopweb": {
+    "font_name": "Montserrat-Regular"
+  },
+  "isDefaultSkin": false,
+  "kuid": "sd4b5a6846184e47bf3147bcfae1406d",
+  "wType": "Segment"
+}

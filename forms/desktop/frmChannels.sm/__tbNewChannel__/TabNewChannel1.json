@@ -1,0 +1,62 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizTab",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "_image_": null,
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 6,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_percent_": true,
+    "_skin_": "s6d3c3bda7264711bd2d44e0f685a8eb",
+    "_width_": {
+        "type": "string",
+        "value": "100%"
+    },
+    "allboxes": [],
+    "canUpdateUI": true,
+    "children": [
+        "lblChannelInsideFrmChannels",
+        "txtChannelInsideFrmChannels",
+        "lblChannelNameInsideFrmChannels",
+        "lbChannelNameInsideFrmChannels",
+        "lblChannelLogoInsideFrmChannels",
+        "txtChannelLogoInsideFrmChannels"
+    ],
+    "clipbounds": true,
+    "containerweight": 100,
+    "enablescrolling": true,
+    "id": "TabNewChannel1",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "aa1041fbdd614e3c987cfc46be0ae765",
+    "layouttype": 2,
+    "margininpixel": false,
+    "name": "kony.ui.Tab",
+    "oninit": null,
+    "paddinginpixel": false,
+    "parent": "tbNewChannel",
+    "pf": "frmChannels",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainflowhorizontalalignment": false,
+    "scrolldirection": 1,
+    "snapgridsize": 10,
+    "snaptogrid": true,
+    "tabname": "Main properties",
+    "tabpaneId": "tbNewChannel",
+    "wType": "Tab"
+}

@@ -3,8 +3,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "default",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 76,
     "font_weight": "bold",
     "isForked": true,
     "text_shadow": {
@@ -19,8 +19,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "default",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 114,
     "font_weight": "bold",
     "isForked": true
   },
@@ -34,8 +34,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "Helvetica",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 200,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -54,7 +54,7 @@
       "y": 0
     }
   },
-  "fontSizeInPx": false,
+  "fontSizeInPx": true,
   "font_color": "000000ff",
   "font_name": "Helvetica",
   "font_size": 160,
@@ -64,8 +64,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "System-Bold",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 114,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -87,8 +87,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "System-Bold",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 80,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -111,8 +111,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "None",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 200,
     "font_weight": "bold",
     "isForked": true
   },
@@ -121,8 +121,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "Helvetica",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 213,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -145,8 +145,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "Helvetica",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 178,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -169,8 +169,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "Helvetica",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 219,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -193,8 +193,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "Helvetica",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 188,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -217,8 +217,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "Helvetica",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 188,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -241,8 +241,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "Helvetica",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 267,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -265,8 +265,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "default",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 190,
     "font_weight": "bold",
     "isForked": true,
     "text_shadow": {
@@ -280,8 +280,8 @@
   "wType": "Label",
   "watchos": {
     "font_color": "000000ff",
-    "font_name": "System",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 114,
     "font_weight": "bold",
     "isForked": true
   },
@@ -289,8 +289,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "None",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 78,
     "font_weight": "bold",
     "isForked": true
   },
@@ -298,8 +298,8 @@
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
-    "font_name": "None",
-    "font_size": 170,
+    "font_name": "Montserrat-Regular",
+    "font_size": 107,
     "font_weight": "bold",
     "isForked": true
   }

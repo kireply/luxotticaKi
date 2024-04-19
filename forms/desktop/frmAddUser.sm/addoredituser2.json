@@ -4,11 +4,11 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "86.68%"
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "290dp"
     },
     "_margin_": [
         0,
@@ -27,11 +27,11 @@
     "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "120dp"
     },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "78.80%"
     },
     "areflexpropsreferenced": false,
     "autogrowmode": 0,
@@ -46,6 +46,33 @@
                 "kuid": "i38dfca959c54bd09e262e1737d05c9a",
                 "srcKUID": "g236eb3c6baa409e93b0df3a81440988",
                 "wType": "FlexContainer"
+            },
+            "autogrowMode": {
+                "Default": 0
+            },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "86.68%"
+                }
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "290dp"
+                }
+            },
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "120dp"
+                }
+            },
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "78.80%"
+                }
             }
         },
         "btnAddEdit": {
@@ -64,7 +91,20 @@
                 "kuid": "c2f81702a27249ed80233b83448821ad",
                 "srcKUID": "d18e0d97d1474117b2e86775d8a97d57",
                 "wType": "FlexContainer"
-            }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "0%"
+                }
+            },
+            "responsiveData": {}
         },
         "lblTitle": {
             "__events__": {},
