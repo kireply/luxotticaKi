@@ -119,6 +119,7 @@ define({
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelProjectImage.text = channel.channelProjectImage;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelFrameOnlyLensUPC.text = channel.channelFrameOnlyLensUPC;
             this.view.flxPopupChannelInfo.setVisibility(true);
+            this.view.flxBlur.setVisibility(true);
           } else {
   //           voltmx.print("### NAVIGATE");
             gblChannelLogo = box.logo;
@@ -156,6 +157,7 @@ define({
        channel.imgInfoVisible = false;
        channel.onClickTeaser = () => {
          this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(true);
+         this.view.flxBlur.setVisibility(true);
          //this.view.btnSaveNewChannelInsideFrmChannels.setEsabled(false);
        }
 //        voltmx.print("### CHANNEL INFO: " + channel.channelInfo);

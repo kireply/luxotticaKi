@@ -51,6 +51,7 @@
     "canvasWidth": 1200,
     "children": [
         "fxlMainContainerChannels",
+        "flxBlur",
         "flxPopupChannelInfo",
         "flxPopupCreateNewChannelInsideFrmChannels"
     ],

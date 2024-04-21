@@ -24,7 +24,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_b1ac249456484f4a8d69ccc0e91bb4df",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "gblInfoIcon = \"false\";\nthis.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\n// this.view.flxPopupChannelInfo.setVisibility(false);",
+            "codeSnippet": "gblInfoIcon = \"false\";\nthis.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);\n// this.view.flxPopupChannelInfo.setVisibility(false);",
             "parentId": null
         }]
     }

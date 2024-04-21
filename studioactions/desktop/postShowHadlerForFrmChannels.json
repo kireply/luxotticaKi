@@ -27,7 +27,7 @@
         }, {
             "id": "ADD_SNIPPET_g0922421b5ba4376ac12ba1cdb9d2426",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### sto fetchando i channels\");",
+            "codeSnippet": "voltmx.print(\"### fetchingchannels\");",
             "parentId": null,
             "callbackType": null
         }, {
@@ -52,15 +52,9 @@
         }, {
             "id": "ADD_SNIPPET_g56c3b1b0af347daa472294a0649b4b7",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.txtChannelID.setEnabled(false);\nthis.view.lbChannelName.setEnabled(false);\nthis.view.txtChannelLogo.setEnabled(false);\nthis.view.txtChannelProperties.setEnabled(false);\nthis.view.txtChannelGenericImage.setEnabled(false);\nthis.view.txtChannelAssetsCDN.setEnabled(false);\nthis.view.txtChannelProjectImage.setEnabled(false);\nthis.view.txtChannelFrameOnlyLensUPC.setEnabled(false);\n\nthis.view.btnSaveNewChannelInsideFrmChannels.setEnabled(false);\nthis.view.btnSaveNewChannelInsideFrmChannels.opacity = 0.5;\n\n//this.view.segChannels.orientation = constants.BOX_LAYOUT_HORIZONTAL;\n//voltmx.print(\"### ORIENTAMENTO MODIFICATO.\");\n",
+            "codeSnippet": "// Disabling all of the channel infos diplayed.\n// Tab1\nthis.view.tbChannelInfo.txtChannelID.setEnabled(false);\nthis.view.tbChannelInfo.lbChannelName.setEnabled(false);\nthis.view.tbChannelInfo.txtChannelLogo.setEnabled(false);\n//Tab2\nthis.view.tbChannelInfo.txtChannelProperties.setEnabled(false);\nthis.view.tbChannelInfo.txtChannelGenericImage.setEnabled(false);\nthis.view.tbChannelInfo.txtChannelAssetsCDN.setEnabled(false);\nthis.view.tbChannelInfo.txtChannelProjectImage.setEnabled(false);\nthis.view.tbChannelInfo.txtChannelFrameOnlyLensUPC.setEnabled(false);\n\n/* Old code before restyling\nthis.view.txtChannelID.setEnabled(false);\nthis.view.lbChannelName.setEnabled(false);\nthis.view.txtChannelLogo.setEnabled(false);\nthis.view.txtChannelProperties.setEnabled(false);\nthis.view.txtChannelGenericImage.setEnabled(false);\nthis.view.txtChannelAssetsCDN.setEnabled(false);\nthis.view.txtChannelProjectImage.setEnabled(false);\nthis.view.txtChannelFrameOnlyLensUPC.setEnabled(false);\n*/\n\nthis.view.btnSaveNewChannelInsideFrmChannels.setEnabled(false);\nthis.view.btnSaveNewChannelInsideFrmChannels.opacity = 0.5;\n\n//this.view.segChannels.orientation = constants.BOX_LAYOUT_HORIZONTAL;\n//voltmx.print(\"### ORIENTAMENTO MODIFICATO.\");\n",
             "parentId": null,
             "callbackType": null
-        }, {
-            "id": "ADD_SNIPPET_e9e60e83a1f04a2488f5fc8c7ace6524",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### sono nella callback\");",
-            "parentId": "INVOKE_SERVICE_d8d39e1855bc49a9aab6edc0f7844313",
-            "callbackType": "Callback"
         }, {
             "id": "LOADING_INDICATOR_eff70f86cfc04e26b7e65c72fe3f58df",
             "selectedOption": "dismiss",
