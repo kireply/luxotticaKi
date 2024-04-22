@@ -2,15 +2,11 @@
     "@class": "com.kony.gen.viz.model.container.KVizTabPane",
     "DNDConfig": null,
     "_activeTabsBackUp": [
-        0
+        1
     ],
     "_height_": {
         "type": "string",
-        "value": "661dp"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "2dp"
+        "value": "85%"
     },
     "_margin_": [
         0,
@@ -26,25 +22,25 @@
         0
     ],
     "_percent_": true,
-    "_right_": {
-        "type": "number",
-        "value": "2"
-    },
     "_top_": {
         "type": "string",
-        "value": "88dp"
+        "value": "12%"
     },
     "_width_": {
         "type": "string",
         "value": "98.98%"
     },
     "activeskin": "sabe228f4df4431592a7035f722180f9",
-    "activetab": 0,
+    "activetab": 1,
     "activetabs": [
         0
     ],
     "allboxes": [],
     "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50%"
+    },
     "children": [
         "TabChannelInfo1",
         "TabChannelInfo2"
