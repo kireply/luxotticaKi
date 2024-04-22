@@ -70,7 +70,7 @@
                 "delay": "0",
                 "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "500"
+                "duration": "200"
             },
             "start": "Immediately",
             "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
@@ -124,7 +124,7 @@
                 "delay": "0",
                 "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "250"
+                "duration": "200"
             },
             "start": "Immediately",
             "parentAnimation": "SCALE_ACTION_b6a5399d4d51452cb85ae83f3813fba4",
@@ -154,7 +154,7 @@
                 "delay": "0",
                 "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "500"
+                "duration": "200"
             },
             "start": "Immediately",
             "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
@@ -184,7 +184,7 @@
                 "delay": "0",
                 "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "500"
+                "duration": "200"
             },
             "start": "Immediately",
             "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
@@ -233,7 +233,7 @@
                 "delay": "0",
                 "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "250"
+                "duration": "200"
             },
             "start": "Immediately",
             "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
@@ -286,7 +286,7 @@
                 "delay": "0",
                 "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "250"
+                "duration": "200"
             },
             "start": "Immediately",
             "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
@@ -321,7 +321,7 @@
                 "delay": "0",
                 "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "250"
+                "duration": "200"
             },
             "start": "Immediately",
             "parentAnimation": "SCALE_ACTION_b6a5399d4d51452cb85ae83f3813fba4",
@@ -341,7 +341,7 @@
             "widgetKUID": "ed506658078f4b6684761ecf8bbf0f35",
             "wType": "FlexContainer",
             "animationObject": {
-                "left": "35%",
+                "left": "30%",
                 "anchorPoint": {},
                 "stepConfig": {
                     "timingFunction": "kony.anim.EASE"
@@ -351,7 +351,7 @@
                 "delay": "0",
                 "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "500"
+                "duration": "200"
             },
             "start": "Immediately",
             "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",

@@ -1,0 +1,29 @@
+{
+    "AS_TextField_d3d6fa679a8646fdb883faa673fef4aa": {
+        "id": "AS_TextField_d3d6fa679a8646fdb883faa673fef4aa",
+        "type": "ACTION_SEQUENCE",
+        "name": "onBeginEditingHandlerForTxtSearchFlowName",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onBeginEditing",
+        "actions": [{
+            "id": "ADD_SNIPPET_faed260406de4559926906032cba91d6",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.imgSearchFlowName.setVisibility(false);",
+            "parentId": null,
+            "callbackType": null
+        }]
+    }
+}

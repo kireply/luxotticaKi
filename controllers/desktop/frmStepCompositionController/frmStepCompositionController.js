@@ -842,6 +842,7 @@ define({
     });
     
     let left_position_percentage = left_position + "%";
+    voltmx.print("### left_position_percentage: " + left_position_percentage);
     
     const box = new ki.luxottica.boxStep({
       id: `boxStep${index}`,

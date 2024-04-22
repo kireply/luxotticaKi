@@ -41,6 +41,10 @@
     "containerheightmode": 1,
     "containerweight": 100,
     "contentalignment": 4,
+    "desktopweb": {
+        "ide_onBeginEditing": "AS_TextField_d3d6fa679a8646fdb883faa673fef4aa",
+        "ide_onEndEditing": "AS_TextField_cf186383002a4481b4076b855dbeeb44"
+    },
     "focusskin": "saa1f5564c414d49a03f72cb55212c24",
     "id": "txtSearchFlowName",
     "ide_onTextChange": "AS_TextField_j016478973574c55814b633ed1e42a1c",

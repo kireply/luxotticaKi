@@ -7,14 +7,13 @@
     "font_size": 100,
     "isForked": false
   },
-  "background_color": "00000000",
+  "background_color": "ffffffff",
   "bg_type": "one",
-  "border_color": "424242ff",
+  "border_color": "4b88f1ff",
   "border_style": "plain",
   "border_type": 0,
-  "border_width": 0,
+  "border_width": 1,
   "desktopweb": {
-    "font_name": "Montserrat-Regular",
     "font_size": 100,
     "isForked": false
   },
@@ -37,7 +36,7 @@
     "font_size": 100,
     "isForked": false
   },
-  "kuid": "s518481e20b04263b44048281e19ba0e",
+  "kuid": "s1ada5d285074e5da1a52e107ae539ae",
   "spaan": {
     "font_size": 100,
     "isForked": false
@@ -66,7 +65,7 @@
     "font_size": 100,
     "isForked": false
   },
-  "wType": "Label",
+  "wType": "TextField",
   "watchos": {
     "font_size": 100,
     "isForked": false
