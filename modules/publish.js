@@ -474,7 +474,25 @@ async function publish() {
       Object.keys(groupedByStepOrder).forEach(stepOrder => {
         let recordsForStepOrder = groupedByStepOrder[stepOrder];
         let component = {};
-        recordsForStepOrder.forEach(record => {
+        
+        
+        // Inizio codice per rimozione delle labels (che iniziano per numero, es "123_ + qualcosa")
+        let regex = /^[0-9]{3}_/;
+        
+        recordsForStepOrder.forEach(record => { // questa riga invece già presente (e corretta)
+          voltmx.print("### recordsForStepOrder: " + recordsForStepOrder);
+          voltmx.print("### recordsForStepOrder stringify: " + JSON.stringify(recordsForStepOrder) );
+          voltmx.print("### record: " + record);
+          voltmx.print("### record stringify: " + JSON.stringify(record) );
+          voltmx.print("### record stringify: " + JSON.stringify(record.property_value) );
+          if (regex.test(record.property_value) ) {
+            voltmx.print();
+            return;
+          }
+          
+          // Fine rimozione Labels (che iniziano con numero)
+          
+          
           let uniqueKey = `${record.component_template_name}_${record.component_order}`;
           if (!component[uniqueKey]) {
             component[uniqueKey] = { id: record.component_template_name, order: parseInt(record.component_order, 10), properties: [] };

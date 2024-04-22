@@ -2219,8 +2219,8 @@ define({
   }
 }
 `
-   
-   function SHOW_ALERT_Successful_Login_Callback() {
+   // when the log is succesfull
+   function enter() {
      	voltmx.print("sono la callback dell'alert");
 //      	var navigating = new voltmx.mvc.Navigation('frmDashboard');
 //         navigating.navigate();
@@ -2432,15 +2432,8 @@ define({
             gblUserMail = email;
             voltmx.application.dismissLoadingScreen();
             voltmx.print("### User found, welcome");
-            voltmx.ui.Alert({
-            "alertType": constants.ALERT_TYPE_INFO,
-            "alertTitle": "Success",
-            "yesLabel": "Ok",
-            "message": "Welcome!",
-            "alertHandler": SHOW_ALERT_Successful_Login_Callback
-        	}, {
-            "iconPosition": constants.ALERT_ICON_POSITION_LEFT
-        	});
+            enter();
+            
           } else{
             voltmx.application.dismissLoadingScreen();
             voltmx.print("### User not found");

@@ -20,7 +20,7 @@
         }, {
             "id": "ADD_SNIPPET_ide_onClick_eaae3a1f76174ea09bc7de6ad7e400bd",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### Flow ID: \" + gblFlowId);\nvoltmx.print(\"### Flow Name: \" + gblFlowName);\n\n\n//to comment in the global flow\ngblFlowId = 128;\n// gblFlowName = ",
+            "codeSnippet": "voltmx.print(\"### Flow ID: \" + gblFlowId);\nvoltmx.print(\"### Flow Name: \" + gblFlowName);\n\n\n//to comment in the global flow\n//gblFlowId = 128;\n// gblFlowName = ",
             "callbackType": null
         }, {
             "id": "ADD_LOCAL_VARIABLE_ide_onClick_f7df8b7a76f24493b289b964ccf7f20e",

@@ -144,7 +144,7 @@
             "widgetKUID": "ed506658078f4b6684761ecf8bbf0f35",
             "wType": "FlexContainer",
             "animationObject": {
-                "left": "67%",
+                "left": "64%",
                 "anchorPoint": {},
                 "stepConfig": {
                     "timingFunction": "kony.anim.EASE"

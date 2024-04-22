@@ -121,7 +121,7 @@ define({
         };
     	let jsonWidget = this.view.txtAreaJSON;
         voltmx.io.FileSystem.browse(config, event => {
-            alert('ciao ' + event.target.files[0].name);
+            //alert('file caricato: ' + event.target.files[0].name);
             //voltmx.print("### PRINT: " + JSON.stringify(event, ' ', 2));
             const reader = new FileReader();
             reader.onload = (e) => {

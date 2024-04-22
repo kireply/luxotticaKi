@@ -30,6 +30,7 @@
             "type": "LOOP_ACTION",
             "parentId": null,
             "callbackType": null,
+            "disabled": true,
             "varType": "set",
             "variable": "a",
             "startType": "set",

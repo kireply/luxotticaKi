@@ -44,7 +44,47 @@
     "masterdata": [
         [
             "lb1",
+            "Mixmatch"
+        ],
+        [
+            "lb2",
+            "LensType"
+        ],
+        [
+            "lb3",
+            "LensPrescription"
+        ],
+        [
+            "lb4",
+            "LensBrand"
+        ],
+        [
+            "lb5",
+            "LensMaterial"
+        ],
+        [
+            "lb6",
+            "LensDesign"
+        ],
+        [
+            "lb7",
+            "LensLight"
+        ],
+        [
+            "lb8",
+            "LensColour"
+        ],
+        [
+            "lb9",
+            "LensTreatmentDetail"
+        ],
+        [
+            "lb10",
             "LensTreatment"
+        ],
+        [
+            "lb11",
+            "LensReview"
         ]
     ],
     "name": "kony.ui.ListBox",

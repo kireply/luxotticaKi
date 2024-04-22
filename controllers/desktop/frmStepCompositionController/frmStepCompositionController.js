@@ -403,7 +403,7 @@ define({
       let propertyName = list[i].name;
       if(propertyName === "nestedComponents") { //nestedComponents / configurable
         nested = true;
-        this.modes[compKey].push({"nestedComponents": [] })
+        this.modes[compKey].push({"nestedComponents": [] });
         continue;
       }
       

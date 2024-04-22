@@ -34,7 +34,9 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
+    "disabledSkins": {
+        "focusSkin": "s61be32f6d3a46dbbea0834d8ca7f624"
+    },
     "groupcells": false,
     "id": "lbEnvironmentEdit",
     "info": null,

@@ -482,6 +482,12 @@
             "isBlocked": "true",
             "showProgressIndicator": "true"
         }, {
+            "id": "ADD_SNIPPET_d1d74f4a6ad24e4f8c0fad495b2b78d8",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### gblFlowId 1: \" + gblFlowId);",
+            "parentId": "INVOKE_SERVICE_g6c997bf3d044fad9a0a3d3900fd7c3c",
+            "callbackType": "Callback"
+        }, {
             "id": "_ae8ca7c746de467e9010cc3102f190cf",
             "type": "IF_CONDITION",
             "conditions": [{
@@ -542,7 +548,7 @@
         }, {
             "id": "ADD_SNIPPET_f3a9633a979d4aa4bee2fa3c55ed93aa",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"STEP_flow_CustomQuery\", {}, {flow_id : gblFlowId}, (response) => {\n      voltmx.print(\"### Service response: \"+JSON.stringify(response));\n      response.records.forEach(record => {\n        gblIdOrderSteps[record.id] = record.order;\n      });\n    }, (error) => {\n      voltmx.print(\"### Error in the invocation of the service: \" + JSON.stringify(error));\n    });",
+            "codeSnippet": "voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"STEP_flow_CustomQuery\", {}, {flow_id : gblFlowId}, (response) => {\n      voltmx.print(\"### Service response: \"+JSON.stringify(response));\n      voltmx.print(\"### gblFlowId 2: \" + gblFlowId);\n      response.records.forEach(record => {\n        gblIdOrderSteps[record.id] = record.order;\n      });\n    }, (error) => {\n      voltmx.print(\"### Error in the invocation of the service: \" + JSON.stringify(error));\n    });",
             "parentId": "SHOW_ALERT_a7f81e02285c4d4a92f94fa24e7cb499",
             "callbackType": "True"
         }, {
