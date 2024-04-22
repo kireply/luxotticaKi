@@ -2,6 +2,7 @@
     "AS_Segment_b7bd7dfa77aa45b58a25db1281df0c1c": {
         "id": "AS_Segment_b7bd7dfa77aa45b58a25db1281df0c1c",
         "type": "ACTION_SEQUENCE",
+        "name": "onRowClickForSegComponentsSideSimpleContent",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -61,6 +62,16 @@
             "parentId": null,
             "callbackType": null
         }, {
+            "id": "ADD_LOCAL_VARIABLE_gff5de72ba9a4a93b13bc9878e9dedbc",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "selected_item_modal_img",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "ADD_LOCAL_VARIABLE_ie567b3511ce4e3490b3f8eb6d193257",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "customQueryOutput",
@@ -73,9 +84,35 @@
         }, {
             "id": "ADD_SNIPPET_ab42919c6dcb42d4a1b56c4df934cdcd",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### SELECTED ITEM: \" + JSON.stringify(this.view.ComponentsSide.segComponentsSideSimpleContent.selectedRowItems[0]));\n\n\nselected_item = this.view.ComponentsSide.segComponentsSideSimpleContent.selectedRowItems[0].lblComponentName;\nselected_item_img = this.view.ComponentsSide.segComponentsSideSimpleContent.selectedRowItems[0].imgComponent;",
+            "codeSnippet": "voltmx.print(\"### SELECTED ITEM: \" + JSON.stringify(this.view.ComponentsSide.segComponentsSideSimpleContent.selectedRowItems[0]));\n\n\nselected_item = this.view.ComponentsSide.segComponentsSideSimpleContent.selectedRowItems[0].lblComponentName;\nselected_item_img = this.view.ComponentsSide.segComponentsSideSimpleContent.selectedRowItems[0].imgComponent;\nselected_item_modal_img = this.view.ComponentsSide.segComponentsSideSimpleContent.selectedRowItems[0].modalImgComponent;\n",
             "parentId": null,
             "callbackType": null
+        }, {
+            "id": "_d77640f8ec424f2c90ee7f8269338b86",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "gblInfoIcon",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "true"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_ca206a93399f4208a485da3d6d997225",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
         }, {
             "id": "INVOKE_SERVICE_cedd0d18430d46b98ac293f7e17b5e18",
             "type": "INVOKE_ASYNC_SERVICE",
@@ -119,10 +156,16 @@
                 "operationname": "PROPERTY_TEMPLATE_CustomQuery",
                 "operationid": "123660"
             },
-            "parentId": null,
+            "parentId": "_ca206a93399f4208a485da3d6d997225",
             "callbackType": null,
             "enableMappingEditor": true,
             "disabled": false
+        }, {
+            "id": "ADD_SNIPPET_ib249eb88407450a8a280a5f66c82491",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// Only showing the component modal image\nthis.view.flxComponentImage.setVisibility(true);\nthis.view.imgComponent.src = selected_item_modal_img;",
+            "parentId": "_d77640f8ec424f2c90ee7f8269338b86",
+            "callbackType": null
         }, {
             "id": "_a6406074db5c424a9bc89859765ae47c",
             "type": "IF_CONDITION",
@@ -220,6 +263,9 @@
             }, {
                 "name": "selected_item_img",
                 "value": " selected_item_img"
+            }, {
+                "name": "selected_item_modal_img",
+                "value": " selected_item_modal_img"
             }],
             "parentId": "_ecf128c1c2e64819946442606bbc55d5",
             "callbackType": null,

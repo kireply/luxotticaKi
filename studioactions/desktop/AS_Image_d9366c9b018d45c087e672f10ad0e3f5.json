@@ -23,7 +23,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_c07658eefd9b4f408707548db2d84d7a",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxComponentImage.setVisibility(false);",
+            "codeSnippet": "gblInfoIcon = false;\nthis.view.flxComponentImage.setVisibility(false);",
             "parentId": null
         }]
     }

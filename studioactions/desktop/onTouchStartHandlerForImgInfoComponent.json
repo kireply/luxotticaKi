@@ -21,7 +21,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_ide_onTouchStart_i25eeec434ff403fae10e82ee7f9a969",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "gblInfoIcon = true;\nthis.view.flxComponentImage.setVisibility(true);"
+            "codeSnippet": "gblInfoIcon = true;\n//self.view.flxComponentImage.setVisibility(true);\nvoltmx.print(\"### cliccata ICONA INFO COMPONENT\");"
         }]
     }
 }

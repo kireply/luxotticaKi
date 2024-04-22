@@ -138,6 +138,16 @@
             "parentId": null,
             "callbackType": null
         }, {
+            "id": "ADD_LOCAL_VARIABLE_fc169a425c26483a9431a69a6afbebe6",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "selected_item_right_modal_img",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "ADD_LOCAL_VARIABLE_cd106e4649af4f1595f8b4d5e9ddb1a7",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "customQueryOutputConfigurable",
@@ -150,9 +160,35 @@
         }, {
             "id": "ADD_SNIPPET_c90984a1c03a4694a2f455534513af6c",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### SELECTED ITEM: \" + JSON.stringify(this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0]));\n\n\nselected_item_right = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].lblComponentName;\nselected_item_right_img = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].imgComponent;\n",
+            "codeSnippet": "voltmx.print(\"### SELECTED ITEM: \" + JSON.stringify(this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0]));\n\n\nselected_item_right = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].lblComponentName;\nselected_item_right_img = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].imgComponent;\nselected_item_right_modal_img = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].modalImgComponent;\n",
             "parentId": null,
             "callbackType": null
+        }, {
+            "id": "_h1c54bfffdac4075b8f6746c49fd6abf",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "gblInfoIcon",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "true"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_dca75d871bb94e2ba4d445b9f8dd60e5",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
         }, {
             "id": "INVOKE_SERVICE_dc33cb2d38f447b79efe50fa044e521d",
             "type": "INVOKE_ASYNC_SERVICE",
@@ -196,9 +232,15 @@
                 "operationname": "PROPERTY_TEMPLATE_CustomQuery",
                 "operationid": "123660"
             },
-            "parentId": null,
+            "parentId": "_dca75d871bb94e2ba4d445b9f8dd60e5",
             "callbackType": null,
             "enableMappingEditor": true
+        }, {
+            "id": "ADD_SNIPPET_bb8cc980abc34991bac605b8340e5834",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// Only showing the component modal image\nthis.view.flxComponentImage.setVisibility(true);\nthis.view.imgComponent.src = selected_item_right_modal_img;",
+            "parentId": "_h1c54bfffdac4075b8f6746c49fd6abf",
+            "callbackType": null
         }, {
             "id": "_c2746b8d796a482cadc3dcabc93825ef",
             "type": "IF_CONDITION",
@@ -282,6 +324,9 @@
             }, {
                 "name": "selected_item_img",
                 "value": " selected_item_right_img"
+            }, {
+                "name": "selected_item_modal_img",
+                "value": " selected_item_right_modal_img"
             }],
             "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
             "callbackType": null,

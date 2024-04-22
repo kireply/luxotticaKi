@@ -48,7 +48,6 @@ define({
       if ( nestedComponentsObj ){nestedComponentsObj.nestedComponents.push(selectedComp.id); }
     }
 
-    debugger;
     
     //whenever a component in one of the two halves is clicked
     const selectedCompEventHandler = () => {
@@ -56,11 +55,20 @@ define({
       this.view.settingsSide.flxScrollSettingsContent.setVisibility(true);
       this.view.settingsSide.txt.setVisibility(false);
       
+      // if the component info icon is clicked
+      if (gblInfoIcon) {
+        this.view.flxComponentImage.imgComponent.src = selectedComp.leftData[0].modalImgComponent;
+        this.view.flxComponentImage.setVisibility(true);
+      }
+      
       //          voltmx.print("### RIGHT DATA SELECTED COMPONENT: " + JSON.stringify(selectedComp.rightData));
 
       props = selectedComp.rightData;
+      voltmx.print("### selectedComp.leftData: " + selectedComp.leftData);
+      voltmx.print("### selectedComp.leftData stringify: " + JSON.stringify(selectedComp.leftData) );
 //       let searchKey = selectedComp.leftData[0].lblComponentName + instance + (gblCurrentStepOrder).toString();
       let searchKey = selectedComp.leftData[0].lblComponentName;
+      voltmx.print("### search: " + JSON.stringify(selectedComp.leftData[0].modalImgComponent) );
       let foundComponentConfig = Object.keys(this.modes).find(key => key.startsWith(searchKey));
       if (foundComponentConfig) {
         props.forEach(item => {
@@ -114,6 +122,11 @@ define({
             };
           }
           propComp.propertyName = item.lblPropertyName;
+          voltmx.print("### ITEM: " + item);
+          voltmx.print("### ITEM stringify: " + JSON.stringify(item) );
+          
+          voltmx.print("### propComp: " + propComp);
+          
           this.view.settingsSide.flxScrollSettingsContent.add(propComp);
         });
       }
@@ -324,7 +337,7 @@ define({
   
   
   
-  editProperty: function(list, rightSegmentData, leftSegmentData, selected_item, selected_item_img){
+  editProperty: function(list, rightSegmentData, leftSegmentData, selected_item, selected_item_img, selected_item_modal_img){
 
     voltmx.print("### LIST: " + JSON.stringify(list));
 //     LIST: [{"mode":"dropdown","default":"bottom-left","component_name":"RXC_BRAND_FOOTER","name":"position","id":"129","type":"string","position_values":"top-left, top-right, bottom-left, bottom-right, center","required":"false"},{"mode":"label","default":"Frame size","component_name":"RXC_BRAND_FOOTER","name":"frameSize","id":"130","type":"string","position_values":"top-left, top-right, bottom-left, bottom-right, center","required":"false"}]
@@ -332,6 +345,7 @@ define({
     voltmx.print("### LEFT SEGMENT DATA: " + JSON.stringify(leftSegmentData));
     voltmx.print("### SELECTED ITEM: " + JSON.stringify(selected_item));
     voltmx.print("### SELECTED ITEM IMG: " + JSON.stringify(selected_item_img));
+    voltmx.print("### SELECTED ITEM MODAl IMG: " + JSON.stringify(selected_item_modal_img));
     
 
     let index = 0;
@@ -506,11 +520,17 @@ define({
       this.view.settingsSide.flxScrollSettingsContent.setVisibility(true);
       this.view.settingsSide.flxScrollSettingsContent.forceLayout();
     }
-    let selected_component_data = {lblComponentName: selected_item, imgComponent: selected_item_img};
+    let selected_component_data = {lblComponentName: selected_item, imgComponent: selected_item_img, modalImgComponent: selected_item_modal_img};
     leftSegmentData.push(selected_component_data);
-
+	
+    voltmx.print("### selected_component_data: " + selected_component_data);
+    voltmx.print("### selected_component_data STRINGIFY: " + JSON.stringify(selected_component_data) );
+    
+    voltmx.print("### leftSegmentData: " + leftSegmentData);
+    voltmx.print("### leftSegmentData STRINGIFY: " + JSON.stringify(leftSegmentData) );
+    
     this.selectComponent(rightSegmentData, leftSegmentData, instance, nested);
-
+	
   },
 
   
@@ -564,7 +584,6 @@ define({
         let number = entry ? entry[0] : undefined;
         
         component_instance_left["step_id"] = number;
-        debugger;
         component_instance_left["order"] = widget[componentKey]["lblComponentOrder"].text;
 
         voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_left,
@@ -690,7 +709,6 @@ define({
           component_instance_right["template_name"] = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
           
           component_instance_right["step_id"] = number;  
-          debugger;
           component_instance_right["order"] = widget[componentKey]["lblComponentOrder"].text;
           
           // es. RXC_ATTRIBUTE_TILE_LIST_2_1  (dove 2 è l'ordine e 1 il numero di Step)
@@ -997,7 +1015,6 @@ define({
         } 
       } else {
         // obtain the next widget
-        debugger;
         let nextWidget = currentWidgetIndex >= 0 ? scroll_widgets[currentWidgetIndex + 1] : null;
         let nextWidgetKey = Object.keys(nextWidget).find(key => key.startsWith("component"));
         if (nextWidgetKey) {

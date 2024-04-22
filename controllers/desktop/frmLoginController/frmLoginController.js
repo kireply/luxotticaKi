@@ -13,8 +13,8 @@ define({
   "RXC_BRAND_LOGO": {
     "displayName": "RXC_BRAND_LOGO",
     "layout": ["previewSection"],
-    "previewImage": "https://www.salvatorepumo.it/wp-content/uploads/2024/01/logo-ray-ban-oggi.jpg",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_BRAND_LOGO.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_BRAND_LOGO.png",
     "position_values": [
       "top-left",
       "top-right",
@@ -36,8 +36,8 @@ define({
   "RXC_0_POWER_POPUP": {
     "displayName": "RXC_0_POWER_POPUP",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_0_POWER_POPUP.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_0_POWER_POPUP.png",
     "defaultComponent": true,
     "props": {
       "labels": [
@@ -91,8 +91,8 @@ define({
   "RXC_BRAND_FOOTER": {
     "displayName": "RXC_BRAND_FOOTER",
     "layout": ["previewSection"],
-    "previewImage": "https://www.ubs.com/content/sites/ch/it/corporates/foundation/young-company-offer/jcr:content/mainpar/toplevelgrid/col3/textimage/image.580.png/1566566910402.png",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_BRAND_FOOTER.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_BRAND_FOOTER.png",
     "position_values": [
       "top-left",
       "top-right",
@@ -136,8 +136,8 @@ define({
     "nestedViewModes": ["inside", "outside"],
     "viewModes": ["immediate", "after selection"],
     "tilesFeaturesListLayout": ["BULLET_POINTS", "CHIPS"],
-    "previewImage": "https://www.francese-live.academy/wp-content/uploads/2017/04/adresse.png",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_ATTRIBUTE_TILE_LIST.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_ATTRIBUTE_TILE_LIST.png",
     "configurable": true,
     "defaultComponent": false,
     "props": {
@@ -258,8 +258,8 @@ define({
   "RXC_CALL_MY_DOCTOR": {
     "displayName": "RXC_CALL_MY_DOCTOR",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_CALL_MY_DOCTOR.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_CALL_MY_DOCTOR.png",
     "defaultComponent": true,
     "props": {
       "labels": [
@@ -433,8 +433,8 @@ define({
     ],
     "nestedViewModes": ["inside", "outside"],
     "viewModes": ["immediate", "after selection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_CHIPS_LIST.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_CHIPS_LIST.png",
     "configurable": true,
     "defaultComponent": false,
     "props": {
@@ -486,8 +486,8 @@ define({
     "availableAattributes": ["color"],
     "nestedViewModes": ["inside", "outside"],
     "viewModes": ["immediate", "after selection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_COLOR_PICKER.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_COLOR_PICKER.png",
     "configurable": true,
     "defaultComponent": false,
     "props": {
@@ -536,8 +536,8 @@ define({
   "RXC_CRASH_POPUP": {
     "displayName": "RXC_CRASH_POPUP",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_CRASH_POPUP.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_CRASH_POPUP.png",
     "defaultComponent": true,
     "props": {
       "labels": [
@@ -559,8 +559,8 @@ define({
   "RXC_EXIT_POPUP": {
     "displayName": "RXC_EXIT_POPUP",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_EXIT_POPUP.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_EXIT_POPUP.png",
     "defaultComponent": true,
     "props": {
       "labels": [
@@ -590,8 +590,8 @@ define({
   "RXC_FOOTER": {
     "displayName": "RXC_FOOTER",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_FOOTER.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_FOOTER.png",
     "defaultComponent": false,
     "props": {
       "showAddToBag": {
@@ -683,8 +683,8 @@ define({
   "RXC_HEAD_NAV": {
     "displayName": "RXC_HEAD_NAV",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_HEAD_NAV.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_HEAD_NAV.png",
     "defaultComponent": false,
     "props": {
       "labels": [
@@ -722,8 +722,8 @@ define({
   "RXC_FRAME_IMAGE": {
     "displayName": "RXC_FRAME_IMAGE",
     "layout": ["previewSection"],
-    "previewImage": "https://shop.otticadegiglio.it/cdn/shop/products/000000410007_2_540x.jpg?v=1686579970",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_FRAME_IMAGE.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_FRAME_IMAGE.png",
     "position_values": [
       "top-left",
       "top-right",
@@ -754,8 +754,8 @@ define({
   "RXC_HOW_TO_READ_YOUR_PRESCRIPTION_MODAL": {
     "displayName": "RXC_HOW_TO_READ_YOUR_PRESCRIPTION_MODAL",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_HOW_TO_READ_YOUR_PRESCRIPTION_MODAL.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_HOW_TO_READ_YOUR_PRESCRIPTION_MODAL.png",
     "defaultComponent": true,
     "props": {
       "labels": [
@@ -849,8 +849,8 @@ define({
   "RXC_MANUAL_INPUT_READERS": {
     "displayName": "RXC_MANUAL_INPUT_READERS",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_MANUAL_INPUT_READERS.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_MANUAL_INPUT_READERS.png",
     "defaultComponent": true,
     "props": {
       "labels": []
@@ -859,8 +859,8 @@ define({
   "RXC_MANUAL_LIST": {
     "displayName": "RXC_MANUAL_LIST",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_MANUAL_LIST.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_MANUAL_LIST.png",
     "defaultComponent": false,
     "props": {
       "svg": {
@@ -952,8 +952,8 @@ define({
   "RXC_PD_MODAL": {
     "displayName": "RXC_PD_MODAL",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_PD_MODAL.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_PD_MODAL.png",
     "defaultComponent": true,
     "props": {
       "labels": []
@@ -962,8 +962,8 @@ define({
   "RXC_PD_OPTY_MODAL": {
     "displayName": "RXC_PD_OPTY_MODAL",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_PD_OPTY_MODAL.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_PD_OPTY_MODAL.png",
     "defaultComponent": true,
     "props": {
       "labels": [
@@ -1002,8 +1002,8 @@ define({
     "displayName": "RXC_PRESCRIPTION_PANEL",
     "layout": ["stepSection"],
     "targetDigitalOptometry": ["Single Vision", "Progessive"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_PRESCRIPTION_PANEL.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_PRESCRIPTION_PANEL.png",
     "defaultComponent": true,
     "props": {
       "enablePrism": {
@@ -1406,8 +1406,8 @@ define({
   "RXC_PRESCRIPTION_DETAILS_MODAL": {
     "displayName": "RXC_PRESCRIPTION_DETAILS_MODAL",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_PRESCRIPTION_DETAILS_MODAL.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_PRESCRIPTION_DETAILS_MODAL.png",
     "defaultComponent": true,
     "props": {
       "labels": [
@@ -1477,8 +1477,8 @@ define({
   "RXC_REVIEW_PANEL": {
     "displayName": "RXC_REVIEW_PANEL",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_REVIEW_PANEL.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_REVIEW_PANEL.png",
     "defaultComponent": false,
     "props": {
       "enableAccordionReview": {
@@ -1669,8 +1669,8 @@ define({
     "availableAattributes": ["brand"],
     "nestedViewModes": ["inside", "outside"],
     "viewModes": ["immediate", "after selection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_SLIDER.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_SLIDER.png",
     "configurable": true,
     "defaultComponent": false,
     "props": {
@@ -1728,8 +1728,8 @@ define({
     "availableAattributes": ["color, frameColor"],
     "nestedViewModes": ["inside", "outside"],
     "viewModes": ["immediate", "after selection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_SWATCH_LIST.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_SWATCH_LIST.png",
     "configurable": true,
     "defaultComponent": false,
     "props": {
@@ -1780,8 +1780,8 @@ define({
   "RXC_TITLE_DESCRIPTION": {
     "displayName": "RXC_TITLE_DESCRIPTION",
     "layout": ["stepSection"],
-    "previewImage": "https://prints.ultracoloringpages.com/df614a4369e3f9855b45719d56e528ef.png",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_TITLE_DESCRIPTION.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_TITLE_DESCRIPTION.png",
     "defaultComponent": false,
     "props": {
       "accordion": {
@@ -1848,8 +1848,8 @@ define({
     "availableAattributes": ["polar"],
     "nestedViewModes": ["inside", "outside"],
     "viewModes": ["immediate", "after selection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_TOGGLE.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_TOGGLE.png",
     "configurable": true,
     "defaultComponent": false,
     "props": {
@@ -1912,8 +1912,8 @@ define({
   "RXC_UPLOAD_PRESCRIPTION": {
     "displayName": "RXC_UPLOAD_PRESCRIPTION",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_UPLOAD_PRESCRIPTION.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_UPLOAD_PRESCRIPTION.png",
     "defaultComponent": true,
     "props": {
       "labels": [
@@ -2023,8 +2023,8 @@ define({
   "RXC_USE_SAVED_PRESCRIPTION": {
     "displayName": "RXC_USE_SAVED_PRESCRIPTION",
     "layout": ["stepSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_USE_SAVED_PRESCRIPTION.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_USE_SAVED_PRESCRIPTION.png",
     "defaultComponent": true,
     "props": {
       "labels": [
@@ -2086,8 +2086,8 @@ define({
   "RXC_YOUR_SELECTIONS": {
     "displayName": "RXC_YOUR_SELECTIONS",
     "layout": ["previewSection"],
-    "previewImage": "",
-    "modalImage": "",
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_YOUR_SELECTIONS.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_YOUR_SELECTIONS.png",
     "position_values": [
       "top-left",
       "top-right",
@@ -2181,6 +2181,17 @@ define({
   },
   "RXC_ADD_DOCTOR_MODAL": {
     "displayName": "RXC_ADD_DOCTOR_MODAL",
+    "layout": ["stepSection"],
+    "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_ADD_DOCTOR_MODAL.png",
+    "modalImage": "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_ADD_DOCTOR_MODAL.png",
+    "position_values": [
+      "top-left",
+      "top-right",
+      "bottom-left",
+      "bottom-right",
+      "center"
+    ],
+    "defaultComponent": true,
     "props": {
       "labels": [
         {
@@ -2206,7 +2217,8 @@ define({
       ]
     }
   }
-}`
+}
+`
    
    function SHOW_ALERT_Successful_Login_Callback() {
      	voltmx.print("sono la callback dell'alert");
