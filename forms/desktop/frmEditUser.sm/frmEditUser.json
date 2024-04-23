@@ -18,7 +18,7 @@
     "_pxMenuIndex": [
         2,
         1,
-        5
+        6
     ],
     "_skin_": "sea778dcbfbb4c21abc4235521fcacfd",
     "_title_": null,
@@ -50,9 +50,9 @@
     "canUpdateUI": true,
     "canvasWidth": 1200,
     "children": [
+        "fxlMainContainerEditUsers",
         "addoredituser2",
-        "txtID",
-        "fxlMainContainerEditUsers"
+        "txtID"
     ],
     "containerweight": 100,
     "controllerInfo": {

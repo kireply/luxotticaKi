@@ -209,6 +209,7 @@
                     "value": ""
                 }
             },
+            "responsiveData": {},
             "right": {
                 "Default": {
                     "type": "string",
@@ -226,6 +227,9 @@
                     "type": "string",
                     "value": "100%"
                 }
+            },
+            "zIndex": {
+                "Default": 1
             }
         }
     },

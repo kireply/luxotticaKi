@@ -1,6 +1,6 @@
 {
-    "AS_Segment_b90c993bb8bd4c4c9374c26aee2605b5": {
-        "id": "AS_Segment_b90c993bb8bd4c4c9374c26aee2605b5",
+    "AS_Segment_cc6b2383a13d42b4a12a145374c64836": {
+        "id": "AS_Segment_cc6b2383a13d42b4a12a145374c64836",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
@@ -12,18 +12,11 @@
             "datatype": "number",
             "name": "rowNumber"
         }],
-        "contextObj": {
-            "name": "frmDashboard",
-            "type": "forms",
-            "platform": "",
-            "KUID": "b164a58fab0f47b1b2023b479f06502d"
-        },
         "language": "js",
         "actions": [{
-            "id": "ADD_SNIPPET_i1386d4d0fd44231b8d2bf9c325de25b",
+            "id": "ADD_SNIPPET_ide_onRowClick_ebe94a926d8640839806e24960812e43",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### row click\");\nvar selectedRow_dict = this.view.flxMainContentDashboard.segListUsers.selectedRowItems[0];\nvoltmx.print (\"### selected row: \"+JSON.stringify(selectedRow_dict));\ngblUserName = selectedRow_dict.Name;\nvar navigationManager = new voltmx.mvc.Navigation(\"frmEditUser\");\nnavigationManager.navigate(selectedRow_dict);",
-            "parentId": null,
             "callbackType": null,
             "disabled": false
         }]

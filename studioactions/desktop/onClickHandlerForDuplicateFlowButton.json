@@ -573,22 +573,6 @@
             "package": "",
             "isCustomInput": false
         }, {
-            "id": "SHOW_ALERT_ifd6e52c889549fc9ef16f3dd784e218",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_INFO",
-            "alertTitle": "Flow Duplicated!",
-            "yesLabel": "Ok",
-            "alertMessage": "Flow succesfully duplicated.",
-            "messageType": "constant",
-            "parentId": "_fd810d551b774ece9bbca62768ba841e",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
             "id": "ADD_SNIPPET_i4bbe468e5724e5c8afc51d3f3b22202",
             "type": "ADD_SNIPPET",
             "codeSnippet": "gblDuplicateIcon = false;\n\nself.view.flxPopupDuplicateFlowLarge.setVisibility(false);\nself.view.flxBlur.setVisibility(false);\n\n// E successivamente navigo nuovamente su form così da aggiornarlo",

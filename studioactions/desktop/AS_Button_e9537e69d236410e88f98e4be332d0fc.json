@@ -812,22 +812,6 @@
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "SHOW_ALERT_ide_onClick_ff5e3087969e4e5abf976974b5b8b9ac",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_INFO",
-            "alertTitle": "New flow created.",
-            "yesLabel": "Ok",
-            "alertMessage": "New flow succesfully created.",
-            "messageType": "constant",
-            "parentId": "IF_CONDITION_ide_onClick_i1046d2b34494227908e3213c26ca1b4",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
             "id": "ADD_SNIPPET_ide_onClick_gb529dbe0ab74f83b031eebdddba6d59",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### APPENA CREATO FLOW N: \" + FLOW_create.FLOW[0].id);\ngblFlowId = FLOW_create.FLOW[0].id;\ngblFlowDescription = self.view.txtFlowDescription.text;\ngblFlowCategory = self.view.lbCategory.selectedKeyValue[1];\ngblFlowEnvironment = self.view.lbEnvironment.selectedKeyValue[1];",
@@ -918,7 +902,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
             "isCustomInput": false
         }, {
             "id": "ELSE_CONDITION_ide_onClick_g1c626ff60b04288aa261d4b7fe2f2c0",
@@ -1390,22 +1374,6 @@
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "SHOW_ALERT_ide_onClick_j20ebedcda3d46ec834a2347f0d6a4a1",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_INFO",
-            "alertTitle": "New flow created.",
-            "yesLabel": "Ok",
-            "alertMessage": "New flow succesfully created. ",
-            "messageType": "constant",
-            "parentId": "IF_CONDITION_ide_onClick_c941ea6f941142e3b0ac855ffc4e371e",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
             "id": "ADD_SNIPPET_ide_onClick_e776674f050f4956b32fa6c87d3151b1",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### APPENA CREATO FLOW N: \" + FLOW_create.FLOW[0].id);\ngblFlowId = FLOW_create.FLOW[0].id;\ngblFlowDescription = self.view.txtFlowDescription.text;\ngblFlowCategory = self.view.lbCategory.selectedKeyValue[1];\ngblFlowEnvironment = self.view.lbEnvironment.selectedKeyValue[1];\n\nvoltmx.print(\"### gblFlowId assegnato: \" + gblFlowId);",
@@ -1496,7 +1464,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
             "isCustomInput": false
         }, {
             "id": "ELSE_CONDITION_ide_onClick_afd25f0535db482e9a1cee86862844ae",

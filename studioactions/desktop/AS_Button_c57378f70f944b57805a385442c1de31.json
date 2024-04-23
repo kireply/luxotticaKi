@@ -319,22 +319,6 @@
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "SHOW_ALERT_ide_onClick_h11e3afec4b642e2bd21c1ea236eb5c5",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_INFO",
-            "alertTitle": "Settings updated!",
-            "yesLabel": "Ok",
-            "alertMessage": "Settings updated!",
-            "messageType": "constant",
-            "parentId": "IF_CONDITION_ide_onClick_ab72b433fd964496aec5f435713857fc",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
             "id": "NAVIGATE_TO_FORM__ide_onClick_bc901252fe62488590004438e5bf82da",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmFlows",

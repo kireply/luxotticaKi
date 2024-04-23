@@ -51,7 +51,11 @@
     ],
     "clipbounds": false,
     "containerweight": 100,
-    "desktopweb": {},
+    "desktopweb": {
+        "psp": {
+            "hoverSkin": "s5b05cd6f208474590ba0177c5ef3246"
+        }
+    },
     "enablescrolling": true,
     "focusskin": "s017e82e37eb4e6780fe440bde4e0cf7",
     "id": "flxSelectedComponentwithContract",

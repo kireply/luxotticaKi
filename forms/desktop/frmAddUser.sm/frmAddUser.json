@@ -50,8 +50,8 @@
     "canUpdateUI": true,
     "canvasWidth": 1200,
     "children": [
-        "addoredituser2",
-        "fxlMainContainerDashboard"
+        "fxlMainContainerDashboard",
+        "addoredituser2"
     ],
     "containerweight": 100,
     "controllerInfo": {

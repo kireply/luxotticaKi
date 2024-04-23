@@ -118,22 +118,6 @@
             "package": "",
             "isCustomInput": false
         }, {
-            "id": "SHOW_ALERT_a7d959aa735045aebcc9a30a7a92fe5b",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_INFO",
-            "alertTitle": "Succesfull deletion",
-            "yesLabel": "Ok",
-            "alertMessage": "Succesfull deletion",
-            "messageType": "constant",
-            "parentId": "_b3808606061c4ca59f81a1db617a24aa",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
             "id": "NAVIGATE_TO_FORM__e9b870ff5c9045fd982cc3168fdb4ee9",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmDashboard",

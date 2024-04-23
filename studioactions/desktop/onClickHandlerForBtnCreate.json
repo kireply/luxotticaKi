@@ -530,27 +530,11 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "SHOW_ALERT_a7f81e02285c4d4a92f94fa24e7cb499",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_INFO",
-            "alertTitle": "New step created.",
-            "yesLabel": "Ok",
-            "alertMessage": "New step successfully created!",
-            "messageType": "constant",
-            "parentId": "_ae8ca7c746de467e9010cc3102f190cf",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
             "id": "ADD_SNIPPET_f3a9633a979d4aa4bee2fa3c55ed93aa",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"STEP_flow_CustomQuery\", {}, {flow_id : gblFlowId}, (response) => {\n      voltmx.print(\"### Service response: \"+JSON.stringify(response));\n      voltmx.print(\"### gblFlowId 2: \" + gblFlowId);\n      response.records.forEach(record => {\n        gblIdOrderSteps[record.id] = record.order;\n      });\n    }, (error) => {\n      voltmx.print(\"### Error in the invocation of the service: \" + JSON.stringify(error));\n    });",
-            "parentId": "SHOW_ALERT_a7f81e02285c4d4a92f94fa24e7cb499",
-            "callbackType": "True"
+            "parentId": "_ae8ca7c746de467e9010cc3102f190cf",
+            "callbackType": null
         }, {
             "id": "NAVIGATE_TO_FORM__e9dc5080395c465ca7a6d544bfaf029c",
             "type": "NAVIGATE_TO_FORM",
@@ -629,8 +613,8 @@
                 }
             },
             "mappingsOrder": ["ME_Mapping_d3fc2181f2a347cd80cd8757aa9eb1a4", "ME_Mapping_ia0b855fa91a4306ab959939a69f2506", "ME_Mapping_i0338f1f13594671889cc82b109ca7f4"],
-            "parentId": "SHOW_ALERT_a7f81e02285c4d4a92f94fa24e7cb499",
-            "callbackType": "True",
+            "parentId": "_ae8ca7c746de467e9010cc3102f190cf",
+            "callbackType": null,
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,

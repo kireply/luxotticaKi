@@ -21,7 +21,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -51,7 +51,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -81,7 +81,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -111,7 +111,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -141,7 +141,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -171,7 +171,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -201,7 +201,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -231,7 +231,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -261,7 +261,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -291,7 +291,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -321,7 +321,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -351,7 +351,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -381,7 +381,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -411,7 +411,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -441,7 +441,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -471,7 +471,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -501,7 +501,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -531,7 +531,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -561,7 +561,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -591,7 +591,7 @@
             },
             "lblUserPassword": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": "ID"
+                "text": "Password"
             },
             "lblUserSurname": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
@@ -639,10 +639,11 @@
     "counter": "019",
     "focusedindex": null,
     "focuseditem": null,
+    "generatedtemplate": null,
     "groupcells": false,
     "hasSections": false,
     "id": "segListUsers",
-    "ide_onRowClick": "AS_Segment_b90c993bb8bd4c4c9374c26aee2605b5",
+    "ide_onRowClick": "AS_Segment_cc6b2383a13d42b4a12a145374c64836",
     "info": null,
     "ipad": {
         "psp": {

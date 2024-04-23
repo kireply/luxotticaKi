@@ -249,22 +249,6 @@
             "package": "",
             "isCustomInput": false
         }, {
-            "id": "SHOW_ALERT_be71901caad04457b4d1b15d42c1a574",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_INFO",
-            "alertTitle": "User correctly updated",
-            "yesLabel": "Ok",
-            "alertMessage": "Succesfull update",
-            "messageType": "constant",
-            "parentId": "_f47f2b9c2c2f4bd3ad8823cde164c0a6",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
             "id": "NAVIGATE_TO_FORM__e26e920e354d43e6b01f95d8dbbab496",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmDashboard",

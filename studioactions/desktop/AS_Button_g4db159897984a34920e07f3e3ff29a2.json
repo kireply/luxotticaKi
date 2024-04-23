@@ -1,28 +1,25 @@
 {
-    "AS_Button_da98b776e37748c2bcd84cbf918aff6d": {
-        "id": "AS_Button_da98b776e37748c2bcd84cbf918aff6d",
+    "AS_Button_g4db159897984a34920e07f3e3ff29a2": {
+        "id": "AS_Button_g4db159897984a34920e07f3e3ff29a2",
         "type": "ACTION_SEQUENCE",
-        "name": "onClickHandlerForAddNewUser",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
         }],
-        "contextObj": {
-            "name": "frmDashboard",
-            "type": "forms",
-            "platform": "",
-            "KUID": "b164a58fab0f47b1b2023b479f06502d"
-        },
         "language": "js",
         "actions": [{
-            "id": "NAVIGATE_TO_FORM__e1575b6e3ebc40f59a51bbdf05082551",
+            "id": "ADD_SNIPPET_ide_onClick_g787ba0bc99b42c199003a748305bb8d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### ADD USER CLICKED\");",
+            "callbackType": null
+        }, {
+            "id": "NAVIGATE_TO_FORM__ide_onClick_e19476af2b71478f8a2f6888da22ec47",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmAddUser",
             "formKUID": "h902c48427904d6bb5bbba3458b3d375",
             "projectName": "luxotticaKi",
             "mappings": {},
             "mappingsOrder": [],
-            "parentId": null,
             "callbackType": null,
             "enableMappingEditor": true,
             "package": "",

@@ -568,22 +568,6 @@
             "package": "",
             "isCustomInput": false
         }, {
-            "id": "SHOW_ALERT_ide_onClick_i25eae0524d14f36954193ef655e1458",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_INFO",
-            "alertTitle": "Flow edits saved!",
-            "yesLabel": "Ok",
-            "alertMessage": "Flow succesfully edited.",
-            "messageType": "constant",
-            "parentId": "_h8c42bd9a1f842c3a251a34abc338e8f",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
             "id": "ADD_SNIPPET_cdb16084f43846bcabc8dd41a8c7a794",
             "type": "ADD_SNIPPET",
             "codeSnippet": "gblEditIcon = false;\n\nself.view.flxPopupEditFlow.setVisibility(false);\nself.view.flxBlur.setVisibility(false);\n\n// E successivamente navigo nuovamente su form così da aggiornarlo",

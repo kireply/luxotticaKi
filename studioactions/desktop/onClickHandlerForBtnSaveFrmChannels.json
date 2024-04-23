@@ -299,28 +299,6 @@
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "SHOW_ALERT_ide_onClick_e1de415f78784827ae9df0a313d7746c",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_INFO",
-            "alertTitle": "Success",
-            "yesLabel": "Ok",
-            "alertMessage": "Channel succesfully created.",
-            "messageType": "constant",
-            "parentId": "IF_CONDITION_ide_onClick_g8ee8f550ddd4132ae6787dddb6f0beb",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
-            "id": "ADD_SNIPPET_ide_onClick_g5cbfc93a88a4a5fbe331523d7b75699",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### sono entrato nel true\");",
-            "parentId": "SHOW_ALERT_ide_onClick_e1de415f78784827ae9df0a313d7746c",
-            "callbackType": "True"
-        }, {
             "id": "NAVIGATE_TO_FORM__ide_onClick_c0ca0d709a184d3c871014f8744d1c56",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmChannels",

@@ -55,5 +55,6 @@
     "pf": "frmDeleteUser",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "wType": "Button"
+    "wType": "Button",
+    "zindex": 3
 }

@@ -50,8 +50,8 @@
     "canUpdateUI": true,
     "canvasWidth": 1200,
     "children": [
-        "flxMainContentDashboard",
-        "fxlMainContainerDashboard"
+        "fxlMainContainerDashboard",
+        "flxMainContentDashboard"
     ],
     "containerweight": 100,
     "controllerInfo": {

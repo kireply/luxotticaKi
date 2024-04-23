@@ -58,7 +58,8 @@
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.ui.Alert({\n  \"alertType\": constants.ALERT_TYPE_CONFIRMATION,\n  \"alertTitle\": \"Success\",\n  \"yesLabel\": \"Ok\",\n  \"message\": \"Save successfull.\",\n  \"alertHandler\": this.SHOW_ALERT_Success_Callback\n}, {\n  \"iconPosition\": constants.ALERT_ICON_POSITION_LEFT\n});",
             "parentId": "_a3ec7710328842a291d87da3e84d93a6",
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }]
     }
 }

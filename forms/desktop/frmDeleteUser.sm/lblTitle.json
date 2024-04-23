@@ -67,5 +67,6 @@
     "retainflexpositionproperties": false,
     "textstyle": {},
     "tooltip": "",
-    "wType": "Label"
+    "wType": "Label",
+    "zindex": 3
 }

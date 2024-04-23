@@ -37,7 +37,7 @@
     "displaytext": true,
     "focusskin": "s6de8ee3e9e1463996d5dbb22b25b33b",
     "id": "btnDeleteUser",
-    "ide_onClick": "AS_Button_ded32913532b46e6b87d4411d00536c8",
+    "ide_onClick": "AS_Button_dbed7a393eda4c40aa06c551492ab4e8",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
@@ -47,5 +47,6 @@
     "pf": "frmDashboard",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "wType": "Button"
+    "wType": "Button",
+    "zindex": 10
 }

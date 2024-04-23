@@ -67,5 +67,6 @@
     "textinputmode": "A",
     "tooltip": "",
     "viewtype": "default",
-    "wType": "TextField"
+    "wType": "TextField",
+    "zindex": 3
 }

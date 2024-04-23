@@ -1,21 +1,15 @@
 {
-    "AS_Button_ded32913532b46e6b87d4411d00536c8": {
-        "id": "AS_Button_ded32913532b46e6b87d4411d00536c8",
+    "AS_Button_dbed7a393eda4c40aa06c551492ab4e8": {
+        "id": "AS_Button_dbed7a393eda4c40aa06c551492ab4e8",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
         }],
-        "contextObj": {
-            "name": "frmDashboard",
-            "type": "forms",
-            "platform": "",
-            "KUID": "b164a58fab0f47b1b2023b479f06502d"
-        },
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "NAVIGATE_TO_FORM__i7ede94193d04fc593122761807a2ff2",
+            "id": "NAVIGATE_TO_FORM__ide_onClick_hd16e9510b9f4826855595ac17070581",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmDeleteUser",
             "formKUID": "ced7a225779d43028086b1ceb5004406",

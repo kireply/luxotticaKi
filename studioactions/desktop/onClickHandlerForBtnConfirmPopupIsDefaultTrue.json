@@ -1021,22 +1021,6 @@
             "package": "",
             "isCustomInput": false
         }, {
-            "id": "SHOW_ALERT_eb95ef4029c24d168306fcc3f1c39ca0",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_INFO",
-            "alertTitle": "New flow created.",
-            "yesLabel": "Ok",
-            "alertMessage": "New flow succesfully created.",
-            "messageType": "constant",
-            "parentId": "_ab3367875b0f484d99539d2182b23334",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
             "id": "ADD_SNIPPET_af051cc43719469aae280a0c59b85637",
             "type": "ADD_SNIPPET",
             "codeSnippet": "gblFlowId = FLOW_create.FLOW[0].id;\ngblFlowDescription = self.view.txtFlowDescription.text;\ngblFlowCategory = self.view.lbCategory.selectedKeyValue[1];\ngblFlowEnvironment = self.view.lbEnvironment.selectedKeyValue[1];",
@@ -1127,7 +1111,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnConfirmPopupIsDefaultTrue\"\n    }\n}",
             "isCustomInput": false
         }]
     }

@@ -96,6 +96,9 @@
                     "type": "string",
                     "value": "78.33%"
                 }
+            },
+            "zIndex": {
+                "Default": 2
             }
         },
         "btnAddEdit": {
@@ -107,11 +110,21 @@
                 "srcKUID": "i96d52271fa042abae2accdb2961ca7c",
                 "wType": "Button"
             },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
+            "responsiveData": {},
             "top": {
                 "Default": {
                     "type": "string",
                     "value": "5.00%"
                 }
+            },
+            "zIndex": {
+                "Default": 4
             }
         },
         "flxMainCompileUser": {
@@ -139,7 +152,10 @@
                     "value": "0%"
                 }
             },
-            "responsiveData": {}
+            "responsiveData": {},
+            "zIndex": {
+                "Default": 3
+            }
         },
         "lblTitle": {
             "__events__": {},
@@ -148,8 +164,17 @@
                 "srcKUID": "b6f7312dc2894e4faba70716da0b0c55",
                 "wType": "Label"
             },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": "50%"
+                }
+            },
             "responsiveData": {},
-            "text": "Edit User"
+            "text": "Edit User",
+            "zIndex": {
+                "Default": 4
+            }
         },
         "txtCompileUserEmail": {
             "__events__": {},
@@ -157,6 +182,10 @@
                 "kuid": "af72ce7e0a3d4554b7f3456d59f4c4b5",
                 "srcKUID": "j81c4cfd20064f33a2dc4fb4f3f95c0a",
                 "wType": "TextField"
+            },
+            "responsiveData": {},
+            "zIndex": {
+                "Default": 4
             }
         },
         "txtCompileUserPassword": {
@@ -165,6 +194,10 @@
                 "kuid": "b3733bd7f5c249a2b03038d32053b749",
                 "srcKUID": "b1b8c4124fa241f0b6009729d4d89eda",
                 "wType": "TextField"
+            },
+            "responsiveData": {},
+            "zIndex": {
+                "Default": 4
             }
         },
         "txtName": {
@@ -173,6 +206,10 @@
                 "kuid": "eff2a31c50a44391b80a36105ff53648",
                 "srcKUID": "jdb927c26b484144a1727189a610e467",
                 "wType": "TextField"
+            },
+            "responsiveData": {},
+            "zIndex": {
+                "Default": 4
             }
         },
         "txtSurname": {
@@ -181,6 +218,10 @@
                 "kuid": "j3b47800a985404d8be2133baaf3fcbd",
                 "srcKUID": "cf8528204bda41fdbc4d399a9d1f1f65",
                 "wType": "TextField"
+            },
+            "responsiveData": {},
+            "zIndex": {
+                "Default": 4
             }
         }
     },
@@ -203,5 +244,5 @@
     "snaptogrid": true,
     "sourceUserWidget": "g236eb3c6baa409e93b0df3a81440988",
     "wType": "UserWidgetInstance",
-    "zindex": 1
+    "zindex": 2
 }
