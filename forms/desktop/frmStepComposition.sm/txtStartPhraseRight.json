@@ -7,7 +7,7 @@
     },
     "_height_": {
         "type": "string",
-        "value": "15%"
+        "value": "10%"
     },
     "_left_": {
         "type": "string",
@@ -30,11 +30,11 @@
     "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "53%"
+        "value": "52%"
     },
     "_width_": {
         "type": "string",
-        "value": "70%"
+        "value": "89.54%"
     },
     "autocapitalize": "none",
     "autocomplete": false,

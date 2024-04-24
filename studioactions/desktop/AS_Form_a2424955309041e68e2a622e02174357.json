@@ -24,7 +24,6 @@
                 "rightValue": "",
                 "leftItemKUID": "b164a58fab0f47b1b2023b479f06502d",
                 "leftWidgetKUID": "d903f0be04494548bd5f9ed6c7793e79",
-                "sequenceId": "AS_Button_da98b776e37748c2bcd84cbf918aff6d",
                 "eventName": "onClick",
                 "widgetId": "btnAddUser"
             }],

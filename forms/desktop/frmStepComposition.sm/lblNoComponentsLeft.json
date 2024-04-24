@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "10%"
+        "value": "8%"
     },
     "_left_": {
         "type": "string",
@@ -25,7 +25,7 @@
     "_text_": "No components here!",
     "_top_": {
         "type": "string",
-        "value": "42%"
+        "value": "45%"
     },
     "_width_": {
         "type": "string",

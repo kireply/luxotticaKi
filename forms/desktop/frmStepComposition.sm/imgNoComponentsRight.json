@@ -23,7 +23,7 @@
         0
     ],
     "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
-    "_src_": "components.png",
+    "_src_": "no_components.png",
     "_top_": {
         "type": "string",
         "value": "0%"
@@ -39,7 +39,7 @@
     },
     "centery": {
         "type": "string",
-        "value": "35%"
+        "value": "38%"
     },
     "containerweight": 100,
     "id": "imgNoComponentsRight",

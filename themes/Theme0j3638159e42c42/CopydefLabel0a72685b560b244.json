@@ -7,7 +7,7 @@
     "font_size": 100,
     "isForked": false
   },
-  "background_color": "00000000",
+  "background_color": "ffffff00",
   "bg_type": "one",
   "border_color": "424242ff",
   "border_style": "plain",
@@ -19,11 +19,11 @@
     "isForked": false
   },
   "fontSizeInPx": true,
-  "font_color": "333333ff",
+  "font_color": "b0b0b0ff",
   "font_name": "iphoneSystem",
   "font_size": 175,
   "font_style": "normal",
-  "font_weight": "400",
+  "font_weight": "normal",
   "ipad": {
     "font_size": 100,
     "isForked": false
