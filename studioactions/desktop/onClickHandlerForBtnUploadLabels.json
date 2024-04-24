@@ -26,19 +26,30 @@
             "disabled": false,
             "source": "controller"
         }, {
+            "id": "ADD_LOCAL_VARIABLE_g0da825727bd403f86571ac14653e390",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "totalRows",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null,
+            "disabled": true
+        }, {
             "id": "LOOP_ACTION_bf6813d9357246a499739b2a14129ddb",
             "type": "LOOP_ACTION",
             "parentId": null,
             "callbackType": null,
             "disabled": true,
-            "varType": "set",
-            "variable": "a",
-            "startType": "set",
-            "startValue": 0,
+            "varType": "choose",
+            "variable": "totalRows",
+            "startType": "choose",
+            "startValue": "totalRows",
             "endType": "set",
-            "endValue": 3,
+            "endValue": 0,
             "stepBy": 1,
-            "direction": "inc"
+            "direction": "dec"
         }, {
             "id": "ADD_SNIPPET_c63332fa41394c74946e7debe42c0b86",
             "type": "ADD_SNIPPET",

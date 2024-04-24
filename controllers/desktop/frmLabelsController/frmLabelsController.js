@@ -125,69 +125,80 @@ define({
             //voltmx.print("### PRINT: " + JSON.stringify(event, ' ', 2));
             const reader = new FileReader();
             reader.onload = (e) => {
-                let data = e.target.result;
-                let workbook = XLSX.read(data, {
-                    type: "binary"
-                });
-                //voltmx.print("### DATA: " + data);
-                //voltmx.print("### WORKBOOK: " + JSON.stringify(workbook));
-                voltmx.print(workbook);
-                workbook.SheetNames.forEach(sheet => {
-                    let rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]);
-                    voltmx.print("### rowObject: " + rowObject);
-                    gblLabelsList = rowObject;
-                  
-                    let headerRow = {}; // New empty object for the header row
+              let data = e.target.result;
+              let workbook = XLSX.read(data, {
+                type: "binary"
+              });
+              //voltmx.print("### DATA: " + data);
+              //voltmx.print("### WORKBOOK: " + JSON.stringify(workbook));
+              voltmx.print(workbook);
+              workbook.SheetNames.forEach(sheet => {
+                let rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]);
+                voltmx.print("### rowObject: " + rowObject);
+                gblLabelsList = rowObject;
 
-                    // Saving header keys and their own values
-                    Object.keys(gblLabelsList[0]).forEach(function(key) {
-                      headerRow[key] = key;
-                    });
-                    gblLabelsList.unshift(headerRow);
-                    voltmx.print("### gblLabels stringify: " + JSON.stringify(gblLabelsList));
-                  	
-                    gblLabelsColumns = 0;
-                    gblLabelsPage = 1;
-                    gblLabelsFileUploaded = true; 
-                    // saving the number of labels' columns (in order to know how many pages we have to show)
-                    gblLabelsList.forEach(obj => {
-                        const numColumns = Object.keys(obj).length;
-                        if (numColumns > gblLabelsColumns) {
-                            gblLabelsColumns = numColumns;
-                        }
-                    });
-                  
-                  this.view.btnPrevious.setEnabled(false);
-                  this.view.btnPrevious.opacity = 0.5;
-                  
-                  var maxPages = Math.ceil(gblLabelsColumns / 5); // this method rounds up to the nearest integer
-              	  voltmx.print("### max pages = " + maxPages);
-                  voltmx.print("### max pages full = " + (gblLabelsColumns / 5) );
-                  voltmx.print("### gblLabelsColumns = " + gblLabelsColumns);
-                  voltmx.print("### gblLabelsPage = " + gblLabelsPage);
-                  
-                  if (gblLabelsPage === maxPages) { // only one page needed (the document only have 5 columns)
-                    this.view.btnNext.setEnabled(false);
-                    this.view.btnNext.opacity = 0.5;
+                // New empty object for the header row
+                let headerRow = {}; 
+                // Saving header keys and their own values
+                Object.keys(gblLabelsList[0]).forEach(function(key) {
+                  headerRow[key] = key;
+                });
+                gblLabelsList.unshift(headerRow);
+                voltmx.print("### gblLabels stringify: " + JSON.stringify(gblLabelsList));
+
+
+                // Copying the list but removing the "id" key
+                list = gblLabelsList.map(function(obj) {
+                  // Crea una copia dell'oggetto corrente
+                  var newObj = Object.assign({}, obj);
+                  // Rimuovi la chiave "id" dall'oggetto corrente
+                  delete newObj.id;
+                  return newObj;
+                });
+
+                gblLabelsColumns = 0;
+                gblLabelsPage = 1;
+                gblLabelsFileUploaded = true; 
+                // saving the number of labels' columns (in order to know how many pages we have to show)
+                list.forEach(obj => {
+                  const numColumns = Object.keys(obj).length;
+                  if (numColumns > gblLabelsColumns) {
+                    gblLabelsColumns = numColumns;
                   }
-                  
-                    //voltmx.print(JSON.stringify(rowObject, ' ', 4));
-                  	//return rowObject;
-                  //jsonWidget.text = JSON.stringify(rowObject, ' ',4);
-                  //voltmx.print("### jsonWidget.text: " + jsonWidget.text);
-                  
-                  // setting the first 5 columns to display
-                  var firstKeys = Object.keys(gblLabelsList[0]).slice(0, 5);
-                  //voltmx.print("### firstKey: " + firstKeys);
-                                    
-				  //gblLabelsList2.splice(1, 0, headerRow); // Duplicating the Header so that it don't get lost in the mapping
-                  this.view.segLabels.widgetDataMap = {lb1: firstKeys[0],lb2: firstKeys[1],lb3: firstKeys[2],lb4: firstKeys[3], lb5: firstKeys[4]};
-				  
-                  var showLabels = parseInt(this.view.lbShowEntries.selectedKeyValue[1], 10);  // 10 is for the decimal
-                  var data = gblLabelsList.slice(0, ++showLabels); //++ because the first row is used for the header
-                  
-                  this.view.segLabels.setData(data);
-                  voltmx.print("### gblLabels FINALE: " + JSON.stringify(gblLabelsList));
+                });
+
+                this.view.btnPrevious.setEnabled(false);
+                this.view.btnPrevious.opacity = 0.5;
+
+                var maxPages = Math.ceil(gblLabelsColumns / 5); // this method rounds up to the nearest integer
+                voltmx.print("### max pages = " + maxPages);
+                voltmx.print("### max pages full = " + (gblLabelsColumns / 5) );
+                voltmx.print("### gblLabelsColumns = " + gblLabelsColumns);
+                voltmx.print("### gblLabelsPage = " + gblLabelsPage);
+
+                if (gblLabelsPage === maxPages) { // only one page needed (the document only have 5 columns)
+                  this.view.btnNext.setEnabled(false);
+                  this.view.btnNext.opacity = 0.5;
+                }
+
+                //voltmx.print(JSON.stringify(rowObject, ' ', 4));
+                //return rowObject;
+                //jsonWidget.text = JSON.stringify(rowObject, ' ',4);
+                //voltmx.print("### jsonWidget.text: " + jsonWidget.text);
+
+                // setting the first 5 columns to display
+                var firstKeys = Object.keys(list[0]).slice(0, 5);
+                //voltmx.print("### firstKey: " + firstKeys);
+
+                //gblLabelsList2.splice(1, 0, headerRow); // Duplicating the Header so that it don't get lost in the mapping
+                this.view.segLabels.widgetDataMap = {lb1: firstKeys[0],lb2: firstKeys[1],lb3: firstKeys[2],lb4: firstKeys[3], lb5: firstKeys[4]};
+
+                var showLabels = parseInt(this.view.lbShowEntries.selectedKeyValue[1], 10);  // 10 is for the decimal
+                var data = list.slice(0, ++showLabels); //++ because the first row is used for the header
+
+                this.view.segLabels.setData(data);
+                voltmx.print("### gblLabels DOPO UPLOAD: " + JSON.stringify(gblLabelsList));
+                voltmx.print("### list DOPO UPLOAD: " + JSON.stringify(list));
                 });
             };
             reader.readAsBinaryString(event.target.files[0]);
@@ -244,7 +255,7 @@ define({
     //voltmx.print("### gblLabelsList: " + JSON.stringify(gblLabelsList, ' ', 4));
     
     //	Creating the Workbook and filling it
-    var worksheet = XLSX.utils.json_to_sheet(gblLabelsList.slice(1));  // adding .slice(1) to remove the duplicate header
+    var worksheet = XLSX.utils.json_to_sheet(gblLabelsList.slice(1));  // adding .slice(1) to remove the duplicate header that this export API would create
     var workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, this.view.txtWorksheetName.text);
     
