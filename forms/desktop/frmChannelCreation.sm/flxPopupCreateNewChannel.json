@@ -36,11 +36,11 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50%"
+        "value": "50.03%"
     },
     "centery": {
         "type": "string",
-        "value": "50%"
+        "value": "50.03%"
     },
     "children": [
         "imgExitPopup",
@@ -48,8 +48,7 @@
         "lblChannelID",
         "txtChannelID",
         "lblChannelName",
-        "txtCHannelName",
-        "lbChannelName",
+        "txtChannelName",
         "lblChannelLogo",
         "txtChannelLogo",
         "lblChannelProperties",
@@ -74,7 +73,7 @@
     "info": null,
     "iscustomlayout": false,
     "ismodalcontainer": true,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "j7723695707043aaa982700ff6323c84",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",

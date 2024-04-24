@@ -1,5 +1,5 @@
 {
-    "@class": "com.kony.gen.viz.model.component.KVizListBox",
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
     "DNDConfig": null,
     "_blur_": {
         "enabled": false,
@@ -25,8 +25,9 @@
         0,
         0
     ],
-    "_placeholder_": "Please Select",
-    "_skin_": "s8824da42d464a4692f59cda2a2e8757",
+    "_placeholder_": "Insert Channel Name",
+    "_skin_": "s8a0071fb0a046adbc805bdbb498c846",
+    "_text_": "",
     "_top_": {
         "type": "string",
         "value": "34.38%"
@@ -35,54 +36,40 @@
         "type": "string",
         "value": "80%"
     },
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50.44%"
+        "value": "50%"
     },
+    "containerheight": "",
+    "containerheightmode": 1,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
-    "groupcells": false,
-    "id": "lbChannelName",
+    "focusskin": "s4ae88d6059f41ebb18f1220b211dfc3",
+    "id": "txtChannelName",
     "info": null,
+    "isSensitiveText": false,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e7e0e120e1ff4b14acb248762bd45c2b",
-    "masterdata": [
-        [
-            "lb1",
-            "Select Channel Name"
-        ],
-        [
-            "lb2",
-            "Rayban"
-        ],
-        [
-            "lb3",
-            "Prada"
-        ],
-        [
-            "lb4",
-            "DolceGabbana"
-        ]
-    ],
-    "name": "kony.ui.ListBox",
+    "keyboardtype": "A",
+    "kuid": "c2af9deb1d2a41ab86e5b184f7d997e5",
+    "maxtextlength": "",
+    "mode": "A",
+    "name": "kony.ui.TextBox2",
     "parent": "TabChannelInfo1",
     "pf": "frmChannels",
+    "placeholderskin": "sfd700440c644c55be0d2d9437fdf50f",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "selectedkeys": null,
-    "selectedkeyvalue": null,
-    "selectedkeyvalues": null,
-    "size": 18,
+    "securetextentry": false,
     "tabpaneId": "tbChannelInfo",
-    "viewconfig": {
-        "toggleViewConfig": {
-            "viewStyle": 0
-        }
-    },
-    "viewtype": 0,
-    "wType": "ListBox",
+    "textinputmode": "A",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField",
     "zindex": 1
 }

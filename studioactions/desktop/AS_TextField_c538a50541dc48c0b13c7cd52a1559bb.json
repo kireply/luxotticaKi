@@ -60,8 +60,8 @@
                     "source": {
                         "type": "Forms",
                         "propertyName": "text",
-                        "widgetId": "txtChannelInsideFrmChannels",
-                        "widgetPath": "this.view.tbNewChannel.txtChannelInsideFrmChannels",
+                        "widgetId": "txtChannelIDInsideFrmChannels",
+                        "widgetPath": "this.view.tbNewChannel.txtChannelIDInsideFrmChannels",
                         "widgetType": "TextField",
                         "dataType": "string",
                         "itemId": "frmChannels",
@@ -125,35 +125,9 @@
                         "dataType": "string",
                         "forkedPlatform": "all"
                     }
-                },
-                "ME_Mapping_j5e9052f4dab4caeaec6d6be55ae5ec0": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_j5e9052f4dab4caeaec6d6be55ae5ec0",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Forms",
-                        "propertyName": "value",
-                        "widgetId": "lbChannelNameInsideFrmChannels",
-                        "widgetPath": "this.view.tbNewChannel.lbChannelNameInsideFrmChannels",
-                        "widgetType": "ListBox",
-                        "dataType": "string",
-                        "itemId": "frmChannels",
-                        "collectionId": "selectedKeyValues",
-                        "widgetKUID": "e74135133adb4951972fe5130a0db4e5",
-                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Variables",
-                        "propertyName": "channelName",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_b9b1802d67a14bc5a2ea438a284e0944", "ME_Mapping_f195b59bac63416884efb21cbba60db9", "ME_Mapping_bd2480656bfe46f6895da4ff69f28b66", "ME_Mapping_j5e9052f4dab4caeaec6d6be55ae5ec0"],
+            "mappingsOrder": ["ME_Mapping_b9b1802d67a14bc5a2ea438a284e0944", "ME_Mapping_f195b59bac63416884efb21cbba60db9", "ME_Mapping_bd2480656bfe46f6895da4ff69f28b66"],
             "callbackType": null,
             "enableMappingEditor": true
         }, {
@@ -161,7 +135,7 @@
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
-                "leftValue": "this.view.tbNewChannel.txtChannelInsideFrmChannels.text",
+                "leftValue": "this.view.tbNewChannel.txtChannelIDInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "\"\"",
@@ -169,7 +143,7 @@
                 "leftWidgetKUID": "a709edb70a60483983498ef971327e19"
             }, {
                 "leftValueType": "widgetprop",
-                "leftValue": "this.view.tbNewChannel.txtChannelInsideFrmChannels.text",
+                "leftValue": "this.view.tbNewChannel.txtChannelIDInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "undefined",
@@ -193,7 +167,7 @@
                 "leftWidgetKUID": "ae6d0917eb824707883abe8c2ce5c352"
             }, {
                 "leftValueType": "widgetprop",
-                "leftValue": "this.view.tbNewChannel.lbChannelNameInsideFrmChannels.selectedKey",
+                "leftValue": "",
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "\"lb1\"",

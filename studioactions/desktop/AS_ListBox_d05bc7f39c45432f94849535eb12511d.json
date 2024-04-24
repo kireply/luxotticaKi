@@ -103,8 +103,6 @@
                     "source": {
                         "type": "Forms",
                         "propertyName": "value",
-                        "widgetId": "lbChannelNameInsideFrmChannels",
-                        "widgetPath": "this.view.tbNewChannel.lbChannelNameInsideFrmChannels",
                         "widgetType": "ListBox",
                         "dataType": "string",
                         "itemId": "frmChannels",

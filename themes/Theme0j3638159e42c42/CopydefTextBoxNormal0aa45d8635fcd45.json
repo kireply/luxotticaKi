@@ -1,10 +1,13 @@
 {
   "background_color": "ffffffff",
   "bg_type": "one",
-  "border_color": "333333ff",
+  "border_color": "00000033",
   "border_style": "rc",
   "border_type": 0,
   "border_width": 1,
+  "desktopweb": {
+    "font_name": "Montserrat-Regular"
+  },
   "font_color": "333333ff",
   "font_name": "iphoneSystem",
   "font_size": 107,

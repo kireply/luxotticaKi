@@ -32,7 +32,7 @@ define({
   reloadData(){
 //     voltmx.print("### CHANNELS INSIDE ON RELOAD: " + JSON.stringify(this.channels));
     this.view.flxChannels.removeAll();
-    this.channels.forEach((box, index) => {this.addTile(box,index)});
+    this.channels.forEach((box, index) => {this.addTile(box,index);});
     this.addTile(null, 99);
 //     content = this.view.flxChannels.widgets();
 //     content.forEach(function(widget) {
@@ -112,8 +112,7 @@ define({
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.txtChannelID.text = channel.channelIdentifier;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.txtChannelLogo.text = channel.channelLogo;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelProperties.text = channel.channelProperties;
-            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.lbChannelName.masterData = [ ["lb1", channel.channelInfo] ];
-            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.lbChannelName.selectedKey = "lb1";
+            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.txtChannelName.text = channel.channelInfo ;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelGenericImage.text = channel.channelGenericImage;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelAssetsCDN.text = channel.channelAssetsCDN;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelProjectImage.text = channel.channelProjectImage;
@@ -146,7 +145,7 @@ define({
               channel.flxChannel.borderWidth = 0;
           	  channel.flxChannel.borderColor = "ffffff";
           }
-        }
+        };
       }
         
       else {
@@ -159,7 +158,7 @@ define({
          this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(true);
          this.view.flxBlur.setVisibility(true);
          //this.view.btnSaveNewChannelInsideFrmChannels.setEsabled(false);
-       }
+       };
 //        voltmx.print("### CHANNEL INFO: " + channel.channelInfo);
 //        voltmx.print("### CHANNEL LOGO: " + channel.channelLogo);
 //        voltmx.print("### CHANNEL ID: " + channel.channelId);

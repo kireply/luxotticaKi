@@ -11,7 +11,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "8.65%"
+        "value": "9.06%"
     },
     "_margin_": [
         0,
@@ -25,12 +25,12 @@
         0,
         0
     ],
-    "_placeholder_": "Insert Channel ID",
+    "_placeholder_": "Insert Channel Name",
     "_skin_": "s42347df93fa4b6b879802c7b649ed2e",
     "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "13.75%"
+        "value": "29.03%"
     },
     "_width_": {
         "type": "string",
@@ -43,21 +43,21 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50.00%"
+        "value": "50%"
     },
     "containerheight": "",
     "containerheightmode": 1,
     "containerweight": 100,
     "contentalignment": 4,
     "focusskin": "s4ae88d6059f41ebb18f1220b211dfc3",
-    "id": "txtChannelInsideFrmChannels",
-    "ide_onTextChange": "AS_TextField_h77a783dcae4401d9bf50ed152ec405d",
+    "id": "txtChannelNameInsideFrmChannels",
+    "ide_onTextChange": "AS_TextField_h616f314af9f43e896fef8dc52915281",
     "info": null,
     "isSensitiveText": false,
     "iscustomlayout": false,
     "isvisible": true,
     "keyboardtype": "A",
-    "kuid": "a709edb70a60483983498ef971327e19",
+    "kuid": "afb06348ad9a42ba8cc46faa22a3ee14",
     "maxtextlength": "",
     "mode": "A",
     "name": "kony.ui.TextBox2",

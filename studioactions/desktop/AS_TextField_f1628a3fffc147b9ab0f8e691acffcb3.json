@@ -125,35 +125,9 @@
                         "dataType": "string",
                         "forkedPlatform": "all"
                     }
-                },
-                "ME_Mapping_b98e15b36daa46b2bd881f9798b10737": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_b98e15b36daa46b2bd881f9798b10737",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Forms",
-                        "propertyName": "value",
-                        "widgetId": "lbChannelName",
-                        "widgetPath": "this.view.tbChannelInfo.lbChannelName",
-                        "widgetType": "ListBox",
-                        "dataType": "string",
-                        "itemId": "frmChannels",
-                        "collectionId": "selectedKeyValues",
-                        "widgetKUID": "e7e0e120e1ff4b14acb248762bd45c2b",
-                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Variables",
-                        "propertyName": "channelName",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_a59c816387dc45d2a15232d7680ec9f7", "ME_Mapping_c7aee2b266c94044afcb75acf1b53a96", "ME_Mapping_b7f399408d4940aea1d4610d6fa21e8f", "ME_Mapping_b98e15b36daa46b2bd881f9798b10737"],
+            "mappingsOrder": ["ME_Mapping_a59c816387dc45d2a15232d7680ec9f7", "ME_Mapping_c7aee2b266c94044afcb75acf1b53a96", "ME_Mapping_b7f399408d4940aea1d4610d6fa21e8f"],
             "callbackType": null,
             "enableMappingEditor": true
         }, {

@@ -26,8 +26,8 @@
                     "source": {
                         "type": "Forms",
                         "propertyName": "text",
-                        "widgetId": "txtChannelInsideFrmChannels",
-                        "widgetPath": "this.view.tbNewChannel.txtChannelInsideFrmChannels",
+                        "widgetId": "txtChannelIDInsideFrmChannels",
+                        "widgetPath": "this.view.tbNewChannel.txtChannelIDInsideFrmChannels",
                         "widgetType": "TextField",
                         "dataType": "string",
                         "itemId": "frmChannels",
@@ -102,39 +102,6 @@
                     "target": {
                         "type": "Services",
                         "propertyName": "properties_file",
-                        "dataType": "string",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "CHANNEL_create",
-                            "operationid": "116976"
-                        }
-                    }
-                },
-                "ME_Mapping_g4d2f31f90e040958b1ff56d81007700": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_g4d2f31f90e040958b1ff56d81007700",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Forms",
-                        "propertyName": "value",
-                        "widgetId": "lbChannelNameInsideFrmChannels",
-                        "widgetPath": "this.view.tbNewChannel.lbChannelNameInsideFrmChannels",
-                        "widgetType": "ListBox",
-                        "dataType": "string",
-                        "itemId": "frmChannels",
-                        "collectionId": "selectedKeyValues",
-                        "widgetKUID": "e74135133adb4951972fe5130a0db4e5",
-                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Services",
-                        "propertyName": "name",
                         "dataType": "string",
                         "forkedPlatform": "all",
                         "serviceconfig": {
@@ -273,9 +240,43 @@
                             "operationid": "116976"
                         }
                     }
+                },
+                "ME_Mapping_a518bed027574ad6bd36d629e7dd320c": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a518bed027574ad6bd36d629e7dd320c",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelNameInsideFrmChannels",
+                        "widgetPath": "this.view.tbNewChannel.txtChannelNameInsideFrmChannels",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannels",
+                        "tabId": "tbNewChannel",
+                        "widgetKUID": "afb06348ad9a42ba8cc46faa22a3ee14",
+                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                        "tabKUID": "b6749ff8bebb41a298a6c1787e6b7aae",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "name",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "CHANNEL_create",
+                            "operationid": "116976"
+                        }
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_j489158dc9514e188b7adce4bad216eb", "ME_Mapping_ca4e9b0fb6c049668881885f3ad60dab", "ME_Mapping_b03f183908cc44b9bc1b05cbca29cb66", "ME_Mapping_g4d2f31f90e040958b1ff56d81007700", "ME_Mapping_e72c0d21c4fd4e7a8628f0c3561c9e6d", "ME_Mapping_dd43ffbbc0684787955a07364138dde7", "ME_Mapping_e5af3eba7556475090e8f3125f217653", "ME_Mapping_i630e81870f24e8eaf077671b9c658b1"],
+            "mappingsOrder": ["ME_Mapping_j489158dc9514e188b7adce4bad216eb", "ME_Mapping_ca4e9b0fb6c049668881885f3ad60dab", "ME_Mapping_b03f183908cc44b9bc1b05cbca29cb66", "ME_Mapping_e72c0d21c4fd4e7a8628f0c3561c9e6d", "ME_Mapping_dd43ffbbc0684787955a07364138dde7", "ME_Mapping_e5af3eba7556475090e8f3125f217653", "ME_Mapping_i630e81870f24e8eaf077671b9c658b1", "ME_Mapping_a518bed027574ad6bd36d629e7dd320c"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -314,7 +315,7 @@
         }, {
             "id": "ADD_SNIPPET_a020aa8c17a245ca9b4757c7931362dc",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\nself.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\nself.view.flxBlur.setVisibility(false);",
+            "codeSnippet": "self.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\nself.view.flxBlur.setVisibility(false);",
             "parentId": "IF_CONDITION_ide_onClick_g8ee8f550ddd4132ae6787dddb6f0beb",
             "callbackType": null
         }, {
@@ -347,12 +348,6 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "ADD_SNIPPET_ide_onClick_ee4986c1ec6c4d7f8045c895a984ee10",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### sono entrato nel FALSE\");",
-            "parentId": "SHOW_ALERT_ide_onClick_bb13917ba71b4f579bef7c47a4db9bc5",
-            "callbackType": "True"
-        }, {
             "id": "NAVIGATE_TO_FORM__ide_onClick_bd2ae95dd41a4721b878885bfdf2c2d5",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmChannels",
@@ -368,7 +363,7 @@
         }, {
             "id": "ADD_SNIPPET_b52e2c38fe0f4d5092a10bdfa6b5ced8",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\nself.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\nself.view.flxBlur.setVisibility(false);",
+            "codeSnippet": "self.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\nself.view.flxBlur.setVisibility(false);",
             "parentId": "ELSE_CONDITION_ide_onClick_d260f5b1817646b39c8350cacceb7ea3",
             "callbackType": null
         }]

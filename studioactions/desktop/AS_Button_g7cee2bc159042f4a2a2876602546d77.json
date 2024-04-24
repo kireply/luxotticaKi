@@ -25,8 +25,8 @@
                     "source": {
                         "type": "Forms",
                         "propertyName": "text",
-                        "widgetId": "txtChannelInsideFrmChannels",
-                        "widgetPath": "this.view.tbNewChannel.txtChannelInsideFrmChannels",
+                        "widgetId": "txtChannelIDInsideFrmChannels",
+                        "widgetPath": "this.view.tbNewChannel.txtChannelIDInsideFrmChannels",
                         "widgetType": "TextField",
                         "dataType": "string",
                         "itemId": "frmChannels",
@@ -101,39 +101,6 @@
                     "target": {
                         "type": "Services",
                         "propertyName": "properties_file",
-                        "dataType": "string",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "CHANNEL_create",
-                            "operationid": "116976"
-                        }
-                    }
-                },
-                "ME_Mapping_g4d2f31f90e040958b1ff56d81007700": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_g4d2f31f90e040958b1ff56d81007700",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Forms",
-                        "propertyName": "value",
-                        "widgetId": "lbChannelNameInsideFrmChannels",
-                        "widgetPath": "this.view.tbNewChannel.lbChannelNameInsideFrmChannels",
-                        "widgetType": "ListBox",
-                        "dataType": "string",
-                        "itemId": "frmChannels",
-                        "collectionId": "selectedKeyValues",
-                        "widgetKUID": "e74135133adb4951972fe5130a0db4e5",
-                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Services",
-                        "propertyName": "name",
                         "dataType": "string",
                         "forkedPlatform": "all",
                         "serviceconfig": {
@@ -274,7 +241,7 @@
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_j489158dc9514e188b7adce4bad216eb", "ME_Mapping_ca4e9b0fb6c049668881885f3ad60dab", "ME_Mapping_b03f183908cc44b9bc1b05cbca29cb66", "ME_Mapping_g4d2f31f90e040958b1ff56d81007700", "ME_Mapping_e72c0d21c4fd4e7a8628f0c3561c9e6d", "ME_Mapping_dd43ffbbc0684787955a07364138dde7", "ME_Mapping_e5af3eba7556475090e8f3125f217653", "ME_Mapping_i630e81870f24e8eaf077671b9c658b1"],
+            "mappingsOrder": ["ME_Mapping_j489158dc9514e188b7adce4bad216eb", "ME_Mapping_ca4e9b0fb6c049668881885f3ad60dab", "ME_Mapping_b03f183908cc44b9bc1b05cbca29cb66", "ME_Mapping_e72c0d21c4fd4e7a8628f0c3561c9e6d", "ME_Mapping_dd43ffbbc0684787955a07364138dde7", "ME_Mapping_e5af3eba7556475090e8f3125f217653", "ME_Mapping_i630e81870f24e8eaf077671b9c658b1"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",

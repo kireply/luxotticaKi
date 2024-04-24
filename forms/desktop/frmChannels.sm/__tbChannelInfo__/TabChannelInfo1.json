@@ -31,7 +31,7 @@
         "lblChannelID",
         "txtChannelID",
         "lblChannelName",
-        "lbChannelName",
+        "txtChannelName",
         "lblChannelLogo",
         "txtChannelLogo"
     ],

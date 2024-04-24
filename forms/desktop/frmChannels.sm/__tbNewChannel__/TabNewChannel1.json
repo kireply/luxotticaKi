@@ -28,10 +28,10 @@
     "allboxes": [],
     "canUpdateUI": true,
     "children": [
-        "lblChannelInsideFrmChannels",
-        "txtChannelInsideFrmChannels",
+        "lblChannelIDInsideFrmChannels",
+        "txtChannelIDInsideFrmChannels",
         "lblChannelNameInsideFrmChannels",
-        "lbChannelNameInsideFrmChannels",
+        "txtChannelNameInsideFrmChannels",
         "lblChannelLogoInsideFrmChannels",
         "txtChannelLogoInsideFrmChannels"
     ],

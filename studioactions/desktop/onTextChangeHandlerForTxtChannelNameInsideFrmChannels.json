@@ -1,7 +1,8 @@
 {
-    "AS_TextField_g3eedb2beb6a478eaf53bccc2ad727f0": {
-        "id": "AS_TextField_g3eedb2beb6a478eaf53bccc2ad727f0",
+    "AS_TextField_h616f314af9f43e896fef8dc52915281": {
+        "id": "AS_TextField_h616f314af9f43e896fef8dc52915281",
         "type": "ACTION_SEQUENCE",
+        "name": "onTextChangeHandlerForTxtChannelNameInsideFrmChannels",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -9,37 +10,16 @@
             "datatype": "string",
             "name": "changedtext"
         }],
+        "contextObj": {
+            "name": "frmChannels",
+            "type": "forms",
+            "platform": "",
+            "KUID": "c1e9143f6fef4291a170222e7c044c7c"
+        },
         "language": "js",
         "eventType": "onTextChange",
         "actions": [{
-            "id": "ADD_LOCAL_VARIABLE_ide_onTextChange_db786dc45f98437bbb97ff4f9234b0ae",
-            "type": "ADD_LOCAL_VARIABLE",
-            "name": "channelProperties",
-            "isGlobal": false,
-            "valuetype": "constant",
-            "datatype": "string",
-            "value": "\"\"",
-            "callbackType": null
-        }, {
-            "id": "ADD_LOCAL_VARIABLE_ide_onTextChange_j175379bc79640a0b46b3b723248c2a9",
-            "type": "ADD_LOCAL_VARIABLE",
-            "name": "channelName",
-            "isGlobal": false,
-            "valuetype": "constant",
-            "datatype": "string",
-            "value": "\"\"",
-            "callbackType": null
-        }, {
-            "id": "ADD_LOCAL_VARIABLE_ide_onTextChange_fd3b438542d64f5fa16c875b1b72a98e",
-            "type": "ADD_LOCAL_VARIABLE",
-            "name": "channelLogo",
-            "isGlobal": false,
-            "valuetype": "constant",
-            "datatype": "string",
-            "value": "\"\"",
-            "callbackType": null
-        }, {
-            "id": "ADD_LOCAL_VARIABLE_ide_onTextChange_e4e7a54ec31146bda91c602c5f0a9435",
+            "id": "ADD_LOCAL_VARIABLE_ide_onTextChange_cc0bdb001dd244759058ff26f4e6c0eb",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "channelID",
             "isGlobal": false,
@@ -48,20 +28,38 @@
             "value": "\"\"",
             "callbackType": null
         }, {
-            "id": "ADD_MAPPING_ide_onTextChange_f705083343224f558cf292aa0d585491",
+            "id": "ADD_LOCAL_VARIABLE_ide_onTextChange_bef0d5ce96eb4a2f8bc72d39d80dec34",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "channelLogo",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ide_onTextChange_g1b4f125c4f64db9939a109f3ae9094e",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "channelProperties",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "callbackType": null
+        }, {
+            "id": "ADD_MAPPING_ide_onTextChange_hede4ea59e3e4069bdb0bc26d4143831",
             "type": "ADD_MAPPING",
             "mappings": {
-                "ME_Mapping_i6a02d1f9c224f7c808ff4be356863df": {
+                "ME_Mapping_a59c816387dc45d2a15232d7680ec9f7": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_i6a02d1f9c224f7c808ff4be356863df",
+                    "id": "ME_Mapping_a59c816387dc45d2a15232d7680ec9f7",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
                     "source": {
                         "type": "Forms",
                         "propertyName": "text",
-                        "widgetId": "txtChannelInsideFrmChannels",
-                        "widgetPath": "this.view.tbNewChannel.txtChannelInsideFrmChannels",
+                        "widgetId": "txtChannelIDInsideFrmChannels",
+                        "widgetPath": "this.view.tbNewChannel.txtChannelIDInsideFrmChannels",
                         "widgetType": "TextField",
                         "dataType": "string",
                         "itemId": "frmChannels",
@@ -76,9 +74,9 @@
                         "forkedPlatform": "all"
                     }
                 },
-                "ME_Mapping_e68b30493f8c41b19978fbbf27ab70c8": {
+                "ME_Mapping_c7aee2b266c94044afcb75acf1b53a96": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_e68b30493f8c41b19978fbbf27ab70c8",
+                    "id": "ME_Mapping_c7aee2b266c94044afcb75acf1b53a96",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -101,9 +99,9 @@
                         "forkedPlatform": "all"
                     }
                 },
-                "ME_Mapping_aa26d1026df84c3592d72f4508ee82c2": {
+                "ME_Mapping_b7f399408d4940aea1d4610d6fa21e8f": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_aa26d1026df84c3592d72f4508ee82c2",
+                    "id": "ME_Mapping_b7f399408d4940aea1d4610d6fa21e8f",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -125,43 +123,17 @@
                         "dataType": "string",
                         "forkedPlatform": "all"
                     }
-                },
-                "ME_Mapping_f7b6f3f946bd4ca6b8e224f1e7da803a": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_f7b6f3f946bd4ca6b8e224f1e7da803a",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Forms",
-                        "propertyName": "value",
-                        "widgetId": "lbChannelNameInsideFrmChannels",
-                        "widgetPath": "this.view.tbNewChannel.lbChannelNameInsideFrmChannels",
-                        "widgetType": "ListBox",
-                        "dataType": "string",
-                        "itemId": "frmChannels",
-                        "collectionId": "selectedKeyValues",
-                        "widgetKUID": "e74135133adb4951972fe5130a0db4e5",
-                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Variables",
-                        "propertyName": "channelName",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_i6a02d1f9c224f7c808ff4be356863df", "ME_Mapping_e68b30493f8c41b19978fbbf27ab70c8", "ME_Mapping_aa26d1026df84c3592d72f4508ee82c2", "ME_Mapping_f7b6f3f946bd4ca6b8e224f1e7da803a"],
+            "mappingsOrder": ["ME_Mapping_a59c816387dc45d2a15232d7680ec9f7", "ME_Mapping_c7aee2b266c94044afcb75acf1b53a96", "ME_Mapping_b7f399408d4940aea1d4610d6fa21e8f"],
             "callbackType": null,
             "enableMappingEditor": true
         }, {
-            "id": "IF_CONDITION_ide_onTextChange_f30589142cc44198b5bf23772c44acb1",
+            "id": "IF_CONDITION_ide_onTextChange_ic0b364cf3674fdea7363a7fa64fa10d",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
-                "leftValue": "this.view.tbNewChannel.txtChannelInsideFrmChannels.text",
+                "leftValue": "this.view.tbNewChannel.txtChannelIDInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "\"\"",
@@ -169,7 +141,7 @@
                 "leftWidgetKUID": "a709edb70a60483983498ef971327e19"
             }, {
                 "leftValueType": "widgetprop",
-                "leftValue": "this.view.tbNewChannel.txtChannelInsideFrmChannels.text",
+                "leftValue": "this.view.tbNewChannel.txtChannelIDInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "undefined",
@@ -193,23 +165,31 @@
                 "leftWidgetKUID": "ae6d0917eb824707883abe8c2ce5c352"
             }, {
                 "leftValueType": "widgetprop",
-                "leftValue": "this.view.tbNewChannel.lbChannelNameInsideFrmChannels.selectedKey",
+                "leftValue": "this.view.tbNewChannel.txtChannelNameInsideFrmChannels.text",
                 "operator": "===",
                 "rightValueType": "value",
-                "rightValue": "\"lb1\"",
+                "rightValue": "\"\"",
                 "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
-                "leftWidgetKUID": "e74135133adb4951972fe5130a0db4e5"
+                "leftWidgetKUID": "afb06348ad9a42ba8cc46faa22a3ee14"
+            }, {
+                "leftValueType": "widgetprop",
+                "leftValue": "this.view.tbNewChannel.txtChannelNameInsideFrmChannels.text",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "undefined",
+                "leftItemKUID": "c1e9143f6fef4291a170222e7c044c7c",
+                "leftWidgetKUID": "afb06348ad9a42ba8cc46faa22a3ee14"
             }],
             "callbackType": null,
             "criteria": "any"
         }, {
-            "id": "ADD_SNIPPET_ide_onTextChange_da64d28d433c430da279229e8a872e54",
+            "id": "ADD_SNIPPET_ide_onTextChange_c91e46e05df3497e8a561f62b7e5a09e",
             "type": "ADD_SNIPPET",
             "codeSnippet": "this.view.btnSaveNewChannelInsideFrmChannels.setEnabled(false);\nthis.view.btnSaveNewChannelInsideFrmChannels.opacity = 0.5;",
-            "parentId": "IF_CONDITION_ide_onTextChange_f30589142cc44198b5bf23772c44acb1",
+            "parentId": "IF_CONDITION_ide_onTextChange_ic0b364cf3674fdea7363a7fa64fa10d",
             "callbackType": null
         }, {
-            "id": "_ide_onTextChange_i29c32afa50c4e559487f7e33edc4efd",
+            "id": "_ide_onTextChange_h146111bf39f496492b32ecafe6e5038",
             "type": "STYLE_ACTION",
             "itemType": "FORM",
             "itemId": "frmChannels",
@@ -235,16 +215,16 @@
                 "duration": "0"
             },
             "start": "Immediately",
-            "parentAnimation": "STYLE_ACTION_f77486343dc44627a6dafaee331665a2",
-            "animationId": "STYLE_ACTION_e908c9164b0949c69304c3caf63f2474",
-            "displayAnimationId": "STYLE_ACTION_e908c9164b0949c69304c3caf63f2474",
+            "parentAnimation": "STYLE_ACTION_e3128572f78a4bddb605536cb2e77daa",
+            "animationId": "STYLE_ACTION_db5a22f6c127411a8705f9d6dfb4f3b7",
+            "displayAnimationId": "STYLE_ACTION_db5a22f6c127411a8705f9d6dfb4f3b7",
             "forkedPlatform": "all",
-            "parentId": "IF_CONDITION_ide_onTextChange_f30589142cc44198b5bf23772c44acb1",
+            "parentId": "IF_CONDITION_ide_onTextChange_ic0b364cf3674fdea7363a7fa64fa10d",
             "callbackType": null,
             "disabled": true,
             "widgetPath": "this.view.btnSaveNewChannelInsideFrmChannels"
         }, {
-            "id": "ELSE_CONDITION_ide_onTextChange_a5790ac0e512401794ef61acd30ee985",
+            "id": "ELSE_CONDITION_ide_onTextChange_e5b841d0396340bdb8c0df1480ed4d66",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -256,20 +236,20 @@
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "ADD_SNIPPET_ide_onTextChange_j683befb1fef4896ba0a804b25a82bf9",
+            "id": "ADD_SNIPPET_ide_onTextChange_d9485111f6d8438587c80c2d50c4d71f",
             "type": "ADD_SNIPPET",
             "codeSnippet": "this.view.btnSaveNewChannelInsideFrmChannels.setEnabled(true);\nthis.view.btnSaveNewChannelInsideFrmChannels.opacity = 1;",
-            "parentId": "ELSE_CONDITION_ide_onTextChange_a5790ac0e512401794ef61acd30ee985",
+            "parentId": "ELSE_CONDITION_ide_onTextChange_e5b841d0396340bdb8c0df1480ed4d66",
             "callbackType": null
         }, {
-            "id": "_ide_onTextChange_ae624de8be4240ed9079c6f12771bc86",
+            "id": "_ide_onTextChange_fa07fbf4e1a243ab87defbbd4be7b520",
             "type": "STYLE_ACTION",
             "itemType": "FORM",
             "itemId": "frmChannels",
-            "widgetId": "btnSaveNewChannelInsideFrmChannels",
+            "widgetId": "txtChannelIDInsideFrmChannels",
             "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
-            "widgetKUID": "j0858120438c4d45b43b1ff72d7c1a7b",
-            "wType": "Button",
+            "widgetKUID": "a709edb70a60483983498ef971327e19",
+            "wType": "TextField",
             "animationObject": {
                 "anchorPoint": {},
                 "stepConfig": {
@@ -288,14 +268,14 @@
                 "duration": "0"
             },
             "start": "Immediately",
-            "parentAnimation": "STYLE_ACTION_e908c9164b0949c69304c3caf63f2474",
-            "animationId": "STYLE_ACTION_f77486343dc44627a6dafaee331665a2",
-            "displayAnimationId": "STYLE_ACTION_f77486343dc44627a6dafaee331665a2",
+            "parentAnimation": "STYLE_ACTION_db5a22f6c127411a8705f9d6dfb4f3b7",
+            "animationId": "STYLE_ACTION_e3128572f78a4bddb605536cb2e77daa",
+            "displayAnimationId": "STYLE_ACTION_e3128572f78a4bddb605536cb2e77daa",
             "forkedPlatform": "all",
-            "parentId": "ELSE_CONDITION_ide_onTextChange_a5790ac0e512401794ef61acd30ee985",
+            "parentId": "ELSE_CONDITION_ide_onTextChange_e5b841d0396340bdb8c0df1480ed4d66",
             "callbackType": null,
             "disabled": true,
-            "widgetPath": "this.view.btnSaveNewChannelInsideFrmChannels"
+            "widgetPath": "this.view.tbNewChannel.txtChannelIDInsideFrmChannels"
         }]
     }
 }
