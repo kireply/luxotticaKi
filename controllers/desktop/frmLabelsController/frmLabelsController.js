@@ -186,7 +186,8 @@ define({
                   var showLabels = parseInt(this.view.lbShowEntries.selectedKeyValue[1], 10);  // 10 is for the decimal
                   var data = gblLabelsList.slice(0, ++showLabels); //++ because the first row is used for the header
                   
-                  this.view.segLabels.setData(data);           
+                  this.view.segLabels.setData(data);
+                  voltmx.print("### gblLabels FINALE: " + JSON.stringify(gblLabelsList));
                 });
             };
             reader.readAsBinaryString(event.target.files[0]);
@@ -243,7 +244,7 @@ define({
     //voltmx.print("### gblLabelsList: " + JSON.stringify(gblLabelsList, ' ', 4));
     
     //	Creating the Workbook and filling it
-    var worksheet = XLSX.utils.json_to_sheet(gblLabelsList);
+    var worksheet = XLSX.utils.json_to_sheet(gblLabelsList.slice(1));  // adding .slice(1) to remove the duplicate header
     var workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, this.view.txtWorksheetName.text);
     
