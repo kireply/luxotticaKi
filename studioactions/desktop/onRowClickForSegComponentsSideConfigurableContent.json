@@ -160,7 +160,7 @@
         }, {
             "id": "ADD_SNIPPET_c90984a1c03a4694a2f455534513af6c",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### SELECTED ITEM: \" + JSON.stringify(this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0]));\n\n\nselected_item_right = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].lblComponentName;\nselected_item_right_img = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].imgComponent;\nselected_item_right_modal_img = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].modalImgComponent;\n",
+            "codeSnippet": "// Saving data of configurable component just clicked\n\nvoltmx.print(\"### SELECTED ITEM: \" + JSON.stringify(this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0]));\n\nselected_item_right = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].lblComponentName;\nselected_item_right_img = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].imgComponent;\nselected_item_right_modal_img = this.view.ComponentsSide.segComponentsSideConfigurableContent.selectedRowItems[0].modalImgComponent;",
             "parentId": null,
             "callbackType": null
         }, {
@@ -238,7 +238,7 @@
         }, {
             "id": "ADD_SNIPPET_bb8cc980abc34991bac605b8340e5834",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// Only showing the component modal image\nthis.view.flxComponentImage.setVisibility(true);\nthis.view.imgComponent.src = selected_item_right_modal_img;",
+            "codeSnippet": "// Only showing the component's modal image\nthis.view.flxComponentImage.setVisibility(true);\nthis.view.imgComponent.src = selected_item_right_modal_img;",
             "parentId": "_h1c54bfffdac4075b8f6746c49fd6abf",
             "callbackType": null
         }, {
@@ -289,7 +289,7 @@
         }, {
             "id": "ADD_SNIPPET_d0f4c7a37df84f06967e37e01de980e1",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "customQueryOutputConfigurable = PROPERTY_TEMPLATE_CustomQuery.records;\n\n\nvoltmx.print(\"### FLX SCROLL SETTINGS NUMBER OF WIDGETS BEFORE: \" + JSON.stringify(self.view.settingsSide.flxScrollSettingsContent.widgets().length));",
+            "codeSnippet": "var customQueryOutputConfigurable = PROPERTY_TEMPLATE_CustomQuery.records;\n\n\nvoltmx.print(\"### FLX SCROLL SETTINGS NUMBER OF WIDGETS BEFORE: \" + JSON.stringify(self.view.settingsSide.flxScrollSettingsContent.widgets().length));",
             "parentId": "_fefcd5e562134a6f8c0e55e49dabd429",
             "callbackType": null
         }, {

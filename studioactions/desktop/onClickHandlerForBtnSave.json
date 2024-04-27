@@ -33,6 +33,16 @@
             "disabled": null,
             "source": "controller"
         }, {
+            "id": "LOADING_INDICATOR_bf7d44949b3041a58fb554645ccbcd76",
+            "selectedOption": "dismiss",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "_a3ec7710328842a291d87da3e84d93a6",
             "type": "IF_CONDITION",
             "conditions": [{

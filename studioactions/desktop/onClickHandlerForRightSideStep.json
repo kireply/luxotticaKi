@@ -28,7 +28,7 @@
         }, {
             "id": "ADD_SNIPPET_c2a4c5e2594849308b8451ee4d26d83f",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### ON CLICK RIGHT\");\nvoltmx.print(\"### WIDTH: \" + this.view.flxRightSide.width);\n\nright_width = parseInt(this.view.flxRightSide.width, 10); // 10 è la base numerica (decimale in questo caso)\n\n\nvoltmx.print(\"### NEW WIDTH: \" + right_width);\n",
+            "codeSnippet": "\n// To avoid conficts by unintentional double clicking on sides while they have the animation going on\nthis.view.flxRightSide.setEnabled(false);\nthis.view.flxLeftSide.setEnabled(false);\n\n\nvoltmx.print(\"### ON CLICK RIGHT\");\nvoltmx.print(\"### WIDTH: \" + this.view.flxRightSide.width);\n\nright_width = parseInt(this.view.flxRightSide.width, 10); // 10 è la base numerica (decimale in questo caso)\n\n\nvoltmx.print(\"### NEW WIDTH: \" + right_width);\n",
             "parentId": null,
             "callbackType": null
         }, {
@@ -47,7 +47,7 @@
         }, {
             "id": "ADD_SNIPPET_d63e407c7c1041ee8164c9852af75fbd",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### LEFT WIDTH: \" + self.view.flxLeftSide.width);\n\nthis.view.flxComponentsSide.opacity = 1;\nthis.view.flxRightSide.skin = \"HalfSelectedSide\";\n\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(false);\n// self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxSelectedComponent.setVisibility(false);\n\ncontent = self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxScrollLeft.widgets();\n\nvoltmx.print(\"### TYPE OF LEFT CONTENT: \" + typeof content);\n\ncontent.forEach(function(widget) {\n   voltmx.print(\"### WIDGET ID: \" + JSON.stringify(widget.id));\n//    debugger; // Questo fermerà l'esecuzione qui permettendoti di ispezionare `widget`\n  if (widget.id && widget.id.includes(\"flex\")) {\n  \tvoltmx.print(\"### SELECTED COMPONENT\");\n    widget.isVisible = false;\n//   \tdebugger; // Questo fermerà l'esecuzione qui permettendoti di ispezionare `widget`\n  }\n});\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.setEnabled(false);",
+            "codeSnippet": "// The sides was in halves and now the user wants to OPEN the LEFT one\n// We will expand the selected side (RIGHT SIDE)\n\nvoltmx.print(\"### LEFT WIDTH: \" + self.view.flxLeftSide.width);\n\nthis.view.flxComponentsSide.opacity = 1;\nthis.view.flxRightSide.skin = \"HalfSelectedSide\";\n\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(false);\n// self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxSelectedComponent.setVisibility(false);\n\n// retriveing the content of the LEFT side (in order to hide it when the RIGHT SIDE is open)\ncontent = self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxScrollLeft.widgets();\n\nvoltmx.print(\"### TYPE OF LEFT CONTENT: \" + typeof content);\n\n\n// for each element in the LEFT SIDE, we hide it\ncontent.forEach(function(widget) {\n   voltmx.print(\"### WIDGET ID: \" + JSON.stringify(widget.id));\n//    debugger; // Questo fermerà l'esecuzione qui permettendoti di ispezionare `widget`\n  if (widget.id && widget.id.includes(\"flex\")) {\n  \tvoltmx.print(\"### SELECTED COMPONENT\");\n    widget.isVisible = false;\n//   \tdebugger; // Questo fermerà l'esecuzione qui permettendoti di ispezionare `widget`\n  }\n});\n\n// disabling the use of the closed side (LEFT SIDE)\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.setEnabled(false);",
             "parentId": "_g55a23df86e148aca34fae8a36d7e072",
             "callbackType": null
         }, {
@@ -70,7 +70,7 @@
                 "delay": "0",
                 "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "200"
+                "duration": "190"
             },
             "start": "Immediately",
             "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
@@ -93,6 +93,13 @@
             "parentId": null,
             "callbackType": null,
             "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_c14f938f6b0f47238179f749c6086442",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// To avoid conficts by unintentional double clicking on sides while they have the animation going on\nthis.view.flxRightSide.setEnabled(true);\nthis.view.flxLeftSide.setEnabled(true);",
+            "parentId": null,
+            "callbackType": null,
+            "disabled": true
         }, {
             "id": "ADD_SNIPPET_i380c15f76ee4e2285ae1e27ac6d3ca0",
             "type": "ADD_SNIPPET",
@@ -154,7 +161,7 @@
                 "delay": "0",
                 "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "200"
+                "duration": "190"
             },
             "start": "Immediately",
             "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
@@ -184,7 +191,7 @@
                 "delay": "0",
                 "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "200"
+                "duration": "190"
             },
             "start": "Immediately",
             "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
@@ -248,17 +255,19 @@
             "type": "ADD_SNIPPET",
             "codeSnippet": "self.view.ComponentsSide.segComponentsSideConfigurableContent.setData(gblConfigurableComponentsTemplates);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(gblSimpleComponentsTemplates);\n",
             "parentId": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
-            "callbackType": "Callback"
+            "callbackType": "Callback",
+            "disabled": true
         }, {
             "id": "ADD_SNIPPET_d4518de2d18b4d1b9c94bfbcb03d5e4d",
             "type": "ADD_SNIPPET",
             "codeSnippet": "self.view.ComponentsSide.segComponentsSideConfigurableContent.setEnabled(false);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setEnabled(false);",
             "parentId": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
-            "callbackType": "Callback"
+            "callbackType": "Callback",
+            "disabled": true
         }, {
             "id": "ADD_SNIPPET_h1266a5463e84aaca868b4007e1da299",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### LEFT WIDTH: \" + self.view.flxLeftSide.width);\n\n\n// if (gblSelectedComponentLeft === true){\n//   self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxSelectedComponent.setVisibility(true);\n// } else {\n//   self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(true);\n//   self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(true);\n//   self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(true);\n// }\n\n\ncontent = self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxScrollLeft.widgets();\nif (content.length > 0){\n  voltmx.print(\"### THERE ARE SOME SELECTED COMPONENTS!\");\n  content.forEach(function(widget) {\n   voltmx.print(\"### WIDGET ID: \" + JSON.stringify(widget.id));\n//    debugger; // Questo fermerà l'esecuzione qui permettendoti di ispezionare `widget`\n  if (widget.id && widget.id.includes(\"flex\")) {\n  \tvoltmx.print(\"### SELECTED COMPONENT FOUND\");\n    widget.isVisible = true;\n//   \tdebugger; // Questo fermerà l'esecuzione qui permettendoti di ispezionare `widget`\n  }\n});\n  self.view.flxLeftSide.flxScrollLeft.forceLayout();\n  \n} else {\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(true);\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(true);\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(true);\n}\n\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.setEnabled(true);\n",
+            "codeSnippet": "voltmx.print(\"### LEFT WIDTH: \" + self.view.flxLeftSide.width);\n\n\n// if (gblSelectedComponentLeft === true){\n//   self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxSelectedComponent.setVisibility(true);\n// } else {\n//   self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(true);\n//   self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(true);\n//   self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(true);\n// }\n\n// we found some components previously selected for le LEFT SIDE. We put them visible again\nvar content = self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxScrollLeft.widgets();\nif (content.length > 0){\n  voltmx.print(\"### THERE ARE SOME SELECTED COMPONENTS!\");\n  content.forEach(function(widget) {\n   voltmx.print(\"### WIDGET ID: \" + JSON.stringify(widget.id));\n//    debugger; // Questo fermerà l'esecuzione qui permettendoti di ispezionare `widget`\n  if (widget.id && widget.id.includes(\"flex\")) {\n  \tvoltmx.print(\"### SELECTED COMPONENT FOUND\");\n    widget.isVisible = true;\n//   \tdebugger; // Questo fermerà l'esecuzione qui permettendoti di ispezionare `widget`\n  }\n});\n  self.view.flxLeftSide.flxScrollLeft.forceLayout();\n  \n} else { // no components previously selected for the LEFT SIDE\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(true);\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(true);\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(true);\n}\n\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.setEnabled(true);\n\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setData(gblConfigurableComponentsTemplates);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(gblSimpleComponentsTemplates);\n\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setEnabled(false);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setEnabled(false);\n\n// To avoid conficts by unintentional double clicking on sides while they have the animation going on\nself.view.flxRightSide.setEnabled(true);\nself.view.flxLeftSide.setEnabled(true);",
             "parentId": "SCALE_ACTION_de6b47ad6de543ba8f6596aa75e41bee",
             "callbackType": "Callback"
         }, {
@@ -332,6 +341,12 @@
             "callbackType": "Callback",
             "widgetPath": "this.view.flxRightSide"
         }, {
+            "id": "ADD_SNIPPET_i6751ba4d24846809c463f419b2753df",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// Filtering the components to keep only the non-\"previewSection\" ones.\n// So we are keeping only the \"stepSection\" ones (that we need for the RIGHT SIDE)\n\n\nlet filteredSimpleComponents = gblSimpleComponentsTemplates.filter(function(item) {\n  return item.lblLayout !== \"previewSection\";\n});\n\n\nlet filteredConfigurableComponents = gblConfigurableComponentsTemplates.filter(function(item) {\n  return item.lblLayout !== \"previewSection\";\n});\n\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(filteredSimpleComponents);\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setData(filteredConfigurableComponents);\n\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setEnabled(true);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setEnabled(true);\n\n\n// To avoid conficts by unintentional double clicking on sides while they have the animation going on\nself.view.flxRightSide.setEnabled(true);\nself.view.flxLeftSide.setEnabled(true);",
+            "parentId": "SCALE_ACTION_a5ee269f99014d2494228066a9e9fc03",
+            "callbackType": "Callback"
+        }, {
             "id": "MOVE_ACTION_dd5cd71148034ab281bd84caf8887e40",
             "type": "MOVE_ACTION",
             "itemType": "FORM",
@@ -351,7 +366,7 @@
                 "delay": "0",
                 "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "200"
+                "duration": "190"
             },
             "start": "Immediately",
             "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
@@ -365,7 +380,7 @@
         }, {
             "id": "ADD_SNIPPET_d65ace6656d64b5782df8356de2885a1",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "let steps_widgets = self.view.flxSteps.widgets();\nlet left_position = 0;\nlet left_position_percentage = null;\nvoltmx.print(\"### FLEX STEPS NUMBER OF WIDGETS: \" + JSON.stringify(steps_widgets.length));\n\n\n\nfor (let i = 2; i < steps_widgets.length; i++) {\n  let widget = steps_widgets[i];\n  if (widget.id === \"boxStep2\"){\n    left_position = parseInt(self.view.flxBoxFirstStep.left, 10) + parseInt(self.view.flxBoxFirstStep.width, 10) + 2;\n    left_position_percentage = left_position + \"%\";\n  } else {\n    let previous_widget = steps_widgets[i-1];\n    left_position = parseInt(previous_widget.left, 10) + parseInt(previous_widget.width, 10) + 2;\n    left_position_percentage = left_position + \"%\"; \n  }\n  let animationDef = {\n    \"0\": {\n      \"left\": widget.left\n    },\n    \"100\": {\n      \"left\": left_position_percentage\n    }\n  };\n  let animDef = voltmx.ui.createAnimation(animationDef);\n  widget.animate(animDef, {\n    \"duration\": 0.5,\n    \"iterationCount\": 1,\n    \"delay\": 0,\n    \"fillMode\": voltmx.anim.FILL_MODE_FORWARDS\n  });\n}\n\n\n",
+            "codeSnippet": "let steps_widgets = self.view.flxSteps.widgets();\nlet left_position = 0;\nlet left_position_percentage = null;\nvoltmx.print(\"### FLEX STEPS NUMBER OF WIDGETS: \" + JSON.stringify(steps_widgets.length));\n\n\n// moving the step boxes to the left \nfor (let i = 2; i < steps_widgets.length; i++) {\n  let widget = steps_widgets[i];\n  if (widget.id === \"boxStep2\"){\n    left_position = parseInt(self.view.flxBoxFirstStep.left, 10) + parseInt(self.view.flxBoxFirstStep.width, 10) + 2;\n    left_position_percentage = left_position + \"%\";\n  } else {\n    let previous_widget = steps_widgets[i-1];\n    left_position = parseInt(previous_widget.left, 10) + parseInt(previous_widget.width, 10) + 2;\n    left_position_percentage = left_position + \"%\"; \n  }\n  let animationDef = {\n    \"0\": {\n      \"left\": widget.left\n    },\n    \"100\": {\n      \"left\": left_position_percentage\n    }\n  };\n  let animDef = voltmx.ui.createAnimation(animationDef);\n  widget.animate(animDef, {\n    \"duration\": 0.5,\n    \"iterationCount\": 1,\n    \"delay\": 0,\n    \"fillMode\": voltmx.anim.FILL_MODE_FORWARDS\n  });\n}\n\n\n",
             "parentId": "MOVE_ACTION_dd5cd71148034ab281bd84caf8887e40",
             "callbackType": "Callback"
         }, {
@@ -406,18 +421,6 @@
             "parentId": "MOVE_ACTION_e06380ff5be441ba8db1461fb2a3ad17",
             "callbackType": "Callback",
             "disabled": true
-        }, {
-            "id": "ADD_SNIPPET_i6751ba4d24846809c463f419b2753df",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "let filteredSimpleComponents = gblSimpleComponentsTemplates.filter(function(item) {\n  return item.lblLayout !== \"previewSection\";\n});\n\n\nlet filteredConfigurableComponents = gblConfigurableComponentsTemplates.filter(function(item) {\n  return item.lblLayout !== \"previewSection\";\n});\n\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(filteredSimpleComponents);\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setData(filteredConfigurableComponents);",
-            "parentId": "SCALE_ACTION_b6a5399d4d51452cb85ae83f3813fba4",
-            "callbackType": "Callback"
-        }, {
-            "id": "ADD_SNIPPET_j07b6e4357c64bcb9f3c6de9f942ebde",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "self.view.ComponentsSide.segComponentsSideConfigurableContent.setEnabled(true);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setEnabled(true);",
-            "parentId": "SCALE_ACTION_b6a5399d4d51452cb85ae83f3813fba4",
-            "callbackType": "Callback"
         }]
     }
 }

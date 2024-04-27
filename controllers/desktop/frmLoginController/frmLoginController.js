@@ -483,7 +483,7 @@ define({
   "RXC_COLOR_PICKER": {
     "displayName": "RXC_COLOR_PICKER",
     "layout": ["stepSection"],
-    "availableAattributes": ["color"],
+    "availableAttributes": ["color"],
     "nestedViewModes": ["inside", "outside"],
     "viewModes": ["immediate", "after selection"],
     "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_COLOR_PICKER.png",
@@ -1666,7 +1666,7 @@ define({
   "RXC_SLIDER": {
     "displayName": "RXC_SLIDER",
     "layout": ["stepSection"],
-    "availableAattributes": ["brand"],
+    "availableAttributes": ["brand"],
     "nestedViewModes": ["inside", "outside"],
     "viewModes": ["immediate", "after selection"],
     "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_SLIDER.png",
@@ -1725,7 +1725,7 @@ define({
   "RXC_SWATCH_LIST": {
     "displayName": "RXC_SWATCH_LIST",
     "layout": ["stepSection"],
-    "availableAattributes": ["color, frameColor"],
+    "availableAttributes": ["color", "frameColor"],
     "nestedViewModes": ["inside", "outside"],
     "viewModes": ["immediate", "after selection"],
     "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_SWATCH_LIST.png",
@@ -1840,7 +1840,7 @@ define({
   "RXC_TOGGLE": {
     "displayName": "RXC_TOGGLE",
     "layout": ["stepSection"],
-    "availableAattributes": ["polar"],
+    "availableAttributes": ["polar"],
     "nestedViewModes": ["inside", "outside"],
     "viewModes": ["immediate", "after selection"],
     "previewImage": "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_TOGGLE.png",

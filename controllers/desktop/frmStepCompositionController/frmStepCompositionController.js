@@ -7,7 +7,7 @@ define({
   
   
   
-
+  // This function is called at the end of executing functions "editProperty", "cloneComponent" or "deleteComponent"
   selectComponent: function(rightData, leftData, instance, nested){
     voltmx.print("### RIGHT DATA: " + JSON.stringify(rightData));
     voltmx.print("### LEFT DATA: " + JSON.stringify(leftData));
@@ -219,6 +219,9 @@ define({
   
   
   
+  
+  
+  
   onEndEditingCallback: function(propComp, identify, dropdown, switched){
     let value = null;
     if (dropdown){
@@ -330,22 +333,24 @@ define({
     if ((!switched) && (!dropdown)){
       propComp.propertyValue = "";
     }
-  },
+  },  // end of function "onEditingCallback".
 
   
   
   
   
-  
+  // This function is called when the user select a component from one of the two segments on the left of the form (Configurable and Simple).
+  // We retrieve from the db the data related to the component selected (calling the service PROPERTY_TEMPLATE_CustomQuery)
+  // and we pass them to the function as parameters.
   editProperty: function(list, rightSegmentData, leftSegmentData, selected_item, selected_item_img, selected_item_modal_img){
 
     voltmx.print("### LIST: " + JSON.stringify(list));
 //     LIST: [{"mode":"dropdown","default":"bottom-left","component_name":"RXC_BRAND_FOOTER","name":"position","id":"129","type":"string","position_values":"top-left, top-right, bottom-left, bottom-right, center","required":"false"},{"mode":"label","default":"Frame size","component_name":"RXC_BRAND_FOOTER","name":"frameSize","id":"130","type":"string","position_values":"top-left, top-right, bottom-left, bottom-right, center","required":"false"}]
-    voltmx.print("### RIGHT SEGMENT DATA: " + JSON.stringify(rightSegmentData));
-    voltmx.print("### LEFT SEGMENT DATA: " + JSON.stringify(leftSegmentData));
-    voltmx.print("### SELECTED ITEM: " + JSON.stringify(selected_item));
-    voltmx.print("### SELECTED ITEM IMG: " + JSON.stringify(selected_item_img));
-    voltmx.print("### SELECTED ITEM MODAl IMG: " + JSON.stringify(selected_item_modal_img));
+    voltmx.print("### RIGHT SEGMENT DATA: " + JSON.stringify(rightSegmentData));  // starts empty (es. [])
+    voltmx.print("### LEFT SEGMENT DATA: " + JSON.stringify(leftSegmentData));  // starts empty (es. [])
+    voltmx.print("### SELECTED ITEM: " + JSON.stringify(selected_item));  // es. "RXC_TITLE_DESCRIPTION"
+    voltmx.print("### SELECTED ITEM IMG: " + JSON.stringify(selected_item_img));  // es. "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_TITLE_DESCRIPTION.png"
+    voltmx.print("### SELECTED ITEM MODAl IMG: " + JSON.stringify(selected_item_modal_img));  // es. "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_TITLE_DESCRIPTION.png"
     
 
     let index = 0;
@@ -356,13 +361,15 @@ define({
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
     let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
     
+    // left side is open. we are putting the selected component in the left side. (preview Section)
     if (left_width > 48){
       let count = this.view.flxScrollLeft.widgets().filter(widget =>
-                                               Object.keys(widget).some(key => key.startsWith("component"))
-                                              ).length;
-          instance = (count + 1).toString();
+                                                           Object.keys(widget).some(key => key.startsWith("component"))
+                                                          ).length;
+      instance = (count + 1).toString();
     }
     
+    // right side is open. we are putting the selected component in the right side. (step Section)
     if (right_width > 48) {
       if (gblCurrentStepOrder > 1){
         let right_widgets = this.view.flxRightSide.widgets();
@@ -382,6 +389,7 @@ define({
       }
     }
     
+    // creating the component key based on his name, number of instance and number of father step. es. "RXC_TITLE_DESCRIPTION_1_1"
     let compKey = selected_item + "_" + instance + "_" + (gblCurrentStepOrder).toString();
     this.modes[compKey] = [];
 	
@@ -398,10 +406,11 @@ define({
     gblLastInsertedComponent = selected_item;
     for (let i = 0; i < list.length; i++) {
 
-      console.log(list[i]);
+      voltmx.print("### list[i]: " + JSON.stringify(list[i]) );
+     // console.log(list[i]);
 
       let propertyName = list[i].name;
-      if(propertyName === "nestedComponents") { //nestedComponents / configurable
+      if(propertyName === "nestedComponents") { // nestedComponents (or we could put configurable)
         nested = true;
         this.modes[compKey].push({"nestedComponents": [] });
         continue;
@@ -420,7 +429,10 @@ define({
           centerX: '50%'
         }, {}, {});
         propComp.listBoxPlaceholder=`Please select a value`;
+        voltmx.print("### POSITION_MASTERDATA: " + JSON.stringify(position_masterData[list[i].name]));
         let masterDataValues = position_masterData[list[i].name];
+        voltmx.print("### MASTER DATA VALUES: " + JSON.stringify(masterDataValues) );
+        voltmx.print("### list[i]: " + JSON.stringify(list[i]) );
         let masterDataString = list[i][masterDataValues];
         voltmx.print("### MASTER DATA STRING: " + JSON.stringify(masterDataString));
         let valuesArray = masterDataString.split(", ");
@@ -513,7 +525,7 @@ define({
       propComp.propertyTemplateId = list[i].id;
       this.view.settingsSide.flxScrollSettingsContent.add(propComp);
       index +=1;
-      rightSegmentData.push(properties);
+      rightSegmentData.push(properties);  // popolating the RIGHT data of the component
     }
     if (this.view.settingsSide.flxScrollSettingsContent.widgets().length > 0){
       this.view.settingsSide.txt.setVisibility(false);
@@ -521,7 +533,7 @@ define({
       this.view.settingsSide.flxScrollSettingsContent.forceLayout();
     }
     let selected_component_data = {lblComponentName: selected_item, imgComponent: selected_item_img, modalImgComponent: selected_item_modal_img};
-    leftSegmentData.push(selected_component_data);
+    leftSegmentData.push(selected_component_data);  // popolating the LEFT data of the component
 	
     voltmx.print("### selected_component_data: " + selected_component_data);
     voltmx.print("### selected_component_data STRINGIFY: " + JSON.stringify(selected_component_data) );
@@ -531,8 +543,10 @@ define({
     
     this.selectComponent(rightSegmentData, leftSegmentData, instance, nested);
 	
-  },
+  }, // end of function editProperty.
 
+  
+  
   
   
   
@@ -553,6 +567,9 @@ define({
   // function invoked when Save Button is clicked (invoked from action editor)
   
   saveStepComposition: function(){
+    
+    voltmx.application.showLoadingScreen(null, "Saving step...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
+    
     voltmx.print("### GBL PROPERTY TEMPLATES IDS: " + JSON.stringify(gblPropertyTemplatesIds));
     let left_widgets = this.view.flxScrollLeft.widgets();
     let steps = this.view.flxRightSide.widgets();
@@ -817,6 +834,7 @@ define({
         });
       } 
     });
+    voltmx.application.dismissLoadingScreen();
   },   // end of function saveStepComposition
   
   
@@ -1179,6 +1197,7 @@ define({
   
   
   
+  
   cloneComponent: function(id){
     let scroll = this.findCurrentFlexScroll();
     let scroll_widgets = scroll.widgets();
@@ -1208,7 +1227,8 @@ define({
 //       debugger;
       this.selectComponent(new_widget[1], new_widget[0], instance, false);
     });
-  }, 
+  },  // end of function "cloneComponent".
+  
   
   
   
@@ -1243,7 +1263,7 @@ define({
 //       debugger;
       this.selectComponent(new_widget[1], new_widget[0], instance, false);
     });
-  }
+  }    // end of function "deleteComponent".
   
   
   

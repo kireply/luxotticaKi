@@ -246,7 +246,14 @@
                     "value": ""
                 }
             },
+            "height": {
+                "Default": {
+                    "type": "ref",
+                    "value": "preferred"
+                }
+            },
             "responsiveData": {},
+            "text": "",
             "top": {
                 "Default": {
                     "type": "string",
