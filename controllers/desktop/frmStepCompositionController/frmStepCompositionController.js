@@ -843,6 +843,7 @@ define({
   
   
   
+  // this function creates the new step (and the related box, at the top right)
   addNewStep: function(left_position){
     let index = gblLastInsertedStep + 1;
 
@@ -865,7 +866,8 @@ define({
     const box = new ki.luxottica.boxStep({
       id: `boxStep${index}`,
       left: `${left_position_percentage}`,
-      centerY: '50%'
+      centerY: '50%',
+      //width: '60%',
     }, {}, {});
     
 
@@ -948,8 +950,6 @@ define({
 
     };
     
-    
-    
     this.view.flxSteps.add(box);
 
     this.view.flxScrollRight.setVisibility(false);
@@ -975,7 +975,14 @@ define({
     this.view.settingsSide.flxScrollSettingsContent.removeAll();
     this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
     this.view.settingsSide.txt.setVisibility(true);
-  },
+    
+    box.onClickTeaser();
+    
+  },  // end of function "addNewStep"
+  
+  
+  
+  
   
   
   
@@ -1004,7 +1011,11 @@ define({
       }
     }
     return scroll
-  }, 
+    
+  },  // end of function "findCurrentFlexScroll"
+  
+  
+  
   
   
   
@@ -1148,7 +1159,11 @@ define({
     this.view.settingsSide.flxScrollSettingsContent.removeAll();
     this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
     this.view.settingsSide.txt.setVisibility(true);
-  },
+    
+  },  // end of function "clickedArrow"
+  
+  
+  
   
   
   
@@ -1190,7 +1205,9 @@ define({
           widg[widget_key].flxAddNestedVisible = false;
         }
       });
-  }, 
+    
+  },  // end of functon "showOrHideMoveCloneDelete" 
+  
   
   
   
@@ -1227,7 +1244,9 @@ define({
 //       debugger;
       this.selectComponent(new_widget[1], new_widget[0], instance, false);
     });
+    
   },  // end of function "cloneComponent".
+  
   
   
   

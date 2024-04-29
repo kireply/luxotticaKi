@@ -474,12 +474,13 @@ async function publish() {
       Object.keys(groupedByStepOrder).forEach(stepOrder => {
         let recordsForStepOrder = groupedByStepOrder[stepOrder];
         let component = {};
-        
+       
         
         // Inizio codice per rimozione delle labels (che iniziano per numero, es "123_ + qualcosa")
-        let regex = /^[0-9]{3}_/;
+        //let regex = /^[0-9]{3}_/;
         
         recordsForStepOrder.forEach(record => { // questa riga invece già presente (e corretta)
+      /* Codice per rimozione delle labels (che iniziano per numero, es "123_ + qualcosa")
           voltmx.print("### recordsForStepOrder: " + recordsForStepOrder);
           voltmx.print("### recordsForStepOrder stringify: " + JSON.stringify(recordsForStepOrder) );
           voltmx.print("### record: " + record);
@@ -487,8 +488,8 @@ async function publish() {
           voltmx.print("### record stringify: " + JSON.stringify(record.property_value) );
           if (regex.test(record.property_value) ) {
             voltmx.print();
-            return;
-          }
+            return; 
+          } */
           
           // Fine rimozione Labels (che iniziano con numero)
           
@@ -521,9 +522,9 @@ async function publish() {
 
         // Aggiungi i componenti al passo corrispondente in JSON_step
         let stepIndex = JSON_step.steps.findIndex(step => step.definingAttributes.order === stepOrder);
-
+        
         JSON_step.steps[stepIndex].components = componentsArray;
-
+        
       });
       resolve(JSON_step);
     }, (error) => {
@@ -533,6 +534,15 @@ async function publish() {
 
   JSON_step = await getSectionFlow(component_params);
 
+  /* sorting the steps based on their "order"
+  JSON_step.steps[0].components.sort((a, b) => a.order - b.order);
+  voltmx.print("### JSON_step sorted: " + JSON.stringify(JSON_step)); */
+  
+  // for each list of components in each step
+  JSON_step.steps.forEach(step => {
+    // sorting the steps based on their "order"
+    step.components.sort((a, b) => a.order - b.order);
+  });
 
   var JSON_output = {
     definingAttributes: JSON_flow,
@@ -542,7 +552,5 @@ async function publish() {
   };
 
   voltmx.print("### JSON OUTPUT: " + JSON.stringify(JSON_output));
-
-
 
 }

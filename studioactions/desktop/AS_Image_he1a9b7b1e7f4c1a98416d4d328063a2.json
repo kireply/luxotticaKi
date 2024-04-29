@@ -25,7 +25,8 @@
             "type": "ADD_SNIPPET",
             "codeSnippet": "this.view.flxNewStepBlur.setVisibility(false);",
             "parentId": null,
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }]
     }
 }

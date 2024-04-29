@@ -14,6 +14,7 @@
   "border_type": 0,
   "border_width": 0,
   "desktopweb": {
+    "font_name": "Montserrat-Regular",
     "font_size": 100,
     "isForked": false
   },
@@ -37,6 +38,14 @@
     "isForked": false
   },
   "kuid": "s1a16550f88c443fafb2a7a137c8d2f2",
+  "nativemac": {
+    "font_size": 100,
+    "isForked": false
+  },
+  "nativewin": {
+    "font_size": 100,
+    "isForked": false
+  },
   "spaan": {
     "font_size": 100,
     "isForked": false

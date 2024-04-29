@@ -45,6 +45,10 @@
     "containerheightmode": 1,
     "containerweight": 100,
     "contentalignment": 4,
+    "desktopweb": {},
+    "disabledSkins": {
+        "placeholderSkin": "s1097cf7fb814d7d94fa48315ba519b9"
+    },
     "focusskin": "s5baa1686b2046fe972f2e79e8204ad8",
     "id": "txtEmail",
     "info": null,
@@ -56,7 +60,6 @@
     "name": "kony.ui.TextBox2",
     "parent": "flxLoginWrapper",
     "pf": "frmLogin",
-    "placeholderskin": "sfd700440c644c55be0d2d9437fdf50f",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "securetextentry": false,
