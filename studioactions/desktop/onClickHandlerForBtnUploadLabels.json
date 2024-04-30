@@ -16,6 +16,16 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_f6d36527b1a344a99a3fc0b8eb1bc3f3",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "listUpload",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "INVOKE_FUNCTION__j9a02f713f8c488091c19deacf93ccf4",
             "type": "INVOKE_FUNCTION",
             "sequenceKUID": "getExcel",
@@ -25,6 +35,75 @@
             "callbackType": null,
             "disabled": false,
             "source": "controller"
+        }, {
+            "id": "ADD_SNIPPET_e442a1d289e14da98e18763fde85ca26",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### listUpload: \" + JSON.stringify(listUpload) );",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_e60cc6b8b46647edb986e34b4e3d81c1",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_hda10d42318a4a8a9ba282e50bc58ef2": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_hda10d42318a4a8a9ba282e50bc58ef2",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "listUpload",
+                        "dataType": "collection",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "Labels",
+                        "dataType": "collection",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_CustomQueryUpdate",
+                            "operationid": "128958"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_hda10d42318a4a8a9ba282e50bc58ef2"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABEL_CustomQueryUpdate",
+                "operationid": "128958"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "disabled": true
+        }, {
+            "id": "_eea6ca5ae39046ea9b4b15c6405e348a",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABEL_CustomQueryUpdate.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_e60cc6b8b46647edb986e34b4e3d81c1",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_hb25d757cfcf4930be0bb55aedefa0e7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### A BUON FINE: \" + JSON.stringify(listUpload) );",
+            "parentId": "_eea6ca5ae39046ea9b4b15c6405e348a",
+            "callbackType": null
         }, {
             "id": "ADD_LOCAL_VARIABLE_g0da825727bd403f86571ac14653e390",
             "type": "ADD_LOCAL_VARIABLE",

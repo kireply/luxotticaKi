@@ -57,7 +57,7 @@
     "isvisible": true,
     "kuid": "gc3b899f85064b319e7e43b3ecca6a72",
     "name": "kony.ui.Label",
-    "parent": "editPropertyValue",
+    "parent": "flxEditPropertyValue",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

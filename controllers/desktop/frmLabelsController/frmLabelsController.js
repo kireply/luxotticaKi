@@ -199,6 +199,7 @@ define({
                 this.view.segLabels.setData(data);
                 voltmx.print("### gblLabels DOPO UPLOAD: " + JSON.stringify(gblLabelsList));
                 voltmx.print("### list DOPO UPLOAD: " + JSON.stringify(list));
+                listUpload = list.slice(1);
                 });
             };
             reader.readAsBinaryString(event.target.files[0]);

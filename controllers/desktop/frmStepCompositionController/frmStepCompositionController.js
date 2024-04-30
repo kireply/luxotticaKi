@@ -49,6 +49,8 @@ define({
     }
 
     
+    
+    
     //whenever a component in one of the two halves is clicked
     const selectedCompEventHandler = () => {
       this.view.settingsSide.flxScrollSettingsContent.removeAll();    
@@ -61,12 +63,12 @@ define({
         this.view.flxComponentImage.setVisibility(true);
       }
       
-      //          voltmx.print("### RIGHT DATA SELECTED COMPONENT: " + JSON.stringify(selectedComp.rightData));
+      // voltmx.print("### RIGHT DATA SELECTED COMPONENT: " + JSON.stringify(selectedComp.rightData));
 
       props = selectedComp.rightData;
       voltmx.print("### selectedComp.leftData: " + selectedComp.leftData);
       voltmx.print("### selectedComp.leftData stringify: " + JSON.stringify(selectedComp.leftData) );
-//       let searchKey = selectedComp.leftData[0].lblComponentName + instance + (gblCurrentStepOrder).toString();
+      // let searchKey = selectedComp.leftData[0].lblComponentName + instance + (gblCurrentStepOrder).toString();
       let searchKey = selectedComp.leftData[0].lblComponentName;
       voltmx.print("### search: " + JSON.stringify(selectedComp.leftData[0].modalImgComponent) );
       let foundComponentConfig = Object.keys(this.modes).find(key => key.startsWith(searchKey));
@@ -221,8 +223,8 @@ define({
   
   
   
-  
-  onEndEditingCallback: function(propComp, identify, dropdown, switched){
+  // this function should update the component selected with the settings edited on the right Setting Side
+  onEndEditingCallback: function(propComp, identify, dropdown, switched){  //identity = selectedComponent.id
     let value = null;
     if (dropdown){
        value = propComp.listBoxPropertyValue.selectedKeyValue[1];
@@ -234,6 +236,7 @@ define({
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
     let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
     let lastComp = null;
+    
     if ( left_width > 48){
       components = this.view.flxScrollLeft.widgets();
       if (identify === null){
@@ -242,6 +245,7 @@ define({
         let componentKey = Object.keys(lastComp).find(key => key.startsWith("component"));
         if (lastComp[componentKey]["leftData"][0].lblComponentName === gblLastInsertedComponent){
           let newData = lastComp[componentKey]["rightData"];
+          
           newData.forEach(item => {
             if (item.lblPropertyName === propComp.propertyName) {
               if (switched){
