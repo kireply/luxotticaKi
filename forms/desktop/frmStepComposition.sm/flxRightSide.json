@@ -64,6 +64,9 @@
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
+    "vizProps": {
+        "lock": true
+    },
     "wType": "FlexContainer",
     "widgetalignment": 1
 }

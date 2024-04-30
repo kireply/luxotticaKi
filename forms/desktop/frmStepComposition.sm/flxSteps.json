@@ -4,10 +4,6 @@
         "type": "string",
         "value": "13%"
     },
-    "_left_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_margin_": [
         0,
         0,
@@ -22,6 +18,10 @@
         0
     ],
     "_percent_": true,
+    "_right_": {
+        "type": "string",
+        "value": "0%"
+    },
     "_skin_": "s2f1ee016fac47b2b166f4f57338ccf0",
     "_top_": {
         "type": "string",
@@ -36,10 +36,6 @@
     "allowverticalbounce": true,
     "bounces": true,
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50.02%"
-    },
     "children": [
         "flxBoxPlus",
         "flxBoxFirstStep"
