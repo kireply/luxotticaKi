@@ -6,7 +6,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "62%"
+        "value": "90dp"
     },
     "_margin_": [
         0,
@@ -28,8 +28,8 @@
         "value": "0%"
     },
     "_width_": {
-        "type": "string",
-        "value": "10%"
+        "type": "ref",
+        "value": "preferred"
     },
     "allboxes": [],
     "autogrowmode": 0,
@@ -54,6 +54,14 @@
     "isvisible": true,
     "kuid": "ed506658078f4b6684761ecf8bbf0f35",
     "layouttype": 2,
+    "maxwidth": {
+        "type": "string",
+        "value": "80dp"
+    },
+    "minwidth": {
+        "type": "string",
+        "value": "10%"
+    },
     "name": "kony.ui.FlexContainer",
     "parent": "flxSteps",
     "pf": "frmStepComposition",

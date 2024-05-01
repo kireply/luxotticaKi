@@ -51,8 +51,8 @@
             "parentId": "_g55a23df86e148aca34fae8a36d7e072",
             "callbackType": null
         }, {
-            "id": "MOVE_ACTION_e82db6bf20714ed7b4ae9b01e6d7ad65",
-            "type": "MOVE_ACTION",
+            "id": "SCALE_ACTION_j324316d5f944c6c9154142b2ff95b7a",
+            "type": "SCALE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepComposition",
             "widgetId": "flxSteps",
@@ -60,21 +60,22 @@
             "widgetKUID": "f7cf362afaca48f68c682b9738763925",
             "wType": "FlexScrollContainer",
             "animationObject": {
-                "right": "32%",
                 "anchorPoint": {},
                 "stepConfig": {
                     "timingFunction": "kony.anim.EASE"
-                }
+                },
+                "width": "80%"
             },
             "config": {
                 "delay": "0",
+                "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
                 "duration": "210"
             },
             "start": "Immediately",
-            "parentAnimation": "MOVE_ACTION_e06380ff5be441ba8db1461fb2a3ad17",
-            "animationId": "MOVE_ACTION_e82db6bf20714ed7b4ae9b01e6d7ad65",
-            "displayAnimationId": "MOVE_ACTION_e82db6bf20714ed7b4ae9b01e6d7ad65",
+            "parentAnimation": "MOVE_ACTION_e82db6bf20714ed7b4ae9b01e6d7ad65",
+            "animationId": "SCALE_ACTION_j324316d5f944c6c9154142b2ff95b7a",
+            "displayAnimationId": "SCALE_ACTION_j324316d5f944c6c9154142b2ff95b7a",
             "forkedPlatform": "all",
             "parentId": "_g55a23df86e148aca34fae8a36d7e072",
             "callbackType": null,
@@ -99,8 +100,8 @@
             "parentId": "_fe73a8016d034b9fa2152732344c4d41",
             "callbackType": null
         }, {
-            "id": "MOVE_ACTION_a9d9ec300afa45d5bacda333953eed7a",
-            "type": "MOVE_ACTION",
+            "id": "SCALE_ACTION_cf9c395fc35844438f02343462ef9c5f",
+            "type": "SCALE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepComposition",
             "widgetId": "flxSteps",
@@ -108,21 +109,22 @@
             "widgetKUID": "f7cf362afaca48f68c682b9738763925",
             "wType": "FlexScrollContainer",
             "animationObject": {
-                "right": "0%",
                 "anchorPoint": {},
                 "stepConfig": {
                     "timingFunction": "kony.anim.EASE"
-                }
+                },
+                "width": "48.46%"
             },
             "config": {
                 "delay": "0",
+                "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "260"
+                "duration": "210"
             },
             "start": "Immediately",
             "parentAnimation": "MOVE_ACTION_e82db6bf20714ed7b4ae9b01e6d7ad65",
-            "animationId": "MOVE_ACTION_a9d9ec300afa45d5bacda333953eed7a",
-            "displayAnimationId": "MOVE_ACTION_a9d9ec300afa45d5bacda333953eed7a",
+            "animationId": "SCALE_ACTION_cf9c395fc35844438f02343462ef9c5f",
+            "displayAnimationId": "SCALE_ACTION_cf9c395fc35844438f02343462ef9c5f",
             "forkedPlatform": "all",
             "parentId": "_fe73a8016d034b9fa2152732344c4d41",
             "callbackType": null,

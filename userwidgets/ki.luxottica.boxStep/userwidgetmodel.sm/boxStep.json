@@ -28,8 +28,8 @@
         "value": "0%"
     },
     "_width_": {
-        "type": "string",
-        "value": "10%"
+        "type": "ref",
+        "value": "preferred"
     },
     "allboxes": [],
     "autogrowmode": 0,
@@ -46,6 +46,14 @@
     "isvisible": true,
     "kuid": "f91f7369d18a494398495927292273f0",
     "layouttype": 2,
+    "maxwidth": {
+        "type": "string",
+        "value": "80dp"
+    },
+    "minwidth": {
+        "type": "string",
+        "value": "10%"
+    },
     "name": "kony.ui.FlexContainer",
     "parent": "userwidgetmodel",
     "pf": "userwidgetmodel",

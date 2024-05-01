@@ -864,12 +864,12 @@ define({
       voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
     });
     
-    let left_position_percentage = left_position + "%";
-    voltmx.print("### left_position_percentage: " + left_position_percentage);
+    let left_position_dp = left_position + "dp";
+    voltmx.print("### left_position_dp: " + left_position_dp);
     
     const box = new ki.luxottica.boxStep({
       id: `boxStep${index}`,
-      left: `${left_position_percentage}`,
+      left: `${left_position_dp}`,
       centerY: '50%',
       //width: '60%',
     }, {}, {});
