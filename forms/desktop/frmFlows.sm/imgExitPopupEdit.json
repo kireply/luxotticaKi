@@ -23,7 +23,7 @@
         "value": "3%"
     },
     "_skin_": "sbea43bfb5ec4befa3684de4a1c488ca",
-    "_src_": "add_icon.png",
+    "_src_": "close.png",
     "_top_": {
         "type": "string",
         "value": "1%"
@@ -35,7 +35,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "id": "imgExitPopupEdit",
-    "ide_onTouchEnd": "AS_Image_de08376d10804cf79946269e3fcea854",
+    "ide_onTouchEnd": "AS_Image_h60e7099d9f04893965a3e57455acaf4",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",
@@ -43,7 +43,7 @@
     "isvisible": true,
     "kuid": "dd079cb7c2c949b096a7ebea1fd642ba",
     "name": "kony.ui.Image2",
-    "parent": "flxPopupEditFlow",
+    "parent": "flxContainerFlowEdit",
     "pf": "frmFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

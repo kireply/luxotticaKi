@@ -71,7 +71,7 @@
                 "stepConfig": {
                     "timingFunction": "kony.anim.EASE"
                 },
-                "width": "6%"
+                "width": "7%"
             },
             "config": {
                 "delay": "0",
@@ -97,7 +97,7 @@
             "widgetKUID": "icc9f588bb2844c3ab90adfef21509b3",
             "wType": "Image",
             "animationObject": {
-                "left": "1px",
+                "left": "1dp",
                 "anchorPoint": {},
                 "stepConfig": {
                     "timingFunction": "kony.anim.EASE"

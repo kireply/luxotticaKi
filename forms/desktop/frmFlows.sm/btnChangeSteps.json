@@ -5,10 +5,6 @@
         "type": "string",
         "value": "7%"
     },
-    "_left_": {
-        "type": "string",
-        "value": "4%"
-    },
     "_margin_": [
         6,
         6,
@@ -21,15 +17,19 @@
         0,
         0
     ],
-    "_skin_": "s45112357e134e1d994f67a398ae0ec5",
-    "_text_": "Save edited flow",
+    "_right_": {
+        "type": "string",
+        "value": "4%"
+    },
+    "_skin_": "s0ff482064d149969055aeefca76a3c3",
+    "_text_": "Change steps",
     "_top_": {
         "type": "string",
-        "value": "91%"
+        "value": "90.97%"
     },
     "_width_": {
         "type": "string",
-        "value": "57.14%"
+        "value": "31.12%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
@@ -38,12 +38,12 @@
         "focusSkin": "s6de8ee3e9e1463996d5dbb22b25b33b"
     },
     "displaytext": true,
-    "id": "btnSaveEditedFlow",
-    "ide_onClick": "AS_Button_a9e06ba4d2074c228557ff00892fe047",
+    "id": "btnChangeSteps",
+    "ide_onClick": "AS_Button_ed62d016bf23402b8ed1e90308c08aa1",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a4e84638ca8e4e5daf51c5c1210bf330",
+    "kuid": "e6d66f6181c14002921d087017e61490",
     "name": "kony.ui.Button",
     "parent": "flxEditFlow",
     "pf": "frmFlows",

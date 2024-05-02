@@ -69,6 +69,36 @@
             "callbackType": null,
             "criteria": "all"
         }, {
+            "id": "_a67defbe01564ed48823d29022ea6ec8",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "navigationsource",
+                "leftValue": "(this.getPreviousForm() === \"frmFlows\") && this.navigationContext && this.navigationContext._meta_ && (this.navigationContext._meta_.widgetId ===  \"btnChangeSteps\") && (this.navigationContext._meta_.eventName ===  \"onClick\")",
+                "operator": "===",
+                "rightValue": "",
+                "leftItemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                "leftWidgetKUID": "e6d66f6181c14002921d087017e61490",
+                "sequenceId": "AS_Button_ed62d016bf23402b8ed1e90308c08aa1",
+                "eventName": "onClick",
+                "widgetId": "btnChangeSteps"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "INVOKE_FUNCTION__f717167854ad4696afeae0f7789baf3a",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "loadFlowData",
+            "display": "loadFlowData",
+            "inputparams": [{
+                "name": "flow_id",
+                "value": " gblFlowId"
+            }],
+            "parentId": "_a67defbe01564ed48823d29022ea6ec8",
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }, {
             "id": "ADD_MAPPING_d030fdb1da614191851c5cd90ab0c187",
             "type": "ADD_MAPPING",
             "mappings": {

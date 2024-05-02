@@ -43,8 +43,7 @@
         "value": "50%"
     },
     "children": [
-        "flxContainerFlowEdit",
-        "imgExitPopupEdit"
+        "flxContainerFlowEdit"
     ],
     "clipbounds": false,
     "containerweight": 100,

@@ -101,7 +101,7 @@ define({
             //           gblFlowId = 128;
             let label_key = item.lblPropertyValue;
             propComp.propertyValue = label_key;
-            propComp.txtPropertyValueTextField.setEnabled(false);
+            propComp.txtPropertyValueTextField.setEnabled(true); // QUI
           } else if (found.mode === "switch") {
             propComp = new ki.luxottica.editPropertyValuewithSwitch({
               id: `prop${new Date().getTime()}`,
@@ -119,6 +119,7 @@ define({
               centerX: '50%'
             }, {}, {});
             propComp.onEndEditing = () => {
+              voltmx.print("### EDITING CONCLUSO");
               let identify = selectedComp.id;
               this.onEndEditingCallback(propComp, identify, false, false);
             };
@@ -477,7 +478,7 @@ define({
         let label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`;
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
         propComp.propertyValue = label_key;
-        propComp.txtPropertyValueTextField.setEnabled(false);
+        propComp.txtPropertyValueTextField.setEnabled(true); // QUI
         properties["lblPropertyValue"] = label_key;
 		this.modes[compKey].push({"name": capitalizedName, "mode": "label"});
         if (!gblPropertyTemplatesIds[list[i].component_name]) {
@@ -514,6 +515,7 @@ define({
           centerX: '50%'
         }, {}, {});
         propComp.onEndEditing = () => {
+          voltmx.print("### EDITING CONCLUSO 2");          
           this.onEndEditingCallback(propComp, null, false, false);
         };
         this.modes[compKey].push({"name": capitalizedName, "mode": "textfield"});
@@ -1286,7 +1288,22 @@ define({
 //       debugger;
       this.selectComponent(new_widget[1], new_widget[0], instance, false);
     });
-  }    // end of function "deleteComponent".
+  },    // end of function "deleteComponent".
+  
+  
+  
+  
+  
+  // this function laod the flow's data already existing (steps and components)
+  loadFlowData: function(flow_id){
+    
+    // TODO
+    
+    
+    
+  }
+  
+  
   
   
   

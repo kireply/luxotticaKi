@@ -60,7 +60,8 @@
         "swIsSupernovaEdit",
         "lblSelectStepsLayoutEdit",
         "flxStepsLayoutEdit",
-        "btnSaveEditedFlow"
+        "btnSaveEditedFlow",
+        "btnChangeSteps"
     ],
     "clipbounds": false,
     "containerweight": 100,

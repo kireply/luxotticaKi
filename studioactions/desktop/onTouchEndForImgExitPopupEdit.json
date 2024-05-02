@@ -1,0 +1,24 @@
+{
+    "AS_Image_h60e7099d9f04893965a3e57455acaf4": {
+        "id": "AS_Image_h60e7099d9f04893965a3e57455acaf4",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndForImgExitPopupEdit",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onTouchEnd_af2ecdc13c74472fbf2622bc1451071e",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblEditIcon = false;\nthis.view.flxBlur.setVisibility(false);\nthis.view.flxPopupEditFlow.setVisibility(false);"
+        }]
+    }
+}

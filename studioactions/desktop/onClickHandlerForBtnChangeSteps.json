@@ -1,0 +1,50 @@
+{
+    "AS_Button_ed62d016bf23402b8ed1e90308c08aa1": {
+        "id": "AS_Button_ed62d016bf23402b8ed1e90308c08aa1",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnChangeSteps",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "LOADING_INDICATOR_g9dbfdf1b0e14c9ca7527836ac898735",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Navigating to Change steps..."
+        }, {
+            "id": "NAVIGATE_TO_FORM__c5d219b2ec934b6694216a2f9cfbba5d",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmStepComposition",
+            "formKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "enableMappingEditor": true,
+            "package": "",
+            "enableNavigationObj": true,
+            "navigationObj": "{\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnChangeSteps\"\n    }\n}",
+            "isCustomInput": false
+        }, {
+            "id": "LOADING_INDICATOR_d8d60a0982f34458b8c3ac4fd272a84f",
+            "selectedOption": "dismiss",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }]
+    }
+}

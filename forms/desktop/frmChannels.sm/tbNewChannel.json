@@ -2,7 +2,7 @@
     "@class": "com.kony.gen.viz.model.container.KVizTabPane",
     "DNDConfig": null,
     "_activeTabsBackUp": [
-        0
+        1
     ],
     "_height_": {
         "type": "string",
@@ -31,7 +31,7 @@
         "value": "100%"
     },
     "activeskin": "s140b08496b640138038327a49fe5468",
-    "activetab": 0,
+    "activetab": 1,
     "activetabs": [
         0
     ],
