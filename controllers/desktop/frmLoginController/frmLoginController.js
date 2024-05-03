@@ -1,6 +1,6 @@
 define({ 
 
- //Type your controller code here
+ 
  verifyLoggeduser: function(){
    var integrationService = null;
    var sdkDefaultInstance = voltmx.sdk.getDefaultInstance();
@@ -8,6 +8,7 @@ define({
    
    var email = this.view.txtEmail.text;
    var password = this.view.txtPassword.text;
+   
    
    var JSON_string = `{
   "RXC_BRAND_LOGO": {
@@ -2214,13 +2215,14 @@ define({
   }
 }
 `
-   // when the log is succesfull
+   
+   
+   
+   // when the login is succesfull
    function enter() {
      	voltmx.print("sono la callback dell'alert");
 //      	var navigating = new voltmx.mvc.Navigation('frmDashboard');
 //         navigating.navigate();
-     
-     
      
      
 //         voltmx.print("### JSON STRING:" + JSON_string);
@@ -2229,12 +2231,13 @@ define({
 //         voltmx.print("### NAME: " + value);
      
        integrationService.invokeOperation("COMPONENT_TEMPLATE_LENGTH_CustomQuery", {},{}, 
-                                               (response) => {
+                                               (response) => {  // Query che restituisce il numero di righe nella tabella COMPONENT_TEMPLATE
          
          voltmx.print("### Success response: " + JSON.stringify(response));
          
-         if (response.records[0]["number"] > 0) {
+         if (response.records[0]["number"] > 0) {  // some COMPONENTS already existing on DB
            
+           // // Query che restituisce la lista con tutti i COMPONENTI (e i relativi valori nella tabella PROPERTY_TEMPLATE) che hanno l'attributo "defaultComponent": true
            integrationService.invokeOperation("DEFAULT_COMPONENTS_CustomQuery", {},{}, 
                                                (default_response) => {
              voltmx.print("### Success response: " + JSON.stringify(default_response));
@@ -2255,7 +2258,7 @@ define({
              voltmx.print("### Error ");
            });
            
-         } else {
+         } else {  // No COMPONENTS saved on DB yet, we proceed to save them now
            
            var data = JSON.parse(JSON_string);
 
@@ -2292,7 +2295,7 @@ define({
                    if (component_template.hasOwnProperty(prop)) { // Assegna a component_template se prop è una chiave di component_template
                      component_template[prop] = component[prop].join(', ');
                    }
-                 } else {
+                 } else {  // la proprietà non è un array
                    console.log(`${prop}: ${JSON.stringify(component[prop])}`);
                    if (component_template.hasOwnProperty(prop)) { // Assegna a component_template se prop è una chiave di component_template                          
                      component_template[prop] = component[prop];
@@ -2302,6 +2305,7 @@ define({
              });
              // Stampa i valori delle variabili per verificare
              console.log(component_template);
+             voltmx.print("&&& component_template: " + JSON.stringify(component_template) );
              //             debugger;
              //aggiungi logica per invocare il DB con la create del component template
              voltmx.print("### CREATE COMPONENT TEMPLATE!");
@@ -2374,8 +2378,8 @@ define({
              }, error => {
                voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
              });
-            
-        });
+
+           });
        }
          
        }, error => {
@@ -2386,75 +2390,79 @@ define({
      
       
      
-      integrationService.invokeOperation("CHANNEL_get",{},{},
-         (response) => {
-          voltmx.print ("### Service response: "+JSON.stringify(response));
-          voltmx.print ("### CHANNELS: " + JSON.stringify(response.CHANNEL));
-          /*
+     integrationService.invokeOperation("CHANNEL_get",{},{},
+                                        (response) => {
+       voltmx.print ("### Service response: "+JSON.stringify(response));
+       voltmx.print ("### CHANNELS: " + JSON.stringify(response.CHANNEL));
+       /*
           CHANNELS: [{"name":"DolceGabbana","logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ray-Ban_logo.svg/772px-Ray-Ban_logo.svg.png","id":"DG","properties_file":"p4"},{"name":"RayBan","logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ray-Ban_logo.svg/772px-Ray-Ban_logo.svg.png","id":"RB","properties_file":"p5"}]
           */
-//           this.channels = response.CHANNEL;
-          if (response.CHANNEL.length > 0){
-            gblNavigatedFromLogin = true;
-            gblChannels = response.CHANNEL;
-            var navigating = new voltmx.mvc.Navigation('frmChannels');
-            navigating.navigate();
-          } else {
-            var navigating = new voltmx.mvc.Navigation('frmChannelCreation');
-        	navigating.navigate();
-          }
-         },
-         (error) => {
-          voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-          reject(error);
-        }
-      );
-      }
+       //           this.channels = response.CHANNEL;
+       if (response.CHANNEL.length > 0){
+         gblNavigatedFromLogin = true;
+         gblChannels = response.CHANNEL;
+         var navigating = new voltmx.mvc.Navigation('frmChannels');
+         navigating.navigate();
+       } else {
+         var navigating = new voltmx.mvc.Navigation('frmChannelCreation');
+         navigating.navigate();
+       }
+     },
+                                        (error) => {
+       voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+       reject(error);
+     }
+                                       );
+   }  // end of function "enter"
+   
+   
    
    		
-      function SHOW_ALERT_Failure_Callback() {
-     	voltmx.print("sono la callback dell'alert");
-      }
+   function SHOW_ALERT_Failure_Callback() {
+     voltmx.print("sono la callback dell'alert");
+   }
+
+   
    
    
    integrationService.invokeOperation("USER_get",{},{},
-		  function(response){
-          voltmx.application.showLoadingScreen(null, "Searching user ...", constants.LOADING_SCREEN_POSITION_ONLY_CENTER, true, true, null);
-          voltmx.print ("### Service response: "+JSON.stringify(response));
-     	  var userFound = response.USER.some(user => user.email === email && user.password === password);
-     	  voltmx.print("### USER email: " + email);
-     	  if (userFound){
-            gblUserMail = email;
-            voltmx.application.dismissLoadingScreen();
-            voltmx.print("### User found, welcome");
-            enter();
-            
-          } else{
-            voltmx.application.dismissLoadingScreen();
-            voltmx.print("### User not found");
-            voltmx.ui.Alert({
-            "alertType": constants.ALERT_TYPE_INFO,
-            "alertTitle": "Fail",
-            "yesLabel": "Ok",
-            "message": "Login not permitted",
-            "alertHandler": SHOW_ALERT_Failure_Callback
-        	}, {
-            "iconPosition": constants.ALERT_ICON_POSITION_LEFT
-        	});
-          	}
-  		   },
-			function(error){
-          	voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-          	voltmx.ui.Alert({
-            "alertType": constants.ALERT_TYPE_INFO,
-            "alertTitle": "Fail",
-            "yesLabel": "Ok",
-            "message": "Error from the service",
-            "alertHandler": SHOW_ALERT_Failure_Callback
-        	}, {
-            "iconPosition": constants.ALERT_ICON_POSITION_LEFT
-        	});
-        	}
+                                      function(response){
+     voltmx.application.showLoadingScreen(null, "Searching user ...", constants.LOADING_SCREEN_POSITION_ONLY_CENTER, true, true, null);
+     voltmx.print ("### Service response: "+JSON.stringify(response));
+     var userFound = response.USER.some(user => user.email === email && user.password === password);
+     voltmx.print("### USER email: " + email);
+     if (userFound){
+       gblUserMail = email;
+       voltmx.application.dismissLoadingScreen();
+       voltmx.print("### User found, welcome");
+       enter();
+
+     } else{
+       voltmx.application.dismissLoadingScreen();
+       voltmx.print("### User not found");
+       voltmx.ui.Alert({
+         "alertType": constants.ALERT_TYPE_INFO,
+         "alertTitle": "Fail",
+         "yesLabel": "Ok",
+         "message": "Login not permitted",
+         "alertHandler": SHOW_ALERT_Failure_Callback
+       }, {
+         "iconPosition": constants.ALERT_ICON_POSITION_LEFT
+       });
+     }
+   },
+                                      function(error){
+     voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+     voltmx.ui.Alert({
+       "alertType": constants.ALERT_TYPE_INFO,
+       "alertTitle": "Fail",
+       "yesLabel": "Ok",
+       "message": "Error from the service",
+       "alertHandler": SHOW_ALERT_Failure_Callback
+     }, {
+       "iconPosition": constants.ALERT_ICON_POSITION_LEFT
+     });
+   }
   );
  }
 

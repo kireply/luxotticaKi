@@ -344,9 +344,9 @@ define({
   
   
   
-  // This function is called when the user select a component from one of the two segments on the left of the form (Configurable and Simple).
-  // We retrieve from the db the data related to the component selected (calling the service PROPERTY_TEMPLATE_CustomQuery)
-  // and we pass them to the function as parameters.
+  /* This function is called when the user select a component from one of the two segments on the left of the form (Configurable and Simple).
+  * We retrieve from the db the data related to the component selected (calling the service PROPERTY_TEMPLATE_CustomQuery)
+  * and we pass them to the function as parameters. */
   editProperty: function(list, rightSegmentData, leftSegmentData, selected_item, selected_item_img, selected_item_modal_img){
 
     voltmx.print("### LIST: " + JSON.stringify(list));
@@ -427,21 +427,26 @@ define({
 //       gblLastInsertedComponent = selected_item;
       console.log(rightSegmentData);
       let propComp = null;
+      
       if (list[i].mode === "dropdown"){
         propComp = new ki.luxottica.editPropertyValuewithDropdown({
           id: `prop${new Date().getTime()}`,
           top: '2%',
           centerX: '50%'
         }, {}, {});
+        
         propComp.listBoxPlaceholder=`Please select a value`;
+        
         voltmx.print("### POSITION_MASTERDATA: " + JSON.stringify(position_masterData[list[i].name]));
         let masterDataValues = position_masterData[list[i].name];
         voltmx.print("### MASTER DATA VALUES: " + JSON.stringify(masterDataValues) );
         voltmx.print("### list[i]: " + JSON.stringify(list[i]) );
         let masterDataString = list[i][masterDataValues];
-        voltmx.print("### MASTER DATA STRING: " + JSON.stringify(masterDataString));
+        voltmx.print("### MASTER DATA STRING[0]: " + JSON.stringify(masterDataString[0]));  // undefined
         let valuesArray = masterDataString.split(", ");
         let masterDataList = [];
+        
+        
         valuesArray.forEach((value, index) => {
           let id = `lb${index + 1}`;
           masterDataList.push([id, value.trim()]);
@@ -475,6 +480,7 @@ define({
           centerX: '50%'
         }, {}, {});
         //gblFlowId = 128; //to comment in the global flow of the application
+        //let label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`; // LABEL QUI
         let label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`;
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
         propComp.propertyValue = label_key;
