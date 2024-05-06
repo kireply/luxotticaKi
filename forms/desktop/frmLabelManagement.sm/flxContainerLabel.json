@@ -54,7 +54,8 @@
         "lblSpace",
         "btnNext",
         "txtWorksheetName",
-        "txtFileName"
+        "txtFileName",
+        "lblNoLabelsFound"
     ],
     "clipbounds": false,
     "containerweight": 100,
