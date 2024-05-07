@@ -862,7 +862,7 @@ define({
     gblLastInsertedStep += 1;
     gblCurrentStepOrder = gblLastInsertedStep;
     
-    
+    // query that returns all Steps (and infos/attributes) related to the @flow given as parameter.
     voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("STEP_flow_CustomQuery", {}, {flow_id : gblFlowId}, (response) => {
       voltmx.print("### Service response: "+JSON.stringify(response));
       response.records.forEach(record => {
@@ -889,22 +889,24 @@ define({
     box.onClickTeaser = () => {
       let steps_widgets = this.view.flxSteps.widgets();
       let flxScrolls = this.view.flxRightSide.widgets();
-      let current_id = box.id;
+      let current_id = box.id;   // ex. "boxStep3"
       
       let numberAsString = current_id.replace("boxStep", "");
       let stepNumber = parseInt(numberAsString, 10);
       let current_scroll = 'flxScrollRight' + stepNumber;
-      for (let i = 1; i <= gblLastInsertedStep; i++) {
+      
+      for (let i = 1; i <= gblLastInsertedStep; i++) {  // ciclying over each step
         let expectedId = 'boxStep' + i;
         let expectedScroll = 'flxScrollRight' + i;
         // Procedi solo se non stiamo trattando il widget corrente
         if (expectedId !== current_id) {
           let widget = steps_widgets.find(w => w.id === expectedId);
           if (widget) {
-            widget.flxBoxStep.backgroundColor = "FFFFFF00"; 
+            voltmx.print("&&& DENTRO if widget");
+            widget.flxBoxStep.backgroundColor = "FFFFFF00"; // white
             widget.imgDeleteStep.isVisible = false;
             widget.imgEditStep.isVisible = false;
-            widget.lblStepOrder.fontColor = "00000000";
+            widget.lblStepOrder.fontColor = "00000000"; //black
             widget.lblStepTitle.fontColor = "00000000";
             let scroll = flxScrolls.find(s => s.id === expectedScroll);
             if (scroll) {
@@ -913,6 +915,7 @@ define({
           } else {
             let widget_new = steps_widgets.find(w => w.id === "flxBoxFirstStep");
             if (widget_new) {
+              voltmx.print("&&& DENTRO if widget_new");
               widget_new.backgroundColor = "FFFFFF00"; 
               widget_new.imgDeleteStep.isVisible = false;
               widget_new.imgEditStep.isVisible = false;
@@ -921,7 +924,8 @@ define({
               this.view.flxRightSide.flxScrollRight.setVisibility(false);
             }
           }
-        } else {
+        } else {  // treating the current step
+          voltmx.print("&&& DENTRO ELSE ");
           let widget = steps_widgets.find(w => w.id === current_id);
           widget.flxBoxStep.backgroundColor = "00000000";
           widget.imgDeleteStep.isVisible = true;
@@ -939,7 +943,7 @@ define({
       this.view.settingsSide.flxScrollSettingsContent.removeAll();
       this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
       this.view.settingsSide.txt.setVisibility(true);
-    };
+    };  // end box.onCLickTeaser
     
     
     
@@ -980,6 +984,7 @@ define({
     }, {}, {});
 
 
+    // creating a new flex scroll for each Step (containing the components selected and inserted in that specific Step)
     flex.layoutType = voltmx.flex.FLOW_VERTICAL;
     flex.enableScrolling = true;
     flex.scrollDirection = voltmx.flex.SCROLL_VERTICAL;
