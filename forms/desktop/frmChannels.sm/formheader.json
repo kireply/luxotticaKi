@@ -1,6 +1,7 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
     "DNDConfig": null,
+    "__markedForDelete__": true,
     "_children_": [],
     "_height_": {
         "type": "string",

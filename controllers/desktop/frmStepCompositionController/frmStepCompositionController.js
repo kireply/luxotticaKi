@@ -59,6 +59,7 @@ define({
       
       // if the component info icon is clicked
       if (gblInfoIcon) {
+        voltmx.print("### selectedComp.id:" + selectedComp.id);  // selectedComp.id
         this.view.flxComponentImage.imgComponent.src = selectedComp.leftData[0].modalImgComponent;
         this.view.flxComponentImage.setVisibility(true);
       }
@@ -225,7 +226,15 @@ define({
   
   
   // this function should update the component selected with the settings edited on the right Setting Side
-  onEndEditingCallback: function(propComp, identify, dropdown, switched){  //identity = selectedComponent.id
+  onEndEditingCallback: function(propComp, identify, dropdown, switched){  //identify = selectedComponent.id
+    
+    voltmx.print("### SONO DENTRO onEndEditingCallback ORA");
+    voltmx.print("### SONO propComp.propertyName: " + propComp.propertyName);
+    voltmx.print("### SONO propComp.propertyValue: " + propComp.propertyValue);
+    voltmx.print("### SONO identify: " + JSON.stringify(identify) );
+    voltmx.print("### SONO dropdown: " + JSON.stringify(dropdown) );
+    voltmx.print("### SONO switched: " + JSON.stringify(switched) );
+    
     let value = null;
     if (dropdown){
        value = propComp.listBoxPropertyValue.selectedKeyValue[1];
@@ -239,8 +248,10 @@ define({
     let lastComp = null;
     
     if ( left_width > 48){
+      voltmx.print("### SONO DENTRO left_width ORA");
       components = this.view.flxScrollLeft.widgets();
       if (identify === null){
+        voltmx.print("### SONO DENTRO left identify === null ORA");
         // chiamata da editProperty
         lastComp = components.length > 0 ? components[components.length - 1] : null;
         let componentKey = Object.keys(lastComp).find(key => key.startsWith("component"));
@@ -264,6 +275,7 @@ define({
         }
       } else {
         // chiamata da selectedComponent
+        voltmx.print("### SONO FUORI left identify === null ORA");
         components.forEach((comp) => {
           let componentKey = Object.keys(comp).find(key => key.startsWith("component"));
           if (componentKey === identify){
@@ -287,13 +299,21 @@ define({
       }
     }
     if ( right_width > 48){
-      components = this.view.flxScrollRight.widgets();
+      voltmx.print("### SONO DENTRO right_width ORA");
+      let correctScroll = this.findCurrentFlexScroll();  // finding the correct flex scroll to manage/update
+      components = correctScroll.widgets();
+      voltmx.print("### SONO right widgets: " + JSON.stringify(this.view.flxScrollRight.widgets().values() ) );
       if (identify === null) {
+        voltmx.print("### SONO DENTRO right identify === null ORA");
         // chiamata da editProperty
         lastComp = components.length > 0 ? components[components.length - 1] : null;
+        voltmx.print("### SONO right lastComp: " + lastComp );
+        voltmx.print("### SONO components.length: " + components.length );
         let componentKey = Object.keys(lastComp).find(key => key.startsWith("component"));
+        voltmx.print("### SONO right  componentKey: " + JSON.stringify(componentKey) );
         if (lastComp[componentKey]["leftData"][0].lblComponentName === gblLastInsertedComponent){
           let newData = lastComp[componentKey]["rightData"];
+          voltmx.print("### SONO right newData: " + JSON.stringify(newData) );
           newData.forEach(item => {
             if (item.lblPropertyName === propComp.propertyName) {
               if (switched){
@@ -311,6 +331,7 @@ define({
           lastComp[componentKey].flxSelectedComponentRight.segmentRight.setData(newData);
         }
       } else {
+        voltmx.print("### SONO FUORI right identify === null ORA");
         // chiamata da selectedComponent
         components.forEach((comp) => {
           let componentKey = Object.keys(comp).find(key => key.startsWith("component"));
@@ -500,6 +521,7 @@ define({
           centerX: '50%'
         }, {}, {});
         propComp.onSlide = () => {
+          voltmx.print("### SONO DENTRO editProperty ORA");
           this.onEndEditingCallback(propComp, null, false, true);
         };
         this.modes[compKey].push({"name": capitalizedName, "mode": "switch"});

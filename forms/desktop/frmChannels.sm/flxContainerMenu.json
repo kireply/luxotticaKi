@@ -1,5 +1,6 @@
 {
     "DNDConfig": null,
+    "__markedForDelete__": true,
     "_height_": {
         "type": "string",
         "value": "86%"
