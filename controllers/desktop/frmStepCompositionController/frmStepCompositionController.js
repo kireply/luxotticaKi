@@ -669,7 +669,7 @@ define({
                   voltmx.print ("### Service response: "+JSON.stringify(response));
                 },
                                                                                                  (error) => {
-                  voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                  voltmx.print("### Error in the invocation of the service PROPERTY_INSTANCE_create: " + JSON.stringify(error));
                   voltmx.ui.Alert({
                     "alertType": constants.ALERT_TYPE_INFO,
                     "alertTitle": "Fail",
@@ -684,7 +684,7 @@ define({
                );
               }, 
                                                                                                (error) => {
-                voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                voltmx.print("### Error in the invocation of the service LABEL_create: " + JSON.stringify(error));
               });
             } else {
               property_instance_left["value"] = prop_left.lblPropertyValue;
@@ -695,7 +695,7 @@ define({
               voltmx.print ("### Service response: "+JSON.stringify(response));
             },
                                                                                              (error) => {
-              voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+              voltmx.print("### Error in the invocation of the service PROPERTY_INSTANCE_create: " + JSON.stringify(error));
               //             voltmx.application.dismissLoadingScreen();
               voltmx.ui.Alert({
                 "alertType": constants.ALERT_TYPE_INFO,
@@ -713,7 +713,7 @@ define({
           });
         },
                                                                                          (error) => {
-          voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+          voltmx.print("### Error in the invocation of the service COMPONENT_INSTANCE_create: " + JSON.stringify(error));
           gblFail = true;
         });
       });
@@ -808,17 +808,17 @@ define({
                 };
                 voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, label_right, 
                                                                                                  (response) => {
-                  voltmx.print("### Service response: " + JSON.stringify(response));
+                  voltmx.print("### Service LABEL_create response: " + JSON.stringify(response));
                   property_instance_right["label_id"] = prop_right.lblPropertyValue;
                   property_instance_right["value"] = prop_right.lblPropertyValue;
                   property_instance_right["property_template_id"] = prop_id_right[0];
                   voltmx.print("### PROP RIGHT: " + JSON.stringify(property_instance_right));
                   voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_right,
                                                                                                    (response) => {
-                    voltmx.print ("### Service response: "+JSON.stringify(response));
+                    voltmx.print ("### Service PROPERTY_INSTANCE_create response: "+JSON.stringify(response));
                   },
                                                                                                    (error) => {
-                    voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                    voltmx.print("### Error in the invocation of the service PROPERTY_INSTANCE_create: " + JSON.stringify(error));
                     voltmx.ui.Alert({
                       "alertType": constants.ALERT_TYPE_INFO,
                       "alertTitle": "Fail",
@@ -833,7 +833,7 @@ define({
                                                                                                   );
                 }, 
                                                                                                  (error) => {
-                  voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                  voltmx.print("### Error in the invocation of the service LABEL_create: " + JSON.stringify(error));
                 });
               } else {
                 property_instance_right["value"] = prop_right.lblPropertyValue;
@@ -841,10 +841,10 @@ define({
                 voltmx.print("### PROP RIGHT: " + JSON.stringify(property_instance_right));
                 voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_right,
                                                                                                  (response) => {
-                  voltmx.print ("### Service response: "+JSON.stringify(response));
+                  voltmx.print ("### Service PROPERTY_INSTANCE_create response: "+JSON.stringify(response));
                 },
                                                                                                  (error) => {
-                  voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                  voltmx.print("### Error in the invocation of the service PROPERTY_INSTANCE_create: " + JSON.stringify(error));
                   voltmx.ui.Alert({
                     "alertType": constants.ALERT_TYPE_INFO,
                     "alertTitle": "Fail",
@@ -861,7 +861,7 @@ define({
             });
           },
                                                                                            (error) => {
-            voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+            voltmx.print("### Error in the invocation of the service COMPONENT_INSTANCE_create: " + JSON.stringify(error));
             gblFail = true;
           });
         });
@@ -885,12 +885,12 @@ define({
     
     // query that returns all Steps (and infos/attributes) related to the @flow given as parameter.
     voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("STEP_flow_CustomQuery", {}, {flow_id : gblFlowId}, (response) => {
-      voltmx.print("### Service response: "+JSON.stringify(response));
+      voltmx.print("### Service STEP_flow_CustomQuery response: "+JSON.stringify(response));
       response.records.forEach(record => {
         gblIdOrderSteps[record.id] = record.order;
       });
     }, (error) => {
-      voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+      voltmx.print("### Error in the invocation of the service STEP_flow_CustomQuery: " + JSON.stringify(error));
     });
     
     let left_position_dp = left_position + "dp";

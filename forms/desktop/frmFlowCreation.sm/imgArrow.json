@@ -4,11 +4,11 @@
     "_base64_": null,
     "_height_": {
         "type": "string",
-        "value": "4%"
+        "value": "3%"
     },
     "_left_": {
         "type": "string",
-        "value": "6%"
+        "value": "4.50%"
     },
     "_margin_": [
         0,
@@ -26,11 +26,11 @@
     "_src_": "left_arrow.png",
     "_top_": {
         "type": "string",
-        "value": "2.5%"
+        "value": "5%"
     },
     "_width_": {
         "type": "string",
-        "value": "2%"
+        "value": "3%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
@@ -49,5 +49,5 @@
     "srcType": 1,
     "wType": "Image",
     "widgetalignment": 5,
-    "zindex": 1
+    "zindex": 2
 }

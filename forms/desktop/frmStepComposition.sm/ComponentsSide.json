@@ -286,7 +286,20 @@
                 "kuid": "aa78a571ac924c33a6cc9edf8261ac2d",
                 "srcKUID": "d74f3794c219415e80523cdb244c210a",
                 "wType": "Label"
-            }
+            },
+            "centerX": {
+                "Default": {
+                    "type": "string",
+                    "value": ""
+                }
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "2%"
+                }
+            },
+            "responsiveData": {}
         },
         "lblSimpleComponents": {
             "__events__": {},
