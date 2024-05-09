@@ -599,7 +599,6 @@ define({
   
   
   // function invoked when Save Button is clicked (invoked from action editor)
-  
   saveStepComposition: function(){
     
     voltmx.application.showLoadingScreen(null, "Saving step...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
@@ -1327,7 +1326,7 @@ define({
   
   
   
-  // this function laod the flow's data already existing (steps and components)
+  // this function laods the flow's data already existing in the DB (steps and components)
   loadFlowData: function(flow_id){
     
     // TODO

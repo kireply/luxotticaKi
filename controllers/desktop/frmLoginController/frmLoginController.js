@@ -2247,7 +2247,7 @@ define({
    */
    
    
-   // when the login is succesfull
+   // when the login is successfull
    function enter() {
      	voltmx.print("sono la callback dell'alert");
 //      	var navigating = new voltmx.mvc.Navigation('frmDashboard');
