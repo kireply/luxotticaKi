@@ -20,8 +20,8 @@
     "_skin_": "s1feb31cbd834d40b4ee34cc104e1d3d",
     "_text_": "RXC_BRAND_LOGO",
     "_top_": {
-        "type": "string",
-        "value": "0dp"
+        "type": "number",
+        "value": "0"
     },
     "_width_": {
         "type": "ref",

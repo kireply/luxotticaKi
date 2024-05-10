@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "35px"
+        "value": "45%"
     },
     "_left_": {
         "type": "string",
@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_placeholder_": "Placeholder",
+    "_placeholder_": "Insert a value...",
     "_skin_": "sbeb816e92b8470b815da3fc2d907da6",
     "_text_": "",
     "_top_": {
