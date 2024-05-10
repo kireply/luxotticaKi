@@ -35,7 +35,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnChangeSteps\"\n    }\n}",
+            "navigationObj": "{\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
             "isCustomInput": false
         }, {
             "id": "LOADING_INDICATOR_d8d60a0982f34458b8c3ac4fd272a84f",

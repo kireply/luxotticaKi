@@ -57,7 +57,6 @@ define({
       
       // if the component info icon is clicked
       if (gblInfoIcon) {
-        voltmx.print("### selectedComp.id:" + selectedComp.id);  // selectedComp.id
         this.view.flxComponentImage.imgComponent.src = selectedComp.leftData[0].modalImgComponent;
         this.view.flxComponentImage.setVisibility(true);
       }
@@ -224,15 +223,7 @@ define({
   
   
   // this function should update the component selected with the settings edited on the right Setting Side
-  onEndEditingCallback: function(propComp, identify, dropdown, switched){  //identify = selectedComponent.id
-    
-    voltmx.print("### SONO DENTRO onEndEditingCallback ORA");
-    voltmx.print("### SONO propComp.propertyName: " + propComp.propertyName);
-    voltmx.print("### SONO propComp.propertyValue: " + propComp.propertyValue);
-    voltmx.print("### SONO identify: " + JSON.stringify(identify) );
-    voltmx.print("### SONO dropdown: " + JSON.stringify(dropdown) );
-    voltmx.print("### SONO switched: " + JSON.stringify(switched) );
-    
+  onEndEditingCallback: function(propComp, identify, dropdown, switched){  //identity = selectedComponent.id
     let value = null;
     if (dropdown){
        value = propComp.listBoxPropertyValue.selectedKeyValue[1];
@@ -246,10 +237,8 @@ define({
     let lastComp = null;
     
     if ( left_width > 48){
-      voltmx.print("### SONO DENTRO left_width ORA");
       components = this.view.flxScrollLeft.widgets();
       if (identify === null){
-        voltmx.print("### SONO DENTRO left identify === null ORA");
         // chiamata da editProperty
         lastComp = components.length > 0 ? components[components.length - 1] : null;
         let componentKey = Object.keys(lastComp).find(key => key.startsWith("component"));
@@ -273,7 +262,6 @@ define({
         }
       } else {
         // chiamata da selectedComponent
-        voltmx.print("### SONO FUORI left identify === null ORA");
         components.forEach((comp) => {
           let componentKey = Object.keys(comp).find(key => key.startsWith("component"));
           if (componentKey === identify){
@@ -297,21 +285,13 @@ define({
       }
     }
     if ( right_width > 48){
-      voltmx.print("### SONO DENTRO right_width ORA");
-      let correctScroll = this.findCurrentFlexScroll();  // finding the correct flex scroll to manage/update
-      components = correctScroll.widgets();
-      voltmx.print("### SONO right widgets: " + JSON.stringify(this.view.flxScrollRight.widgets().values() ) );
+      components = this.view.flxScrollRight.widgets();
       if (identify === null) {
-        voltmx.print("### SONO DENTRO right identify === null ORA");
         // chiamata da editProperty
         lastComp = components.length > 0 ? components[components.length - 1] : null;
-        voltmx.print("### SONO right lastComp: " + lastComp );
-        voltmx.print("### SONO components.length: " + components.length );
         let componentKey = Object.keys(lastComp).find(key => key.startsWith("component"));
-        voltmx.print("### SONO right  componentKey: " + JSON.stringify(componentKey) );
         if (lastComp[componentKey]["leftData"][0].lblComponentName === gblLastInsertedComponent){
           let newData = lastComp[componentKey]["rightData"];
-          voltmx.print("### SONO right newData: " + JSON.stringify(newData) );
           newData.forEach(item => {
             if (item.lblPropertyName === propComp.propertyName) {
               if (switched){
@@ -329,7 +309,6 @@ define({
           lastComp[componentKey].flxSelectedComponentRight.segmentRight.setData(newData);
         }
       } else {
-        voltmx.print("### SONO FUORI right identify === null ORA");
         // chiamata da selectedComponent
         components.forEach((comp) => {
           let componentKey = Object.keys(comp).find(key => key.startsWith("component"));
@@ -541,7 +520,6 @@ define({
           centerX: '50%'
         }, {}, {});
         propComp.onSlide = () => {
-          voltmx.print("### SONO DENTRO editProperty ORA");
           this.onEndEditingCallback(propComp, null, false, true);
         };
         this.modes[compKey].push({"name": capitalizedName, "mode": "switch"});
@@ -794,14 +772,14 @@ define({
         right_widgets = right_widgets.filter(widget => {
           let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
           const id = widget[componentKey].id;
-          return !childIds.has(id) || parentIds.has(id); // Mantieni se non è un figlio o è anche un padre
+          return parentIds.has(id) && !childIds.has(id);  // Solo padri che non sono anche figli
         });
         
        
         print("right widgets after: " + right_widgets);
         print("children after: " + children);
         
-        debugger;
+//         debugger;
         
         right_widgets.forEach(widget => {
  
@@ -828,7 +806,7 @@ define({
                                                                                            (response) => {
             voltmx.print("### Service response SONO A DESTRA DENTRO: "+JSON.stringify(response));
             let widgInsideComp = widget[componentKey];
-//             this.componentCreateCallback(widgInsideComp, property_instance_right, response, component_instance_right);
+            this.componentCreateCallback(widgInsideComp, property_instance_right, response, component_instance_right);
             let component_id = response.COMPONENT_INSTANCE[0].id;
             // AGGIUSTA -> TOGLI "1" E METTI UN'ALTRA COSA (VEDI DOVE DEFINISCI NUMBER, DOVRESTI PRENDERE L'OPPOSTO DI NUMBER DENTRO GBLIDORDERSTEPS)
             let completeKey = component_instance_right["template_name"] + "_" + component_instance_right["order"] + "_" + "1";
@@ -857,7 +835,7 @@ define({
                 voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_nested_right,
                                                                                            (response) => {
                   voltmx.print("### Service response SONO A DESTRA DENTRO UN NESTED: "+JSON.stringify(response));
-//                   this.componentCreateCallback(child, property_instance_nested_right, response, component_instance_nested_right);
+                  this.componentCreateCallback(child, property_instance_nested_right, response, component_instance_nested_right);
                   let component_nested_id = response.COMPONENT_INSTANCE[0].id;
                   let nested_component = {
                     component_instance_id: component_nested_id,
@@ -870,6 +848,54 @@ define({
                     voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
                     gblFail = true;
                   });
+                  // AGGIUSTA -> TOGLI "1" E METTI UN'ALTRA COSA (VEDI DOVE DEFINISCI NUMBER, DOVRESTI PRENDERE L'OPPOSTO DI NUMBER DENTRO GBLIDORDERSTEPS)
+                  let completeKeyInsideNested = component_instance_nested_right["template_name"] + "_" + component_instance_nested_right["order"] + "_" + "1";
+                  let componentArrayInsideNested = this.modes[completeKeyInsideNested];
+                  let nestedComponentsObjInsideNested = componentArrayInsideNested.find(item =>item.hasOwnProperty('nestedComponents'));
+                  let childInsideNested = null;
+                  if (nestedComponentsObjInsideNested && nestedComponentsObjInsideNested.nestedComponents.length > 0) {
+                    var component_instance_nested_right_Inside = {
+                      template_name: null,
+                      step_id: null,
+                      order: null
+                    };
+                    var property_instance_nested_right_Inside = {
+                      property_template_id: null,
+                      component_instance_id: null,
+                      value: null,
+                      label_id: null
+                    };
+                    nestedComponentsObjInsideNested.nestedComponents.forEach(childIdInsideNested => {
+                      let childObjInsideNested = children.find(child => childIdInsideNested in child);
+                      childInsideNested = childObjInsideNested ? childObjInsideNested[childIdInsideNested] : undefined;
+                      component_instance_nested_right_Inside["template_name"] = childInsideNested["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
+                      //AGGIUSTA -> METTI QUESTA RIGA component_instance_right["step_id"] = number;  
+                      component_instance_nested_right_Inside["step_id"] = 352;
+                      component_instance_nested_right_Inside["order"] = childInsideNested["lblComponentOrder"].text;
+                      voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_nested_right_Inside,
+                                                                                                       (response) => {
+                        voltmx.print("### Service response SONO A DESTRA DENTRO UN NESTED MA INSIDE: "+JSON.stringify(response));
+                        this.componentCreateCallback(child, property_instance_nested_right, response, component_instance_nested_right);
+                        let component_nested_id_Inside = response.COMPONENT_INSTANCE[0].id;
+                        let nested_component_Inside = {
+                          component_instance_id: component_nested_id_Inside,
+                          component_instance_father_id: component_nested_id
+                        };
+                        
+                        voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("NESTED_COMPONENT_create",{},nested_component_Inside,
+                                                                                                         (response) => {
+                          voltmx.print("### Service response SONO A DESTRA DENTRO UN NESTED MA INSIDE: "+JSON.stringify(response));
+                        }, (error) => {
+                          voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                          gblFail = true;
+                        });
+
+                      }, (error) => {
+                        voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                        gblFail = true;
+                      });
+                    });
+                  }
                 }, (error) => {
                   voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
                   gblFail = true;
@@ -1415,7 +1441,7 @@ define({
   
   
   
-  // this function laods the flow's data already existing in the DB (steps and components)
+  // this function laod the flow's data already existing (steps and components)
   loadFlowData: function(flow_id){
     
     // TODO
@@ -1426,10 +1452,5 @@ define({
   
   
   
-  
-  
-  
-  
-  
-  
+
 });
