@@ -75,7 +75,7 @@
             "top": {
                 "Default": {
                     "type": "string",
-                    "value": "3%"
+                    "value": "2%"
                 }
             }
         },

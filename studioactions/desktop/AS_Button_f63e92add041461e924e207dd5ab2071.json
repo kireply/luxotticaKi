@@ -1,0 +1,73 @@
+{
+    "AS_Button_f63e92add041461e924e207dd5ab2071": {
+        "id": "AS_Button_f63e92add041461e924e207dd5ab2071",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "_ide_onClick_i443a3d59f3047029601f2b6248a5026",
+            "type": "STYLE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmFlows",
+            "widgetId": "btnBack",
+            "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+            "widgetKUID": "f66ca181a043404a9966eff0d3920f8a",
+            "wType": "Button",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "0",
+                "delay": "0",
+                "iterationCount": ""
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 0,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "0"
+            },
+            "start": "Immediately",
+            "animationId": "STYLE_ACTION_ee80d85d549343f1971da7a02cd1c03c",
+            "displayAnimationId": "STYLE_ACTION_ee80d85d549343f1971da7a02cd1c03c",
+            "forkedPlatform": "all",
+            "callbackType": null,
+            "widgetPath": "this.view.btnBack"
+        }, {
+            "id": "LOADING_INDICATOR_ide_onClick_h49669ce43e24c71af3c0203d18f4944",
+            "selectedOption": "show",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Back to channels..."
+        }, {
+            "id": "NAVIGATE_TO_FORM__ide_onClick_efc410e9df09497eb585129d090373b8",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmChannels",
+            "formKUID": "c1e9143f6fef4291a170222e7c044c7c",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "LOADING_INDICATOR_ide_onClick_ceb10ca363a04419a8d6fbdac0067460",
+            "selectedOption": "dismiss",
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }]
+    }
+}

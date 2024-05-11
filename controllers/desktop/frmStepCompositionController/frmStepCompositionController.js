@@ -464,6 +464,7 @@ define({
         voltmx.print("### list[i]: " + JSON.stringify(list[i]) );
         let masterDataString = list[i][masterDataValues];
         voltmx.print("### MASTER DATA STRING[0]: " + JSON.stringify(masterDataString[0]));  // undefined
+        debugger;
         let valuesArray = masterDataString.split(", ");
         let masterDataList = [];
         
