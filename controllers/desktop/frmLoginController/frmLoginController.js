@@ -2216,38 +2216,9 @@ define({
 }
 `
    
-   /* PROVA DI FETCH A URL COMPONENTS_SCHEMA
-   
-   function leggiContenutoDaURL(url) {
-     // Utilizza la Fetch API per recuperare il contenuto dell'URL
-     fetch(url)
-       .then(response => {
-       // Verifica se la richiesta è stata completata con successo
-       if (!response.ok) {
-         throw new Error('Errore nella richiesta');
-       }
-       // Leggi il corpo della risposta come testo
-       return response.text();
-     })
-       .then(data => {
-       // Gestisci il contenuto ottenuto dalla risposta
-       voltmx.print('### URL chiamato: ', JSON.stringify(data) );
-     })
-       .catch(error => {
-       // Gestisci eventuali errori
-       console.error('Si è verificato un errore:', error);
-     });
-   }
-
-   // Esempio di utilizzo della funzione
-   const url = 'https://rxc.luxottica.com/rxc3/fe/test/v1.0.0/components_schema.json';
-   leggiContenutoDaURL(url);
-   voltmx.print("### URL chiamato");
-   
-   */
    
    
-   // when the login is successfull
+   // when the login is succesfull
    function enter() {
      	voltmx.print("sono la callback dell'alert");
 //      	var navigating = new voltmx.mvc.Navigation('frmDashboard');
@@ -2379,6 +2350,10 @@ define({
                        });
                      }
                    } else {
+                     // TEST THE FOLLOWING IF
+                     if (propKey === "nestedComponents"){
+                       continue;
+                     }
                      props_template["name"] = propKey;
                      var prop = component.props[propKey];
                      console.log(`${propKey}: ${JSON.stringify(prop)}`);
