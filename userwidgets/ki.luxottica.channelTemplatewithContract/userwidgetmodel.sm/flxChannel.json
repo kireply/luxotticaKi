@@ -51,7 +51,8 @@
         "lblChannelGenericImage",
         "lblChannelAssetsCDN",
         "lblChannelProjectImage",
-        "lblChannelFrameOnlyLensUPC"
+        "lblChannelFrameOnlyLensUPC",
+        "lblShowUiSkeleton"
     ],
     "clipbounds": false,
     "containerweight": 100,

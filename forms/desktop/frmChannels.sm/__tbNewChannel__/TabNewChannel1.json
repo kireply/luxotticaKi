@@ -33,7 +33,9 @@
         "lblChannelNameInsideFrmChannels",
         "txtChannelNameInsideFrmChannels",
         "lblChannelLogoInsideFrmChannels",
-        "txtChannelLogoInsideFrmChannels"
+        "txtChannelLogoInsideFrmChannels",
+        "lblChannelPropertiesInsideFrmChannels",
+        "txtChannelPropertiesInsideFrmChannels"
     ],
     "clipbounds": true,
     "containerweight": 100,

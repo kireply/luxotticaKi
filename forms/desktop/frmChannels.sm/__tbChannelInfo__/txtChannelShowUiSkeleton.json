@@ -22,10 +22,10 @@
         0
     ],
     "_skin_": "se3e5f366fa0479095da493cba3c1cae",
-    "_text_": "Channel Logo",
+    "_text_": "Show Ui Skeleton",
     "_top_": {
         "type": "string",
-        "value": "39%"
+        "value": "69%"
     },
     "_width_": {
         "type": "ref",
@@ -41,7 +41,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblChannelLogoInsideFrmChannels",
+    "id": "txtChannelShowUiSkeleton",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,13 +55,13 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "i8d2fd745959433798a831747acfacf3",
+    "kuid": "a6e0d6c01684405294acb8e70910aebf",
     "name": "kony.ui.Label",
-    "parent": "TabNewChannel1",
+    "parent": "TabChannelInfo2",
     "pf": "frmChannels",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "tabpaneId": "tbNewChannel",
+    "tabpaneId": "tbChannelInfo",
     "tooltip": "",
     "wType": "Label",
     "zindex": 1

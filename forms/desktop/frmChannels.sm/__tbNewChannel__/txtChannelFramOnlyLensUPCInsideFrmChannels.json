@@ -22,7 +22,7 @@
     "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "78.03%"
+        "value": "59%"
     },
     "_width_": {
         "type": "string",
@@ -35,7 +35,7 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "49.98%"
+        "value": "50%"
     },
     "containerheight": "",
     "containerheightmode": 1,

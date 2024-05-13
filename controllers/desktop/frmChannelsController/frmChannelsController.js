@@ -105,18 +105,20 @@ define({
         channel.channelAssetsCDN = box.assets_CDN;
         channel.channelProjectImage = box.project_image;
         channel.channelFrameOnlyLensUPC = box.frame_only_lens_UPC;
+        channel.channelShowUiSkeleton = box.show_ui_skeleton;
         channel.onClickTeaser = () => {
       	//TODO ACTIONS WHILE CLICKING ON THE TILE
           if (gblInfoIcon === true){
   //           voltmx.print("### SET VISIBILITY");         
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.txtChannelID.text = channel.channelIdentifier;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.txtChannelLogo.text = channel.channelLogo;
-            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelProperties.text = channel.channelProperties;
+            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.txtChannelProperties.text = channel.channelProperties;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.txtChannelName.text = channel.channelInfo ;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelGenericImage.text = channel.channelGenericImage;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelAssetsCDN.text = channel.channelAssetsCDN;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelProjectImage.text = channel.channelProjectImage;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelFrameOnlyLensUPC.text = channel.channelFrameOnlyLensUPC;
+            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.swChannelShowUiSkeleton.selectedIndex = channel.channelShowUiSkeleton === true ? 0 : 1;
             this.view.flxPopupChannelInfo.setVisibility(true);
             this.view.flxBlur.setVisibility(true);
           } else {

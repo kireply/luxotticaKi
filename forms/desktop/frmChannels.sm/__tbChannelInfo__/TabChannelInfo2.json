@@ -27,8 +27,6 @@
     "allboxes": [],
     "canUpdateUI": true,
     "children": [
-        "lblChannelProperties",
-        "txtChannelProperties",
         "lblChannelGenericImage",
         "txtChannelGenericImage",
         "lblChannelAssetsCDN",
@@ -36,7 +34,9 @@
         "lblChannelProjectImage",
         "txtChannelProjectImage",
         "lblChannelFrameOnlyLensUPC",
-        "txtChannelFrameOnlyLensUPC"
+        "txtChannelFrameOnlyLensUPC",
+        "txtChannelShowUiSkeleton",
+        "swChannelShowUiSkeleton"
     ],
     "clipbounds": true,
     "containerweight": 100,
@@ -58,7 +58,7 @@
     "scrolldirection": 1,
     "snapgridsize": 10,
     "snaptogrid": true,
-    "tabname": "URLs",
+    "tabname": "Others",
     "tabpaneId": "tbChannelInfo",
     "wType": "Tab"
 }

@@ -25,7 +25,7 @@
     "_text_": "Channel Properties File",
     "_top_": {
         "type": "string",
-        "value": "7.89%"
+        "value": "54%"
     },
     "_width_": {
         "type": "ref",
@@ -57,7 +57,7 @@
     "isvisible": true,
     "kuid": "if329aff8e574721ab25363f99037c4b",
     "name": "kony.ui.Label",
-    "parent": "TabChannelInfo2",
+    "parent": "TabChannelInfo1",
     "pf": "frmChannels",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,

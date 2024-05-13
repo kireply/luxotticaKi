@@ -33,7 +33,9 @@
         "lblChannelName",
         "txtChannelName",
         "lblChannelLogo",
-        "txtChannelLogo"
+        "txtChannelLogo",
+        "lblChannelProperties",
+        "txtChannelProperties"
     ],
     "clipbounds": true,
     "containerweight": 100,

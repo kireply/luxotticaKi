@@ -300,6 +300,31 @@
                         "wType": "Label"
                     },
                     "srcWgtKUID": "e5cd9ee55d4949febd347179b57ae668"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "d428af75d06d4043ba04678b26930eec",
+                    "originalPropertyKey": "value",
+                    "propertyIndex": 12,
+                    "propertyKey": "channelShowUiSkeleton",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "widget",
+                        "defaultValue": 0,
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "channelShowUiSkeleton",
+                        "isDependentProp": true,
+                        "isHiddenInTool": false,
+                        "originalParentKey": "blur",
+                        "parentKey": "blur",
+                        "srcWidget": "lblShowUiSkeleton",
+                        "type": "integer",
+                        "uiRepresentation": "Label-Slider-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "c0ff5164e8f04b90953674c5b09a5f75"
                 }
             ]
         },

@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "9.61%"
+        "value": "10%"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "Channel Assets CDN",
     "_top_": {
         "type": "string",
-        "value": "39.56%"
+        "value": "24%"
     },
     "_width_": {
         "type": "ref",

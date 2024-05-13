@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "10.40%"
+        "value": "10%"
     },
     "_margin_": [
         1,
@@ -25,7 +25,7 @@
     "_text_": "Channel Project Image",
     "_top_": {
         "type": "string",
-        "value": "54.42%"
+        "value": "39%"
     },
     "_width_": {
         "type": "ref",

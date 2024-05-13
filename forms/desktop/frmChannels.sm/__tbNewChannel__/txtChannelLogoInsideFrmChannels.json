@@ -5,10 +5,6 @@
         "type": "string",
         "value": "6%"
     },
-    "_left_": {
-        "type": "string",
-        "value": "8.86%"
-    },
     "_margin_": [
         0,
         0,
@@ -26,7 +22,7 @@
     "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "46.59%"
+        "value": "44%"
     },
     "_width_": {
         "type": "string",
@@ -47,7 +43,7 @@
     "contentalignment": 4,
     "focusskin": "s4ae88d6059f41ebb18f1220b211dfc3",
     "id": "txtChannelLogoInsideFrmChannels",
-    "ide_onTextChange": "AS_TextField_b0e11994008849bb955a2a19ac173ae6",
+    "ide_onTextChange": "AS_TextField_f5a59d13557d4f44b4226e8bad212e2b",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
