@@ -284,7 +284,8 @@ async function publish() {
   ];
   */
 
-  // gblFlowId = "128";
+  // TO BE COMMENTED ====================================================
+  gblFlowId = "338";
 
   var flow_id_param = {
     flow_id : gblFlowId
@@ -293,6 +294,10 @@ async function publish() {
   var component_params = {
     flow_id : gblFlowId,
     section_type: null
+  };
+  
+  var nested_params = {
+    flow_id : gblFlowId
   };
 
 
@@ -455,84 +460,141 @@ async function publish() {
   JSON_step = await getStepFlow(flow_id_param);
 
   component_params["section_type"] = "stepSection";
-  const getSectionFlow = (component_params) => new Promise((resolve, reject) => {
-    voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("Components_CustomQuery", {}, component_params, (response) => {
-      voltmx.print ("### Service response: "+JSON.stringify(response));
-      voltmx.print("### RECORDS: " + JSON.stringify(response.records));
-      let groupedByStepOrder = response.records.reduce((acc, record) => {
-        // Utilizza step_order come chiave per il raggruppamento
-        let stepOrder = record.step_order;
-        // Se non esiste un array per questo step_order, crealo
-        if (!acc[stepOrder]) {
-          acc[stepOrder] = [];
-        }
-        // Aggiungi il record corrente all'array di questo step_order
-        acc[stepOrder].push(record);
+  const getSectionFlow = (component_params, nested_params) => new Promise((resolve, reject) => {
+    // Prima chiamata al database per ottenere le relazioni padre-figlio
+    voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("NESTED_COMPONENT_CustomQuery", {}, nested_params, (nestedResponse) => {
+      const parentChildMap = nestedResponse.records.reduce((acc, item) => {
+        acc[item.component_instance_father_id] = item.component_instance_id;
         return acc;
       }, {});
+      
+      debugger;
 
-      Object.keys(groupedByStepOrder).forEach(stepOrder => {
-        let recordsForStepOrder = groupedByStepOrder[stepOrder];
-        let component = {};
-       
-        
-        // Inizio codice per rimozione delle labels (che iniziano per numero, es "123_ + qualcosa")
-        //let regex = /^[0-9]{3}_/;
-        
-        recordsForStepOrder.forEach(record => { // questa riga invece già presente (e corretta)
-      /* Codice per rimozione delle labels (che iniziano per numero, es "123_ + qualcosa")
-          voltmx.print("### recordsForStepOrder: " + recordsForStepOrder);
-          voltmx.print("### recordsForStepOrder stringify: " + JSON.stringify(recordsForStepOrder) );
-          voltmx.print("### record: " + record);
-          voltmx.print("### record stringify: " + JSON.stringify(record) );
-          voltmx.print("### record stringify: " + JSON.stringify(record.property_value) );
-          if (regex.test(record.property_value) ) {
-            voltmx.print();
-            return; 
-          } */
-          
-          // Fine rimozione Labels (che iniziano con numero)
-          
-          
-          let uniqueKey = `${record.component_template_name}_${record.component_order}`;
-          if (!component[uniqueKey]) {
-            component[uniqueKey] = { id: record.component_template_name, order: parseInt(record.component_order, 10), properties: [] };
+      // Seconda chiamata al database per ottenere i componenti e le loro proprietà
+      voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("Components_CustomQuery", {}, component_params, (response) => {
+        voltmx.print("### Service response: " + JSON.stringify(response));
+        let groupedByStepOrder = response.records.reduce((acc, record) => {
+          let stepOrder = record.step_order;
+          if (!acc[stepOrder]) {
+            acc[stepOrder] = [];
           }
-          component[uniqueKey].properties.push({
-            name: record.property_template_name,
-            value: record.property_value
-          });           
-        });
+          acc[stepOrder].push(record);
+          return acc;
+        }, {});
+        
+        let componentIdMap = response.records.reduce((acc, record) => {
+          const key = `${record.component_template_name}_${record.component_order}`;
+          acc[key] = record.component_id;
+          return acc;
+        }, {});
+        
+        debugger;
 
-        let componentsArray = Object.values(component).map(component_item => {
-          let transformedComponent = {
-            id: component_item.id,
-            order: component_item.order
-          };
-          component_item.properties.forEach(prop => {
-            if (prop.value === "true" || prop.value === "True"){
-              prop.value = true;
-            } else if (prop.value === "false" || prop.value === "False"){
-              prop.value = false;
+        Object.keys(groupedByStepOrder).forEach(stepOrder => {
+          let recordsForStepOrder = groupedByStepOrder[stepOrder];
+          let componentMap = {};
+
+          // Costruisci componenti con properties
+          recordsForStepOrder.forEach(record => {
+            let uniqueKey = `${record.component_template_name}_${record.component_order}`;
+            if (!componentMap[uniqueKey]) {
+              componentMap[uniqueKey] = {
+                id: record.component_template_name,
+                order: parseInt(record.component_order, 10),
+                properties: [],
+                nestedComponents: []
+              };
             }
-            transformedComponent[prop.name] = prop.value;
+            let propertyObject = {};
+            let processedValue = record.property_value ? (record.property_value.toLowerCase() === "true" ? true : (record.property_value.toLowerCase() === "false" ? false : record.property_value)) : record.property_value; 
+            propertyObject[record.property_template_name] = processedValue;
+            componentMap[uniqueKey].properties.push(propertyObject);
           });
-          return transformedComponent;
+          
+          debugger;
+
+//           // Aggiungi i componenti figli ai loro genitori nel componentMap
+//           Object.entries(parentChildMap).forEach(([parentId, childId]) => {
+//             // Usa componentIdMap per trovare le chiavi uniche dei componenti padre e figlio
+//             const parentKey = Object.keys(componentIdMap).find(key => componentIdMap[key] === parentId);
+//             const childKey = Object.keys(componentIdMap).find(key => componentIdMap[key] === childId);
+
+//             // Assicurati che entrambe le chiavi siano trovate e che esistano nel componentMap
+//             if (parentKey && childKey && componentMap[parentKey] && componentMap[childKey]) {
+//               // Inizializza nestedComponents se non esiste
+//               if (!componentMap[parentKey].nestedComponents) {
+//                 componentMap[parentKey].nestedComponents = [];
+//               }
+
+//               // Aggiungi il componente figlio al componente padre
+//               componentMap[parentKey].nestedComponents.push(componentMap[childKey]);
+//             }
+//           });
+          
+          // Inizialmente, memorizza gli ID dei componenti che sono stati aggiunti come nestedComponents
+          let nestedComponentIds = new Set();
+
+          Object.entries(parentChildMap).forEach(([parentId, childId]) => {
+            const parentKey = Object.keys(componentIdMap).find(key => componentIdMap[key] === parentId);
+            const childKey = Object.keys(componentIdMap).find(key => componentIdMap[key] === childId);
+
+            if (parentKey && childKey && componentMap[parentKey] && componentMap[childKey]) {
+              if (!componentMap[parentKey].nestedComponents) {
+                componentMap[parentKey].nestedComponents = [];
+              }
+              componentMap[parentKey].nestedComponents.push(componentMap[childKey]);
+              nestedComponentIds.add(childKey); // Aggiungi l'ID del figlio all'insieme degli ID annidati
+            }
+          });
+
+          // Ora rimuovi tutti gli elementi da componentMap che sono stati aggiunti come nestedComponents
+          nestedComponentIds.forEach(id => {
+            delete componentMap[id];
+          });
+
+          // Il componentMap risultante non conterrà duplicati a livello di radice
+          console.log(componentMap);
+
+          debugger;
+
+          // Prepara i componenti per l'output
+          let componentsArray = Object.values(componentMap).map(component => {
+            let transformedComponent = {
+              id: component.id,
+              order: component.order,
+              properties: component.properties,
+            };
+            if (component.nestedComponents.length > 0) {
+              transformedComponent.nestedComponents = component.nestedComponents;
+            }
+            return transformedComponent;
+          });
+          
+          debugger;
+
+          // Assegna i componenti al passo corrispondente in JSON_step
+          let stepIndex = JSON_step.steps.findIndex(step => step.definingAttributes.order === stepOrder);
+          if (stepIndex !== -1) {
+            JSON_step.steps[stepIndex].components = componentsArray;
+          }
         });
 
-        // Aggiungi i componenti al passo corrispondente in JSON_step
-        let stepIndex = JSON_step.steps.findIndex(step => step.definingAttributes.order === stepOrder);
-        
-        JSON_step.steps[stepIndex].components = componentsArray;
-        
+        resolve(JSON_step);
+      }, (error) => {
+        voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+        reject(error);
       });
-      resolve(JSON_step);
     }, (error) => {
-      voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+      voltmx.print("### Error retrieving nested components: " + JSON.stringify(error));
+      reject(error);
     });
   });
 
-  JSON_step = await getSectionFlow(component_params);
+
+
+  JSON_step = await getSectionFlow(component_params, nested_params);
+  
+  debugger;
 
   /* sorting the steps based on their "order"
   JSON_step.steps[0].components.sort((a, b) => a.order - b.order);

@@ -913,11 +913,11 @@ define({
   },   // end of function saveStepComposition
   
   
-  
+  // Callback of the COMPONENT_CREATE service, in which property instances and labels of the just created component instance are created
+  // Dovrebbe essere aggiustato e reso generico anche per il "left side", per ora funziona solo per il "right side"
   componentCreateCallback: function(widget, property_instance_right, response, component_instance_right){
     widget["lblComponentId"].text = response.COMPONENT_INSTANCE[0].id;  // chiave primaria nel DB, a cui Nested Component deve puntare per trovare il padre
     property_instance_right["component_instance_id"] = response.COMPONENT_INSTANCE[0].id;
-//     debugger;
     let props_right = widget["flxSelectedComponentRight"]["segmentRight"]["data"];
     props_right.forEach(function(prop_right) {
       let cleanedStr = prop_right.lblPropertyName.replace(/[^a-zA-Z0-9]+$/, '').replace(/^[^a-zA-Z0-9]+/, '');
