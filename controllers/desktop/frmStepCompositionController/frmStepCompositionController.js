@@ -463,7 +463,6 @@ define({
         voltmx.print("### list[i]: " + JSON.stringify(list[i]) );
         let masterDataString = list[i][masterDataValues];
         voltmx.print("### MASTER DATA STRING[0]: " + JSON.stringify(masterDataString[0]));  // undefined
-        debugger;
         let valuesArray = masterDataString.split(", ");
         let masterDataList = [];
         
@@ -502,7 +501,23 @@ define({
         }, {}, {});
         //gblFlowId = 128; //to comment in the global flow of the application
         //let label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`; // LABEL QUI
-        let label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`;
+        
+        // retrieving the current step title (to insert in the final label_key)
+        let label_key = null;
+        var steps = null;
+        var stepTitle = null;
+        if (gblCurrentStepOrder < 2) {
+          label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`;
+        } else {
+          steps = this.view.flxSteps.widgets();
+          voltmx.print("### gblCurrentStepOrder: " + gblCurrentStepOrder);
+          stepTitle = steps[gblCurrentStepOrder].stepTitle;
+          label_key = `${gblFlowId}_${list[i].name}_${stepTitle}_${instance}_${i+1}`;
+          voltmx.print("### stepTitle: " + stepTitle);
+          voltmx.print("### label_key: " + label_key);
+        }
+             
+        
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
         propComp.propertyValue = label_key;
         propComp.txtPropertyValueTextField.setEnabled(true); // QUI
@@ -724,9 +739,11 @@ define({
     
     scrolls.forEach(scroll => {
       let number = 0;
+      let step_id = 0;
       if (scroll.id === "flxScrollRight"){
         let entry = Object.entries(gblIdOrderSteps).find(([id, order]) => order === "1");
         number = entry ? entry[0] : undefined;
+        step_id = entry ? entry[1] : undefined;
         
       } else {
         let match = scroll.id.match(/flxScrollRight(\d+)$/);
@@ -734,11 +751,13 @@ define({
           let temp = match[1];
           let entry = Object.entries(gblIdOrderSteps).find(([id, order]) => order === temp);
           number = entry ? entry[0] : undefined;
+          step_id = entry ? entry[1] : undefined;
         }
       }
       let right_widgets = scroll.widgets();
       
-      
+      voltmx.print("### gblIdOrderSteps: " + gblIdOrderSteps);
+      debugger;
       // modifica qui per i Nested Components
       if (right_widgets.length > 0){
         voltmx.print("### SONO A DESTRA DENTRO " + `${scroll.id}`);
@@ -755,19 +774,22 @@ define({
 //             debugger;
             let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
             const id = widget[componentKey].id;
-//             AGGIUSTA LA PARTE FINALE -> metti "component_instance_right["step_id"]" al posto di "1"
-            let completeKey = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName + "_" + widget[componentKey]["lblComponentOrder"].text + "_" + "1";
-            let keyArray = mode_dict[completeKey];
-            let nestedObjs = keyArray.find(item => item.hasOwnProperty('nestedComponents'));
-            if (nestedObjs && nestedObjs.nestedComponents.length > 0){
-              parentIds.add(id);
-              nestedObjs.nestedComponents.forEach(childId => {
-                if (childId in componentIdMap){
-                  children.push({[childId] : componentIdMap[childId]});
-                  childIds.add(childId);
-                }
-              });
-            }
+
+          let completeKey = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName + "_" + widget[componentKey]["lblComponentOrder"].text + "_" + step_id;
+          debugger;
+          let keyArray = mode_dict[completeKey];
+          debugger;
+          let nestedObjs = keyArray.find(item => item.hasOwnProperty('nestedComponents'));
+          debugger;
+          if (nestedObjs && nestedObjs.nestedComponents.length > 0){
+            parentIds.add(id);
+            nestedObjs.nestedComponents.forEach(childId => {
+              if (childId in componentIdMap){
+                children.push({[childId] : componentIdMap[childId]});
+                childIds.add(childId);
+              }
+            });
+          }
         });
         
         right_widgets = right_widgets.filter(widget => {
@@ -798,8 +820,7 @@ define({
           let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
           component_instance_right["template_name"] = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
           
-//          AGGIUSTA -> METTI QUESTA RIGA component_instance_right["step_id"] = number;  
-          component_instance_right["step_id"] = 352;
+          component_instance_right["step_id"] = number;
           component_instance_right["order"] = widget[componentKey]["lblComponentOrder"].text;
          
                            
@@ -809,8 +830,12 @@ define({
             let widgInsideComp = widget[componentKey];
             this.componentCreateCallback(widgInsideComp, property_instance_right, response, component_instance_right);
             let component_id = response.COMPONENT_INSTANCE[0].id;
-            // AGGIUSTA -> TOGLI "1" E METTI UN'ALTRA COSA (VEDI DOVE DEFINISCI NUMBER, DOVRESTI PRENDERE L'OPPOSTO DI NUMBER DENTRO GBLIDORDERSTEPS)
-            let completeKey = component_instance_right["template_name"] + "_" + component_instance_right["order"] + "_" + "1";
+            let completeKey = null;
+            if(scroll.id === "flxScrollRight") {
+              completeKey = component_instance_right["template_name"] + "_" + component_instance_right["order"] + "_" + "1";
+            } else {
+              completeKey = component_instance_right["template_name"] + "_" + component_instance_right["order"] + "_" + scroll.id.match(/flxScrollRight(\d+)$/)[1];
+            }
             let componentArray = this.modes[completeKey];
             let nestedComponentsObj = componentArray.find(item =>item.hasOwnProperty('nestedComponents'));
             let child = null;
@@ -830,8 +855,8 @@ define({
                 let childObj = children.find(child => childId in child);
                 child = childObj ? childObj[childId] : undefined;
                 component_instance_nested_right["template_name"] = child["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
-//                 AGGIUSTA -> METTI QUESTA RIGA component_instance_right["step_id"] = number;  
-                component_instance_nested_right["step_id"] = 352;
+
+                component_instance_nested_right["step_id"] = number;
                 component_instance_nested_right["order"] = child["lblComponentOrder"].text;
                 voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_nested_right,
                                                                                            (response) => {
@@ -849,8 +874,7 @@ define({
                     voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
                     gblFail = true;
                   });
-                  // AGGIUSTA -> TOGLI "1" E METTI UN'ALTRA COSA (VEDI DOVE DEFINISCI NUMBER, DOVRESTI PRENDERE L'OPPOSTO DI NUMBER DENTRO GBLIDORDERSTEPS)
-                  let completeKeyInsideNested = component_instance_nested_right["template_name"] + "_" + component_instance_nested_right["order"] + "_" + "1";
+                  let completeKeyInsideNested = component_instance_nested_right["template_name"] + "_" + component_instance_nested_right["order"] + "_" + scroll.id.match(/flxScrollRight(\d+)$/)[1];
                   let componentArrayInsideNested = this.modes[completeKeyInsideNested];
                   let nestedComponentsObjInsideNested = componentArrayInsideNested.find(item =>item.hasOwnProperty('nestedComponents'));
                   let childInsideNested = null;
@@ -870,8 +894,7 @@ define({
                       let childObjInsideNested = children.find(child => childIdInsideNested in child);
                       childInsideNested = childObjInsideNested ? childObjInsideNested[childIdInsideNested] : undefined;
                       component_instance_nested_right_Inside["template_name"] = childInsideNested["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
-                      //AGGIUSTA -> METTI QUESTA RIGA component_instance_right["step_id"] = number;  
-                      component_instance_nested_right_Inside["step_id"] = 352;
+                      component_instance_nested_right_Inside["step_id"] = number;
                       component_instance_nested_right_Inside["order"] = childInsideNested["lblComponentOrder"].text;
                       voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_nested_right_Inside,
                                                                                                        (response) => {
@@ -930,7 +953,7 @@ define({
       });
       let prop_id_right = Object.keys(elementoTrovato_right);
       if (elementoTrovato_right[prop_id_right[0]].mode === "label"){
-        gblFlowId = 338 // TO BE COMMENTED
+      //  gblFlowId = 338  TO BE COMMENTED
         let label_right = {
           id: prop_right.lblPropertyValue,
           flow_id: gblFlowId, 

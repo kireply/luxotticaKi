@@ -285,7 +285,7 @@ async function publish() {
   */
 
   // TO BE COMMENTED ====================================================
-  gblFlowId = "338";
+  // gblFlowId = "338";
 
   var flow_id_param = {
     flow_id : gblFlowId

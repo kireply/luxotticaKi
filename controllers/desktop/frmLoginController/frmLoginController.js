@@ -2351,29 +2351,29 @@ define({
                      }
                    } else {
                      // TEST THE FOLLOWING IF
-                     if (propKey === "nestedComponents"){
-                       continue;
-                     }
-                     props_template["name"] = propKey;
-                     var prop = component.props[propKey];
-                     console.log(`${propKey}: ${JSON.stringify(prop)}`);
-                     Object.keys(prop).forEach(propValues => {
-                       value = prop[propValues];
-                       voltmx.print(`### PROP VALUE: ${propValues} = ${JSON.stringify(value)}`);
-                       if (props_template.hasOwnProperty(propValues)){
-                         props_template[propValues] = value;
-                       }  
-                     });
-                     console.log(props_template);
+                     if (propKey !== "nestedComponents"){
+                       props_template["name"] = propKey;
+                       var prop = component.props[propKey];
+                       console.log(`${propKey}: ${JSON.stringify(prop)}`);
+                       Object.keys(prop).forEach(propValues => {
+                         value = prop[propValues];
+                         voltmx.print(`### PROP VALUE: ${propValues} = ${JSON.stringify(value)}`);
+                         if (props_template.hasOwnProperty(propValues)){
+                           props_template[propValues] = value;
+                         }  
+                       });
+                       console.log(props_template);
 
-                     // logica per invocare il DB con la create del property template
-                     voltmx.print("### CREATE PROPERTY TEMPLATE!");
-                     integrationService.invokeOperation("PROPERTY_TEMPLATE_create", {}, props_template, 
-                                                        (response) => {
-                       voltmx.print ("### Service response: "+JSON.stringify(response));            
-                     }, error => {
-                       voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-                     });
+                       // logica per invocare il DB con la create del property template
+                       voltmx.print("### CREATE PROPERTY TEMPLATE!");
+                       integrationService.invokeOperation("PROPERTY_TEMPLATE_create", {}, props_template, 
+                                                          (response) => {
+                         voltmx.print ("### Service response: "+JSON.stringify(response));            
+                       }, error => {
+                         voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                       });
+                     }
+
                    }
 
                  });
