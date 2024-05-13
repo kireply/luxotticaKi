@@ -776,11 +776,9 @@ define({
             const id = widget[componentKey].id;
 
           let completeKey = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName + "_" + widget[componentKey]["lblComponentOrder"].text + "_" + step_id;
-          debugger;
           let keyArray = mode_dict[completeKey];
           debugger;
           let nestedObjs = keyArray.find(item => item.hasOwnProperty('nestedComponents'));
-          debugger;
           if (nestedObjs && nestedObjs.nestedComponents.length > 0){
             parentIds.add(id);
             nestedObjs.nestedComponents.forEach(childId => {
@@ -831,11 +829,8 @@ define({
             this.componentCreateCallback(widgInsideComp, property_instance_right, response, component_instance_right);
             let component_id = response.COMPONENT_INSTANCE[0].id;
             let completeKey = null;
-            if(scroll.id === "flxScrollRight") {
-              completeKey = component_instance_right["template_name"] + "_" + component_instance_right["order"] + "_" + "1";
-            } else {
-              completeKey = component_instance_right["template_name"] + "_" + component_instance_right["order"] + "_" + scroll.id.match(/flxScrollRight(\d+)$/)[1];
-            }
+            completeKey = component_instance_right["template_name"] + "_" + component_instance_right["order"] + "_" + step_id;
+            debugger;
             let componentArray = this.modes[completeKey];
             let nestedComponentsObj = componentArray.find(item =>item.hasOwnProperty('nestedComponents'));
             let child = null;
@@ -874,7 +869,8 @@ define({
                     voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
                     gblFail = true;
                   });
-                  let completeKeyInsideNested = component_instance_nested_right["template_name"] + "_" + component_instance_nested_right["order"] + "_" + scroll.id.match(/flxScrollRight(\d+)$/)[1];
+                  let completeKeyInsideNested = component_instance_nested_right["template_name"] + "_" + component_instance_nested_right["order"] + "_" + step_id;
+                  debugger;
                   let componentArrayInsideNested = this.modes[completeKeyInsideNested];
                   let nestedComponentsObjInsideNested = componentArrayInsideNested.find(item =>item.hasOwnProperty('nestedComponents'));
                   let childInsideNested = null;
