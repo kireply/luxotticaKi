@@ -118,7 +118,7 @@ define({
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelAssetsCDN.text = channel.channelAssetsCDN;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelProjectImage.text = channel.channelProjectImage;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelFrameOnlyLensUPC.text = channel.channelFrameOnlyLensUPC;
-            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.swChannelShowUiSkeleton.selectedIndex = channel.channelShowUiSkeleton === true ? 0 : 1;
+            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.swChannelShowUiSkeleton.selectedIndex = channel.channelShowUiSkeleton === "true" ? 0 : 1;
             this.view.flxPopupChannelInfo.setVisibility(true);
             this.view.flxBlur.setVisibility(true);
           } else {
@@ -131,6 +131,7 @@ define({
             gblChannelAssetsCDN = box.assets_CDN;
             gblChannelProjectImage = box.project_image;
             gblChannelFrameOnlyLensUPC = box.frame_only_lens_UPC;
+            gblChannelShowUiSkeleton = box.show_ui_skeleton;
             voltmx.print("### GLOBAL INFO: " + gblChannelName);
             voltmx.print("### GLOBAL LOGO: " + gblChannelLogo);
             var navigationManager = new voltmx.mvc.Navigation("frmFlows");

@@ -37,6 +37,7 @@
     "children": [
         "channelTemplatewithContract",
         "lblChannelSettings",
+        "flxBtnSave",
         "lblChannelID",
         "txtChannelID",
         "lblChannelName",
@@ -53,7 +54,8 @@
         "txtChannelProjectImage",
         "lblChannelFrameOnlyLensUPC",
         "txtChannelFrameOnlyLensUPC",
-        "flxBtnSave"
+        "lblChannelShowUiSkeleton",
+        "swChannelShowUiSkeleton"
     ],
     "clipbounds": false,
     "containerweight": 100,

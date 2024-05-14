@@ -401,7 +401,7 @@
         }, {
             "id": "ADD_SNIPPET_a020aa8c17a245ca9b4757c7931362dc",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "self.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\nself.view.flxBlur.setVisibility(false);",
+            "codeSnippet": "// emptying all the fields to eventually create multiple new channels\nthis.view.tbNewChannel.txtChannelIDInsideFrmChannels = \"\";\nthis.view.tbNewChannel.txtChannelNameInsideFrmChannels = \"\";\nthis.view.tbNewChannel.txtChannelLogoInsideFrmChannels = \"\";\nthis.view.tbNewChannel.txtChannelPropertiesInsideFrmChannels = \"\";\nthis.view.tbNewChannel.txtChannelGenericImageInsideFrmChannels = \"\";\nthis.view.tbNewChannel.txtChannelAssetsCDNInsideFrmChannels = \"\";\nthis.view.tbNewChannel.txtChannelProjectImageInsideFrmChannels = \"\";\nthis.view.tbNewChannel.txtChannelFramOnlyLensUPCInsideFrmChannels = \"\";\nthis.view.tbNewChannel.swChannelShowUiSkeletonInsideFrmChannel.selectedIndex = 1; // false\n\nself.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\nself.view.flxBlur.setVisibility(false);",
             "parentId": "IF_CONDITION_ide_onClick_g8ee8f550ddd4132ae6787dddb6f0beb",
             "callbackType": null
         }, {
@@ -449,7 +449,7 @@
         }, {
             "id": "ADD_SNIPPET_b52e2c38fe0f4d5092a10bdfa6b5ced8",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "self.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\nself.view.flxBlur.setVisibility(false);",
+            "codeSnippet": "// emptying all the fields to eventually create multiple new channels\nthis.view.tbNewChannel.txtChannelIDInsideFrmChannels = \"\";\nthis.view.tbNewChannel.txtChannelNameInsideFrmChannels = \"\";\nthis.view.tbNewChannel.txtChannelLogoInsideFrmChannels = \"\";\nthis.view.tbNewChannel.txtChannelPropertiesInsideFrmChannels = \"\";\nthis.view.tbNewChannel.txtChannelGenericImageInsideFrmChannels = \"\";\nthis.view.tbNewChannel.txtChannelAssetsCDNInsideFrmChannels = \"\";\nthis.view.tbNewChannel.txtChannelProjectImageInsideFrmChannels = \"\";\nthis.view.tbNewChannel.txtChannelFramOnlyLensUPCInsideFrmChannels = \"\";\nthis.view.tbNewChannel.swChannelShowUiSkeletonInsideFrmChannel.selectedIndex = 1; // false\n\nself.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\nself.view.flxBlur.setVisibility(false);",
             "parentId": "ELSE_CONDITION_ide_onClick_d260f5b1817646b39c8350cacceb7ea3",
             "callbackType": null
         }]

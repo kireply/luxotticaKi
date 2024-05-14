@@ -6,7 +6,7 @@
     },
     "_height_": {
         "type": "string",
-        "value": "85.56%"
+        "value": "90%"
     },
     "_left_": {
         "type": "string",
@@ -61,6 +61,8 @@
         "txtChannelProjectImage",
         "lblChannelFrameOnlyLensUPC",
         "txtChannelFrameOnlyLensUPC",
+        "lblChannelShowUiSkeleton",
+        "swChannelShowUiSkeleton",
         "btnSaveNewChannel"
     ],
     "clipbounds": false,

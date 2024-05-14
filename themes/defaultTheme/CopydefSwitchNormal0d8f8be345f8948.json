@@ -13,15 +13,15 @@
     "isForked": true,
     "thumb_color": "ffffff"
   },
-  "background_left_color": "000000ff",
-  "background_right_color": "e0e0e0ff",
+  "background_left_color": "48d874ff",
+  "background_right_color": "e0e0e000",
   "bg_type": "one",
   "border_color": "000000ff",
   "border_style": "plain",
   "border_type": 0,
   "border_width": 0,
   "desktopweb": {
-    "font_name": "Montserrat-Regular"
+    "font_name": "Helvetica"
   },
   "font_size": 156,
   "font_style": "normal",
@@ -40,8 +40,8 @@
   "kiosk": {
     "font_name": "None"
   },
-  "kuid": "saa5d805e449448e85bddfa481fb9b65",
-  "left_font_color": "ffffffff",
+  "kuid": "se09471775e040e3be397011421af51d",
+  "left_font_color": "333333ff",
   "right_font_color": "333333ff",
   "spaan": {
     "font_name": "Helvetica"

@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "10%"
     },
     "_margin_": [
         1,
@@ -21,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "s518481e20b04263b44048281e19ba0e",
-    "_text_": "Channel Generic Image",
+    "_skin_": "s780a224818b473e813d49741ebd41c2",
+    "_text_": "Show Ui Skeleton",
     "_top_": {
         "type": "string",
-        "value": "53%"
+        "value": "84.4%"
     },
     "_width_": {
         "type": "ref",
@@ -41,7 +41,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblChannelGenericImage",
+    "id": "lblChannelShowUiSkeleton",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,12 +55,13 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "df00d3f3ed544be9bb1edb25877e8e6f",
+    "kuid": "e411ed0fdfc4483d9fa03cc516136c21",
     "name": "kony.ui.Label",
-    "parent": "flxContainerChannelSettings",
-    "pf": "frmChannelSettings",
+    "parent": "flxPopupCreateNewChannel",
+    "pf": "frmChannelCreation",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",
-    "wType": "Label"
+    "wType": "Label",
+    "zindex": 1
 }
