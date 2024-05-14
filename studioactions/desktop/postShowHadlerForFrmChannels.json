@@ -18,7 +18,6 @@
         "actions": [{
             "id": "LOADING_INDICATOR_b67324adc5e04952aba778ff98b9c4f0",
             "selectedOption": "show",
-            "disabled": true,
             "type": "LOADING_INDICATOR",
             "skin": "none",
             "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",

@@ -16,6 +16,23 @@
         "language": "js",
         "eventType": "postShow",
         "actions": [{
+            "id": "_af518630a2844f8da95346600df226de",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "navigationsource",
+                "leftValue": "(this.getPreviousForm() === \"frmStepCreation\") && this.navigationContext && this.navigationContext._meta_ && (this.navigationContext._meta_.widgetId ===  \"btnProceed\") && (this.navigationContext._meta_.eventName ===  \"onClick\")",
+                "operator": "===",
+                "rightValue": "",
+                "leftItemKUID": "j27b7970c694429db6312f3b27f7428e",
+                "leftWidgetKUID": "h81dc10a5cb446e3b293ab457ad937e2",
+                "sequenceId": "AS_Button_fc1580a841e04b58b90e8f39b0d6fb0f",
+                "eventName": "onClick",
+                "widgetId": "btnProceed"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
             "id": "ADD_SNIPPET_a57a87fd15d04e04bc9c7984b8ebeb2c",
             "type": "ADD_SNIPPET",
             "codeSnippet": "// Disabling text areas.\n\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n\nthis.view.flxComponentsSide.opacity = 0.5;\n",
@@ -51,23 +68,6 @@
             "parentId": null,
             "callbackType": null,
             "enableMappingEditor": true
-        }, {
-            "id": "_af518630a2844f8da95346600df226de",
-            "type": "IF_CONDITION",
-            "conditions": [{
-                "leftValueType": "navigationsource",
-                "leftValue": "(this.getPreviousForm() === \"frmStepCreation\") && this.navigationContext && this.navigationContext._meta_ && (this.navigationContext._meta_.widgetId ===  \"btnProceed\") && (this.navigationContext._meta_.eventName ===  \"onClick\")",
-                "operator": "===",
-                "rightValue": "",
-                "leftItemKUID": "j27b7970c694429db6312f3b27f7428e",
-                "leftWidgetKUID": "h81dc10a5cb446e3b293ab457ad937e2",
-                "sequenceId": "AS_Button_fc1580a841e04b58b90e8f39b0d6fb0f",
-                "eventName": "onClick",
-                "widgetId": "btnProceed"
-            }],
-            "parentId": null,
-            "callbackType": null,
-            "criteria": "all"
         }, {
             "id": "_a67defbe01564ed48823d29022ea6ec8",
             "type": "IF_CONDITION",

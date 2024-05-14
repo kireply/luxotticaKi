@@ -30,7 +30,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "80%"
+        "value": "95%"
     },
     "autocapitalize": "none",
     "autocomplete": false,
