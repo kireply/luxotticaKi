@@ -31,7 +31,8 @@
             }],
             "parentId": null,
             "callbackType": null,
-            "criteria": "all"
+            "criteria": "all",
+            "disabled": true
         }, {
             "id": "ADD_SNIPPET_a57a87fd15d04e04bc9c7984b8ebeb2c",
             "type": "ADD_SNIPPET",

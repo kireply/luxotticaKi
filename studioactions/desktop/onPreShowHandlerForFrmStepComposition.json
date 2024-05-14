@@ -1,0 +1,72 @@
+{
+    "AS_Form_d3c06b9e0846471e8e2fb0a7ac84b027": {
+        "id": "AS_Form_d3c06b9e0846471e8e2fb0a7ac84b027",
+        "type": "ACTION_SEQUENCE",
+        "name": "onPreShowHandlerForFrmStepComposition",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "preShow",
+        "actions": [{
+            "id": "_id57134c20c747e8b5f887d6c19dc341",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "navigationsource",
+                "leftValue": "(this.getPreviousForm() === \"frmStepCreation\") && this.navigationContext && this.navigationContext._meta_ && (this.navigationContext._meta_.widgetId ===  \"btnProceed\") && (this.navigationContext._meta_.eventName ===  \"onClick\")",
+                "operator": "===",
+                "rightValue": "",
+                "leftItemKUID": "j27b7970c694429db6312f3b27f7428e",
+                "leftWidgetKUID": "h81dc10a5cb446e3b293ab457ad937e2",
+                "sequenceId": "AS_Button_fc1580a841e04b58b90e8f39b0d6fb0f",
+                "eventName": "onClick",
+                "widgetId": "btnProceed"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_MAPPING_ea4b3c546fc942f9be80059c1be58516",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_d246d39f020a4a6792ff04d28590f6ce": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d246d39f020a4a6792ff04d28590f6ce",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "navigationobject",
+                        "propertyName": "txtStepTitle_text",
+                        "dataType": "string",
+                        "isSkinProperty": false,
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblStepTitleIntoStepComposition",
+                        "widgetPath": "this.view.lblStepTitleIntoStepComposition",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "itemId": "frmStepComposition",
+                        "widgetKUID": "c1cbce2c78594587a75089eba6c2d130",
+                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_d246d39f020a4a6792ff04d28590f6ce"],
+            "parentId": "_id57134c20c747e8b5f887d6c19dc341",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }]
+    }
+}

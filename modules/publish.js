@@ -468,7 +468,7 @@ async function publish() {
         return acc;
       }, {});
       
-      debugger;
+      //debugger;
 
       // Seconda chiamata al database per ottenere i componenti e le loro proprietà
       voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("Components_CustomQuery", {}, component_params, (response) => {
@@ -488,7 +488,7 @@ async function publish() {
           return acc;
         }, {});
         
-        debugger;
+        //debugger;
 
         Object.keys(groupedByStepOrder).forEach(stepOrder => {
           let recordsForStepOrder = groupedByStepOrder[stepOrder];
@@ -511,7 +511,7 @@ async function publish() {
             componentMap[uniqueKey].properties.push(propertyObject);
           });
           
-          debugger;
+          //debugger;
 
 //           // Aggiungi i componenti figli ai loro genitori nel componentMap
 //           Object.entries(parentChildMap).forEach(([parentId, childId]) => {
@@ -555,7 +555,7 @@ async function publish() {
           // Il componentMap risultante non conterrà duplicati a livello di radice
           console.log(componentMap);
 
-          debugger;
+          //debugger;
 
           // Prepara i componenti per l'output
           let componentsArray = Object.values(componentMap).map(component => {
@@ -570,7 +570,7 @@ async function publish() {
             return transformedComponent;
           });
           
-          debugger;
+          //debugger;
 
           // Assegna i componenti al passo corrispondente in JSON_step
           let stepIndex = JSON_step.steps.findIndex(step => step.definingAttributes.order === stepOrder);
@@ -594,7 +594,7 @@ async function publish() {
 
   JSON_step = await getSectionFlow(component_params, nested_params);
   
-  debugger;
+  //debugger;
 
   /* sorting the steps based on their "order"
   JSON_step.steps[0].components.sort((a, b) => a.order - b.order);

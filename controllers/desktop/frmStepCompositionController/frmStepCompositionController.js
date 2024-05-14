@@ -757,7 +757,7 @@ define({
       let right_widgets = scroll.widgets();
       
       voltmx.print("### gblIdOrderSteps: " + gblIdOrderSteps);
-      debugger;
+      
       // modifica qui per i Nested Components
       if (right_widgets.length > 0){
         voltmx.print("### SONO A DESTRA DENTRO " + `${scroll.id}`);
@@ -771,16 +771,15 @@ define({
 
         // Filtraggio dei componenti, mantenendo quelli che non hanno figli diretti in `new_components`
         right_widgets.forEach(widget => {
-//             debugger;
             let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
             const id = widget[componentKey].id;
 
           let completeKey = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName + "_" + widget[componentKey]["lblComponentOrder"].text + "_" + step_id;
-          debugger;
+          //debugger;
           let keyArray = mode_dict[completeKey];
-          debugger;
+          //debugger;
           let nestedObjs = keyArray.find(item => item.hasOwnProperty('nestedComponents'));
-          debugger;
+          //debugger;
           if (nestedObjs && nestedObjs.nestedComponents.length > 0){
             parentIds.add(id);
             nestedObjs.nestedComponents.forEach(childId => {

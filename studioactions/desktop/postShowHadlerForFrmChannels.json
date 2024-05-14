@@ -50,7 +50,7 @@
             "parentId": null,
             "callbackType": null,
             "enableMappingEditor": true,
-            "disabled": true
+            "disabled": false
         }, {
             "id": "ADD_SNIPPET_g56c3b1b0af347daa472294a0649b4b7",
             "type": "ADD_SNIPPET",
