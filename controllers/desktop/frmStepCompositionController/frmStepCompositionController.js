@@ -4,6 +4,7 @@ define({
   //   component_instance_id : null,
   integrationService : voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB"),
   modes: {},
+  father: null,
   
   
   
@@ -63,7 +64,7 @@ define({
       
       // voltmx.print("### RIGHT DATA SELECTED COMPONENT: " + JSON.stringify(selectedComp.rightData));
 
-      props = selectedComp.rightData;
+      let props = selectedComp.rightData;
       voltmx.print("### selectedComp.leftData: " + selectedComp.leftData);
       voltmx.print("### selectedComp.leftData stringify: " + JSON.stringify(selectedComp.leftData) );
       // let searchKey = selectedComp.leftData[0].lblComponentName + instance + (gblCurrentStepOrder).toString();
@@ -116,6 +117,10 @@ define({
               top: '2%',
               centerX: '50%'
             }, {}, {});
+            if ((item.lblPropertyName === "AttributeDependency: ")){ //is the attributeDependency property of the nested
+              propComp.propertyValue = item.lblPropertyValue;
+              propComp.txtPropertyValueTextField.setEnabled(false);
+            }
             propComp.onEndEditing = () => {
               voltmx.print("### EDITING CONCLUSO");
               let identify = selectedComp.id;
@@ -152,6 +157,7 @@ define({
     selectedComp.onClickAddNested = () => {
       this.view.flxNestedBlur.setVisibility(true);
       gblFatherNest = selectedComp.leftData[0].lblComponentName + "_" + selectedComp.componentOrder + "_" + gblCurrentStepOrder;
+      this.father = selectedComp;
       //nestedSelection = true;
     };
     
@@ -235,6 +241,7 @@ define({
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
     let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
     let lastComp = null;
+    let components = null;
     
     if ( left_width > 48){
       components = this.view.flxScrollLeft.widgets();
@@ -313,6 +320,8 @@ define({
         components.forEach((comp) => {
           let componentKey = Object.keys(comp).find(key => key.startsWith("component"));
           if (componentKey === identify){
+            let name = comp[componentKey]["leftData"][0].lblComponentName;
+            let instance = comp[componentKey].lblComponentOrder.text;
             let newData = comp[componentKey]["rightData"];
             newData.forEach(item => {
               if (item.lblPropertyName === propComp.propertyName) {
@@ -323,7 +332,28 @@ define({
                     item.lblPropertyValue = "False";
                   }
                 } else {
-                  item.lblPropertyValue = value; 
+                  if (item.lblPropertyName === "Attribute: "){
+                    let compKey = name + "_" + instance + "_" + (gblCurrentStepOrder).toString();
+                    let modeList = this.modes[compKey];
+                    let obj = modeList.find(item =>item.hasOwnProperty('nestedComponents'));
+                    let nestedList = null;
+                    if (obj && obj.nestedComponents.length > 0){
+                      nestedList = obj.nestedComponents;
+                    }
+                    nestedList.forEach(nested => {
+                      components.forEach(newcomp => {
+                        let componentKey = Object.keys(newcomp).find(key => key.startsWith("component"));
+                        if (componentKey === nested){
+                          let newDataNested = newcomp[componentKey]["rightData"];
+                          let obj = newDataNested.find(item => item.lblPropertyName === "AttributeDependency: ");
+                          obj.lblPropertyValue = value;
+                          newcomp[componentKey].flxSelectedComponentRight.segmentRight.setData(newDataNested);
+                        }
+                      });
+                    });
+                  } else {
+                    item.lblPropertyValue = value; 
+                  }
                 }
               }
             });
@@ -435,12 +465,15 @@ define({
      // console.log(list[i]);
 
       let propertyName = list[i].name;
-      if(propertyName === "nestedComponents") { // nestedComponents (or we could put configurable)
+      if(propertyName === "attribute") { // nestedComponents (or we could put configurable)
         nested = true;
         this.modes[compKey].push({"nestedComponents": [] });
-        continue;
       }
       
+      if(((propertyName === "valueDependency") || (propertyName === "attributeDependency")) && !this.view.flxNestedBlur.isVisible){
+        continue;
+      }
+            
       
       let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + ": ";
       let properties = {lblPropertyName: capitalizedName, lblPropertyValue: ""}; 
@@ -556,6 +589,13 @@ define({
           top: '2%',
           centerX: '50%'
         }, {}, {});
+        if ((propertyName === "attributeDependency") && (this.view.flxNestedBlur.isVisible)){ //is the attributeDependency property of the nested
+          let obj = this.father.rightData.find(item => item.lblPropertyName === "Attribute: ");
+          let value = obj ? obj.lblPropertyValue : null;
+          propComp.propertyValue = value;
+          properties["lblPropertyValue"] = value;
+          propComp.txtPropertyValueTextField.setEnabled(false);
+        }
         propComp.onEndEditing = () => {
           voltmx.print("### EDITING CONCLUSO 2");          
           this.onEndEditingCallback(propComp, null, false, false);
