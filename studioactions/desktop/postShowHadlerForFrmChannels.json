@@ -58,6 +58,16 @@
             "parentId": null,
             "callbackType": null
         }, {
+            "id": "LOADING_INDICATOR_a28d8e758681421eb56aa3d97c73b34b",
+            "selectedOption": "dismiss",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "LOADING_INDICATOR_eff70f86cfc04e26b7e65c72fe3f58df",
             "selectedOption": "dismiss",
             "parentId": "INVOKE_SERVICE_d8d39e1855bc49a9aab6edc0f7844313",
