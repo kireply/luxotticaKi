@@ -501,35 +501,14 @@ async function publish() {
               componentMap[uniqueKey] = {
                 id: record.component_template_name,
                 order: parseInt(record.component_order, 10),
-                properties: [],
                 nestedComponents: []
               };
             }
-            let propertyObject = {};
             let processedValue = record.property_value ? (record.property_value.toLowerCase() === "true" ? true : (record.property_value.toLowerCase() === "false" ? false : record.property_value)) : record.property_value; 
-            propertyObject[record.property_template_name] = processedValue;
-            componentMap[uniqueKey].properties.push(propertyObject);
+            componentMap[uniqueKey][record.property_template_name] = processedValue;
           });
           
           debugger;
-
-//           // Aggiungi i componenti figli ai loro genitori nel componentMap
-//           Object.entries(parentChildMap).forEach(([parentId, childId]) => {
-//             // Usa componentIdMap per trovare le chiavi uniche dei componenti padre e figlio
-//             const parentKey = Object.keys(componentIdMap).find(key => componentIdMap[key] === parentId);
-//             const childKey = Object.keys(componentIdMap).find(key => componentIdMap[key] === childId);
-
-//             // Assicurati che entrambe le chiavi siano trovate e che esistano nel componentMap
-//             if (parentKey && childKey && componentMap[parentKey] && componentMap[childKey]) {
-//               // Inizializza nestedComponents se non esiste
-//               if (!componentMap[parentKey].nestedComponents) {
-//                 componentMap[parentKey].nestedComponents = [];
-//               }
-
-//               // Aggiungi il componente figlio al componente padre
-//               componentMap[parentKey].nestedComponents.push(componentMap[childKey]);
-//             }
-//           });
           
           // Inizialmente, memorizza gli ID dei componenti che sono stati aggiunti come nestedComponents
           let nestedComponentIds = new Set();
@@ -558,19 +537,7 @@ async function publish() {
           debugger;
 
           // Prepara i componenti per l'output
-          let componentsArray = Object.values(componentMap).map(component => {
-            let transformedComponent = {
-              id: component.id,
-              order: component.order,
-              properties: component.properties,
-            };
-            if (component.nestedComponents.length > 0) {
-              transformedComponent.nestedComponents = component.nestedComponents;
-            }
-            return transformedComponent;
-          });
-          
-          debugger;
+          let componentsArray = Object.values(componentMap);
 
           // Assegna i componenti al passo corrispondente in JSON_step
           let stepIndex = JSON_step.steps.findIndex(step => step.definingAttributes.order === stepOrder);

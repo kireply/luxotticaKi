@@ -214,6 +214,18 @@ define({
           "default": "Included"
         },
         {
+          "key": "totalFrameLens_frameLensTotal",
+          "default": "Frame + lenses price"
+        },
+        {
+          "key": "bundleFrameLensStartingAt",
+          "default": "Frame + Lenses starting at"
+        },
+        {
+          "key": "savings",
+          "default": "You are saving "
+        },
+        {
           "key": "clearTitle",
           "default": "Clear"
         },
@@ -253,7 +265,13 @@ define({
           "key": "protectionPlanAsIs",
           "default": "No, proceed without the Protection Plan"
         }
-      ]
+      ],
+      "attributeDependency": {
+        "required": false,
+        "type": "string",
+        "mode": "textfield",
+        "default": null
+      }
     }
   },
   "RXC_CALL_MY_DOCTOR": {
@@ -478,7 +496,13 @@ define({
           "key": "description",
           "default": null
         }
-      ]
+      ],
+      "attributeDependency": {
+        "required": false,
+        "type": "string",
+        "mode": "textfield",
+        "default": null
+      }
     }
   },
   "RXC_COLOR_PICKER": {
@@ -531,7 +555,13 @@ define({
           "key": "description",
           "default": ""
         }
-      ]
+      ],
+      "attributeDependency": {
+        "required": false,
+        "type": "string",
+        "mode": "textfield",
+        "default": null
+      }
     }
   },
   "RXC_CRASH_POPUP": {
@@ -629,6 +659,10 @@ define({
         {
           "key": "bundleFrameLensStartingAt",
           "default": "Frame + Lenses starting at"
+        },
+        {
+          "key": "savings",
+          "default": "You are saving "
         },
         {
           "key": "confirmButton",
@@ -748,6 +782,30 @@ define({
         {
           "key": "outdoor",
           "default": "outdoor"
+        },
+        {
+          "key": "fallbackMessage",
+          "default": "Your frame will be paired with your selected lens color"
+        },
+        {
+          "key": "lightTransmission",
+          "default": "Light Transmission"
+        },
+        {
+          "key": "lightConditions",
+          "default": "Light conditions"
+        },
+        {
+          "key": "contrast",
+          "default": "Contrast"
+        },
+        {
+          "key": "baseLensColor",
+          "default": "Base Lens Color"
+        },
+        {
+          "key": "improvement",
+          "default": "improves contrast for better separation of colors and giving golfers depth cues to gauge distance and grass conditions"
         }
       ]
     }
@@ -769,12 +827,20 @@ define({
           "default": "If you have a prescription for eyeglasses, the prescription information will typically include the following:"
         },
         {
+          "key": "rightEye_initials",
+          "default": "OD"
+        },
+        {
           "key": "rightEye_name",
           "default": "(Right Eye)"
         },
         {
           "key": "rightEye_description",
           "default": "'OD stands for oculus dexter which is Latin for right eye.'"
+        },
+        {
+          "key": "leftEye_initials",
+          "default": "OS"
         },
         {
           "key": "leftEye_name",
@@ -785,12 +851,20 @@ define({
           "default": "'OS stands for oculus sinister which is Latin for “left eye”.'"
         },
         {
+          "key": "sphere",
+          "default": "SPH (Sphere)"
+        },
+        {
           "key": "sphere_name",
           "default": "Sphere (SPH) - also known as Power (PWR)"
         },
         {
           "key": "sphere_description",
           "default": "They mean the same thing: the strength of your prescription. If you're nearsighted you will have a minus (-) before your values, and if you’re or farsighted you will have a plus (+)."
+        },
+        {
+          "key": "cylinder",
+          "default": "CYL (Cylinder)"
         },
         {
           "key": "cylinder_name",
@@ -823,22 +897,6 @@ define({
         {
           "key": "customerService",
           "default": "Not sure about something? Call our Customer Service experts"
-        },
-        {
-          "key": "rightEye_initials",
-          "default": "OD"
-        },
-        {
-          "key": "leftEye_initials",
-          "default": "OS"
-        },
-        {
-          "key": "sphere",
-          "default": "SPH (Sphere)"
-        },
-        {
-          "key": "cylinder",
-          "default": "CYL (Cylinder)"
         },
         {
           "key": "selectPlaceholder",
@@ -1051,7 +1109,8 @@ define({
           "default": "Enter your prescription"
         },
         {
-          "key": "subtitle"
+          "key": "description",
+          "default": "Insert the parameters you find on your prescription in the table below."
         },
         {
           "key": "rightEye_initials",
@@ -1084,6 +1143,10 @@ define({
         {
           "key": "add",
           "default": "Add"
+        },
+        {
+          "key": "selectPlaceholder",
+          "default": "None"
         },
         {
           "key": "vertical",
@@ -1266,6 +1329,10 @@ define({
           "default": "Before submitting your prescription, please check the expiration date to make sure it is current and valid. We only accept prescriptions that have been issued within the last 2 years. By selecting the tick box and continuing below, you agree to our privacy policy and T&Cs."
         },
         {
+          "key": "samePrescriptionBothEyesLabel",
+          "default": "Same prescription for both eyes"
+        },
+        {
           "key": "addPrismValues",
           "default": "My prescription includes prism values"
         },
@@ -1342,38 +1409,6 @@ define({
           "default": "NO, GO BACK"
         },
         {
-          "key": "proceedCheckbox",
-          "default": "By clicking this box, I confirm that the prescription values entered above are taken from a unexpired written prescription issued to me, signed by a licensed optometrist or ophthalmologist."
-        },
-        {
-          "key": "proceedCheckboxError",
-          "default": "Required to proceed"
-        },
-        {
-          "key": "savePrescriptionInAccount",
-          "default": "Save prescription in My Account"
-        },
-        {
-          "key": "newPrescriptionNameError",
-          "default": "Prescription name field cannot be empty"
-        },
-        {
-          "key": "prescriptionName",
-          "default": "Prescription name"
-        },
-        {
-          "key": "description",
-          "default": "Insert the parameters you find on your prescription in the table below."
-        },
-        {
-          "key": "selectPlaceholder",
-          "default": "None"
-        },
-        {
-          "key": "samePrescriptionBothEyesLabel",
-          "default": "Same prescription for both eyes"
-        },
-        {
           "key": "prescriptionUploaded",
           "default": "Prescription Uploaded"
         },
@@ -1400,6 +1435,26 @@ define({
         {
           "key": "uploadDifferentFile",
           "default": "Upload different file"
+        },
+        {
+          "key": "proceedCheckbox",
+          "default": "By clicking this box, I confirm that the prescription values entered above are taken from a unexpired written prescription issued to me, signed by a licensed optometrist or ophthalmologist."
+        },
+        {
+          "key": "proceedCheckboxError",
+          "default": "Required to proceed"
+        },
+        {
+          "key": "savePrescriptionInAccount",
+          "default": "Save prescription in My Account"
+        },
+        {
+          "key": "newPrescriptionNameError",
+          "default": "Prescription name field cannot be empty"
+        },
+        {
+          "key": "prescriptionName",
+          "default": "Prescription name"
         }
       ]
     }
@@ -1660,6 +1715,10 @@ define({
         {
           "key": "addToBagLabel",
           "default": "Confirm and add to bag"
+        },
+        {
+          "key": "savings",
+          "default": "You are saving "
         }
       ]
     }
@@ -1720,7 +1779,13 @@ define({
           "key": "description",
           "default": null
         }
-      ]
+      ],
+      "attributeDependency": {
+        "required": false,
+        "type": "string",
+        "mode": "textfield",
+        "default": null
+      }
     }
   },
   "RXC_SWATCH_LIST": {
@@ -1775,7 +1840,13 @@ define({
           "key": "includedLabel",
           "default": null
         }
-      ]
+      ],
+      "attributeDependency": {
+        "required": false,
+        "type": "string",
+        "mode": "textfield",
+        "default": null
+      }
     }
   },
   "RXC_TITLE_DESCRIPTION": {
@@ -1791,17 +1862,19 @@ define({
         "mode": "switch",
         "default": "false"
       },
+      "order": {
+        "required": false,
+        "default": null,
+        "type": "number"
+      },
       "labels": [
         {
           "key": "title",
-          "default": null
+          "default": ""
         },
         {
           "key": "description",
-          "default": null
-        },
-        {
-          "key": "steps_addOns_label"
+          "default": ""
         },
         {
           "key": "accordionLabel",
@@ -1902,7 +1975,13 @@ define({
           "key": "label",
           "default": null
         }
-      ]
+      ],
+      "attributeDependency": {
+        "required": false,
+        "type": "string",
+        "mode": "textfield",
+        "default": null
+      }
     }
   },
   "RXC_UPLOAD_PRESCRIPTION": {
@@ -2041,6 +2120,10 @@ define({
           "default": "Prescription name"
         },
         {
+          "key": "addPrescriptionButton",
+          "default": "Add new prescription"
+        },
+        {
           "key": "uploadedOn",
           "default": "Last updated: "
         },
@@ -2059,10 +2142,6 @@ define({
         {
           "key": "olderThanYearBanner",
           "default": "This prescription was uploaded 1 year ago. Please check if it is still valid."
-        },
-        {
-          "key": "addPrescriptionButton",
-          "default": "Add new prescription"
         },
         {
           "key": "showPrescriptionLabel",
@@ -2214,6 +2293,7 @@ define({
     }
   }
 }
+
 `
    
    
