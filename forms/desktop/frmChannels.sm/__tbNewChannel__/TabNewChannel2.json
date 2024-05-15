@@ -36,7 +36,8 @@
         "lblChannelFramOnlyLensUPCInsideFrmChannels",
         "txtChannelFramOnlyLensUPCInsideFrmChannels",
         "lblChannelShowUiSkeletonInsideFrmChannels",
-        "swChannelShowUiSkeletonInsideFrmChannel"
+        "swChannelShowUiSkeletonInsideFrmChannel",
+        "swShowUiSkeleton"
     ],
     "clipbounds": true,
     "containerweight": 100,

@@ -1,0 +1,211 @@
+{
+    "classname": "simpleSwitch",
+    "definitions": {
+        "apis": {
+            "custom": [],
+            "passthrough": []
+        },
+        "events": {
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "fdd27bf16d1446d396644f09de4ad6ee",
+                    "paramList": [
+                        {
+                            "name": "theState"
+                        }
+                    ],
+                    "propertyIndex": 1,
+                    "propertyKey": "onSelect",
+                    "pw": {
+                        "displayName": "onSelect",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "u5270f9b835c4c3887e263d187091fc5",
+                    "type": "event"
+                }
+            ],
+            "passthrough": []
+        },
+        "groups": {
+            "apis": [],
+            "events": [],
+            "properties": [],
+            "widgets": []
+        },
+        "properties": {
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": false,
+                    "group": "General",
+                    "kuid": "b2942988342843ac8bceeef8faf8d051",
+                    "originalPropertyKey": "state",
+                    "propertyIndex": 5,
+                    "propertyKey": "state",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "state",
+                        "uiRepresentation": "Label-Radiobuttongroup"
+                    },
+                    "srcWgtKUID": "u5270f9b835c4c3887e263d187091fc5",
+                    "type": "boolean",
+                    "value": "true/false"
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "sknFlxBlackCircle",
+                    "group": "General",
+                    "kuid": "e5213cc8c27f40198314bb0c1c2cf58b",
+                    "originalPropertyKey": "onSkin",
+                    "propertyIndex": 6,
+                    "propertyKey": "onSkin",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "onSkin",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u5270f9b835c4c3887e263d187091fc5",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "sknFlxGreyCircle",
+                    "group": "General",
+                    "kuid": "f78fd3ea057d446da12b89584e1bde6b",
+                    "originalPropertyKey": "offSkin",
+                    "propertyIndex": 7,
+                    "propertyKey": "offSkin",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "offSkin",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u5270f9b835c4c3887e263d187091fc5",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "sknFlxWhiteCircle",
+                    "group": "General",
+                    "kuid": "ce130d55307142d1ba08b89a07762752",
+                    "originalPropertyKey": "circleSkin",
+                    "propertyIndex": 8,
+                    "propertyKey": "circleSkin",
+                    "pw": {
+                        "dependencyConditions": {},
+                        "displayName": "circleSkin",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "u5270f9b835c4c3887e263d187091fc5",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "a2c7f1f0932447a2b8b06e4c301e6037",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 1,
+                    "propertyKey": "onText",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "onText",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblOn",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "ubb0fac6cc044a02877cb49b67f3f626"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "a83a1ba3973a4f4a99a87283814968a2",
+                    "originalPropertyKey": "i18n_text",
+                    "propertyIndex": 2,
+                    "propertyKey": "onTexti18n",
+                    "pw": {
+                        "access": "constructor",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeys": [
+                            "text"
+                        ],
+                        "dependentKeysKUIDs": [
+                            "ae49c09bf68c41bcbd7ca084b419547d"
+                        ],
+                        "displayName": "onTexti18n",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblOn",
+                        "type": "enum",
+                        "uiRepresentation": "Label-Combobox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "ubb0fac6cc044a02877cb49b67f3f626"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "c7bc7942315a43c3aba5fc5dc36efdf5",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 3,
+                    "propertyKey": "offText",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "offText",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblOff",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "udc0f3674c1e41cc8e626c24b0c5e779"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "ad2ad2facc564df9b9f856e9d85da33c",
+                    "originalPropertyKey": "i18n_text",
+                    "propertyIndex": 4,
+                    "propertyKey": "offTexti18n",
+                    "pw": {
+                        "access": "constructor",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeys": [
+                            "text"
+                        ],
+                        "dependentKeysKUIDs": [
+                            "i2467c0d29ee4f6486a804f2d5b2858f"
+                        ],
+                        "displayName": "offTexti18n",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblOff",
+                        "type": "enum",
+                        "uiRepresentation": "Label-Combobox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "udc0f3674c1e41cc8e626c24b0c5e779"
+                }
+            ]
+        },
+        "widgets": {
+            "expose": [],
+            "passthrough": []
+        }
+    },
+    "namespace": "com.kireply",
+    "version": "1.0.0"
+}

@@ -1,16 +1,12 @@
 {
     "DNDConfig": null,
-    "_blur_": {
-        "enabled": false,
-        "value": 63
-    },
     "_height_": {
         "type": "string",
-        "value": "85.56%"
+        "value": "98%"
     },
     "_left_": {
         "type": "string",
-        "value": "20%"
+        "value": "1dp"
     },
     "_margin_": [
         0,
@@ -26,54 +22,36 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s8aee7e16a9640b4994aecc708d952b6",
+    "_skin_": "sc20d01481924910aeb748e1bb8a7f4b",
     "_top_": {
         "type": "string",
-        "value": "170%"
+        "value": "1dp"
     },
     "_width_": {
         "type": "string",
-        "value": "33.67%"
+        "value": "49%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
-    "children": [
-        "imgExitPopupInsideFrmChannels",
-        "lblTitlePopupInsideFrmChannels",
-        "btnSaveNewChannelInsideFrmChannels",
-        "tbNewChannel"
-    ],
+    "children": [],
     "clipbounds": false,
     "containerweight": 100,
-    "desktopweb": {
-        "zIndex": 2
-    },
     "enablescrolling": true,
-    "id": "flxPopupCreateNewChannelInsideFrmChannels",
+    "id": "flxCircle",
     "info": null,
     "iscustomlayout": false,
-    "ismodalcontainer": true,
     "isvisible": true,
-    "kuid": "d31930f73cf8444f86c990ebf46b30fc",
+    "kuid": "u75d0a7ee1a14d2983aee73568e05829",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "frmChannels",
-    "pf": "frmChannels",
+    "parent": "simpleSwitch",
+    "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1,
-    "zindex": 1
+    "widgetalignment": 1
 }

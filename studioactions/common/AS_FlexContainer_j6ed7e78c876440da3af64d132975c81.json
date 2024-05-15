@@ -1,0 +1,33 @@
+{
+    "AS_FlexContainer_j6ed7e78c876440da3af64d132975c81": {
+        "id": "AS_FlexContainer_j6ed7e78c876440da3af64d132975c81",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "userwidgetmodel",
+            "type": "userwidgets",
+            "KUID": "u072c950335a4bdb9b874f9bb3cc5d63"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_ab3ff4de7bd34e62a2f6c8ee68e2073b",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// al click cambia lo stato\nvoltmx.print('simpleSwitch: changing state on click....');\nthis.state = !this.state;",
+            "parentId": null
+        }, {
+            "id": "RAISE_CUSTOM_EVENT__h2c2e40eb3ab4aad9e231dadbb1f2f7c",
+            "type": "RAISE_CUSTOM_EVENT",
+            "customEvent": "onSelect",
+            "inputparams": [{
+                "name": "theState",
+                "value": "this.state",
+                "datatype": "string"
+            }],
+            "parentId": null
+        }]
+    }
+}
