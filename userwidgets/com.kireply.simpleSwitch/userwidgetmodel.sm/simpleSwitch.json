@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "33dp"
+        "value": "4%"
     },
     "_left_": {
         "type": "string",
@@ -29,7 +29,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "68dp"
+        "value": "5%"
     },
     "allboxes": [],
     "autogrowmode": 0,

@@ -19,7 +19,7 @@
     ],
     "_right_": {
         "type": "string",
-        "value": "1dp"
+        "value": "1%"
     },
     "_skin_": "s8416f658fd64efdb1a3ade55f1e777c",
     "_text_": " ",
@@ -29,7 +29,7 @@
     },
     "_width_": {
         "type": "string",
-        "value": "33dp"
+        "value": "33%"
     },
     "_wrapping_": 2,
     "android": {

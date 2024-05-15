@@ -37,14 +37,26 @@
     "children": [],
     "clipbounds": false,
     "containerweight": 100,
+    "desktopweb": {
+        "render": true
+    },
     "enablescrolling": true,
     "id": "flxCircle",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
+    "kiosk": {
+        "render": false
+    },
     "kuid": "u75d0a7ee1a14d2983aee73568e05829",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
+    "nativemac": {
+        "render": true
+    },
+    "nativewin": {
+        "render": true
+    },
     "parent": "simpleSwitch",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,

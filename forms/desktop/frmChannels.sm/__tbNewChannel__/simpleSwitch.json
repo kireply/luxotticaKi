@@ -4,11 +4,11 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "33dp"
+        "value": "5.73%"
     },
     "_left_": {
         "type": "string",
-        "value": "40%"
+        "value": "137dp"
     },
     "_margin_": [
         0,
@@ -27,20 +27,20 @@
     "_skin_": "sb49bf7280ac4ab2b77341aeaa4d2278",
     "_top_": {
         "type": "string",
-        "value": "80%"
+        "value": "422dp"
     },
     "_width_": {
         "type": "string",
-        "value": "68dp"
+        "value": "20%"
     },
     "canUpdateUI": true,
     "containerweight": 0,
     "data": {},
-    "id": "swShowUiSkeleton",
+    "id": "simpleSwitch",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "bdfe6298da24418e83d42bcaa709d3af",
+    "kuid": "c583f3b1b2a340d7a8552e5c299b9e7a",
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",
     "onclick": "AS_FlexContainer_j6ed7e78c876440da3af64d132975c81",
