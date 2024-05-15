@@ -535,7 +535,7 @@ define({
         //gblFlowId = 128; //to comment in the global flow of the application
         //let label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`; // LABEL QUI
         
-        // retrieving the current step title (to insert in the final label_key)
+        // retrieving the current step title (to insert into the final label_key)
         let label_key = null;
         var steps = null;
         var stepTitle = null;
