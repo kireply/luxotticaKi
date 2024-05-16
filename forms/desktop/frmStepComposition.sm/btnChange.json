@@ -17,8 +17,8 @@
         0,
         0
     ],
-    "_skin_": "s45112357e134e1d994f67a398ae0ec5",
-    "_text_": "Create",
+    "_skin_": "s0c06db3377445e7ae1c78a7f35a58db",
+    "_text_": "Save changes",
     "_top_": {
         "type": "string",
         "value": "70%"
@@ -38,12 +38,12 @@
         "focusSkin": "s6de8ee3e9e1463996d5dbb22b25b33b"
     },
     "displaytext": true,
-    "id": "btnProceed",
-    "ide_onClick": "AS_Button_bbc3b93e9af444f1ad5db2a470d72408",
+    "id": "btnChange",
+    "ide_onClick": "AS_Button_h2d1bfec1159478cb236fa7d8f76a613",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "b6ac18e04e944208a9e847232aebc974",
+    "isvisible": false,
+    "kuid": "ce33e68e1e7c4d75ab864692f14f6806",
     "name": "kony.ui.Button",
     "parent": "flxAutoproceedTrue",
     "pf": "frmStepComposition",

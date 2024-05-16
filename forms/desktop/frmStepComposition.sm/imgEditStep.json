@@ -35,6 +35,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "id": "imgEditStep",
+    "ide_onTouchEnd": "AS_Image_b7502ad775eb4830b11ffed620ebdb9a",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",

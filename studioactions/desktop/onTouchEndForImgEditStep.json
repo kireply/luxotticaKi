@@ -1,0 +1,31 @@
+{
+    "AS_Image_b7502ad775eb4830b11ffed620ebdb9a": {
+        "id": "AS_Image_b7502ad775eb4830b11ffed620ebdb9a",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndForImgEditStep",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_bf9565d373c1496399ff53427b2ad89c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// Showing labels and button for edit\nthis.view.flxPopupNewStep.setVisibility(true);\nthis.view.lblNewStep.setVisibility(false);\nthis.view.lblChangeStep.setVisibility(true);\nthis.view.btnProceed.setVisibility(false);\nthis.view.btnChange.setVisibility(true);",
+            "parentId": null
+        }]
+    }
+}

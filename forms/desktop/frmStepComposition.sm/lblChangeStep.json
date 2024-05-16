@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "6.50%"
+        "value": "5%"
     },
     "_margin_": [
         1,
@@ -21,15 +21,15 @@
         0,
         0
     ],
-    "_skin_": "s232eea9df22415d80bf9c52cab96e1e",
-    "_text_": "",
+    "_skin_": "s4796b99fc2740909838ef96bad90585",
+    "_text_": "Change step",
     "_top_": {
         "type": "string",
-        "value": "4%"
+        "value": "7%"
     },
     "_width_": {
-        "type": "string",
-        "value": "88%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {
@@ -41,7 +41,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblLabelKey",
+    "id": "lblChangeStep",
     "info": null,
     "ipad": {
         "psp": {
@@ -54,13 +54,14 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "d2fe3e63a65a4482bb0ca7356b2b48ff",
+    "isvisible": false,
+    "kuid": "c55ff5ed7019419c9a3f3a76f0ac6e17",
     "name": "kony.ui.Label",
-    "parent": "flxEditPropertyValueTextField",
-    "pf": "userwidgetmodel",
+    "parent": "flxNewPopup",
+    "pf": "frmStepComposition",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",
-    "wType": "Label"
+    "wType": "Label",
+    "zindex": 1
 }

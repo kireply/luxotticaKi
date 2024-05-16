@@ -41,7 +41,8 @@
         "swHasGreyout",
         "lblAnalyticsId",
         "lbAnalytics",
-        "btnProceed"
+        "btnProceed",
+        "btnChange"
     ],
     "clipbounds": false,
     "containerweight": 100,

@@ -45,6 +45,7 @@
     "children": [
         "imgExitPopupStepCreation",
         "lblNewStep",
+        "lblChangeStep",
         "lblStepTitle",
         "txtStepTitle",
         "lblIsPrescriptionStep",
