@@ -552,7 +552,6 @@ define({
           voltmx.print("### label_key: " + label_key);
         }
              
-        
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
         propComp.propertyValue = label_key;
         propComp.propertyLabelKey = label_key;
@@ -586,7 +585,7 @@ define({
         } else {
           properties["lblPropertyValue"] = "False";
         }
-      } else {
+      } else {  // case for text box (different from label)
         propComp = new ki.luxottica.editPropertyValuewithTextField({
           id: `prop${new Date().getTime()}`,
           top: '2%',
@@ -973,6 +972,7 @@ define({
       } 
     });
     voltmx.application.dismissLoadingScreen();
+    voltmx.print("### FINITO IL METODO SAVE");
   },   // end of function saveStepComposition
   
   
