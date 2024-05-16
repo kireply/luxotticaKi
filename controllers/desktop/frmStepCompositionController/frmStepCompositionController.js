@@ -158,6 +158,7 @@ define({
       this.view.flxNestedBlur.setVisibility(true);
       gblFatherNest = selectedComp.leftData[0].lblComponentName + "_" + selectedComp.componentOrder + "_" + gblCurrentStepOrder;
       this.father = selectedComp;
+      
       //nestedSelection = true;
     };
     
@@ -173,6 +174,7 @@ define({
     selectedComp.flxSelectedComponentRight.segmentRight.setData(rightData);
     
     if (nested === true) {
+      debugger;
       selectedComp.flxAddNestedVisible = true;
     }
     
@@ -236,6 +238,7 @@ define({
     } else if (switched){
       value = propComp.propertyValue;
   	}  else {
+      debugger;
       value = propComp.propertyValue;
     }
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
@@ -292,7 +295,8 @@ define({
       }
     }
     if ( right_width > 48){
-      components = this.view.flxScrollRight.widgets();
+	  let correctScroll = this.findCurrentFlexScroll();  // finding the correct flex scroll to manage/update
+      components = correctScroll.widgets();
       if (identify === null) {
         // chiamata da editProperty
         lastComp = components.length > 0 ? components[components.length - 1] : null;
@@ -339,18 +343,19 @@ define({
                     let nestedList = null;
                     if (obj && obj.nestedComponents.length > 0){
                       nestedList = obj.nestedComponents;
-                    }
-                    nestedList.forEach(nested => {
-                      components.forEach(newcomp => {
-                        let componentKey = Object.keys(newcomp).find(key => key.startsWith("component"));
-                        if (componentKey === nested){
-                          let newDataNested = newcomp[componentKey]["rightData"];
-                          let obj = newDataNested.find(item => item.lblPropertyName === "AttributeDependency: ");
-                          obj.lblPropertyValue = value;
-                          newcomp[componentKey].flxSelectedComponentRight.segmentRight.setData(newDataNested);
-                        }
+                      nestedList.forEach(nested => {
+                        components.forEach(newcomp => {
+                          let componentKey = Object.keys(newcomp).find(key => key.startsWith("component"));
+                          if (componentKey === nested){
+                            let newDataNested = newcomp[componentKey]["rightData"];
+                            let obj = newDataNested.find(item => item.lblPropertyName === "AttributeDependency: ");
+                            obj.lblPropertyValue = value;
+                            newcomp[componentKey].flxSelectedComponentRight.segmentRight.setData(newDataNested);
+                          }
+                        });
                       });
-                    });
+                    }
+                    item.lblPropertyValue = value; 
                   } else {
                     item.lblPropertyValue = value; 
                   }
@@ -466,6 +471,7 @@ define({
 
       let propertyName = list[i].name;
       if(propertyName === "attribute") { // nestedComponents (or we could put configurable)
+        debugger;
         nested = true;
         this.modes[compKey].push({"nestedComponents": [] });
       }
@@ -584,6 +590,7 @@ define({
           properties["lblPropertyValue"] = "False";
         }
       } else {
+        debugger;
         propComp = new ki.luxottica.editPropertyValuewithTextField({
           id: `prop${new Date().getTime()}`,
           top: '2%',
@@ -797,7 +804,7 @@ define({
       let right_widgets = scroll.widgets();
       
       voltmx.print("### gblIdOrderSteps: " + gblIdOrderSteps);
-      debugger;
+//       debugger;
       // modifica qui per i Nested Components
       if (right_widgets.length > 0){
         voltmx.print("### SONO A DESTRA DENTRO " + `${scroll.id}`);
@@ -817,7 +824,7 @@ define({
 
           let completeKey = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName + "_" + widget[componentKey]["lblComponentOrder"].text + "_" + step_id;
           let keyArray = mode_dict[completeKey];
-          debugger;
+//           debugger;
           let nestedObjs = keyArray.find(item => item.hasOwnProperty('nestedComponents'));
           if (nestedObjs && nestedObjs.nestedComponents.length > 0){
             parentIds.add(id);
@@ -827,18 +834,23 @@ define({
                 childIds.add(childId);
               }
             });
+          } else {
+            // Se il componente non ha figli e non è già un figlio, aggiungilo ai parentIds
+            if (!childIds.has(id)) {
+              parentIds.add(id);
+            }
           }
         });
         
         right_widgets = right_widgets.filter(widget => {
           let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
           const id = widget[componentKey].id;
-          return parentIds.has(id) && !childIds.has(id);  // Solo padri che non sono anche figli
+          return parentIds.has(id) || (!parentIds.has(id) && !childIds.has(id));
         });
         
        
-        print("right widgets after: " + right_widgets);
-        print("children after: " + children);
+        voltmx.print("right widgets after: " + right_widgets);
+        voltmx.print("children after: " + children);
         
 //         debugger;
         
@@ -870,7 +882,7 @@ define({
             let component_id = response.COMPONENT_INSTANCE[0].id;
             let completeKey = null;
             completeKey = component_instance_right["template_name"] + "_" + component_instance_right["order"] + "_" + step_id;
-            debugger;
+//             debugger;
             let componentArray = this.modes[completeKey];
             let nestedComponentsObj = componentArray.find(item =>item.hasOwnProperty('nestedComponents'));
             let child = null;
@@ -910,7 +922,7 @@ define({
                     gblFail = true;
                   });
                   let completeKeyInsideNested = component_instance_nested_right["template_name"] + "_" + component_instance_nested_right["order"] + "_" + step_id;
-                  debugger;
+//                   debugger;
                   let componentArrayInsideNested = this.modes[completeKeyInsideNested];
                   let nestedComponentsObjInsideNested = componentArrayInsideNested.find(item =>item.hasOwnProperty('nestedComponents'));
                   let childInsideNested = null;
