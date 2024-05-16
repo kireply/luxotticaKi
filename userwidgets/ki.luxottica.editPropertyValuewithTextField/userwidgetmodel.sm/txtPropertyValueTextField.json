@@ -41,7 +41,7 @@
     "containerheightmode": 1,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "sb007fe6389a408b8079372a08d2c055",
+    "focusskin": null,
     "id": "txtPropertyValueTextField",
     "info": null,
     "iscustomlayout": false,

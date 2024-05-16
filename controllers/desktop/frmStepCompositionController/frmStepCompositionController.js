@@ -50,7 +50,7 @@ define({
     
     
     
-    //whenever a component in one of the two halves is clicked
+    //whenever a component already inserted in one of the two halves is clicked
     const selectedCompEventHandler = () => {
       this.view.settingsSide.flxScrollSettingsContent.removeAll();    
       this.view.settingsSide.flxScrollSettingsContent.setVisibility(true);
@@ -102,6 +102,12 @@ define({
             propComp.propertyValue = label_key;
             propComp.propertyLabelKey = label_key;
             propComp.txtPropertyValueTextField.setEnabled(true); // QUI
+            
+            propComp.onEndEditing = () => {
+              let identify = selectedComp.id;
+              this.onEndEditingCallback(propComp, identify, false, false);
+            };
+            
           } else if (found.mode === "switch") {
             propComp = new ki.luxottica.editPropertyValuewithSwitch({
               id: `prop${new Date().getTime()}`,
@@ -175,7 +181,7 @@ define({
     selectedComp.flxSelectedComponentRight.segmentRight.setData(rightData);
     
     if (nested === true) {
-      debugger;
+      voltmx.print("### ENTRATO IN IF NESTE === TRUE");
       selectedComp.flxAddNestedVisible = true;
     }
     
@@ -239,7 +245,6 @@ define({
     } else if (switched){
       value = propComp.propertyValue;
   	}  else {
-      debugger;
       value = propComp.propertyValue;
     }
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
@@ -369,9 +374,9 @@ define({
       }
     }
 	
-    if ((!switched) && (!dropdown)){
+  /*  if ((!switched) && (!dropdown)){
       propComp.propertyValue = "";
-    }
+    }*/
   },  // end of function "onEditingCallback".
 
   
@@ -472,7 +477,6 @@ define({
 
       let propertyName = list[i].name;
       if(propertyName === "attribute") { // nestedComponents (or we could put configurable)
-        debugger;
         nested = true;
         this.modes[compKey].push({"nestedComponents": [] });
       }
@@ -539,6 +543,7 @@ define({
           top: '2%',
           centerX: '50%'
         }, {}, {});
+        
         //gblFlowId = 128; //to comment in the global flow of the application
         //let label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`; // LABEL QUI
         
@@ -562,6 +567,11 @@ define({
         propComp.propertyLabelKey = label_key;
         propComp.txtPropertyValueTextField.setEnabled(true); // QUI
         properties["lblPropertyValue"] = label_key;
+        
+        propComp.onEndEditing = () => {
+          this.onEndEditingCallback(propComp, null, false, false);
+        };
+        
 		this.modes[compKey].push({"name": capitalizedName, "mode": "label"});
         if (!gblPropertyTemplatesIds[list[i].component_name]) {
           gblPropertyTemplatesIds[list[i].component_name] = [];
@@ -1408,30 +1418,35 @@ define({
       }
     });
     if (selectedComp.componentOrder === "1"){
-        selectedComp.arrowDownVisible = true;
-      } else if (selectedComp.componentOrder === (max).toString()){
-        selectedComp.arrowUpVisible = true;
-      } else {
-        selectedComp.arrowUpVisible = true;
-        selectedComp.arrowDownVisible = true;
-      }
-      
-      selectedComp.flxMoveVisible = true;
-      selectedComp.cloneDeleteVisible = true;
-      selectedComp.flxAddNestedVisible = true;
-      
-      // hiding other components' arrows, clone/delete box and "add nested button"
-      scroll_widgets.forEach( widg => {
-        let widget_key = Object.keys(widg).find(key => key.startsWith("component"));
-        if (widg[widget_key].id !== selectedComp.id){
-          widg[widget_key].arrowUpVisible = false;
-          widg[widget_key].arrowDownVisible = false;
-          widg[widget_key].flxMoveVisible = false;
-          widg[widget_key].cloneDeleteVisible = false;
-          widg[widget_key].flxAddNestedVisible = false;
-        }
-      });
+      selectedComp.arrowDownVisible = true;
+    } else if (selectedComp.componentOrder === (max).toString()){
+      selectedComp.arrowUpVisible = true;
+    } else {
+      selectedComp.arrowUpVisible = true;
+      selectedComp.arrowDownVisible = true;
+    }
+
+    selectedComp.flxMoveVisible = true;
+    selectedComp.cloneDeleteVisible = true;
     
+    // if component have attribute: "Attribute", it can have nested components
+    let obj = selectedComp.rightData.find(item => item.lblPropertyName === "Attribute: ");
+    if (obj) {  
+      selectedComp.flxAddNestedVisible = true;
+    }
+
+    // hiding other components' arrows, clone/delete box and "add nested button"
+    scroll_widgets.forEach( widg => {
+      let widget_key = Object.keys(widg).find(key => key.startsWith("component"));
+      if (widg[widget_key].id !== selectedComp.id){
+        widg[widget_key].arrowUpVisible = false;
+        widg[widget_key].arrowDownVisible = false;
+        widg[widget_key].flxMoveVisible = false;
+        widg[widget_key].cloneDeleteVisible = false;
+        widg[widget_key].flxAddNestedVisible = false;
+      }
+    });
+
   },  // end of functon "showOrHideMoveCloneDelete" 
   
   
