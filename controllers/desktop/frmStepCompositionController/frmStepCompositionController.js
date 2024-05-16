@@ -100,6 +100,7 @@ define({
             //           gblFlowId = 128;
             let label_key = item.lblPropertyValue;
             propComp.propertyValue = label_key;
+            propComp.propertyLabelKey = label_key;
             propComp.txtPropertyValueTextField.setEnabled(true); // QUI
           } else if (found.mode === "switch") {
             propComp = new ki.luxottica.editPropertyValuewithSwitch({
@@ -119,7 +120,7 @@ define({
             }, {}, {});
             if ((item.lblPropertyName === "AttributeDependency: ")){ //is the attributeDependency property of the nested
               propComp.propertyValue = item.lblPropertyValue;
-              propComp.txtPropertyValueTextField.setEnabled(false);
+              propComp.txtPropertyValueTextField.setEnabled(false);  //true
             }
             propComp.onEndEditing = () => {
               voltmx.print("### EDITING CONCLUSO");
@@ -292,7 +293,8 @@ define({
       }
     }
     if ( right_width > 48){
-      components = this.view.flxScrollRight.widgets();
+      let correctScroll = this.findCurrentFlexScroll();  // finding the correct flex scroll to manage/update
+      components = correctScroll.widgets();
       if (identify === null) {
         // chiamata da editProperty
         lastComp = components.length > 0 ? components[components.length - 1] : null;
@@ -553,6 +555,7 @@ define({
         
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
         propComp.propertyValue = label_key;
+        propComp.propertyLabelKey = label_key;
         propComp.txtPropertyValueTextField.setEnabled(true); // QUI
         properties["lblPropertyValue"] = label_key;
 		this.modes[compKey].push({"name": capitalizedName, "mode": "label"});

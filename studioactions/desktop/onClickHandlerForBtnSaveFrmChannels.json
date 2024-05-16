@@ -335,30 +335,17 @@
                         }
                     }
                 },
-                "ME_Mapping_b3ed4caab61f4687904b2541865c8f10": {
+                "ME_Mapping_aea5dd89913f4704adcb7298ce4ae13a": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_b3ed4caab61f4687904b2541865c8f10",
+                    "id": "ME_Mapping_aea5dd89913f4704adcb7298ce4ae13a",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
                     "source": {
-                        "type": "Forms",
-                        "propertyName": "state",
-                        "widgetId": "simpleSwitch",
-                        "widgetPath": "this.view.tbNewChannel.simpleSwitch",
-                        "widgetType": "UserWidgetInstance",
+                        "type": "Variables",
+                        "propertyName": "showUiSkeleton",
                         "dataType": "boolean",
-                        "itemId": "frmChannels",
-                        "tabId": "tbNewChannel",
-                        "widgetKUID": "h6f3c851520b41b38c60323b12d4e5d1",
-                        "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
-                        "tabKUID": "b6749ff8bebb41a298a6c1787e6b7aae",
-                        "isSkinProperty": false,
-                        "forkedPlatform": "all",
-                        "passThroughMeta": {
-                            "kuid": "b2942988342843ac8bceeef8faf8d051",
-                            "srcWgtKUID": "u5270f9b835c4c3887e263d187091fc5"
-                        }
+                        "forkedPlatform": "all"
                     },
                     "target": {
                         "type": "Services",
@@ -375,7 +362,7 @@
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_j489158dc9514e188b7adce4bad216eb", "ME_Mapping_ca4e9b0fb6c049668881885f3ad60dab", "ME_Mapping_b03f183908cc44b9bc1b05cbca29cb66", "ME_Mapping_e72c0d21c4fd4e7a8628f0c3561c9e6d", "ME_Mapping_dd43ffbbc0684787955a07364138dde7", "ME_Mapping_e5af3eba7556475090e8f3125f217653", "ME_Mapping_i630e81870f24e8eaf077671b9c658b1", "ME_Mapping_a518bed027574ad6bd36d629e7dd320c", "ME_Mapping_b3ed4caab61f4687904b2541865c8f10"],
+            "mappingsOrder": ["ME_Mapping_j489158dc9514e188b7adce4bad216eb", "ME_Mapping_ca4e9b0fb6c049668881885f3ad60dab", "ME_Mapping_b03f183908cc44b9bc1b05cbca29cb66", "ME_Mapping_e72c0d21c4fd4e7a8628f0c3561c9e6d", "ME_Mapping_dd43ffbbc0684787955a07364138dde7", "ME_Mapping_e5af3eba7556475090e8f3125f217653", "ME_Mapping_i630e81870f24e8eaf077671b9c658b1", "ME_Mapping_a518bed027574ad6bd36d629e7dd320c", "ME_Mapping_aea5dd89913f4704adcb7298ce4ae13a"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",

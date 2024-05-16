@@ -1862,11 +1862,6 @@ define({
         "mode": "switch",
         "default": "false"
       },
-      "order": {
-        "required": false,
-        "default": null,
-        "type": "number"
-      },
       "labels": [
         {
           "key": "title",

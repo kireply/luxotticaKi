@@ -116,6 +116,27 @@
                         "wType": "Label"
                     },
                     "srcWgtKUID": "a8b524d6c08f4014abfba5d1a64fd035"
+                },
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "d549d10d1bcc4ba2b1325017a691e842",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 4,
+                    "propertyKey": "propertyLabelKey",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependencyConditions": {},
+                        "dependentKeysKUIDs": null,
+                        "displayName": "propertyLabelKey",
+                        "isHiddenInTool": false,
+                        "srcWidget": "lblLabelKey",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "d2fe3e63a65a4482bb0ca7356b2b48ff"
                 }
             ]
         },
