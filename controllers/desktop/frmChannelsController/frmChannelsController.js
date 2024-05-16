@@ -4,6 +4,11 @@ define({
   channels:[],
  
   onViewCreated(){
+    
+    // Code you can use per the tabs to perform the init and make the switch widget work properly
+    //this.view.tabPane.tab1.onInit = () => this.view.tabPane.tab1.simpleSwitch.preShow();
+    //this.view.tabPane.tab2.onInit = () => this.view.tabPane.tab2. simpleSwitch.preShow();
+
 //     this.view.init = () => {
  
 //       this.tiles = data.tiles;
@@ -11,6 +16,7 @@ define({
 // //         this.addTile(this.tiles[0],0);
 // //       }
 //     };
+    
     this.view.preShow = async () => {
       //try{
 //         await this.fetchChannels(); // aspetta che fetchChannels sia completato
