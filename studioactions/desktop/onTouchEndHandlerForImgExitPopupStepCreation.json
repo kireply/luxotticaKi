@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_ide_onTouchEnd_e69aa08da7294549b80d429bebab65b9",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxPopupNewStep.setVisibility(false);\nthis.view.flxNewStepBlur.setVisibility(false);",
+            "codeSnippet": "this.view.flxPopupNewStep.setVisibility(false);\nthis.view.flxNewStepBlur.setVisibility(false);\n\n// Showing \"Save Step\" label and \"Create\" button for save in Popup\nthis.view.lblNewStep.setVisibility(true);\nthis.view.lblChangeStep.setVisibility(false);\nthis.view.btnProceed.setVisibility(true);\nthis.view.btnChange.setVisibility(false);\nthis.view.txtStepTitle.text = \"\";",
             "callbackType": null
         }]
     }

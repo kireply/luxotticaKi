@@ -22,10 +22,429 @@
         "language": "js",
         "eventType": "onTouchEnd",
         "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_ib1da1c5237a47d78527486c6504b77b",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "newFlowId",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ed2952a6a916452fabf174bc40302608",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "newOrder",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_a716a1c7e90842248570698ac8aa4072",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "newTitle",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_e4ca6b78708b45e8834a6e8671215234",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "newPrescription",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_cd454624db074dbaab76cc1741518123",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "newAutoproceed",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_c22a03301c7a4fcb9669d952ad9e34e9",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "newAutoskip",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_h5bdbc5a19ff430ead607636f11ebffa",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "newGreyout",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_af2cef2c76a045e29c23076e3c5483c6",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "newAnalystics",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_fb9cc2e18d06470297ce8ed43edc9b84",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "newAutoproceedLabel",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "ADD_SNIPPET_bf9565d373c1496399ff53427b2ad89c",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// Showing labels and button for edit\nthis.view.flxPopupNewStep.setVisibility(true);\nthis.view.lblNewStep.setVisibility(false);\nthis.view.lblChangeStep.setVisibility(true);\nthis.view.btnProceed.setVisibility(false);\nthis.view.btnChange.setVisibility(true);",
+            "codeSnippet": "// Showing \"Change Step\" label and \"Save changes\" button for edit in Popup\nthis.view.flxPopupNewStep.setVisibility(true);\nthis.view.lblNewStep.setVisibility(false);\nthis.view.lblChangeStep.setVisibility(true);\nthis.view.btnProceed.setVisibility(false);\nthis.view.btnChange.setVisibility(true);\n\nnewOrder = gblCurrentStepOrder.toString();\n\n\nvoltmx.print(\"### CLICCATO SU MATITINA\");\nvoltmx.print(\"### gblCurrentStepOrder: \" + gblCurrentStepOrder);\nvoltmx.print(\"### gblCurrentStepTitle: \" + gblCurrentStepTitle);\nvoltmx.print(\"### gblFlowId: \" + gblFlowId);\nvoltmx.print(\"### newOrder: \" + newOrder);\nvoltmx.print(\"### this.view.lblStepTitleIntoStepComposition: \" + this.view.lblStepTitleIntoStepComposition.text);\n\n// retrieving title from labelStep in box. I will insert this in the popup text box\n//newTitle = this.view.lblStepTitleIntoStepComposition.text;",
             "parentId": null
+        }, {
+            "id": "LOADING_INDICATOR_i8ce86ad7ec4494f83798f6272cd11ad",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Loading step info..."
+        }, {
+            "id": "INVOKE_SERVICE_a357077b9a7e4fe3ae7db140541190d0",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_f81bd85a00fb4b98a113a47d46ffb499": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f81bd85a00fb4b98a113a47d46ffb499",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_CustomQueryGetSingleStep",
+                            "operationid": "132023"
+                        }
+                    }
+                },
+                "ME_Mapping_a0c1eff2723c4e2fa2fbde4f617d2e3c": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a0c1eff2723c4e2fa2fbde4f617d2e3c",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "newOrder",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "order",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_CustomQueryGetSingleStep",
+                            "operationid": "132023"
+                        }
+                    }
+                },
+                "ME_Mapping_hd946d087bd742c5aa614d99c740c487": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_hd946d087bd742c5aa614d99c740c487",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblCurrentStepTitle",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "title",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_CustomQueryGetSingleStep",
+                            "operationid": "132023"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_f81bd85a00fb4b98a113a47d46ffb499", "ME_Mapping_a0c1eff2723c4e2fa2fbde4f617d2e3c", "ME_Mapping_hd946d087bd742c5aa614d99c740c487"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "STEP_CustomQueryGetSingleStep",
+                "operationid": "132023"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_c76437d11f164ab1a566764063fdb682",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_SERVICE_a357077b9a7e4fe3ae7db140541190d0",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_d8271fcd2f6c4b0f91ff92a5041e389a",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "STEP_CustomQueryGetSingleStep.STEP !== null"
+            }],
+            "parentId": "INVOKE_SERVICE_a357077b9a7e4fe3ae7db140541190d0",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_b442acb787604e9686e7bee984b5208c",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_a357077b9a7e4fe3ae7db140541190d0",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_e8d4e853235546d8aff9de68f526f4ad",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Step's info NOT loaded correctly.",
+            "yesLabel": "Ok",
+            "alertMessage": "Step's info NOT loaded correctly.",
+            "messageType": "constant",
+            "parentId": "_b442acb787604e9686e7bee984b5208c",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_c4e55c8b35494767b18e2b65222c0037",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "",
+            "parentId": "_b442acb787604e9686e7bee984b5208c",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_e34c91cad69248e19c28aaebe915f96a",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### record in CustomQueryGetSingleStep: \" + JSON.stringify(STEP_CustomQueryGetSingleStep.records) );\n\n// Assigning Step's data to each field\ngblStepIdToChange = STEP_CustomQueryGetSingleStep.records[0].id;\nnewFlowId = STEP_CustomQueryGetSingleStep.records[0].flow_id;\nnewOrder = STEP_CustomQueryGetSingleStep.records[0].order;\nnewTitle = STEP_CustomQueryGetSingleStep.records[0].title;\nnewPrescription = STEP_CustomQueryGetSingleStep.records[0].prescription_step === \"true\" ? 0 : 1;\nnewAutoproceed = STEP_CustomQueryGetSingleStep.records[0].autoproceed === \"true\" ? 0 : 1;\nnewAutoskip = STEP_CustomQueryGetSingleStep.records[0].autoskip === \"true\" ? 0 : 1;\nnewGreyout = STEP_CustomQueryGetSingleStep.records[0].has_greyout === \"true\" ? 0 : 1;\nnewAnalytics = STEP_CustomQueryGetSingleStep.records[0].analytics_id;\nnewAutoproceedLabel = STEP_CustomQueryGetSingleStep.records[0].autoproceed_label;\n\n// now mapping this variables to the Popup for edit.",
+            "parentId": "_d8271fcd2f6c4b0f91ff92a5041e389a",
+            "callbackType": null
+        }, {
+            "id": "ADD_MAPPING_e3b6b14212d04e4896ba911bd7221479",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_gbeb86696ace4f2f800b0636a3cb049a": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_gbeb86696ace4f2f800b0636a3cb049a",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "newTitle",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtStepTitle",
+                        "widgetPath": "this.view.txtStepTitle",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmStepComposition",
+                        "widgetKUID": "e3fdc4c158a54a83858fc7b60becf5c8",
+                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_cfbcf3a05c1246eeb9611486ad231a11": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cfbcf3a05c1246eeb9611486ad231a11",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "newPrescription",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "selectedIndex",
+                        "widgetId": "swIsPrescriptionStep",
+                        "widgetPath": "this.view.swIsPrescriptionStep",
+                        "widgetType": "Switch",
+                        "dataType": "number",
+                        "itemId": "frmStepComposition",
+                        "widgetKUID": "ff7ae455dcff4c51a9d0bb73c2c1e326",
+                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_b9701012f5dd4fc7bba6efa93bcffa70": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b9701012f5dd4fc7bba6efa93bcffa70",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "newAutoproceed",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "selectedIndex",
+                        "widgetId": "swAutoproceed",
+                        "widgetPath": "this.view.swAutoproceed",
+                        "widgetType": "Switch",
+                        "dataType": "number",
+                        "itemId": "frmStepComposition",
+                        "widgetKUID": "ec66118f7d154f50983946f8fe646e79",
+                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_f7ef77a14d494eedbd259513ec5acebc": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f7ef77a14d494eedbd259513ec5acebc",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "newAutoskip",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "selectedIndex",
+                        "widgetId": "swAutoskip",
+                        "widgetPath": "this.view.swAutoskip",
+                        "widgetType": "Switch",
+                        "dataType": "number",
+                        "itemId": "frmStepComposition",
+                        "widgetKUID": "c2238355f5ff406992bd94e22f05205b",
+                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_a7cfd020c53c4a23a2dd4486e9669ecd": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a7cfd020c53c4a23a2dd4486e9669ecd",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "newGreyout",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "selectedIndex",
+                        "widgetId": "swHasGreyout",
+                        "widgetPath": "this.view.swHasGreyout",
+                        "widgetType": "Switch",
+                        "dataType": "number",
+                        "itemId": "frmStepComposition",
+                        "widgetKUID": "e490eadcf58b4b99a1825ca725e02637",
+                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_fd4422ac3f244f5d89142b6be3309003": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_fd4422ac3f244f5d89142b6be3309003",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "newAutoproceedLabel",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtAutoproceedButtonLabel",
+                        "widgetPath": "this.view.txtAutoproceedButtonLabel",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmStepComposition",
+                        "widgetKUID": "g22f6a3248d44d578c22ddaa092fc775",
+                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_gbeb86696ace4f2f800b0636a3cb049a", "ME_Mapping_cfbcf3a05c1246eeb9611486ad231a11", "ME_Mapping_b9701012f5dd4fc7bba6efa93bcffa70", "ME_Mapping_f7ef77a14d494eedbd259513ec5acebc", "ME_Mapping_a7cfd020c53c4a23a2dd4486e9669ecd", "ME_Mapping_fd4422ac3f244f5d89142b6be3309003"],
+            "parentId": "_d8271fcd2f6c4b0f91ff92a5041e389a",
+            "callbackType": null,
+            "enableMappingEditor": true
         }]
     }
 }

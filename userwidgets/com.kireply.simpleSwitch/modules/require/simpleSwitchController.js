@@ -70,6 +70,11 @@ define(function() {
       setDimensions(value) {
 
         voltmx.print('simpleSwitch: in setDimensions .... for value : ' + value + ', (' + typeof(value) + ')');
+        
+        const height = this.view.frame.height;
+        const width = height * 2;
+        this.view.width = `${width}dp`;
+		/*
         if (typeof(value) === 'string') value = parseInt(value.replace('dp', ''));
         this.view.width = 2 * value + 2 + 'dp';
         this.view.flxCircle.height = value - 4 + 'dp';
@@ -78,6 +83,7 @@ define(function() {
         this.view.lblOn.fontSize = value * 2;
         this.view.lblOff.width = value - 4 + 'dp';
         this.view.lblOff.fontSize = value * 2;
+        */
         this.view.forceLayout();
         
       }

@@ -28,7 +28,7 @@
         }, {
             "id": "ADD_SNIPPET_bb60a19761814eebb21d7ef91ba81504",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### Flow ID: \" + gblFlowId);\nvoltmx.print(\"### Flow Name: \" + gblFlowName);",
+            "codeSnippet": "voltmx.print(\"### Flow ID: \" + gblFlowId);\nvoltmx.print(\"### Flow Name: \" + gblFlowName);\n\ngblFirstStepTitle = this.view.txtStepTitle.text;",
             "parentId": null,
             "callbackType": null
         }, {

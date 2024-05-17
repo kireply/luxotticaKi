@@ -671,9 +671,9 @@ define({
   
   // function invoked when Save Button is clicked (invoked from action editor)
   saveStepComposition: function(){
-    
-    voltmx.application.showLoadingScreen(null, "Saving step...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
-    
+
+    //voltmx.application.showLoadingScreen(null, "Saving step...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
+
     voltmx.print("### GBL PROPERTY TEMPLATES IDS: " + JSON.stringify(gblPropertyTemplatesIds));
     let left_widgets = this.view.flxScrollLeft.widgets();
     let steps = this.view.flxRightSide.widgets();
@@ -694,10 +694,10 @@ define({
         };
         let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
         component_instance_left["template_name"] = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
-        
+
         let entry = Object.entries(gblIdOrderSteps).find(([id, order]) => order === "1");
         let number = entry ? entry[0] : undefined;
-        
+
         component_instance_left["step_id"] = number;
         component_instance_left["order"] = widget[componentKey]["lblComponentOrder"].text;
 
@@ -709,7 +709,7 @@ define({
           let props_left = widget[componentKey]["flxSelectedComponentRight"]["segmentRight"]["data"];
           props_left.forEach(function(prop_left) {
             let cleanedStr_left = prop_left.lblPropertyName.replace(/[^a-zA-Z0-9]+$/, '').replace(/^[^a-zA-Z0-9]+/, '');
-			let camelCaseStr_left = cleanedStr_left.charAt(0).toLowerCase() + cleanedStr_left.slice(1);
+            let camelCaseStr_left = cleanedStr_left.charAt(0).toLowerCase() + cleanedStr_left.slice(1);
             let prop_name_left = camelCaseStr_left;
             let elementoTrovato_left = gblPropertyTemplatesIds[component_instance_left["template_name"]].find(item_left => {
               let [id_left, obj_left] = Object.entries(item_left)[0];
@@ -746,7 +746,7 @@ define({
                   });
                   gblFail = true;
                 }
-               );
+                                                                                                );
               }, 
                                                                                                (error) => {
                 voltmx.print("### Error in the invocation of the service LABEL_create: " + JSON.stringify(error));
@@ -756,25 +756,25 @@ define({
               property_instance_left["property_template_id"] = prop_id_left[0];
               voltmx.print("### PROP LEFT: " + JSON.stringify(property_instance_left));
               voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_left,
-                                                                                             (response) => {
-              voltmx.print ("### Service response: "+JSON.stringify(response));
-            },
-                                                                                             (error) => {
-              voltmx.print("### Error in the invocation of the service PROPERTY_INSTANCE_create: " + JSON.stringify(error));
-              //             voltmx.application.dismissLoadingScreen();
-              voltmx.ui.Alert({
-                "alertType": constants.ALERT_TYPE_INFO,
-                "alertTitle": "Fail",
-                "yesLabel": "Ok",
-                "message": "Save not permitted: an error occurred.",
-                "alertHandler": this.SHOW_ALERT_Failure_Callback
-              }, {
-                "iconPosition": constants.ALERT_ICON_POSITION_LEFT
-              });
-              gblFail = true;
-            }
-           );
-           } 
+                                                                                               (response) => {
+                voltmx.print ("### Service response: "+JSON.stringify(response));
+              },
+                                                                                               (error) => {
+                voltmx.print("### Error in the invocation of the service PROPERTY_INSTANCE_create: " + JSON.stringify(error));
+                //             voltmx.application.dismissLoadingScreen();
+                voltmx.ui.Alert({
+                  "alertType": constants.ALERT_TYPE_INFO,
+                  "alertTitle": "Fail",
+                  "yesLabel": "Ok",
+                  "message": "Save not permitted: an error occurred.",
+                  "alertHandler": this.SHOW_ALERT_Failure_Callback
+                }, {
+                  "iconPosition": constants.ALERT_ICON_POSITION_LEFT
+                });
+                gblFail = true;
+              }
+                                                                                              );
+            } 
           });
         },
                                                                                          (error) => {
@@ -782,18 +782,19 @@ define({
           gblFail = true;
         });
       });
-           
+
     } 
 
-    
+
     let associatedId = null;
     let scrolls = steps.filter(step => step.id.startsWith("flxScrollRight"));
-    
+
     let mode_dict = this.modes;
     let children = [];
     let childIds = new Set();
     let parentIds = new Set();
-    
+    let savedComponentIds = new Set();
+
     scrolls.forEach(scroll => {
       let number = 0;
       let step_id = 0;
@@ -801,7 +802,7 @@ define({
         let entry = Object.entries(gblIdOrderSteps).find(([id, order]) => order === "1");
         number = entry ? entry[0] : undefined;
         step_id = entry ? entry[1] : undefined;
-        
+
       } else {
         let match = scroll.id.match(/flxScrollRight(\d+)$/);
         if (match) {
@@ -812,32 +813,35 @@ define({
         }
       }
       let right_widgets = scroll.widgets();
-      
+
       voltmx.print("### gblIdOrderSteps: " + gblIdOrderSteps);
-//       debugger;
+      //       debugger;
       // modifica qui per i Nested Components
       if (right_widgets.length > 0){
         voltmx.print("### SONO A DESTRA DENTRO " + `${scroll.id}`);
-        
+
         // Estrazione degli ID dei componenti per facilitare le operazioni
         let componentIdMap = right_widgets.reduce((acc, widget) => {
-            let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
-            acc[widget[componentKey].id] = widget[componentKey];
-            return acc;
+          let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
+          acc[widget[componentKey].id] = widget[componentKey];
+          return acc;
         }, {});
+
 
         // Filtraggio dei componenti, mantenendo quelli che non hanno figli diretti in `new_components`
         right_widgets.forEach(widget => {
-//             debugger;
-            let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
-            const id = widget[componentKey].id;
+          //             debugger;
+          let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
+          const id = widget[componentKey].id;
 
           let completeKey = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName + "_" + widget[componentKey]["lblComponentOrder"].text + "_" + step_id;
           let keyArray = mode_dict[completeKey];
-//           debugger;
+          //           debugger;
           let nestedObjs = keyArray.find(item => item.hasOwnProperty('nestedComponents'));
           if (nestedObjs && nestedObjs.nestedComponents.length > 0){
-            parentIds.add(id);
+            if (!childIds.has(id)){
+              parentIds.add(id);
+            }
             nestedObjs.nestedComponents.forEach(childId => {
               if (childId in componentIdMap){
                 children.push({[childId] : componentIdMap[childId]});
@@ -851,148 +855,85 @@ define({
             }
           }
         });
-        
+
+
         right_widgets = right_widgets.filter(widget => {
           let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
           const id = widget[componentKey].id;
           return parentIds.has(id) || (!parentIds.has(id) && !childIds.has(id));
         });
-        
-       
+
+        //         debugger;
+
+
         voltmx.print("right widgets after: " + right_widgets);
         voltmx.print("children after: " + children);
-        
-//         debugger;
-        
-        right_widgets.forEach(widget => {
- 
-          var component_instance_right = {
+
+        const saveComponent = (component, step_id, parentComponentId = null) => {
+          if (!component || savedComponentIds.has(component.id)) return;
+
+          let component_instance_right = {
             template_name: null,
             step_id: null,
             order: null
           };
-          var property_instance_right = {
+          let property_instance_right = {
             property_template_id: null,
             component_instance_id: null,
             value: null,
             label_id: null
           };
-          let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
-          component_instance_right["template_name"] = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
-          
+
+          component_instance_right["template_name"] = component["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
           component_instance_right["step_id"] = number;
-          component_instance_right["order"] = widget[componentKey]["lblComponentOrder"].text;
-         
-                           
-          voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_right,
-                                                                                           (response) => {
-            voltmx.print("### Service response SONO A DESTRA DENTRO: "+JSON.stringify(response));
-            let widgInsideComp = widget[componentKey];
-            this.componentCreateCallback(widgInsideComp, property_instance_right, response, component_instance_right);
+          component_instance_right["order"] = component["lblComponentOrder"].text;
+
+          voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create", {}, component_instance_right, (response) => {
+            voltmx.print("### Service response SONO A DESTRA DENTRO: " + JSON.stringify(response));
+            this.componentCreateCallback(component, property_instance_right, response, component_instance_right);
             let component_id = response.COMPONENT_INSTANCE[0].id;
-            let completeKey = null;
-            completeKey = component_instance_right["template_name"] + "_" + component_instance_right["order"] + "_" + step_id;
-//             debugger;
-            let componentArray = this.modes[completeKey];
-            let nestedComponentsObj = componentArray.find(item =>item.hasOwnProperty('nestedComponents'));
-            let child = null;
+
+            if (parentComponentId) {
+              let nested_component = {
+                component_instance_id: component_id,
+                component_instance_father_id: parentComponentId
+              };
+              voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("NESTED_COMPONENT_create", {}, nested_component, (nestedResponse) => {
+                voltmx.print("### Service response HO CREATO UN NESTED COMPONENT NEL DB: " + JSON.stringify(nestedResponse));
+              }, (error) => {
+                voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                gblFail = true;
+              });
+            }
+
+            savedComponentIds.add(component.id);
+
+            let nestedComponentsKey = component["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName + "_" + component["lblComponentOrder"].text + "_" + step_id;
+            let nestedComponentsArray = this.modes[nestedComponentsKey];
+            let nestedComponentsObj = nestedComponentsArray.find(item => item.hasOwnProperty('nestedComponents'));
+
             if (nestedComponentsObj && nestedComponentsObj.nestedComponents.length > 0) {
-              var component_instance_nested_right = {
-                template_name: null,
-                step_id: null,
-                order: null
-              };
-              var property_instance_nested_right = {
-                property_template_id: null,
-                component_instance_id: null,
-                value: null,
-                label_id: null
-              };
               nestedComponentsObj.nestedComponents.forEach(childId => {
                 let childObj = children.find(child => childId in child);
-                child = childObj ? childObj[childId] : undefined;
-                component_instance_nested_right["template_name"] = child["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
-
-                component_instance_nested_right["step_id"] = number;
-                component_instance_nested_right["order"] = child["lblComponentOrder"].text;
-                voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_nested_right,
-                                                                                           (response) => {
-                  voltmx.print("### Service response SONO A DESTRA DENTRO UN NESTED: "+JSON.stringify(response));
-                  this.componentCreateCallback(child, property_instance_nested_right, response, component_instance_nested_right);
-                  let component_nested_id = response.COMPONENT_INSTANCE[0].id;
-                  let nested_component = {
-                    component_instance_id: component_nested_id,
-                    component_instance_father_id: component_id
-                  };
-                  voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("NESTED_COMPONENT_create",{},nested_component,
-                                                                                           (response) => {
-              		voltmx.print("### Service response HO CREATO UN NESTED COMPONENT NEL DB: "+JSON.stringify(response));
-                  }, (error) => {
-                    voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-                    gblFail = true;
-                  });
-                  let completeKeyInsideNested = component_instance_nested_right["template_name"] + "_" + component_instance_nested_right["order"] + "_" + step_id;
-//                   debugger;
-                  let componentArrayInsideNested = this.modes[completeKeyInsideNested];
-                  let nestedComponentsObjInsideNested = componentArrayInsideNested.find(item =>item.hasOwnProperty('nestedComponents'));
-                  let childInsideNested = null;
-                  if (nestedComponentsObjInsideNested && nestedComponentsObjInsideNested.nestedComponents.length > 0) {
-                    var component_instance_nested_right_Inside = {
-                      template_name: null,
-                      step_id: null,
-                      order: null
-                    };
-                    var property_instance_nested_right_Inside = {
-                      property_template_id: null,
-                      component_instance_id: null,
-                      value: null,
-                      label_id: null
-                    };
-                    nestedComponentsObjInsideNested.nestedComponents.forEach(childIdInsideNested => {
-                      let childObjInsideNested = children.find(child => childIdInsideNested in child);
-                      childInsideNested = childObjInsideNested ? childObjInsideNested[childIdInsideNested] : undefined;
-                      component_instance_nested_right_Inside["template_name"] = childInsideNested["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName;
-                      component_instance_nested_right_Inside["step_id"] = number;
-                      component_instance_nested_right_Inside["order"] = childInsideNested["lblComponentOrder"].text;
-                      voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create",{},component_instance_nested_right_Inside,
-                                                                                                       (response) => {
-                        voltmx.print("### Service response SONO A DESTRA DENTRO UN NESTED MA INSIDE: "+JSON.stringify(response));
-                        this.componentCreateCallback(child, property_instance_nested_right, response, component_instance_nested_right);
-                        let component_nested_id_Inside = response.COMPONENT_INSTANCE[0].id;
-                        let nested_component_Inside = {
-                          component_instance_id: component_nested_id_Inside,
-                          component_instance_father_id: component_nested_id
-                        };
-                        
-                        voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("NESTED_COMPONENT_create",{},nested_component_Inside,
-                                                                                                         (response) => {
-                          voltmx.print("### Service response SONO A DESTRA DENTRO UN NESTED MA INSIDE: "+JSON.stringify(response));
-                        }, (error) => {
-                          voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-                          gblFail = true;
-                        });
-
-                      }, (error) => {
-                        voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-                        gblFail = true;
-                      });
-                    });
-                  }
-                }, (error) => {
-                  voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-                  gblFail = true;
-                });
+                let child = childObj ? childObj[childId] : undefined;
+                if (child) saveComponent(child, step_id, component_id);
               });
             }
           }, (error) => {
             voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
             gblFail = true;
           });
+        };
+
+        right_widgets.forEach(widget => {
+          let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
+          let component = widget[componentKey];
+          saveComponent(component, step_id);
         });
+
       } 
     });
-    voltmx.application.dismissLoadingScreen();
-    voltmx.print("### FINITO IL METODO SAVE");
+    //voltmx.application.dismissLoadingScreen();
   },   // end of function saveStepComposition
   
   
@@ -1156,6 +1097,7 @@ define({
               scroll.isVisible = true;
             }
           gblCurrentStepOrder = stepNumber;
+          gblCurrentStepTitle = widget.lblStepTitle.text;
           voltmx.print("### CURRENT STEP ORDER: " + JSON.stringify(gblCurrentStepOrder));
         } 
       }
@@ -1163,6 +1105,59 @@ define({
       this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
       this.view.settingsSide.txt.setVisibility(true);
     };  // end box.onCLickTeaser
+    
+    
+    box.onTouchEndEditTeaser = () => {
+      
+      gblStepBoxToChange = box;
+      // Showing "Change Step" label and "Save changes" button for edit in Popup
+      this.view.flxPopupNewStep.setVisibility(true);
+      this.view.lblNewStep.setVisibility(false);
+      this.view.lblChangeStep.setVisibility(true);
+      this.view.btnProceed.setVisibility(false);
+      this.view.btnChange.setVisibility(true);
+      newOrder = gblCurrentStepOrder.toString();
+
+      voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("STEP_CustomQueryGetSingleStep", {}, {flow_id : gblFlowId, order: newOrder}, (STEP_CustomQueryGetSingleStep) => { 
+
+        voltmx.print("### CLICCATO SU MATITINA");
+        voltmx.print("### gblCurrentStepOrder: " + gblCurrentStepOrder);
+        voltmx.print("### gblCurrentStepTitle: " + gblCurrentStepTitle);
+        voltmx.print("### gblFlowId: " + gblFlowId);
+        voltmx.print("### newOrder: " + newOrder);
+        voltmx.print("### this.view.lblStepTitleIntoStepComposition: " + this.view.lblStepTitleIntoStepComposition.text);
+        newTitle = this.view.lblStepTitleIntoStepComposition.text;
+
+        if (STEP_CustomQueryGetSingleStep.STEP !== null) {
+          voltmx.print("### record in CustomQueryGetSingleStep: " + JSON.stringify(STEP_CustomQueryGetSingleStep.records));
+          // Assigning Step's data to each field
+          //let newFlowId = STEP_CustomQueryGetSingleStep.records[0].flow_id;
+          //let newOrder = STEP_CustomQueryGetSingleStep.records[0].order.toString();
+          gblStepIdToChange = STEP_CustomQueryGetSingleStep.records[0].id;
+          let newTitle = STEP_CustomQueryGetSingleStep.records[0].title;
+          let newPrescription = STEP_CustomQueryGetSingleStep.records[0].prescription_step === "true" ? 0 : 1;
+          let newAutoproceed = STEP_CustomQueryGetSingleStep.records[0].autoproceed === "true" ? 0 : 1;
+          let newAutoskip = STEP_CustomQueryGetSingleStep.records[0].autoskip === "true" ? 0 : 1;
+          let newGreyout = STEP_CustomQueryGetSingleStep.records[0].has_greyout === "true" ? 0 : 1;
+          let newAnalytics = STEP_CustomQueryGetSingleStep.records[0].analytics_id;
+          let newAutoproceedLabel = STEP_CustomQueryGetSingleStep.records[0].autoproceed_label;
+          
+          // now mapping this variables to the Popup for edit.
+          this.view.txtStepTitle.text = newTitle;
+          this.view.swIsPrescriptionStep.selectedIndex = newPrescription;
+          this.view.swAutoproceed.selectedIndex = newAutoproceed;
+          this.view.swAutoskip.selectedIndex = newAutoskip;
+          this.view.swHasGreyout.selectedIndex = newGreyout;
+          this.view.txtAutoproceedButtonLabel.text = newAutoproceedLabel;
+        }
+
+
+      }, (error) => {
+        voltmx.print("### Error in service from Console");
+      });
+
+
+    };
     
     
     

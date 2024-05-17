@@ -2,6 +2,7 @@
     "AS_Form_b2dab1c75d99438c91a398430db780fa": {
         "id": "AS_Form_b2dab1c75d99438c91a398430db780fa",
         "type": "ACTION_SEQUENCE",
+        "name": "onPreShowHandlerForFrmStepComposition",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -30,39 +31,13 @@
             }],
             "parentId": null,
             "callbackType": null,
-            "criteria": "all"
+            "criteria": "all",
+            "disabled": true
         }, {
             "id": "ADD_MAPPING_d43c7ee9ac324fb1a40c4e4d2bfcf545",
             "type": "ADD_MAPPING",
-            "mappings": {
-                "ME_Mapping_hcfaad442e4d4b2183362e7e892897a7": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_hcfaad442e4d4b2183362e7e892897a7",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "navigationobject",
-                        "propertyName": "txtStepTitle_text",
-                        "dataType": "string",
-                        "isSkinProperty": false,
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Forms",
-                        "propertyName": "text",
-                        "widgetId": "lblStepTitleIntoStepComposition",
-                        "widgetPath": "this.view.lblStepTitleIntoStepComposition",
-                        "widgetType": "Label",
-                        "dataType": "string",
-                        "itemId": "frmStepComposition",
-                        "widgetKUID": "c1cbce2c78594587a75089eba6c2d130",
-                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
-                        "forkedPlatform": "all"
-                    }
-                }
-            },
-            "mappingsOrder": ["ME_Mapping_hcfaad442e4d4b2183362e7e892897a7"],
+            "mappings": {},
+            "mappingsOrder": [],
             "parentId": "_cd7bb2d4cab04363bb90a02339c87c8d",
             "callbackType": null,
             "enableMappingEditor": true

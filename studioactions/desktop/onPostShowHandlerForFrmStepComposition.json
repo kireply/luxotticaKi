@@ -16,6 +16,12 @@
         "language": "js",
         "eventType": "postShow",
         "actions": [{
+            "id": "ADD_SNIPPET_a57a87fd15d04e04bc9c7984b8ebeb2c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// Disabling text areas.\n\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n\nthis.view.flxComponentsSide.opacity = 0.5;\n",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "_af518630a2844f8da95346600df226de",
             "type": "IF_CONDITION",
             "conditions": [{
@@ -32,13 +38,7 @@
             "parentId": null,
             "callbackType": null,
             "criteria": "all",
-            "disabled": true
-        }, {
-            "id": "ADD_SNIPPET_a57a87fd15d04e04bc9c7984b8ebeb2c",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "// Disabling text areas.\n\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n\nthis.view.flxComponentsSide.opacity = 0.5;\n",
-            "parentId": null,
-            "callbackType": null
+            "disabled": false
         }, {
             "id": "LOADING_INDICATOR_b45d96d08c544473a3f4bbe700a74ec4",
             "selectedOption": "show",
@@ -100,40 +100,11 @@
             "disabled": null,
             "source": "controller"
         }, {
-            "id": "ADD_MAPPING_d030fdb1da614191851c5cd90ab0c187",
-            "type": "ADD_MAPPING",
-            "mappings": {
-                "ME_Mapping_b298e699072c4ffea1f6432de5e30bce": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_b298e699072c4ffea1f6432de5e30bce",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "navigationobject",
-                        "propertyName": "txtStepTitle_text",
-                        "dataType": "string",
-                        "isSkinProperty": false,
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Forms",
-                        "propertyName": "text",
-                        "widgetId": "lblStepTitleIntoStepComposition",
-                        "widgetPath": "this.view.lblStepTitleIntoStepComposition",
-                        "widgetType": "Label",
-                        "dataType": "string",
-                        "itemId": "frmStepComposition",
-                        "widgetKUID": "c1cbce2c78594587a75089eba6c2d130",
-                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
-                        "forkedPlatform": "all"
-                    }
-                }
-            },
-            "mappingsOrder": ["ME_Mapping_b298e699072c4ffea1f6432de5e30bce"],
+            "id": "ADD_SNIPPET_cfa25b04a0aa4160825c9f79bcdbcb9e",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.lblStepTitleIntoStepComposition.text = gblFirstStepTitle;",
             "parentId": "_af518630a2844f8da95346600df226de",
-            "callbackType": null,
-            "enableMappingEditor": true
+            "callbackType": null
         }, {
             "id": "LOADING_INDICATOR_gb1271387fc5421aa6eed33dfc9265a5",
             "selectedOption": "dismiss",
