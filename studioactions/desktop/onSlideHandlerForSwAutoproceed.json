@@ -2,6 +2,7 @@
     "AS_Switch_h6791bfb5aee48eb85b7c0109f16fbab": {
         "id": "AS_Switch_h6791bfb5aee48eb85b7c0109f16fbab",
         "type": "ACTION_SEQUENCE",
+        "name": "onSlideHandlerForSwAutoproceed",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -113,7 +114,7 @@
         }, {
             "id": "ADD_SNIPPET_ide_onSlide_jd484a17c27247d3a6b92b956e84f6d2",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxAutoproceedFalse.setVisibility(false);",
+            "codeSnippet": "this.view.flxAutoproceedFalse.setVisibility(false);\nthis.view.txtAutoproceedButtonLabel.text = \"\";",
             "parentId": "ELSE_CONDITION_ide_onSlide_e08a027724a54f7b8f629d3dd7debdf8",
             "callbackType": null
         }, {

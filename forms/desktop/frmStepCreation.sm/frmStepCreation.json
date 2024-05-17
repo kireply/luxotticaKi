@@ -51,7 +51,7 @@
     "canvasWidth": 1200,
     "children": [
         "flxMainContainerStepCreation",
-        "flxBlur",
+        "flxNewStepBlur",
         "flxPopupNewStep"
     ],
     "containerweight": 100,

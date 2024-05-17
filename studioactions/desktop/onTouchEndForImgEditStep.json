@@ -236,50 +236,285 @@
             "isBlocked": "true",
             "showProgressIndicator": "true"
         }, {
+            "id": "ADD_SNIPPET_gaba2e62dffa40f8932c11a596d802af",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "debugger;",
+            "parentId": "INVOKE_SERVICE_a357077b9a7e4fe3ae7db140541190d0",
+            "callbackType": "Callback"
+        }, {
             "id": "_d8271fcd2f6c4b0f91ff92a5041e389a",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
                 "leftValue": "STEP_CustomQueryGetSingleStep.STEP !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "STEP_CustomQueryGetSingleStep.records.length !== 0"
             }],
             "parentId": "INVOKE_SERVICE_a357077b9a7e4fe3ae7db140541190d0",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "_b442acb787604e9686e7bee984b5208c",
-            "type": "ELSE_CONDITION",
+            "id": "ELSE_IF_CONDITION_g80a6acbbe3e4ca695a1688b3ca4ce85",
+            "type": "ELSE_IF_CONDITION",
             "conditions": [{
-                "leftValueType": "widgetprop",
-                "leftValue": "",
-                "operator": "===",
-                "rightValueType": "widgetprop",
-                "rightValue": ""
+                "leftValueType": "expression",
+                "leftValue": "STEP_CustomQueryGetSingleStep.STEP !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "STEP_CustomQueryGetSingleStep.records.length === 0"
             }],
             "parentId": "INVOKE_SERVICE_a357077b9a7e4fe3ae7db140541190d0",
             "callbackType": "Callback",
-            "criteria": "all"
+            "criteria": "all",
+            "disabled": true
         }, {
-            "id": "SHOW_ALERT_e8d4e853235546d8aff9de68f526f4ad",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "Step's info NOT loaded correctly.",
-            "yesLabel": "Ok",
-            "alertMessage": "Step's info NOT loaded correctly.",
-            "messageType": "constant",
-            "parentId": "_b442acb787604e9686e7bee984b5208c",
+            "id": "INVOKE_SERVICE_f52c67afae2440f4a618f00f0c558460",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_f5d7f6648cff45a583b74f6114cd4515": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f5d7f6648cff45a583b74f6114cd4515",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_fd57cb50334b48dc8e69bf0faca43def": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_fd57cb50334b48dc8e69bf0faca43def",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblCurrentStepOrder",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "order",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_iffe3a64047a4ee9a0238dd3f9e4670d": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_iffe3a64047a4ee9a0238dd3f9e4670d",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "prescription_step",
+                        "dataType": "boolean",
+                        "expression": "false",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_ec6430eac539412d94edca3ad0b0722e": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ec6430eac539412d94edca3ad0b0722e",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "autoproceed",
+                        "dataType": "boolean",
+                        "expression": "true",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_f746f6a2a26343e48aeef8ab401c1ab5": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f746f6a2a26343e48aeef8ab401c1ab5",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "autoskip",
+                        "dataType": "boolean",
+                        "expression": "true",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_ha54ebd614304ca19ab4246f73678ea8": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ha54ebd614304ca19ab4246f73678ea8",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "has_greyout",
+                        "dataType": "boolean",
+                        "expression": "false",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_ed94445e3337432e9ee7a18090b7adf1": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ed94445e3337432e9ee7a18090b7adf1",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "analytics_id",
+                        "dataType": "string",
+                        "expression": "\"LensBundle\"",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_b26fc7315a33452eb64ba127b2fb7058": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b26fc7315a33452eb64ba127b2fb7058",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "autoproceed_label",
+                        "dataType": "string",
+                        "expression": "\"\"",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                },
+                "ME_Mapping_dc4e1594e8fa413683c6120b72582770": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_dc4e1594e8fa413683c6120b72582770",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "title",
+                        "dataType": "string",
+                        "expression": "\"step1\"",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_create",
+                            "operationid": "122826"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_f5d7f6648cff45a583b74f6114cd4515", "ME_Mapping_fd57cb50334b48dc8e69bf0faca43def", "ME_Mapping_iffe3a64047a4ee9a0238dd3f9e4670d", "ME_Mapping_ec6430eac539412d94edca3ad0b0722e", "ME_Mapping_f746f6a2a26343e48aeef8ab401c1ab5", "ME_Mapping_ha54ebd614304ca19ab4246f73678ea8", "ME_Mapping_ed94445e3337432e9ee7a18090b7adf1", "ME_Mapping_b26fc7315a33452eb64ba127b2fb7058", "ME_Mapping_dc4e1594e8fa413683c6120b72582770"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "STEP_create",
+                "operationid": "122826"
+            },
+            "parentId": "ELSE_IF_CONDITION_g80a6acbbe3e4ca695a1688b3ca4ce85",
             "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
+            "enableMappingEditor": true
         }, {
-            "id": "ADD_SNIPPET_c4e55c8b35494767b18e2b65222c0037",
+            "id": "ADD_SNIPPET_b4fe6ad572b4449080c859f915a3b6b1",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "",
-            "parentId": "_b442acb787604e9686e7bee984b5208c",
-            "callbackType": null
+            "codeSnippet": "// In this case, the flow doesn't have any step. So we are creating the first.\nself.view.btnChange.setVisibility(false);\nself.view.btnProceed.setVisibility(true);\nself.view.lblNewStep.setVisibility(false);\nself.view.lblChangeStep.setVisibility(true);",
+            "parentId": "INVOKE_SERVICE_f52c67afae2440f4a618f00f0c558460",
+            "callbackType": "Callback",
+            "disabled": true
         }, {
             "id": "ADD_SNIPPET_e34c91cad69248e19c28aaebe915f96a",
             "type": "ADD_SNIPPET",
@@ -445,6 +680,41 @@
             "parentId": "_d8271fcd2f6c4b0f91ff92a5041e389a",
             "callbackType": null,
             "enableMappingEditor": true
+        }, {
+            "id": "_b442acb787604e9686e7bee984b5208c",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_a357077b9a7e4fe3ae7db140541190d0",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_e8d4e853235546d8aff9de68f526f4ad",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Step's info NOT loaded correctly.",
+            "yesLabel": "Ok",
+            "alertMessage": "Step's info NOT loaded correctly.",
+            "messageType": "constant",
+            "parentId": "_b442acb787604e9686e7bee984b5208c",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_c4e55c8b35494767b18e2b65222c0037",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "",
+            "parentId": "_b442acb787604e9686e7bee984b5208c",
+            "callbackType": null
         }]
     }
 }

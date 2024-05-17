@@ -46,7 +46,7 @@
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxBlur",
+    "id": "flxNewStepBlur",
     "info": null,
     "iscustomlayout": false,
     "isvisible": false,

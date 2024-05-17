@@ -46,7 +46,7 @@
         }, {
             "id": "ADD_SNIPPET_acc4647f405248b682ed32ba1c63417d",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxAutoproceedFalse.setVisibility(false);",
+            "codeSnippet": "this.view.flxAutoproceedFalse.setVisibility(false);\nthis.view.txtAutoproceedButtonLabel.text = \"\";",
             "parentId": "_hc8be81b023d4ca7be4b25dd1acb8ca6",
             "callbackType": null
         }, {
