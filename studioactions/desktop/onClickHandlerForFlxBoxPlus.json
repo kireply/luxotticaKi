@@ -51,6 +51,8 @@
             "display": "addNewStep",
             "inputparams": [{
                 "name": "left_position"
+            }, {
+                "name": "title"
             }],
             "parentId": "_ide_onClick_he816e3615164b5ba410c6447648bc3a",
             "callbackType": "Callback",

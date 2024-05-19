@@ -44,7 +44,7 @@ async function publish() {
     components: []
   };
 
-  var JSON_default = gblDefaultComponents;
+  var JSON_default = gblDefaultComponents;  //gblDefaultComponents is loaded with all the default components in the Login controller (we do not need to edit this variable)
   
   // TO BE COMMENTED ====================================================
 //   gblFlowId = "488";

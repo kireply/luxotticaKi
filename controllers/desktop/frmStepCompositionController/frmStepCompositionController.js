@@ -1016,21 +1016,25 @@ define({
   
     
   // this function creates the new step (and the related box, at the top right)
-  addNewStep: function(left_position){
+  addNewStep: function(left_position, title){
     let index = gblLastInsertedStep + 1;
 
     gblLastInsertedStep += 1;
     gblCurrentStepOrder = gblLastInsertedStep;
     
+    /*
     // query that returns all Steps (and infos/attributes) related to the @flow given as parameter.
     voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("STEP_flow_CustomQuery", {}, {flow_id : gblFlowId}, (response) => {
       voltmx.print("### Service STEP_flow_CustomQuery response: "+JSON.stringify(response));
       response.records.forEach(record => {
         gblIdOrderSteps[record.id] = record.order;
       });
+      
     }, (error) => {
       voltmx.print("### Error in the invocation of the service STEP_flow_CustomQuery: " + JSON.stringify(error));
     });
+    
+    */
     
     let left_position_dp = left_position + "dp";
     voltmx.print("### left_position_dp: " + left_position_dp);
@@ -1044,9 +1048,11 @@ define({
     
 
     box.stepOrder = "Step " + index;
-    box.stepTitle = gblCurrentStepTitle;
+    // box.stepTitle = gblCurrentStepTitle;
+    box.stepTitle = title;
     
     box.onClickTeaser = () => {
+      debugger;
       let steps_widgets = this.view.flxSteps.widgets();
       let flxScrolls = this.view.flxRightSide.widgets();
       let current_id = box.id;   // ex. "boxStep3"
@@ -1525,15 +1531,90 @@ define({
   
   
   // this function laod the flow's data already existing (steps and components)
-  loadFlowData: function(flow_id){
+  loadFlowData: function(flow_id, stepsList, stepSectionList){  // stepsList è il risultato di STEP_flow_CustomQuery.records
     
-    // TODO
+    // resetting all global variables
+    // Simple
+    gblFirststepTitle = "";
+    gblStepIdToChange = 0;
+    gblStepBoxToChange = "";
+    gblCurrentStepOrder = 1;
+    gblCurrentStepTitle = "";
+    gblLastInsertedStep = 1;
+    gblFatherNest = "";
+	// Collections
+    gblPropertyTemplatesIds = {};
+    gblIdOrderSteps = {};
+    
+    let left_position = 0;
+    let steps_widgets = null;
+    
+    // setting the first step title
+    this.view.lblStepTitleIntoStepComposition.text = stepsList[0].title;
+    voltmx.print("### SONO DOPO CALLBACK SERVIZIO");
+    // Filtra e raggruppa i record per component_template_name + component_order
+    let componentDataDict = stepSectionList.reduce((acc, reference) => {
+      if (reference.step_order === "1") {
+        const key = `${reference.component_template_name}_${reference.component_order}`;
+        if (!acc[key]) {
+          acc[key] = [];
+        }
+        acc[key].push({ [reference.property_template_name]: reference.property_value });
+      }
+      return acc;
+    }, {});
+    debugger;
     
     
-    
+    stepsList.slice(1).forEach(record => {
+      // retrieving the steps in order to know the correct position of the steps to insert (in the scroll flxSteps)
+      steps_widgets = this.view.flxSteps.widgets();
+      voltmx.print("### FLEX STEPS NUMBER OF WIDGETS: " + JSON.stringify(steps_widgets.length));
+
+      if (steps_widgets.length <= 2){  // only add box and first box
+        this.view.flxBoxFirstStep.backgroundColor = "FFFFFF00";
+        this.view.flxBoxFirstStep.imgDeleteStep.setVisibility(false);
+        this.view.flxBoxFirstStep.imgEditStep.setVisibility(false);
+        this.view.flxBoxFirstStep.lblStepOrder.fontColor = "00000000";
+        this.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = "00000000";
+        //left_position = parseInt(self.view.flxBoxFirstStep.left, 10) + parseInt(self.view.flxBoxFirstStep.width, 10) + 1;
+        left_position = parseInt(this.view.flxBoxFirstStep.left, 10) + 80 + 10;  //80 width of firstBox + 10 to keep some space  
+      } else {  // there's already more than one step
+        let lastStep = 'boxStep' + gblLastInsertedStep;
+        steps_widgets.forEach(widget => {
+          if (widget.id === lastStep) {
+            widget.flxBoxStep.backgroundColor = "FFFFFF00";
+            widget.imgDeleteStep.isVisible = false;
+            widget.imgEditStep.isVisible = false;
+            widget.lblStepOrder.fontColor = "00000000";
+            widget.lblStepTitle.fontColor = "00000000";
+            //left_position = parseInt(widget.left, 10) + parseInt(widget.width, 10) + 1;
+            left_position = parseInt(widget.left, 10) + 80 + 10;
+          }
+        });
+      }
+
+      gblIdOrderSteps[record.id] = record.order;
+      this.addNewStep(left_position, record.title);
+      voltmx.print("### CURRENT STEP ORDER in forEach: " + JSON.stringify(gblCurrentStepOrder));
+      debugger;
+      
+      // Filtra e raggruppa i record per component_template_name + component_order
+      let componentDataDict = stepSectionList.reduce((acc, reference) => {
+        if (reference.step_order === record.order) {
+          const key = `${reference.component_template_name}_${reference.component_order}`;
+          if (!acc[key]) {
+            acc[key] = [];
+          }
+          acc[key].push({ [reference.property_template_name]: reference.property_value });
+        }
+        return acc;
+      }, {});
+      
+    }); // end of forEach
+
+
   }
   
   
-  
-
 });

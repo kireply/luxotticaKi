@@ -2,6 +2,7 @@
     "AS_TextField_a99e1cc7c78e4d56905b2879a5142db3": {
         "id": "AS_TextField_a99e1cc7c78e4d56905b2879a5142db3",
         "type": "ACTION_SEQUENCE",
+        "name": "onTextChangeForTxtStepTitle",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"

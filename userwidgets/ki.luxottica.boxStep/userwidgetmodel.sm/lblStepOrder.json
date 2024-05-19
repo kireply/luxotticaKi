@@ -62,5 +62,6 @@
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",
-    "wType": "Label"
+    "wType": "Label",
+    "zindex": 1
 }
