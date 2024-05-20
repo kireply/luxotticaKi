@@ -24,7 +24,57 @@
         }, {
             "id": "ADD_LOCAL_VARIABLE_g898eea63141466ca2184127a1eee84f",
             "type": "ADD_LOCAL_VARIABLE",
-            "name": "STEP_flow_CustomQueryRecords",
+            "name": "stepsList",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_edd9c1580fef4ada871e0a8907ed1276",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "stepSectionList",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_eb31a7d01af0438b8aa55a8e883f9165",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "previewSectionList",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_f825e01f91d743088696a186033e3898",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "nestedComponents",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_de28f1d502754f789f777768ccc88bdf",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "componentsImages",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_h3cf726a37074b2b94674b491b40680b",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "propertyTemplates",
             "isGlobal": false,
             "valuetype": "constant",
             "datatype": "collection",
@@ -410,7 +460,7 @@
         }, {
             "id": "ADD_SNIPPET_ib3839ecb5a14c20a2aff9627c6fc6c0",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### ENTRATO IN ELSE IF INVOKE FUNCTION loadFlowData\");\nSTEP_flow_CustomQueryRecords = STEP_flow_CustomQuery.records;",
+            "codeSnippet": "voltmx.print(\"### ENTRATO IN ELSE IF e invoco Components_CustomQuery\");\nstepsList = STEP_flow_CustomQuery.records;",
             "parentId": "ELSE_IF_CONDITION_i0f3ab4c1a0745ad9e17471b80a86053",
             "callbackType": null
         }, {
@@ -489,13 +539,435 @@
             "conditions": [{
                 "leftValueType": "expression",
                 "leftValue": "Components_CustomQuery.records !== null"
-            }, {
-                "leftValueType": "expression",
-                "leftValue": "Components_CustomQuery.records.length > 0"
             }],
             "parentId": "INVOKE_SERVICE_e9e90d20f66443a4a802d883281d38ed",
             "callbackType": "Callback",
             "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_c53a8fba803b4cd492441c5c177db2fe",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### ENTRATO IN IF e invoco nuovamente Components_CustomQuery (con previewSection)\");\nstepSectionList = Components_CustomQuery.records;",
+            "parentId": "_ic236b77b3e34e38baa100bac7f39441",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_bc83416ae93b447f89a1c0ce2b723521",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_ccf78609e3f24c16a8cdbbca987adf0f": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ccf78609e3f24c16a8cdbbca987adf0f",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "Components_CustomQuery",
+                            "operationid": "125611"
+                        }
+                    }
+                },
+                "ME_Mapping_g68538eab3e14843a9f69fddbff03399": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_g68538eab3e14843a9f69fddbff03399",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "section_type",
+                        "dataType": "string",
+                        "expression": "\"previewSection\"",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "Components_CustomQuery",
+                            "operationid": "125611"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_ccf78609e3f24c16a8cdbbca987adf0f", "ME_Mapping_g68538eab3e14843a9f69fddbff03399"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "Components_CustomQuery",
+                "operationid": "125611"
+            },
+            "parentId": "_ic236b77b3e34e38baa100bac7f39441",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_h3c3fef825fc4589991dab5e08780234",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "Components_CustomQuery.records !== null"
+            }],
+            "parentId": "INVOKE_SERVICE_bc83416ae93b447f89a1c0ce2b723521",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_j1a3d7df0c6440db9bfc16eef9216c40",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_bc83416ae93b447f89a1c0ce2b723521",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_c77fdb8156754869a1a8f9da26fa22f7",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Components_CustomQuery (with previewSection) is NULL",
+            "yesLabel": "Ok",
+            "alertMessage": "Components_CustomQuery (with previewSection) is NULL",
+            "messageType": "constant",
+            "parentId": "_j1a3d7df0c6440db9bfc16eef9216c40",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_eb23f63f33e84db6a66619de6168f81e",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### ENTRATO IN IF e invoco NESTED_COMPONENT_CustomQuery\");\npreviewSectionList = Components_CustomQuery.records;",
+            "parentId": "_h3c3fef825fc4589991dab5e08780234",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_e49deeda4c5148b0a38a26e47d7ef92f",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_b924cfdb48074e55a790612ac8c1a4b9": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b924cfdb48074e55a790612ac8c1a4b9",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "NESTED_COMPONENT_CustomQuery",
+                            "operationid": "130923"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_b924cfdb48074e55a790612ac8c1a4b9"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "NESTED_COMPONENT_CustomQuery",
+                "operationid": "130923"
+            },
+            "parentId": "_h3c3fef825fc4589991dab5e08780234",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_aeebc008a6f14a06ad244a043ca3a40d",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "NESTED_COMPONENT_CustomQuery.records !== null"
+            }],
+            "parentId": "INVOKE_SERVICE_e49deeda4c5148b0a38a26e47d7ef92f",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_e2253cdfaea84437b1ee0262b0355869",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_e49deeda4c5148b0a38a26e47d7ef92f",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_afb227e7f848456eb3d1ddeb4b352b58",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "NESTED_COMPONENT_CustomQuery is NULL",
+            "yesLabel": "Ok",
+            "alertMessage": "NESTED_COMPONENT_CustomQuery is NULL",
+            "messageType": "constant",
+            "parentId": "_e2253cdfaea84437b1ee0262b0355869",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_f0bdeb0fd2814afbb19efa5864bba4f8",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### ENTRATO IN IF e invoco COMPONENT_TEMPLATE_GetImage_CustomQuery\");\nnestedComponents = NESTED_COMPONENT_CustomQuery.records;",
+            "parentId": "_aeebc008a6f14a06ad244a043ca3a40d",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_j35e99cf1f5940509efbb1bc793f0189",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_edf41bd997e54b66806a53dd1110987b": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_edf41bd997e54b66806a53dd1110987b",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "COMPONENT_TEMPLATE_GetImage_CustomQuery",
+                            "operationid": "132105"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_edf41bd997e54b66806a53dd1110987b"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "COMPONENT_TEMPLATE_GetImage_CustomQuery",
+                "operationid": "132105"
+            },
+            "parentId": "_aeebc008a6f14a06ad244a043ca3a40d",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_f282ffdb59fe457ab59cce4ebcca8047",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "COMPONENT_TEMPLATE_GetImage_CustomQuery.records !== null"
+            }],
+            "parentId": "INVOKE_SERVICE_j35e99cf1f5940509efbb1bc793f0189",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_a925707511614c9083fc1bfce80038b2",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_j35e99cf1f5940509efbb1bc793f0189",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_fed37c2dd3c84bfaaa3c9d707b0d41d4",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "COMPONENT_TEMPLATE_GetImage_CustomQuery.records is NULL",
+            "yesLabel": "Ok",
+            "alertMessage": "COMPONENT_TEMPLATE_GetImage_CustomQuery.records is NULL",
+            "messageType": "constant",
+            "parentId": "_a925707511614c9083fc1bfce80038b2",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_gae5289333ca494990c256c9bd0f30c5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### ENTRATO IN IF e invoco PROPERTY_TEMPLATE_Flow_CustomQuery\");\ncomponentsImages = COMPONENT_TEMPLATE_GetImage_CustomQuery.records;",
+            "parentId": "_f282ffdb59fe457ab59cce4ebcca8047",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_j5ba63763bff456a8cdb99a61b58c5c2",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_e0978e5b63f34e09978944f44aa04837": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e0978e5b63f34e09978944f44aa04837",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "PROPERTY_TEMPLATE_Flow_CustomQuery",
+                            "operationid": "132788"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_e0978e5b63f34e09978944f44aa04837"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "PROPERTY_TEMPLATE_Flow_CustomQuery",
+                "operationid": "132788"
+            },
+            "parentId": "_f282ffdb59fe457ab59cce4ebcca8047",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_c65546689f594931a773a609f6d40c2b",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "PROPERTY_TEMPLATE_Flow_CustomQuery.records !== null"
+            }],
+            "parentId": "INVOKE_SERVICE_j5ba63763bff456a8cdb99a61b58c5c2",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_aac1a47b716e42cabab5daf86ac61711",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_j5ba63763bff456a8cdb99a61b58c5c2",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_j7399f81412b4097acf2a9714293541b",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "PROPERTY_TEMPLATE_Flow_CustomQuery.records is NULL",
+            "yesLabel": "Ok",
+            "alertMessage": "PROPERTY_TEMPLATE_Flow_CustomQuery.records is NULL",
+            "messageType": "constant",
+            "parentId": "_aac1a47b716e42cabab5daf86ac61711",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_ba5e85fda4944137853b6d67c4308652",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### ENTRATO IN IF e invoco loadFlowData\");\npropertyTemplates = PROPERTY_TEMPLATE_Flow_CustomQuery.records;\n\n// setting the boolean to true in order to give a different behaviour to the final \"saveStepComposition\" function\ngblSaveAfterEdit = true;",
+            "parentId": "_c65546689f594931a773a609f6d40c2b",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_FUNCTION__b2c9f4b670f44b938d9ef26228e5a33b",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "loadFlowData",
+            "display": "loadFlowData",
+            "inputparams": [{
+                "name": "flow_id",
+                "value": " gblFlowId"
+            }, {
+                "name": "stepsList",
+                "value": " stepsList"
+            }, {
+                "name": "stepSectionList",
+                "value": " stepSectionList"
+            }, {
+                "name": "previewSectionList",
+                "value": " previewSectionList"
+            }, {
+                "name": "nestedComponents",
+                "value": " nestedComponents"
+            }, {
+                "name": "componentsImages",
+                "value": " componentsImages"
+            }, {
+                "name": "propertyTemplates",
+                "value": " propertyTemplates"
+            }],
+            "parentId": "_c65546689f594931a773a609f6d40c2b",
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
         }, {
             "id": "_c445ec7cbdfd40be8cbeb57e4ecb3ead",
             "type": "ELSE_CONDITION",
@@ -513,9 +985,9 @@
             "id": "SHOW_ALERT_ce68c3a166674c9baddbc3a46100cb46",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "Components_CustomQuery.records output is empty",
+            "alertTitle": "Components_CustomQuery.records (stepSection) output is empty",
             "yesLabel": "Ok",
-            "alertMessage": "Components_CustomQuery.records output is empty.",
+            "alertMessage": "Components_CustomQuery.records (stepSection) output is empty.",
             "messageType": "constant",
             "parentId": "_c445ec7cbdfd40be8cbeb57e4ecb3ead",
             "callbackType": null,
@@ -525,25 +997,6 @@
             "alertMessagei18n": null,
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
-        }, {
-            "id": "INVOKE_FUNCTION__f717167854ad4696afeae0f7789baf3a",
-            "type": "INVOKE_FUNCTION",
-            "sequenceKUID": "loadFlowData",
-            "display": "loadFlowData",
-            "inputparams": [{
-                "name": "flow_id",
-                "value": " gblFlowId"
-            }, {
-                "name": "stepsList",
-                "value": "STEP_flow_CustomQueryRecords"
-            }, {
-                "name": "stepSectionList",
-                "value": "Components_CustomQuery.records"
-            }],
-            "parentId": "_ic236b77b3e34e38baa100bac7f39441",
-            "callbackType": null,
-            "disabled": null,
-            "source": "controller"
         }, {
             "id": "INVOKE_ASYNC_SERVICE_j40a0519bfd742058e7e24d78ceeff82",
             "type": "INVOKE_ASYNC_SERVICE",
@@ -784,6 +1237,54 @@
             "parentId": "IF_CONDITION_fca094ddfe15487bb1978abbcdd0feb3",
             "callbackType": null,
             "enableMappingEditor": true
+        }, {
+            "id": "_e6cffff7e10544fd8430bc9c9daf49db",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "STEP_create !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "STEP_create.opstatus !== 0"
+            }],
+            "parentId": "INVOKE_ASYNC_SERVICE_j40a0519bfd742058e7e24d78ceeff82",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_fb8c59e963944143b8cbf283f25b4426",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_ASYNC_SERVICE_j40a0519bfd742058e7e24d78ceeff82",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_ec1de0316a3a42caa90d5d04b4858e7c",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Step NOT created correctly.",
+            "yesLabel": "Ok",
+            "alertMessage": "Step NOT created correctly.",
+            "messageType": "constant",
+            "parentId": "_fb8c59e963944143b8cbf283f25b4426",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_jd62bee6fe3c4d5d928343d95cc529bb",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Step creato correttamente.\");",
+            "parentId": "_e6cffff7e10544fd8430bc9c9daf49db",
+            "callbackType": null
         }, {
             "id": "ELSE_CONDITION_f5b41034a0244dc481f2f1d339a50596",
             "type": "ELSE_CONDITION",

@@ -67,10 +67,11 @@ define({
       let props = selectedComp.rightData;
       voltmx.print("### selectedComp.leftData: " + selectedComp.leftData);
       voltmx.print("### selectedComp.leftData stringify: " + JSON.stringify(selectedComp.leftData) );
-      // let searchKey = selectedComp.leftData[0].lblComponentName + instance + (gblCurrentStepOrder).toString();
-      let searchKey = selectedComp.leftData[0].lblComponentName;
+      let searchKey = selectedComp.leftData[0].lblComponentName + "_" + instance + "_" + (gblCurrentStepOrder).toString();  // SCOMMENTATO
+      //let searchKey = selectedComp.leftData[0].lblComponentName;
       voltmx.print("### search: " + JSON.stringify(selectedComp.leftData[0].modalImgComponent) );
       let foundComponentConfig = Object.keys(this.modes).find(key => key.startsWith(searchKey));
+      debugger;
       if (foundComponentConfig) {
         props.forEach(item => {
           let propComp = null;
@@ -190,7 +191,7 @@ define({
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
     let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
 
-    if ( left_width > 48){
+    if ( left_width > 48 || gblEditingLeftSide){
       //vuol dire che il pannello di sinistra è aperto
       voltmx.print("### IF LEFT WIDTH");
       selectedComp.componentOrder = instance;
@@ -203,7 +204,7 @@ define({
       this.view.flxScrollLeft.forceLayout();
       this.showOrHideMoveCloneDelete(selectedComp);
     }
-    if ( right_width > 48){
+    if ( right_width > 48 || gblEditingRightSide){
       //vuol dire che il pannello di destra è aperto
       voltmx.print("### IF RIGHT WIDTH");
       voltmx.print("### COMPONENT ORDER: " + selectedComp.componentOrder);
@@ -252,7 +253,7 @@ define({
     let lastComp = null;
     let components = null;
     
-    if ( left_width > 48){
+    if ( left_width > 48 || gblEditingLeftSide ){
       components = this.view.flxScrollLeft.widgets();
       if (identify === null){
         // chiamata da editProperty
@@ -300,7 +301,7 @@ define({
         });
       }
     }
-    if ( right_width > 48){
+    if ( right_width > 48 || gblEditingRightSide){
       let correctScroll = this.findCurrentFlexScroll();  // finding the correct flex scroll to manage/update
       components = correctScroll.widgets();
       if (identify === null) {
@@ -395,7 +396,12 @@ define({
     voltmx.print("### SELECTED ITEM: " + JSON.stringify(selected_item));  // es. "RXC_TITLE_DESCRIPTION"
     voltmx.print("### SELECTED ITEM IMG: " + JSON.stringify(selected_item_img));  // es. "https://rxc.luxottica.com/rxc3/fe/images/components/preview/RXC_TITLE_DESCRIPTION.png"
     voltmx.print("### SELECTED ITEM MODAl IMG: " + JSON.stringify(selected_item_modal_img));  // es. "https://rxc.luxottica.com/rxc3/fe/images/components/modal/RXC_TITLE_DESCRIPTION.png"
-    
+
+    // se è uguale a zero, lo stiamo richiamando nel momento dell'aggiunta di un componente nello step, altrimenti lo stiamo chiamando nell'apertura (edit) di un flusso
+    let edit = false; 
+    if (rightSegmentData.length !== 0) {
+      edit = true;
+    }
 
     let index = 0;
     //     let modes = [];
@@ -407,11 +413,11 @@ define({
     let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
     
     // left side is open. we are putting the selected component in the left side. (preview Section)
-    if (left_width > 48){
+    if ( left_width > 48 || gblEditingLeftSide ){
       let components_inside_filtered = this.view.flxScrollLeft.widgets().filter(widget =>
                                                            Object.keys(widget).some(key => key.startsWith("component"))
                                                           );
-      let length = components_inside_filtered.length
+      let length = components_inside_filtered.length;
       if (length > 0){
         let lastComponent = components_inside_filtered[length - 1];
         let lastComponentKey = Object.keys(lastComponent).find(key => key.startsWith("component")); 
@@ -422,7 +428,7 @@ define({
     }
     
     // right side is open. we are putting the selected component in the right side. (step Section)
-    if (right_width > 48) {
+    if ( right_width > 48 || gblEditingRightSide) {
       if (gblCurrentStepOrder > 1){
         let right_widgets = this.view.flxRightSide.widgets();
         let targetWidget = right_widgets.find(widget => widget.id === "flxScrollRight" + gblCurrentStepOrder);
@@ -431,7 +437,7 @@ define({
           let components_inside_filtered = components_inside.filter(widget =>
                                                Object.keys(widget).some(key => key.startsWith("component"))
                                               );
-          let length = components_inside_filtered.length
+          let length = components_inside_filtered.length;
           if (length > 0){
             let lastComponent = components_inside_filtered[length - 1];
             let lastComponentKey = Object.keys(lastComponent).find(key => key.startsWith("component")); 
@@ -444,7 +450,7 @@ define({
         let components_inside_filtered = this.view.flxScrollRight.widgets().filter(widget =>
                                                               Object.keys(widget).some(key => key.startsWith("component"))
                                                              );
-        let length = components_inside_filtered.length
+        let length = components_inside_filtered.length;
         if (length > 0){
           let lastComponent = components_inside_filtered[length - 1];
           let lastComponentKey = Object.keys(lastComponent).find(key => key.startsWith("component")); 
@@ -485,7 +491,7 @@ define({
         continue;
       }
             
-      
+      // trasformo le iniziali in maiuscolo e aggiungo i due punti alla fine.
       let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + ": ";
       let properties = {lblPropertyName: capitalizedName, lblPropertyValue: ""}; 
 //       gblLastInsertedComponent = selected_item;
@@ -626,11 +632,16 @@ define({
         elem[list[i].id] = { "name": list[i].name, "mode": "textfield" };
         gblPropertyTemplatesIds[list[i].component_name].push(elem);
       }
+      
       propComp.propertyName = capitalizedName;
       propComp.propertyTemplateId = list[i].id;
       this.view.settingsSide.flxScrollSettingsContent.add(propComp);
       index +=1;
-      rightSegmentData.push(properties);  // popolating the RIGHT data of the component
+      
+      if (!edit) {
+         rightSegmentData.push(properties);  // popolating the RIGHT data of the component
+      }
+     
     }
     if (this.view.settingsSide.flxScrollSettingsContent.widgets().length > 0){
       this.view.settingsSide.txt.setVisibility(false);
@@ -646,8 +657,8 @@ define({
     voltmx.print("### leftSegmentData: " + leftSegmentData);
     voltmx.print("### leftSegmentData STRINGIFY: " + JSON.stringify(leftSegmentData) );
     
+    debugger;
     this.selectComponent(rightSegmentData, leftSegmentData, instance, nested, lastComponentWidth);
-	
   }, // end of function editProperty.
 
   
@@ -935,6 +946,10 @@ define({
     });
     //voltmx.application.dismissLoadingScreen();
   },   // end of function saveStepComposition
+  
+  
+  
+  
   
   
   // Callback of the COMPONENT_CREATE service, in which property instances and labels of the just created component instance are created
@@ -1231,11 +1246,11 @@ define({
     let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
     // initially I have to understand in which flex I am
     // if I am in the left side
-    if (left_width > 48) {
+    if (left_width > 48 || gblEditingLeftSide) {
       scroll = this.view.flxScrollLeft;
     }
     // if I am in the right side
-    if (right_width > 48){
+    if (right_width > 48 || gblEditingRightSide){
       if (gblCurrentStepOrder === 1){
         scroll = this.view.flxScrollRight;
       } else {
@@ -1527,11 +1542,115 @@ define({
   },    // end of function "deleteComponent".
   
   
-  
+  // this function process all the steps related to a section (eather left or right) based on the list given in input and the order
+  processSteps: function(listToProcess, order, componentsImages, propertyTemplates) {
+    
+    // Filtra e raggruppa i record per component_template_name + component_order
+    // dentro a componentDataDict ci sono tutti i componenti di uno step
+    let componentDataDict = listToProcess.reduce((acc, reference) => {
+      if (reference.step_order === order) {
+        const key = `${reference.component_template_name}_${reference.component_order}`;
+        if (!acc[key]) {
+          acc[key] = [];
+        }
+        acc[key].push({ [reference.property_template_name]: reference.property_value });
+      }
+      return acc;
+    }, {});
+    
+    // Estrazione delle chiavi (dei componenti) e ordinamento dei componenti in base al numero finale (es. "RXC_ATTRIBUTE_TILE_LIST_2")
+    let sortedKeys = Object.keys(componentDataDict).sort((a, b) => {
+      let numA = parseInt(a.split('_').pop(), 10);
+      let numB = parseInt(b.split('_').pop(), 10);
+      return numA - numB;
+    });
+
+    // Creazione di un nuovo oggetto ordinato
+    let sortedDict = {};
+    sortedKeys.forEach(key => {
+      sortedDict[key] = componentDataDict[key];
+    });
+    
+    // Raggruppa i records (delle immagini preview e modal) per component_name e component_order
+    let groupedComponentsImages = componentsImages.reduce((acc, record) => {
+      if (record.step_order === order) {
+        let key = `${record.component_name}_${record.component_order}`;
+        if (!acc[key]) {
+          acc[key] = [];
+        }
+        acc[key].push(record);
+      }
+      return acc;
+    }, {});
+    
+    
+    // Raggruppa i records (di property templates) per component_name e component_order
+    let groupedPropertyTemplates = propertyTemplates.reduce((acc, record) => {
+      if (record.step_order === order) {
+        let key = `${record.component_name}_${record.component_order}`;
+        if (!acc[key]) {
+          acc[key] = [];
+        }
+        // Crea un nuovo oggetto con solo i campi desiderati
+        let filteredRecord = Object.keys(record).reduce((filtered, field) => {
+          if (!['step_order', 'component_order'].includes(field)) {
+            filtered[field] = record[field];
+          }
+          return filtered;
+        }, {});
+        acc[key].push(filteredRecord);
+      }
+      return acc;
+    }, {});
+
+    debugger;
+
+    let previewImage;
+    let modalImage;
+    // Iterazione sull'oggetto e log della parte della chiave senza il numero finale
+    Object.entries(sortedDict).forEach(([key, value]) => {
+      let componentName = key.substring(0, key.lastIndexOf('_'));
+      
+      modalImage = groupedComponentsImages[key][0].modalImage;
+      previewImage = groupedComponentsImages[key][0].previewImage;
+      
+      let list = groupedPropertyTemplates[key];
+      
+      
+      let transformedValue = value.map(item => {
+        let [lblPropertyName, lblPropertyValue] = Object.entries(item)[0];
+        return { lblPropertyName, lblPropertyValue };
+      });
+      
+      transformedValue.forEach(item => {
+        let propertyName = item.lblPropertyName;
+        let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + ": ";
+        item.lblPropertyName = capitalizedName;
+      });
+      
+      debugger;
+      
+      this.editProperty(list, transformedValue, [], componentName, previewImage, modalImage);
+
+      debugger;
+    });
+    
+  }, // end of function processSteps.
   
   
   // this function laod the flow's data already existing (steps and components)
-  loadFlowData: function(flow_id, stepsList, stepSectionList){  // stepsList è il risultato di STEP_flow_CustomQuery.records
+  loadFlowData: function(flow_id, stepsList, stepSectionList, previewSectionList, nestedComponents, componentsImages, propertyTemplates){  // stepsList è il risultato di STEP_flow_CustomQuery.records
+    
+    //checking input parameters content
+    voltmx.print("### flow_id: " + flow_id);
+    voltmx.print("### stepsList: " + JSON.stringify(stepsList) );
+    voltmx.print("### stepSectionList: " + JSON.stringify(stepSectionList) );
+    voltmx.print("### previewSectionList: " + JSON.stringify(previewSectionList) );
+    voltmx.print("### nestedComponents: " + JSON.stringify(nestedComponents) );
+    voltmx.print("### componentsImages: " + JSON.stringify(componentsImages) );
+    voltmx.print("### propertyTemplates: " + JSON.stringify(propertyTemplates) );
+
+    
     
     // resetting all global variables
     // Simple
@@ -1551,20 +1670,17 @@ define({
     
     // setting the first step title
     this.view.lblStepTitleIntoStepComposition.text = stepsList[0].title;
-    voltmx.print("### SONO DOPO CALLBACK SERVIZIO");
-    // Filtra e raggruppa i record per component_template_name + component_order
-    let componentDataDict = stepSectionList.reduce((acc, reference) => {
-      if (reference.step_order === "1") {
-        const key = `${reference.component_template_name}_${reference.component_order}`;
-        if (!acc[key]) {
-          acc[key] = [];
-        }
-        acc[key].push({ [reference.property_template_name]: reference.property_value });
-      }
-      return acc;
-    }, {});
-    debugger;
+    gblIdOrderSteps[stepsList[0].id] = stepsList[0].order;
     
+    gblEditingLeftSide = true;
+    this.processSteps(previewSectionList,"1", componentsImages, propertyTemplates);
+    gblEditingLeftSide = false; // after we are done with the function "processSteps", we set the boolean to false again.
+    
+    gblEditingRightSide = true;
+
+    voltmx.print("### SONO DOPO CALLBACK SERVIZIO");
+    
+    this.processSteps(stepSectionList,"1", componentsImages, propertyTemplates);
     
     stepsList.slice(1).forEach(record => {
       // retrieving the steps in order to know the correct position of the steps to insert (in the scroll flxSteps)
@@ -1599,20 +1715,12 @@ define({
       voltmx.print("### CURRENT STEP ORDER in forEach: " + JSON.stringify(gblCurrentStepOrder));
       debugger;
       
-      // Filtra e raggruppa i record per component_template_name + component_order
-      let componentDataDict = stepSectionList.reduce((acc, reference) => {
-        if (reference.step_order === record.order) {
-          const key = `${reference.component_template_name}_${reference.component_order}`;
-          if (!acc[key]) {
-            acc[key] = [];
-          }
-          acc[key].push({ [reference.property_template_name]: reference.property_value });
-        }
-        return acc;
-      }, {});
+      this.processSteps(stepSectionList, record.order, componentsImages, propertyTemplates);
       
     }); // end of forEach
 
+    gblEditingRightSide = false;
+    
 
   }
   

@@ -25,6 +25,201 @@
             "showProgressIndicator": "true",
             "text": "Saving step..."
         }, {
+            "id": "_hc299d94e34d4ce0a72e361ea8b79059",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "gblSaveAfterEdit",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "true"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "INVOKE_SERVICE_id9b9408c77347e3a57844598abbeec8",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_a499cfb03c204701836001cfdee4a994": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a499cfb03c204701836001cfdee4a994",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "COMPONENT_INSTANCE_Delete_CustomQuery",
+                            "operationid": "132915"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_a499cfb03c204701836001cfdee4a994"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "COMPONENT_INSTANCE_Delete_CustomQuery",
+                "operationid": "132915"
+            },
+            "parentId": "_hc299d94e34d4ce0a72e361ea8b79059",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_cab96a148f254c13b09afa6603051bca",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "COMPONENT_INSTANCE_Delete_CustomQuery.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_id9b9408c77347e3a57844598abbeec8",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_ca2b9ef3c7484e22a29da4b34a8019f1",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_id9b9408c77347e3a57844598abbeec8",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_f2a2b43015a54b0ebefea6696cabcc3e",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "COMPONENT_INSTANCE_Delete_CustomQuery.opstatus NOT 0",
+            "yesLabel": "Ok",
+            "alertMessage": "COMPONENT_INSTANCE_Delete_CustomQuery.opstatus NOT 0",
+            "messageType": "constant",
+            "parentId": "_ca2b9ef3c7484e22a29da4b34a8019f1",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_b65191a9da7a4e10957e8d09fd2cc498",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### COMPONENT_INSTANCE_Delete_CustomQuery andata a buon fine. Invoco LABEL_Delete_WithFlow_CustomQuery\");",
+            "parentId": "_cab96a148f254c13b09afa6603051bca",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_af74a5c80b2a423a913fbda04d0c0a07",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_a61168d606fb4ab2988b127c26f453f9": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a61168d606fb4ab2988b127c26f453f9",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_Delete_WithFlow_CustomQuery",
+                            "operationid": "132916"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_a61168d606fb4ab2988b127c26f453f9"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABEL_Delete_WithFlow_CustomQuery",
+                "operationid": "132916"
+            },
+            "parentId": "_cab96a148f254c13b09afa6603051bca",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_ab001465cfd447b3a1ceb3407eea68df",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABEL_Delete_WithFlow_CustomQuery.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_af74a5c80b2a423a913fbda04d0c0a07",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_fa36c62a0d6b4ad19c9a62d080d3fd80",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_af74a5c80b2a423a913fbda04d0c0a07",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_a6009eb152b2477cb5ae2560c9ad865f",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "LABEL_Delete_WithFlow_CustomQuery.opstatus NOT 0",
+            "yesLabel": "Ok",
+            "alertMessage": "LABEL_Delete_WithFlow_CustomQuery.opstatus NOT 0",
+            "messageType": "constant",
+            "parentId": "_fa36c62a0d6b4ad19c9a62d080d3fd80",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_e292c34dd3da46f28c981f79139beca0",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### LABEL_Delete_WithFlow_CustomQuery andata a buon fine.\");\ndebugger;",
+            "parentId": "_ab001465cfd447b3a1ceb3407eea68df",
+            "callbackType": null
+        }, {
             "id": "INVOKE_FUNCTION__e976fc93e6ab4937bfdae5cc2361667c",
             "type": "INVOKE_FUNCTION",
             "sequenceKUID": "saveStepComposition",
