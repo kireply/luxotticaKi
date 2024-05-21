@@ -38,6 +38,39 @@
             "callbackType": null,
             "criteria": "all"
         }, {
+            "id": "_e52221cbe82a4aedb44a5bc3442d8743",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "INVOKE_FUNCTION__e976fc93e6ab4937bfdae5cc2361667c",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "saveStepComposition",
+            "display": "saveStepComposition",
+            "inputparams": [],
+            "parentId": "_e52221cbe82a4aedb44a5bc3442d8743",
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }, {
+            "id": "LOADING_INDICATOR_bf7d44949b3041a58fb554645ccbcd76",
+            "selectedOption": "dismiss",
+            "parentId": "_e52221cbe82a4aedb44a5bc3442d8743",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "INVOKE_SERVICE_id9b9408c77347e3a57844598abbeec8",
             "type": "INVOKE_ASYNC_SERVICE",
             "inputparams": null,
@@ -45,9 +78,9 @@
             "httpconfigs": null,
             "isasynchronous": true,
             "mappings": {
-                "ME_Mapping_a499cfb03c204701836001cfdee4a994": {
+                "ME_Mapping_ef9f5e7576f54fe3ae9c47d2c7b6ab3d": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_a499cfb03c204701836001cfdee4a994",
+                    "id": "ME_Mapping_ef9f5e7576f54fe3ae9c47d2c7b6ab3d",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -66,29 +99,42 @@
                             "servicename": "mariaDB",
                             "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                             "type": "integration",
-                            "operationname": "COMPONENT_INSTANCE_Delete_CustomQuery",
+                            "operationname": "COMPONENT_INSTANCE_Flow_CustomQuery",
                             "operationid": "132915"
                         }
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_a499cfb03c204701836001cfdee4a994"],
+            "mappingsOrder": ["ME_Mapping_ef9f5e7576f54fe3ae9c47d2c7b6ab3d"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                 "type": "integration",
-                "operationname": "COMPONENT_INSTANCE_Delete_CustomQuery",
+                "operationname": "COMPONENT_INSTANCE_Flow_CustomQuery",
                 "operationid": "132915"
             },
             "parentId": "_hc299d94e34d4ce0a72e361ea8b79059",
             "callbackType": null,
             "enableMappingEditor": true
         }, {
+            "id": "LOADING_INDICATOR_he9b290fb5784797aa448e8cfbc232cd",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_SERVICE_id9b9408c77347e3a57844598abbeec8",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "_cab96a148f254c13b09afa6603051bca",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
-                "leftValue": "COMPONENT_INSTANCE_Delete_CustomQuery.opstatus === 0"
+                "leftValue": "COMPONENT_INSTANCE_Flow_CustomQuery.records !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "COMPONENT_INSTANCE_Flow_CustomQuery.opstatus === 0"
             }],
             "parentId": "INVOKE_SERVICE_id9b9408c77347e3a57844598abbeec8",
             "callbackType": "Callback",
@@ -110,9 +156,9 @@
             "id": "SHOW_ALERT_f2a2b43015a54b0ebefea6696cabcc3e",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "COMPONENT_INSTANCE_Delete_CustomQuery.opstatus NOT 0",
+            "alertTitle": "COMPONENT_INSTANCE_Flow_CustomQuery.opstatus NOT 0",
             "yesLabel": "Ok",
-            "alertMessage": "COMPONENT_INSTANCE_Delete_CustomQuery.opstatus NOT 0",
+            "alertMessage": "COMPONENT_INSTANCE_Flow_CustomQuery.opstatus NOT 0",
             "messageType": "constant",
             "parentId": "_ca2b9ef3c7484e22a29da4b34a8019f1",
             "callbackType": null,
@@ -125,7 +171,7 @@
         }, {
             "id": "ADD_SNIPPET_b65191a9da7a4e10957e8d09fd2cc498",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### COMPONENT_INSTANCE_Delete_CustomQuery andata a buon fine. Invoco LABEL_Delete_WithFlow_CustomQuery\");",
+            "codeSnippet": "voltmx.print(\"### COMPONENT_INSTANCE_Flow_CustomQuery andata a buon fine. Invocherò successivamente LABEL_Flow_CustomQuery\");\n\n// forEach cicle in order to delete all the records in COMPONENT_INSTANCE, given its id.\nCOMPONENT_INSTANCE_Flow_CustomQuery.records.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"COMPONENT_INSTANCE_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n",
             "parentId": "_cab96a148f254c13b09afa6603051bca",
             "callbackType": null
         }, {
@@ -136,9 +182,9 @@
             "httpconfigs": null,
             "isasynchronous": true,
             "mappings": {
-                "ME_Mapping_a61168d606fb4ab2988b127c26f453f9": {
+                "ME_Mapping_a271924d7f7a4bb181d67940d45c4e4d": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_a61168d606fb4ab2988b127c26f453f9",
+                    "id": "ME_Mapping_a271924d7f7a4bb181d67940d45c4e4d",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -157,18 +203,18 @@
                             "servicename": "mariaDB",
                             "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                             "type": "integration",
-                            "operationname": "LABEL_Delete_WithFlow_CustomQuery",
+                            "operationname": "LABEL_Flow_CustomQuery",
                             "operationid": "132916"
                         }
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_a61168d606fb4ab2988b127c26f453f9"],
+            "mappingsOrder": ["ME_Mapping_a271924d7f7a4bb181d67940d45c4e4d"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                 "type": "integration",
-                "operationname": "LABEL_Delete_WithFlow_CustomQuery",
+                "operationname": "LABEL_Flow_CustomQuery",
                 "operationid": "132916"
             },
             "parentId": "_cab96a148f254c13b09afa6603051bca",
@@ -179,7 +225,10 @@
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
-                "leftValue": "LABEL_Delete_WithFlow_CustomQuery.opstatus === 0"
+                "leftValue": "LABEL_Flow_CustomQuery.records !== 0"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "LABEL_Flow_CustomQuery.opstatus === 0"
             }],
             "parentId": "INVOKE_SERVICE_af74a5c80b2a423a913fbda04d0c0a07",
             "callbackType": "Callback",
@@ -201,9 +250,9 @@
             "id": "SHOW_ALERT_a6009eb152b2477cb5ae2560c9ad865f",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "LABEL_Delete_WithFlow_CustomQuery.opstatus NOT 0",
+            "alertTitle": "LABEL_Flow_CustomQuery.opstatus NOT 0",
             "yesLabel": "Ok",
-            "alertMessage": "LABEL_Delete_WithFlow_CustomQuery.opstatus NOT 0",
+            "alertMessage": "LABEL_Flow_CustomQuery.opstatus NOT 0",
             "messageType": "constant",
             "parentId": "_fa36c62a0d6b4ad19c9a62d080d3fd80",
             "callbackType": null,
@@ -216,55 +265,19 @@
         }, {
             "id": "ADD_SNIPPET_e292c34dd3da46f28c981f79139beca0",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### LABEL_Delete_WithFlow_CustomQuery andata a buon fine.\");\ndebugger;",
+            "codeSnippet": "voltmx.print(\"### LABEL_Flow_CustomQuery andata a buon fine. Invocherò successivamente la funzione saveStepComposition\");\n\n// forEach cicle in order to delete all the records in LABEL, given its id.\nLABEL_Flow_CustomQuery.records.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n\ndebugger;",
             "parentId": "_ab001465cfd447b3a1ceb3407eea68df",
             "callbackType": null
         }, {
-            "id": "INVOKE_FUNCTION__e976fc93e6ab4937bfdae5cc2361667c",
+            "id": "INVOKE_FUNCTION__ha3c2e45d5fe4329902e1b0d7426d648",
             "type": "INVOKE_FUNCTION",
             "sequenceKUID": "saveStepComposition",
             "display": "saveStepComposition",
             "inputparams": [],
+            "parentId": "_ab001465cfd447b3a1ceb3407eea68df",
+            "callbackType": null,
             "disabled": null,
             "source": "controller"
-        }, {
-            "id": "LOADING_INDICATOR_bf7d44949b3041a58fb554645ccbcd76",
-            "selectedOption": "dismiss",
-            "parentId": null,
-            "type": "LOADING_INDICATOR",
-            "callbackType": null,
-            "skin": "none",
-            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
-            "isBlocked": "true",
-            "showProgressIndicator": "true"
-        }, {
-            "id": "_a3ec7710328842a291d87da3e84d93a6",
-            "type": "IF_CONDITION",
-            "conditions": [{
-                "leftValueType": "varvalue",
-                "leftValue": "gblFail",
-                "operator": "===",
-                "rightValueType": "value",
-                "rightValue": "false"
-            }],
-            "criteria": "all"
-        }, {
-            "id": "LOADING_INDICATOR_c0f17226a92f4f219cfd60b7cf8339aa",
-            "selectedOption": "dismiss",
-            "parentId": "_a3ec7710328842a291d87da3e84d93a6",
-            "type": "LOADING_INDICATOR",
-            "callbackType": null,
-            "skin": "none",
-            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
-            "isBlocked": "true",
-            "showProgressIndicator": "true"
-        }, {
-            "id": "ADD_SNIPPET_b96aae212ee54385a2e4f48a5f0ed06a",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.ui.Alert({\n  \"alertType\": constants.ALERT_TYPE_CONFIRMATION,\n  \"alertTitle\": \"Success\",\n  \"yesLabel\": \"Ok\",\n  \"message\": \"Save successfull.\",\n  \"alertHandler\": this.SHOW_ALERT_Success_Callback\n}, {\n  \"iconPosition\": constants.ALERT_ICON_POSITION_LEFT\n});",
-            "parentId": "_a3ec7710328842a291d87da3e84d93a6",
-            "callbackType": null,
-            "disabled": true
         }]
     }
 }
