@@ -938,7 +938,69 @@
             "parentId": "_c65546689f594931a773a609f6d40c2b",
             "callbackType": null
         }, {
-            "id": "INVOKE_FUNCTION__b2c9f4b670f44b938d9ef26228e5a33b",
+            "id": "INVOKE_SERVICE_c2050c08d785452d981305402f3de536",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_cac68d5722c84eaebc98cac468f0b294": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cac68d5722c84eaebc98cac468f0b294",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_Flow_CustomQuery",
+                            "operationid": "132916"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_cac68d5722c84eaebc98cac468f0b294"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABEL_Flow_CustomQuery",
+                "operationid": "132916"
+            },
+            "parentId": "_c65546689f594931a773a609f6d40c2b",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_e61ed4d2fd7a428abaca47703ff4604f",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABEL_Flow_CustomQuery.records !== null"
+            }],
+            "parentId": "INVOKE_SERVICE_c2050c08d785452d981305402f3de536",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_f661aa115f6248d682d9b31a5f32b9c5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"LABEL_Flow_CustomQuery eseguito correttamente. Invocherò loadFlowData\");\n\ngblFetchedLabels = LABEL_Flow_CustomQuery.records;",
+            "parentId": "_e61ed4d2fd7a428abaca47703ff4604f",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_FUNCTION__cb814ab0fde04285bec247fd4091dad0",
             "type": "INVOKE_FUNCTION",
             "sequenceKUID": "loadFlowData",
             "display": "loadFlowData",
@@ -963,8 +1025,11 @@
             }, {
                 "name": "propertyTemplates",
                 "value": " propertyTemplates"
+            }, {
+                "name": "gblFetchedLabels",
+                "value": ""
             }],
-            "parentId": "_c65546689f594931a773a609f6d40c2b",
+            "parentId": "_e61ed4d2fd7a428abaca47703ff4604f",
             "callbackType": null,
             "disabled": null,
             "source": "controller"

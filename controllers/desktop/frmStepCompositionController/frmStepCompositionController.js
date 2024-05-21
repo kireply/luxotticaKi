@@ -101,9 +101,8 @@ define({
               centerX: '50%'
             }, {}, {});
             //           gblFlowId = 128;
-            let label_key = item.lblPropertyValue;
-            propComp.propertyValue = label_key;
-            propComp.propertyLabelKey = label_key;
+            propComp.propertyValue = item.lblPropertyValue;
+            propComp.propertyLabelKey = found.key;
             propComp.txtPropertyValueTextField.setEnabled(true); // QUI
             
             propComp.onEndEditing = () => {
@@ -552,6 +551,7 @@ define({
         let elem = {};
         elem[list[i].id] = { "name": list[i].name, "mode": "dropdown" };
         gblPropertyTemplatesIds[list[i].component_name].push(elem);
+        
       } else if (list[i].mode === "label") {
         propComp = new ki.luxottica.editPropertyValuewithTextField({
           id: `prop${new Date().getTime()}`,
@@ -576,23 +576,32 @@ define({
           voltmx.print("### stepTitle: " + stepTitle);
           voltmx.print("### label_key: " + label_key);
         }
-             
+        
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
-        propComp.propertyValue = label_key;
+        if (gblFetchedLabels.length > 0) {
+          let record = gblFetchedLabels.find(record => record.id === label_key);
+          propComp.propertyValue = record["en_GB"];
+        } else {
+          propComp.propertyValue = label_key;
+          properties["lblPropertyValue"] = label_key;
+        }
+        
+        //propComp.propertyValue = label_key;
         propComp.propertyLabelKey = label_key;
         propComp.txtPropertyValueTextField.setEnabled(true); // QUI
-        properties["lblPropertyValue"] = label_key;
+        //properties["lblPropertyValue"] = label_key;
         
         propComp.onEndEditing = () => {
           this.onEndEditingCallback(propComp, null, false, false);
         };
         
-		this.modes[compKey].push({"name": capitalizedName, "mode": "label"});
+		this.modes[compKey].push({"name": capitalizedName, "mode": "label", "key": label_key});
         if (!gblPropertyTemplatesIds[list[i].component_name]) {
           gblPropertyTemplatesIds[list[i].component_name] = [];
         }
         let elem = {};
-        elem[list[i].id] = { "name": list[i].name, "mode": "label" , "default": list[i].default};
+        elem[list[i].id] = { "name": list[i].name, "mode": "label" , "default": list[i].default, "key": label_key};
+        
         gblPropertyTemplatesIds[list[i].component_name].push(elem);
       } else if (list[i].mode === "switch"){
         propComp = new ki.luxottica.editPropertyValuewithSwitch({
@@ -737,16 +746,60 @@ define({
             });
             let prop_id_left = Object.keys(elementoTrovato_left);
             if (elementoTrovato_left[prop_id_left[0]].mode === "label"){
-              let label = {
+          /*    let label = {
                 id: prop_left.lblPropertyValue,
                 flow_id: gblFlowId, 
                 en_GB: elementoTrovato_left[prop_id_left[0]].default
               };
+              */
+              
+              
+
+              let translations = {};
+              // we have the ids and all translation different from english GB
+              if (gblFetchedLabels.length > 0) {
+                let result = gblFetchedLabels.reduce((acc, record) => {
+                  let filteredRecord = { id: record.id }; // Inizia con "id"
+                  for (let key in record) {
+                    if (key !== 'flow_id' && key !== 'en_GB' && key !== 'id') {
+                      filteredRecord[key] = record[key];
+                    }
+                  }
+                  acc.push(filteredRecord);
+                  return acc;
+                }, []);
+
+                let record = result.find(record => record.id === elementoTrovato_right[prop_id_right[0]].key);
+
+                if (record) {
+                  for (let key in record) {
+                    if (key !== 'id') {
+                      translations[key] = record[key];
+                    }
+                  }
+                }
+
+              }
+
+              let label = {
+                id: elementoTrovato_left[prop_id_left[0]].key,
+                flow_id: gblFlowId, 
+                en_GB: prop_left.lblPropertyValue === elementoTrovato_left[prop_id_left[0]].key ? elementoTrovato_left[prop_id_left[0]].default : prop_left.lblPropertyValue
+              };
+
+              if (Object.keys(translations).length > 0) {
+                // Concatenare translations con label_right
+                Object.assign(label, translations);  
+              }
+              
+              
+             
+
               voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, label, 
                                                                                                (response) => {
                 voltmx.print("### Service response: " + JSON.stringify(response));
-                property_instance_left["value"] = prop_left.lblPropertyValue;
-                property_instance_left["label_id"] = prop_left.lblPropertyValue;
+                property_instance_left["value"] = response.LABEL[0].en_GB; //prop_left.lblPropertyValue;
+                property_instance_left["label_id"] = response.LABEL[0].id; //prop_left.lblPropertyValue
                 property_instance_left["property_template_id"] = prop_id_left[0];
                 voltmx.print("### PROP LEFT: " + JSON.stringify(property_instance_left));
                 voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_left,
@@ -978,16 +1031,56 @@ define({
       let prop_id_right = Object.keys(elementoTrovato_right);
       if (elementoTrovato_right[prop_id_right[0]].mode === "label"){
       //  gblFlowId = 338  TO BE COMMENTED
+       /*  let label_right = {
+           id: prop_right.lblPropertyValue,
+           flow_id: gblFlowId, 
+           en_GB: elementoTrovato_right[prop_id_right[0]].default
+         };
+        */
+        
+        let translations = {};
+        // we have the ids and all translation different from english GB
+        if (gblFetchedLabels.length > 0) {
+          let result = gblFetchedLabels.reduce((acc, record) => {
+            let filteredRecord = { id: record.id }; // Inizia con "id"
+            for (let key in record) {
+              if (key !== 'flow_id' && key !== 'en_GB' && key !== 'id') {
+                filteredRecord[key] = record[key];
+              }
+            }
+            acc.push(filteredRecord);
+            return acc;
+          }, []);
+          
+          let record = result.find(record => record.id === elementoTrovato_right[prop_id_right[0]].key);
+
+          if (record) {
+            for (let key in record) {
+              if (key !== 'id') {
+                translations[key] = record[key];
+              }
+            }
+          }
+
+        }
+        
         let label_right = {
-          id: prop_right.lblPropertyValue,
+          id: elementoTrovato_right[prop_id_right[0]].key,
           flow_id: gblFlowId, 
-          en_GB: elementoTrovato_right[prop_id_right[0]].default
+          en_GB: prop_right.lblPropertyValue === elementoTrovato_right[prop_id_right[0]].key ? elementoTrovato_right[prop_id_right[0]].default : prop_right.lblPropertyValue
         };
+        
+        if (Object.keys(translations).length > 0) {
+          // Concatenare translations con label_right
+          Object.assign(label_right, translations);  
+        }
+        
+        
         voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, label_right, 
                                                                                          (response) => {
           voltmx.print("### Service response: " + JSON.stringify(response));
-          property_instance_right["label_id"] = prop_right.lblPropertyValue;
-          property_instance_right["value"] = prop_right.lblPropertyValue;
+          property_instance_right["label_id"] = response.LABEL[0].en_GB;  // prop_right.lblPropertyValue;
+          property_instance_right["value"] = response.LABEL[0].id;  // prop_right.lblPropertyValue;
           property_instance_right["property_template_id"] = prop_id_right[0];
           voltmx.print("### PROP RIGHT: " + JSON.stringify(property_instance_right));
           voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_right,
