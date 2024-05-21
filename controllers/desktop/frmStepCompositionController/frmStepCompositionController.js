@@ -32,10 +32,12 @@ define({
     }, {}, {}); 
     //       voltmx.print("### BUILDED FLEX");
     //const tile = new com.hcl.demo.uifactory.Tile({
+    let insertingNested = (this.view.flxNestedBlur.isVisible || gblIsNestedInsideEdit);
+    
     const selectedComp = new ki.luxottica.selectedComponentwithContract({
       id: `component${new Date().getTime()}`,
-      width: (!this.view.flxNestedBlur.isVisible ? '100%' : `${parseInt(lastComponentWidth, 10) - 10}%`), // if true, user is selecting a nested
-      height: (!this.view.flxNestedBlur.isVisible ? '100%' : `${parseInt(lastComponentWidth, 10) - 10}%`) // if true, user is selecting a nested
+      width: (!insertingNested ? '100%' : `${parseInt(lastComponentWidth, 10) - 10}%`), // if true, user is selecting a nested OR loading function is inserting a nested
+      height: (!insertingNested ? '100%' : `${parseInt(lastComponentWidth, 10) - 10}%`) // if true, user is selecting a nested OR loading function is inserting a nested
     }, {}, {});
     
     
@@ -71,7 +73,7 @@ define({
       //let searchKey = selectedComp.leftData[0].lblComponentName;
       voltmx.print("### search: " + JSON.stringify(selectedComp.leftData[0].modalImgComponent) );
       let foundComponentConfig = Object.keys(this.modes).find(key => key.startsWith(searchKey));
-      debugger;
+      //debugger;
       if (foundComponentConfig) {
         props.forEach(item => {
           let propComp = null;
@@ -225,6 +227,12 @@ define({
         this.view.flxScrollRight.forceLayout();
       }
       selectedComp.componentOrder = instance;
+      
+      //
+      if (gblEditingLeftSide || gblEditingRightSide) {
+        selectedComp["lblComponentId"].text = gblComponentId;
+      }
+      
       this.showOrHideMoveCloneDelete(selectedComp);
     }
     
@@ -482,12 +490,13 @@ define({
      // console.log(list[i]);
 
       let propertyName = list[i].name;
+      debugger;
       if(propertyName === "attribute") { // nestedComponents (or we could put configurable)
         nested = true;
         this.modes[compKey].push({"nestedComponents": [] });
       }
       
-      if(((propertyName === "valueDependency") || (propertyName === "attributeDependency")) && !this.view.flxNestedBlur.isVisible){
+      if(((propertyName === "valueDependency") || (propertyName === "attributeDependency")) && (!(this.view.flxNestedBlur.isVisible || gblIsNestedInsideEdit))){ //da aggiungere OR 
         continue;
       }
             
@@ -612,7 +621,7 @@ define({
           top: '2%',
           centerX: '50%'
         }, {}, {});
-        if ((propertyName === "attributeDependency") && (this.view.flxNestedBlur.isVisible)){ //is the attributeDependency property of the nested
+        if ((propertyName === "attributeDependency") && (this.view.flxNestedBlur.isVisible || gblIsNestedInsideEdit)){ //is the attributeDependency property of the nested
           let obj = this.father.rightData.find(item => item.lblPropertyName === "Attribute: ");
           let value = obj ? obj.lblPropertyValue : null;
           propComp.propertyValue = value;
@@ -657,7 +666,7 @@ define({
     voltmx.print("### leftSegmentData: " + leftSegmentData);
     voltmx.print("### leftSegmentData STRINGIFY: " + JSON.stringify(leftSegmentData) );
     
-    debugger;
+    //debugger;
     this.selectComponent(rightSegmentData, leftSegmentData, instance, nested, lastComponentWidth);
   }, // end of function editProperty.
 
@@ -1067,7 +1076,6 @@ define({
     box.stepTitle = title;
     
     box.onClickTeaser = () => {
-      debugger;
       let steps_widgets = this.view.flxSteps.widgets();
       let flxScrolls = this.view.flxRightSide.widgets();
       let current_id = box.id;   // ex. "boxStep3"
@@ -1543,13 +1551,13 @@ define({
   
   
   // this function process all the steps related to a section (eather left or right) based on the list given in input and the order
-  processSteps: function(listToProcess, order, componentsImages, propertyTemplates) {
+  processSteps: function(listToProcess, order, componentsImages, propertyTemplates, nestedComponents) {
     
     // Filtra e raggruppa i record per component_template_name + component_order
     // dentro a componentDataDict ci sono tutti i componenti di uno step
     let componentDataDict = listToProcess.reduce((acc, reference) => {
       if (reference.step_order === order) {
-        const key = `${reference.component_template_name}_${reference.component_order}`;
+        const key = `${reference.component_template_name}_${reference.component_id}_${reference.component_order}`;
         if (!acc[key]) {
           acc[key] = [];
         }
@@ -1557,12 +1565,12 @@ define({
       }
       return acc;
     }, {});
-    
+
     // Estrazione delle chiavi (dei componenti) e ordinamento dei componenti in base al numero finale (es. "RXC_ATTRIBUTE_TILE_LIST_2")
     let sortedKeys = Object.keys(componentDataDict).sort((a, b) => {
-      let numA = parseInt(a.split('_').pop(), 10);
-      let numB = parseInt(b.split('_').pop(), 10);
-      return numA - numB;
+      let orderA = parseInt(a.split('_').slice(-2)[1], 10); // Estrae il penultimo elemento come order
+      let orderB = parseInt(b.split('_').slice(-2)[1], 10); // Estrae il penultimo elemento come order
+      return orderA - orderB;
     });
 
     // Creazione di un nuovo oggetto ordinato
@@ -1583,7 +1591,7 @@ define({
       return acc;
     }, {});
     
-    
+    debugger;
     // Raggruppa i records (di property templates) per component_name e component_order
     let groupedPropertyTemplates = propertyTemplates.reduce((acc, record) => {
       if (record.step_order === order) {
@@ -1603,22 +1611,44 @@ define({
       return acc;
     }, {});
 
-    debugger;
+
+    // lista di dizionari dove la chiave è il padre e il valore è il figlio
+    let parentChildMap = nestedComponents.reduce((acc, item) => {
+      acc[item.component_instance_father_id] = item.component_instance_id;
+      return acc;
+    }, {});
+
+    //debugger;
 
     let previewImage;
     let modalImage;
-    // Iterazione sull'oggetto e log della parte della chiave senza il numero finale
+    
+    // Iterazione sull'oggetto e log della parte della chiave senza il numero finale.
+    // forEach che effettivamente processa i componenti.
     Object.entries(sortedDict).forEach(([key, value]) => {
-      let componentName = key.substring(0, key.lastIndexOf('_'));
+      //let componentName = key.substring(0, key.lastIndexOf('_'));
+      let componentName = key.split('_').slice(0, -2).join('_');
+      let componentId = key.split('_').slice(-2, -1)[0];
+      gblComponentId = componentId;
       
-      modalImage = groupedComponentsImages[key][0].modalImage;
-      previewImage = groupedComponentsImages[key][0].previewImage;
+      // Dividi la chiave in parti
+      let keyParts = key.split('_');
+      // Rimuovi solo l'id e conserva il nome del componente e l'ordine
+      let componentKey = keyParts.slice(0, -2).concat(keyParts.slice(-1)).join('_');
+      //debugger;
       
-      let list = groupedPropertyTemplates[key];
       
+      modalImage = groupedComponentsImages[componentKey][0].modalImage;
+      previewImage = groupedComponentsImages[componentKey][0].previewImage;
+      
+      let list = groupedPropertyTemplates[componentKey];
       
       let transformedValue = value.map(item => {
         let [lblPropertyName, lblPropertyValue] = Object.entries(item)[0];
+        // Controlla se il valore di una chiave è undefined e assegna una stringa vuota se lo è
+        if (lblPropertyValue === undefined) {
+          lblPropertyValue = "";
+        }
         return { lblPropertyName, lblPropertyValue };
       });
       
@@ -1628,14 +1658,48 @@ define({
         item.lblPropertyName = capitalizedName;
       });
       
-      debugger;
+      // Controlla se l'id è presente tra i valori dell'oggetto
+      let values = Object.values(parentChildMap); // values contiene gli id dei figli (in dizionario).
+      let isPresent = values.includes(componentId.toString());  // il component che stiamo processando è un figlio (innestato)
+      
+      if (isPresent) {
+        //debugger;
+        gblIsNestedInsideEdit = true;
+        
+        let scroll = this.findCurrentFlexScroll();
+        let widgets = scroll.widgets();
+        widgets.forEach(widget => {
+          
+          let componentKey = Object.keys(widget).find(key => key.startsWith("component"));
+          // Trova la chiave associata al valore specificato
+          //let parentId = Object.entries(parentChildMap).find(([key, val]) => val === componentId)?.[0];
+          let entry = Object.entries(parentChildMap).find(([key, val]) => val === componentId);
+          let parentId;
+          if (entry) {
+            parentId = entry[0];
+          } else {
+            parentId = undefined; // o qualsiasi altro valore predefinito che desiderato
+          }
+          
+          if (widget[componentKey]["lblComponentId"].text === parentId) {
+            gblFatherNest = widget[componentKey].leftData[0].lblComponentName + "_" + widget[componentKey].componentOrder + "_" + gblCurrentStepOrder;
+            this.father = widget[componentKey];
+          }
+        });
+        
+      }
+      //debugger;
       
       this.editProperty(list, transformedValue, [], componentName, previewImage, modalImage);
-
-      debugger;
+      
+      //probabilmente dopo aver richiamato editProperty, risetta la variabile gblIsNestedInsideEdit a false.
+      gblIsNestedInsideEdit = false;
     });
     
   }, // end of function processSteps.
+  
+  
+  
   
   
   // this function laod the flow's data already existing (steps and components)
@@ -1673,14 +1737,16 @@ define({
     gblIdOrderSteps[stepsList[0].id] = stepsList[0].order;
     
     gblEditingLeftSide = true;
-    this.processSteps(previewSectionList,"1", componentsImages, propertyTemplates);
+    //inside left
+    this.processSteps(previewSectionList,"1", componentsImages, propertyTemplates, nestedComponents);
     gblEditingLeftSide = false; // after we are done with the function "processSteps", we set the boolean to false again.
     
     gblEditingRightSide = true;
 
     voltmx.print("### SONO DOPO CALLBACK SERVIZIO");
     
-    this.processSteps(stepSectionList,"1", componentsImages, propertyTemplates);
+    // inside right
+    this.processSteps(stepSectionList,"1", componentsImages, propertyTemplates, nestedComponents);
     
     stepsList.slice(1).forEach(record => {
       // retrieving the steps in order to know the correct position of the steps to insert (in the scroll flxSteps)
@@ -1713,9 +1779,8 @@ define({
       gblIdOrderSteps[record.id] = record.order;
       this.addNewStep(left_position, record.title);
       voltmx.print("### CURRENT STEP ORDER in forEach: " + JSON.stringify(gblCurrentStepOrder));
-      debugger;
       
-      this.processSteps(stepSectionList, record.order, componentsImages, propertyTemplates);
+      this.processSteps(stepSectionList, record.order, componentsImages, propertyTemplates, nestedComponents);
       
     }); // end of forEach
 
