@@ -38,6 +38,12 @@
             "callbackType": null,
             "criteria": "all"
         }, {
+            "id": "ADD_SNIPPET_ea9a5ce4e5484868af748a11b196da4a",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### entrato in IF, INVOCO COMPONENT_INSTANCE_Flow_CustomQuery\");",
+            "parentId": "_hc299d94e34d4ce0a72e361ea8b79059",
+            "callbackType": null
+        }, {
             "id": "_e52221cbe82a4aedb44a5bc3442d8743",
             "type": "ELSE_CONDITION",
             "conditions": [{
@@ -126,6 +132,12 @@
             "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
             "isBlocked": "true",
             "showProgressIndicator": "true"
+        }, {
+            "id": "ADD_SNIPPET_f14a744cb03543649bc49ec76e9b46f0",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### COMPONENT_INSTANCE_Flow_CustomQuery.records: \" + JSON.stringify(COMPONENT_INSTANCE_Flow_CustomQuery.records) );",
+            "parentId": "INVOKE_SERVICE_id9b9408c77347e3a57844598abbeec8",
+            "callbackType": "Callback"
         }, {
             "id": "_cab96a148f254c13b09afa6603051bca",
             "type": "IF_CONDITION",
@@ -265,7 +277,7 @@
         }, {
             "id": "ADD_SNIPPET_e292c34dd3da46f28c981f79139beca0",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### LABEL_Flow_CustomQuery andata a buon fine. Invocherò successivamente la funzione saveStepComposition\");\n\n// forEach cicle in order to delete all the records in LABEL, given its id.\nLABEL_Flow_CustomQuery.records.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n\ndebugger;",
+            "codeSnippet": "voltmx.print(\"### LABEL_Flow_CustomQuery andata a buon fine. Invocherò successivamente la funzione saveStepComposition\");\n\nvoltmx.print(\"### LABEL_Flow_CustomQuery.records: \" + JSON.stringify(LABEL_Flow_CustomQuery.records) );\n\n// forEach cicle in order to delete all the records in LABEL, given its id.\nLABEL_Flow_CustomQuery.records.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n\ndebugger;",
             "parentId": "_ab001465cfd447b3a1ceb3407eea68df",
             "callbackType": null
         }, {

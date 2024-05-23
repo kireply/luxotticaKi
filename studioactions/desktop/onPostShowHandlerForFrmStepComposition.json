@@ -996,7 +996,7 @@
         }, {
             "id": "ADD_SNIPPET_f661aa115f6248d682d9b31a5f32b9c5",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"LABEL_Flow_CustomQuery eseguito correttamente. Invocherò loadFlowData\");\n\ngblFetchedLabels = LABEL_Flow_CustomQuery.records;",
+            "codeSnippet": "voltmx.print(\"LABEL_Flow_CustomQuery eseguito correttamente. Invocherò loadFlowData\");\ndebugger;\ngblFetchedLabels = LABEL_Flow_CustomQuery.records;",
             "parentId": "_e61ed4d2fd7a428abaca47703ff4604f",
             "callbackType": null
         }, {

@@ -38,6 +38,12 @@
             "navigationObj": "{\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnChangeSteps\"\n    }\n}",
             "isCustomInput": false
         }, {
+            "id": "ADD_SNIPPET_g9a093d5fad243a3babdce1d16e42f75",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### cliccato su CHANGE STEP in EDIT DEL FLUSSO\");",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "LOADING_INDICATOR_d8d60a0982f34458b8c3ac4fd272a84f",
             "selectedOption": "dismiss",
             "type": "LOADING_INDICATOR",

@@ -54,6 +54,12 @@ define({
     
     //whenever a component already inserted in one of the two halves is clicked
     const selectedCompEventHandler = () => {
+      
+      // if none of the two halves is open, the functionalities are not available (content is blured)
+      let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
+      let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
+      //TODO: finish check
+
       this.view.settingsSide.flxScrollSettingsContent.removeAll();    
       this.view.settingsSide.flxScrollSettingsContent.setVisibility(true);
       this.view.settingsSide.txt.setVisibility(false);
@@ -182,8 +188,8 @@ define({
     selectedComp.flxSelectedComponentLeft.segmentLeft.setData(leftData);
     selectedComp.flxSelectedComponentRight.segmentRight.setData(rightData);
     
-    if (nested === true) {
-      voltmx.print("### ENTRATO IN IF NESTE === TRUE");
+    if (nested === true && !gblEditingRightSide) {
+      voltmx.print("### ENTRATO IN IF NESTED === TRUE");
       selectedComp.flxAddNestedVisible = true;
     }
     
@@ -203,7 +209,7 @@ define({
       this.view.flxScrollLeft.setVisibility(true);
       this.view.flxScrollLeft.add(flex);
       this.view.flxScrollLeft.forceLayout();
-      this.showOrHideMoveCloneDelete(selectedComp);
+      //this.showOrHideMoveCloneDelete(selectedComp);
     }
     if ( right_width > 48 || gblEditingRightSide){
       //vuol dire che il pannello di destra è aperto
@@ -227,16 +233,22 @@ define({
       }
       selectedComp.componentOrder = instance;
       
-      //
+      
       if (gblEditingLeftSide || gblEditingRightSide) {
         selectedComp["lblComponentId"].text = gblComponentId;
       }
       
+      
+      //this.showOrHideMoveCloneDelete(selectedComp);
+    }
+
+    this.view.flxNestedBlur.setVisibility(false);
+
+    // if we are loading the components, we don't need to show this functionalities at first (but only when clicked)
+    if (!gblEditingLeftSide && !gblEditingRightSide) {
       this.showOrHideMoveCloneDelete(selectedComp);
     }
     
-      this.view.flxNestedBlur.setVisibility(false);
-      this.showOrHideMoveCloneDelete(selectedComp);
 
   }, //end of function "selectComponent"
 
@@ -545,12 +557,12 @@ define({
         propComp.onSelection = () => {
           this.onEndEditingCallback(propComp, null, true, false);
         };
-        if (!gblPropertyTemplatesIds[list[i].component_name]) {
-          gblPropertyTemplatesIds[list[i].component_name] = [];
+        if (!gblPropertyTemplatesIds[list[i].component_name + "_" + instance]) {
+          gblPropertyTemplatesIds[list[i].component_name + "_" + instance] = [];
         }
         let elem = {};
         elem[list[i].id] = { "name": list[i].name, "mode": "dropdown" };
-        gblPropertyTemplatesIds[list[i].component_name].push(elem);
+        gblPropertyTemplatesIds[list[i].component_name + "_" + instance].push(elem);
         
       } else if (list[i].mode === "label") {
         propComp = new ki.luxottica.editPropertyValuewithTextField({
@@ -578,8 +590,8 @@ define({
         }
         
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
-        if (gblFetchedLabels.length > 0) {
-          let record = gblFetchedLabels.find(record => record.id === label_key);
+        if (gblFetchedLabels.length > 0 && (gblEditingLeftSide || gblEditingRightSide)) {  // ci troviamo nel caricamento di componenti esistenti
+          let record = gblFetchedLabels.find(temp => temp.id === label_key);
           debugger;
           if(!("en_GB" in record) || record["en_GB"] === null || record["en_GB"] === "") {
             propComp.propertyValue = label_key  // se "en_GB" è null o stringa vuota allora ci teniamo la chiave
@@ -587,8 +599,16 @@ define({
             propComp.propertyValue = record["en_GB"];  // altrimenti, assegnamo la traduzione
           }
         } else {
-          propComp.propertyValue = label_key;
-          properties["lblPropertyValue"] = label_key;
+          debugger;
+          // caso in cui stiamo inserendo in una delle due sezioni un nuovo componente
+          if(!("default" in list[i]) || list[i].default === null || list[i].default === "") { // se ha delle labels con traduzioni di default, mostriamo quelle
+            propComp.propertyValue = label_key;
+            properties["lblPropertyValue"] = label_key;
+          } else {  // altrimenti, mostriamo la chiave della label
+            propComp.propertyValue = list[i].default;
+            properties["lblPropertyValue"] = list[i].default;
+          }
+          
         }
         
         //propComp.propertyValue = label_key;
@@ -601,13 +621,13 @@ define({
         };
         
 		this.modes[compKey].push({"name": capitalizedName, "mode": "label", "key": label_key});
-        if (!gblPropertyTemplatesIds[list[i].component_name]) {
-          gblPropertyTemplatesIds[list[i].component_name] = [];
+        if (!gblPropertyTemplatesIds[list[i].component_name + "_" + instance]) {
+          gblPropertyTemplatesIds[list[i].component_name + "_" + instance] = [];
         }
         let elem = {};
         elem[list[i].id] = { "name": list[i].name, "mode": "label" , "default": list[i].default, "key": label_key};
         
-        gblPropertyTemplatesIds[list[i].component_name].push(elem);
+        gblPropertyTemplatesIds[list[i].component_name + "_" + instance].push(elem);
       } else if (list[i].mode === "switch"){
         propComp = new ki.luxottica.editPropertyValuewithSwitch({
           id: `prop${new Date().getTime()}`,
@@ -618,12 +638,12 @@ define({
           this.onEndEditingCallback(propComp, null, false, true);
         };
         this.modes[compKey].push({"name": capitalizedName, "mode": "switch"});
-        if (!gblPropertyTemplatesIds[list[i].component_name]) {
-          gblPropertyTemplatesIds[list[i].component_name] = [];
+        if (!gblPropertyTemplatesIds[list[i].component_name + "_" + instance]) {
+          gblPropertyTemplatesIds[list[i].component_name + "_" + instance] = [];
         }
         let elem = {};
         elem[list[i].id] = { "name": list[i].name, "mode": "switch" };
-        gblPropertyTemplatesIds[list[i].component_name].push(elem);
+        gblPropertyTemplatesIds[list[i].component_name + "_" + instance].push(elem);
         if (propComp.propertyValue === 0){
           properties["lblPropertyValue"] = "True";
         } else {
@@ -647,13 +667,13 @@ define({
           this.onEndEditingCallback(propComp, null, false, false);
         };
         this.modes[compKey].push({"name": capitalizedName, "mode": "textfield"});
-        if (!gblPropertyTemplatesIds[list[i].component_name]) {
-          gblPropertyTemplatesIds[list[i].component_name] = [];
+        if (!gblPropertyTemplatesIds[list[i].component_name + "_" + instance]) {
+          gblPropertyTemplatesIds[list[i].component_name + "_" + instance] = [];
         }
         let elem = {};
         //       elem[list[i].id] = list[i].name;
         elem[list[i].id] = { "name": list[i].name, "mode": "textfield" };
-        gblPropertyTemplatesIds[list[i].component_name].push(elem);
+        gblPropertyTemplatesIds[list[i].component_name + "_" + instance].push(elem);
       }
       
       propComp.propertyName = capitalizedName;
@@ -745,7 +765,7 @@ define({
             let cleanedStr_left = prop_left.lblPropertyName.replace(/[^a-zA-Z0-9]+$/, '').replace(/^[^a-zA-Z0-9]+/, '');
             let camelCaseStr_left = cleanedStr_left.charAt(0).toLowerCase() + cleanedStr_left.slice(1);
             let prop_name_left = camelCaseStr_left;
-            let elementoTrovato_left = gblPropertyTemplatesIds[component_instance_left["template_name"]].find(item_left => {
+            let elementoTrovato_left = gblPropertyTemplatesIds[component_instance_left["template_name"] + "_" + component_instance_left["order"]].find(item_left => {
               let [id_left, obj_left] = Object.entries(item_left)[0];
               return obj_left["name"] === prop_name_left;
             });
@@ -1014,6 +1034,7 @@ define({
 
       } 
     });
+    
     //voltmx.application.dismissLoadingScreen();
   },   // end of function saveStepComposition
   
@@ -1032,12 +1053,14 @@ define({
       let cleanedStr = prop_right.lblPropertyName.replace(/[^a-zA-Z0-9]+$/, '').replace(/^[^a-zA-Z0-9]+/, '');
       let camelCaseStr = cleanedStr.charAt(0).toLowerCase() + cleanedStr.slice(1);
       let prop_name_right = camelCaseStr;
-      let elementoTrovato_right = gblPropertyTemplatesIds[component_instance_right["template_name"]].find(item_right => {
+      let elementoTrovato_right = gblPropertyTemplatesIds[component_instance_right["template_name"] + "_" + component_instance_right["order"]].find(item_right => {
         let [id_right, obj_right] = Object.entries(item_right)[0];
         return obj_right["name"] === prop_name_right;
       });
+      debugger;
       let prop_id_right = Object.keys(elementoTrovato_right);
       if (elementoTrovato_right[prop_id_right[0]].mode === "label"){
+        debugger;
       //  gblFlowId = 338  TO BE COMMENTED
        /*  let label_right = {
            id: prop_right.lblPropertyValue,
@@ -1059,9 +1082,9 @@ define({
             acc.push(filteredRecord);
             return acc;
           }, []);  */
-          
+          debugger;
           let record = gblFetchedLabels.find(record => record.id === elementoTrovato_right[prop_id_right[0]].key);
-
+		  
           if (record) {
             for (let key in record) {
               if (key !== 'id' && key !== 'flow_id' && key !== 'en_GB') {
@@ -1109,7 +1132,8 @@ define({
             gblFail = true;
           }
                                                                                           );
-        }, 
+        },   // end of LABEL_create
+              
                                                                                          (error) => {
           voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
         });
@@ -1806,6 +1830,7 @@ define({
   // this function laod the flow's data already existing (steps and components)
   loadFlowData: function(flow_id, stepsList, stepSectionList, previewSectionList, nestedComponents, componentsImages, propertyTemplates){  // stepsList è il risultato di STEP_flow_CustomQuery.records
     
+    voltmx.application.showLoadingScreen(null, "Loading components...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
     //checking input parameters content
     voltmx.print("### flow_id: " + flow_id);
     voltmx.print("### stepsList: " + JSON.stringify(stepsList) );
@@ -1886,8 +1911,11 @@ define({
     }); // end of forEach
 
     gblEditingRightSide = false;
-    gblFetchedLabels = [];
 
+    this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
+    this.view.settingsSide.txt.setVisibility(true);
+    
+    voltmx.application.dismissLoadingScreen();
   }
   
   
