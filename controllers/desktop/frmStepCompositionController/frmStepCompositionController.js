@@ -580,7 +580,12 @@ define({
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
         if (gblFetchedLabels.length > 0) {
           let record = gblFetchedLabels.find(record => record.id === label_key);
-          propComp.propertyValue = record["en_GB"];
+          debugger;
+          if(!("en_GB" in record) || record["en_GB"] === null || record["en_GB"] === "") {
+            propComp.propertyValue = label_key  // se "en_GB" è null o stringa vuota allora ci teniamo la chiave
+          } else {
+            propComp.propertyValue = record["en_GB"];  // altrimenti, assegnamo la traduzione
+          }
         } else {
           propComp.propertyValue = label_key;
           properties["lblPropertyValue"] = label_key;
@@ -746,34 +751,37 @@ define({
             });
             let prop_id_left = Object.keys(elementoTrovato_left);
             if (elementoTrovato_left[prop_id_left[0]].mode === "label"){
-          /*    let label = {
+              /*    let label = {
                 id: prop_left.lblPropertyValue,
                 flow_id: gblFlowId, 
                 en_GB: elementoTrovato_left[prop_id_left[0]].default
               };
               */
-              
-              
 
+
+			  
               let translations = {};
               // we have the ids and all translation different from english GB
               if (gblFetchedLabels.length > 0) {
-                let result = gblFetchedLabels.reduce((acc, record) => {
+              /*  let result = gblFetchedLabels.reduce((acc, record) => {
+                  // per ogni record salviamo l'id
                   let filteredRecord = { id: record.id }; // Inizia con "id"
                   for (let key in record) {
+                    // recuperiamo tutti gli id che non servono e che NON sono GB (lingua default) 
                     if (key !== 'flow_id' && key !== 'en_GB' && key !== 'id') {
                       filteredRecord[key] = record[key];
                     }
                   }
                   acc.push(filteredRecord);
                   return acc;
-                }, []);
+                }, []);  */
 
-                let record = result.find(record => record.id === elementoTrovato_right[prop_id_right[0]].key);
+                
+                let record = gblFetchedLabels.find(record => record.id === elementoTrovato_left[prop_id_left[0]].key);
 
                 if (record) {
                   for (let key in record) {
-                    if (key !== 'id') {
+                    if (key !== 'id' && key !== 'flow_id' && key !== 'en_GB') {
                       translations[key] = record[key];
                     }
                   }
@@ -798,8 +806,8 @@ define({
               voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, label, 
                                                                                                (response) => {
                 voltmx.print("### Service response: " + JSON.stringify(response));
-                property_instance_left["value"] = response.LABEL[0].en_GB; //prop_left.lblPropertyValue;
                 property_instance_left["label_id"] = response.LABEL[0].id; //prop_left.lblPropertyValue
+                property_instance_left["value"] = response.LABEL[0].en_GB; //prop_left.lblPropertyValue;
                 property_instance_left["property_template_id"] = prop_id_left[0];
                 voltmx.print("### PROP LEFT: " + JSON.stringify(property_instance_left));
                 voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_left,
@@ -1041,7 +1049,7 @@ define({
         let translations = {};
         // we have the ids and all translation different from english GB
         if (gblFetchedLabels.length > 0) {
-          let result = gblFetchedLabels.reduce((acc, record) => {
+    /*      let result = gblFetchedLabels.reduce((acc, record) => {
             let filteredRecord = { id: record.id }; // Inizia con "id"
             for (let key in record) {
               if (key !== 'flow_id' && key !== 'en_GB' && key !== 'id') {
@@ -1050,13 +1058,13 @@ define({
             }
             acc.push(filteredRecord);
             return acc;
-          }, []);
+          }, []);  */
           
-          let record = result.find(record => record.id === elementoTrovato_right[prop_id_right[0]].key);
+          let record = gblFetchedLabels.find(record => record.id === elementoTrovato_right[prop_id_right[0]].key);
 
           if (record) {
             for (let key in record) {
-              if (key !== 'id') {
+              if (key !== 'id' && key !== 'flow_id' && key !== 'en_GB') {
                 translations[key] = record[key];
               }
             }
@@ -1074,13 +1082,13 @@ define({
           // Concatenare translations con label_right
           Object.assign(label_right, translations);  
         }
-        
+        debugger;
         
         voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, label_right, 
                                                                                          (response) => {
           voltmx.print("### Service response: " + JSON.stringify(response));
-          property_instance_right["label_id"] = response.LABEL[0].en_GB;  // prop_right.lblPropertyValue;
-          property_instance_right["value"] = response.LABEL[0].id;  // prop_right.lblPropertyValue;
+          property_instance_right["label_id"] = response.LABEL[0].id;  // prop_right.lblPropertyValue;
+          property_instance_right["value"] = response.LABEL[0].en_GB;  // prop_right.lblPropertyValue;
           property_instance_right["property_template_id"] = prop_id_right[0];
           voltmx.print("### PROP RIGHT: " + JSON.stringify(property_instance_right));
           voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("PROPERTY_INSTANCE_create",{},property_instance_right,
@@ -1878,7 +1886,7 @@ define({
     }); // end of forEach
 
     gblEditingRightSide = false;
-    
+    gblFetchedLabels = [];
 
   }
   

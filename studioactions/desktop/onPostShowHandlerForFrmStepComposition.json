@@ -1025,9 +1025,6 @@
             }, {
                 "name": "propertyTemplates",
                 "value": " propertyTemplates"
-            }, {
-                "name": "gblFetchedLabels",
-                "value": ""
             }],
             "parentId": "_e61ed4d2fd7a428abaca47703ff4604f",
             "callbackType": null,
