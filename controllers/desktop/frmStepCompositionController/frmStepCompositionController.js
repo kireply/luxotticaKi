@@ -75,6 +75,7 @@ define({
       let props = selectedComp.rightData;
       voltmx.print("### selectedComp.leftData: " + selectedComp.leftData);
       voltmx.print("### selectedComp.leftData stringify: " + JSON.stringify(selectedComp.leftData) );
+      debugger;
       let searchKey = selectedComp.leftData[0].lblComponentName + "_" + instance + "_" + (gblCurrentStepOrder).toString();  // SCOMMENTATO
       //let searchKey = selectedComp.leftData[0].lblComponentName;
       voltmx.print("### search: " + JSON.stringify(selectedComp.leftData[0].modalImgComponent) );
@@ -557,12 +558,12 @@ define({
         propComp.onSelection = () => {
           this.onEndEditingCallback(propComp, null, true, false);
         };
-        if (!gblPropertyTemplatesIds[list[i].component_name + "_" + instance]) {
-          gblPropertyTemplatesIds[list[i].component_name + "_" + instance] = [];
+        if (!gblPropertyTemplatesIds[list[i].component_name + "_" + instance + "_" + gblCurrentStepOrder]) {
+          gblPropertyTemplatesIds[list[i].component_name + "_" + instance + "_" + gblCurrentStepOrder] = [];
         }
         let elem = {};
         elem[list[i].id] = { "name": list[i].name, "mode": "dropdown" };
-        gblPropertyTemplatesIds[list[i].component_name + "_" + instance].push(elem);
+        gblPropertyTemplatesIds[list[i].component_name + "_" + instance + "_" + gblCurrentStepOrder].push(elem);
         
       } else if (list[i].mode === "label") {
         propComp = new ki.luxottica.editPropertyValuewithTextField({
@@ -621,13 +622,13 @@ define({
         };
         
 		this.modes[compKey].push({"name": capitalizedName, "mode": "label", "key": label_key});
-        if (!gblPropertyTemplatesIds[list[i].component_name + "_" + instance]) {
-          gblPropertyTemplatesIds[list[i].component_name + "_" + instance] = [];
+        if (!gblPropertyTemplatesIds[list[i].component_name + "_" + instance + "_" + gblCurrentStepOrder]) {
+          gblPropertyTemplatesIds[list[i].component_name + "_" + instance + "_" + gblCurrentStepOrder] = [];
         }
         let elem = {};
         elem[list[i].id] = { "name": list[i].name, "mode": "label" , "default": list[i].default, "key": label_key};
         
-        gblPropertyTemplatesIds[list[i].component_name + "_" + instance].push(elem);
+        gblPropertyTemplatesIds[list[i].component_name + "_" + instance + "_" + gblCurrentStepOrder].push(elem);
       } else if (list[i].mode === "switch"){
         propComp = new ki.luxottica.editPropertyValuewithSwitch({
           id: `prop${new Date().getTime()}`,
@@ -638,12 +639,12 @@ define({
           this.onEndEditingCallback(propComp, null, false, true);
         };
         this.modes[compKey].push({"name": capitalizedName, "mode": "switch"});
-        if (!gblPropertyTemplatesIds[list[i].component_name + "_" + instance]) {
-          gblPropertyTemplatesIds[list[i].component_name + "_" + instance] = [];
+        if (!gblPropertyTemplatesIds[list[i].component_name + "_" + instance + "_" + gblCurrentStepOrder]) {
+          gblPropertyTemplatesIds[list[i].component_name + "_" + instance + "_" + gblCurrentStepOrder] = [];
         }
         let elem = {};
         elem[list[i].id] = { "name": list[i].name, "mode": "switch" };
-        gblPropertyTemplatesIds[list[i].component_name + "_" + instance].push(elem);
+        gblPropertyTemplatesIds[list[i].component_name + "_" + instance + "_" + gblCurrentStepOrder].push(elem);
         if (propComp.propertyValue === 0){
           properties["lblPropertyValue"] = "True";
         } else {
@@ -667,13 +668,13 @@ define({
           this.onEndEditingCallback(propComp, null, false, false);
         };
         this.modes[compKey].push({"name": capitalizedName, "mode": "textfield"});
-        if (!gblPropertyTemplatesIds[list[i].component_name + "_" + instance]) {
-          gblPropertyTemplatesIds[list[i].component_name + "_" + instance] = [];
+        if (!gblPropertyTemplatesIds[list[i].component_name + "_" + instance + "_" + gblCurrentStepOrder]) {
+          gblPropertyTemplatesIds[list[i].component_name + "_" + instance + "_" + gblCurrentStepOrder] = [];
         }
         let elem = {};
         //       elem[list[i].id] = list[i].name;
         elem[list[i].id] = { "name": list[i].name, "mode": "textfield" };
-        gblPropertyTemplatesIds[list[i].component_name + "_" + instance].push(elem);
+        gblPropertyTemplatesIds[list[i].component_name + "_" + instance + "_" + gblCurrentStepOrder].push(elem);
       }
       
       propComp.propertyName = capitalizedName;
@@ -726,6 +727,7 @@ define({
   // function invoked when Save Button is clicked (invoked from action editor)
   saveStepComposition: function(){
 
+    debugger;
     //voltmx.application.showLoadingScreen(null, "Saving step...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
 
     voltmx.print("### GBL PROPERTY TEMPLATES IDS: " + JSON.stringify(gblPropertyTemplatesIds));
@@ -751,6 +753,7 @@ define({
 
         let entry = Object.entries(gblIdOrderSteps).find(([id, order]) => order === "1");
         let number = entry ? entry[0] : undefined;
+        let step_id = entry ? entry[1] : undefined;
 
         component_instance_left["step_id"] = number;
         component_instance_left["order"] = widget[componentKey]["lblComponentOrder"].text;
@@ -765,7 +768,7 @@ define({
             let cleanedStr_left = prop_left.lblPropertyName.replace(/[^a-zA-Z0-9]+$/, '').replace(/^[^a-zA-Z0-9]+/, '');
             let camelCaseStr_left = cleanedStr_left.charAt(0).toLowerCase() + cleanedStr_left.slice(1);
             let prop_name_left = camelCaseStr_left;
-            let elementoTrovato_left = gblPropertyTemplatesIds[component_instance_left["template_name"] + "_" + component_instance_left["order"]].find(item_left => {
+            let elementoTrovato_left = gblPropertyTemplatesIds[component_instance_left["template_name"] + "_" + component_instance_left["order"] + "_" + step_id].find(item_left => {
               let [id_left, obj_left] = Object.entries(item_left)[0];
               return obj_left["name"] === prop_name_left;
             });
@@ -991,7 +994,7 @@ define({
 
           voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("COMPONENT_INSTANCE_create", {}, component_instance_right, (response) => {
             voltmx.print("### Service response SONO A DESTRA DENTRO: " + JSON.stringify(response));
-            this.componentCreateCallback(component, property_instance_right, response, component_instance_right);
+            this.componentCreateCallback(component, property_instance_right, response, component_instance_right, step_id);
             let component_id = response.COMPONENT_INSTANCE[0].id;
 
             if (parentComponentId) {
@@ -1045,7 +1048,7 @@ define({
   
   // Callback of the COMPONENT_CREATE service, in which property instances and labels of the just created component instance are created
   // Dovrebbe essere aggiustato e reso generico anche per il "left side", per ora funziona solo per il "right side"
-  componentCreateCallback: function(widget, property_instance_right, response, component_instance_right){
+  componentCreateCallback: function(widget, property_instance_right, response, component_instance_right, step_id){
     widget["lblComponentId"].text = response.COMPONENT_INSTANCE[0].id;  // chiave primaria nel DB, a cui Nested Component deve puntare per trovare il padre
     property_instance_right["component_instance_id"] = response.COMPONENT_INSTANCE[0].id;
     let props_right = widget["flxSelectedComponentRight"]["segmentRight"]["data"];
@@ -1053,7 +1056,7 @@ define({
       let cleanedStr = prop_right.lblPropertyName.replace(/[^a-zA-Z0-9]+$/, '').replace(/^[^a-zA-Z0-9]+/, '');
       let camelCaseStr = cleanedStr.charAt(0).toLowerCase() + cleanedStr.slice(1);
       let prop_name_right = camelCaseStr;
-      let elementoTrovato_right = gblPropertyTemplatesIds[component_instance_right["template_name"] + "_" + component_instance_right["order"]].find(item_right => {
+      let elementoTrovato_right = gblPropertyTemplatesIds[component_instance_right["template_name"] + "_" + component_instance_right["order"] + "_" + step_id].find(item_right => {
         let [id_right, obj_right] = Object.entries(item_right)[0];
         return obj_right["name"] === prop_name_right;
       });
@@ -1409,31 +1412,65 @@ define({
   clickedArrow: function(direction, selectedComp){
     let scroll = this.findCurrentFlexScroll();
     let scroll_widgets = scroll.widgets();
-
+    debugger;
+    
     // find the current widget index
     let currentWidgetIndex = scroll_widgets.findIndex(widget => widget.hasOwnProperty(selectedComp.id));
     let currentWidgetProperty = null;
     let previousWidgetProperty = null;
     let nextWidgetProperty = null;
     if (currentWidgetIndex !== -1) {
-      // obtain the currrent widget from the previously find index
+      // obtain the current widget from the previously find index
       let currentWidget = scroll_widgets[currentWidgetIndex];
       // obtain the associated property
       currentWidgetProperty = currentWidget[selectedComp.id];
 	  
+      let currentKey = currentWidgetProperty.leftData[0].lblComponentName + "_" + currentWidgetProperty.componentOrder + "_" + gblCurrentStepOrder;
+      
+
+      let otherKey = null;
       if (direction === "up"){
         // obtain the previous widget
+        
         let previousWidget = currentWidgetIndex >= 0 ? scroll_widgets[currentWidgetIndex - 1] : null;
         let previousWidgetKey = Object.keys(previousWidget).find(key => key.startsWith("component"));
         if (previousWidgetKey) {
           previousWidgetProperty = previousWidget[previousWidgetKey];
+          otherKey = previousWidgetProperty.leftData[0].lblComponentName + "_" + previousWidgetProperty.componentOrder + "_" + gblCurrentStepOrder; // se è PREVIOUS, quindi UP
+
+          if (currentKey in this.modes) {
+            const newKey = currentKey.replace(/_\d+_/, `_${previousWidgetProperty.componentOrder}_`);
+            this.modes[newKey] = this.modes[currentKey];
+            delete this.modes[currentKey];
+          }
+          
+          if (otherKey in this.modes) {
+            const newKey = otherKey.replace(/_\d+_/, `_${currentWidgetProperty.componentOrder}_`);
+            this.modes[newKey] = this.modes[otherKey];
+            delete this.modes[otherKey];
+          }
+
         } 
-      } else {
+      } else {  // direction === "down"
         // obtain the next widget
         let nextWidget = currentWidgetIndex >= 0 ? scroll_widgets[currentWidgetIndex + 1] : null;
         let nextWidgetKey = Object.keys(nextWidget).find(key => key.startsWith("component"));
         if (nextWidgetKey) {
           nextWidgetProperty = nextWidget[nextWidgetKey];
+          otherKey = nextWidgetProperty.leftData[0].lblComponentName + "_" + nextWidgetProperty.componentOrder + "_" + gblCurrentStepOrder; // se è NEXT, quindi DOWN
+          
+          if (currentKey in this.modes) {
+            const newKey = currentKey.replace(/_\d+_/, `_${nextWidgetProperty.componentOrder}_`);
+            this.modes[newKey] = this.modes[currentKey];
+            delete this.modes[currentKey];
+          }
+          
+          if (otherKey in this.modes) {
+            const newKey = otherKey.replace(/_\d+_/, `_${currentWidgetProperty.componentOrder}_`);
+            this.modes[newKey] = this.modes[otherKey];
+            delete this.modes[otherKey];
+          }
+          
         }
       }
       //         console.log("Found Widget:", currentWidget);
@@ -1830,6 +1867,7 @@ define({
   // this function laod the flow's data already existing (steps and components)
   loadFlowData: function(flow_id, stepsList, stepSectionList, previewSectionList, nestedComponents, componentsImages, propertyTemplates){  // stepsList è il risultato di STEP_flow_CustomQuery.records
     
+    debugger;
     voltmx.application.showLoadingScreen(null, "Loading components...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
     //checking input parameters content
     voltmx.print("### flow_id: " + flow_id);
