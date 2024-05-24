@@ -75,7 +75,7 @@ define({
       let props = selectedComp.rightData;
       voltmx.print("### selectedComp.leftData: " + selectedComp.leftData);
       voltmx.print("### selectedComp.leftData stringify: " + JSON.stringify(selectedComp.leftData) );
-      debugger;
+      //debugger;
       let searchKey = selectedComp.leftData[0].lblComponentName + "_" + instance + "_" + (gblCurrentStepOrder).toString();  // SCOMMENTATO
       //let searchKey = selectedComp.leftData[0].lblComponentName;
       voltmx.print("### search: " + JSON.stringify(selectedComp.leftData[0].modalImgComponent) );
@@ -502,7 +502,7 @@ define({
      // console.log(list[i]);
 
       let propertyName = list[i].name;
-      debugger;
+      //debugger;
       if(propertyName === "attribute") { // nestedComponents (or we could put configurable)
         nested = true;
         this.modes[compKey].push({"nestedComponents": [] });
@@ -593,14 +593,17 @@ define({
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
         if (gblFetchedLabels.length > 0 && (gblEditingLeftSide || gblEditingRightSide)) {  // ci troviamo nel caricamento di componenti esistenti
           let record = gblFetchedLabels.find(temp => temp.id === label_key);
-          debugger;
-          if(!("en_GB" in record) || record["en_GB"] === null || record["en_GB"] === "") {
-            propComp.propertyValue = label_key  // se "en_GB" è null o stringa vuota allora ci teniamo la chiave
-          } else {
-            propComp.propertyValue = record["en_GB"];  // altrimenti, assegnamo la traduzione
+          //debugger;
+          
+          if (record !== null) {
+            if(!("en_GB" in record) || record["en_GB"] === null || record["en_GB"] === "") {
+              propComp.propertyValue = label_key  // se "en_GB" è null o stringa vuota allora ci teniamo la chiave
+            } else {
+              propComp.propertyValue = record["en_GB"];  // altrimenti, assegnamo la traduzione
+            }
           }
         } else {
-          debugger;
+          //debugger;
           // caso in cui stiamo inserendo in una delle due sezioni un nuovo componente
           if(!("default" in list[i]) || list[i].default === null || list[i].default === "") { // se ha delle labels con traduzioni di default, mostriamo quelle
             propComp.propertyValue = label_key;
@@ -727,7 +730,6 @@ define({
   // function invoked when Save Button is clicked (invoked from action editor)
   saveStepComposition: function(){
 
-    debugger;
     //voltmx.application.showLoadingScreen(null, "Saving step...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
 
     voltmx.print("### GBL PROPERTY TEMPLATES IDS: " + JSON.stringify(gblPropertyTemplatesIds));
@@ -815,7 +817,8 @@ define({
               let label = {
                 id: elementoTrovato_left[prop_id_left[0]].key,
                 flow_id: gblFlowId, 
-                en_GB: prop_left.lblPropertyValue === elementoTrovato_left[prop_id_left[0]].key ? elementoTrovato_left[prop_id_left[0]].default : prop_left.lblPropertyValue
+                en_GB: prop_left.lblPropertyValue === elementoTrovato_left[prop_id_left[0]].key && elementoTrovato_left[prop_id_left[0]].default !== null && elementoTrovato_left[prop_id_left[0]].default !== "" ? elementoTrovato_left[prop_id_left[0]].default : prop_left.lblPropertyValue
+                
               };
 
               if (Object.keys(translations).length > 0) {
@@ -1060,10 +1063,10 @@ define({
         let [id_right, obj_right] = Object.entries(item_right)[0];
         return obj_right["name"] === prop_name_right;
       });
-      debugger;
+      //debugger;
       let prop_id_right = Object.keys(elementoTrovato_right);
       if (elementoTrovato_right[prop_id_right[0]].mode === "label"){
-        debugger;
+        //debugger;
       //  gblFlowId = 338  TO BE COMMENTED
        /*  let label_right = {
            id: prop_right.lblPropertyValue,
@@ -1085,7 +1088,7 @@ define({
             acc.push(filteredRecord);
             return acc;
           }, []);  */
-          debugger;
+          //debugger;
           let record = gblFetchedLabels.find(record => record.id === elementoTrovato_right[prop_id_right[0]].key);
 		  
           if (record) {
@@ -1101,14 +1104,14 @@ define({
         let label_right = {
           id: elementoTrovato_right[prop_id_right[0]].key,
           flow_id: gblFlowId, 
-          en_GB: prop_right.lblPropertyValue === elementoTrovato_right[prop_id_right[0]].key ? elementoTrovato_right[prop_id_right[0]].default : prop_right.lblPropertyValue
+          en_GB: prop_right.lblPropertyValue === elementoTrovato_right[prop_id_right[0]].key && elementoTrovato_right[prop_id_right[0]].default !== null && elementoTrovato_right[prop_id_right[0]].default !== "" ? elementoTrovato_right[prop_id_right[0]].default : prop_right.lblPropertyValue
         };
         
         if (Object.keys(translations).length > 0) {
           // Concatenare translations con label_right
           Object.assign(label_right, translations);  
         }
-        debugger;
+        //debugger;
         
         voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, label_right, 
                                                                                          (response) => {
@@ -1412,7 +1415,7 @@ define({
   clickedArrow: function(direction, selectedComp){
     let scroll = this.findCurrentFlexScroll();
     let scroll_widgets = scroll.widgets();
-    debugger;
+    //debugger;
     
     // find the current widget index
     let currentWidgetIndex = scroll_widgets.findIndex(widget => widget.hasOwnProperty(selectedComp.id));
@@ -1427,7 +1430,6 @@ define({
 	  
       let currentKey = currentWidgetProperty.leftData[0].lblComponentName + "_" + currentWidgetProperty.componentOrder + "_" + gblCurrentStepOrder;
       
-
       let otherKey = null;
       if (direction === "up"){
         // obtain the previous widget
@@ -1438,16 +1440,77 @@ define({
           previousWidgetProperty = previousWidget[previousWidgetKey];
           otherKey = previousWidgetProperty.leftData[0].lblComponentName + "_" + previousWidgetProperty.componentOrder + "_" + gblCurrentStepOrder; // se è PREVIOUS, quindi UP
 
+          // swapping the two components keys
           if (currentKey in this.modes) {
+            
+            this.modes[currentKey].forEach(item => {
+              if (item.mode === 'label' && item.hasOwnProperty('key')) {
+                let parts = item.key.split('_');
+                if (parts.length >= 3) {
+                    parts[parts.length - 2] = previousWidgetProperty.componentOrder; // Sostituisci il penultimo valore
+                    item.key = parts.join('_'); // Riassembla la chiave
+                }
+              }
+            });
+
             const newKey = currentKey.replace(/_\d+_/, `_${previousWidgetProperty.componentOrder}_`);
             this.modes[newKey] = this.modes[currentKey];
             delete this.modes[currentKey];
           }
-          
+          // swapping the two components keys
           if (otherKey in this.modes) {
+            
+            this.modes[otherKey].forEach(item => {
+              if (item.mode === 'label' && item.hasOwnProperty('key')) {
+                let parts = item.key.split('_');
+                if (parts.length >= 3) {
+                    parts[parts.length - 2] = currentWidgetProperty.componentOrder; // Sostituisci il penultimo valore
+                    item.key = parts.join('_'); // Riassembla la chiave
+                }
+              }
+            });
+            
             const newKey = otherKey.replace(/_\d+_/, `_${currentWidgetProperty.componentOrder}_`);
             this.modes[newKey] = this.modes[otherKey];
             delete this.modes[otherKey];
+          }
+          // swapping the two components keys
+          if (currentKey in gblPropertyTemplatesIds) {
+            
+            gblPropertyTemplatesIds[currentKey].forEach(item => {
+              const key = Object.keys(item)[0];
+              if (item[key].mode === 'label' && item[key].hasOwnProperty('key')) {
+                // Dividi la chiave in parti, sostituisci il penultimo valore e riassembla la chiave
+                let parts = item[key].key.split('_');
+                if (parts.length >= 3) {
+                  parts[parts.length - 2] = previousWidgetProperty.componentOrder; // Sostituisci il penultimo valore
+                  item[key].key = parts.join('_'); // Riassembla la chiave
+                }
+              }
+            });
+
+            const newKey = currentKey.replace(/_\d+_/, `_${previousWidgetProperty.componentOrder}_`);
+            gblPropertyTemplatesIds[newKey] = gblPropertyTemplatesIds[currentKey];
+            delete gblPropertyTemplatesIds[currentKey];
+          }
+          // swapping the two components keys
+          if (otherKey in gblPropertyTemplatesIds) {
+            gblPropertyTemplatesIds[otherKey].forEach(item => {
+              const key = Object.keys(item)[0];
+              if (item[key].mode === 'label' && item[key].hasOwnProperty('key')) {
+                // Dividi la chiave in parti, sostituisci il penultimo valore e riassembla la chiave
+                let parts = item[key].key.split('_');
+                if (parts.length >= 3) {
+                  parts[parts.length - 2] = currentWidgetProperty.componentOrder; // Sostituisci il penultimo valore
+                  item[key].key = parts.join('_'); // Riassembla la chiave
+                }
+              }
+            });
+            
+            const newKey = otherKey.replace(/_\d+_/, `_${currentWidgetProperty.componentOrder}_`);
+            gblPropertyTemplatesIds[newKey] = gblPropertyTemplatesIds[otherKey];
+            delete gblPropertyTemplatesIds[otherKey];
+           
           }
 
         } 
@@ -1458,17 +1521,76 @@ define({
         if (nextWidgetKey) {
           nextWidgetProperty = nextWidget[nextWidgetKey];
           otherKey = nextWidgetProperty.leftData[0].lblComponentName + "_" + nextWidgetProperty.componentOrder + "_" + gblCurrentStepOrder; // se è NEXT, quindi DOWN
-          
+          // swapping the two components keys
           if (currentKey in this.modes) {
+            
+            this.modes[currentKey].forEach(item => {
+              if (item.mode === 'label' && item.hasOwnProperty('key')) {
+                let parts = item.key.split('_');
+                if (parts.length >= 3) {
+                  parts[parts.length - 2] = nextWidgetProperty.componentOrder; // Sostituisci il penultimo valore
+                  item.key = parts.join('_'); // Riassembla la chiave
+                }
+              }
+            });
+            
             const newKey = currentKey.replace(/_\d+_/, `_${nextWidgetProperty.componentOrder}_`);
             this.modes[newKey] = this.modes[currentKey];
             delete this.modes[currentKey];
           }
-          
+          // swapping the two components keys
           if (otherKey in this.modes) {
+            
+            this.modes[otherKey].forEach(item => {
+              if (item.mode === 'label' && item.hasOwnProperty('key')) {
+                let parts = item.key.split('_');
+                if (parts.length >= 3) {
+                    parts[parts.length - 2] = currentWidgetProperty.componentOrder; // Sostituisci il penultimo valore
+                    item.key = parts.join('_'); // Riassembla la chiave
+                }
+              }
+            });
+            
             const newKey = otherKey.replace(/_\d+_/, `_${currentWidgetProperty.componentOrder}_`);
             this.modes[newKey] = this.modes[otherKey];
             delete this.modes[otherKey];
+          }
+          // swapping the two components keys
+          if (currentKey in gblPropertyTemplatesIds) {
+            gblPropertyTemplatesIds[currentKey].forEach(item => {
+              const key = Object.keys(item)[0];
+              if (item[key].mode === 'label' && item[key].hasOwnProperty('key')) {
+                // Dividi la chiave in parti, sostituisci il penultimo valore e riassembla la chiave
+                let parts = item[key].key.split('_');
+                if (parts.length >= 3) {
+                  parts[parts.length - 2] = nextWidgetProperty.componentOrder; // Sostituisci il penultimo valore
+                  item[key].key = parts.join('_'); // Riassembla la chiave
+                }
+              }
+            });
+            
+            const newKey = currentKey.replace(/_\d+_/, `_${nextWidgetProperty.componentOrder}_`);
+            gblPropertyTemplatesIds[newKey] = gblPropertyTemplatesIds[currentKey];
+            delete gblPropertyTemplatesIds[currentKey];
+          }
+          // swapping the two components keys
+          if (otherKey in gblPropertyTemplatesIds) {
+            
+            gblPropertyTemplatesIds[otherKey].forEach(item => {
+              const key = Object.keys(item)[0];
+              if (item[key].mode === 'label' && item[key].hasOwnProperty('key')) {
+                // Dividi la chiave in parti, sostituisci il penultimo valore e riassembla la chiave
+                let parts = item[key].key.split('_');
+                if (parts.length >= 3) {
+                  parts[parts.length - 2] = currentWidgetProperty.componentOrder; // Sostituisci il penultimo valore
+                  item[key].key = parts.join('_'); // Riassembla la chiave
+                }
+              }
+            });
+            
+            const newKey = otherKey.replace(/_\d+_/, `_${currentWidgetProperty.componentOrder}_`);
+            gblPropertyTemplatesIds[newKey] = gblPropertyTemplatesIds[otherKey];
+            delete gblPropertyTemplatesIds[otherKey];
           }
           
         }
@@ -1650,14 +1772,93 @@ define({
     scroll_widgets.forEach( widget => {
       let widget_key = Object.keys(widget).find(key => key.startsWith("component"));
       new_scroll_widgets.push([widget[widget_key].leftData, widget[widget_key].rightData]);
+      let cloneKey = widget[widget_key].leftData[0].lblComponentName + "_" + widget[widget_key].componentOrder + "_" + gblCurrentStepOrder;
+      //debugger;
+      
       if(widget[widget_key].id === id){
+        let newOrder = parseInt(widget[widget_key].componentOrder, 10) + 1;
+        let newKey = widget[widget_key].leftData[0].lblComponentName + "_" + (newOrder) + "_" + gblCurrentStepOrder;
+        this.modes[newKey] = JSON.parse(JSON.stringify(this.modes[cloneKey]) );
+        
+        this.modes[newKey].forEach(item => {
+          if (item.mode === 'label' && item.hasOwnProperty('key')) {
+            // Dividi la chiave in parti, sostituisci il penultimo valore e riassembla la chiave
+            let parts = item.key.split('_');
+            if (parts.length >= 3) {
+              parts[parts.length - 2] = newOrder; // Sostituisci il penultimo valore
+              item.key = parts.join('_'); // Riassembla la chiave
+            }
+          }
+        });
+        
+        gblPropertyTemplatesIds[newKey] = JSON.parse(JSON.stringify(gblPropertyTemplatesIds[cloneKey]) );
+        
+        gblPropertyTemplatesIds[newKey].forEach(item => {
+            const key = Object.keys(item)[0];
+            if (item[key].mode === 'label' && item[key].hasOwnProperty('key')) {
+                // Dividi la chiave in parti, sostituisci il penultimo valore e riassembla la chiave
+                let parts = item[key].key.split('_');
+                if (parts.length >= 3) {
+                    parts[parts.length - 2] = newOrder; // Sostituisci il penultimo valore
+                    item[key].key = parts.join('_'); // Riassembla la chiave
+                }
+            }
+        });
+        
         new_scroll_widgets.push([widget[widget_key].leftData, widget[widget_key].rightData]);
       }
     });
-    
+    //debugger;
     scroll.removeAll();
+    // aggiorniamo le properties dei componenti successivi (es chiave labels con istanza e order aggiornato)
     new_scroll_widgets.forEach( (new_widget, index) => {
       let instance = (index + 1).toString();
+      
+      /* Trova la chiave che corrisponde al pattern
+      let foundKey = Object.keys(this.modes).find(key => {
+        return key.startsWith(new_widget[0][0].lblComponentName) && key.endsWith(gblCurrentStepOrder);
+      });
+
+      // diverso da instance
+      if (foundKey) {
+        // Estrai la parte centrale della chiave
+        let parts = foundKey.split('_');
+        let centralPart = parts[2];
+
+        // Confronta la parte centrale con instance
+        if (parseInt(centralPart) !== instance) {
+          // Crea una nuova chiave con instance al posto della parte centrale
+          let newKey = `${parts[0]}_${parts[1]}_${instance}_${parts[3]}`;
+
+          // Aggiorna il dizionario con la nuova chiave
+          this.modes[newKey] = this.modes[foundKey];
+          delete this.modes[foundKey];
+        }
+      }
+      
+      
+      // Trova la chiave che corrisponde al pattern
+      let propertyKey = Object.keys(gblPropertyTemplatesIds).find(key => {
+        return key.startsWith(new_widget[0][0].lblComponentName) && key.endsWith(gblCurrentStepOrder);
+      });
+
+      // diverso da instance
+      if (propertyKey) {
+        // Estrai la parte centrale della chiave
+        let parts = propertyKey.split('_');
+        let centralPart = parts[2];
+
+        // Confronta la parte centrale con instance
+        if (parseInt(centralPart) !== instance) {
+          // Crea una nuova chiave con instance al posto della parte centrale
+          let newKey = `${parts[0]}_${parts[1]}_${instance}_${parts[3]}`;
+
+          // Aggiorna il dizionario con la nuova chiave
+          gblPropertyTemplatesIds[newKey] = gblPropertyTemplatesIds[propertyKey];
+          delete gblPropertyTemplatesIds[propertyKey];
+        }
+      }  */
+
       new_widget[1].forEach(prop => {
         if (/^[^_]+_.*_.*_.*$/.test(prop.lblPropertyValue)) {
           let parts = prop.lblPropertyValue.split("_");
@@ -1753,7 +1954,7 @@ define({
       return acc;
     }, {});
     
-    debugger;
+    //debugger;
     // Raggruppa i records (di property templates) per component_name e component_order
     let groupedPropertyTemplates = propertyTemplates.reduce((acc, record) => {
       if (record.step_order === order) {
@@ -1867,8 +2068,8 @@ define({
   // this function laod the flow's data already existing (steps and components)
   loadFlowData: function(flow_id, stepsList, stepSectionList, previewSectionList, nestedComponents, componentsImages, propertyTemplates){  // stepsList è il risultato di STEP_flow_CustomQuery.records
     
-    debugger;
-    voltmx.application.showLoadingScreen(null, "Loading components...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
+    //debugger;
+    //voltmx.application.showLoadingScreen(null, "Loading components...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
     //checking input parameters content
     voltmx.print("### flow_id: " + flow_id);
     voltmx.print("### stepsList: " + JSON.stringify(stepsList) );
@@ -1953,7 +2154,7 @@ define({
     this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
     this.view.settingsSide.txt.setVisibility(true);
     
-    voltmx.application.dismissLoadingScreen();
+    //voltmx.application.dismissLoadingScreen();
   }
   
   
