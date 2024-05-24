@@ -2,7 +2,7 @@ define({
 
   //Type your controller code here
   //   component_instance_id : null,
-  integrationService : voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB"),
+  //integrationService : voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB"),
   modes: {},
   father: null,
   
@@ -183,7 +183,7 @@ define({
     };
     
     selectedComp.onClickDelete = () => {
-      this.deleteComponent(selectedComp.id);
+      this.deleteComponent(selectedComp.id); 
     };
 
     selectedComp.flxSelectedComponentLeft.segmentLeft.setData(leftData);
@@ -632,6 +632,7 @@ define({
         elem[list[i].id] = { "name": list[i].name, "mode": "label" , "default": list[i].default, "key": label_key};
         
         gblPropertyTemplatesIds[list[i].component_name + "_" + instance + "_" + gblCurrentStepOrder].push(elem);
+        
       } else if (list[i].mode === "switch"){
         propComp = new ki.luxottica.editPropertyValuewithSwitch({
           id: `prop${new Date().getTime()}`,
@@ -1768,6 +1769,7 @@ define({
     let scroll = this.findCurrentFlexScroll();
     let scroll_widgets = scroll.widgets();
     let new_scroll_widgets = [];
+    let name = null;
     
     scroll_widgets.forEach( widget => {
       let widget_key = Object.keys(widget).find(key => key.startsWith("component"));
@@ -1778,6 +1780,7 @@ define({
       if(widget[widget_key].id === id){
         let newOrder = parseInt(widget[widget_key].componentOrder, 10) + 1;
         let newKey = widget[widget_key].leftData[0].lblComponentName + "_" + (newOrder) + "_" + gblCurrentStepOrder;
+        name = widget[widget_key].leftData[0].lblComponentName;
         this.modes[newKey] = JSON.parse(JSON.stringify(this.modes[cloneKey]) );
         
         this.modes[newKey].forEach(item => {
@@ -1808,63 +1811,76 @@ define({
         new_scroll_widgets.push([widget[widget_key].leftData, widget[widget_key].rightData]);
       }
     });
-    //debugger;
+    debugger;
     scroll.removeAll();
+        
     // aggiorniamo le properties dei componenti successivi (es chiave labels con istanza e order aggiornato)
     new_scroll_widgets.forEach( (new_widget, index) => {
       let instance = (index + 1).toString();
       
-      /* Trova la chiave che corrisponde al pattern
+      if(name !== new_widget[0][0].lblComponentName) {
+        
+        //Trova la chiave che corrisponde al pattern
       let foundKey = Object.keys(this.modes).find(key => {
         return key.startsWith(new_widget[0][0].lblComponentName) && key.endsWith(gblCurrentStepOrder);
       });
 
-      // diverso da instance
-      if (foundKey) {
-        // Estrai la parte centrale della chiave
-        let parts = foundKey.split('_');
-        let centralPart = parts[2];
+        // diverso da instance
+        if (foundKey) {
+          // Estrai la parte centrale della chiave
+          let partsMode = foundKey.split('_');        
+          // Trova l'indice della parte centrale
+          let centralIndex = partsMode.length - 2;
+          // Estrai la parte centrale della chiave
+          let centralPart = partsMode[centralIndex];
 
-        // Confronta la parte centrale con instance
-        if (parseInt(centralPart) !== instance) {
-          // Crea una nuova chiave con instance al posto della parte centrale
-          let newKey = `${parts[0]}_${parts[1]}_${instance}_${parts[3]}`;
+          // Confronta la parte centrale con instance
+          if (parseInt(centralPart) !== parseInt(instance)) {
+            // Crea una nuova chiave con instance al posto della parte centrale
+            partsMode[centralIndex] = instance.toString();
+            let newKey = partsMode.join('_');
 
-          // Aggiorna il dizionario con la nuova chiave
-          this.modes[newKey] = this.modes[foundKey];
-          delete this.modes[foundKey];
+            // Aggiorna il dizionario con la nuova chiave
+            this.modes[newKey] = this.modes[foundKey];
+            delete this.modes[foundKey];
+          }
         }
+
+
+        // Trova la chiave che corrisponde al pattern
+        let propertyKey = Object.keys(gblPropertyTemplatesIds).find(key => {
+          return key.startsWith(new_widget[0][0].lblComponentName) && key.endsWith(gblCurrentStepOrder);
+        });
+
+        // diverso da instance
+        if (propertyKey) {
+          // Estrai la parte centrale della chiave
+          let parts = propertyKey.split('_');        
+          // Trova l'indice della parte centrale
+          let centralIndex = parts.length - 2;
+          // Estrai la parte centrale della chiave
+          let centralPart = parts[centralIndex];
+
+          // Confronta la parte centrale con instance
+          if (parseInt(centralPart) !== parseInt(instance) ) {
+            // Crea una nuova chiave con instance al posto della parte centrale
+            parts[centralIndex] = instance.toString();
+            let newKey = parts.join('_');
+
+            // Aggiorna il dizionario con la nuova chiave
+            gblPropertyTemplatesIds[newKey] = gblPropertyTemplatesIds[propertyKey];
+            delete gblPropertyTemplatesIds[propertyKey];
+          }
+        }  
       }
-      
-      
-      // Trova la chiave che corrisponde al pattern
-      let propertyKey = Object.keys(gblPropertyTemplatesIds).find(key => {
-        return key.startsWith(new_widget[0][0].lblComponentName) && key.endsWith(gblCurrentStepOrder);
-      });
 
-      // diverso da instance
-      if (propertyKey) {
-        // Estrai la parte centrale della chiave
-        let parts = propertyKey.split('_');
-        let centralPart = parts[2];
-
-        // Confronta la parte centrale con instance
-        if (parseInt(centralPart) !== instance) {
-          // Crea una nuova chiave con instance al posto della parte centrale
-          let newKey = `${parts[0]}_${parts[1]}_${instance}_${parts[3]}`;
-
-          // Aggiorna il dizionario con la nuova chiave
-          gblPropertyTemplatesIds[newKey] = gblPropertyTemplatesIds[propertyKey];
-          delete gblPropertyTemplatesIds[propertyKey];
-        }
-      }  */
 
       new_widget[1].forEach(prop => {
         if (/^[^_]+_.*_.*_.*$/.test(prop.lblPropertyValue)) {
-          let parts = prop.lblPropertyValue.split("_");
-          if (parts.length >= 4) { 
-            parts[parts.length - 2] = instance; 
-            prop.lblPropertyValue = parts.join("_"); 
+          let partsValue = prop.lblPropertyValue.split("_");
+          if (partsValue.length >= 4) { 
+            partsValue[partsValue.length - 2] = instance; 
+            prop.lblPropertyValue = partsValue.join("_"); 
           }
         }
       });
