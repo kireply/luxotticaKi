@@ -10,6 +10,7 @@ define({
   
   // This function is called at the end of executing functions "editProperty", "cloneComponent" or "deleteComponent"
   selectComponent: function(rightData, leftData, instance, nested, lastComponentWidth){
+    voltmx.print("### INIZIATO -selectComponent-");
     voltmx.print("### RIGHT DATA: " + JSON.stringify(rightData));
     voltmx.print("### LEFT DATA: " + JSON.stringify(leftData));
     voltmx.print("### MODES: " + JSON.stringify(this.modes));
@@ -75,12 +76,12 @@ define({
       let props = selectedComp.rightData;
       voltmx.print("### selectedComp.leftData: " + selectedComp.leftData);
       voltmx.print("### selectedComp.leftData stringify: " + JSON.stringify(selectedComp.leftData) );
-      //debugger;
+      
       let searchKey = selectedComp.leftData[0].lblComponentName + "_" + instance + "_" + (gblCurrentStepOrder).toString();  // SCOMMENTATO
       //let searchKey = selectedComp.leftData[0].lblComponentName;
       voltmx.print("### search: " + JSON.stringify(selectedComp.leftData[0].modalImgComponent) );
       let foundComponentConfig = Object.keys(this.modes).find(key => key.startsWith(searchKey));
-      //debugger;
+      
       if (foundComponentConfig) {
         props.forEach(item => {
           let propComp = null;
@@ -157,6 +158,9 @@ define({
       
     };
     
+    
+    
+    
     // the click on any part of the selected component execute the same eventHandler.
     selectedComp.onRowClickTeaser = selectedCompEventHandler;
     selectedComp.onRowClickTeaserRight = selectedCompEventHandler;
@@ -188,12 +192,12 @@ define({
 
     selectedComp.flxSelectedComponentLeft.segmentLeft.setData(leftData);
     selectedComp.flxSelectedComponentRight.segmentRight.setData(rightData);
-    
+
     if (nested === true && !gblEditingRightSide) {
       voltmx.print("### ENTRATO IN IF NESTED === TRUE");
       selectedComp.flxAddNestedVisible = true;
     }
-    
+
     flex.add(selectedComp);      
 
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
@@ -250,7 +254,7 @@ define({
       this.showOrHideMoveCloneDelete(selectedComp);
     }
     
-
+    voltmx.print("### FINITO -selectComponent-");
   }, //end of function "selectComponent"
 
   
@@ -260,6 +264,7 @@ define({
   
   // this function should update the component selected with the settings edited on the right Setting Side
   onEndEditingCallback: function(propComp, identify, dropdown, switched){  //identity = selectedComponent.id
+    voltmx.print("### INIZIATO -onEndEditingCallback-");
     let value = null;
     if (dropdown){
        value = propComp.listBoxPropertyValue.selectedKeyValue[1];
@@ -398,6 +403,7 @@ define({
   /*  if ((!switched) && (!dropdown)){
       propComp.propertyValue = "";
     }*/
+    voltmx.print("### FINITO -onEndEditingCallback-");
   },  // end of function "onEditingCallback".
 
   
@@ -408,7 +414,7 @@ define({
   * We retrieve from the db the data related to the component selected (calling the service PROPERTY_TEMPLATE_CustomQuery)
   * and we pass them to the function as parameters. */
   editProperty: function(list, rightSegmentData, leftSegmentData, selected_item, selected_item_img, selected_item_modal_img){
-
+    voltmx.print("### INIZIATO -editProperty-");
     voltmx.print("### LIST: " + JSON.stringify(list));
 //     LIST: [{"mode":"dropdown","default":"bottom-left","component_name":"RXC_BRAND_FOOTER","name":"position","id":"129","type":"string","position_values":"top-left, top-right, bottom-left, bottom-right, center","required":"false"},{"mode":"label","default":"Frame size","component_name":"RXC_BRAND_FOOTER","name":"frameSize","id":"130","type":"string","position_values":"top-left, top-right, bottom-left, bottom-right, center","required":"false"}]
     voltmx.print("### RIGHT SEGMENT DATA: " + JSON.stringify(rightSegmentData));  // starts empty (es. [])
@@ -502,7 +508,7 @@ define({
      // console.log(list[i]);
 
       let propertyName = list[i].name;
-      //debugger;
+      
       if(propertyName === "attribute") { // nestedComponents (or we could put configurable)
         nested = true;
         this.modes[compKey].push({"nestedComponents": [] });
@@ -593,7 +599,7 @@ define({
         voltmx.print("### LABEL KEY: " + JSON.stringify(label_key));
         if (gblFetchedLabels.length > 0 && (gblEditingLeftSide || gblEditingRightSide)) {  // ci troviamo nel caricamento di componenti esistenti
           let record = gblFetchedLabels.find(temp => temp.id === label_key);
-          //debugger;
+         
           
           if (record !== null) {
             if(!("en_GB" in record) || record["en_GB"] === null || record["en_GB"] === "") {
@@ -603,7 +609,7 @@ define({
             }
           }
         } else {
-          //debugger;
+          
           // caso in cui stiamo inserendo in una delle due sezioni un nuovo componente
           if(!("default" in list[i]) || list[i].default === null || list[i].default === "") { // se ha delle labels con traduzioni di default, mostriamo quelle
             propComp.propertyValue = label_key;
@@ -705,8 +711,9 @@ define({
     voltmx.print("### leftSegmentData: " + leftSegmentData);
     voltmx.print("### leftSegmentData STRINGIFY: " + JSON.stringify(leftSegmentData) );
     
-    //debugger;
+    
     this.selectComponent(rightSegmentData, leftSegmentData, instance, nested, lastComponentWidth);
+    voltmx.print("### FINITO -editProperty-");
   }, // end of function editProperty.
 
   
@@ -728,9 +735,10 @@ define({
 
   
   
+  
   // function invoked when Save Button is clicked (invoked from action editor)
   saveStepComposition: function(){
-
+    voltmx.print("### INIZIATO -saveStepComposition-");
     //voltmx.application.showLoadingScreen(null, "Saving step...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
 
     voltmx.print("### GBL PROPERTY TEMPLATES IDS: " + JSON.stringify(gblPropertyTemplatesIds));
@@ -785,11 +793,11 @@ define({
               */
 
 
-			  
+
               let translations = {};
               // we have the ids and all translation different from english GB
               if (gblFetchedLabels.length > 0) {
-              /*  let result = gblFetchedLabels.reduce((acc, record) => {
+                /*  let result = gblFetchedLabels.reduce((acc, record) => {
                   // per ogni record salviamo l'id
                   let filteredRecord = { id: record.id }; // Inizia con "id"
                   for (let key in record) {
@@ -802,7 +810,7 @@ define({
                   return acc;
                 }, []);  */
 
-                
+
                 let record = gblFetchedLabels.find(record => record.id === elementoTrovato_left[prop_id_left[0]].key);
 
                 if (record) {
@@ -891,8 +899,8 @@ define({
         });
       });
 
-    } 
-
+    }  // finita sezione di sinistra
+    
 
     let associatedId = null;
     let scrolls = steps.filter(step => step.id.startsWith("flxScrollRight"));
@@ -1043,6 +1051,7 @@ define({
     });
     
     //voltmx.application.dismissLoadingScreen();
+    voltmx.print("### FINITO -editProperty-");
   },   // end of function saveStepComposition
   
   
@@ -1053,6 +1062,7 @@ define({
   // Callback of the COMPONENT_CREATE service, in which property instances and labels of the just created component instance are created
   // Dovrebbe essere aggiustato e reso generico anche per il "left side", per ora funziona solo per il "right side"
   componentCreateCallback: function(widget, property_instance_right, response, component_instance_right, step_id){
+    voltmx.print("### INIZIATO -componentCreateCallback-");
     widget["lblComponentId"].text = response.COMPONENT_INSTANCE[0].id;  // chiave primaria nel DB, a cui Nested Component deve puntare per trovare il padre
     property_instance_right["component_instance_id"] = response.COMPONENT_INSTANCE[0].id;
     let props_right = widget["flxSelectedComponentRight"]["segmentRight"]["data"];
@@ -1168,11 +1178,13 @@ define({
                                                                                         );
       }
     });
-  },
+    voltmx.print("### FINITO -componentCreateCallback-");
+  },  // end of function "componentCreateCallback"
   
     
   // this function creates the new step (and the related box, at the top right)
   addNewStep: function(left_position, title){
+    voltmx.print("### INIZIATO -addNewStep-");
     let index = gblLastInsertedStep + 1;
 
     gblLastInsertedStep += 1;
@@ -1370,6 +1382,7 @@ define({
     
     box.onClickTeaser();
     
+    voltmx.print("### FINITO -addNewStep-");
   },  // end of function "addNewStep"
   
   
@@ -1381,6 +1394,7 @@ define({
   
   
   findCurrentFlexScroll: function(){
+    voltmx.print("### INIZIATO -findCurrentFlexScroll-");
     let scroll = null;
     let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
     let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
@@ -1404,6 +1418,7 @@ define({
     }
     return scroll
     
+    voltmx.print("### FINITO -findCurrentFlexScroll-");
   },  // end of function "findCurrentFlexScroll"
   
   
@@ -1414,9 +1429,10 @@ define({
   
   
   clickedArrow: function(direction, selectedComp){
+    voltmx.print("### INIZIATO -clickedArrow-");
     let scroll = this.findCurrentFlexScroll();
     let scroll_widgets = scroll.widgets();
-    //debugger;
+    //debugger; DENTRO A funzione -clickedArrow-
     
     // find the current widget index
     let currentWidgetIndex = scroll_widgets.findIndex(widget => widget.hasOwnProperty(selectedComp.id));
@@ -1705,6 +1721,7 @@ define({
     this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
     this.view.settingsSide.txt.setVisibility(true);
     
+    voltmx.print("### FINITO -clickedArrow-");
   },  // end of function "clickedArrow"
   
   
@@ -1716,6 +1733,7 @@ define({
   
   
   showOrHideMoveCloneDelete: function(selectedComp){
+    voltmx.print("### INIZIATO -showOrHideMoveCloneDelete-");
     let scroll = this.findCurrentFlexScroll();
     let scroll_widgets = scroll.widgets();
     let max = 0;
@@ -1756,6 +1774,7 @@ define({
       }
     });
 
+    voltmx.print("### FINITO -showOrHideMoveCloneDelete-");
   },  // end of functon "showOrHideMoveCloneDelete" 
   
   
@@ -1766,6 +1785,7 @@ define({
   
   
   cloneComponent: function(id){
+    voltmx.print("### INIZIATO -cloneComponent-");
     let scroll = this.findCurrentFlexScroll();
     let scroll_widgets = scroll.widgets();
     let new_scroll_widgets = [];
@@ -1775,7 +1795,7 @@ define({
       let widget_key = Object.keys(widget).find(key => key.startsWith("component"));
       new_scroll_widgets.push([widget[widget_key].leftData, widget[widget_key].rightData]);
       let cloneKey = widget[widget_key].leftData[0].lblComponentName + "_" + widget[widget_key].componentOrder + "_" + gblCurrentStepOrder;
-      //debugger;
+      //debugger; DENTRO A -cloneComponent-
       
       if(widget[widget_key].id === id){
         let newOrder = parseInt(widget[widget_key].componentOrder, 10) + 1;
@@ -1811,7 +1831,7 @@ define({
         new_scroll_widgets.push([widget[widget_key].leftData, widget[widget_key].rightData]);
       }
     });
-    debugger;
+    debugger; // DENTRO A -cloneComponent-
     scroll.removeAll();
         
     // aggiorniamo le properties dei componenti successivi (es chiave labels con istanza e order aggiornato)
@@ -1885,10 +1905,10 @@ define({
         }
       });
       gblLastInsertedComponent = new_widget[0][0].lblComponentName;
-//       debugger;
       this.selectComponent(new_widget[1], new_widget[0], instance, false);
     });
     
+    voltmx.print("### FINITO -cloneComponent-");
   },  // end of function "cloneComponent".
   
   
@@ -1899,6 +1919,7 @@ define({
   
   
   deleteComponent: function(id){
+    voltmx.print("### INIZIATO -deleteComponent-");
     let scroll = this.findCurrentFlexScroll();
     let scroll_widgets = scroll.widgets();
     let new_scroll_widgets = [];
@@ -1923,15 +1944,16 @@ define({
         }
       });
       gblLastInsertedComponent = new_widget[0][0].lblComponentName;
-//       debugger;
       this.selectComponent(new_widget[1], new_widget[0], instance, false);
     });
+    
+    voltmx.print("### FINITO -deleteComponent-");
   },    // end of function "deleteComponent".
   
   
   // this function process all the steps related to a section (eather left or right) based on the list given in input and the order
   processSteps: function(listToProcess, order, componentsImages, propertyTemplates, nestedComponents) {
-    
+    voltmx.print("### INIZIATO -processSteps-");
     // Filtra e raggruppa i record per component_template_name + component_order
     // dentro a componentDataDict ci sono tutti i componenti di uno step
     let componentDataDict = listToProcess.reduce((acc, reference) => {
@@ -1970,7 +1992,7 @@ define({
       return acc;
     }, {});
     
-    //debugger;
+    
     // Raggruppa i records (di property templates) per component_name e component_order
     let groupedPropertyTemplates = propertyTemplates.reduce((acc, record) => {
       if (record.step_order === order) {
@@ -1996,8 +2018,7 @@ define({
       acc[item.component_instance_father_id] = item.component_instance_id;
       return acc;
     }, {});
-
-    //debugger;
+    
 
     let previewImage;
     let modalImage;
@@ -2014,7 +2035,6 @@ define({
       let keyParts = key.split('_');
       // Rimuovi solo l'id e conserva il nome del componente e l'ordine
       let componentKey = keyParts.slice(0, -2).concat(keyParts.slice(-1)).join('_');
-      //debugger;
       
       
       modalImage = groupedComponentsImages[componentKey][0].modalImage;
@@ -2042,7 +2062,7 @@ define({
       let isPresent = values.includes(componentId.toString());  // il component che stiamo processando è un figlio (innestato)
       
       if (isPresent) {
-        //debugger;
+        
         gblIsNestedInsideEdit = true;
         
         let scroll = this.findCurrentFlexScroll();
@@ -2067,7 +2087,7 @@ define({
         });
         
       }
-      //debugger;
+      
       
       this.editProperty(list, transformedValue, [], componentName, previewImage, modalImage);
       
@@ -2075,6 +2095,7 @@ define({
       gblIsNestedInsideEdit = false;
     });
     
+    voltmx.print("### FINITO -processSteps-");
   }, // end of function processSteps.
   
   
@@ -2083,7 +2104,7 @@ define({
   
   // this function laod the flow's data already existing (steps and components)
   loadFlowData: function(flow_id, stepsList, stepSectionList, previewSectionList, nestedComponents, componentsImages, propertyTemplates){  // stepsList è il risultato di STEP_flow_CustomQuery.records
-    
+    voltmx.print("### INIZIATO -loadFlowData-");
     //debugger;
     //voltmx.application.showLoadingScreen(null, "Loading components...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
     //checking input parameters content
@@ -2171,7 +2192,8 @@ define({
     this.view.settingsSide.txt.setVisibility(true);
     
     //voltmx.application.dismissLoadingScreen();
-  }
+    voltmx.print("### FINITO -loadFlowData-");
+  }   // end of function "loadFlowData"
   
   
 });
