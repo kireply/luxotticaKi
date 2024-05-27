@@ -1,13 +1,13 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
-    "_height_": {
+    "_bottom_": {
         "type": "string",
-        "value": "60%"
+        "value": "4%"
     },
-    "_left_": {
-        "type": "string",
-        "value": "0%"
+    "_height_": {
+        "type": "ref",
+        "value": "preferred"
     },
     "_margin_": [
         1,
@@ -21,15 +21,11 @@
         0,
         0
     ],
-    "_skin_": "s1a16550f88c443fafb2a7a137c8d2f2",
-    "_text_": "Label",
-    "_top_": {
-        "type": "string",
-        "value": "0%"
-    },
+    "_skin_": "sa79a94edfb846958bcf40faff56ddd9",
+    "_text_": "-Flow Name-",
     "_width_": {
-        "type": "string",
-        "value": "100%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {
@@ -43,13 +39,9 @@
         "type": "string",
         "value": "50%"
     },
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerweight": 100,
-    "contentalignment": 5,
-    "id": "lblStepTitle",
+    "contentalignment": 4,
+    "id": "lblFlowName",
     "info": null,
     "ipad": {
         "psp": {
@@ -63,10 +55,10 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "e96d9e591ac744b18526a6fc8753b11a",
+    "kuid": "j6b2392ec86a4ab78bfefceeffdf71b4",
     "name": "kony.ui.Label",
-    "parent": "flxBoxStep",
-    "pf": "userwidgetmodel",
+    "parent": "flxContainerHeader",
+    "pf": "frmStepComposition",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",

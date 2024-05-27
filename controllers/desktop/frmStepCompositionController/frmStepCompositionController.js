@@ -601,7 +601,7 @@ define({
           let record = gblFetchedLabels.find(temp => temp.id === label_key);
          
           
-          if (record !== null) {
+          if (record !== null && record !== undefined) {
             if(!("en_GB" in record) || record["en_GB"] === null || record["en_GB"] === "") {
               propComp.propertyValue = label_key  // se "en_GB" è null o stringa vuota allora ci teniamo la chiave
             } else {
@@ -1051,7 +1051,7 @@ define({
     });
     
     //voltmx.application.dismissLoadingScreen();
-    voltmx.print("### FINITO -editProperty-");
+    voltmx.print("### FINITO -saveStepComposition-");
   },   // end of function saveStepComposition
   
   
@@ -1240,7 +1240,7 @@ define({
             widget.imgDeleteStep.isVisible = false;
             widget.imgEditStep.isVisible = false;
             widget.lblStepOrder.fontColor = "00000000"; //black
-            widget.lblStepTitle.fontColor = "00000000";
+            widget.lblStepTitle.fontColor = "00000000"; //black
             let scroll = flxScrolls.find(s => s.id === expectedScroll);
             if (scroll) {
               scroll.isVisible = false;
@@ -1249,22 +1249,22 @@ define({
             let widget_new = steps_widgets.find(w => w.id === "flxBoxFirstStep");
             if (widget_new) {
               voltmx.print("&&& DENTRO if widget_new");
-              widget_new.backgroundColor = "FFFFFF00"; 
+              widget_new.backgroundColor = "FFFFFF00"; // white
               widget_new.imgDeleteStep.isVisible = false;
               widget_new.imgEditStep.isVisible = false;
-              widget_new.lblStepOrder.fontColor = "00000000";
-              widget_new.lblStepTitleIntoStepComposition.fontColor = "00000000";
+              widget_new.lblStepOrder.fontColor = "00000000"; //black
+              widget_new.lblStepTitleIntoStepComposition.fontColor = "00000000"; //black
               this.view.flxRightSide.flxScrollRight.setVisibility(false);
             }
           }
         } else {  // treating the current step
           voltmx.print("&&& DENTRO ELSE ");
           let widget = steps_widgets.find(w => w.id === current_id);
-          widget.flxBoxStep.backgroundColor = "00000000";
+          widget.flxBoxStep.backgroundColor = "00000000"; //black
+          widget.lblStepOrder.fontColor = "FFFFFF00";  // white
+          widget.lblStepTitle.fontColor = "FFFFFF00";  // white
           widget.imgDeleteStep.isVisible = true;
           widget.imgEditStep.isVisible = true;
-          widget.lblStepOrder.fontColor = "FFFFFF00";
-          widget.lblStepTitle.fontColor = "FFFFFF00";
           let scroll = flxScrolls.find(s => s.id === current_scroll);
             if (scroll) {
               scroll.isVisible = true;
@@ -1280,6 +1280,7 @@ define({
     };  // end box.onCLickTeaser
     
     
+    
     box.onTouchEndEditTeaser = () => {
       
       gblStepBoxToChange = box;
@@ -1291,7 +1292,7 @@ define({
       this.view.btnChange.setVisibility(true);
       newOrder = gblCurrentStepOrder.toString();
 
-      voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("STEP_CustomQueryGetSingleStep", {}, {flow_id : gblFlowId, order: newOrder}, (STEP_CustomQueryGetSingleStep) => { 
+      voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("STEP_CustomQueryGetSingleStep", {}, {flow_id: gblFlowId, order: newOrder}, (STEP_CustomQueryGetSingleStep) => { 
 
         voltmx.print("### CLICCATO SU MATITINA");
         voltmx.print("### gblCurrentStepOrder: " + gblCurrentStepOrder);
@@ -1380,7 +1381,7 @@ define({
     this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
     this.view.settingsSide.txt.setVisibility(true);
     
-    box.onClickTeaser();
+    //box.onClickTeaser();
     
     voltmx.print("### FINITO -addNewStep-");
   },  // end of function "addNewStep"
@@ -1783,12 +1784,12 @@ define({
   
   
   
-  
+  // this function clones (duplicate) the component selected
   cloneComponent: function(id){
     voltmx.print("### INIZIATO -cloneComponent-");
     let scroll = this.findCurrentFlexScroll();
     let scroll_widgets = scroll.widgets();
-    let new_scroll_widgets = [];
+    let new_scroll_widgets = [];  // recreating the scroll with the new list of components (including the duplicated one)
     let name = null;
     
     scroll_widgets.forEach( widget => {
@@ -1797,7 +1798,7 @@ define({
       let cloneKey = widget[widget_key].leftData[0].lblComponentName + "_" + widget[widget_key].componentOrder + "_" + gblCurrentStepOrder;
       //debugger; DENTRO A -cloneComponent-
       
-      if(widget[widget_key].id === id){
+      if(widget[widget_key].id === id){  // the current component from the old list is equal to the one we are duplicating
         let newOrder = parseInt(widget[widget_key].componentOrder, 10) + 1;
         let newKey = widget[widget_key].leftData[0].lblComponentName + "_" + (newOrder) + "_" + gblCurrentStepOrder;
         name = widget[widget_key].leftData[0].lblComponentName;
@@ -1839,11 +1840,11 @@ define({
       let instance = (index + 1).toString();
       
       if(name !== new_widget[0][0].lblComponentName) {
-        
+
         //Trova la chiave che corrisponde al pattern
-      let foundKey = Object.keys(this.modes).find(key => {
-        return key.startsWith(new_widget[0][0].lblComponentName) && key.endsWith(gblCurrentStepOrder);
-      });
+        let foundKey = Object.keys(this.modes).find(key => {
+          return key.startsWith(new_widget[0][0].lblComponentName) && key.endsWith(gblCurrentStepOrder);
+        });
 
         // diverso da instance
         if (foundKey) {
@@ -1896,7 +1897,7 @@ define({
 
 
       new_widget[1].forEach(prop => {
-        if (/^[^_]+_.*_.*_.*$/.test(prop.lblPropertyValue)) {
+        if (/^[^_]+_.*_.*_.*$/.test(prop.lblPropertyValue)) {  // test che controlla se valore passato è del tipo "abc_def_ghi_jkl"
           let partsValue = prop.lblPropertyValue.split("_");
           if (partsValue.length >= 4) { 
             partsValue[partsValue.length - 2] = instance; 
@@ -2105,7 +2106,7 @@ define({
   // this function laod the flow's data already existing (steps and components)
   loadFlowData: function(flow_id, stepsList, stepSectionList, previewSectionList, nestedComponents, componentsImages, propertyTemplates){  // stepsList è il risultato di STEP_flow_CustomQuery.records
     voltmx.print("### INIZIATO -loadFlowData-");
-    //debugger;
+    debugger;
     //voltmx.application.showLoadingScreen(null, "Loading components...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
     //checking input parameters content
     voltmx.print("### flow_id: " + flow_id);
@@ -2138,16 +2139,15 @@ define({
     this.view.lblStepTitleIntoStepComposition.text = stepsList[0].title;
     gblIdOrderSteps[stepsList[0].id] = stepsList[0].order;
     
-    gblEditingLeftSide = true;
+    
     //inside left
+    gblEditingLeftSide = true;
     this.processSteps(previewSectionList,"1", componentsImages, propertyTemplates, nestedComponents);
     gblEditingLeftSide = false; // after we are done with the function "processSteps", we set the boolean to false again.
     
-    gblEditingRightSide = true;
-
-    voltmx.print("### SONO DOPO CALLBACK SERVIZIO");
     
-    // inside right
+    // inside right (for first step)
+    gblEditingRightSide = true;
     this.processSteps(stepSectionList,"1", componentsImages, propertyTemplates, nestedComponents);
     
     stepsList.slice(1).forEach(record => {
@@ -2156,22 +2156,22 @@ define({
       voltmx.print("### FLEX STEPS NUMBER OF WIDGETS: " + JSON.stringify(steps_widgets.length));
 
       if (steps_widgets.length <= 2){  // only add box and first box
-        this.view.flxBoxFirstStep.backgroundColor = "FFFFFF00";
-        this.view.flxBoxFirstStep.imgDeleteStep.setVisibility(false);
-        this.view.flxBoxFirstStep.imgEditStep.setVisibility(false);
-        this.view.flxBoxFirstStep.lblStepOrder.fontColor = "00000000";
-        this.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = "00000000";
+//         this.view.flxBoxFirstStep.backgroundColor = "FFFFFF00";
+//         this.view.flxBoxFirstStep.imgDeleteStep.setVisibility(false);
+//         this.view.flxBoxFirstStep.imgEditStep.setVisibility(false);
+//         this.view.flxBoxFirstStep.lblStepOrder.fontColor = "00000000";
+//         this.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = "00000000";
         //left_position = parseInt(self.view.flxBoxFirstStep.left, 10) + parseInt(self.view.flxBoxFirstStep.width, 10) + 1;
         left_position = parseInt(this.view.flxBoxFirstStep.left, 10) + 80 + 10;  //80 width of firstBox + 10 to keep some space  
       } else {  // there's already more than one step
         let lastStep = 'boxStep' + gblLastInsertedStep;
         steps_widgets.forEach(widget => {
           if (widget.id === lastStep) {
-            widget.flxBoxStep.backgroundColor = "FFFFFF00";
-            widget.imgDeleteStep.isVisible = false;
-            widget.imgEditStep.isVisible = false;
-            widget.lblStepOrder.fontColor = "00000000";
-            widget.lblStepTitle.fontColor = "00000000";
+//             widget.flxBoxStep.backgroundColor = "FFFFFF00";
+//             widget.imgDeleteStep.isVisible = false;
+//             widget.imgEditStep.isVisible = false;
+//             widget.lblStepOrder.fontColor = "00000000";
+//             widget.lblStepTitle.fontColor = "00000000";
             //left_position = parseInt(widget.left, 10) + parseInt(widget.width, 10) + 1;
             left_position = parseInt(widget.left, 10) + 80 + 10;
           }
@@ -2180,8 +2180,10 @@ define({
 
       gblIdOrderSteps[record.id] = record.order;
       this.addNewStep(left_position, record.title);
+      
       voltmx.print("### CURRENT STEP ORDER in forEach: " + JSON.stringify(gblCurrentStepOrder));
       
+      // inside right (for all the others step)
       this.processSteps(stepSectionList, record.order, componentsImages, propertyTemplates, nestedComponents);
       
     }); // end of forEach
@@ -2190,6 +2192,7 @@ define({
 
     this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
     this.view.settingsSide.txt.setVisibility(true);
+    //this.view.flxSteps.widgets()[steps_widgets.length].onClickTeaser();   to select and highlight the last step box inserted
     
     //voltmx.application.dismissLoadingScreen();
     voltmx.print("### FINITO -loadFlowData-");

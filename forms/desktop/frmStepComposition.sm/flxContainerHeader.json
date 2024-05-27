@@ -37,6 +37,7 @@
     "children": [
         "formheader",
         "btnPreview",
+        "lblFlowName",
         "flxSave",
         "flxPublish",
         "flxDelete"

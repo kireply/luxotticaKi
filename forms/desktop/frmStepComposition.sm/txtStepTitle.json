@@ -44,7 +44,8 @@
     "desktopweb": {
         "ide_onEndEditing": "AS_TextField_c426c24bf9574fd78b66a3766f3a41a9"
     },
-    "focusskin": "s4ae88d6059f41ebb18f1220b211dfc3",
+    "disabledSkins": {},
+    "focusskin": "s57ec161ef3f466b864b2c04f6c9ba9e",
     "id": "txtStepTitle",
     "ide_onTextChange": "AS_TextField_a99e1cc7c78e4d56905b2879a5142db3",
     "info": null,

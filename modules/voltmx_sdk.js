@@ -1,5 +1,5 @@
  /*
-  * voltmx-sdk-ide Version 9.5.25
+  * voltmx-sdk-ide Version 9.5.31
   */
         
 //#ifdef iphone
@@ -540,7 +540,7 @@ voltmx.sdk.currentInstance = null;
 voltmx.sdk.isLicenseUrlAvailable = true;
 voltmx.sdk.isOAuthLogoutInProgress = false;
 voltmx.sdk.constants = voltmx.sdk.constants || {};
-voltmx.sdk.version = "9.5.25";
+voltmx.sdk.version = "9.5.31";
 voltmx.sdk.logsdk = new voltmxSdkLogger();
 voltmx.sdk.syncService = null;
 voltmx.sdk.dataStore = voltmx.sdk.dataStore || new voltmxDataStore();
