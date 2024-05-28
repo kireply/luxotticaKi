@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_a57a87fd15d04e04bc9c7984b8ebeb2c",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### entrato in postShow di frmStepComposition\");\n\n// Disabling text areas.\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n// setting the list of component blurred (as no section is open yet)\nthis.view.flxComponentsSide.opacity = 0.5;\n",
+            "codeSnippet": "debugger;\nvoltmx.print(\"### entrato in postShow di frmStepComposition\");\n// Disabling text areas.\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n// setting the list of component blurred (as no section is open yet)\nthis.view.flxComponentsSide.opacity = 0.5;\n",
             "parentId": null,
             "callbackType": null
         }, {
@@ -100,17 +100,6 @@
             "criteria": "all",
             "disabled": false
         }, {
-            "id": "LOADING_INDICATOR_b45d96d08c544473a3f4bbe700a74ec4",
-            "selectedOption": "show",
-            "parentId": null,
-            "type": "LOADING_INDICATOR",
-            "callbackType": null,
-            "skin": "none",
-            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
-            "isBlocked": "true",
-            "showProgressIndicator": "true",
-            "text": "Fetching components' templates..."
-        }, {
             "id": "INVOKE_SERVICE_ead40127c0ee491ba586dd246e49b733",
             "type": "INVOKE_ASYNC_SERVICE",
             "inputparams": null,
@@ -169,16 +158,6 @@
             "codeSnippet": "voltmx.print(\"### entrato in onClick di btnProceed da frmStepCreation\");\n\n// setting the first step box title (created in the previous form)\nthis.view.lblStepTitleIntoStepComposition.text = gblFirstStepTitle;\n// setting the flow name show in top center of the form (as reminder of the current flow open)\nthis.view.lblFlowName.text = gblFlowName;\n\n// setting the first step's box on focus (black background, icons shown, related scroll shown)\nthis.view.flxBoxFirstStep.backgroundColor = \"00000000\";\nthis.view.flxBoxFirstStep.imgDeleteStep.isVisible = true;\nthis.view.flxBoxFirstStep.imgEditStep.isVisible = true;\nthis.view.flxBoxFirstStep.lblStepOrder.fontColor = \"FFFFFF00\";\nthis.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = \"FFFFFF00\";\n//this.view.flxRightSide.flxScrollRight.setVisibility(true);\n//this.view.settingsSide.flxScrollSettingsContent.removeAll();\n//this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);\n//this.view.settingsSide.txt.setVisibility(true);\n//gblCurrentStepOrder = 1;\ngblCurrentStepTitle = this.view.lblStepTitleIntoStepComposition.text;\nvoltmx.print(\"### CURRENT STEP ORDER: \" + JSON.stringify(gblCurrentStepOrder));\n\n",
             "parentId": "_af518630a2844f8da95346600df226de",
             "callbackType": null
-        }, {
-            "id": "LOADING_INDICATOR_gb1271387fc5421aa6eed33dfc9265a5",
-            "selectedOption": "dismiss",
-            "parentId": "INVOKE_SERVICE_ead40127c0ee491ba586dd246e49b733",
-            "type": "LOADING_INDICATOR",
-            "callbackType": "Callback",
-            "skin": "none",
-            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
-            "isBlocked": "true",
-            "showProgressIndicator": "true"
         }, {
             "id": "_j6286426bdb94ed28eaaf8d53949d0c3",
             "type": "IF_CONDITION",
@@ -416,16 +395,6 @@
             "parentId": "_a67defbe01564ed48823d29022ea6ec8",
             "enableMappingEditor": true
         }, {
-            "id": "LOADING_INDICATOR_f6c51ddee5614aac9117579f617435e2",
-            "selectedOption": "dismiss",
-            "parentId": "INVOKE_ASYNC_SERVICE_fbd4cfd868214f8c9872afae80d5f8fd",
-            "type": "LOADING_INDICATOR",
-            "callbackType": "Callback",
-            "skin": "none",
-            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
-            "isBlocked": "true",
-            "showProgressIndicator": "true"
-        }, {
             "id": "IF_CONDITION_fca094ddfe15487bb1978abbcdd0feb3",
             "type": "IF_CONDITION",
             "conditions": [{
@@ -643,6 +612,16 @@
             "callbackType": "Callback",
             "criteria": "all"
         }, {
+            "id": "LOADING_INDICATOR_af59eacff317435e8fc20322065a89cf",
+            "selectedOption": "dismiss",
+            "parentId": "_j1a3d7df0c6440db9bfc16eef9216c40",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "SHOW_ALERT_c77fdb8156754869a1a8f9da26fa22f7",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
@@ -733,6 +712,16 @@
             "parentId": "INVOKE_SERVICE_e49deeda4c5148b0a38a26e47d7ef92f",
             "callbackType": "Callback",
             "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_e3ca924a61de4655b6ca760923d0eaaf",
+            "selectedOption": "dismiss",
+            "parentId": "_e2253cdfaea84437b1ee0262b0355869",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
         }, {
             "id": "SHOW_ALERT_afb227e7f848456eb3d1ddeb4b352b58",
             "type": "SHOW_ALERT",
@@ -825,6 +814,16 @@
             "callbackType": "Callback",
             "criteria": "all"
         }, {
+            "id": "LOADING_INDICATOR_g8052add9cdb4f64874cd4d22790f205",
+            "selectedOption": "dismiss",
+            "parentId": "_a925707511614c9083fc1bfce80038b2",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "SHOW_ALERT_fed37c2dd3c84bfaaa3c9d707b0d41d4",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
@@ -915,6 +914,16 @@
             "parentId": "INVOKE_SERVICE_j5ba63763bff456a8cdb99a61b58c5c2",
             "callbackType": "Callback",
             "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_cb46365276c74d9a9dbcb7ed39099470",
+            "selectedOption": "dismiss",
+            "parentId": "_aac1a47b716e42cabab5daf86ac61711",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
         }, {
             "id": "SHOW_ALERT_j7399f81412b4097acf2a9714293541b",
             "type": "SHOW_ALERT",
@@ -1031,6 +1040,16 @@
             "disabled": null,
             "source": "controller"
         }, {
+            "id": "LOADING_INDICATOR_db10834360024c1a94414afc8d21fe16",
+            "selectedOption": "dismiss",
+            "parentId": "_e61ed4d2fd7a428abaca47703ff4604f",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "_c445ec7cbdfd40be8cbeb57e4ecb3ead",
             "type": "ELSE_CONDITION",
             "conditions": [{
@@ -1043,6 +1062,16 @@
             "parentId": "INVOKE_SERVICE_e9e90d20f66443a4a802d883281d38ed",
             "callbackType": "Callback",
             "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_bc28dc0e1c594f23aa7603776bd02ee7",
+            "selectedOption": "dismiss",
+            "parentId": "_c445ec7cbdfd40be8cbeb57e4ecb3ead",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
         }, {
             "id": "SHOW_ALERT_ce68c3a166674c9baddbc3a46100cb46",
             "type": "SHOW_ALERT",
@@ -1342,6 +1371,16 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
+            "id": "LOADING_INDICATOR_ce9449e2b0fd46ba9f77127edc1d14e4",
+            "selectedOption": "dismiss",
+            "parentId": "SHOW_ALERT_ec1de0316a3a42caa90d5d04b4858e7c",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "True",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "ADD_SNIPPET_jd62bee6fe3c4d5d928343d95cc529bb",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### Step creato correttamente.\");",
@@ -1360,6 +1399,16 @@
             "parentId": "INVOKE_ASYNC_SERVICE_fbd4cfd868214f8c9872afae80d5f8fd",
             "callbackType": "Callback",
             "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_e784128034434cfbb8b1cc45c27bac82",
+            "selectedOption": "dismiss",
+            "parentId": "ELSE_CONDITION_f5b41034a0244dc481f2f1d339a50596",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
         }, {
             "id": "SHOW_ALERT_c193d34804ee4c98a4ef6cfcb9c80eda",
             "type": "SHOW_ALERT",

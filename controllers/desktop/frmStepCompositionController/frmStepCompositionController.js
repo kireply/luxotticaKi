@@ -1,5 +1,5 @@
 define({ 
-
+  
   //Type your controller code here
   //   component_instance_id : null,
   //integrationService : voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB"),
@@ -522,7 +522,7 @@ define({
       let capitalizedName = propertyName.charAt(0).toUpperCase() + propertyName.slice(1) + ": ";
       let properties = {lblPropertyName: capitalizedName, lblPropertyValue: ""}; 
 //       gblLastInsertedComponent = selected_item;
-      console.log(rightSegmentData);
+      voltmx.print(rightSegmentData);
       let propComp = null;
       
       if (list[i].mode === "dropdown"){
@@ -1181,6 +1181,12 @@ define({
     voltmx.print("### FINITO -componentCreateCallback-");
   },  // end of function "componentCreateCallback"
   
+  
+  
+  
+  
+  
+  
     
   // this function creates the new step (and the related box, at the top right)
   addNewStep: function(left_position, title){
@@ -1277,8 +1283,24 @@ define({
       this.view.settingsSide.flxScrollSettingsContent.removeAll();
       this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
       this.view.settingsSide.txt.setVisibility(true);
+      
+      // if the last step has no components, show the default message
+      let thisScroll = flxScrolls.find(scroll => scroll.id === ("flxScrollRight" + (gblCurrentStepOrder === 1 ? "" : gblCurrentStepOrder) ));
+
+      if (thisScroll) {
+        let hasComponents = Object.keys(thisScroll).some(key => key.startsWith('flex'));  // perchè nelle varie proprietà, se sono presenti componenti si trovano in "flex..."
+        if (hasComponents) {
+          this.view.imgNoComponentsRight.setVisibility(false);
+          this.view.lblNoComponentsRight.setVisibility(false);
+          this.view.txtStartPhraseRight.setVisibility(false);
+        } else {
+          this.view.imgNoComponentsRight.setVisibility(true);
+          this.view.lblNoComponentsRight.setVisibility(true);
+          this.view.txtStartPhraseRight.setVisibility(true);
+        }
+      }
+      
     };  // end box.onCLickTeaser
-    
     
     
     box.onTouchEndEditTeaser = () => {
@@ -1383,6 +1405,8 @@ define({
     
     //box.onClickTeaser();
     
+    this.highlightSelectedStepBox();
+
     voltmx.print("### FINITO -addNewStep-");
   },  // end of function "addNewStep"
   
@@ -1417,12 +1441,63 @@ define({
         }
       }
     }
-    return scroll
-    
     voltmx.print("### FINITO -findCurrentFlexScroll-");
+    return scroll;
+    
   },  // end of function "findCurrentFlexScroll"
   
   
+  
+  
+  
+  
+  // this function highlight the step box selected (black background and icons shown)
+  // and remove the highlight from all the other step boxes.
+  highlightSelectedStepBox: function(){
+    voltmx.print("### INIZIATO -highlightSelectedStepBox-");
+    let steps = this.view.flxSteps.widgets();
+    debugger;
+    // removing highlight from all ste boxes (white background and no icons shown)
+    for (let i = 1; i <= gblLastInsertedStep; i++) { // starting from 1 because 0 is the "add new"
+      if (i === 1) {
+        this.view.flxBoxFirstStep.backgroundColor = "FFFFFF00"; // white
+        this.view.lblStepTitleIntoStepComposition.fontColor = "00000000"; // black
+        this.view.lblStepOrder.fontColor = "00000000"; // black
+        this.view.imgEditStep.isVisible = false;
+        this.view.imgDeleteStep.isVisible = false;
+      } else {
+        steps[i].flxBoxStep.backgroundColor = "FFFFFF00"; // white
+        steps[i].flxBoxStep.lblStepOrder.fontColor = "00000000"; // black
+        steps[i].flxBoxStep.lblStepTitle.fontColor = "00000000"; // black
+        steps[i].flxBoxStep.imgDeleteStep.isVisible = false;
+        steps[i].flxBoxStep.imgEditStep.isVisible = false;
+      }
+    }
+
+    // highlighting only the current selected step box
+    voltmx.print("### LUNGHEZZA DI steps" + steps.length);
+    let lastStepBox = steps.find(step => step.id === (gblCurrentStepOrder === 1 ? "flxBoxFirstStep" : "boxStep" + gblCurrentStepOrder) );
+    if (lastStepBox) {
+      if (gblCurrentStepOrder === 1) { // only first step box present
+        this.view.flxBoxFirstStep.backgroundColor = "00000000"; // black
+        this.view.lblStepTitleIntoStepComposition.fontColor = "FFFFFF00"; // white
+        this.view.lblStepOrder.fontColor = "FFFFFF00"; // white
+        this.view.imgEditStep.isVisible = true;
+        this.view.imgDeleteStep.isVisible = true;
+        gblCurrentStepTitle = lastStepBox.lblStepTitleIntoStepComposition.text;
+      } else { // current box is different from the first
+        lastStepBox.flxBoxStep.backgroundColor = "00000000"; // black
+        lastStepBox.flxBoxStep.imgDeleteStep.isVisible = true;
+        lastStepBox.flxBoxStep.imgEditStep.isVisible = true;
+        lastStepBox.flxBoxStep.lblStepOrder.fontColor = "FFFFFF00"; // white
+        lastStepBox.flxBoxStep.lblStepTitle.fontColor = "FFFFFF00"; // white
+        gblCurrentStepTitle = lastStepBox.lblStepTitle.text;
+      }
+    }
+    
+    voltmx.print("### FINITO -highlightSelectedStepBox-");
+    
+  },  // enf of fuction "highlightSelectedStepBox"
   
   
   
@@ -1616,7 +1691,7 @@ define({
       //         console.log("Found Widget:", currentWidget);
       //         console.log("Previous Widget:", previousWidget);
     } else {
-      console.log("Widget non trovato.");
+      voltmx.print("### Widget non trovato.");
     }
 
     let currentLeftData = currentWidgetProperty.leftData;
@@ -1952,6 +2027,11 @@ define({
   },    // end of function "deleteComponent".
   
   
+  
+  
+  
+  
+  
   // this function process all the steps related to a section (eather left or right) based on the list given in input and the order
   processSteps: function(listToProcess, order, componentsImages, propertyTemplates, nestedComponents) {
     voltmx.print("### INIZIATO -processSteps-");
@@ -2089,7 +2169,6 @@ define({
         
       }
       
-      
       this.editProperty(list, transformedValue, [], componentName, previewImage, modalImage);
       
       //probabilmente dopo aver richiamato editProperty, risetta la variabile gblIsNestedInsideEdit a false.
@@ -2098,6 +2177,8 @@ define({
     
     voltmx.print("### FINITO -processSteps-");
   }, // end of function processSteps.
+  
+  
   
   
   
@@ -2187,13 +2268,60 @@ define({
       this.processSteps(stepSectionList, record.order, componentsImages, propertyTemplates, nestedComponents);
       
     }); // end of forEach
-
     gblEditingRightSide = false;
 
+    
     this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
     this.view.settingsSide.txt.setVisibility(true);
     //this.view.flxSteps.widgets()[steps_widgets.length].onClickTeaser();   to select and highlight the last step box inserted
     
+    // setting the last step box inserted as selected (black background and icons shown)
+    let steps = this.view.flxSteps.widgets();
+    debugger;
+    let lastStepBox = steps.find(step => step.id === (gblCurrentStepOrder === 1 ? "flxBoxFirstStep" : "boxStep" + gblCurrentStepOrder) );
+    if (lastStepBox) {
+      if (gblCurrentStepOrder === 1) { // only first step box present
+        this.view.flxBoxFirstStep.backgroundColor = "00000000"; // black
+        this.view.lblStepTitleIntoStepComposition.fontColor = "FFFFFF00"; // white
+        this.view.lblStepOrder.fontColor = "FFFFFF00"; // white
+        this.view.imgEditStep.isVisible = true;
+        this.view.imgDeleteStep.isVisible = true;
+        gblCurrentStepTitle = lastStepBox.lblStepTitleIntoStepComposition.text;
+      } else { // current box is different from the first
+        lastStepBox.flxBoxStep.backgroundColor = "00000000"; // black
+        lastStepBox.flxBoxStep.imgDeleteStep.isVisible = true;
+        lastStepBox.flxBoxStep.imgEditStep.isVisible = true;
+        lastStepBox.flxBoxStep.lblStepOrder.fontColor = "FFFFFF00"; // white
+        lastStepBox.flxBoxStep.lblStepTitle.fontColor = "FFFFFF00"; // white
+        gblCurrentStepTitle = lastStepBox.lblStepTitle.text;
+      }
+    }
+    
+    debugger;
+    //lastStepBox.onClickTeaser();
+    debugger;
+    // if the last step has no components, show the default message
+    let scrolls = this.view.flxRightSide.widgets();
+    let lastScroll = scrolls.find(scroll => scroll.id === ("flxScrollRight" + (gblCurrentStepOrder === 1 ? "" : gblCurrentStepOrder) ));
+    
+    // Hiding all the scrolls but the last (related to the last step)
+    scrolls.forEach(flxScroll => {
+      if (flxScroll.id && flxScroll.id.startsWith('flxScrollRight') && flxScroll.id !== ("flxScrollRight" + gblCurrentStepOrder) ) {
+        flxScroll.setVisibility(false);
+      }
+    });
+    
+    if (lastScroll) {
+      let hasComponents = Object.keys(lastScroll).some(key => key.startsWith('flex'));  // perchè nelle varie proprietà, se sono presenti componenti si trovano in "flex..."
+      if (!hasComponents) {
+        this.view.imgNoComponentsRight.setVisibility(true);
+        this.view.lblNoComponentsRight.setVisibility(true);
+        this.view.txtStartPhraseRight.setVisibility(true);
+      } 
+    }
+    
+
+    debugger;
     //voltmx.application.dismissLoadingScreen();
     voltmx.print("### FINITO -loadFlowData-");
   }   // end of function "loadFlowData"
