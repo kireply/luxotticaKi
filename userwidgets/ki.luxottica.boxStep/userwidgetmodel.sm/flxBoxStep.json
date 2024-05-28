@@ -36,9 +36,9 @@
     "canUpdateUI": true,
     "children": [
         "lblStepOrder",
+        "lblStepTitle",
         "imgDeleteStep",
-        "imgEditStep",
-        "lblStepTitle"
+        "imgEditStep"
     ],
     "clipbounds": false,
     "containerweight": 100,

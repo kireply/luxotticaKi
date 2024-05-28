@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_a57a87fd15d04e04bc9c7984b8ebeb2c",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// Disabling text areas.\n\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n\nthis.view.flxComponentsSide.opacity = 0.5;\n\nvoltmx.print(\"### entrato in postShow di frmStepComposition\");",
+            "codeSnippet": "voltmx.print(\"### entrato in postShow di frmStepComposition\");\n\n// Disabling text areas.\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n// setting the list of component blurred (as no section is open yet)\nthis.view.flxComponentsSide.opacity = 0.5;\n",
             "parentId": null,
             "callbackType": null
         }, {
@@ -166,7 +166,7 @@
         }, {
             "id": "ADD_SNIPPET_cfa25b04a0aa4160825c9f79bcdbcb9e",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.lblStepTitleIntoStepComposition.text = gblFirstStepTitle;\n\nthis.view.lblFlowName.text = gblFlowName;\n\nvoltmx.print(\"### entrato in onClick di btnProceed da frmStepCreation\");",
+            "codeSnippet": "voltmx.print(\"### entrato in onClick di btnProceed da frmStepCreation\");\n\n// setting the first step box title (created in the previous form)\nthis.view.lblStepTitleIntoStepComposition.text = gblFirstStepTitle;\n// setting the flow name show in top center of the form (as reminder of the current flow open)\nthis.view.lblFlowName.text = gblFlowName;\n\n// setting the first step's box on focus (black background, icons shown, related scroll shown)\nthis.view.flxBoxFirstStep.backgroundColor = \"00000000\";\nthis.view.flxBoxFirstStep.imgDeleteStep.isVisible = true;\nthis.view.flxBoxFirstStep.imgEditStep.isVisible = true;\nthis.view.flxBoxFirstStep.lblStepOrder.fontColor = \"FFFFFF00\";\nthis.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = \"FFFFFF00\";\n//this.view.flxRightSide.flxScrollRight.setVisibility(true);\n//this.view.settingsSide.flxScrollSettingsContent.removeAll();\n//this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);\n//this.view.settingsSide.txt.setVisibility(true);\n//gblCurrentStepOrder = 1;\ngblCurrentStepTitle = this.view.lblStepTitleIntoStepComposition.text;\nvoltmx.print(\"### CURRENT STEP ORDER: \" + JSON.stringify(gblCurrentStepOrder));\n\n",
             "parentId": "_af518630a2844f8da95346600df226de",
             "callbackType": null
         }, {

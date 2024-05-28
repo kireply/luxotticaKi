@@ -40,7 +40,7 @@
     "info": null,
     "invokedProperty": "src",
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "db6ebe830b3442e1aa018a4e9e048fb6",
     "name": "kony.ui.Image2",
     "parent": "flxBoxFirstStep",

@@ -20,7 +20,7 @@
     "_indicator_": "none",
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "3dp"
     },
     "_margin_": [
         0,

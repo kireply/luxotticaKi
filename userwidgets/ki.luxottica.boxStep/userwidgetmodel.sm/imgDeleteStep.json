@@ -38,7 +38,7 @@
     "imagescalemode": 1,
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "i5687ceac2cb416ab81df5ee218c17aa",
     "name": "kony.ui.Image2",
     "parent": "flxBoxStep",
