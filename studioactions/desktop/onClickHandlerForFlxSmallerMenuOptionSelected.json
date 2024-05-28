@@ -1,0 +1,25 @@
+{
+    "AS_FlexContainer_e9d294fc509a45889221ab244308da15": {
+        "id": "AS_FlexContainer_e9d294fc509a45889221ab244308da15",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForFlxSmallerMenuOptionSelected",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_b47ad0635a474570b45b761213eb945f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// navigating to frmFlows\nvar ntf = new voltmx.mvc.Navigation(\"frmFlows\");\nntf.navigate();\nvoltmx.print(\"### Navigate to frmFlows\");",
+            "parentId": null
+        }]
+    }
+}

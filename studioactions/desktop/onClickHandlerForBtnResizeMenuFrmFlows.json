@@ -2,6 +2,7 @@
     "AS_Button_b7cbed1d283b4924a7f883e5b2d90989": {
         "id": "AS_Button_b7cbed1d283b4924a7f883e5b2d90989",
         "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnResizeMenuFrmFlows",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"

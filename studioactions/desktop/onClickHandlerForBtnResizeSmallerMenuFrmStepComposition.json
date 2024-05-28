@@ -2,7 +2,7 @@
     "AS_Button_a1dd626f69c6481285ea8b198b60f736": {
         "id": "AS_Button_a1dd626f69c6481285ea8b198b60f736",
         "type": "ACTION_SEQUENCE",
-        "name": "onClickHandlerForBtnResizeSmallerMenuNewStepCreation",
+        "name": "onClickHandlerForBtnResizeSmallerMenuFrmStepComposition",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"

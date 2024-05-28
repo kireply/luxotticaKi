@@ -80,9 +80,7 @@
             }
         },
         "flxBtnLogout": {
-            "__events__": {
-                "ide_onClick": "AS_FlexContainer_a392f2b0596a408295855db8cd65a442"
-            },
+            "__events__": {},
             "__info__": {
                 "kuid": "f1384dc2e7d14e498d8de4b14aed5117",
                 "srcKUID": "a0c260c49fa14d3aa934cade39c38bb0",
@@ -198,9 +196,7 @@
             }
         },
         "segMenu": {
-            "__events__": {
-                "ide_onRowClick": "AS_Segment_ceb58afe9caa45288cc6df842f8fbc1f"
-            },
+            "__events__": {},
             "__info__": {
                 "kuid": "d2e26fe2dc8a48dcb34c53140af775c5",
                 "srcKUID": "f6158cc0defe49f9b27229072ca607e4",

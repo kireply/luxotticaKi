@@ -1356,7 +1356,6 @@ define({
     };
     
     
-    
     box.onTouchEndDeleteTeaser = () => {
       let scroll = this.findCurrentFlexScroll();
       this.view.flxRightSide.remove(scroll);

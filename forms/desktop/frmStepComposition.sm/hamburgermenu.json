@@ -42,17 +42,17 @@
         "btnLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "gc75b327eecf47ebb2d8eed42c9c825d",
+                "kuid": "ca1c9b143e1c4db58ad372e3da4b7876",
                 "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
                 "wType": "Button"
             }
         },
         "btnResizeMenu": {
             "__events__": {
-                "ide_onClick": "AS_Button_d79315942e2548eaade5a1b8d23887dd"
+                "ide_onClick": "AS_Button_a05f79d4ce414403b2d038eba4c26173"
             },
             "__info__": {
-                "kuid": "c2ca8663f736477ea99103c5547ed580",
+                "kuid": "c82632283e914d4c91c7e01b71e3a17d",
                 "srcKUID": "g6220a13ecc543cfbd274408555deb6b",
                 "wType": "Button"
             }
@@ -60,7 +60,7 @@
         "flxBtnLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "aa5123bbcf35422f81b4d05b34199a1d",
+                "kuid": "d4d03d5808974c6da9135893716a228f",
                 "srcKUID": "a0c260c49fa14d3aa934cade39c38bb0",
                 "wType": "FlexContainer"
             }
@@ -69,7 +69,7 @@
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "fe8ea035da694adea40779cde6724013",
+                "kuid": "e8dacea2cc2342e7bc2ae1e39d526662",
                 "srcKUID": "d252c589507e44fd8ed2ab19f3f7e081",
                 "wType": "FlexContainer"
             },
@@ -152,16 +152,15 @@
         "imgLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "e8d560d5d73545a49292bc8214c9740e",
+                "kuid": "e83e8234952e4f3ba19a4f00d144ee26",
                 "srcKUID": "f6d6345317634850bef09677b329a6ec",
                 "wType": "Image"
-            },
-            "src": "logout_true.png"
+            }
         },
         "imgLogout2": {
             "__events__": {},
             "__info__": {
-                "kuid": "e2d7c3c8cff342249858aad846e5d181",
+                "kuid": "c6c8c9f545b04a2390ec2a0d0303ac66",
                 "srcKUID": "d183329a0090424e92fc74f21216b2bb",
                 "wType": "Image"
             }
@@ -169,7 +168,7 @@
         "segMenu": {
             "__events__": {},
             "__info__": {
-                "kuid": "hdb39bde2e024d06801563374aeb2762",
+                "kuid": "f58dca5e45e441b7b4268f01bcd5c575",
                 "srcKUID": "f6158cc0defe49f9b27229072ca607e4",
                 "wType": "Segment"
             }
@@ -181,7 +180,7 @@
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kuid": "fe8ea035da694adea40779cde6724013",
+    "kuid": "e8dacea2cc2342e7bc2ae1e39d526662",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
