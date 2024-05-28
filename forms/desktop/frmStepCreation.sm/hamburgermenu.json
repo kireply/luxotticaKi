@@ -40,49 +40,27 @@
     "containerweight": 0,
     "dataDiffs": {
         "btnLogout": {
-            "__events__": {
-                "ide_onClick": "AS_Button_bf04767aa34f4a50a9f731830e0d2944"
-            },
+            "__events__": {},
             "__info__": {
-                "kuid": "ib795c57ef944729bcadb605d889886a",
+                "kuid": "f4443a685ec244be8300082fc4b17193",
                 "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
                 "wType": "Button"
-            },
-            "bottom": {
-                "Default": {
-                    "type": "number",
-                    "value": "0"
-                }
-            },
-            "responsiveData": {},
-            "width": {
-                "Default": {
-                    "type": "string",
-                    "value": "100%"
-                }
             }
         },
         "btnResizeMenu": {
             "__events__": {
-                "ide_onClick": "AS_Button_h6415bdf252e4348b2959d8c5b302f9a"
+                "ide_onClick": "AS_Button_e69754358ae546f085e42eb65a65e18a"
             },
             "__info__": {
-                "kuid": "j88e89059d484b2cbbbdf806977f76ac",
+                "kuid": "d71b2d479f814622bc60246f337ed5ae",
                 "srcKUID": "g6220a13ecc543cfbd274408555deb6b",
                 "wType": "Button"
-            },
-            "responsiveData": {},
-            "top": {
-                "Default": {
-                    "type": "string",
-                    "value": "2%"
-                }
             }
         },
         "flxBtnLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "f1384dc2e7d14e498d8de4b14aed5117",
+                "kuid": "a1c70f087aac40e8b6459e2e2a940e8d",
                 "srcKUID": "a0c260c49fa14d3aa934cade39c38bb0",
                 "wType": "FlexContainer"
             }
@@ -91,7 +69,7 @@
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "h52245ad3edf40f1b76656f8ffa9cf4f",
+                "kuid": "c2a21f40d3374479891e38420455eb2c",
                 "srcKUID": "d252c589507e44fd8ed2ab19f3f7e081",
                 "wType": "FlexContainer"
             },
@@ -174,23 +152,15 @@
         "imgLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "dfdb8ca8f3ba4cc697eb50b728b8aa20",
+                "kuid": "fc1f13cf3ab042c6af5a95a1d08b670f",
                 "srcKUID": "f6d6345317634850bef09677b329a6ec",
                 "wType": "Image"
-            },
-            "bottom": {
-                "Default": {
-                    "type": "string",
-                    "value": "4%"
-                }
-            },
-            "responsiveData": {},
-            "src": "logout_true.png"
+            }
         },
         "imgLogout2": {
             "__events__": {},
             "__info__": {
-                "kuid": "g5bf0785624d4629aa8968128da5df23",
+                "kuid": "bfeb901def854e1b9f7475739b9dc4be",
                 "srcKUID": "d183329a0090424e92fc74f21216b2bb",
                 "wType": "Image"
             }
@@ -198,85 +168,9 @@
         "segMenu": {
             "__events__": {},
             "__info__": {
-                "kuid": "d2e26fe2dc8a48dcb34c53140af775c5",
+                "kuid": "c38a4ede30064913a12ce27bf65edcd7",
                 "srcKUID": "f6158cc0defe49f9b27229072ca607e4",
                 "wType": "Segment"
-            },
-            "data": {
-                "desktop": [
-                    {
-                        "imgMenuIcon": {
-                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "flow.png",
-                            "type": "Image"
-                        },
-                        "lblMenu": {
-                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                            "text": "Flows",
-                            "type": "Label"
-                        }
-                    },
-                    {
-                        "imgMenuIcon": {
-                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "labels.png",
-                            "type": "Image"
-                        },
-                        "lblMenu": {
-                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                            "text": "Labels",
-                            "type": "Label"
-                        }
-                    },
-                    {
-                        "imgMenuIcon": {
-                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "style_icon.png",
-                            "type": "Image"
-                        },
-                        "lblMenu": {
-                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                            "text": "Style",
-                            "type": "Label"
-                        }
-                    },
-                    {
-                        "imgMenuIcon": {
-                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "audience_icon.png",
-                            "type": "Image"
-                        },
-                        "lblMenu": {
-                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                            "text": "Users management",
-                            "type": "Label"
-                        }
-                    },
-                    {
-                        "imgMenuIcon": {
-                            "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "settings.png",
-                            "type": "Image"
-                        },
-                        "lblMenu": {
-                            "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                            "text": "Channel settings",
-                            "type": "Label"
-                        }
-                    }
-                ]
-            },
-            "left": {
-                "Default": {
-                    "type": "string",
-                    "value": "0dp"
-                }
-            },
-            "top": {
-                "Default": {
-                    "type": "string",
-                    "value": "0dp"
-                }
             }
         }
     },
@@ -286,7 +180,7 @@
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kuid": "h52245ad3edf40f1b76656f8ffa9cf4f",
+    "kuid": "c2a21f40d3374479891e38420455eb2c",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",

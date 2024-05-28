@@ -1,0 +1,30 @@
+{
+    "AS_Segment_jd11cdaabb124b0ea7379d1b00f6c9b4": {
+        "id": "AS_Segment_jd11cdaabb124b0ea7379d1b00f6c9b4",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "name": "frmStepCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j27b7970c694429db6312f3b27f7428e"
+        },
+        "language": "js",
+        "eventType": "onRowClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_fcaca92e566c4b339d965082ded8c438",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### CLICCATO MENU\");",
+            "parentId": null
+        }]
+    }
+}
