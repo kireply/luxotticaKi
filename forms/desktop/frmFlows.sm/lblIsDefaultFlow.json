@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "3%"
+        "value": "4%"
     },
     "_left_": {
         "type": "string",
@@ -28,8 +28,8 @@
         "value": "67%"
     },
     "_width_": {
-        "type": "string",
-        "value": "25%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {

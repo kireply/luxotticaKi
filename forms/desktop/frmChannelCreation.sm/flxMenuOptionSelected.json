@@ -36,7 +36,7 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50%"
+        "value": "49%"
     },
     "children": [
         "imgMenuOptionSelected",

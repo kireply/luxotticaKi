@@ -24,7 +24,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_beafccf8e49948539b411e12313819c9",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "gblInfoIcon = \"false\";\n// this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\n// this.view.flxPopupChannelInfo.setVisibility(false);\n// this.view.flxPopupCreateNewChannel.setVisibility(false);\nthis.view.flxPopupChannelInfo.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);",
+            "codeSnippet": "//gblInfoIcon = \"false\";\n// this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\n// this.view.flxPopupChannelInfo.setVisibility(false);\n// this.view.flxPopupCreateNewChannel.setVisibility(false);\n//this.view.flxPopupChannelInfo.setVisibility(false);\n//this.view.flxBlur.setVisibility(false);\nthis.view.flxPopupCreateNewChannel.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);",
             "parentId": null
         }]
     }

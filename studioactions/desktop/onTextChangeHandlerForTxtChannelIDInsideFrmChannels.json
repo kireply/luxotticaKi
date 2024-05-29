@@ -158,41 +158,6 @@
             "parentId": "IF_CONDITION_ide_onTextChange_i95560d5b561474e95e1abdf91fa39af",
             "callbackType": null
         }, {
-            "id": "_ide_onTextChange_f9a9c319df7a4dab92d21b1ebd81df58",
-            "type": "STYLE_ACTION",
-            "itemType": "FORM",
-            "itemId": "frmChannels",
-            "widgetId": "btnSaveNewChannelInsideFrmChannels",
-            "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
-            "widgetKUID": "j0858120438c4d45b43b1ff72d7c1a7b",
-            "wType": "Button",
-            "animationObject": {
-                "anchorPoint": {},
-                "stepConfig": {
-                    "timingFunction": "kony.anim.EASE"
-                },
-                "opacity": "50",
-                "displayAnimationId": "",
-                "duration": "0",
-                "delay": "0",
-                "iterationCount": ""
-            },
-            "config": {
-                "delay": "0",
-                "iterationCount": 0,
-                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "0"
-            },
-            "start": "Immediately",
-            "parentAnimation": "STYLE_ACTION_e3128572f78a4bddb605536cb2e77daa",
-            "animationId": "STYLE_ACTION_db5a22f6c127411a8705f9d6dfb4f3b7",
-            "displayAnimationId": "STYLE_ACTION_db5a22f6c127411a8705f9d6dfb4f3b7",
-            "forkedPlatform": "all",
-            "parentId": "IF_CONDITION_ide_onTextChange_i95560d5b561474e95e1abdf91fa39af",
-            "callbackType": null,
-            "disabled": true,
-            "widgetPath": "this.view.btnSaveNewChannelInsideFrmChannels"
-        }, {
             "id": "ELSE_CONDITION_ide_onTextChange_f476d3310cbf4717b15972a4952082a6",
             "type": "ELSE_CONDITION",
             "conditions": [{
@@ -210,41 +175,6 @@
             "codeSnippet": "this.view.btnSaveNewChannelInsideFrmChannels.setEnabled(true);\nthis.view.btnSaveNewChannelInsideFrmChannels.opacity = 1;",
             "parentId": "ELSE_CONDITION_ide_onTextChange_f476d3310cbf4717b15972a4952082a6",
             "callbackType": null
-        }, {
-            "id": "_ide_onTextChange_f5cbb4436d0d416e967ef305b90711ca",
-            "type": "STYLE_ACTION",
-            "itemType": "FORM",
-            "itemId": "frmChannels",
-            "widgetId": "txtChannelIDInsideFrmChannels",
-            "itemKUID": "c1e9143f6fef4291a170222e7c044c7c",
-            "widgetKUID": "a709edb70a60483983498ef971327e19",
-            "wType": "TextField",
-            "animationObject": {
-                "anchorPoint": {},
-                "stepConfig": {
-                    "timingFunction": "kony.anim.EASE"
-                },
-                "opacity": "100",
-                "displayAnimationId": "",
-                "duration": "0",
-                "delay": "0",
-                "iterationCount": ""
-            },
-            "config": {
-                "delay": "0",
-                "iterationCount": 0,
-                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "0"
-            },
-            "start": "Immediately",
-            "parentAnimation": "STYLE_ACTION_db5a22f6c127411a8705f9d6dfb4f3b7",
-            "animationId": "STYLE_ACTION_e3128572f78a4bddb605536cb2e77daa",
-            "displayAnimationId": "STYLE_ACTION_e3128572f78a4bddb605536cb2e77daa",
-            "forkedPlatform": "all",
-            "parentId": "ELSE_CONDITION_ide_onTextChange_f476d3310cbf4717b15972a4952082a6",
-            "callbackType": null,
-            "disabled": true,
-            "widgetPath": "this.view.tbNewChannel.txtChannelIDInsideFrmChannels"
         }]
     }
 }

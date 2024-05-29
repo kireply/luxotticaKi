@@ -39,6 +39,7 @@
     },
     "displaytext": true,
     "id": "btnNewChannel",
+    "ide_onClick": "AS_Button_d0d4967156a74efdbf3e343693c70ac0",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

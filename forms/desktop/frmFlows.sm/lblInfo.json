@@ -2,8 +2,8 @@
     "@class": "com.kony.gen.viz.model.component.KVizLabel",
     "DNDConfig": null,
     "_height_": {
-        "type": "string",
-        "value": "80%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_left_": {
         "type": "string",
@@ -25,7 +25,7 @@
     "_text_": "The flow name will be automatically generated base on the information entered in the form below.",
     "_width_": {
         "type": "string",
-        "value": "85%"
+        "value": "86.31%"
     },
     "_wrapping_": 2,
     "android": {

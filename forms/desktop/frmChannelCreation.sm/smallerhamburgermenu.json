@@ -48,11 +48,26 @@
             }
         },
         "btnResizeMenu": {
-            "__events__": {},
+            "__events__": {
+                "ide_onClick": "AS_Button_cbe71ba34b7141d8ac12434aae58350e"
+            },
             "__info__": {
                 "kuid": "jf46f6deb098480c96f0ac7191ccbad5",
                 "srcKUID": "b78ca6f9cd4742d8b6d55eda7606510c",
                 "wType": "Button"
+            },
+            "left": {
+                "Default": {
+                    "type": "string",
+                    "value": "81.83%"
+                }
+            },
+            "responsiveData": {},
+            "width": {
+                "Default": {
+                    "type": "string",
+                    "value": "30%"
+                }
             }
         },
         "flxLogout": {
@@ -69,7 +84,8 @@
                 "kuid": "a12c418e1ba54c8d85528f295c4bed6b",
                 "srcKUID": "jaa0c3a1c660400285a65a88671ea804",
                 "wType": "Image"
-            }
+            },
+            "src": "logout_true.png"
         },
         "imgLogout1": {
             "__events__": {},

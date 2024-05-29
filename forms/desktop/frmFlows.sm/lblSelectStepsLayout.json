@@ -28,8 +28,8 @@
         "value": "75.21%"
     },
     "_width_": {
-        "type": "string",
-        "value": "30%"
+        "type": "ref",
+        "value": "preferred"
     },
     "_wrapping_": 2,
     "android": {

@@ -35,7 +35,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "id": "imgExitPopup",
-    "ide_onTouchEnd": "AS_Image_i6ec5db67080471db59760055f1318fd",
+    "ide_onTouchEnd": "AS_Image_ff39457efee24470832293d4733e261e",
     "imagescalemode": 1,
     "info": null,
     "invokedProperty": "src",

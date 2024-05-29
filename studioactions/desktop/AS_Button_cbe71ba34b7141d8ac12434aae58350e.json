@@ -1,0 +1,24 @@
+{
+    "AS_Button_cbe71ba34b7141d8ac12434aae58350e": {
+        "id": "AS_Button_cbe71ba34b7141d8ac12434aae58350e",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmChannelCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b995d95be2ee4d2181bb89391aa35ffb"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_j0fabb1d6abc4e0daba244fca1fc08f6",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxContainerSmallerMenu.setVisibility(false);\nthis.view.flxContainerMenu.setVisibility(true);",
+            "parentId": null
+        }]
+    }
+}

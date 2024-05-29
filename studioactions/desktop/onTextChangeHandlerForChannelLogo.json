@@ -19,52 +19,48 @@
         "language": "js",
         "eventType": "onTextChange",
         "actions": [{
-            "id": "ADD_LOCAL_VARIABLE_dd070e7570cb4574817c7e439cd503a0",
+            "id": "ADD_LOCAL_VARIABLE_abc5c3df57c143d680fedcfc355fcd8f",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "channelID",
             "isGlobal": false,
             "valuetype": "constant",
             "datatype": "string",
             "value": "\"\"",
-            "parentId": null,
-            "callbackType": null
+            "parentId": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_h59bbf650c6a46aba6caf0623d796606",
+            "id": "ADD_LOCAL_VARIABLE_d6bd7bd4ce234f25a9b4776aca0be02e",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "channelName",
             "isGlobal": false,
             "valuetype": "constant",
             "datatype": "string",
             "value": "\"\"",
-            "parentId": null,
-            "callbackType": null
+            "parentId": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_af136ea442d1465c9cfbd05a30f50ab5",
+            "id": "ADD_LOCAL_VARIABLE_j11423a052674809b75aee7b30e000e3",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "channelLogo",
             "isGlobal": false,
             "valuetype": "constant",
             "datatype": "string",
             "value": "\"\"",
-            "parentId": null,
-            "callbackType": null
+            "parentId": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_c467dc7180964cfcb904f8ccabe7127e",
+            "id": "ADD_LOCAL_VARIABLE_ab0cb0a80a9e49eca5459e49e2c1b0ab",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "channelProperties",
             "isGlobal": false,
             "valuetype": "constant",
             "datatype": "string",
             "value": "\"\"",
-            "parentId": null,
-            "callbackType": null
+            "parentId": null
         }, {
-            "id": "ADD_MAPPING_aa5325fae84346e485e3287402a49863",
+            "id": "ADD_MAPPING_f41c6a39114047af8c7c35d43bf4733a",
             "type": "ADD_MAPPING",
             "mappings": {
-                "ME_Mapping_b9b1802d67a14bc5a2ea438a284e0944": {
+                "ME_Mapping_a59c816387dc45d2a15232d7680ec9f7": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_b9b1802d67a14bc5a2ea438a284e0944",
+                    "id": "ME_Mapping_a59c816387dc45d2a15232d7680ec9f7",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -87,9 +83,9 @@
                         "forkedPlatform": "all"
                     }
                 },
-                "ME_Mapping_f195b59bac63416884efb21cbba60db9": {
+                "ME_Mapping_c7aee2b266c94044afcb75acf1b53a96": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_f195b59bac63416884efb21cbba60db9",
+                    "id": "ME_Mapping_c7aee2b266c94044afcb75acf1b53a96",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -112,9 +108,9 @@
                         "forkedPlatform": "all"
                     }
                 },
-                "ME_Mapping_bd2480656bfe46f6895da4ff69f28b66": {
+                "ME_Mapping_b7f399408d4940aea1d4610d6fa21e8f": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_bd2480656bfe46f6895da4ff69f28b66",
+                    "id": "ME_Mapping_b7f399408d4940aea1d4610d6fa21e8f",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -136,14 +132,38 @@
                         "dataType": "string",
                         "forkedPlatform": "all"
                     }
+                },
+                "ME_Mapping_ie6cbea76b1c44b1a1fd6a0758408331": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ie6cbea76b1c44b1a1fd6a0758408331",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtChannelName",
+                        "widgetPath": "this.view.txtChannelName",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmChannelCreation",
+                        "widgetKUID": "cc1a6e1bb6964bdaa9d321abe6dc864c",
+                        "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Variables",
+                        "propertyName": "channelName",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_b9b1802d67a14bc5a2ea438a284e0944", "ME_Mapping_f195b59bac63416884efb21cbba60db9", "ME_Mapping_bd2480656bfe46f6895da4ff69f28b66"],
+            "mappingsOrder": ["ME_Mapping_a59c816387dc45d2a15232d7680ec9f7", "ME_Mapping_c7aee2b266c94044afcb75acf1b53a96", "ME_Mapping_b7f399408d4940aea1d4610d6fa21e8f", "ME_Mapping_ie6cbea76b1c44b1a1fd6a0758408331"],
             "parentId": null,
-            "callbackType": null,
             "enableMappingEditor": true
         }, {
-            "id": "_cc0ab57f256c42b1b2f1a236d0bd90d0",
+            "id": "IF_CONDITION_b65bdf1eb1954d6983a6ee43c1fad97a",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "varvalue",
@@ -152,7 +172,7 @@
                 "rightValueType": "value",
                 "rightValue": "\"\""
             }, {
-                "leftValueType": "varlength",
+                "leftValueType": "varvalue",
                 "leftValue": "channelID",
                 "operator": "===",
                 "rightValueType": "value",
@@ -171,6 +191,18 @@
                 "rightValue": "undefined"
             }, {
                 "leftValueType": "varvalue",
+                "leftValue": "channelLogo",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "\"\""
+            }, {
+                "leftValueType": "varvalue",
+                "leftValue": "channelLogo",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "undefined"
+            }, {
+                "leftValueType": "varvalue",
                 "leftValue": "channelProperties",
                 "operator": "===",
                 "rightValueType": "value",
@@ -181,18 +213,17 @@
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "undefined"
-            }, {
-                "leftValueType": "varvalue",
-                "leftValue": "channelName",
-                "operator": "===",
-                "rightValueType": "value",
-                "rightValue": "\"Select Channel Name\""
             }],
             "parentId": null,
-            "callbackType": null,
             "criteria": "any"
         }, {
-            "id": "_e6815edf705a4a3cb7aace68d0a2c633",
+            "id": "ADD_SNIPPET_f13d32225f4b437f85fa15c32394f5f7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.btnSaveNewChannel.setEnabled(false);",
+            "parentId": "IF_CONDITION_b65bdf1eb1954d6983a6ee43c1fad97a",
+            "callbackType": null
+        }, {
+            "id": "ELSE_CONDITION_b19bef8e2e304aa9a2f0974cc0cd12a0",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -202,87 +233,13 @@
                 "rightValue": ""
             }],
             "parentId": null,
-            "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "ADD_SNIPPET_g6d57c32f57a4cafb0dc24a8d5ceb2bb",
+            "id": "ADD_SNIPPET_f8ba004e5065453ab0c16df81cdac30d",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.btnSaveNewChannel.setEnabled(true);",
-            "parentId": "_e6815edf705a4a3cb7aace68d0a2c633",
+            "codeSnippet": "this.view.btnSaveNewChannel.setEnabled(true);\nthis.view.btnSaveNewChannel.opacity = 1;",
+            "parentId": "ELSE_CONDITION_b19bef8e2e304aa9a2f0974cc0cd12a0",
             "callbackType": null
-        }, {
-            "id": "STYLE_ACTION_d154d986ae4f40c29f732222f398bf4e",
-            "type": "STYLE_ACTION",
-            "itemType": "FORM",
-            "itemId": "frmChannelCreation",
-            "widgetId": "btnSaveNewChannel",
-            "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
-            "widgetKUID": "acea9dcd3f784d719159054e3d1e5f3b",
-            "wType": "Button",
-            "animationObject": {
-                "anchorPoint": {},
-                "stepConfig": {
-                    "timingFunction": "kony.anim.EASE"
-                },
-                "opacity": "100",
-                "displayAnimationId": "",
-                "duration": "0",
-                "delay": "0",
-                "iterationCount": ""
-            },
-            "config": {
-                "delay": "0",
-                "iterationCount": 0,
-                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "0"
-            },
-            "start": "Immediately",
-            "parentAnimation": "STYLE_ACTION_j96eb62525a049f5aa4bd686cb04f67d",
-            "animationId": "STYLE_ACTION_d154d986ae4f40c29f732222f398bf4e",
-            "displayAnimationId": "STYLE_ACTION_d154d986ae4f40c29f732222f398bf4e",
-            "forkedPlatform": "all",
-            "parentId": "_e6815edf705a4a3cb7aace68d0a2c633",
-            "callbackType": null,
-            "widgetPath": "this.view.btnSaveNewChannel"
-        }, {
-            "id": "ADD_SNIPPET_a17c678bf31e465580e60150592f1df0",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.btnSaveNewChannel.setEnabled(false);",
-            "parentId": "_cc0ab57f256c42b1b2f1a236d0bd90d0",
-            "callbackType": null
-        }, {
-            "id": "STYLE_ACTION_j96eb62525a049f5aa4bd686cb04f67d",
-            "type": "STYLE_ACTION",
-            "itemType": "FORM",
-            "itemId": "frmChannelCreation",
-            "widgetId": "btnSaveNewChannel",
-            "itemKUID": "b995d95be2ee4d2181bb89391aa35ffb",
-            "widgetKUID": "acea9dcd3f784d719159054e3d1e5f3b",
-            "wType": "Button",
-            "animationObject": {
-                "anchorPoint": {},
-                "stepConfig": {
-                    "timingFunction": "kony.anim.EASE"
-                },
-                "opacity": "50",
-                "displayAnimationId": "",
-                "duration": "0",
-                "delay": "0",
-                "iterationCount": ""
-            },
-            "config": {
-                "delay": "0",
-                "iterationCount": 0,
-                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "0"
-            },
-            "start": "Immediately",
-            "animationId": "STYLE_ACTION_j96eb62525a049f5aa4bd686cb04f67d",
-            "displayAnimationId": "STYLE_ACTION_j96eb62525a049f5aa4bd686cb04f67d",
-            "forkedPlatform": "all",
-            "parentId": "_cc0ab57f256c42b1b2f1a236d0bd90d0",
-            "callbackType": null,
-            "widgetPath": "this.view.btnSaveNewChannel"
         }]
     }
 }

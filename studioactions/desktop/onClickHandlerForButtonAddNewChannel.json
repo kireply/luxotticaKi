@@ -1,0 +1,25 @@
+{
+    "AS_Button_d0d4967156a74efdbf3e343693c70ac0": {
+        "id": "AS_Button_d0d4967156a74efdbf3e343693c70ac0",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForButtonAddNewChannel",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmChannelCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b995d95be2ee4d2181bb89391aa35ffb"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_fa23c2265cb74d2b8dada5578f17d8a1",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"button cliccato\");\nthis.view.flxPopupCreateNewChannel.setVisibility(true);\nthis.view.btnSaveNewChannel.setEnabled(false);\nthis.view.btnSaveNewChannel.opacity = 0.5;\nthis.view.flxBlur.setVisibility(true);",
+            "parentId": null
+        }]
+    }
+}

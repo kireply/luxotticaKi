@@ -26,7 +26,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "sbb5fcddbbb14add962da9f9a4e314c0",
+    "_skin_": "sfde819a3d814632a428a069722189bf",
     "_width_": {
         "type": "string",
         "value": "33.67%"
@@ -63,12 +63,13 @@
         "txtChannelFrameOnlyLensUPC",
         "lblChannelShowUiSkeleton",
         "swChannelShowUiSkeleton",
+        "swChannelShowUiSkeleton1",
         "btnSaveNewChannel"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "desktopweb": {
-        "zIndex": 2
+        "zIndex": 5
     },
     "enablescrolling": true,
     "id": "flxPopupCreateNewChannel",

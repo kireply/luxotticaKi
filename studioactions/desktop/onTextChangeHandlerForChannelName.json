@@ -1,8 +1,8 @@
 {
-    "AS_TextField_gf40ef2500e1401c8d88b2a13af5fc35": {
-        "id": "AS_TextField_gf40ef2500e1401c8d88b2a13af5fc35",
+    "AS_TextField_ae9c96f0ae354b85a57ac67b85ab0922": {
+        "id": "AS_TextField_ae9c96f0ae354b85a57ac67b85ab0922",
         "type": "ACTION_SEQUENCE",
-        "name": "onTextChangeHandlerForChannelProperties",
+        "name": "onTextChangeHandlerForChannelName",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -19,7 +19,7 @@
         "language": "js",
         "eventType": "onTextChange",
         "actions": [{
-            "id": "IF_CONDITION_b5232622ca704100a721b53b4a726f62",
+            "id": "IF_CONDITION_c7093c184b3d4621a50b2d6098531c7a",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -73,13 +73,13 @@
             "parentId": null,
             "criteria": "any"
         }, {
-            "id": "ADD_SNIPPET_j9a5b9d8d94548f08f362a4dd02f6bf6",
+            "id": "ADD_SNIPPET_edc16c728449408f843995d9eb0b6239",
             "type": "ADD_SNIPPET",
             "codeSnippet": "this.view.btnSaveNewChannel.setEnabled(false);\nthis.view.btnSaveNewChannel.opacity = 0.5;",
-            "parentId": "IF_CONDITION_b5232622ca704100a721b53b4a726f62",
+            "parentId": "IF_CONDITION_c7093c184b3d4621a50b2d6098531c7a",
             "callbackType": null
         }, {
-            "id": "ELSE_CONDITION_daa1534170c9433fa6dba032c62ebe3d",
+            "id": "ELSE_CONDITION_ebd58b2d0e38414fb5bc214a1149e962",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -91,10 +91,10 @@
             "parentId": null,
             "criteria": "all"
         }, {
-            "id": "ADD_SNIPPET_ff0992b103eb4e119d81a4e359d911d3",
+            "id": "ADD_SNIPPET_aa09188b58bf44adbf3923a67838cb0d",
             "type": "ADD_SNIPPET",
             "codeSnippet": "this.view.btnSaveNewChannel.setEnabled(true);\nthis.view.btnSaveNewChannel.opacity = 1;",
-            "parentId": "ELSE_CONDITION_daa1534170c9433fa6dba032c62ebe3d",
+            "parentId": "ELSE_CONDITION_ebd58b2d0e38414fb5bc214a1149e962",
             "callbackType": null
         }]
     }
