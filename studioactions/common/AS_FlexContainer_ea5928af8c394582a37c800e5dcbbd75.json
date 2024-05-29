@@ -16,7 +16,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_aba722d2ca844c34b62ce3515287d90e",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "var ntf = new voltmx.mvc.Navigation(\"frmLogin\");\nntf.navigate();\nvoltmx.print(\"### Logging out...\");",
+            "codeSnippet": "// back to Login form, so we reset channel global variables until next selection\ngblChannelId = \"\";\ngblChannelName = \"\";\ngblChannelLogo = \"\";\ngblChannelProperties = \"\";\ngblChannelGenericImage = \"\";\ngblChannelAssetsCDN = \"\";\ngblChannelProjectImage = \"\";\ngblChannelFrameOnlyLensUPC = \"\";\ngblChannelShowUiSkeleton = \"\";\n// here I should reset all the rest of gbl variables in the application.\nvoltmx.print(\"### global variables resetted.\");\n\nvar ntf = new voltmx.mvc.Navigation(\"frmLogin\");\nntf.navigate();\nvoltmx.print(\"### Logging out...\");",
             "parentId": null
         }]
     }

@@ -1,6 +1,6 @@
 {
-    "AS_FlexContainer_ac859d92bf574050a60c0d9881129a98": {
-        "id": "AS_FlexContainer_ac859d92bf574050a60c0d9881129a98",
+    "AS_Button_c0fe2c7a95654f4b82a19f318b975310": {
+        "id": "AS_Button_c0fe2c7a95654f4b82a19f318b975310",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
@@ -14,7 +14,7 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "ADD_SNIPPET_b04d297a82154abc9bc411cf2831ee0b",
+            "id": "ADD_SNIPPET_e6ae03cdb2114e288896de0a6a9b7071",
             "type": "ADD_SNIPPET",
             "codeSnippet": "// back to Login form, so we reset channel global variables until next selection\ngblChannelId = \"\";\ngblChannelName = \"\";\ngblChannelLogo = \"\";\ngblChannelProperties = \"\";\ngblChannelGenericImage = \"\";\ngblChannelAssetsCDN = \"\";\ngblChannelProjectImage = \"\";\ngblChannelFrameOnlyLensUPC = \"\";\ngblChannelShowUiSkeleton = \"\";\n// here I should reset all the rest of gbl variables in the application.\nvoltmx.print(\"### global variables resetted.\");\n\n// navigating back to Login form\nvar ntf = new voltmx.mvc.Navigation(\"frmLogin\");\nntf.navigate();\nvoltmx.print(\"### Logging out...\");",
             "parentId": null
