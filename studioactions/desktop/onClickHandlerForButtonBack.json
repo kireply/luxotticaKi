@@ -16,38 +16,11 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "STYLE_ACTION_ee80d85d549343f1971da7a02cd1c03c",
-            "type": "STYLE_ACTION",
-            "itemType": "FORM",
-            "itemId": "frmFlows",
-            "widgetId": "btnBack",
-            "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
-            "widgetKUID": "f66ca181a043404a9966eff0d3920f8a",
-            "wType": "Button",
-            "animationObject": {
-                "anchorPoint": {},
-                "stepConfig": {
-                    "timingFunction": "kony.anim.EASE"
-                },
-                "opacity": "100",
-                "displayAnimationId": "",
-                "duration": "0",
-                "delay": "0",
-                "iterationCount": ""
-            },
-            "config": {
-                "delay": "0",
-                "iterationCount": 0,
-                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "0"
-            },
-            "start": "Immediately",
-            "animationId": "STYLE_ACTION_ee80d85d549343f1971da7a02cd1c03c",
-            "displayAnimationId": "STYLE_ACTION_ee80d85d549343f1971da7a02cd1c03c",
-            "forkedPlatform": "all",
+            "id": "ADD_SNIPPET_ic60b3b1f3aa471fa9cf447d2d42abbb",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// back to frmChannels, so we reset channel global variables until next selection\ngblChannelId = \"\";\ngblChannelName = \"\";\ngblChannelLogo = \"\";\ngblChannelProperties = \"\";\ngblChannelGenericImage = \"\";\ngblChannelAssetsCDN = \"\";\ngblChannelProjectImage = \"\";\ngblChannelFrameOnlyLensUPC = \"\";\ngblChannelShowUiSkeleton = \"\";",
             "parentId": null,
-            "callbackType": null,
-            "widgetPath": "this.view.btnBack"
+            "callbackType": null
         }, {
             "id": "LOADING_INDICATOR_b1abe1fe55a84d129e5676a3a68a8f7e",
             "selectedOption": "show",

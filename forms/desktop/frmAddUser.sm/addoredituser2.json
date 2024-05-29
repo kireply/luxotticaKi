@@ -100,10 +100,19 @@
                 "srcKUID": "d18e0d97d1474117b2e86775d8a97d57",
                 "wType": "FlexContainer"
             },
+            "autogrowMode": {
+                "Default": 0
+            },
             "centerX": {
                 "Default": {
                     "type": "string",
                     "value": ""
+                }
+            },
+            "height": {
+                "Default": {
+                    "type": "string",
+                    "value": "98.72%"
                 }
             },
             "left": {
@@ -113,6 +122,12 @@
                 }
             },
             "responsiveData": {},
+            "top": {
+                "Default": {
+                    "type": "string",
+                    "value": "10dp"
+                }
+            },
             "zIndex": {
                 "Default": 2
             }
