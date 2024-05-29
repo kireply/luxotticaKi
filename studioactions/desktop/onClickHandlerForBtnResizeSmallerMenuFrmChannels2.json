@@ -1,0 +1,25 @@
+{
+    "AS_Button_adb8df4d2c2e4dab9bbc97eef59bba5e": {
+        "id": "AS_Button_adb8df4d2c2e4dab9bbc97eef59bba5e",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnResizeSmallerMenuFrmChannels2",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmChannels",
+            "type": "forms",
+            "platform": "",
+            "KUID": "c1e9143f6fef4291a170222e7c044c7c"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_e4872997d35c4025baa6e126678eef58",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxContainerSmallerMenu.setVisibility(false);\nthis.view.flxContainerMenu.setVisibility(true);\nthis.view.flxChannels.width = \"79.06%\";",
+            "parentId": null
+        }]
+    }
+}

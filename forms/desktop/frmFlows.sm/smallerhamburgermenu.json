@@ -177,6 +177,7 @@
                     "value": ""
                 }
             },
+            "responsiveData": {},
             "right": {
                 "Default": {
                     "type": "string",
@@ -194,6 +195,9 @@
                     "type": "string",
                     "value": "100%"
                 }
+            },
+            "zIndex": {
+                "Default": 3
             }
         }
     },
@@ -216,5 +220,5 @@
     "snaptogrid": true,
     "sourceUserWidget": "bfbe8f5520c44ccc8b1717d6cf7e95af",
     "wType": "UserWidgetInstance",
-    "zindex": 1
+    "zindex": 3
 }

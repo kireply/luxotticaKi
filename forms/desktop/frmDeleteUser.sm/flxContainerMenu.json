@@ -44,7 +44,7 @@
     "id": "flxContainerMenu",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "a3b952d2bb6447fa97ef11428acba366",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
@@ -56,5 +56,6 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 3
 }

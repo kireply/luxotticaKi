@@ -1,0 +1,25 @@
+{
+    "AS_Button_a225b0e341d445cc851a1e83a7c039a0": {
+        "id": "AS_Button_a225b0e341d445cc851a1e83a7c039a0",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnResizeMenuFrmDeleteUser",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmDeleteUser",
+            "type": "forms",
+            "platform": "",
+            "KUID": "ced7a225779d43028086b1ceb5004406"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_e9657dcc959741308321cb8b9b14af83",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxContainerMenu.setVisibility(false);\nthis.view.flxContainerSmallerMenu.setVisibility(true);",
+            "parentId": null
+        }]
+    }
+}

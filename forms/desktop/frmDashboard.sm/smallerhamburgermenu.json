@@ -129,7 +129,7 @@
                     {
                         "imgMenuIcon": {
                             "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "home_icon.png",
+                            "src": "flow.png",
                             "type": "Image"
                         }
                     },

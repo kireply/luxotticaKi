@@ -130,6 +130,7 @@
                     "value": ""
                 }
             },
+            "responsiveData": {},
             "right": {
                 "Default": {
                     "type": "string",
@@ -147,6 +148,9 @@
                     "type": "string",
                     "value": "100%"
                 }
+            },
+            "zIndex": {
+                "Default": 3
             }
         },
         "imgLogout": {
@@ -222,5 +226,5 @@
     "snaptogrid": true,
     "sourceUserWidget": "d252c589507e44fd8ed2ab19f3f7e081",
     "wType": "UserWidgetInstance",
-    "zindex": 1
+    "zindex": 3
 }

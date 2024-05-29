@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "6%"
+        "value": "45dp"
     },
     "_left_": {
         "type": "string",
@@ -25,7 +25,7 @@
     "_skin_": "sd24ce50f02a41979a80264d6d39c4b3",
     "_top_": {
         "type": "string",
-        "value": "1.04%"
+        "value": "8.04%"
     },
     "_width_": {
         "type": "string",
@@ -36,7 +36,7 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "48.72%"
+        "value": "50%"
     },
     "children": [
         "imgMenuOptionSelected",
@@ -61,5 +61,5 @@
     "snaptogrid": true,
     "wType": "FlexContainer",
     "widgetalignment": 1,
-    "zindex": 10
+    "zindex": 4
 }

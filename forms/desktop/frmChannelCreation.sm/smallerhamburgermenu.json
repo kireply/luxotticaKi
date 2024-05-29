@@ -40,61 +40,25 @@
     "containerweight": 0,
     "dataDiffs": {
         "btnLogout": {
-            "__events__": {
-                "ide_onClick": "AS_Button_g99b356f839d45fd99e7e890d6e45675"
-            },
+            "__events__": {},
             "__info__": {
-                "kuid": "d977ab25c5c24a758332f452e1a42980",
+                "kuid": "j4bf739077c3436e9b904a1cc9b75f29",
                 "srcKUID": "dc71668cc16f4695981806296357819d",
                 "wType": "Button"
-            },
-            "centerX": {
-                "Default": {
-                    "type": "string",
-                    "value": "50%"
-                }
-            },
-            "centerY": {
-                "Default": {
-                    "type": "string",
-                    "value": "50%"
-                }
-            },
-            "responsiveData": {}
+            }
         },
         "btnResizeMenu": {
-            "__events__": {
-                "ide_onClick": "AS_Button_f4c07130d878420996b5dbb14200358e"
-            },
+            "__events__": {},
             "__info__": {
-                "kuid": "j07d30cfc2a944aeb9039d45dbc384be",
+                "kuid": "jf46f6deb098480c96f0ac7191ccbad5",
                 "srcKUID": "b78ca6f9cd4742d8b6d55eda7606510c",
                 "wType": "Button"
-            },
-            "left": {
-                "Default": {
-                    "type": "string",
-                    "value": "84%"
-                }
-            },
-            "responsiveData": {},
-            "top": {
-                "Default": {
-                    "type": "string",
-                    "value": "2%"
-                }
-            },
-            "width": {
-                "Default": {
-                    "type": "string",
-                    "value": "30%"
-                }
             }
         },
         "flxLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "c557671a73a3492caeae77cb6f7d0cbf",
+                "kuid": "da6570d0f8b84a668e1a4ebd5ecc2368",
                 "srcKUID": "bd4e6e8bdb8a4f2e87e20e3b2baa4851",
                 "wType": "FlexContainer"
             }
@@ -102,16 +66,15 @@
         "imgLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "b7a7df0f576040d9b9453c9283fd02ac",
+                "kuid": "a12c418e1ba54c8d85528f295c4bed6b",
                 "srcKUID": "jaa0c3a1c660400285a65a88671ea804",
                 "wType": "Image"
-            },
-            "src": "logout_true.png"
+            }
         },
         "imgLogout1": {
             "__events__": {},
             "__info__": {
-                "kuid": "d549d6740db04b3eacbe8760b18a8a8a",
+                "kuid": "e7cca1697123405e84fca2b21a2c6256",
                 "srcKUID": "d2f68446c7fa4a9abe29e1b65700eab2",
                 "wType": "Image"
             }
@@ -119,7 +82,7 @@
         "segMenu": {
             "__events__": {},
             "__info__": {
-                "kuid": "f4b98955f9cc4202b1ed15683576a12e",
+                "kuid": "bf40ed3344e34719b27292da9291b1f3",
                 "srcKUID": "ab971c4c11bb416bac9ad77f0b35493b",
                 "wType": "Segment"
             },
@@ -128,7 +91,7 @@
                     {
                         "imgMenuIcon": {
                             "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "home_icon.png",
+                            "src": "flow.png",
                             "type": "Image"
                         }
                     },
@@ -146,7 +109,7 @@
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "e8c908690b894de785239f93dcefeaea",
+                "kuid": "dfef475300594630a186849eaf440d11",
                 "srcKUID": "bfbe8f5520c44ccc8b1717d6cf7e95af",
                 "wType": "FlexContainer"
             },
@@ -207,6 +170,7 @@
                     "value": ""
                 }
             },
+            "responsiveData": {},
             "right": {
                 "Default": {
                     "type": "string",
@@ -224,6 +188,9 @@
                     "type": "string",
                     "value": "100%"
                 }
+            },
+            "zIndex": {
+                "Default": 3
             }
         }
     },
@@ -233,7 +200,7 @@
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kuid": "e8c908690b894de785239f93dcefeaea",
+    "kuid": "dfef475300594630a186849eaf440d11",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
@@ -246,5 +213,5 @@
     "snaptogrid": true,
     "sourceUserWidget": "bfbe8f5520c44ccc8b1717d6cf7e95af",
     "wType": "UserWidgetInstance",
-    "zindex": 1
+    "zindex": 3
 }

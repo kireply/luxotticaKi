@@ -23,10 +23,6 @@
     ],
     "_skin_": "s7d4d0dad238493a983acd59fd041218",
     "_text_": "Channels",
-    "_top_": {
-        "type": "string",
-        "value": "11dp"
-    },
     "_width_": {
         "type": "ref",
         "value": "preferred"
@@ -39,6 +35,10 @@
         }
     },
     "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
     "containerweight": 100,
     "contentalignment": 4,
     "id": "lblMenuOptionSelected",

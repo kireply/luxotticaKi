@@ -40,67 +40,27 @@
     "containerweight": 0,
     "dataDiffs": {
         "btnLogout": {
-            "__events__": {
-                "ide_onClick": "AS_Button_bf04767aa34f4a50a9f731830e0d2944"
-            },
+            "__events__": {},
             "__info__": {
-                "kuid": "dee6eb27d2dc4a21bf9551dfdf2aaa9d",
+                "kuid": "f7f3e009f12c42fa8d843333ead7964a",
                 "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
                 "wType": "Button"
-            },
-            "bottom": {
-                "Default": {
-                    "type": "number",
-                    "value": "0"
-                }
-            },
-            "centerX": {
-                "Default": {
-                    "type": "string",
-                    "value": "50%"
-                }
-            },
-            "centerY": {
-                "Default": {
-                    "type": "string",
-                    "value": "50%"
-                }
-            },
-            "responsiveData": {},
-            "width": {
-                "Default": {
-                    "type": "string",
-                    "value": "100%"
-                }
             }
         },
         "btnResizeMenu": {
             "__events__": {
-                "ide_onClick": "AS_Button_je936e4ab8884f16bea43cdf7d5108c5"
+                "ide_onClick": "AS_Button_j8601f6df60d47449a77daf7311ddd17"
             },
             "__info__": {
-                "kuid": "ec9a09db2cce4d0aa7c374253650fb68",
+                "kuid": "b2556425f4404254b58aba277c84c783",
                 "srcKUID": "g6220a13ecc543cfbd274408555deb6b",
                 "wType": "Button"
-            },
-            "left": {
-                "Default": {
-                    "type": "string",
-                    "value": "95%"
-                }
-            },
-            "responsiveData": {},
-            "width": {
-                "Default": {
-                    "type": "string",
-                    "value": "11%"
-                }
             }
         },
         "flxBtnLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "acb54f264c1f475ab434b9a38df5bc0f",
+                "kuid": "e02a729e427c41a7a54014676b3d95db",
                 "srcKUID": "a0c260c49fa14d3aa934cade39c38bb0",
                 "wType": "FlexContainer"
             }
@@ -109,7 +69,7 @@
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "d7f185ab1a484da2b27098f09ada6c02",
+                "kuid": "dda60b36cb964916819db80902170c1b",
                 "srcKUID": "d252c589507e44fd8ed2ab19f3f7e081",
                 "wType": "FlexContainer"
             },
@@ -140,7 +100,6 @@
                     "value": "100%"
                 }
             },
-            "isVisible": true,
             "left": {
                 "Default": {
                     "type": "string",
@@ -171,6 +130,7 @@
                     "value": ""
                 }
             },
+            "responsiveData": {},
             "right": {
                 "Default": {
                     "type": "string",
@@ -188,38 +148,32 @@
                     "type": "string",
                     "value": "100%"
                 }
+            },
+            "zIndex": {
+                "Default": 3
             }
         },
         "imgLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "ib30ac07c05346acb163822dce79c760",
+                "kuid": "g296cd2100fa49c382ad882707b4f2c2",
                 "srcKUID": "f6d6345317634850bef09677b329a6ec",
                 "wType": "Image"
             },
-            "bottom": {
-                "Default": {
-                    "type": "string",
-                    "value": "4%"
-                }
-            },
-            "responsiveData": {},
             "src": "logout_true.png"
         },
         "imgLogout2": {
             "__events__": {},
             "__info__": {
-                "kuid": "b5e132649a8044d087d0ca392f2fa638",
+                "kuid": "d7e8f931ab1e427fa20080541ef04988",
                 "srcKUID": "d183329a0090424e92fc74f21216b2bb",
                 "wType": "Image"
             }
         },
         "segMenu": {
-            "__events__": {
-                "ide_onRowClick": "AS_Segment_ae3e45243eca4f3da3d215029809c99e"
-            },
+            "__events__": {},
             "__info__": {
-                "kuid": "b08b6a981bf2420aaebff73cdffcaa47",
+                "kuid": "d5a30832f7bd467cae0ce499751f5fe1",
                 "srcKUID": "f6158cc0defe49f9b27229072ca607e4",
                 "wType": "Segment"
             },
@@ -228,12 +182,12 @@
                     {
                         "imgMenuIcon": {
                             "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "home_icon.png",
+                            "src": "flow.png",
                             "type": "Image"
                         },
                         "lblMenu": {
                             "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                            "text": "Channels",
+                            "text": "Flows",
                             "type": "Label"
                         }
                     },
@@ -245,23 +199,11 @@
                         },
                         "lblMenu": {
                             "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                            "text": "User management",
+                            "text": "Users management",
                             "type": "Label"
                         }
                     }
                 ]
-            },
-            "left": {
-                "Default": {
-                    "type": "string",
-                    "value": "0dp"
-                }
-            },
-            "top": {
-                "Default": {
-                    "type": "string",
-                    "value": "0dp"
-                }
             }
         }
     },
@@ -271,7 +213,7 @@
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kuid": "d7f185ab1a484da2b27098f09ada6c02",
+    "kuid": "dda60b36cb964916819db80902170c1b",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
@@ -284,5 +226,5 @@
     "snaptogrid": true,
     "sourceUserWidget": "d252c589507e44fd8ed2ab19f3f7e081",
     "wType": "UserWidgetInstance",
-    "zindex": 1
+    "zindex": 3
 }

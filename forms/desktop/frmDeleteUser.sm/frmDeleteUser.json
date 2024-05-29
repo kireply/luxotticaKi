@@ -51,8 +51,7 @@
     "canvasWidth": 1200,
     "children": [
         "flxMainDeleteUser",
-        "fxlMainContainerDeleteUsers",
-        "CopyfxlMainContainerChannels0jf333950c2b24b"
+        "fxlMainContainerDeleteUsers"
     ],
     "containerweight": 100,
     "controllerInfo": {

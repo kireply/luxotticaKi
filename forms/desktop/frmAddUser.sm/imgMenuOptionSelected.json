@@ -23,11 +23,7 @@
         0
     ],
     "_skin_": "sbaca8b7c52b4bffbafc90964c5000f5",
-    "_src_": "home_icon_modified.png",
-    "_top_": {
-        "type": "string",
-        "value": "0"
-    },
+    "_src_": "audience_icon_modified.png",
     "_width_": {
         "type": "string",
         "value": "10%"
@@ -35,7 +31,7 @@
     "canUpdateUI": true,
     "centery": {
         "type": "string",
-        "value": "46%"
+        "value": "50%"
     },
     "containerweight": 100,
     "id": "imgMenuOptionSelected",

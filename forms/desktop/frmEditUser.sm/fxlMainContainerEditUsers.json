@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "0"
+        "value": "0dp"
     },
     "_height_": {
         "type": "string",
@@ -37,8 +37,7 @@
     "children": [
         "flxContainerHeader",
         "flxContainerMenu",
-        "flxContainerSmallerMenu",
-        "CopyflxContainerSmallerMenu0h7b049d6c6674b"
+        "flxContainerSmallerMenu"
     ],
     "clipbounds": false,
     "containerweight": 100,

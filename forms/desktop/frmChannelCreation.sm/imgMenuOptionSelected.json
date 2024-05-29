@@ -35,7 +35,7 @@
     "canUpdateUI": true,
     "centery": {
         "type": "string",
-        "value": "45%"
+        "value": "50%"
     },
     "containerweight": 100,
     "id": "imgMenuOptionSelected",

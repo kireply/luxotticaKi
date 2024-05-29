@@ -112,6 +112,7 @@
                     "value": ""
                 }
             },
+            "responsiveData": {},
             "right": {
                 "Default": {
                     "type": "string",
@@ -129,6 +130,9 @@
                     "type": "string",
                     "value": "100%"
                 }
+            },
+            "zIndex": {
+                "Default": 5
             }
         },
         "imgChat": {
@@ -187,5 +191,5 @@
     "snaptogrid": true,
     "sourceUserWidget": "ba758399ff27410698c4c05e42566ed8",
     "wType": "UserWidgetInstance",
-    "zindex": 1
+    "zindex": 5
 }

@@ -1,6 +1,10 @@
 {
     "@class": "com.kony.gen.viz.model.component.KVizUserWidget",
     "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0"
+    },
     "_children_": [],
     "_height_": {
         "type": "string",
@@ -22,13 +26,9 @@
     "_percent_": true,
     "_right_": {
         "type": "string",
-        "value": "-10dp"
+        "value": "0dp"
     },
     "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
-    "_top_": {
-        "type": "string",
-        "value": "130dp"
-    },
     "_width_": {
         "type": "string",
         "value": "78.33%"
@@ -36,10 +36,6 @@
     "areflexpropsreferenced": false,
     "autogrowmode": 0,
     "canUpdateUI": true,
-    "centery": {
-        "type": "string",
-        "value": "56.67%"
-    },
     "clipbounds": false,
     "containerweight": 0,
     "dataDiffs": {
@@ -54,6 +50,12 @@
             "autogrowMode": {
                 "Default": 0
             },
+            "bottom": {
+                "Default": {
+                    "type": "string",
+                    "value": "0"
+                }
+            },
             "centerX": {
                 "Default": {
                     "type": "string",
@@ -63,7 +65,7 @@
             "centerY": {
                 "Default": {
                     "type": "string",
-                    "value": "56.67%"
+                    "value": ""
                 }
             },
             "height": {
@@ -82,13 +84,13 @@
             "right": {
                 "Default": {
                     "type": "string",
-                    "value": "-10dp"
+                    "value": "0dp"
                 }
             },
             "top": {
                 "Default": {
                     "type": "string",
-                    "value": "130dp"
+                    "value": ""
                 }
             },
             "width": {
@@ -137,7 +139,7 @@
             "centerX": {
                 "Default": {
                     "type": "string",
-                    "value": ""
+                    "value": "50%"
                 }
             },
             "centerY": {

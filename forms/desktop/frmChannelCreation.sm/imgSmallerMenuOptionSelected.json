@@ -39,7 +39,7 @@
     },
     "centery": {
         "type": "string",
-        "value": "46%"
+        "value": "50%"
     },
     "containerweight": 100,
     "id": "imgSmallerMenuOptionSelected",
