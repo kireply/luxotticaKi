@@ -37,16 +37,16 @@
     "children": [
         "btnBack",
         "imgArrow",
+        "channelTemplatewithContract",
         "lblListOfFlows",
         "flxBtnCreateNewFlow",
         "lbCategory",
         "lbStatus",
         "lbEnvironment",
         "flxHeaderSegFlows",
-        "segFlows",
         "txtSearchFlowName",
         "imgSearchFlowName",
-        "channelTemplatewithContract"
+        "segFlows"
     ],
     "clipbounds": false,
     "containerweight": 100,

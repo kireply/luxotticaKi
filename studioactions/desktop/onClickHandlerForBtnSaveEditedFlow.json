@@ -322,58 +322,6 @@
                         }
                     }
                 },
-                "ME_Mapping_h858de42b9c149fc8250d48c404a681b": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_h858de42b9c149fc8250d48c404a681b",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "isSupernova",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Services",
-                        "propertyName": "supernova",
-                        "dataType": "boolean",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "FLOW_update",
-                            "operationid": "121542"
-                        }
-                    }
-                },
-                "ME_Mapping_a4201feafd6c4237a9d1491a92ec2b74": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_a4201feafd6c4237a9d1491a92ec2b74",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "isDefault",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Services",
-                        "propertyName": "default_flag",
-                        "dataType": "boolean",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "FLOW_update",
-                            "operationid": "121542"
-                        }
-                    }
-                },
                 "ME_Mapping_ea055aaf867a44ab9954abe23530c634": {
                     "channel": "desktop",
                     "id": "ME_Mapping_ea055aaf867a44ab9954abe23530c634",
@@ -482,9 +430,83 @@
                             "operationid": "121542"
                         }
                     }
+                },
+                "ME_Mapping_c46efa2d7689438aad883f6afc7ab43a": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_c46efa2d7689438aad883f6afc7ab43a",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "state",
+                        "widgetId": "swIsDefaultFlowEdit1",
+                        "widgetPath": "this.view.swIsDefaultFlowEdit1",
+                        "widgetType": "UserWidgetInstance",
+                        "dataType": "boolean",
+                        "itemId": "frmFlows",
+                        "widgetKUID": "j3a11c55fa8e499dacdf6974c0efd3f8",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "isSkinProperty": false,
+                        "forkedPlatform": "all",
+                        "passThroughMeta": {
+                            "kuid": "b2942988342843ac8bceeef8faf8d051",
+                            "srcWgtKUID": "u5270f9b835c4c3887e263d187091fc5"
+                        }
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "default_flag",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_ca80181545f44e1e9637fca0cc54a1c4": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ca80181545f44e1e9637fca0cc54a1c4",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "state",
+                        "widgetId": "swIsSupernovaEdit1",
+                        "widgetPath": "this.view.swIsSupernovaEdit1",
+                        "widgetType": "UserWidgetInstance",
+                        "dataType": "boolean",
+                        "itemId": "frmFlows",
+                        "widgetKUID": "j73f2ec380984a8b9e62d91545ac3d8c",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "isSkinProperty": false,
+                        "forkedPlatform": "all",
+                        "passThroughMeta": {
+                            "kuid": "b2942988342843ac8bceeef8faf8d051",
+                            "srcWgtKUID": "u5270f9b835c4c3887e263d187091fc5"
+                        }
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "supernova",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_cfe9cf5c710241f3aac0d3e95b7a4348", "ME_Mapping_h1b5b9f8a9d54e63a1428bfd1d2ab691", "ME_Mapping_fdb21e34b3d544a8892fe483a94d0fdb", "ME_Mapping_gf056cb50612486aa1fcb65ebd9cb438", "ME_Mapping_efa8506589a94214b5ad14e0f1b80f28", "ME_Mapping_aab71f9e57f64c009eeff95d17205fa5", "ME_Mapping_h858de42b9c149fc8250d48c404a681b", "ME_Mapping_a4201feafd6c4237a9d1491a92ec2b74", "ME_Mapping_ea055aaf867a44ab9954abe23530c634", "ME_Mapping_aa50e79964c247cfaaef197573a3a2ab", "ME_Mapping_i32fc37d5d3948069a20c99d3de0556b", "ME_Mapping_e360fbcd39e14c95a223d0946c536715"],
+            "mappingsOrder": ["ME_Mapping_cfe9cf5c710241f3aac0d3e95b7a4348", "ME_Mapping_h1b5b9f8a9d54e63a1428bfd1d2ab691", "ME_Mapping_fdb21e34b3d544a8892fe483a94d0fdb", "ME_Mapping_gf056cb50612486aa1fcb65ebd9cb438", "ME_Mapping_efa8506589a94214b5ad14e0f1b80f28", "ME_Mapping_aab71f9e57f64c009eeff95d17205fa5", "ME_Mapping_ea055aaf867a44ab9954abe23530c634", "ME_Mapping_aa50e79964c247cfaaef197573a3a2ab", "ME_Mapping_i32fc37d5d3948069a20c99d3de0556b", "ME_Mapping_e360fbcd39e14c95a223d0946c536715", "ME_Mapping_c46efa2d7689438aad883f6afc7ab43a", "ME_Mapping_ca80181545f44e1e9637fca0cc54a1c4"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",

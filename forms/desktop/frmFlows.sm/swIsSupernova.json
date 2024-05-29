@@ -39,7 +39,7 @@
     "id": "swIsSupernova",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kiosk": {
         "render": false
     },

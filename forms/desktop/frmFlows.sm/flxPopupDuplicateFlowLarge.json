@@ -54,7 +54,7 @@
     "info": null,
     "iscustomlayout": false,
     "ismodalcontainer": true,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "ffb0e110af5f4093a0df2b5468f655a1",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
@@ -67,5 +67,5 @@
     "snaptogrid": true,
     "wType": "FlexContainer",
     "widgetalignment": 1,
-    "zindex": 2
+    "zindex": 5
 }

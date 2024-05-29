@@ -36,11 +36,11 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50%"
+        "value": "50.00%"
     },
     "centery": {
         "type": "string",
-        "value": "50%"
+        "value": "50.05%"
     },
     "children": [
         "lblDuplicateFlow2",
@@ -55,8 +55,10 @@
         "lbEnvironment2",
         "lblIsDefaultFlow",
         "swIsDefaultFlow",
+        "swIsDefaultFlow1",
         "lblIsSupernova",
         "swIsSupernova",
+        "swIsSupernova1",
         "lblSelectStepsLayout",
         "flxStepsLayout",
         "btnDuplicateFlow"
