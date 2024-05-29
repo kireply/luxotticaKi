@@ -1,7 +1,7 @@
 define({
  
 //   tiles:[],
-  channels:[],
+  channels: [],
  
   onViewCreated(){
     
@@ -29,7 +29,7 @@ define({
 //         var previousForm = voltmx.application.getPreviousForm();
 //         voltmx.print("### PREVIOUS FORM: " + previousForm);
 //         voltmx.print("### GBL CHANNELS: " + JSON.stringify(gblChannels));
-      	
+
         voltmx.print("### CHANNELS INSIDE ON VIEW: " + JSON.stringify(this.channels));
         this.reloadData();
     };
@@ -124,7 +124,8 @@ define({
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelAssetsCDN.text = channel.channelAssetsCDN;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelProjectImage.text = channel.channelProjectImage;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelFrameOnlyLensUPC.text = channel.channelFrameOnlyLensUPC;
-            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.swChannelShowUiSkeleton.selectedIndex = channel.channelShowUiSkeleton === "true" ? 0 : 1;
+            //this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.swChannelShowUiSkeleton.selectedIndex = channel.channelShowUiSkeleton === "true" ? 0 : 1;
+            this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.swChannelShowUiSkeleton1.state = channel.channelShowUiSkeleton === "true" ? true : false;
             this.view.flxPopupChannelInfo.setVisibility(true);
             this.view.flxBlur.setVisibility(true);
           } else {

@@ -55,7 +55,7 @@
     "clipbounds": false,
     "containerweight": 100,
     "desktopweb": {
-        "zIndex": 2
+        "zIndex": 5
     },
     "enablescrolling": true,
     "id": "flxPopupCreateNewChannelInsideFrmChannels",

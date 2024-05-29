@@ -4,11 +4,11 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "33dp"
+        "value": "5.50%"
     },
     "_left_": {
         "type": "string",
-        "value": "34.04%"
+        "value": "3.50%"
     },
     "_margin_": [
         0,
@@ -27,7 +27,7 @@
     "_skin_": "sb49bf7280ac4ab2b77341aeaa4d2278",
     "_top_": {
         "type": "string",
-        "value": "73.68%"
+        "value": "74%"
     },
     "_width_": {
         "type": "string",
@@ -36,7 +36,7 @@
     "canUpdateUI": true,
     "containerweight": 0,
     "data": {},
-    "id": "simpleSwitch",
+    "id": "swChannelShowUiSkeletonInsideFrmChannel1",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
