@@ -30,7 +30,7 @@
         }, {
             "id": "ADD_SNIPPET_ide_onClick_f474f53822c14653b732a5752374cde3",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "var currentDate = new Date();\n\n// Ottengo i componenti della data (giorno, mese, anno)\nvar day = currentDate.getDate();\nvar month = currentDate.getMonth() + 1; // I mesi partono da 0 (gennaio) quindi aggiungo 1\nvar year = currentDate.getFullYear();\n\n// Formatta la data come stringa nel formato \"YYYY-MM-DD\"\nformattedDate = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\nvoltmx.print(\"### DATA: \" + formattedDate); // Stampo la data formattata\n\nvoltmx.print(\"### SWITCH 1: \" + this.view.swIsDefaultFlow.selectedIndex);\nvoltmx.print(\"### SWitch 2: \" + this.view.swIsSupernova.selectedIndex);"
+            "codeSnippet": "var currentDate = new Date();\n\n// Ottengo i componenti della data (giorno, mese, anno)\nvar day = currentDate.getDate();\nvar month = currentDate.getMonth() + 1; // I mesi partono da 0 (gennaio) quindi aggiungo 1\nvar year = currentDate.getFullYear();\n\n// Formatta la data come stringa nel formato \"YYYY-MM-DD\"\nformattedDate = year + \"-\" + (month < 10 ? \"0\" + month : month) + \"-\" + (day < 10 ? \"0\" + day : day);\n\nvoltmx.print(\"### DATA: \" + formattedDate); // Stampo la data formattata\n\nvoltmx.print(\"### SWITCH 1: \" + this.view.swIsDefaultFlow.selectedIndex);\nvoltmx.print(\"### SWitch 2: \" + this.view.swIsSupernova.selectedIndex);\n\nvoltmx.print(\"### gblFlowDefault: \" + gblFlowDefault);\nvoltmx.print(\"### gblFlowSupernova: \" + gblFlowSupernova);\nvoltmx.print(\"### gblFlowFrameOnly: \" + gblFlowFrameOnly);"
         }, {
             "id": "ADD_LOCAL_VARIABLE_ide_onClick_d80d095916bb40ed8947d33dfb03b163",
             "type": "ADD_LOCAL_VARIABLE",
@@ -815,7 +815,7 @@
         }, {
             "id": "ADD_SNIPPET_ide_onClick_gb529dbe0ab74f83b031eebdddba6d59",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### APPENA CREATO FLOW N: \" + FLOW_create.FLOW[0].id);\ngblFlowId = FLOW_create.FLOW[0].id;\ngblFlowDescription = self.view.txtFlowDescription.text;\ngblFlowCategory = self.view.lbCategory.selectedKeyValue[1];\ngblFlowEnvironment = self.view.lbEnvironment.selectedKeyValue[1];",
+            "codeSnippet": "voltmx.print(\"### APPENA CREATO FLOW N: \" + FLOW_create.FLOW[0].id);\ngblFlowId = FLOW_create.FLOW[0].id;\ngblFlowDescription = self.view.txtFlowDescription.text;\ngblFlowCategory = self.view.lbCategory.selectedKeyValue[1];\ngblFlowEnvironment = self.view.lbEnvironment.selectedKeyValue[1];\n",
             "parentId": "IF_CONDITION_ide_onClick_i1046d2b34494227908e3213c26ca1b4",
             "callbackType": null
         }, {
@@ -903,7 +903,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
             "isCustomInput": false
         }, {
             "id": "ELSE_CONDITION_ide_onClick_g1c626ff60b04288aa261d4b7fe2f2c0",
@@ -1465,7 +1465,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
             "isCustomInput": false
         }, {
             "id": "ELSE_CONDITION_ide_onClick_afd25f0535db482e9a1cee86862844ae",

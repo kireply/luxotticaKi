@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_a768a487df9d4d54863927ea31559b6f",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### DENTRO SNIPPET \");\nvoltmx.print(\"### PRIMA ripeto gblFlowId: \" + gblFlowId);\nthis.view.imgLogo.src = gblChannelLogo;\n\nthis.view.btnProceed.setEnabled(false);\nthis.view.btnProceed.opacity = 0.5;\n\n",
+            "codeSnippet": "voltmx.print(\"### DENTRO SNIPPET \");\nvoltmx.print(\"### PRIMA ripeto gblFlowId: \" + gblFlowId);\nthis.view.imgLogo.src = gblChannelLogo;\nthis.view.btnProceed.setEnabled(false);\nthis.view.btnProceed.opacity = 0.5;\n\n",
             "parentId": null
         }, {
             "id": "_a3fae88b1a014c5eaeaf225987d37dd9",
