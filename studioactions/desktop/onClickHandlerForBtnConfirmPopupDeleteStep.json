@@ -15,6 +15,11 @@
         },
         "language": "js",
         "eventType": "onClick",
-        "actions": []
+        "actions": [{
+            "id": "ADD_SNIPPET_c272aca0794643a6ba69bc8c29c38f1a",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "debugger;\n\n// removing flxScroll related to the step we are deleting\nlet scroll = this.findCurrentFlexScroll();\nthis.view.flxRightSide.remove(scroll);\n\n// removing the step box\nlet stepBoxIdToDelete = \"boxStep\" + gblCurrentStepOrder;\nlet widget = this.view.flxSteps.widgets().find(w => w.id === stepBoxIdToDelete);\nthis.view.flxSteps.remove(widget);\n\n// decreasing gbl variables only if different from first.\ngblCurrentStepOrder = gblCurrentStepOrder === 1 ? 1 : --gblCurrentStepOrder;\ngblLastInsertedStep = gblLastInsertedStep === 1 ? 1 : --gblLastInsertedStep;\n\n\nthis.highlightSelectedStepBox();\nlet flxScrollToShow = this.findCurrentFlexScroll();\nflxScrollToShow.setVisibility(true);\n\nthis.view.flxPopupDeleteStep.setVisibility(false);\nthis.view.flxNewStepBlur.setVisibility(false);\n\n\n/*\nthis.view.flxSteps.flxBoxFirstStep.backgroundColor = \"00000000\";\nthis.view.flxSteps.flxBoxFirstStep.imgDeleteStep.isVisible = true;\nthis.view.flxSteps.flxBoxFirstStep.imgEditStep.isVisible = true;\nthis.view.flxSteps.flxBoxFirstStep.lblStepOrder.fontColor = \"FFFFFF00\";\nthis.view.flxSteps.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = \"FFFFFF00\";\n*/",
+            "parentId": null
+        }]
     }
 }
