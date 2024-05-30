@@ -52,7 +52,8 @@
     "children": [
         "flxMainContainerStepComposition",
         "flxNewStepBlur",
-        "flxPopupNewStep"
+        "flxPopupNewStep",
+        "flxPopupDeleteStep"
     ],
     "containerweight": 100,
     "controllerInfo": {

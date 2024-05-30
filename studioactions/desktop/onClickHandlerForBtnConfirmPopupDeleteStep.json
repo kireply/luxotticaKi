@@ -1,0 +1,20 @@
+{
+    "AS_Button_b44b82938c3e445f84846fd42d3a186c": {
+        "id": "AS_Button_b44b82938c3e445f84846fd42d3a186c",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnConfirmPopupDeleteStep",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": []
+    }
+}

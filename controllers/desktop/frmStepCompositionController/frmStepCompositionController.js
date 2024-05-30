@@ -1190,6 +1190,7 @@ define({
     
   // this function creates the new step (and the related box, at the top right)
   addNewStep: function(left_position, title){
+    debugger;
     voltmx.print("### INIZIATO -addNewStep-");
     let index = gblLastInsertedStep + 1;
 
@@ -1357,23 +1358,29 @@ define({
     
     
     box.onTouchEndDeleteTeaser = () => {
+      voltmx.print("### Entrato in onTouchEndDeleteTeaser dello step");
+      debugger;
+      this.view.flxNewStepBlur.setVisibility(true);
+      this.view.flxPopupDeleteStep.setVisibility(true);
+      
       let scroll = this.findCurrentFlexScroll();
       this.view.flxRightSide.remove(scroll);
-      this.view.flxScrollRight.setVisibility(true);
+      //this.view.flxScrollRight.setVisibility(true);
       
       let widget = this.view.flxSteps.widgets().find(w => w.id === box.id);
-      
+      /*
       this.view.flxSteps.flxBoxFirstStep.backgroundColor = "00000000";
       this.view.flxSteps.flxBoxFirstStep.imgDeleteStep.isVisible = true;
       this.view.flxSteps.flxBoxFirstStep.imgEditStep.isVisible = true;
       this.view.flxSteps.flxBoxFirstStep.lblStepOrder.fontColor = "FFFFFF00";
       this.view.flxSteps.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = "FFFFFF00";
       
-      this.view.flxSteps.remove(widget);
+      this.view.flxSteps.remove(widget);  */
       
-      gblCurrentStepOrder = 1;
+      //gblCurrentStepOrder = 1;
 
-    };
+    };  // end of action "onTouchEndDeleteTeaser"
+    
     
     this.view.flxSteps.add(box);
 

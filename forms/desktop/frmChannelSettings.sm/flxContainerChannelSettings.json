@@ -55,7 +55,8 @@
         "lblChannelFrameOnlyLensUPC",
         "txtChannelFrameOnlyLensUPC",
         "lblChannelShowUiSkeleton",
-        "swChannelShowUiSkeleton"
+        "swChannelShowUiSkeleton",
+        "swChannelShowUiSkeleton1"
     ],
     "clipbounds": false,
     "containerweight": 100,

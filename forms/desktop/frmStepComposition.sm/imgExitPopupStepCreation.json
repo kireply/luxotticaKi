@@ -35,7 +35,6 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "id": "imgExitPopupStepCreation",
-    "ide_onDownloadComplete": "AS_Image_he1a9b7b1e7f4c1a98416d4d328063a2",
     "ide_onTouchEnd": "AS_Image_a537d1c121c0420fa99f864c66f07508",
     "imagescalemode": 1,
     "info": null,

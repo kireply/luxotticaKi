@@ -1,0 +1,30 @@
+{
+    "AS_Image_d6b98c84efa84b1abc85aa2aa0cdd38f": {
+        "id": "AS_Image_d6b98c84efa84b1abc85aa2aa0cdd38f",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmStepCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j27b7970c694429db6312f3b27f7428e"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_c638ba19c4044ae298ee63b00c98b743",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxPopupNewStep.setVisibility(false);\nthis.view.flxNewStepBlur.setVisibility(false);",
+            "parentId": null
+        }]
+    }
+}

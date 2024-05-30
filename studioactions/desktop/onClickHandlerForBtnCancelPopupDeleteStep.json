@@ -1,0 +1,25 @@
+{
+    "AS_Button_h7ba916c4d66445da10a60993b586b9b": {
+        "id": "AS_Button_h7ba916c4d66445da10a60993b586b9b",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnCancelPopupDeleteStep",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_fe7b9f97c5c54bb680e5e0c5526780c0",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxPopupDeleteStep.setVisibility(false);\nthis.view.flxNewStepBlur.setVisibility(false);",
+            "parentId": null
+        }]
+    }
+}

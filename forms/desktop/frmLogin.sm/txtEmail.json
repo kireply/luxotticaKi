@@ -47,9 +47,9 @@
     "contentalignment": 4,
     "desktopweb": {},
     "disabledSkins": {
+        "focusSkin": "s5baa1686b2046fe972f2e79e8204ad8",
         "placeholderSkin": "s1097cf7fb814d7d94fa48315ba519b9"
     },
-    "focusskin": "s5baa1686b2046fe972f2e79e8204ad8",
     "id": "txtEmail",
     "info": null,
     "iscustomlayout": false,

@@ -3,11 +3,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "100%"
+        "value": "20%"
     },
     "_left_": {
         "type": "string",
-        "value": "0dp"
+        "value": "10.93%"
     },
     "_margin_": [
         6,
@@ -21,37 +21,34 @@
         0,
         0
     ],
-    "_skin_": "sa7210fc91d345b492d5d03f5badd0ef",
-    "_text_": "Log in",
+    "_skin_": "s93c1a5772d244678580475e3c7a23dc",
+    "_text_": "Cancel",
+    "_top_": {
+        "type": "string",
+        "value": "59.26%"
+    },
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "40%"
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerweight": 100,
     "contentalignment": 5,
     "disabledSkins": {
-        "focusSkin": "s6de8ee3e9e1463996d5dbb22b25b33b"
+        "focusSkin": "s4c33d0a1b2b47738694f9b383528179"
     },
     "displaytext": true,
-    "id": "btnLogin",
-    "ide_onClick": "AS_Button_ad0082f400754848ae5e50980f422794",
+    "id": "btnCancelPopupDeleteStep",
+    "ide_onClick": "AS_Button_h7ba916c4d66445da10a60993b586b9b",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "a24457ee33af4a0daa5e9f4c6abc30bf",
+    "kuid": "db14fc0b442a462584c34024efadb78c",
     "name": "kony.ui.Button",
-    "parent": "flxBtnLogin",
-    "pf": "frmLogin",
+    "parent": "flxPopupDeleteStep",
+    "pf": "frmStepComposition",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "wType": "Button"
+    "wType": "Button",
+    "zindex": 1
 }
