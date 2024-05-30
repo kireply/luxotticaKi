@@ -47,7 +47,8 @@
         "lblPopupStepOrder",
         "lblConfimationPopupDeleteStep",
         "btnCancelPopupDeleteStep",
-        "btnConfirmPopupDeleteStep"
+        "btnConfirmPopupDeleteStep",
+        "btnOkPopupDeleteStep"
     ],
     "clipbounds": false,
     "containerweight": 100,

@@ -1,0 +1,25 @@
+{
+    "AS_Button_fcd4fd1ebef643c5aa4b6a83eae8c7f1": {
+        "id": "AS_Button_fcd4fd1ebef643c5aa4b6a83eae8c7f1",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnOkPopupDeleteStep",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_d4af2e6d54c94c1890b674d4120a7eb8",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxPopupDeleteStep.setVisibility(false);\nthis.view.lblPopupStepOrder.text = \"- step order -\"\nthis.view.lblConfimationPopupDeleteStep.text = \"Are you sure you want to delete this step?\"\nthis.view.btnOkPopupDeleteStep.setVisibility(false);\nthis.view.btnCancelPopupDeleteStep.setVisibility(true);\nthis.view.btnConfirmPopupDeleteStep.setVisibility(true);",
+            "parentId": null
+        }]
+    }
+}

@@ -16,10 +16,302 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_g511f6248bab407abace60ca143630d4",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "idStepToRemove",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_acaf5c1a19ca425faf12811b677a6535",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Deleting step..."
+        }, {
+            "id": "INVOKE_SERVICE_a741dc726f7c4fadb326e0bef8094168",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_ed13544bb7ea4ecf842ba6f9c97faa5a": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ed13544bb7ea4ecf842ba6f9c97faa5a",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblCurrentStepOrder",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "order",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_CustomQueryGetSingleStep",
+                            "operationid": "132023"
+                        }
+                    }
+                },
+                "ME_Mapping_b4ee15c70572491999625a5fedc3fb70": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b4ee15c70572491999625a5fedc3fb70",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_CustomQueryGetSingleStep",
+                            "operationid": "132023"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_ed13544bb7ea4ecf842ba6f9c97faa5a", "ME_Mapping_b4ee15c70572491999625a5fedc3fb70"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "STEP_CustomQueryGetSingleStep",
+                "operationid": "132023"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_a166c7c809f64d6cbe05bd9640358caf",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "STEP_CustomQueryGetSingleStep.records !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "STEP_CustomQueryGetSingleStep.records.length > 0"
+            }],
+            "parentId": "INVOKE_SERVICE_a741dc726f7c4fadb326e0bef8094168",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_b3aacadcce0240859d3d7de86d343816",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// we found the step id we want to delete\nidStepToRemove = STEP_CustomQueryGetSingleStep.records[0].id;\ndebugger;",
+            "parentId": "_a166c7c809f64d6cbe05bd9640358caf",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_a66c0ab2d5e84e9a9cfee1d5314b7a82",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_hff62a3a2e3f4962b0423c9fde6150c9": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_hff62a3a2e3f4962b0423c9fde6150c9",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "idStepToRemove",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_delete",
+                            "operationid": "122823"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_hff62a3a2e3f4962b0423c9fde6150c9"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "STEP_delete",
+                "operationid": "122823"
+            },
+            "parentId": "_a166c7c809f64d6cbe05bd9640358caf",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_if27579cf8d543da86811ee9793e3d35",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "STEP_delete.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_a66c0ab2d5e84e9a9cfee1d5314b7a82",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_acdbf3d072dc42b0b4303032a0435638",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Step eliminato correttamente.\")\ndebugger;\n\n/*\nOra procedo ad eliminare tutte le labels che contengono\nnella loro stringa di di il <flow_id> e l' <order> dello step\n*/",
+            "parentId": "_if27579cf8d543da86811ee9793e3d35",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_e08860cd60da4472959c8ab26c01b1fe",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_f173344c92d14e9e9952907d34cee811": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f173344c92d14e9e9952907d34cee811",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_flow_stepTitle_CustomQueryGet",
+                            "operationid": "134231"
+                        }
+                    }
+                },
+                "ME_Mapping_dfb2cd2a67dc41c9b74b23997d43fc5e": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_dfb2cd2a67dc41c9b74b23997d43fc5e",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblCurrentStepTitle",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "step_title",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_flow_stepTitle_CustomQueryGet",
+                            "operationid": "134231"
+                        }
+                    }
+                },
+                "ME_Mapping_f43bc20f8eea45eba53af01b7dad0fab": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f43bc20f8eea45eba53af01b7dad0fab",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblCurrentStepTitle",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "same_step_title",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_flow_stepTitle_CustomQueryGet",
+                            "operationid": "134231"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_f173344c92d14e9e9952907d34cee811", "ME_Mapping_dfb2cd2a67dc41c9b74b23997d43fc5e", "ME_Mapping_f43bc20f8eea45eba53af01b7dad0fab"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABEL_flow_stepTitle_CustomQueryGet",
+                "operationid": "134231"
+            },
+            "parentId": "_if27579cf8d543da86811ee9793e3d35",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_b86f62f93d224f35bda8be8fc5d10184",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABEL_flow_stepTitle_CustomQueryGet.opstatus === 0"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "LABEL_flow_stepTitle_CustomQueryGet.records !== null"
+            }],
+            "parentId": "INVOKE_SERVICE_e08860cd60da4472959c8ab26c01b1fe",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_fa19bd367ad8482a941c45815d097dae",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "let labelsToRemove = LABEL_flow_stepTitle_CustomQueryGet.records;\nlabelsToRemove.length;\ndebugger;\n\n/*\nOra che ho recuperato tutte le labels (con id dentro) da eliminare,\nrichiamo un ciclo for che chiama il servicio LABEL_delete per eliminarel tutte dal DB.\n*/\n\n/* for each element in labelsToRemove\nfor (let i = 0; i < labelsToRemove; i++) {\n  \n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_delete\", {}, component_params, (response) => {\n\n  },\n\n    (error) => {\n    voltmx.print(\"### Error invocating LABEL_delete inside -onClickHandlerForBtnConfirmPopupDeleteStep-\");\n  });\n}\n*/\n\n",
+            "parentId": "_b86f62f93d224f35bda8be8fc5d10184",
+            "callbackType": null
+        }, {
             "id": "ADD_SNIPPET_c272aca0794643a6ba69bc8c29c38f1a",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "debugger;\n\n// removing flxScroll related to the step we are deleting\nlet scroll = this.findCurrentFlexScroll();\nthis.view.flxRightSide.remove(scroll);\n\n// removing the step box\nlet stepBoxIdToDelete = \"boxStep\" + gblCurrentStepOrder;\nlet widget = this.view.flxSteps.widgets().find(w => w.id === stepBoxIdToDelete);\nthis.view.flxSteps.remove(widget);\n\n// decreasing gbl variables only if different from first.\ngblCurrentStepOrder = gblCurrentStepOrder === 1 ? 1 : --gblCurrentStepOrder;\ngblLastInsertedStep = gblLastInsertedStep === 1 ? 1 : --gblLastInsertedStep;\n\n\nthis.highlightSelectedStepBox();\nlet flxScrollToShow = this.findCurrentFlexScroll();\nflxScrollToShow.setVisibility(true);\n\nthis.view.flxPopupDeleteStep.setVisibility(false);\nthis.view.flxNewStepBlur.setVisibility(false);\n\n\n/*\nthis.view.flxSteps.flxBoxFirstStep.backgroundColor = \"00000000\";\nthis.view.flxSteps.flxBoxFirstStep.imgDeleteStep.isVisible = true;\nthis.view.flxSteps.flxBoxFirstStep.imgEditStep.isVisible = true;\nthis.view.flxSteps.flxBoxFirstStep.lblStepOrder.fontColor = \"FFFFFF00\";\nthis.view.flxSteps.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = \"FFFFFF00\";\n*/",
-            "parentId": null
+            "codeSnippet": "debugger;\n\n// removing flxScroll related to the step we are deleting\nlet scroll = this.findCurrentFlexScroll();\nthis.view.flxRightSide.remove(scroll);\n\n// removing the step box\nlet stepBoxIdToDelete = \"boxStep\" + gblCurrentStepOrder;\nlet widget = this.view.flxSteps.widgets().find(w => w.id === stepBoxIdToDelete);\nthis.view.flxSteps.remove(widget);\n\n// decreasing gbl variables only if different from first.\ngblCurrentStepOrder = gblCurrentStepOrder === 1 ? 1 : --gblCurrentStepOrder;\ngblLastInsertedStep = gblLastInsertedStep === 1 ? 1 : --gblLastInsertedStep;\n// passa a gblCurrentStepTitle il titolo del nuovo step selezioanto! (ovvero il precedente al cancellato)\n\n\n// for each flxScroll, decrease id by 1\n\n\n// for each step box remaining, decrease the label step by 1\n\n\n\n// higlighting previous step box and showing related flxScroll\nthis.highlightSelectedStepBox();\nlet flxScrollToShow = this.findCurrentFlexScroll();\nflxScrollToShow.setVisibility(true);\n\nthis.view.flxPopupDeleteStep.setVisibility(false);\nthis.view.flxNewStepBlur.setVisibility(false);\n",
+            "parentId": null,
+            "disabled": true
         }]
     }
 }

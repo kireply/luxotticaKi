@@ -18,7 +18,7 @@
         0
     ],
     "_skin_": "s73cbf052da24e27b9c1cdf7aef22118",
-    "_text_": "- step number -",
+    "_text_": "- step order -",
     "_top_": {
         "type": "string",
         "value": "9%"

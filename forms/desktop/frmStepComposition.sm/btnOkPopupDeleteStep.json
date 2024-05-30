@@ -21,8 +21,8 @@
         0,
         0
     ],
-    "_skin_": "s93c1a5772d244678580475e3c7a23dc",
-    "_text_": "Cancel",
+    "_skin_": "s1e44e802280485d8ea1564a18ccdbac",
+    "_text_": "Ok",
     "_top_": {
         "type": "string",
         "value": "59.26%"
@@ -35,15 +35,15 @@
     "containerweight": 100,
     "contentalignment": 5,
     "disabledSkins": {
-        "focusSkin": "s4c33d0a1b2b47738694f9b383528179"
+        "focusSkin": "s6de8ee3e9e1463996d5dbb22b25b33b"
     },
     "displaytext": true,
-    "id": "btnCancelPopupDeleteStep",
-    "ide_onClick": "AS_Button_h7ba916c4d66445da10a60993b586b9b",
+    "id": "btnOkPopupDeleteStep",
+    "ide_onClick": "AS_Button_fcd4fd1ebef643c5aa4b6a83eae8c7f1",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
-    "kuid": "db14fc0b442a462584c34024efadb78c",
+    "isvisible": false,
+    "kuid": "eb3112607df34606b1425edd46de99d7",
     "name": "kony.ui.Button",
     "parent": "flxPopupDeleteStep",
     "pf": "frmStepComposition",

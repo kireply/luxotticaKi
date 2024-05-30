@@ -1,0 +1,26 @@
+{
+    "AS_Button_a95cecbebac64f78a57fd9b518e7143b": {
+        "id": "AS_Button_a95cecbebac64f78a57fd9b518e7143b",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_ide_onClick_d055f261bea549718be1323992c9f3c7",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "numOrderStepToRemove",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_ide_onClick_ee322bb194674367b1fbf88c4b7e4a90",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "debugger;\n\n// removing flxScroll related to the step we are deleting\nlet scroll = this.findCurrentFlexScroll();\nthis.view.flxRightSide.remove(scroll);\n\n// removing the step box\nlet stepBoxIdToDelete = \"boxStep\" + gblCurrentStepOrder;\nlet widget = this.view.flxSteps.widgets().find(w => w.id === stepBoxIdToDelete);\nthis.view.flxSteps.remove(widget);\n\n// decreasing gbl variables only if different from first.\ngblCurrentStepOrder = gblCurrentStepOrder === 1 ? 1 : --gblCurrentStepOrder;\ngblLastInsertedStep = gblLastInsertedStep === 1 ? 1 : --gblLastInsertedStep;\n\n// for each flxScroll, decrease id by 1\n\n\n// for each step box remaining, decrease the label step by 1\n\n\n\n// higlighting previous step box and showing related flxScroll\nthis.highlightSelectedStepBox();\nlet flxScrollToShow = this.findCurrentFlexScroll();\nflxScrollToShow.setVisibility(true);\n\nthis.view.flxPopupDeleteStep.setVisibility(false);\nthis.view.flxNewStepBlur.setVisibility(false);\n"
+        }]
+    }
+}
