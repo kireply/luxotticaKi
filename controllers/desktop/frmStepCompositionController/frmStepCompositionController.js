@@ -1192,7 +1192,11 @@ define({
   addNewStep: function(left_position, title){
     debugger;
     voltmx.print("### INIZIATO -addNewStep-");
-    let index = gblLastInsertedStep + 1;
+    
+    let allSteps = this.view.flxSteps.widgets();
+    let index = allSteps.length === 2 ? 2 : ( parseInt(allSteps[allSteps.length-1].id.match(/\d+/)[0]) + 1 ); // extracting higher id number index
+    
+    //let index = gblLastInsertedStep + 1;
 
     gblLastInsertedStep += 1;
     gblCurrentStepOrder = gblLastInsertedStep;
@@ -1225,11 +1229,15 @@ define({
     box.stepOrder = "Step " + index;
     // box.stepTitle = gblCurrentStepTitle;
     box.stepTitle = title;
+    // first case, we have only first step box, so the new one will have newId = 2
+    box.newId = "boxStep";
+    box.newId += allSteps.length === 2 ? 2 : ( parseInt(allSteps[allSteps.length-1].newId.match(/\d+/)[0]) + 1 );
     
     box.onClickTeaser = () => {
+      debugger;
       let steps_widgets = this.view.flxSteps.widgets();
       let flxScrolls = this.view.flxRightSide.widgets();
-      let current_id = box.id;   // ex. "boxStep3"
+      let current_id = box.newId || box.id;   // ex. "boxStep3"
       
       let numberAsString = current_id.replace("boxStep", "");
       let stepNumber = parseInt(numberAsString, 10);
@@ -1240,7 +1248,7 @@ define({
         let expectedScroll = 'flxScrollRight' + i;
         // Procedi solo se non stiamo trattando il widget corrente
         if (expectedId !== current_id) {
-          let widget = steps_widgets.find(w => w.id === expectedId);
+          let widget = steps_widgets.find(w => w.newId === expectedId || w.id === expectedId);
           if (widget) {
             voltmx.print("&&& DENTRO if widget");
             widget.flxBoxStep.backgroundColor = "FFFFFF00"; // white
@@ -1248,12 +1256,12 @@ define({
             widget.imgEditStep.isVisible = false;
             widget.lblStepOrder.fontColor = "00000000"; //black
             widget.lblStepTitle.fontColor = "00000000"; //black
-            let scroll = flxScrolls.find(s => s.id === expectedScroll);
+            let scroll = flxScrolls.find(s => s.newId === expectedScroll || s.id === expectedScroll);
             if (scroll) {
               scroll.isVisible = false;
             }
           } else {
-            let widget_new = steps_widgets.find(w => w.id === "flxBoxFirstStep");
+            let widget_new = steps_widgets.find(w => w.newId === "flxBoxFirstStep" || w.id === "flxBoxFirstStep");
             if (widget_new) {
               voltmx.print("&&& DENTRO if widget_new");
               widget_new.backgroundColor = "FFFFFF00"; // white
@@ -1266,15 +1274,15 @@ define({
           }
         } else {  // treating the current step
           voltmx.print("&&& DENTRO ELSE ");
-          let widget = steps_widgets.find(w => w.id === current_id);
+          let widget = steps_widgets.find(w => w.newId === current_id || w.id === current_id);
           widget.flxBoxStep.backgroundColor = "00000000"; //black
           widget.lblStepOrder.fontColor = "FFFFFF00";  // white
           widget.lblStepTitle.fontColor = "FFFFFF00";  // white
           widget.imgDeleteStep.isVisible = true;
           widget.imgEditStep.isVisible = true;
-          let scroll = flxScrolls.find(s => s.id === current_scroll);
+          let scroll = flxScrolls.find(s => s.newId === current_scroll || s.id === current_scroll);
             if (scroll) {
-              scroll.isVisible = true;
+              scroll.isVisible = true; // showing flxScrollRight related to the step
             }
           gblCurrentStepOrder = stepNumber;
           gblCurrentStepTitle = widget.lblStepTitle.text;
@@ -1285,8 +1293,8 @@ define({
       this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);
       this.view.settingsSide.txt.setVisibility(true);
       
-      // if the last step has no components, show the default message
-      let thisScroll = flxScrolls.find(scroll => scroll.id === ("flxScrollRight" + (gblCurrentStepOrder === 1 ? "" : gblCurrentStepOrder) ));
+      // if the step has no components, show the default message
+      let thisScroll = flxScrolls.find(scroll => scroll.newId === ("flxScrollRight" + (gblCurrentStepOrder === 1 ? "" : gblCurrentStepOrder)) || scroll.id === ("flxScrollRight" + (gblCurrentStepOrder === 1 ? "" : gblCurrentStepOrder)) );
 
       if (thisScroll) {
         let hasComponents = Object.keys(thisScroll).some(key => key.startsWith('flex'));  // perchè nelle varie proprietà, se sono presenti componenti si trovano in "flex..."
@@ -1300,6 +1308,7 @@ define({
           this.view.txtStartPhraseRight.setVisibility(true);
         }
       }
+      
       
     };  // end box.onCLickTeaser
     
@@ -1400,6 +1409,10 @@ define({
       }
     }, {}, {});
 
+    let allflexes = this.view.flxRightSide.widgets();
+    flex.newId = "flxScrollRight";
+    flex.newId += allflexes.length === 4 ? 2 : ( parseInt(allflexes[allflexes.length-1].newId.match(/\d+/)[0]) + 1 );
+
 
     // creating a new flex scroll for each Step (containing the components selected and inserted in that specific Step)
     flex.layoutType = voltmx.flex.FLOW_VERTICAL;
@@ -1414,6 +1427,7 @@ define({
     
     this.highlightSelectedStepBox();
 
+    debugger;
     voltmx.print("### FINITO -addNewStep-");
   },  // end of function "addNewStep"
   
@@ -1442,7 +1456,7 @@ define({
       } else {
         let right_widgets = this.view.flxRightSide.widgets();
         // find the current flex
-        let targetWidget = right_widgets.find(widget => widget.id === "flxScrollRight" + gblCurrentStepOrder);
+        let targetWidget = right_widgets.find(widget => widget.newId === "flxScrollRight" + gblCurrentStepOrder || widget.id === "flxScrollRight" + gblCurrentStepOrder);
         if (targetWidget){
           scroll = targetWidget;
         }
@@ -1483,7 +1497,7 @@ define({
 
     // highlighting only the current selected step box
     voltmx.print("### LUNGHEZZA DI steps" + steps.length);
-    let lastStepBox = steps.find(step => step.id === (gblCurrentStepOrder === 1 ? "flxBoxFirstStep" : "boxStep" + gblCurrentStepOrder) );
+    let lastStepBox = steps.find(step => step.newId === (gblCurrentStepOrder === 1 ? "flxBoxFirstStep" : "boxStep" + gblCurrentStepOrder) || step.id === (gblCurrentStepOrder === 1 ? "flxBoxFirstStep" : "boxStep" + gblCurrentStepOrder) );
     if (lastStepBox) {
       if (gblCurrentStepOrder === 1) { // only first step box present
         this.view.flxBoxFirstStep.backgroundColor = "00000000"; // black
@@ -1501,6 +1515,10 @@ define({
         gblCurrentStepTitle = lastStepBox.lblStepTitle.text;
       }
     }
+    
+    // showing the correct flexScroll releted to the step highlighted.
+    let flxScrollToShow = this.findCurrentFlexScroll();
+    flxScrollToShow.setVisibility(true);
     
     voltmx.print("### FINITO -highlightSelectedStepBox-");
     
