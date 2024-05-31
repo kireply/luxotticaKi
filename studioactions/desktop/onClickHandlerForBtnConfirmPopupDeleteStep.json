@@ -26,6 +26,46 @@
             "parentId": null,
             "callbackType": null
         }, {
+            "id": "ADD_LOCAL_VARIABLE_ba5069b3096c49e88be4b733f443727d",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "labelsToRemove",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "{}",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_e10f1bbd7b804698a112723e628910d8",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "i",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_b641944ed1f044529c584c4621666295",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "numLabelsToRemove",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_d53f1e8065304d92b3cf5dfc77f75f10",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "labelIdToRemove",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "LOADING_INDICATOR_acaf5c1a19ca425faf12811b677a6535",
             "selectedOption": "show",
             "parentId": null,
@@ -303,15 +343,106 @@
         }, {
             "id": "ADD_SNIPPET_fa19bd367ad8482a941c45815d097dae",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "let labelsToRemove = LABEL_flow_stepTitle_CustomQueryGet.records;\nlabelsToRemove.length;\ndebugger;\n\n/*\nOra che ho recuperato tutte le labels (con id dentro) da eliminare,\nrichiamo un ciclo for che chiama il servicio LABEL_delete per eliminarel tutte dal DB.\n*/\n\n/* for each element in labelsToRemove\nfor (let i = 0; i < labelsToRemove; i++) {\n  \n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_delete\", {}, component_params, (response) => {\n\n  },\n\n    (error) => {\n    voltmx.print(\"### Error invocating LABEL_delete inside -onClickHandlerForBtnConfirmPopupDeleteStep-\");\n  });\n}\n*/\n\n",
+            "codeSnippet": "labelsToRemove = LABEL_flow_stepTitle_CustomQueryGet.records;\nnumLabelsToRemove = labelsToRemove.length-1;\ndebugger;\n\n/*\nOra che ho recuperato tutte le labels (con id dentro) da eliminare,\nrichiamo un ciclo for che chiama il servizio LABEL_delete per eliminare\ndal DB tutte le labels in labelsToRemove.\n*/\n/*\nfor (let i = 0; i < labelsToRemove.length; i++) {\n  \n  let idToRemove = labelsToRemove[i].id;\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_delete\", {}, idToRemove, (response) => {\n    voltmx.print(\"### Label deleted: \" + idToRemove);\n    voltmx.print(\"### Label deleted RESPONSE: \" + JSON.stringify(response));\n  },\n\n    (error) => {\n    voltmx.print(\"### Error invocating LABEL_delete inside -onClickHandlerForBtnConfirmPopupDeleteStep-\");\n    voltmx.print(\"### Error RESPONSE: \" + JSON.stringify(error));\n  });\n}\n\n// hiding popup\nself.view.flxPopupDeleteStep.setVisibility(false);\nself.view.flxNewStepBlur.setVisibility(false);\n*/\n\n",
             "parentId": "_b86f62f93d224f35bda8be8fc5d10184",
             "callbackType": null
         }, {
-            "id": "ADD_SNIPPET_c272aca0794643a6ba69bc8c29c38f1a",
+            "id": "LOOP_ACTION_d5fc8c14b71c4d91af14fad469da7bd9",
+            "type": "LOOP_ACTION",
+            "parentId": "_b86f62f93d224f35bda8be8fc5d10184",
+            "callbackType": null,
+            "varType": "choose",
+            "variable": "i",
+            "startType": "set",
+            "startValue": 0,
+            "endType": "choose",
+            "endValue": "numLabelsToRemove",
+            "stepBy": 1,
+            "direction": "inc"
+        }, {
+            "id": "ADD_SNIPPET_d9ad759eb745439da140ddc6ddf29afe",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "debugger;\n\n// removing flxScroll related to the step we are deleting\nlet scroll = this.findCurrentFlexScroll();\nthis.view.flxRightSide.remove(scroll);\n\n// removing the step box\nlet stepBoxIdToDelete = \"boxStep\" + gblCurrentStepOrder;\nlet widget = this.view.flxSteps.widgets().find(w => w.id === stepBoxIdToDelete);\nthis.view.flxSteps.remove(widget);\n\n// decreasing gbl variables only if different from first.\ngblCurrentStepOrder = gblCurrentStepOrder === 1 ? 1 : --gblCurrentStepOrder;\ngblLastInsertedStep = gblLastInsertedStep === 1 ? 1 : --gblLastInsertedStep;\n// passa a gblCurrentStepTitle il titolo del nuovo step selezioanto! (ovvero il precedente al cancellato)\n\n\n// for each flxScroll, decrease id by 1\n\n\n// for each step box remaining, decrease the label step by 1\n\n\n\n// higlighting previous step box and showing related flxScroll\nthis.highlightSelectedStepBox();\nlet flxScrollToShow = this.findCurrentFlexScroll();\nflxScrollToShow.setVisibility(true);\n\nthis.view.flxPopupDeleteStep.setVisibility(false);\nthis.view.flxNewStepBlur.setVisibility(false);\n",
-            "parentId": null,
-            "disabled": true
+            "codeSnippet": "voltmx.print(\"### delete COMPLETED.\");\n// we are outside the loop now.\n// WE REMOVE THE GRAPHIC PART FROM THE FORM\n\n// removing flxScroll related to the step we are deleting\nlet scroll = self.findCurrentFlexScroll();\nlet idScrollToRemove = scroll.id;\nlet numScrollToRemove = idScrollToRemove.match(/\\d+/)[0]; // Estrapolo solo il gruppo di cifre finali (ordine dello scroll)\nif (numScrollToRemove === null) {\n  numScrollToRemove = 1; // the scroll to remove is the first (\"flxScrollRight\") and doesn't have number 1 in front\n}\nself.view.flxRightSide.remove(scroll);\n\n// removing the step box\nlet stepBoxIdToDelete = \"boxStep\" + gblCurrentStepOrder;\nlet widget = self.view.flxSteps.widgets().find(w => w.id === stepBoxIdToDelete);\nself.view.flxSteps.remove(widget);\n\n// decreasing gbl variables only if different from first.\ngblCurrentStepOrder = gblCurrentStepOrder === 1 ? 1 : --gblCurrentStepOrder;\ngblLastInsertedStep = gblLastInsertedStep === 1 ? 1 : --gblLastInsertedStep;\n// gblCurrentStepTitle is already updated now (to the previous step)\n\n\nlet stepBoxes = self.view.flxSteps.widgets();  // contains the \"add stepp\" too.\nlet scrolls = self.view.flxRightSide.widgets();  \n// for each flxScroll, decrease id by 1\nfor (let i = stepBoxes.length; i > numScrollToRemove; --i) {  // updating only flex that were after the one deleted\n  scrolls[i-2].id = (i === 2 ? \"flxScrollRight\" : \"flxScrollRight\" + (--i) );\n}\n\n// for each step box remaining, decrease the label step by 1\n\n\n\n// higlighting previous step box and showing related flxScroll\nself.highlightSelectedStepBox();\nlet flxScrollToShow = self.findCurrentFlexScroll();\nflxScrollToShow.setVisibility(true);\n\nself.view.flxPopupDeleteStep.setVisibility(false);\nself.view.flxNewStepBlur.setVisibility(false);\n\n\ndebugger;",
+            "parentId": "_b86f62f93d224f35bda8be8fc5d10184",
+            "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_c6043ce1cd5a4016b2b0f8d4d343b3b9",
+            "selectedOption": "dismiss",
+            "parentId": "_b86f62f93d224f35bda8be8fc5d10184",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "ADD_SNIPPET_c39d29c0c6aa45c4a354bc50dee89f36",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "labelIdToRemove = labelsToRemove[i].id;\nvoltmx.print(\"### label to remove: \" + labelIdToRemove);\ndebugger;",
+            "parentId": "LOOP_ACTION_d5fc8c14b71c4d91af14fad469da7bd9",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_a3c736cab9f341ce842fc90631ca5748",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_d8e098749b204cd9bff180d2b56d0cc7": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d8e098749b204cd9bff180d2b56d0cc7",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "labelIdToRemove",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_delete",
+                            "operationid": "123743"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_d8e098749b204cd9bff180d2b56d0cc7"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABEL_delete",
+                "operationid": "123743"
+            },
+            "parentId": "LOOP_ACTION_d5fc8c14b71c4d91af14fad469da7bd9",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_f8bec5b4ffdd41bebde0a86b2e0b06d1",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABEL_delete.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_a3c736cab9f341ce842fc90631ca5748",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_d6a31c7b80214ae3b50d15a57aa69096",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### delete label: \" + labelsToRemove[i].id + \" successfull.\");",
+            "parentId": "_f8bec5b4ffdd41bebde0a86b2e0b06d1",
+            "callbackType": null
         }]
     }
 }

@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_a57a87fd15d04e04bc9c7984b8ebeb2c",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "//debugger;\nvoltmx.print(\"### entrato in postShow di frmStepComposition\");\n// Disabling text areas.\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n// setting the list of component blurred (as no section is open yet)\nthis.view.flxComponentsSide.opacity = 0.5;\n",
+            "codeSnippet": "debugger;\nvoltmx.print(\"### entrato in postShow di frmStepComposition\");\n// Disabling text areas.\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n// setting the list of component blurred (as no section is open yet)\nthis.view.flxComponentsSide.opacity = 0.5;\n",
             "parentId": null,
             "callbackType": null
         }, {
