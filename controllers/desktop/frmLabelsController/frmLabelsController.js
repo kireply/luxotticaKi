@@ -171,12 +171,25 @@ define({
             this.view.lblNoLabelsFound.setVisibility(false);
             gblLabelsList = rowObject;
             debugger;
+            
             // New empty object for the header row
             let headerRow = {}; 
+            // finding the row with the most columns (with the most languages/translations).
+            let maxKeysObject = null;
+            let maxKeysCount = 0;
 
-            
+            gblLabelsList.forEach(obj => {
+              const keysCount = Object.keys(obj).length;
+              if (keysCount > maxKeysCount) {
+                maxKeysCount = keysCount;
+                maxKeysObject = obj;
+              }
+            });
+
+            voltmx.print("### elemento con più chiavi: " + JSON.stringify(maxKeysObject));
+
             // Saving header keys and their own values
-            Object.keys(gblLabelsList[0]).forEach(function(key) {
+            Object.keys(maxKeysObject).forEach(function(key) {
               headerRow[key] = key;
             });
 

@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "6%"
+        "value": "45dp"
     },
     "_left_": {
         "type": "string",
@@ -46,6 +46,7 @@
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxMenuOptionSelected",
+    "ide_onClick": "AS_FlexContainer_d2205f49fee84d81ac2730833730c8d5",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

@@ -45,6 +45,7 @@
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxSmallerMenuOptionSelected",
+    "ide_onClick": "AS_FlexContainer_e147ffc378a94120998965dee08266e4",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

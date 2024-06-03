@@ -115,7 +115,7 @@ define({
         channel.onClickTeaser = () => {
       	//TODO ACTIONS WHILE CLICKING ON THE TILE
           if (gblInfoIcon === true){
-  //           voltmx.print("### SET VISIBILITY");         
+  //           voltmx.print("### SET VISIBILITY");    
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.txtChannelID.text = channel.channelIdentifier;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.txtChannelLogo.text = channel.channelLogo;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo1.txtChannelProperties.text = channel.channelProperties;
