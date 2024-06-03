@@ -139,23 +139,50 @@ define({
 
           // file uploaded non empty
           if(rowObject.length !== 0) {
+            
+            voltmx.print("### rowObject NON E ZERO");
+            
+            
+            // deleting old labels
+            let numLabelsToRemove = gblLabelsList.length-1;
+            let labelIdToRemove = "";
+
+            for (let i = 1; i <= numLabelsToRemove; i = i + 1) {
+              labelIdToRemove = gblLabelsList[i].id;
+              voltmx.print("### [" + i + "] Label id to remove: " + labelIdToRemove);
+              debugger;
+
+
+              voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_delete", {}, {id: labelIdToRemove}, (response) => {
+                voltmx.print("### Delete andata a buon fine");
+                voltmx.print("### Service LABEL_delete response: "+JSON.stringify(response));
+              },
+              (error) => {
+                voltmx.print("### Delete NON andata a buon fine");
+                voltmx.print("### Error in the invocation of service LABEL_delete: " + JSON.stringify(error));
+              });
+            }
+            
+            
+            // Now creating new labels from uploaded file
+            
+            voltmx.print("### File contains -" + rowObject.length + "- rows.")
             this.view.segLabels.setVisibility(true);
             this.view.lblNoLabelsFound.setVisibility(false);
             gblLabelsList = rowObject;
-
+            debugger;
             // New empty object for the header row
             let headerRow = {}; 
 
+            
             // Saving header keys and their own values
-
-
             Object.keys(gblLabelsList[0]).forEach(function(key) {
               headerRow[key] = key;
             });
 
 
             gblLabelsList.unshift(headerRow);
-            voltmx.print("### gblLabels stringify: " + JSON.stringify(gblLabelsList));
+            voltmx.print("### gblLabelsList stringify: " + JSON.stringify(gblLabelsList));
 
 
             // Copying the list but removing the "id" key
@@ -205,14 +232,44 @@ define({
             this.view.segLabels.widgetDataMap = {lb1: firstKeys[0],lb2: firstKeys[1],lb3: firstKeys[2],lb4: firstKeys[3], lb5: firstKeys[4]};
 
             var showLabels = parseInt(this.view.lbShowEntries.selectedKeyValue[1], 10);  // 10 is for the decimal
-            var data = list.slice(0, ++showLabels); //++ because the first row is used for the header
+            var entries = list.slice(0, ++showLabels); //++ because the first row is used for the header
 
-            this.view.segLabels.setData(data);
+            voltmx.print("### Entries: " + JSON.stringify(entries));
+            this.view.segLabels.setData(entries);
             voltmx.print("### gblLabels DOPO UPLOAD: " + JSON.stringify(gblLabelsList));
             voltmx.print("### list DOPO UPLOAD: " + JSON.stringify(list));
-            listUpload = list.slice(1);
+            //listUpload = list.slice(1);
 
-            // Deleting all records from table LABEL
+
+            let newList = gblLabelsList;
+
+            newList = gblLabelsList.map(obj => {
+              const newObj = { id: obj.id };
+              for (const key in obj) {
+                if (key !== 'id') {
+                  newObj[key] = obj[key];
+                }
+              }
+              return newObj;
+            });
+
+            voltmx.print("### newList FULL: " +  JSON.stringify(newList.slice(1)) );
+
+
+            // for each label, save it in the DB
+            newList.slice(1).forEach(record => {  // slice because I remove the header from the list
+
+              voltmx.print("### newList record: " +  JSON.stringify(record) );
+              voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, record, (response) => {
+                voltmx.print("### Service LABEL_create response: "+JSON.stringify(response));
+              }, (error) => {
+                voltmx.print("### Error in the invocation of service LABEL_create: " + JSON.stringify(error));
+              });
+
+            });
+
+            
+            /* Deleting all records from table LABEL
             voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_CustomQueryDelete", {}, gblChannelId, (response) => {
               voltmx.print("### Service response: "+JSON.stringify(response));
 
@@ -233,6 +290,7 @@ define({
               // for each label, save it in the DB
               newList.slice(1).forEach(record => {  // slice because I remove the header from the list
 
+                debugger;
                 voltmx.print("### newList record: " +  JSON.stringify(record) );
                 voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, record, (response) => {
                   voltmx.print("### Service response: "+JSON.stringify(response));
@@ -244,8 +302,10 @@ define({
 
             }, (error) => {
               voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error) + " - But the operation seems to be completed successfully at the end. The result is positive.");
-            });
+            });  */
 
+            
+            
           } else { // file uploaded is empty
 
             voltmx.ui.Alert({
@@ -270,7 +330,12 @@ define({
     //voltmx.print("### XLSX.version: " + XLSX.version);
     
     return; //XLSX.version;
-  }, 
+  },  // end of function "getExcel()"
+  
+  
+  
+  
+  
   
   
   // EXPORT function
