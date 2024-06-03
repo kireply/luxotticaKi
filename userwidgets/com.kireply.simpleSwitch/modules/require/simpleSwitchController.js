@@ -30,7 +30,6 @@ define(function() {
               this._state = value;
               this.initDone = true;  // added again (didn't work inside Tab otherwise)
               this.initDone && this.setLayout();
-              this.setDimensions(this.view.height);
             });
             defineGetter(this, 'onSkin', () => {
                 return this._onSkin;
