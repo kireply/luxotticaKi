@@ -62,7 +62,7 @@
         },
         "btnResizeMenu": {
             "__events__": {
-                "ide_onClick": "AS_Button_a1dd626f69c6481285ea8b198b60f736"
+                "ide_onClick": "AS_Button_c1d485a0fc8a48499988ccbcab046232"
             },
             "__info__": {
                 "kuid": "a2f86d9bcfb54d6896c23198a99a4c21",

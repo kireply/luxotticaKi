@@ -1,8 +1,8 @@
 {
-    "AS_Button_e24090c759544e9f8c103fc8e05ec577": {
-        "id": "AS_Button_e24090c759544e9f8c103fc8e05ec577",
+    "AS_Button_d7c2e5b88b8049e0980cba260345162a": {
+        "id": "AS_Button_d7c2e5b88b8049e0980cba260345162a",
         "type": "ACTION_SEQUENCE",
-        "name": "onClickHandlerForBtnResizeMenuLabelManagement",
+        "name": "onClickHandlerForBtnResizeSmallerMenuLabelManagement",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -16,9 +16,9 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "ADD_SNIPPET_hd114f643702444682ffe4ed36073e87",
+            "id": "ADD_SNIPPET_d4973802a95f4ce4b1527e211be92eba",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxContainerMenu.setVisibility(false);\nthis.view.flxContainerSmallerMenu.setVisibility(true);\nthis.view.flxContainerLabel.width = \"92%\";",
+            "codeSnippet": "this.view.flxContainerMenu.setVisibility(false);\nthis.view.flxContainerSmallerMenu.setVisibility(true);\nthis.view.flxContainerLabel.width = \"78.33%\";",
             "parentId": null
         }]
     }

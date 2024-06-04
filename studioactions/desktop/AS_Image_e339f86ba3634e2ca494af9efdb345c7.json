@@ -1,0 +1,25 @@
+{
+    "AS_Image_e339f86ba3634e2ca494af9efdb345c7": {
+        "id": "AS_Image_e339f86ba3634e2ca494af9efdb345c7",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmChannels",
+            "type": "forms",
+            "platform": "",
+            "KUID": "c1e9143f6fef4291a170222e7c044c7c"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": []
+    }
+}

@@ -2,7 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "6%"
+        "value": "45dp"
     },
     "_margin_": [
         0,
@@ -32,7 +32,7 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "49.03%"
+        "value": "50%"
     },
     "children": [
         "lblMenuOptionSelected",

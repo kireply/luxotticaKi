@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_a6365b8db72841f0a193d71bd4373f1c",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxContainerMenu.setVisibility(false);\nthis.view.flxContainerSmallerMenu.setVisibility(true);",
+            "codeSnippet": "this.view.flxContainerMenu.setVisibility(false);\nthis.view.flxContainerSmallerMenu.setVisibility(true);\nthis.view.FlexContainerFlows.width = \"92%\";",
             "parentId": null
         }]
     }

@@ -38,9 +38,9 @@
         "flxContainerHeader",
         "flxContainerMenu",
         "flxContainerSmallerMenu",
+        "lblSelectOrCreateChannel",
         "flxChannelsCopy2",
-        "flxChannels",
-        "lblSelectOrCreateChannel"
+        "flxChannels"
     ],
     "clipbounds": false,
     "containerweight": 100,

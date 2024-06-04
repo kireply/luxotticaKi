@@ -44,6 +44,7 @@
     ],
     "clipbounds": false,
     "containerweight": 100,
+    "desktopweb": {},
     "enablescrolling": true,
     "id": "flxContainerStepCreation",
     "info": null,
