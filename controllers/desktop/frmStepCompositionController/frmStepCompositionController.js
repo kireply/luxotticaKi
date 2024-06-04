@@ -1518,7 +1518,8 @@ define({
     
     // hiding all flxScrolls
     let scrolls = this.view.flxRightSide.widgets();
-    for (let i = 3; i <= gblLastInsertedStep; i++) {
+    debugger;
+    for (let i = 0; i <= scrolls.length-1; i++) {
       scrolls[i].setVisibility(false);
     }
     
@@ -1542,6 +1543,23 @@ define({
     
     flxScrollToShow.setVisibility(true);
 
+    debugger;
+    
+    /* Tentativo per far ricomparire le immagini dei componenti caricati.... non funziona
+    let flex = Object.keys(scrolls[3]).find(key => key.startsWith("flex"));
+    let component = Object.keys(scrolls[3][flex]).find(key => key.startsWith("component"));
+    let leftData = Object.keys(scrolls[3][flex][component]).find(key => key.startsWith("leftData"));
+    let imgComponent = Object.keys(scrolls[3][flex][component][leftData][0]).find(key => key.startsWith("imgComponent"));
+    let modalImgComponent = Object.keys(scrolls[3][flex][component][leftData][0]).find(key => key.startsWith("modalIComponent"));
+    scrolls[3][flex][component][leftData][0][imgComponent].height = "20px";
+    scrolls[3][flex][component][leftData][0][modalImgComponent].height = "100px";
+    
+    scrolls[3].flex1717515208483.component1717515208483.leftData[0].imgComponent.height = "20px";
+    scrolls[3].flex1717515208483.component1717515208483.leftData[0].imgComponent.width = "100px";
+    scrolls[3].flex1717515208483.component1717515208483.leftData[0].modalmgComponent.height = "20px";
+    scrolls[3].flex1717515208483.component1717515208483.leftData[0].modalImgComponent.height = "100px";
+	*/
+    
     voltmx.print("### FINITO -highlightSelectedStepBox-");
     
   },  // enf of fuction "highlightSelectedStepBox"
