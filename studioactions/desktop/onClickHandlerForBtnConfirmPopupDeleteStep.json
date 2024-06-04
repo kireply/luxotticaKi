@@ -226,7 +226,7 @@
         }, {
             "id": "ADD_SNIPPET_acdbf3d072dc42b0b4303032a0435638",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### Step eliminato correttamente.\")\ndebugger;\n\n/*\nOra procedo ad eliminare tutte le labels che contengono\nnella loro stringa di di il <flow_id> e l' <order> dello step\n*/",
+            "codeSnippet": "voltmx.print(\"### Step eliminato correttamente.\")\ndebugger;\n\n// updating global variable \"gblIdOrderSteps\"\nlet newIdOrderSteps = {};\nlet keyDeleted = false;\n\n// re-ordering correct steps id order (removing the id step we are eliminating)\nlet keys = Object.keys(gblIdOrderSteps).map(Number).sort((a, b) => a - b);\n\nfor (let key of keys) {\n  if (key === parseInt(idStepToRemove)) {\n    keyDeleted = true;\n    continue;\n  }\n  if (keyDeleted) {\n    newIdOrderSteps[key] = (parseInt(gblIdOrderSteps[key]) - 1).toString();\n  } else {\n    newIdOrderSteps[key] = gblIdOrderSteps[key];\n  }\n}\n\n// re-assigning the correct steps id order\ngblIdOrderSteps = newIdOrderSteps;\n\n\n/*\nOra procedo ad eliminare tutte le labels che contengono\nnella loro stringa di di il <flow_id> e l' <order> dello step\n*/",
             "parentId": "_if27579cf8d543da86811ee9793e3d35",
             "callbackType": null
         }, {

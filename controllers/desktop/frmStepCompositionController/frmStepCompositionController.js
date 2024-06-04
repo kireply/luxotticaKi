@@ -960,7 +960,7 @@ define({
             }
             nestedObjs.nestedComponents.forEach(childId => {
               if (childId in componentIdMap){
-                children.push({[childId] : componentIdMap[childId]});
+                children.push({[childId]: componentIdMap[childId]});
                 childIds.add(childId);
               }
             });
@@ -1516,10 +1516,32 @@ define({
       }
     }
     
+    // hiding all flxScrolls
+    let scrolls = this.view.flxRightSide.widgets();
+    for (let i = 3; i <= gblLastInsertedStep; i++) {
+      scrolls[i].setVisibility(false);
+    }
+    
+    
     // showing the correct flexScroll releted to the step highlighted.
     let flxScrollToShow = this.findCurrentFlexScroll();
-    flxScrollToShow.setVisibility(true);
     
+    // if this scrolls doesn't contain any component yet, show default message
+    if (flxScrollToShow) {
+      let hasComponents = Object.keys(flxScrollToShow).some(key => key.startsWith('flex'));  // perchè nelle varie proprietà, se sono presenti componenti si trovano in "flex..."
+      if (hasComponents) {
+        this.view.imgNoComponentsRight.setVisibility(false);
+        this.view.lblNoComponentsRight.setVisibility(false);
+        this.view.txtStartPhraseRight.setVisibility(false);
+      } else {
+        this.view.imgNoComponentsRight.setVisibility(true);
+        this.view.lblNoComponentsRight.setVisibility(true);
+        this.view.txtStartPhraseRight.setVisibility(true);
+      }
+    }
+    
+    flxScrollToShow.setVisibility(true);
+
     voltmx.print("### FINITO -highlightSelectedStepBox-");
     
   },  // enf of fuction "highlightSelectedStepBox"
@@ -2243,7 +2265,7 @@ define({
     
     // setting the first step title
     this.view.lblStepTitleIntoStepComposition.text = stepsList[0].title;
-    gblIdOrderSteps[stepsList[0].id] = stepsList[0].order;
+    gblIdOrderSteps[stepsList[0].id] = stepsList[0].order;  // potremme essere da dover fixare (con newId)
     
     
     //inside left
