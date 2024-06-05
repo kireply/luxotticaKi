@@ -1503,8 +1503,8 @@ define({
         this.view.flxBoxFirstStep.backgroundColor = "00000000"; // black
         this.view.lblStepTitleIntoStepComposition.fontColor = "FFFFFF00"; // white
         this.view.lblStepOrder.fontColor = "FFFFFF00"; // white
-        this.view.imgEditStep.isVisible = true;
-        this.view.imgDeleteStep.isVisible = true;
+        this.view.imgEditStep.setVisibility(true);
+        this.view.imgDeleteStep.setVisibility(true);
         gblCurrentStepTitle = lastStepBox.lblStepTitleIntoStepComposition.text;
       } else { // current box is different from the first
         lastStepBox.flxBoxStep.backgroundColor = "00000000"; // black
@@ -2283,7 +2283,7 @@ define({
     
     // setting the first step title
     this.view.lblStepTitleIntoStepComposition.text = stepsList[0].title;
-    gblIdOrderSteps[stepsList[0].id] = stepsList[0].order;  // potremme essere da dover fixare (con newId)
+    gblIdOrderSteps[stepsList[0].id] = stepsList[0].order;  // potrebbe essere da dover fixare (con newId)
     
     
     //inside left
@@ -2349,8 +2349,8 @@ define({
         this.view.flxBoxFirstStep.backgroundColor = "00000000"; // black
         this.view.lblStepTitleIntoStepComposition.fontColor = "FFFFFF00"; // white
         this.view.lblStepOrder.fontColor = "FFFFFF00"; // white
-        this.view.imgEditStep.isVisible = true;
-        this.view.imgDeleteStep.isVisible = true;
+        this.view.imgEditStep.setVisibility(true);
+        this.view.imgDeleteStep.setVisibility(true);
         gblCurrentStepTitle = lastStepBox.lblStepTitleIntoStepComposition.text;
       } else { // current box is different from the first
         lastStepBox.flxBoxStep.backgroundColor = "00000000"; // black
@@ -2371,7 +2371,7 @@ define({
     
     // Hiding all the scrolls but the last (related to the last step)
     scrolls.forEach(flxScroll => {
-      if (flxScroll.id && flxScroll.id.startsWith('flxScrollRight') && flxScroll.id !== ("flxScrollRight" + gblCurrentStepOrder) ) {
+      if (flxScroll.id && flxScroll.id.startsWith('flxScrollRight') && flxScroll.id !== ("flxScrollRight" + (gblCurrentStepOrder === 1 ? "" : gblCurrentStepOrder) )) {
         flxScroll.setVisibility(false);
       }
     });
@@ -2385,7 +2385,6 @@ define({
       } 
     }
     
-
     debugger;
     //voltmx.application.dismissLoadingScreen();
     voltmx.print("### FINITO -loadFlowData-");
