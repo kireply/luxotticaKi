@@ -11,10 +11,13 @@ define({
   // This function is called at the end of executing functions "editProperty", "cloneComponent" or "deleteComponent"
   selectComponent: function(rightData, leftData, instance, nested, lastComponentWidth){
     voltmx.print("### INIZIATO -selectComponent-");
+    debugger;
+    
     voltmx.print("### RIGHT DATA: " + JSON.stringify(rightData));
     voltmx.print("### LEFT DATA: " + JSON.stringify(leftData));
     voltmx.print("### MODES: " + JSON.stringify(this.modes));
 
+    // creating flex for the component (will be inserted in left or right side).
     const flex = new voltmx.ui.FlexContainer({
       id: `flex${new Date().getTime()}`,
       width: '96%',
@@ -44,6 +47,7 @@ define({
     
     //let componentArray;
     //let nestedComponentsObj;
+    
     if ( (parseInt(selectedComp.width, 10)) != 100) {  // if the component is nested
       componentArray = this.modes[gblFatherNest];
       nestedComponentsObj = componentArray.find(item => item.hasOwnProperty('nestedComponents'));
@@ -216,11 +220,12 @@ define({
       this.view.flxScrollLeft.forceLayout();
       //this.showOrHideMoveCloneDelete(selectedComp);
     }
+    
     if ( right_width > 48 || gblEditingRightSide){
       //vuol dire che il pannello di destra è aperto
       voltmx.print("### IF RIGHT WIDTH");
       voltmx.print("### COMPONENT ORDER: " + selectedComp.componentOrder);
-      
+      // hiding default message in settings side
       this.view.flxContainerStepCreation.flxLeftRight.flxRightSide.imgNoComponentsRight.setVisibility(false);
       this.view.flxContainerStepCreation.flxLeftRight.flxRightSide.lblNoComponentsRight.setVisibility(false);
       this.view.flxContainerStepCreation.flxLeftRight.flxRightSide.txtStartPhraseRight.setVisibility(false);
@@ -228,12 +233,12 @@ define({
         let right_widgets = this.view.flxRightSide.widgets();
         let targetWidget = right_widgets.find(widget => widget.id === "flxScrollRight" + gblCurrentStepOrder);
         if (targetWidget){
-          targetWidget.add(flex);
+          targetWidget.add(flex);  // adding flex containing the component.
           targetWidget.forceLayout();
         }
       } else {
         this.view.flxScrollRight.setVisibility(true);
-        this.view.flxScrollRight.add(flex);
+        this.view.flxScrollRight.add(flex);  // adding flex containing the component.
         this.view.flxScrollRight.forceLayout();
       }
       selectedComp.componentOrder = instance;
@@ -242,7 +247,6 @@ define({
       if (gblEditingLeftSide || gblEditingRightSide) {
         selectedComp["lblComponentId"].text = gblComponentId;
       }
-      
       
       //this.showOrHideMoveCloneDelete(selectedComp);
     }
@@ -1050,6 +1054,9 @@ define({
       } 
     });
     
+    voltmx.print("### SALVATAGGIO CON gblSaveAfterEdit = " + gblSaveAfterEdit + ".");
+    gblSaveAfterEdit = true;
+
     //voltmx.application.dismissLoadingScreen();
     voltmx.print("### FINITO -saveStepComposition-");
   },   // end of function saveStepComposition
@@ -1924,27 +1931,32 @@ define({
   
   
   
+  
+  
   // this function clones (duplicate) the component selected
   cloneComponent: function(id){
     voltmx.print("### INIZIATO -cloneComponent-");
+    debugger;
     let scroll = this.findCurrentFlexScroll();
     let scroll_widgets = scroll.widgets();
     let new_scroll_widgets = [];  // recreating the scroll with the new list of components (including the duplicated one)
     let name = null;
     
+    // for each element inside the old component list, we push it into the new list (passing left and right data of each).
     scroll_widgets.forEach( widget => {
       let widget_key = Object.keys(widget).find(key => key.startsWith("component"));
+      
       new_scroll_widgets.push([widget[widget_key].leftData, widget[widget_key].rightData]);
       let cloneKey = widget[widget_key].leftData[0].lblComponentName + "_" + widget[widget_key].componentOrder + "_" + gblCurrentStepOrder;
       //debugger; DENTRO A -cloneComponent-
       
-      if(widget[widget_key].id === id){  // the current component from the old list is equal to the one we are duplicating
+      if(widget[widget_key].id === id){  // this component (from the old list) is the one we want to duplicate
         let newOrder = parseInt(widget[widget_key].componentOrder, 10) + 1;
         let newKey = widget[widget_key].leftData[0].lblComponentName + "_" + (newOrder) + "_" + gblCurrentStepOrder;
-        name = widget[widget_key].leftData[0].lblComponentName;
-        this.modes[newKey] = JSON.parse(JSON.stringify(this.modes[cloneKey]) );
+        name = widget[widget_key].leftData[0].lblComponentName;  // es. 'RXC_CHIPS_LIST'
+        this.modes[newKey] = JSON.parse(JSON.stringify(this.modes[cloneKey]) );  // creating new mode for duplicated component (with data from the component we are duplicating).
         
-        this.modes[newKey].forEach(item => {
+        this.modes[newKey].forEach(item => { // updating each 'label' mode with correct order (for the component duplicated)
           if (item.mode === 'label' && item.hasOwnProperty('key')) {
             // Dividi la chiave in parti, sostituisci il penultimo valore e riassembla la chiave
             let parts = item.key.split('_');
@@ -1955,6 +1967,7 @@ define({
           }
         });
         
+        // updating in the same way the global variable.
         gblPropertyTemplatesIds[newKey] = JSON.parse(JSON.stringify(gblPropertyTemplatesIds[cloneKey]) );
         
         gblPropertyTemplatesIds[newKey].forEach(item => {
@@ -1968,12 +1981,12 @@ define({
                 }
             }
         });
-        
+        // inserting new duplicated component inside the new list.
         new_scroll_widgets.push([widget[widget_key].leftData, widget[widget_key].rightData]);
       }
     });
     debugger; // DENTRO A -cloneComponent-
-    scroll.removeAll();
+    scroll.removeAll(); // removing all component views from the scroll
         
     // aggiorniamo le properties dei componenti successivi (es chiave labels con istanza e order aggiornato)
     new_scroll_widgets.forEach( (new_widget, index) => {
@@ -2007,7 +2020,6 @@ define({
           }
         }
 
-
         // Trova la chiave che corrisponde al pattern
         let propertyKey = Object.keys(gblPropertyTemplatesIds).find(key => {
           return key.startsWith(new_widget[0][0].lblComponentName) && key.endsWith(gblCurrentStepOrder);
@@ -2035,9 +2047,9 @@ define({
         }  
       }
 
-
+      // updating instance value inside each property 'label'.
       new_widget[1].forEach(prop => {
-        if (/^[^_]+_.*_.*_.*$/.test(prop.lblPropertyValue)) {  // test che controlla se valore passato è del tipo "abc_def_ghi_jkl"
+        if (/^[^_]+_.*_.*_.*$/.test(prop.lblPropertyValue)) {  // questo test che controlla se il parametro passato è del tipo "503_premium_a1_2_1" 
           let partsValue = prop.lblPropertyValue.split("_");
           if (partsValue.length >= 4) { 
             partsValue[partsValue.length - 2] = instance; 
@@ -2045,12 +2057,15 @@ define({
           }
         }
       });
+      
       gblLastInsertedComponent = new_widget[0][0].lblComponentName;
       this.selectComponent(new_widget[1], new_widget[0], instance, false);
     });
     
     voltmx.print("### FINITO -cloneComponent-");
   },  // end of function "cloneComponent".
+  
+  
   
   
   
