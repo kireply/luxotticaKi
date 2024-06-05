@@ -903,7 +903,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
             "isCustomInput": false
         }, {
             "id": "ELSE_CONDITION_ide_onClick_g1c626ff60b04288aa261d4b7fe2f2c0",
@@ -1338,9 +1338,113 @@
                             "operationid": "121128"
                         }
                     }
+                },
+                "ME_Mapping_ff0c1b2dba64403792dad87bc5b7d76d": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ff0c1b2dba64403792dad87bc5b7d76d",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowFrameOnly",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "show_frame_only",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
+                },
+                "ME_Mapping_i2a56a13f773405fb0d9272f0937cade": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_i2a56a13f773405fb0d9272f0937cade",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowFramePlusLenses",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "show_frame_plus_lenses",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
+                },
+                "ME_Mapping_bd0dc320f3cd4bb996b5e43fcb2c69d0": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_bd0dc320f3cd4bb996b5e43fcb2c69d0",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowSavingsLabel",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "show_savings_label",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
+                },
+                "ME_Mapping_a8663c2cd4b544579541dd37e4fc4c63": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a8663c2cd4b544579541dd37e4fc4c63",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowDistanceReading",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "activate_distance_and_reading",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_create",
+                            "operationid": "121128"
+                        }
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_a565c0f3e9794ee492058961dc467f7b", "ME_Mapping_h8a9823af80d4f1db607f1c0dbd45cb4", "ME_Mapping_a62aafe3a3134afb8723278877088961", "ME_Mapping_e32396e49a1941a2ad7492b7e2a2ce27", "ME_Mapping_f2c0bb34fcb74349bbe263d15502f400", "ME_Mapping_b6262a1df42d472fa7f4590a92b390f1", "ME_Mapping_d6ab3c1cfd274a17bd8d3118f68dbb72", "ME_Mapping_fb480ee895394aa98f76241094402598", "ME_Mapping_e49db113f15b4c5bac96916dd5b93c25", "ME_Mapping_f379d4c1268449299893179585c6545f", "ME_Mapping_f70db665221d45d6a923d57016ab3f28", "ME_Mapping_efdd9b6155194088a8a34f6b814f2a27"],
+            "mappingsOrder": ["ME_Mapping_a565c0f3e9794ee492058961dc467f7b", "ME_Mapping_h8a9823af80d4f1db607f1c0dbd45cb4", "ME_Mapping_a62aafe3a3134afb8723278877088961", "ME_Mapping_e32396e49a1941a2ad7492b7e2a2ce27", "ME_Mapping_f2c0bb34fcb74349bbe263d15502f400", "ME_Mapping_b6262a1df42d472fa7f4590a92b390f1", "ME_Mapping_d6ab3c1cfd274a17bd8d3118f68dbb72", "ME_Mapping_fb480ee895394aa98f76241094402598", "ME_Mapping_e49db113f15b4c5bac96916dd5b93c25", "ME_Mapping_f379d4c1268449299893179585c6545f", "ME_Mapping_f70db665221d45d6a923d57016ab3f28", "ME_Mapping_efdd9b6155194088a8a34f6b814f2a27", "ME_Mapping_ff0c1b2dba64403792dad87bc5b7d76d", "ME_Mapping_i2a56a13f773405fb0d9272f0937cade", "ME_Mapping_bd0dc320f3cd4bb996b5e43fcb2c69d0", "ME_Mapping_a8663c2cd4b544579541dd37e4fc4c63"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -1465,7 +1569,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
             "isCustomInput": false
         }, {
             "id": "ELSE_CONDITION_ide_onClick_afd25f0535db482e9a1cee86862844ae",
