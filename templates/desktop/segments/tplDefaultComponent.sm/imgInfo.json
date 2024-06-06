@@ -3,8 +3,8 @@
     "DNDConfig": null,
     "_base64_": null,
     "_height_": {
-        "type": "string",
-        "value": "34dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "_margin_": [
         0,
@@ -29,8 +29,8 @@
         "value": "0dp"
     },
     "_width_": {
-        "type": "string",
-        "value": "36dp"
+        "type": "ref",
+        "value": "preferred"
     },
     "canUpdateUI": true,
     "containerId": true,
@@ -43,6 +43,14 @@
     "iscustomlayout": false,
     "isvisible": true,
     "kuid": "cace34b8084746a3a96039ec410ccca4",
+    "minheight": {
+        "type": "string",
+        "value": "34dp"
+    },
+    "minwidth": {
+        "type": "string",
+        "value": "36dp"
+    },
     "name": "kony.ui.Image2",
     "parent": "flxBackground",
     "pf": "tplDefaultComponent",
