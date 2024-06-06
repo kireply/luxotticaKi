@@ -126,6 +126,7 @@ define({
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.txtChannelFrameOnlyLensUPC.text = channel.channelFrameOnlyLensUPC;
             //this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.swChannelShowUiSkeleton.selectedIndex = channel.channelShowUiSkeleton === "true" ? 0 : 1;
             this.view.flxPopupChannelInfo.tbChannelInfo.TabChannelInfo2.swChannelShowUiSkeleton1.state = channel.channelShowUiSkeleton === "true" ? true : false;
+                        
             this.view.flxPopupChannelInfo.setVisibility(true);
             this.view.flxBlur.setVisibility(true);
           } else {
