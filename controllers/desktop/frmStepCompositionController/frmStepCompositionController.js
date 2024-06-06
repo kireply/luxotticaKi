@@ -59,7 +59,7 @@ define({
     
     //whenever a component already inserted in one of the two halves is clicked
     const selectedCompEventHandler = () => {
-      
+      debugger;
       // if none of the two halves is open, the functionalities are not available (content is blured)
       let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
       let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
@@ -187,6 +187,7 @@ define({
     };
     
     selectedComp.onClickClone = () => {
+      debugger;
       this.cloneComponent(selectedComp.id);
     };
     
@@ -268,6 +269,8 @@ define({
   
   // this function should update the component selected with the settings edited on the right Setting Side
   onEndEditingCallback: function(propComp, identify, dropdown, switched){  //identity = selectedComponent.id
+    
+    debugger;
     voltmx.print("### INIZIATO -onEndEditingCallback-");
     let value = null;
     if (dropdown){
@@ -905,7 +908,8 @@ define({
 
     }  // finita sezione di sinistra
     
-
+	debugger;
+    
     let associatedId = null;
     let scrolls = steps.filter(step => step.id.startsWith("flxScrollRight"));
 
@@ -956,7 +960,7 @@ define({
 
           let completeKey = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName + "_" + widget[componentKey]["lblComponentOrder"].text + "_" + step_id;
           let keyArray = mode_dict[completeKey];
-          //           debugger;
+          debugger;
           let nestedObjs = keyArray.find(item => item.hasOwnProperty('nestedComponents'));
           if (nestedObjs && nestedObjs.nestedComponents.length > 0){
             if (!childIds.has(id)){
@@ -1929,6 +1933,15 @@ define({
   
   
   
+  returnThisModes: function(){
+    voltmx.print("### INIZIATO -returnThisModes-");
+    
+    return this.modes;
+    
+    voltmx.print("### INIZIATO -returnThisModes-");
+  },    // end of function "returnThisModes".
+  
+  
   
   
   
@@ -1950,6 +1963,7 @@ define({
       let cloneKey = widget[widget_key].leftData[0].lblComponentName + "_" + widget[widget_key].componentOrder + "_" + gblCurrentStepOrder;
       //debugger; DENTRO A -cloneComponent-
       
+      // the current component is to duplicate
       if(widget[widget_key].id === id){  // this component (from the old list) is the one we want to duplicate
         let newOrder = parseInt(widget[widget_key].componentOrder, 10) + 1;
         let newKey = widget[widget_key].leftData[0].lblComponentName + "_" + (newOrder) + "_" + gblCurrentStepOrder;
@@ -1987,9 +2001,11 @@ define({
     });
     debugger; // DENTRO A -cloneComponent-
     scroll.removeAll(); // removing all component views from the scroll
+    this.view.settingsSide.flxScrollSettingsContent.removeAll();
         
     // aggiorniamo le properties dei componenti successivi (es chiave labels con istanza e order aggiornato)
     new_scroll_widgets.forEach( (new_widget, index) => {
+      debugger;
       let instance = (index + 1).toString();
       
       if(name !== new_widget[0][0].lblComponentName) {
@@ -2023,6 +2039,7 @@ define({
         // Trova la chiave che corrisponde al pattern
         let propertyKey = Object.keys(gblPropertyTemplatesIds).find(key => {
           return key.startsWith(new_widget[0][0].lblComponentName) && key.endsWith(gblCurrentStepOrder);
+          debugger;
         });
 
         // diverso da instance
@@ -2059,6 +2076,7 @@ define({
       });
       
       gblLastInsertedComponent = new_widget[0][0].lblComponentName;
+      debugger;
       this.selectComponent(new_widget[1], new_widget[0], instance, false);
     });
     
