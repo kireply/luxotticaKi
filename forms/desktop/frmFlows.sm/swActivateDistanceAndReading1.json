@@ -27,7 +27,7 @@
     "_skin_": "sb49bf7280ac4ab2b77341aeaa4d2278",
     "_top_": {
         "type": "string",
-        "value": "53%"
+        "value": "73%"
     },
     "_width_": {
         "type": "string",
@@ -36,11 +36,11 @@
     "canUpdateUI": true,
     "containerweight": 0,
     "data": {},
-    "id": "swIsDefaultFlowEdit1",
+    "id": "swActivateDistanceAndReading1",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "j3a11c55fa8e499dacdf6974c0efd3f8",
+    "kuid": "bcd7f519e304416c85deab93d0b79522",
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",
     "onclick": "AS_FlexContainer_j6ed7e78c876440da3af64d132975c81",

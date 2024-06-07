@@ -21,15 +21,15 @@
         0,
         0
     ],
-    "_skin_": "sfd924d5e71e4497b04c55aaf3fce866",
-    "_text_": "Is Default flow?",
+    "_skin_": "s8fc55cda49441249f5527e7871752a0",
+    "_text_": "Show Savings label?",
     "_top_": {
         "type": "string",
-        "value": "53%"
+        "value": "69%"
     },
     "_width_": {
         "type": "string",
-        "value": "30%"
+        "value": "45%"
     },
     "_wrapping_": 2,
     "android": {
@@ -41,7 +41,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblIsDefaultFlowEdit",
+    "id": "lblShowSavingsLabel",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "cbf0f0d6dcb2431bbd3c8009611308fb",
+    "kuid": "ae0c5f3e233546fbbc0ad2f6ded7ab32",
     "name": "kony.ui.Label",
     "parent": "flxEditFlow",
     "pf": "frmFlows",

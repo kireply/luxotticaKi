@@ -21,15 +21,15 @@
         0,
         0
     ],
-    "_skin_": "sfd924d5e71e4497b04c55aaf3fce866",
-    "_text_": "Is Default flow?",
+    "_skin_": "seb03e88345f48dc9500500bbfcb02cb",
+    "_text_": "Activate distance and reading?",
     "_top_": {
         "type": "string",
-        "value": "53%"
+        "value": "73%"
     },
     "_width_": {
         "type": "string",
-        "value": "30%"
+        "value": "55%"
     },
     "_wrapping_": 2,
     "android": {
@@ -41,7 +41,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblIsDefaultFlowEdit",
+    "id": "lblActivateDistanceAndReading",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "cbf0f0d6dcb2431bbd3c8009611308fb",
+    "kuid": "d6ce1fbfe09c4b7fbd0cbe239ca920a7",
     "name": "kony.ui.Label",
     "parent": "flxEditFlow",
     "pf": "frmFlows",

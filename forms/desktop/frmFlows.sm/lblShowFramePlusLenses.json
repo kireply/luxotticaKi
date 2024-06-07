@@ -21,15 +21,15 @@
         0,
         0
     ],
-    "_skin_": "sfd924d5e71e4497b04c55aaf3fce866",
-    "_text_": "Is Default flow?",
+    "_skin_": "sd6d69d486284123ad2f283319daa286",
+    "_text_": "Show frame plus lenses?",
     "_top_": {
         "type": "string",
-        "value": "53%"
+        "value": "65%"
     },
     "_width_": {
         "type": "string",
-        "value": "30%"
+        "value": "45%"
     },
     "_wrapping_": 2,
     "android": {
@@ -41,7 +41,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblIsDefaultFlowEdit",
+    "id": "lblShowFramePlusLenses",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "cbf0f0d6dcb2431bbd3c8009611308fb",
+    "kuid": "d66c58c28dd349ecb55fb52e2fa07010",
     "name": "kony.ui.Label",
     "parent": "flxEditFlow",
     "pf": "frmFlows",

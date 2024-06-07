@@ -504,9 +504,181 @@
                             "operationid": "121542"
                         }
                     }
+                },
+                "ME_Mapping_bb4f4e9a50a84288a9bb1404063a8fc0": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_bb4f4e9a50a84288a9bb1404063a8fc0",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "layout_id",
+                        "dataType": "string",
+                        "expression": "\"1\"",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_def51e4b2af145cba62078fe5d18c3f0": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_def51e4b2af145cba62078fe5d18c3f0",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "state",
+                        "widgetId": "swShowFrameOnly1",
+                        "widgetPath": "this.view.swShowFrameOnly1",
+                        "widgetType": "UserWidgetInstance",
+                        "dataType": "boolean",
+                        "itemId": "frmFlows",
+                        "widgetKUID": "c9f12dad60f34f1a9d32d86a378b44ad",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "isSkinProperty": false,
+                        "forkedPlatform": "all",
+                        "passThroughMeta": {
+                            "kuid": "b2942988342843ac8bceeef8faf8d051",
+                            "srcWgtKUID": "u5270f9b835c4c3887e263d187091fc5"
+                        }
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "show_frame_only",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_hf3f981492e84139afe9ee38518a632a": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_hf3f981492e84139afe9ee38518a632a",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "state",
+                        "widgetId": "swShowFramePlusLenses1",
+                        "widgetPath": "this.view.swShowFramePlusLenses1",
+                        "widgetType": "UserWidgetInstance",
+                        "dataType": "boolean",
+                        "itemId": "frmFlows",
+                        "widgetKUID": "bbb7ca32ca5048569ba66a013822e2e3",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "isSkinProperty": false,
+                        "forkedPlatform": "all",
+                        "passThroughMeta": {
+                            "kuid": "b2942988342843ac8bceeef8faf8d051",
+                            "srcWgtKUID": "u5270f9b835c4c3887e263d187091fc5"
+                        }
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "show_frame_plus_lenses",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_fac3d09464fe41888ab46dd442172a57": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_fac3d09464fe41888ab46dd442172a57",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "state",
+                        "widgetId": "swShowSavingsLabel1",
+                        "widgetPath": "this.view.swShowSavingsLabel1",
+                        "widgetType": "UserWidgetInstance",
+                        "dataType": "boolean",
+                        "itemId": "frmFlows",
+                        "widgetKUID": "bd6d9734d73149bfaf660db9dcf737ee",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "isSkinProperty": false,
+                        "forkedPlatform": "all",
+                        "passThroughMeta": {
+                            "kuid": "b2942988342843ac8bceeef8faf8d051",
+                            "srcWgtKUID": "u5270f9b835c4c3887e263d187091fc5"
+                        }
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "show_savings_label",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
+                },
+                "ME_Mapping_a07932a82b0f4b03bb553f20dd633a6c": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a07932a82b0f4b03bb553f20dd633a6c",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "state",
+                        "widgetId": "swActivateDistanceAndReading1",
+                        "widgetPath": "this.view.swActivateDistanceAndReading1",
+                        "widgetType": "UserWidgetInstance",
+                        "dataType": "boolean",
+                        "itemId": "frmFlows",
+                        "widgetKUID": "bcd7f519e304416c85deab93d0b79522",
+                        "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
+                        "isSkinProperty": false,
+                        "forkedPlatform": "all",
+                        "passThroughMeta": {
+                            "kuid": "b2942988342843ac8bceeef8faf8d051",
+                            "srcWgtKUID": "u5270f9b835c4c3887e263d187091fc5"
+                        }
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "activate_distance_and_reading",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "FLOW_update",
+                            "operationid": "121542"
+                        }
+                    }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_cfe9cf5c710241f3aac0d3e95b7a4348", "ME_Mapping_h1b5b9f8a9d54e63a1428bfd1d2ab691", "ME_Mapping_fdb21e34b3d544a8892fe483a94d0fdb", "ME_Mapping_gf056cb50612486aa1fcb65ebd9cb438", "ME_Mapping_efa8506589a94214b5ad14e0f1b80f28", "ME_Mapping_aab71f9e57f64c009eeff95d17205fa5", "ME_Mapping_ea055aaf867a44ab9954abe23530c634", "ME_Mapping_aa50e79964c247cfaaef197573a3a2ab", "ME_Mapping_i32fc37d5d3948069a20c99d3de0556b", "ME_Mapping_e360fbcd39e14c95a223d0946c536715", "ME_Mapping_c46efa2d7689438aad883f6afc7ab43a", "ME_Mapping_ca80181545f44e1e9637fca0cc54a1c4"],
+            "mappingsOrder": ["ME_Mapping_cfe9cf5c710241f3aac0d3e95b7a4348", "ME_Mapping_h1b5b9f8a9d54e63a1428bfd1d2ab691", "ME_Mapping_fdb21e34b3d544a8892fe483a94d0fdb", "ME_Mapping_gf056cb50612486aa1fcb65ebd9cb438", "ME_Mapping_efa8506589a94214b5ad14e0f1b80f28", "ME_Mapping_aab71f9e57f64c009eeff95d17205fa5", "ME_Mapping_ea055aaf867a44ab9954abe23530c634", "ME_Mapping_aa50e79964c247cfaaef197573a3a2ab", "ME_Mapping_i32fc37d5d3948069a20c99d3de0556b", "ME_Mapping_e360fbcd39e14c95a223d0946c536715", "ME_Mapping_c46efa2d7689438aad883f6afc7ab43a", "ME_Mapping_ca80181545f44e1e9637fca0cc54a1c4", "ME_Mapping_bb4f4e9a50a84288a9bb1404063a8fc0", "ME_Mapping_def51e4b2af145cba62078fe5d18c3f0", "ME_Mapping_hf3f981492e84139afe9ee38518a632a", "ME_Mapping_fac3d09464fe41888ab46dd442172a57", "ME_Mapping_a07932a82b0f4b03bb553f20dd633a6c"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
