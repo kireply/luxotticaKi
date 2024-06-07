@@ -1,0 +1,138 @@
+{
+    "AS_Form_j836ed43d22c4cfb9dd53cfa01ff5867": {
+        "id": "AS_Form_j836ed43d22c4cfb9dd53cfa01ff5867",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmLabelCopy",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d542af1533cb4c91820f2aa7d069320e"
+        },
+        "language": "js",
+        "eventType": "postShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_postShow_ib8e3a8ba28d44b998f5c7126204e6e9",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.channelTemplatewithContract.channelLogo = gblChannelLogo;\nthis.view.channelTemplatewithContract.channelInfo = gblChannelName + \" - #\" + gblChannelId;"
+        }, {
+            "id": "LOADING_INDICATOR_ide_postShow_aed4e79027af49578c2595c13db8e149",
+            "selectedOption": "show",
+            "disabled": true,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Loading label copy..."
+        }, {
+            "id": "INVOKE_ASYNC_SERVICE_ide_postShow_fb5e67393e184315904b1a91417c6fc5",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_f2454cbe96b64e10a1ae9faa6c2dda21": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f2454cbe96b64e10a1ae9faa6c2dda21",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblChannelId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "channel_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_CustomQueryGet",
+                            "operationid": "125149"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_f2454cbe96b64e10a1ae9faa6c2dda21"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABEL_CustomQueryGet",
+                "operationid": "125149"
+            },
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "disabled": true
+        }, {
+            "id": "LOADING_INDICATOR_ide_postShow_dc8a45995d82492a87de502e24f3899b",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_ASYNC_SERVICE_ide_postShow_fb5e67393e184315904b1a91417c6fc5",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "IF_CONDITION_ide_postShow_f1b0a5c8fc0a4b87ab8be2d659687e36",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABEL_CustomQueryGet !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "LABEL_CustomQueryGet.opstatus === 0"
+            }],
+            "parentId": "INVOKE_ASYNC_SERVICE_ide_postShow_fb5e67393e184315904b1a91417c6fc5",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_ide_postShow_b10f1296ae6646d39ed9735a1879e402",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### records CustomQueryGet: \" + LABEL_CustomQueryGet.records);\n\nvoltmx.print(\"### record CustomQueryGet stringify: \" + JSON.stringify(LABEL_CustomQueryGet.records) );\ndebugger;\n\n// setting the data in order, putting the flow_id as first key\nvar list = LABEL_CustomQueryGet.records.map(elemento => {\n  var newElement = { flow_id: elemento.flow_id }; // adding glow_id and value\n  //var newElement2 = { id: elemento.id };\n  var idValue = elemento.id; // Memorizza il valore della chiave \"id\"\n  newElement.id = idValue; // adding key \"id\" and value\n  \n  for (var key in elemento) {\n    if (key !== \"flow_id\" && key !==\"id\") {\n      newElement[key] = elemento[key];\n    }\n  }\n  return newElement;\n});\n\nvoltmx.print(\"### list: \" + JSON.stringify(list) );\n\ngblLabelsList = list;\n\nvoltmx.print(\"### gblLabelsList: \" + JSON.stringify(gblLabelsList) );\nvoltmx.print(\"### gblLabelsList.length: \" + JSON.stringify(gblLabelsList.length) );\n\n// New empty object for the header row\nlet headerRow = {}; \n\n// finding the row with the most columns (with the most languages/translations).\nlet maxKeysObject = null;\nlet maxKeysCount = 0;\n\ngblLabelsList.forEach(obj => {\n    const keysCount = Object.keys(obj).length;\n    if (keysCount > maxKeysCount) {\n        maxKeysCount = keysCount;\n        maxKeysObject = obj;\n    }\n});\n\nvoltmx.print(\"### elemento con più chiavi: \" + JSON.stringify(maxKeysObject));\n\n\nif (gblLabelsList.length !== 0) {\n  self.view.segLabels.setVisibility(true);\n  self.view.lblNoLabelsFound.setVisibility(false);\n  // Saving header keys and their own values\n  Object.keys(maxKeysObject).forEach(function(key) {\n    headerRow[key] = key;\n  });\n  gblLabelsList.unshift(headerRow);\n\n  voltmx.print(\"### gblLabelsList dopo unshift: \" + JSON.stringify(gblLabelsList) );\n\n\n  // Copying the list but removing the \"id\" key\n  list = gblLabelsList.map(function(obj) {\n    // Crea una copia dell'oggetto corrente\n    var newObj = Object.assign({}, obj);\n    // Rimuovi la chiave \"id\" dall'oggetto corrente\n    delete newObj.id;\n    return newObj;\n  });\n\n\n  // saving the number of labels' columns (in order to know how many pages we have to show)\n  list.forEach(obj => {\n    const numColumns = Object.keys(obj).length;\n    if (numColumns > gblLabelsColumns) {\n      gblLabelsColumns = numColumns;\n    }\n  });\n\n  self.view.btnPrevious.setEnabled(false);\n  self.view.btnPrevious.opacity = 0.5;\n\n  var maxPages = Math.ceil(gblLabelsColumns / 5); // this method rounds up to the nearest integer (per eccesso).\n\n  if (maxPages <= 1) { // only one page needed (the document only have 5 columns max). prima -> list === maxPages\n    self.view.btnNext.setEnabled(false);\n    self.view.btnNext.opacity = 0.5;\n  } else {\n    self.view.btnNext.setEnabled(true);\n    self.view.btnNext.opacity = 1;\n  }\n\n  var firstKeys = Object.keys(list[0]).slice(0, 5);\n  voltmx.print(\"### firstKey: \" + JSON.stringify(firstKeys) );\n  // setting the first 5 columns to display\n  self.view.segLabels.widgetDataMap = {lb1: firstKeys[0],lb2: firstKeys[1],lb3: firstKeys[2],lb4: firstKeys[3], lb5: firstKeys[4]};\n\n  var showLabels = parseInt(self.view.lbShowEntries.selectedKeyValue[1], 10);  // 10 is for the decimal\n  var data = list.slice(0, showLabels); \n\n  self.view.segLabels.setData(data); \n} else {\n  self.view.segLabels.setVisibility(false);\n  self.view.lblNoLabelsFound.setVisibility(true);\n}\n\nvoltmx.print(\"### gblLabelsList con header e id visibile: \" + JSON.stringify(gblLabelsList) );\nvoltmx.print(\"### list con header ma senza id visibile: \" + JSON.stringify(list) );\n\n\n\n\n\n\n\n\n\n\n",
+            "parentId": "IF_CONDITION_ide_postShow_f1b0a5c8fc0a4b87ab8be2d659687e36",
+            "callbackType": null
+        }, {
+            "id": "ELSE_CONDITION_ide_postShow_f6f0f7a11cad4776a2da7d9fdd60f868",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_ASYNC_SERVICE_ide_postShow_fb5e67393e184315904b1a91417c6fc5",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_ide_postShow_ebc8756b1fa94be98c14a44543781e75",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Labels NOT loaded correctly.",
+            "yesLabel": "Ok",
+            "alertMessage": "Labels NOT loaded correctly.",
+            "messageType": "constant",
+            "parentId": "ELSE_CONDITION_ide_postShow_f6f0f7a11cad4776a2da7d9fdd60f868",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }]
+    }
+}

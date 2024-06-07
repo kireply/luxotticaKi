@@ -1,0 +1,23 @@
+{
+    "AS_Button_ba4bd6b48db64f61a34700976268defa": {
+        "id": "AS_Button_ba4bd6b48db64f61a34700976268defa",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "CopyfrmLabelManagement",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d542af1533cb4c91820f2aa7d069320e"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_c15e6c9eeb764b54b779a8be77f5af0d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "/* \nWhen clicking on \"Previous\", the rows of the segment must display the previous 5 rows in the gblLabesl list\n*/\n\n// Copying the list but removing the \"id\" key\nvar list = gblLabelsList.map(function(obj) {\n  var newObj = Object.assign({}, obj);\n  delete newObj.id;\n  return newObj;\n});\n\nif (gblLabelsPage > 2) {\n  \n  this.view.btnNext.setEnabled(true);\n  this.view.btnNext.opacity = 1;\n  \n  --gblLabelsPage; // moving to new page\n  var x = gblLabelsPage - 1;\n  var firstKeys = Object.keys(list[0]).slice( (5*x) , (5*gblLabelsPage) );\n\n  this.view.segLabels.widgetDataMap = {lb1: firstKeys[0],lb2: firstKeys[1],lb3: firstKeys[2],lb4: firstKeys[3], lb5: firstKeys[4]};\n\n  // checking for the selected number of labels to show\n  var showLabels = parseInt(this.view.lbShowEntries.selectedKeyValue[1], 10);  // 10 is for the decimal\n  var data = list.slice(0, ++showLabels); //++ because the first row is used for the header\n\n  this.view.segLabels.setData(data);\n  \n  if (gblLabelsPage === 1) {\n  this.view.btnPrevious.setEnabled(false);\n  this.view.btnPrevious.opacity = 0.5;\n  }\n  \n} else {\n  \n  --gblLabelsPage; // moving to first page (page 1)\n  var firstKeys = Object.keys(list[0]).slice(0,5);\n\n  this.view.segLabels.widgetDataMap = {lb1: firstKeys[0],lb2: firstKeys[1],lb3: firstKeys[2],lb4: firstKeys[3], lb5: firstKeys[4]};\n\n  // checking for the selected number of labels to show\n  var showLabels = parseInt(this.view.lbShowEntries.selectedKeyValue[1], 10);  // 10 is for the decimal\n  var data = list.slice(0, ++showLabels); //++ because the first row is used for the header\n\n  this.view.segLabels.setData(data);\n  \n  this.view.btnNext.setEnabled(true);\n  this.view.btnNext.opacity = 1;\n  \n  this.view.btnPrevious.setEnabled(false);\n  this.view.btnPrevious.opacity = 0.5;\n  \n}"
+        }]
+    }
+}

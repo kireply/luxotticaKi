@@ -1,0 +1,57 @@
+{
+    "AS_Image_b5ae0fa283204e7fb0cf4d66b2ee42dd": {
+        "id": "AS_Image_b5ae0fa283204e7fb0cf4d66b2ee42dd",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgArrowFrmLabelManagement",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmLabelManagement",
+            "type": "forms",
+            "platform": "",
+            "KUID": "jcf530250ee04551b0014dcb7147f2fe"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "LOADING_INDICATOR_j61d18f248294e339dac97182bf13c31",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Back Label Copy..."
+        }, {
+            "id": "NAVIGATE_TO_FORM__he671aaa2632446fa7c873b3ad78d36a",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmLabelCopy",
+            "formKUID": "d542af1533cb4c91820f2aa7d069320e",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "LOADING_INDICATOR_bc57ecdf910c435996e7fb22fb0328ce",
+            "selectedOption": "dismiss",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }]
+    }
+}

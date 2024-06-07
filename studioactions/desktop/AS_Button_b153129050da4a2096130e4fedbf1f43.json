@@ -1,0 +1,28 @@
+{
+    "AS_Button_b153129050da4a2096130e4fedbf1f43": {
+        "id": "AS_Button_b153129050da4a2096130e4fedbf1f43",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "CopyfrmLabelManagement",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d542af1533cb4c91820f2aa7d069320e"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_ca923583bbe9494ca070ae0393f97e84",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "getExcel",
+            "display": "getExcel",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": false,
+            "source": "controller"
+        }]
+    }
+}

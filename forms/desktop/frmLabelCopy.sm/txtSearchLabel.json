@@ -1,0 +1,72 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizTextBox2",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "50px"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "-13dp"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "       Search Label Copy",
+    "_skin_": "s68adc859e1f4a5d9c61e0e3db9ef65b",
+    "_text_": "",
+    "_top_": {
+        "type": "string",
+        "value": "4dp"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "113.45%"
+    },
+    "autocapitalize": "none",
+    "autocomplete": false,
+    "autocorrect": false,
+    "autofilter": false,
+    "canUpdateUI": true,
+    "centery": {
+        "type": "string",
+        "value": "50%"
+    },
+    "containerheight": "",
+    "containerheightmode": 1,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "desktopweb": {
+        "ide_onBeginEditing": "AS_TextField_h6b90d6ec3994f6699d36214a46f76df",
+        "ide_onEndEditing": "AS_TextField_b0176effd59f438886a5059dc4a36e8d"
+    },
+    "focusskin": "s80dd33f88c44ac8a824f1864c353935",
+    "id": "txtSearchLabel",
+    "ide_onTextChange": "AS_TextField_h27b7b8071d14a3ea347aa661576cc2d",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "keyboardtype": "A",
+    "kuid": "d153258dd5d44d8699cc6c75f63710cf",
+    "mode": "A",
+    "name": "kony.ui.TextBox2",
+    "parent": "flxSearchLabel",
+    "pf": "frmLabelCopy",
+    "placeholderskin": "sfd700440c644c55be0d2d9437fdf50f",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "securetextentry": false,
+    "textinputmode": "A",
+    "tooltip": "",
+    "viewtype": "default",
+    "wType": "TextField"
+}

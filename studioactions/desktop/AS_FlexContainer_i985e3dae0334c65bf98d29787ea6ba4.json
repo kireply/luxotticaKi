@@ -1,0 +1,26 @@
+{
+    "AS_FlexContainer_i985e3dae0334c65bf98d29787ea6ba4": {
+        "id": "AS_FlexContainer_i985e3dae0334c65bf98d29787ea6ba4",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "CopyfrmLabelManagement",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d542af1533cb4c91820f2aa7d069320e"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onHover_bd812599eb614848a1ed5ca8aabc2d3d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if (context.eventType !== \"leave\"){\n  this.view.imgLogout.setVisibility(false);\n  this.view.imgLogout1.setVisibility(true);\n\n  this.view.btnLogout.skin = \"CopydefBtnNormal0b046094e85d745\";\n  \n} else {\n  \n  this.view.imgLogout1.setVisibility(false);\n  this.view.imgLogout.setVisibility(true);\n\n  this.view.btnLogout.skin = \"CopydefBtnNormal0fc5b48bdbdda49\";\n}\n"
+        }]
+    }
+}

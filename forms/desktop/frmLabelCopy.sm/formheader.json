@@ -24,7 +24,7 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s92c5d879f8142f08c34a981ec98d303",
+    "_skin_": "s682d8ac4cd341d4abb826e0488c27e6",
     "_top_": {
         "type": "string",
         "value": "0dp"
@@ -33,44 +33,28 @@
         "type": "string",
         "value": "100%"
     },
+    "android": {},
+    "androidwearos": {},
     "areflexpropsreferenced": false,
     "autogrowmode": 0,
     "canUpdateUI": true,
     "clipbounds": false,
     "containerweight": 0,
     "dataDiffs": {
-        "btnLogout": {
+        "flxRightIcons": {
             "__events__": {},
             "__info__": {
-                "kuid": "f4443a685ec244be8300082fc4b17193",
-                "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
-                "wType": "Button"
-            }
-        },
-        "btnResizeMenu": {
-            "__events__": {
-                "ide_onClick": "AS_Button_e69754358ae546f085e42eb65a65e18a"
-            },
-            "__info__": {
-                "kuid": "d71b2d479f814622bc60246f337ed5ae",
-                "srcKUID": "g6220a13ecc543cfbd274408555deb6b",
-                "wType": "Button"
-            }
-        },
-        "flxBtnLogout": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "a1c70f087aac40e8b6459e2e2a940e8d",
-                "srcKUID": "a0c260c49fa14d3aa934cade39c38bb0",
+                "kuid": "f9a75ad8bf894838b1a93748c1ce4d94",
+                "srcKUID": "e531395b10bb422b84d41ec9195b85bb",
                 "wType": "FlexContainer"
             }
         },
-        "hamburgermenu": {
+        "formheader": {
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "c2a21f40d3374479891e38420455eb2c",
-                "srcKUID": "d252c589507e44fd8ed2ab19f3f7e081",
+                "kuid": "c2f38c8eecec4ce3ad2674c3f70a6764",
+                "srcKUID": "ba758399ff27410698c4c05e42566ed8",
                 "wType": "FlexContainer"
             },
             "autogrowMode": {
@@ -130,7 +114,6 @@
                     "value": ""
                 }
             },
-            "responsiveData": {},
             "right": {
                 "Default": {
                     "type": "string",
@@ -148,55 +131,86 @@
                     "type": "string",
                     "value": "100%"
                 }
-            },
-            "zIndex": {
-                "Default": 3
             }
         },
-        "imgLogout": {
+        "imgChat": {
             "__events__": {},
             "__info__": {
-                "kuid": "fc1f13cf3ab042c6af5a95a1d08b670f",
-                "srcKUID": "f6d6345317634850bef09677b329a6ec",
+                "kuid": "e6aa86d5fcdb47cda34a8dfda0e54307",
+                "srcKUID": "ce610084ab8844ddbb0450d4a5defa74",
                 "wType": "Image"
             },
-            "src": "logout_true.png"
+            "src": "messenger.png"
         },
-        "imgLogout2": {
+        "imgLogo": {
             "__events__": {},
             "__info__": {
-                "kuid": "bfeb901def854e1b9f7475739b9dc4be",
-                "srcKUID": "d183329a0090424e92fc74f21216b2bb",
+                "kuid": "c42f2f2a617b4fafbbc8d98ded233db8",
+                "srcKUID": "ce7abef35db14993952efc16beeea866",
                 "wType": "Image"
-            }
+            },
+            "src": "el_round_logo.png"
         },
-        "segMenu": {
+        "imgNotification": {
             "__events__": {},
             "__info__": {
-                "kuid": "c38a4ede30064913a12ce27bf65edcd7",
-                "srcKUID": "f6158cc0defe49f9b27229072ca607e4",
-                "wType": "Segment"
-            }
+                "kuid": "g8404dddb456467daa3a62624e4afe42",
+                "srcKUID": "id85c820b7a245b8b5e286e743059445",
+                "wType": "Image"
+            },
+            "src": "notification.png"
+        },
+        "imgProfile": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "add87ace8a6a4a9d9add825cfe727ecf",
+                "srcKUID": "eba8d9cafd914ce0b4cbfeef2241d96a",
+                "wType": "Image"
+            },
+            "src": "user.png"
         }
     },
+    "desktopweb": {},
     "enablescrolling": true,
-    "id": "hamburgermenu",
+    "id": "formheader",
     "info": null,
+    "ipad": {},
+    "iphone": {},
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kuid": "c2a21f40d3374479891e38420455eb2c",
+    "kiosk": {},
+    "kuid": "c2f38c8eecec4ce3ad2674c3f70a6764",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
-    "parent": "flxContainerMenu",
-    "pf": "frmStepCreation",
+    "parent": "flxContainerHeader",
+    "pf": "frmLabelCopy",
+    "responsiveData": {},
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
     "snapgridsize": 10,
     "snaptogrid": true,
-    "sourceUserWidget": "d252c589507e44fd8ed2ab19f3f7e081",
+    "sourceUserWidget": "ba758399ff27410698c4c05e42566ed8",
+    "spa": {},
+    "spaan": {},
+    "spaandroidtablet": {},
+    "spabb": {},
+    "spaip": {},
+    "spaipad": {},
+    "spamobile": {},
+    "spatablet": {},
+    "spawindowstablet": {},
+    "spawinphone8": {},
+    "tabrcandroid": {},
+    "vizProps": {
+        "hidewidgethierarchy": false
+    },
     "wType": "UserWidgetInstance",
-    "zindex": 3
+    "windows10": {},
+    "windows8": {},
+    "winphone10": {},
+    "winphone8": {},
+    "zindex": 1
 }

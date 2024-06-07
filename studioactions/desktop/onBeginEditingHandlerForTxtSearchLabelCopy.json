@@ -1,0 +1,27 @@
+{
+    "AS_TextField_h6b90d6ec3994f6699d36214a46f76df": {
+        "id": "AS_TextField_h6b90d6ec3994f6699d36214a46f76df",
+        "type": "ACTION_SEQUENCE",
+        "name": "onBeginEditingHandlerForTxtSearchLabelCopy",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "contextObj": {
+            "name": "frmLabelCopy",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d542af1533cb4c91820f2aa7d069320e"
+        },
+        "language": "js",
+        "eventType": "onBeginEditing",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onBeginEditing_he2c338ef6aa4ed5ba8b3bcde8f7b500",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.imgSearchLabel.setVisibility(false);"
+        }]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "AS_Button_h0425d41f96043ae9e7fdc1f48fce3ea": {
+        "id": "AS_Button_h0425d41f96043ae9e7fdc1f48fce3ea",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "CopyfrmLabelManagement",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d542af1533cb4c91820f2aa7d069320e"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_be3bb48c196d4fce8919072b3d018229",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "/* \nWhen clicking on \"Next\", the rows of the segment must display the next 5 rows in the gblLabesl list\n*/\nvar maxPages = Math.ceil(gblLabelsColumns / 5); // this method rounds up to the nearest integer\nvoltmx.print(\"col: \" + gblLabelsColumns);\nvoltmx.print(\"maxP: \" + maxPages);\n\nif (gblLabelsPage < maxPages) {\n  \n  // Copying the list but removing the \"id\" key\n  var list = gblLabelsList.map(function(obj) {\n    var newObj = Object.assign({}, obj);\n    delete newObj.id;\n    return newObj;\n  });\n\n  \n  this.view.btnPrevious.setEnabled(true);\n  this.view.btnPrevious.opacity = 1;\n  \n  ++gblLabelsPage; // moving to new page\n  var x = gblLabelsPage - 1;\n  var firstKeys = Object.keys(list[0]).slice( (5*x) , (5*gblLabelsPage) );\n\n  this.view.segLabels.widgetDataMap = {lb1: firstKeys[0],lb2: firstKeys[1],lb3: firstKeys[2],lb4: firstKeys[3], lb5: firstKeys[4]};\n\n  // checking for the selected number of labels to show\n  var showLabels = parseInt(this.view.lbShowEntries.selectedKeyValue[1], 10);  // 10 is for the decimal\n  var data = list.slice(0, ++showLabels); //++ because the first row is used for the header\n\n  this.view.segLabels.setData(data);\n  \n  this.view.btnPrevious.setEnabled(true);\n  this.view.btnPrevious.opacity = 1;\n  \n  if(gblLabelsPage === maxPages) { // last page reached\n    this.view.btnNext.setEnabled(false);\n    this.view.btnNext.opacity = 0.5;\n  }\n  \n} ",
+            "disabled": false
+        }]
+    }
+}

@@ -2,11 +2,15 @@
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0"
     },
     "_height_": {
         "type": "string",
         "value": "86%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -24,53 +28,32 @@
     "_percent_": true,
     "_right_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0"
     },
-    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
+    "_skin_": "s8a8cbb1cc4845078aa811defdefb579",
     "_width_": {
         "type": "string",
-        "value": "78.33%"
+        "value": "20.97%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "btnBack",
-        "imgArrow",
-        "lblLabels",
-        "channelTemplatewithContract",
-        "lbShowEntries",
-        "flxSearchLabel",
-        "flxDownloadLabels",
-        "flxUploadLabels",
-        "flxScrollSegLabels",
-        "flxScrollSegLabels2",
-        "flxScrollLabels",
-        "flxScrollLabels1",
-        "lblShow",
-        "lblEntries",
-        "btn1",
-        "btn2",
-        "txtAreaJSON",
-        "btnPrevious",
-        "lblSpace",
-        "btnNext",
-        "txtWorksheetName",
-        "txtFileName",
-        "lblNoLabelsFound"
+        "hamburgermenu",
+        "flxMenuOptionSelected"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxContainerLabel",
+    "id": "flxContainerMenu",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d804e22a86da4770a715763c2993cc3f",
+    "kuid": "e7e329c6c2af4542bf4cada1b618ddf8",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
     "parent": "flxMainContainerLabel",
-    "pf": "frmLabelManagement",
+    "pf": "frmLabelCopy",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

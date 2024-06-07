@@ -1,0 +1,26 @@
+{
+    "AS_TextField_b0ecc6a0082d4a7f93049fdb2a1f8af1": {
+        "id": "AS_TextField_b0ecc6a0082d4a7f93049fdb2a1f8af1",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "contextObj": {
+            "name": "CopyfrmLabelManagement",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d542af1533cb4c91820f2aa7d069320e"
+        },
+        "language": "js",
+        "eventType": "onTextChange",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onTextChange_afff8ddab03f466f82e1d5804b6f2071",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var labelSearched = this.view.txtSearchLabel.text;\n\nif (labelSearched !== \"\") { \n  \n  voltmx.print(\"### dentro IF filtro label\");\n  \n  // filtering by id or by labels in each key-value\n  var filteredList = gblLabelsList.filter(elemento => {\n    return Object.values(elemento).some(valore => valore.toLowerCase().includes(labelSearched.toLowerCase()));\n  });\n  \n    voltmx.print(\"### filteredList stringify: \" + JSON.stringify(filteredList) );\n  \n  //var filteredList = gblLabelsList.filter(label => label.id.toLowerCase().includes(labelSearched.toLowerCase()));\n  this.view.segLabels.setData(filteredList);\n  \n} else { // no filter, show entire list\n  \n  this.view.segLabels.setData(gblLabelsList);\n}\n"
+        }]
+    }
+}

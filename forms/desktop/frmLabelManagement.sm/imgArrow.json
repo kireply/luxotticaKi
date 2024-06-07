@@ -1,0 +1,54 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizImage2",
+    "DNDConfig": null,
+    "_base64_": null,
+    "_height_": {
+        "type": "string",
+        "value": "3%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "4.50%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s826a3acc25a4a42b1351255297c7d2a",
+    "_src_": "left_arrow.png",
+    "_top_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "3%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "id": "imgArrow",
+    "ide_onTouchEnd": "AS_Image_b5ae0fa283204e7fb0cf4d66b2ee42dd",
+    "imagescalemode": 1,
+    "info": null,
+    "invokedProperty": "src",
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "f02b86233efe4b1e80bed2439f636f79",
+    "name": "kony.ui.Image2",
+    "parent": "flxContainerLabel",
+    "pf": "frmLabelManagement",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "srcType": 1,
+    "wType": "Image",
+    "widgetalignment": 5,
+    "zindex": 3
+}

@@ -1,0 +1,1343 @@
+{
+    "@class": "com.kony.gen.viz.model.container.KVizSegment2",
+    "DNDConfig": null,
+    "_bottom_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_data_": [
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        },
+        {
+            "lb1": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb2": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb3": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb4": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            },
+            "lb5": {
+                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
+                "text": " "
+            }
+        }
+    ],
+    "_height_": {
+        "type": "string",
+        "value": "49.10%"
+    },
+    "_indicator_": "none",
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_orientation_": 2,
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_right_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "97.50%"
+    },
+    "alternaterowskin": "s6c9b6ea95514ac38c284e4af280350e",
+    "autogrowmode": 0,
+    "canUpdateUI": true,
+    "centerx": {
+        "type": "string",
+        "value": "50.50%"
+    },
+    "containerweight": 100,
+    "counter": "055",
+    "disabledSkins": {},
+    "focusedindex": null,
+    "focuseditem": null,
+    "generatedtemplate": null,
+    "groupcells": false,
+    "hasSections": false,
+    "id": "segLabels",
+    "info": null,
+    "ipad": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iphone": {
+        "psp": {
+            "indicator": "rowselect"
+        }
+    },
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "id948f97155c4eb4bc30c3b80e84e7ae",
+    "masterdata": {},
+    "name": "kony.ui.SegmentedUI2",
+    "needpageindicator": true,
+    "pageoffdotimage": "pageoffdot.png",
+    "pageondotimage": "pageondot.png",
+    "paginationconfig": {
+        "position": "bottom"
+    },
+    "parent": "flxContainerLabel",
+    "pf": "frmLabelCopy",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "retainselection": false,
+    "rowTemplateId": "ef6106081e494d10929d240d23a6a659",
+    "rowcounter": 55,
+    "rowfocusskin": "s5dafcbde8604a8689f689e59d067173",
+    "rowskin": "s702838141914111a5a1fe3ea527cf11",
+    "rowtemplate": "flxRowLabelCopy",
+    "screenlevelwidget": false,
+    "seccounter": 0,
+    "sectionHeaderTemplateId": null,
+    "sectionheaderskin": "sd4b5a6846184e47bf3147bcfae1406d",
+    "selectedRows": null,
+    "selectedState": false,
+    "selectedindex": null,
+    "selectedindices": null,
+    "selecteditems": null,
+    "selectedsectionindex": null,
+    "selectionbehavior": "default",
+    "separatorcolor": "aaaaaa00",
+    "separatorrequired": true,
+    "separatorthickness": 0,
+    "showscrollbars": false,
+    "viewtype": "tableview",
+    "vizProps": {},
+    "wType": "Segment",
+    "widgetalignment": 5,
+    "widgetdatamap": {
+        "flxRowLabelCopy": "flxRowLabelCopy",
+        "lb1": "lb1",
+        "lb2": "lb2",
+        "lb3": "lb3",
+        "lb4": "lb4",
+        "lb5": "lb5"
+    }
+}

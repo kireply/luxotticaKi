@@ -1,0 +1,23 @@
+{
+    "AS_Button_da9a8703ad544cefab2cb3fc46fc1a6a": {
+        "id": "AS_Button_da9a8703ad544cefab2cb3fc46fc1a6a",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "CopyfrmLabelManagement",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d542af1533cb4c91820f2aa7d069320e"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onClick_aa1e4852e95f4f7285e8ace4711e159d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxContainerMenu.setVisibility(false);\nthis.view.flxContainerSmallerMenu.setVisibility(true);\nthis.view.flxContainerLabel.width = \"78.33%\";"
+        }]
+    }
+}

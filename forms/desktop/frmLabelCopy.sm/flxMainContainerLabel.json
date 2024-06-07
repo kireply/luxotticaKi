@@ -1,12 +1,12 @@
 {
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_height_": {
         "type": "string",
-        "value": "86%"
+        "value": "100%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -22,55 +22,36 @@
         0
     ],
     "_percent_": true,
-    "_right_": {
+    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
+    "_top_": {
         "type": "string",
         "value": "0dp"
     },
-    "_skin_": "s270b9e34423415d9bf4c0005fbb6e5d",
     "_width_": {
         "type": "string",
-        "value": "78.33%"
+        "value": "100%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "btnBack",
-        "imgArrow",
-        "lblLabels",
-        "channelTemplatewithContract",
-        "lbShowEntries",
-        "flxSearchLabel",
-        "flxDownloadLabels",
-        "flxUploadLabels",
-        "flxScrollSegLabels",
-        "flxScrollSegLabels2",
-        "flxScrollLabels",
-        "flxScrollLabels1",
-        "lblShow",
-        "lblEntries",
-        "btn1",
-        "btn2",
-        "txtAreaJSON",
-        "btnPrevious",
-        "lblSpace",
-        "btnNext",
-        "txtWorksheetName",
-        "txtFileName",
-        "lblNoLabelsFound"
+        "flxContainerHeader",
+        "flxContainerMenu",
+        "flxContainerSmallerMenu",
+        "flxContainerLabel"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxContainerLabel",
+    "id": "flxMainContainerLabel",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d804e22a86da4770a715763c2993cc3f",
+    "kuid": "b3418aeb0e6d435299540702577400fa",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMainContainerLabel",
-    "pf": "frmLabelManagement",
+    "parent": "frmLabelCopy",
+    "pf": "frmLabelCopy",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

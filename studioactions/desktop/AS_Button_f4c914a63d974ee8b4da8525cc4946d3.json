@@ -1,0 +1,28 @@
+{
+    "AS_Button_f4c914a63d974ee8b4da8525cc4946d3": {
+        "id": "AS_Button_f4c914a63d974ee8b4da8525cc4946d3",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "CopyfrmLabelManagement",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d542af1533cb4c91820f2aa7d069320e"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "INVOKE_FUNCTION__ide_onClick_eee72b1357de4dae8c340b427e216237",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "exportData",
+            "display": "exportData",
+            "inputparams": [],
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }]
+    }
+}

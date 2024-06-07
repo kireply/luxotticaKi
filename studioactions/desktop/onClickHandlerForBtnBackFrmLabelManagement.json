@@ -1,0 +1,51 @@
+{
+    "AS_Button_a4546df8dfb34f908b20a8bd55d3c73e": {
+        "id": "AS_Button_a4546df8dfb34f908b20a8bd55d3c73e",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnBackFrmLabelManagement",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmLabelManagement",
+            "type": "forms",
+            "platform": "",
+            "KUID": "jcf530250ee04551b0014dcb7147f2fe"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "LOADING_INDICATOR_e064dcd24f70440da21bf534a3770664",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Back Label Copy..."
+        }, {
+            "id": "NAVIGATE_TO_FORM__c3fce78c337e4aed9855df24f94a6e86",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmLabelCopy",
+            "formKUID": "d542af1533cb4c91820f2aa7d069320e",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "LOADING_INDICATOR_c732e139aa654ffd8750e9ab52aba47d",
+            "selectedOption": "dismiss",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }]
+    }
+}

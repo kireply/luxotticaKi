@@ -1,0 +1,54 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizButton",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "5%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "3%"
+    },
+    "_margin_": [
+        6,
+        6,
+        6,
+        6
+    ],
+    "_padding_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_skin_": "s6f0066cf59c4675a1cc4709283955cf",
+    "_text_": "     Back",
+    "_top_": {
+        "type": "string",
+        "value": "4%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "12%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 5,
+    "disabledSkins": {
+        "focusSkin": "s6de8ee3e9e1463996d5dbb22b25b33b"
+    },
+    "displaytext": true,
+    "id": "btnBack",
+    "ide_onClick": "AS_Button_a4546df8dfb34f908b20a8bd55d3c73e",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "gcfc990c852242298c04bb8864e7cd77",
+    "name": "kony.ui.Button",
+    "parent": "flxContainerLabel",
+    "pf": "frmLabelManagement",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "wType": "Button",
+    "zindex": 1
+}

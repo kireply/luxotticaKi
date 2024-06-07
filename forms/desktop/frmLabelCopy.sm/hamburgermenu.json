@@ -42,17 +42,17 @@
         "btnLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "f4443a685ec244be8300082fc4b17193",
+                "kuid": "be90da40b42d4707b122b86b76dabdb4",
                 "srcKUID": "b1039fe318cf4bc0b21a3266fa311602",
                 "wType": "Button"
             }
         },
         "btnResizeMenu": {
             "__events__": {
-                "ide_onClick": "AS_Button_e69754358ae546f085e42eb65a65e18a"
+                "ide_onClick": "AS_Button_f99667fc2c814263bd9d82b11e2760d6"
             },
             "__info__": {
-                "kuid": "d71b2d479f814622bc60246f337ed5ae",
+                "kuid": "ba94be49a11c44c8b1fd6e33f472b931",
                 "srcKUID": "g6220a13ecc543cfbd274408555deb6b",
                 "wType": "Button"
             }
@@ -60,7 +60,7 @@
         "flxBtnLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "a1c70f087aac40e8b6459e2e2a940e8d",
+                "kuid": "eb80af75bf874d249555618394784759",
                 "srcKUID": "a0c260c49fa14d3aa934cade39c38bb0",
                 "wType": "FlexContainer"
             }
@@ -69,7 +69,7 @@
             "__events__": {},
             "__info__": {
                 "isRoot": true,
-                "kuid": "c2a21f40d3374479891e38420455eb2c",
+                "kuid": "jd1f1a3b3d584b5790cffdf726b0a14f",
                 "srcKUID": "d252c589507e44fd8ed2ab19f3f7e081",
                 "wType": "FlexContainer"
             },
@@ -130,7 +130,6 @@
                     "value": ""
                 }
             },
-            "responsiveData": {},
             "right": {
                 "Default": {
                     "type": "string",
@@ -148,24 +147,20 @@
                     "type": "string",
                     "value": "100%"
                 }
-            },
-            "zIndex": {
-                "Default": 3
             }
         },
         "imgLogout": {
             "__events__": {},
             "__info__": {
-                "kuid": "fc1f13cf3ab042c6af5a95a1d08b670f",
+                "kuid": "d911038a32fb4d3ca82aa5ea87a746ff",
                 "srcKUID": "f6d6345317634850bef09677b329a6ec",
                 "wType": "Image"
-            },
-            "src": "logout_true.png"
+            }
         },
         "imgLogout2": {
             "__events__": {},
             "__info__": {
-                "kuid": "bfeb901def854e1b9f7475739b9dc4be",
+                "kuid": "bc747c2e1dc343e08da2f7c895d41f79",
                 "srcKUID": "d183329a0090424e92fc74f21216b2bb",
                 "wType": "Image"
             }
@@ -173,7 +168,7 @@
         "segMenu": {
             "__events__": {},
             "__info__": {
-                "kuid": "c38a4ede30064913a12ce27bf65edcd7",
+                "kuid": "a2612f217566489b95b1dd2c8490dfdf",
                 "srcKUID": "f6158cc0defe49f9b27229072ca607e4",
                 "wType": "Segment"
             }
@@ -185,12 +180,12 @@
     "iscustomlayout": false,
     "isdatareferenced": false,
     "isvisible": true,
-    "kuid": "c2a21f40d3374479891e38420455eb2c",
+    "kuid": "jd1f1a3b3d584b5790cffdf726b0a14f",
     "layouttype": 2,
     "masterType": 0,
     "name": "kony.ui.UserWidgetInstance",
     "parent": "flxContainerMenu",
-    "pf": "frmStepCreation",
+    "pf": "frmLabelCopy",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,
@@ -198,5 +193,5 @@
     "snaptogrid": true,
     "sourceUserWidget": "d252c589507e44fd8ed2ab19f3f7e081",
     "wType": "UserWidgetInstance",
-    "zindex": 3
+    "zindex": 1
 }
