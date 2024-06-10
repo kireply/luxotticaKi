@@ -33,7 +33,6 @@
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxSave",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "e834ac37ab854b5393537ac5b06497b2",
             "wType": "FlexContainer",
@@ -56,8 +55,7 @@
             "displayAnimationId": "MOVE_ACTION_f6a1b1e0b8bb424c9efb13332c5160ed",
             "forkedPlatform": "all",
             "parentId": "_f66f79f9c2be44e5853707b6598f33df",
-            "callbackType": null,
-            "widgetPath": "this.view.flxSave"
+            "callbackType": null
         }, {
             "id": "_cad7894bd0c04a09b17e1bae30df4b2f",
             "type": "ELSE_CONDITION",
@@ -76,7 +74,6 @@
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxSave",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "e834ac37ab854b5393537ac5b06497b2",
             "wType": "FlexContainer",
@@ -99,14 +96,12 @@
             "displayAnimationId": "MOVE_ACTION_c799b5a604504a9da114ba4daf58a40e",
             "forkedPlatform": "all",
             "parentId": "_cad7894bd0c04a09b17e1bae30df4b2f",
-            "callbackType": null,
-            "widgetPath": "this.view.flxSave"
+            "callbackType": null
         }, {
             "id": "SCALE_ACTION_fa87ba339f2b4006b13609b9386c82a5",
             "type": "SCALE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxPublish",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "ee91a535bac14a4a938b5b1e0a661120",
             "wType": "FlexContainer",
@@ -129,14 +124,12 @@
             "displayAnimationId": "SCALE_ACTION_fa87ba339f2b4006b13609b9386c82a5",
             "forkedPlatform": "all",
             "parentId": "_cad7894bd0c04a09b17e1bae30df4b2f",
-            "callbackType": null,
-            "widgetPath": "this.view.flxPublish"
+            "callbackType": null
         }, {
             "id": "MOVE_ACTION_ie8d2f586e254cf994263b9a83a65592",
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "imgPublish",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "a903e8651c5e4417b5611e23c00a637f",
             "wType": "Image",
@@ -159,8 +152,7 @@
             "displayAnimationId": "MOVE_ACTION_ie8d2f586e254cf994263b9a83a65592",
             "forkedPlatform": "all",
             "parentId": "_cad7894bd0c04a09b17e1bae30df4b2f",
-            "callbackType": null,
-            "widgetPath": "this.view.imgPublish"
+            "callbackType": null
         }, {
             "id": "ADD_SNIPPET_d283c5b3eef4410380a85f7d3d639077",
             "type": "ADD_SNIPPET",
@@ -172,7 +164,6 @@
             "type": "SCALE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxPublish",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "ee91a535bac14a4a938b5b1e0a661120",
             "wType": "FlexContainer",
@@ -195,14 +186,12 @@
             "displayAnimationId": "SCALE_ACTION_ee687b35fb2848b59eb5b3bfa024e15e",
             "forkedPlatform": "all",
             "parentId": "_f66f79f9c2be44e5853707b6598f33df",
-            "callbackType": null,
-            "widgetPath": "this.view.flxPublish"
+            "callbackType": null
         }, {
             "id": "MOVE_ACTION_b6fa127ea4254502a0489c78774eff5d",
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "imgPublish",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "a903e8651c5e4417b5611e23c00a637f",
             "wType": "Image",
@@ -225,8 +214,7 @@
             "displayAnimationId": "MOVE_ACTION_b6fa127ea4254502a0489c78774eff5d",
             "forkedPlatform": "all",
             "parentId": "_f66f79f9c2be44e5853707b6598f33df",
-            "callbackType": null,
-            "widgetPath": "this.view.imgPublish"
+            "callbackType": null
         }, {
             "id": "ADD_SNIPPET_j4e3742aa77f4497a369bb9ceceb31de",
             "type": "ADD_SNIPPET",

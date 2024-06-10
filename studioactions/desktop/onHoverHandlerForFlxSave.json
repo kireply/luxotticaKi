@@ -45,7 +45,6 @@
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "imgSave",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "f1e6fc27d07c4f168e4dfa6bd4d0d200",
             "wType": "Image",
@@ -68,14 +67,12 @@
             "displayAnimationId": "MOVE_ACTION_j6d54dc8bfbb4da8995a4d43465f0550",
             "forkedPlatform": "all",
             "parentId": "_ae9af6718d3b41f6b10686c5b4bc714b",
-            "callbackType": null,
-            "widgetPath": "this.view.imgSave"
+            "callbackType": null
         }, {
             "id": "SCALE_ACTION_f1357fc0abfe487e9b152cc2ce5544f5",
             "type": "SCALE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxSave",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "e834ac37ab854b5393537ac5b06497b2",
             "wType": "FlexContainer",
@@ -98,8 +95,7 @@
             "displayAnimationId": "SCALE_ACTION_f1357fc0abfe487e9b152cc2ce5544f5",
             "forkedPlatform": "all",
             "parentId": "_ae9af6718d3b41f6b10686c5b4bc714b",
-            "callbackType": null,
-            "widgetPath": "this.view.flxSave"
+            "callbackType": null
         }, {
             "id": "ADD_SNIPPET_a52342d129df4a53b426880f465845c1",
             "type": "ADD_SNIPPET",
@@ -111,7 +107,6 @@
             "type": "SCALE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxSave",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "e834ac37ab854b5393537ac5b06497b2",
             "wType": "FlexContainer",
@@ -134,14 +129,12 @@
             "displayAnimationId": "SCALE_ACTION_eea34d334c354b9b9838bed2b0f147a6",
             "forkedPlatform": "all",
             "parentId": "_ie4b2d0e69ba435095bb48a5e794bbe7",
-            "callbackType": null,
-            "widgetPath": "this.view.flxSave"
+            "callbackType": null
         }, {
             "id": "MOVE_ACTION_f8c7faf04b874026b544f107d69532da",
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "imgSave",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "f1e6fc27d07c4f168e4dfa6bd4d0d200",
             "wType": "Image",
@@ -164,8 +157,7 @@
             "displayAnimationId": "MOVE_ACTION_f8c7faf04b874026b544f107d69532da",
             "forkedPlatform": "all",
             "parentId": "_ie4b2d0e69ba435095bb48a5e794bbe7",
-            "callbackType": null,
-            "widgetPath": "this.view.imgSave"
+            "callbackType": null
         }, {
             "id": "ADD_SNIPPET_b27be67ee3354e499edd8a1dfe8c28db",
             "type": "ADD_SNIPPET",

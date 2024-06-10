@@ -62,7 +62,6 @@
             "type": "SCALE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxPublish",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "ee91a535bac14a4a938b5b1e0a661120",
             "wType": "FlexContainer",
@@ -85,8 +84,7 @@
             "displayAnimationId": "SCALE_ACTION_ee687b35fb2848b59eb5b3bfa024e15e",
             "forkedPlatform": "all",
             "parentId": "IF_CONDITION_i855e03c94534db295973f7070f8d63e",
-            "callbackType": null,
-            "widgetPath": "this.view.flxPublish"
+            "callbackType": null
         }, {
             "id": "_h6d1c59170524311b06bc0fdd603cd3c",
             "type": "MOVE_ACTION",
@@ -170,7 +168,6 @@
             "type": "SCALE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxPublish",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "ee91a535bac14a4a938b5b1e0a661120",
             "wType": "FlexContainer",
@@ -193,8 +190,7 @@
             "displayAnimationId": "SCALE_ACTION_fa87ba339f2b4006b13609b9386c82a5",
             "forkedPlatform": "all",
             "parentId": "ELSE_CONDITION_i060a64dcb2d4b0fb85dd2957926926c",
-            "callbackType": null,
-            "widgetPath": "this.view.flxPublish"
+            "callbackType": null
         }, {
             "id": "_fa0da5c710df439dbede7635ab093261",
             "type": "MOVE_ACTION",

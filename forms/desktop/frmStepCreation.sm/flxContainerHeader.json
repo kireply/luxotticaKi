@@ -36,10 +36,7 @@
     "canUpdateUI": true,
     "children": [
         "formheader",
-        "btnPreview",
-        "flxSave",
-        "flxPublish",
-        "flxDelete"
+        "btnPreview"
     ],
     "clipbounds": false,
     "containerweight": 100,

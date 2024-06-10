@@ -92,7 +92,6 @@
             "type": "SCALE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxDelete",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "e39f8bab05a949f9bac3d669c0c1405d",
             "wType": "FlexContainer",
@@ -115,8 +114,7 @@
             "displayAnimationId": "SCALE_ACTION_c7429a5f6f6e40cc9255cb92a95e94d3",
             "forkedPlatform": "all",
             "parentId": "IF_CONDITION_ea5a79eb53804b89838b53151051bc00",
-            "callbackType": null,
-            "widgetPath": "this.view.flxDelete"
+            "callbackType": null
         }, {
             "id": "_g3a26b980be94bd98e4544f2dab4dc9b",
             "type": "MOVE_ACTION",
@@ -170,7 +168,6 @@
             "type": "SCALE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxDelete",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "e39f8bab05a949f9bac3d669c0c1405d",
             "wType": "FlexContainer",
@@ -193,8 +190,7 @@
             "displayAnimationId": "SCALE_ACTION_be6b18fd1176401c82b3c1214d0ffca5",
             "forkedPlatform": "all",
             "parentId": "ELSE_CONDITION_a5ade28d34374e76be0cea1ab7d67dca",
-            "callbackType": null,
-            "widgetPath": "this.view.flxDelete"
+            "callbackType": null
         }, {
             "id": "_i8acd3cd0a72453a8cf52b1344b24cc5",
             "type": "MOVE_ACTION",

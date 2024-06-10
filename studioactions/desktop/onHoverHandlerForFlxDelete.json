@@ -46,7 +46,6 @@
             "type": "SCALE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxDelete",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "e39f8bab05a949f9bac3d669c0c1405d",
             "wType": "FlexContainer",
@@ -69,14 +68,12 @@
             "displayAnimationId": "SCALE_ACTION_be6b18fd1176401c82b3c1214d0ffca5",
             "forkedPlatform": "all",
             "parentId": "_i3824f6dd71c45fe8cdfd3a2e40fad24",
-            "callbackType": null,
-            "widgetPath": "this.view.flxDelete"
+            "callbackType": null
         }, {
             "id": "MOVE_ACTION_daa6f0bc8f1446c18b6c6e757af99b3e",
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "imgDelete",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "b0f3ad23e508439ca5e0008d177be1a6",
             "wType": "Image",
@@ -99,14 +96,12 @@
             "displayAnimationId": "MOVE_ACTION_daa6f0bc8f1446c18b6c6e757af99b3e",
             "forkedPlatform": "all",
             "parentId": "_i3824f6dd71c45fe8cdfd3a2e40fad24",
-            "callbackType": null,
-            "widgetPath": "this.view.imgDelete"
+            "callbackType": null
         }, {
             "id": "MOVE_ACTION_fdaf357346784dcd9b0784687045b4e6",
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxPublish",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "ee91a535bac14a4a938b5b1e0a661120",
             "wType": "FlexContainer",
@@ -129,14 +124,12 @@
             "displayAnimationId": "MOVE_ACTION_fdaf357346784dcd9b0784687045b4e6",
             "forkedPlatform": "all",
             "parentId": "_i3824f6dd71c45fe8cdfd3a2e40fad24",
-            "callbackType": null,
-            "widgetPath": "this.view.flxPublish"
+            "callbackType": null
         }, {
             "id": "MOVE_ACTION_j551b7d28c9a4646a46eebcc3179a6e7",
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxSave",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "e834ac37ab854b5393537ac5b06497b2",
             "wType": "FlexContainer",
@@ -159,8 +152,7 @@
             "displayAnimationId": "MOVE_ACTION_j551b7d28c9a4646a46eebcc3179a6e7",
             "forkedPlatform": "all",
             "parentId": "_i3824f6dd71c45fe8cdfd3a2e40fad24",
-            "callbackType": null,
-            "widgetPath": "this.view.flxSave"
+            "callbackType": null
         }, {
             "id": "ADD_SNIPPET_e9416da6fda14bf587d8a64b04256250",
             "type": "ADD_SNIPPET",
@@ -172,7 +164,6 @@
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxSave",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "e834ac37ab854b5393537ac5b06497b2",
             "wType": "FlexContainer",
@@ -195,14 +186,12 @@
             "displayAnimationId": "MOVE_ACTION_bc03434c377e480ba60cdf7c2fbdac12",
             "forkedPlatform": "all",
             "parentId": "_d33f55db8dfd45b4bc8549e8130d6678",
-            "callbackType": null,
-            "widgetPath": "this.view.flxSave"
+            "callbackType": null
         }, {
             "id": "MOVE_ACTION_bb39e2952bd04ff18e5c62dc9bf40b64",
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxPublish",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "ee91a535bac14a4a938b5b1e0a661120",
             "wType": "FlexContainer",
@@ -225,14 +214,12 @@
             "displayAnimationId": "MOVE_ACTION_bb39e2952bd04ff18e5c62dc9bf40b64",
             "forkedPlatform": "all",
             "parentId": "_d33f55db8dfd45b4bc8549e8130d6678",
-            "callbackType": null,
-            "widgetPath": "this.view.flxPublish"
+            "callbackType": null
         }, {
             "id": "SCALE_ACTION_c7429a5f6f6e40cc9255cb92a95e94d3",
             "type": "SCALE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "flxDelete",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "e39f8bab05a949f9bac3d669c0c1405d",
             "wType": "FlexContainer",
@@ -255,14 +242,12 @@
             "displayAnimationId": "SCALE_ACTION_c7429a5f6f6e40cc9255cb92a95e94d3",
             "forkedPlatform": "all",
             "parentId": "_d33f55db8dfd45b4bc8549e8130d6678",
-            "callbackType": null,
-            "widgetPath": "this.view.flxDelete"
+            "callbackType": null
         }, {
             "id": "MOVE_ACTION_h334211745344846a92f188533dc41fc",
             "type": "MOVE_ACTION",
             "itemType": "FORM",
             "itemId": "frmStepCreation",
-            "widgetId": "imgDelete",
             "itemKUID": "j27b7970c694429db6312f3b27f7428e",
             "widgetKUID": "b0f3ad23e508439ca5e0008d177be1a6",
             "wType": "Image",
@@ -285,8 +270,7 @@
             "displayAnimationId": "MOVE_ACTION_h334211745344846a92f188533dc41fc",
             "forkedPlatform": "all",
             "parentId": "_d33f55db8dfd45b4bc8549e8130d6678",
-            "callbackType": null,
-            "widgetPath": "this.view.imgDelete"
+            "callbackType": null
         }, {
             "id": "ADD_SNIPPET_fe76e8a628b04a4387be8824081e7879",
             "type": "ADD_SNIPPET",
