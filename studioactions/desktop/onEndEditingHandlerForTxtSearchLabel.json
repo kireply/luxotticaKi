@@ -21,7 +21,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_e62f4161ecc648e39e46c65b8189675e",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.imgSearchLabel.setVisibility(true);",
+            "codeSnippet": "if (this.view.txtSearchLabel.text === \"\") {\n  this.view.imgSearchLabel.setVisibility(true);\n}",
             "parentId": null
         }]
     }

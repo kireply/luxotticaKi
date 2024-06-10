@@ -1,0 +1,20 @@
+{
+    "AS_TextField_i24a965136d74f0480b514422785631b": {
+        "id": "AS_TextField_i24a965136d74f0480b514422785631b",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "language": "js",
+        "eventType": "onEndEditing",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onEndEditing_bea00334ad014489b1c7a7e40ad93111",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.imgSearchLabel.setVisibility(true);"
+        }]
+    }
+}

@@ -134,31 +134,36 @@
                     {
                         "imgMenuIcon": {
                             "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "imagedrag.png"
+                            "src": "flow.png",
+                            "type": "Image"
                         }
                     },
                     {
                         "imgMenuIcon": {
                             "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "imagedrag.png"
+                            "src": "labels_modified.png",
+                            "type": "Image"
                         }
                     },
                     {
                         "imgMenuIcon": {
                             "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "imagedrag.png"
+                            "src": "style_icon.png",
+                            "type": "Image"
                         }
                     },
                     {
                         "imgMenuIcon": {
                             "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "imagedrag.png"
+                            "src": "audience_icon.png",
+                            "type": "Image"
                         }
                     },
                     {
                         "imgMenuIcon": {
                             "@class": "com.viz.ide.model.segment.ImageSegmentData",
-                            "src": "imagedrag.png"
+                            "src": "settings.png",
+                            "type": "Image"
                         }
                     }
                 ]

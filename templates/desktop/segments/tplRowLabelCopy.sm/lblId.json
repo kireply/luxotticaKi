@@ -46,7 +46,7 @@
     "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lb1",
+    "id": "lblId",
     "info": null,
     "ipad": {
         "psp": {

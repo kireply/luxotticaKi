@@ -10,7 +10,7 @@
             "name": "changedtext"
         }],
         "contextObj": {
-            "name": "CopyfrmLabelManagement",
+            "name": "frmLabelCopy",
             "type": "forms",
             "platform": null,
             "KUID": "d542af1533cb4c91820f2aa7d069320e"

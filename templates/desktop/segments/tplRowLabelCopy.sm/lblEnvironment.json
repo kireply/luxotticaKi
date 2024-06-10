@@ -7,7 +7,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "60.50%"
+        "value": "50.50%"
     },
     "_margin_": [
         1,
@@ -42,7 +42,7 @@
     "containerId": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lb4",
+    "id": "lblEnvironment",
     "info": null,
     "ipad": {
         "psp": {
@@ -56,7 +56,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "ec56a891458d4e51a7ab73e530890d72",
+    "kuid": "c8dd418365d341d78e2a743d94105f30",
     "minheight": {
         "type": "string",
         "value": "100dp"

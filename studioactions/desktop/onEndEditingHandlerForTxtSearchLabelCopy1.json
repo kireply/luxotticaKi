@@ -1,0 +1,21 @@
+{
+    "AS_TextField_e024c87e9aab44b29c76b3b4275cca12": {
+        "id": "AS_TextField_e024c87e9aab44b29c76b3b4275cca12",
+        "type": "ACTION_SEQUENCE",
+        "name": "onEndEditingHandlerForTxtSearchLabelCopy1",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "changedtext"
+        }],
+        "language": "js",
+        "eventType": "onEndEditing",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onEndEditing_b3c33015e7884b8db09647d9ea77e9ac",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if (this.view.txtSearchLabel.text === \"\") {\n  this.view.imgSearchLabel.setVisibility(true);\n}"
+        }]
+    }
+}

@@ -85,7 +85,7 @@
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
-                "leftValue": "FLOW_get !== null"
+                "leftValue": "FLOW_get.FLOW !== null"
             }, {
                 "leftValueType": "expression",
                 "leftValue": "FLOW_get.opstatus === 0 "

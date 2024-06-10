@@ -19,7 +19,65 @@
             "id": "ADD_SNIPPET_dbbab3499ef246dfa62bf10741f83231",
             "type": "ADD_SNIPPET",
             "codeSnippet": "this.view.channelTemplatewithContract.channelLogo = gblChannelLogo;\nthis.view.channelTemplatewithContract.channelInfo = gblChannelName + \" - #\" + gblChannelId;\ngblLabelsFileUploaded = false;",
-            "parentId": null
+            "parentId": null,
+            "callbackType": null,
+            "disabled": false
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ab7c5988cc0346faad83d64c202111eb",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "labelCopyId",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "_c89e5cc69e324f66a44685f10a06d73f",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "navigationsource",
+                "leftValue": "(this.getPreviousForm() === \"frmLabelCopy\") && this.navigationContext && this.navigationContext._meta_ && (this.navigationContext._meta_.widgetId ===  \"segLabels\") && (this.navigationContext._meta_.eventName ===  \"onRowClick\")",
+                "operator": "===",
+                "rightValue": "",
+                "leftItemKUID": "d542af1533cb4c91820f2aa7d069320e",
+                "leftWidgetKUID": "id948f97155c4eb4bc30c3b80e84e7ae",
+                "sequenceId": "AS_Segment_e472f4abc3d54651b376d8acf11d862d",
+                "eventName": "onRowClick",
+                "widgetId": "segLabels"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_MAPPING_h8a05f617db24eb9b332723b649213ee",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_j5b806c060314e1db54f4934cc83afe6": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_j5b806c060314e1db54f4934cc83afe6",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "navigationobject",
+                        "propertyName": "variable_labelCopyId",
+                        "dataType": "string",
+                        "isSkinProperty": false,
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Variables",
+                        "propertyName": "labelCopyId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_j5b806c060314e1db54f4934cc83afe6"],
+            "parentId": "_c89e5cc69e324f66a44685f10a06d73f",
+            "callbackType": null,
+            "enableMappingEditor": true
         }, {
             "id": "LOADING_INDICATOR_he91b2ec1d1d4740ae5b18daaed0f03b",
             "selectedOption": "show",
@@ -76,7 +134,8 @@
             },
             "parentId": null,
             "callbackType": null,
-            "enableMappingEditor": true
+            "enableMappingEditor": true,
+            "disabled": true
         }, {
             "id": "LOADING_INDICATOR_d8e5ebd7241947628edb485172b4dadb",
             "selectedOption": "dismiss",

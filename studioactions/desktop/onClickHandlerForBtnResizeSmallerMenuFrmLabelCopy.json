@@ -1,29 +1,25 @@
 {
-	"AS_Button_a9a4a683ac66412391a8e58d248c29f4": {
-		"id": "AS_Button_a9a4a683ac66412391a8e58d248c29f4",
-		"type": "ACTION_SEQUENCE",
-		"name": "onClickHandlerForBtnResizeSmallerMenuFrmLabelCopy",
-		"params": [
-			{
-				"datatype": "collection",
-				"name": "eventobject"
-			}
-		],
-		"contextObj": {
-			"name": "frmLabelCopy",
-			"type": "forms",
-			"platform": null,
-			"KUID": "d542af1533cb4c91820f2aa7d069320e"
-		},
-		"language": "js",
-		"eventType": "onClick",
-		"actions": [
-			{
-				"id": "ADD_SNIPPET_c084aa259a134346a49e7b8318f1fb0c",
-				"type": "ADD_SNIPPET",
-				"codeSnippet": "this.view.flxContainerSmallerMenu.setVisibility(false);\nthis.view.flxContainerMenu.setVisibility(true);\nthis.view.flxContainerLabel.width = \"78.33%\";",
-				"parentId": null
-			}
-		]
-	}
+    "AS_Button_a9a4a683ac66412391a8e58d248c29f4": {
+        "id": "AS_Button_a9a4a683ac66412391a8e58d248c29f4",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnResizeSmallerMenuFrmLabelCopy",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmLabelCopy",
+            "type": "forms",
+            "platform": null,
+            "KUID": "d542af1533cb4c91820f2aa7d069320e"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_c084aa259a134346a49e7b8318f1fb0c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxContainerSmallerMenu.setVisibility(false);\nthis.view.flxContainerMenu.setVisibility(true);\nthis.view.flxContainerLabel.width = \"78.33%\";",
+            "parentId": null
+        }]
+    }
 }

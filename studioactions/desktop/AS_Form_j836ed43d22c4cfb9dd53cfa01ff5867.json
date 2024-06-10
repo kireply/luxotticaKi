@@ -21,7 +21,6 @@
         }, {
             "id": "LOADING_INDICATOR_ide_postShow_aed4e79027af49578c2595c13db8e149",
             "selectedOption": "show",
-            "disabled": true,
             "type": "LOADING_INDICATOR",
             "callbackType": null,
             "skin": "none",

@@ -3,1237 +3,1013 @@
     "DNDConfig": null,
     "_bottom_": {
         "type": "string",
-        "value": "0"
+        "value": "1%"
     },
     "_data_": [
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
         },
         {
-            "lb1": {
+            "lblEnvironment": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb2": {
+            "lblFlowId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb3": {
+            "lblId": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             },
-            "lb4": {
-                "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
-                "text": " "
-            },
-            "lb5": {
+            "lblStatus": {
                 "@class": "com.viz.ide.model.segment.SimpleTextSegmentData",
                 "text": " "
             }
@@ -1241,7 +1017,7 @@
     ],
     "_height_": {
         "type": "string",
-        "value": "49.10%"
+        "value": "51%"
     },
     "_indicator_": "none",
     "_margin_": [
@@ -1263,14 +1039,14 @@
     },
     "_width_": {
         "type": "string",
-        "value": "97.50%"
+        "value": "96%"
     },
     "alternaterowskin": "s6c9b6ea95514ac38c284e4af280350e",
     "autogrowmode": 0,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50.50%"
+        "value": "50%"
     },
     "containerweight": 100,
     "counter": "055",
@@ -1281,6 +1057,7 @@
     "groupcells": false,
     "hasSections": false,
     "id": "segLabels",
+    "ide_onRowClick": "AS_Segment_e472f4abc3d54651b376d8acf11d862d",
     "info": null,
     "ipad": {
         "psp": {
@@ -1322,7 +1099,7 @@
     "selectedindex": null,
     "selectedindices": null,
     "selecteditems": null,
-    "selectedsectionindex": null,
+    "selectedsectionindex": 0,
     "selectionbehavior": "default",
     "separatorcolor": "aaaaaa00",
     "separatorrequired": true,
@@ -1334,10 +1111,9 @@
     "widgetalignment": 5,
     "widgetdatamap": {
         "flxRowLabelCopy": "flxRowLabelCopy",
-        "lb1": "lb1",
-        "lb2": "lb2",
-        "lb3": "lb3",
-        "lb4": "lb4",
-        "lb5": "lb5"
+        "lblEnvironment": "lblEnvironment",
+        "lblFlowId": "lblFlowId",
+        "lblId": "lblId",
+        "lblStatus": "lblStatus"
     }
 }

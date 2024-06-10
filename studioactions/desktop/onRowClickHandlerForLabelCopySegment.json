@@ -1,0 +1,93 @@
+{
+    "AS_Segment_e472f4abc3d54651b376d8acf11d862d": {
+        "id": "AS_Segment_e472f4abc3d54651b376d8acf11d862d",
+        "type": "ACTION_SEQUENCE",
+        "name": "onRowClickHandlerForLabelCopySegment",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "number",
+            "name": "sectionNumber"
+        }, {
+            "datatype": "number",
+            "name": "rowNumber"
+        }],
+        "contextObj": {
+            "name": "frmLabelCopy",
+            "type": "forms",
+            "platform": "",
+            "KUID": "d542af1533cb4c91820f2aa7d069320e"
+        },
+        "language": "js",
+        "eventType": "onRowClick",
+        "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_i8b2bea9ca764b3d83326c18b80a33f5",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "labelCopyId",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_de4a01abe14d4ba19b1547378243140f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "var labelCopy = this.view.segLabels.selectedRowItems[0];\n\nvoltmx.print(\"### labelCopy: \" + JSON.stringify(labelCopy) );\n\nvoltmx.print(\"### labelCopy.lblId: \" + JSON.stringify(labelCopy.lblId.text) );\n\nlabelCopyId = labelCopy.lblId.text;",
+            "parentId": null
+        }, {
+            "id": "LOADING_INDICATOR_d51c161ffb884990a123b4372690ec98",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Loading..."
+        }, {
+            "id": "NAVIGATE_TO_FORM__e2feb52351b44ed4b553b4b3d43c781e",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmLabelManagement",
+            "formKUID": "jcf530250ee04551b0014dcb7147f2fe",
+            "projectName": "luxotticaKi",
+            "mappings": {
+                "ME_Mapping_jb4e204b34fd4711bbd986ef1e26a3fe": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_jb4e204b34fd4711bbd986ef1e26a3fe",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "labelCopyId",
+                        "propertyKey": "variable_labelCopyId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_jb4e204b34fd4711bbd986ef1e26a3fe"],
+            "parentId": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "enableNavigationObj": true,
+            "navigationObj": "{\n    \"variable_labelCopyId\": labelCopyId,\n    \"_meta_\": {\n        \"eventName\": \"onRowClick\",\n        \"widgetId\": \"segLabels\"\n    }\n}",
+            "isCustomInput": false
+        }, {
+            "id": "LOADING_INDICATOR_ede9416ccf5c4c37a447b59f8269d1b3",
+            "selectedOption": "dismiss",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }]
+    }
+}

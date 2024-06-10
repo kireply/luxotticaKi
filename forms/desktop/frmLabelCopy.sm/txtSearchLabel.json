@@ -3,11 +3,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "50px"
+        "value": "100%"
     },
     "_left_": {
         "type": "string",
-        "value": "-13dp"
+        "value": "0dp"
     },
     "_margin_": [
         0,
@@ -26,32 +26,28 @@
     "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "4dp"
+        "value": "0dp"
     },
     "_width_": {
         "type": "string",
-        "value": "113.45%"
+        "value": "100%"
     },
     "autocapitalize": "none",
     "autocomplete": false,
     "autocorrect": false,
     "autofilter": false,
     "canUpdateUI": true,
-    "centery": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerheight": "",
     "containerheightmode": 1,
     "containerweight": 100,
     "contentalignment": 4,
     "desktopweb": {
-        "ide_onBeginEditing": "AS_TextField_h6b90d6ec3994f6699d36214a46f76df",
-        "ide_onEndEditing": "AS_TextField_b0176effd59f438886a5059dc4a36e8d"
+        "ide_onBeginEditing": "AS_TextField_bee065b0794440d5986696b74f13167d",
+        "ide_onEndEditing": "AS_TextField_e024c87e9aab44b29c76b3b4275cca12"
     },
     "focusskin": "s80dd33f88c44ac8a824f1864c353935",
     "id": "txtSearchLabel",
-    "ide_onTextChange": "AS_TextField_h27b7b8071d14a3ea347aa661576cc2d",
+    "ide_onTextChange": "AS_TextField_c1c15041f3414f999ed05efbcc7916f6",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

@@ -24,7 +24,6 @@
             "id": "LOADING_INDICATOR_b78e8d763d314f62a2132bb24cceff48",
             "selectedOption": "show",
             "parentId": null,
-            "disabled": true,
             "type": "LOADING_INDICATOR",
             "skin": "none",
             "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
@@ -77,6 +76,297 @@
             "parentId": null,
             "enableMappingEditor": true,
             "disabled": true
+        }, {
+            "id": "INVOKE_SERVICE_c7c0198c93dc4b0bb4dc493f782090a7",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABELCOPY_get",
+                "operationid": "137227"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_c21f26c683514d478d82b666613003e7",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_SERVICE_c7c0198c93dc4b0bb4dc493f782090a7",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_d14970b3fa24441e9741567c5def1f8b",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABELCOPY_get.LABELCOPY !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "LABELCOPY_get.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_c7c0198c93dc4b0bb4dc493f782090a7",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_e808820f02c8422597c619757bbb891b",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_c7c0198c93dc4b0bb4dc493f782090a7",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_c87fe127138d42c4a3640147192edbb2",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "LABELCOPY not loaded correctly.",
+            "yesLabel": "Ok",
+            "alertMessage": "LABELCOPY not loaded correctly.",
+            "messageType": "constant",
+            "parentId": "_e808820f02c8422597c619757bbb891b",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_MAPPING_bc334f942fad4d3d8444f04c7adaa7b5",
+            "type": "ADD_MAPPING",
+            "mappings": {
+                "ME_Mapping_je9437d81ef541b5898b0a92518603b5": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_je9437d81ef541b5898b0a92518603b5",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "LABELCOPY",
+                        "dataType": "collection",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_get",
+                            "operationid": "137227"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "rowData",
+                        "widgetId": "segLabels",
+                        "widgetPath": "this.view.segLabels",
+                        "widgetType": "Segment",
+                        "dataType": "collection",
+                        "itemId": "frmLabelCopy",
+                        "collectionId": "masterdata",
+                        "widgetKUID": "id948f97155c4eb4bc30c3b80e84e7ae",
+                        "itemKUID": "d542af1533cb4c91820f2aa7d069320e",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_b2aba249df4c4547aa4ce89729646c1c": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b2aba249df4c4547aa4ce89729646c1c",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "id",
+                        "dataType": "number",
+                        "collectionId": "LABELCOPY",
+                        "propertyPath": "[\"LABELCOPY\"][0][\"id\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_get",
+                            "operationid": "137227"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblId",
+                        "widgetPath": "this.view.lblId",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmLabelCopy",
+                        "parentMappingId": "ME_Mapping_je9437d81ef541b5898b0a92518603b5",
+                        "segmentId": "segLabels",
+                        "segmentKUID": "id948f97155c4eb4bc30c3b80e84e7ae",
+                        "widgetKUID": "d9ed4744f7364ec5b2696f3b3185ecc9",
+                        "itemKUID": "d542af1533cb4c91820f2aa7d069320e",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_fce73e6f047c4527a2b9f8ba5a5e2de0": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_fce73e6f047c4527a2b9f8ba5a5e2de0",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "number",
+                        "collectionId": "LABELCOPY",
+                        "propertyPath": "[\"LABELCOPY\"][0][\"flow_id\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_get",
+                            "operationid": "137227"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblFlowId",
+                        "widgetPath": "this.view.lblFlowId",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmLabelCopy",
+                        "parentMappingId": "ME_Mapping_je9437d81ef541b5898b0a92518603b5",
+                        "segmentId": "segLabels",
+                        "segmentKUID": "id948f97155c4eb4bc30c3b80e84e7ae",
+                        "widgetKUID": "ebacec04c35c485d9eaa14a6bc7bb35d",
+                        "itemKUID": "d542af1533cb4c91820f2aa7d069320e",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_cd811263381c48178af646bf40e02c12": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cd811263381c48178af646bf40e02c12",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "environment",
+                        "dataType": "string",
+                        "collectionId": "LABELCOPY",
+                        "propertyPath": "[\"LABELCOPY\"][0][\"environment\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_get",
+                            "operationid": "137227"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblEnvironment",
+                        "widgetPath": "this.view.lblEnvironment",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmLabelCopy",
+                        "parentMappingId": "ME_Mapping_je9437d81ef541b5898b0a92518603b5",
+                        "segmentId": "segLabels",
+                        "segmentKUID": "id948f97155c4eb4bc30c3b80e84e7ae",
+                        "widgetKUID": "c8dd418365d341d78e2a743d94105f30",
+                        "itemKUID": "d542af1533cb4c91820f2aa7d069320e",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_g0cdc2b5f4e64241ba36c2d2a0374fb9": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_g0cdc2b5f4e64241ba36c2d2a0374fb9",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "status",
+                        "dataType": "string",
+                        "collectionId": "LABELCOPY",
+                        "propertyPath": "[\"LABELCOPY\"][0][\"status\"]",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_get",
+                            "operationid": "137227"
+                        }
+                    },
+                    "target": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "lblStatus",
+                        "widgetPath": "this.view.lblStatus",
+                        "widgetType": "Label",
+                        "dataType": "string",
+                        "templateType": "rowTemplate",
+                        "itemId": "frmLabelCopy",
+                        "parentMappingId": "ME_Mapping_je9437d81ef541b5898b0a92518603b5",
+                        "segmentId": "segLabels",
+                        "segmentKUID": "id948f97155c4eb4bc30c3b80e84e7ae",
+                        "widgetKUID": "ec56a891458d4e51a7ab73e530890d72",
+                        "itemKUID": "d542af1533cb4c91820f2aa7d069320e",
+                        "forkedPlatform": "all"
+                    }
+                },
+                "ME_Mapping_id885a553d8c4fb6b1a1d781260f4c5b": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_id885a553d8c4fb6b1a1d781260f4c5b",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Services",
+                        "propertyName": "LABELCOPY",
+                        "dataType": "collection",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_get",
+                            "operationid": "137227"
+                        }
+                    },
+                    "target": {
+                        "type": "Variables",
+                        "propertyName": "gblLabelCopyList",
+                        "dataType": "collection",
+                        "forkedPlatform": "all"
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_je9437d81ef541b5898b0a92518603b5", "ME_Mapping_b2aba249df4c4547aa4ce89729646c1c", "ME_Mapping_fce73e6f047c4527a2b9f8ba5a5e2de0", "ME_Mapping_cd811263381c48178af646bf40e02c12", "ME_Mapping_g0cdc2b5f4e64241ba36c2d2a0374fb9", "ME_Mapping_id885a553d8c4fb6b1a1d781260f4c5b"],
+            "parentId": "_d14970b3fa24441e9741567c5def1f8b",
+            "callbackType": null,
+            "enableMappingEditor": true
         }, {
             "id": "LOADING_INDICATOR_de84d028917b49148981e5e86ab6e997",
             "selectedOption": "dismiss",
