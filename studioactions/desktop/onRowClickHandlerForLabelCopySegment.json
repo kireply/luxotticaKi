@@ -34,7 +34,7 @@
         }, {
             "id": "ADD_SNIPPET_de4a01abe14d4ba19b1547378243140f",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "var labelCopy = this.view.segLabels.selectedRowItems[0];\n\nvoltmx.print(\"### labelCopy: \" + JSON.stringify(labelCopy) );\n\nvoltmx.print(\"### labelCopy.lblId: \" + JSON.stringify(labelCopy.lblId.text) );\n\nlabelCopyId = labelCopy.lblId.text;",
+            "codeSnippet": "var labelCopy = this.view.segLabels.selectedRowItems[0];\n\nvoltmx.print(\"### labelCopy: \" + JSON.stringify(labelCopy) );\n\nvoltmx.print(\"### labelCopy.lblId: \" + JSON.stringify(labelCopy.id) );\n\nlabelCopyId = labelCopy.lblId.text;",
             "parentId": null
         }, {
             "id": "LOADING_INDICATOR_d51c161ffb884990a123b4372690ec98",

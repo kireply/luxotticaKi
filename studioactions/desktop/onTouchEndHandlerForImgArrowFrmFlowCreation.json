@@ -1,0 +1,57 @@
+{
+    "AS_Image_b385b8f8d74041a1a68ba54706efdca5": {
+        "id": "AS_Image_b385b8f8d74041a1a68ba54706efdca5",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgArrowFrmFlowCreation",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmFlowCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "d569d8ca39af43bea658ee877f5208b9"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "LOADING_INDICATOR_d885a5e3e8534166a0ddd208527350cd",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Back to channels..."
+        }, {
+            "id": "NAVIGATE_TO_FORM__gb7f35034b094e82aa133015a58bb168",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmFlows",
+            "formKUID": "e6a8fc2377784d1595b361cc9412aea7",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "LOADING_INDICATOR_a273d71d37f14b6fae10e937841272c5",
+            "selectedOption": "dismiss",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }]
+    }
+}

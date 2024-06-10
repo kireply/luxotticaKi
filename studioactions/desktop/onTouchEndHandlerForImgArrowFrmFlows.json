@@ -1,0 +1,62 @@
+{
+    "AS_Image_eaff3f461f5a4ab396654ad9a0f127cf": {
+        "id": "AS_Image_eaff3f461f5a4ab396654ad9a0f127cf",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgArrowFrmFlows",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_a26518e1ac3345889b4b909473294bd9",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// back to frmChannels, so we reset channel global variables until next selection\ngblChannelId = \"\";\ngblChannelName = \"\";\ngblChannelLogo = \"\";\ngblChannelProperties = \"\";\ngblChannelGenericImage = \"\";\ngblChannelAssetsCDN = \"\";\ngblChannelProjectImage = \"\";\ngblChannelFrameOnlyLensUPC = \"\";\ngblChannelShowUiSkeleton = \"\";",
+            "parentId": null
+        }, {
+            "id": "LOADING_INDICATOR_bd358477917b4c269e13c95b73749d7b",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Back to channels..."
+        }, {
+            "id": "NAVIGATE_TO_FORM__i9ec3f53e30b4bf3bc85fd817e590ef6",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmChannels",
+            "formKUID": "c1e9143f6fef4291a170222e7c044c7c",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "LOADING_INDICATOR_e5d49a5c19384503a270bf6963eacbce",
+            "selectedOption": "dismiss",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }]
+    }
+}

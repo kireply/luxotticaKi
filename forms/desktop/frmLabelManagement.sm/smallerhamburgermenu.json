@@ -82,6 +82,9 @@
                     "type": "string",
                     "value": "30%"
                 }
+            },
+            "zIndex": {
+                "Default": 5
             }
         },
         "flxLogout": {

@@ -1,0 +1,61 @@
+{
+    "AS_Image_d1aeef29ffee4119bf530ac30586a655": {
+        "id": "AS_Image_d1aeef29ffee4119bf530ac30586a655",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "imagesrc"
+        }, {
+            "datatype": "boolean",
+            "name": "issuccess"
+        }],
+        "contextObj": {
+            "name": "frmFlows",
+            "type": "forms",
+            "platform": "",
+            "KUID": "e6a8fc2377784d1595b361cc9412aea7"
+        },
+        "language": "js",
+        "eventType": "onDownloadComplete",
+        "actions": [{
+            "id": "ADD_SNIPPET_h3b281a16cea4d5da6be7d60c01c8596",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// back to frmChannels, so we reset channel global variables until next selection\ngblChannelId = \"\";\ngblChannelName = \"\";\ngblChannelLogo = \"\";\ngblChannelProperties = \"\";\ngblChannelGenericImage = \"\";\ngblChannelAssetsCDN = \"\";\ngblChannelProjectImage = \"\";\ngblChannelFrameOnlyLensUPC = \"\";\ngblChannelShowUiSkeleton = \"\";",
+            "parentId": null
+        }, {
+            "id": "LOADING_INDICATOR_ac2c96ad7a344d729a92ea5a2074a18e",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Back to channels..."
+        }, {
+            "id": "NAVIGATE_TO_FORM__c079ada49c2446ffa70e15a5518abeb1",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmChannels",
+            "formKUID": "c1e9143f6fef4291a170222e7c044c7c",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "LOADING_INDICATOR_a89fd9e62b684b28892f2c5310128d9d",
+            "selectedOption": "dismiss",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }]
+    }
+}
