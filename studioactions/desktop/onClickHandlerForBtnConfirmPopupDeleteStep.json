@@ -36,6 +36,16 @@
             "parentId": null,
             "callbackType": null
         }, {
+            "id": "ADD_LOCAL_VARIABLE_b6f63cf92af643a3b72cc89359fd98e1",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "stepsToUpdate",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "{}",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "ADD_LOCAL_VARIABLE_e10f1bbd7b804698a112723e628910d8",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "i",
@@ -56,6 +66,16 @@
             "parentId": null,
             "callbackType": null
         }, {
+            "id": "ADD_LOCAL_VARIABLE_a031174a61674673850975068ab74723",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "numStepsToUpdate",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "ADD_LOCAL_VARIABLE_d53f1e8065304d92b3cf5dfc77f75f10",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "labelIdToRemove",
@@ -63,6 +83,116 @@
             "valuetype": "constant",
             "datatype": "string",
             "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_a508748daa544dfca454664e151c4530",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "idStep",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_h96b35433b2c4e6b9aec450e72856fe0",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "flowId",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_c731cff8e8694574b00590ff745e9787",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "orderStep",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ib1db03c0fdd4deabc780772ab98f059",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "titleStep",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_e2f5469ba3c448c6979e2269bda167ef",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "prescription",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "boolean",
+            "value": "false",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_j540a596aef44c2290b203ae5e42ba62",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "autoproceed",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "boolean",
+            "value": "false",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_f32cebf512dd44e082c00765961af27f",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "autoskip",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "boolean",
+            "value": "false",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ffd119294f374edca4673be783bcbc7f",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "hasGreyout",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "boolean",
+            "value": "false",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_a2cec6ebbc0a411380e242f2b10137e9",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "analyticsId",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_a631ba61d27040bd86cb016d508c9197",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "autoproceedLabel",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_c2fd6887112e428085eef64374da3de5",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "orderStepDeleted",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
             "parentId": null,
             "callbackType": null
         }, {
@@ -162,6 +292,44 @@
             "callbackType": "Callback",
             "criteria": "all"
         }, {
+            "id": "_f7162081b8d8400e8c8f9be1cd786a3d",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_a741dc726f7c4fadb326e0bef8094168",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_abf9c3baf6a949379e6e4d354c52acef",
+            "selectedOption": "dismiss",
+            "parentId": "_f7162081b8d8400e8c8f9be1cd786a3d",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "SHOW_ALERT_c3ed100fd0a3413ba8abd1748633205f",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "STEP_CustomQueryGetSingleStep.opstatus NOT 0 or NULL",
+            "alertMessage": "STEP_CustomQueryGetSingleStep.opstatus NOT 0 or NULL",
+            "messageType": "constant",
+            "parentId": "_f7162081b8d8400e8c8f9be1cd786a3d",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
             "id": "ADD_SNIPPET_b3aacadcce0240859d3d7de86d343816",
             "type": "ADD_SNIPPET",
             "codeSnippet": "// we found the step id we want to delete\nidStepToRemove = STEP_CustomQueryGetSingleStep.records[0].id;\ndebugger;",
@@ -223,6 +391,45 @@
             "parentId": "INVOKE_SERVICE_a66c0ab2d5e84e9a9cfee1d5314b7a82",
             "callbackType": "Callback",
             "criteria": "all"
+        }, {
+            "id": "_de71824b8eba4c479a5013765d8669b5",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_a66c0ab2d5e84e9a9cfee1d5314b7a82",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_f539889ec5444deabf0006cbf64ac9f2",
+            "selectedOption": "dismiss",
+            "parentId": "_de71824b8eba4c479a5013765d8669b5",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "SHOW_ALERT_da4fd0645a3c444ca2fa9f8592fa818e",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "STEP_delete.opstatus NOT 0",
+            "yesLabel": "Ok",
+            "alertMessage": "STEP_delete.opstatus NOT 0",
+            "messageType": "constant",
+            "parentId": "_de71824b8eba4c479a5013765d8669b5",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
         }, {
             "id": "ADD_SNIPPET_acdbf3d072dc42b0b4303032a0435638",
             "type": "ADD_SNIPPET",
@@ -341,6 +548,51 @@
             "callbackType": "Callback",
             "criteria": "all"
         }, {
+            "id": "_f611ecdcab36414ca8c9208fe15a5743",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_e08860cd60da4472959c8ab26c01b1fe",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_dc5d965c80b04d918bf8bb8dc8774276",
+            "selectedOption": "dismiss",
+            "parentId": "_f611ecdcab36414ca8c9208fe15a5743",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "ADD_SNIPPET_g39fc0e9d92d46a988de8b468b7b5c14",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "debugger;\nlet error = STEP_flow_order_CustomQueryGet.errmsg;\nvoltmx.print(\"### error: \" + error);",
+            "parentId": "_f611ecdcab36414ca8c9208fe15a5743",
+            "callbackType": null
+        }, {
+            "id": "SHOW_ALERT_af167978668343bb9da9c64558b80ff0",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "LABEL_flow_stepTitle_CustomQueryGet.opstatus NOT 0",
+            "yesLabel": "Ok",
+            "alertMessage": "LABEL_flow_stepTitle_CustomQueryGet.opstatus NOT 0",
+            "messageType": "constant",
+            "parentId": "_f611ecdcab36414ca8c9208fe15a5743",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
             "id": "ADD_SNIPPET_fa19bd367ad8482a941c45815d097dae",
             "type": "ADD_SNIPPET",
             "codeSnippet": "labelsToRemove = LABEL_flow_stepTitle_CustomQueryGet.records;\nnumLabelsToRemove = labelsToRemove.length-1;\ndebugger;\n\n/*\nOra che ho recuperato tutte le labels (con id dentro) da eliminare,\nrichiamo un ciclo for che chiama il servizio LABEL_delete per eliminare\ndal DB tutte le labels in labelsToRemove.\n*/\n/*\nfor (let i = 0; i < labelsToRemove.length; i++) {\n  \n  let idToRemove = labelsToRemove[i].id;\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_delete\", {}, idToRemove, (response) => {\n    voltmx.print(\"### Label deleted: \" + idToRemove);\n    voltmx.print(\"### Label deleted RESPONSE: \" + JSON.stringify(response));\n  },\n\n    (error) => {\n    voltmx.print(\"### Error invocating LABEL_delete inside -onClickHandlerForBtnConfirmPopupDeleteStep-\");\n    voltmx.print(\"### Error RESPONSE: \" + JSON.stringify(error));\n  });\n}\n\n// hiding popup\nself.view.flxPopupDeleteStep.setVisibility(false);\nself.view.flxNewStepBlur.setVisibility(false);\n*/\n\n",
@@ -360,15 +612,122 @@
             "stepBy": 1,
             "direction": "inc"
         }, {
+            "id": "ADD_SNIPPET_c39d29c0c6aa45c4a354bc50dee89f36",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "labelIdToRemove = labelsToRemove[i].id;\nvoltmx.print(\"### label to remove: \" + labelIdToRemove);\ndebugger;",
+            "parentId": "LOOP_ACTION_d5fc8c14b71c4d91af14fad469da7bd9",
+            "callbackType": null
+        }, {
             "id": "ADD_SNIPPET_d9ad759eb745439da140ddc6ddf29afe",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### delete COMPLETED.\");\n// we are outside the loop now.\n// WE REMOVE THE GRAPHIC PART FROM THE FORM\n\n// removing flxScroll related to the step we are deleting\nlet scroll = self.findCurrentFlexScroll();\nlet idScrollToRemove = scroll.id;\nlet numScrollToRemove = idScrollToRemove.match(/\\d+/)[0]; // Estrapolo solo il gruppo di cifre finali (ordine dello scroll)\nif (numScrollToRemove === null) {\n  numScrollToRemove = 1; // the scroll to remove is the first (\"flxScrollRight\") and doesn't have number 1 in front\n}\nself.view.flxRightSide.remove(scroll);\n\n// removing the step box\nlet stepBoxIdToDelete = \"boxStep\" + gblCurrentStepOrder;\nlet widget = self.view.flxSteps.widgets().find(w => w.id === stepBoxIdToDelete);\nself.view.flxSteps.remove(widget);\n\n\n// updating this.modes by removing step eliminated\ndebugger;\n// let modes = self.returnThisModes();\nlet m = self.modes;\n// elimina la riga con cifra finale uguale a gblCurrentStepOrder\nfor (const key in self.modes) {\n  if (key.endsWith(gblCurrentStepOrder.toString())) {\n    delete self.modes[key];\n  }\n}\n// decrementa tutti gli elementi successivi (le rimanenti keys di this.modes) di 1 solo alla cifra finale\nconst keys = Object.keys(self.modes);\nkeys.sort();  // Ordina le chiavi per garantire l'ordine corretto\n\nfor (const key of keys) {\n  const match = key.match(/(.*)_(\\d+)$/);\n  if (match) {\n    const prefix = match[1];\n    const number = parseInt(match[2]);\n    if (number > 2) {\n      const newKey = prefix + \"_\" + (parseInt(number)-1).toString();\n      //const newKey = `${prefix}_${number - 1}`;\n      self.modes[newKey] = self.modes[key];\n      delete self.modes[key];\n    }\n  }\n}\ndebugger;\n// update all labels ID in DB, decreasing by 1 the last digit for each id. \n\n\n// decreasing gbl variables only if different from first.\ngblCurrentStepOrder = gblCurrentStepOrder === 1 ? 1 : --gblCurrentStepOrder;\ngblLastInsertedStep = gblLastInsertedStep === 1 ? 1 : --gblLastInsertedStep;\n// gblCurrentStepTitle is already updated now (to the previous step)\n\ndebugger;\nlet stepBoxes = self.view.flxSteps.widgets();  // contains the \"add stepp\" too.\nlet scrolls = self.view.flxRightSide.widgets();  \n// for each flxScroll, decrease id by 1\nfor (let i = stepBoxes.length; i > numScrollToRemove; --i) {  // updating only flex that were after the one deleted\n  scrolls[i+3-2].newId = (i === 2 ? \"flxScrollRight\" : \"flxScrollRight\" + (i-1) );  //+3 perchè i primi [0/1/2] sono di \"messaggio pannello vuoto\"\n}\n\n// for each step box remaining, decrease the label step and the id (newId) by 1\nfor (let i = stepBoxes.length; i > numScrollToRemove; --i) {  // updating only step boxes that were after the one deleted\n  stepBoxes[i-1].lblStepOrder.text = \"Step \" + (i-1);\n  stepBoxes[i-1].newId = (i === 2 ? \"flxBoxFirstStep\" : \"boxStep\" + (i-1) );\n  \n  // guarda la posizione di ogni step box, dovrà essere decrementata di 90 dp.\n  let left_dp = stepBoxes[i-1].left;\n  let left = left_dp.match(/\\d+/)[0] - 90; // removing 10 for space + 80 for step box deleted\n  left_dp = left + \"dp\";\n  stepBoxes[i-1].left = left_dp;\n}\n\n\n// higlighting previous step box and showing related flxScroll\nself.highlightSelectedStepBox();\n\n// closing popup and blur\nself.view.flxPopupDeleteStep.setVisibility(false);\nself.view.flxNewStepBlur.setVisibility(false);",
+            "codeSnippet": "voltmx.print(\"### delete COMPLETED.\");\n// we are outside the loop now.\n// WE REMOVE THE GRAPHIC PART FROM THE FORM\n\n// removing flxScroll related to the step we are deleting\nlet scroll = self.findCurrentFlexScroll();\nlet idScrollToRemove = scroll.id;\nlet numScrollToRemove = idScrollToRemove.match(/\\d+/)[0]; // Estrapolo solo il gruppo di cifre finali (ordine dello scroll)\nif (numScrollToRemove === null) {\n  numScrollToRemove = 1; // the scroll to remove is the first (\"flxScrollRight\") and doesn't have number 1 in front\n}\nself.view.flxRightSide.remove(scroll);\n\n// removing the step box\nlet stepBoxIdToDelete = \"boxStep\" + gblCurrentStepOrder;\nlet widget = self.view.flxSteps.widgets().find(w => w.id === stepBoxIdToDelete);\nself.view.flxSteps.remove(widget);\n\n\n// updating this.modes by removing step eliminated\ndebugger;\n// let modes = self.returnThisModes();\nlet m = self.modes;\n// elimina la riga con cifra finale uguale a gblCurrentStepOrder\nfor (const key in self.modes) {\n  if (key.endsWith(gblCurrentStepOrder.toString())) {\n    delete self.modes[key];\n  }\n}\n// decrementa tutti gli elementi successivi (le rimanenti keys di this.modes) di 1 solo alla cifra finale\nconst keys = Object.keys(self.modes);\nkeys.sort();  // Ordina le chiavi per garantire l'ordine corretto\n\nfor (const key of keys) {\n  const match = key.match(/(.*)_(\\d+)$/);\n  if (match) {\n    const prefix = match[1];\n    const number = parseInt(match[2]);\n    if (number > 2) {\n      const newKey = prefix + \"_\" + (parseInt(number)-1).toString();\n      //const newKey = `${prefix}_${number - 1}`;\n      self.modes[newKey] = self.modes[key];\n      delete self.modes[key];\n    }\n  }\n}\ndebugger;\n// update all labels ID in DB, decreasing by 1 the last digit for each id. \n\n\n// saving order number of step deleted\norderStepDeleted = parseInt(gblCurrentStepOrder);\n\n// decreasing gbl variables only if different from first.\ngblCurrentStepOrder = gblCurrentStepOrder === 1 ? 1 : --gblCurrentStepOrder;\ngblLastInsertedStep = gblLastInsertedStep === 1 ? 1 : --gblLastInsertedStep;\n// gblCurrentStepTitle is already updated now (to the previous step)\n\ndebugger;\nlet stepBoxes = self.view.flxSteps.widgets();  // contains the \"add stepp\" too.\nlet scrolls = self.view.flxRightSide.widgets();  \n// for each flxScroll, decrease id by 1\nfor (let i = stepBoxes.length; i > numScrollToRemove; --i) {  // updating only flex that were after the one deleted\n  scrolls[i+3-2].newId = (i === 2 ? \"flxScrollRight\" : \"flxScrollRight\" + (i-1) );  //+3 perchè i primi [0/1/2] sono di \"messaggio pannello vuoto\"\n}\n\n// for each step box remaining, decrease the label step and the id (newId) by 1\nfor (let i = stepBoxes.length; i > numScrollToRemove; --i) {  // updating only step boxes that were after the one deleted\n  stepBoxes[i-1].lblStepOrder.text = \"Step \" + (i-1);\n  stepBoxes[i-1].newId = (i === 2 ? \"flxBoxFirstStep\" : \"boxStep\" + (i-1) );\n  \n  // guarda la posizione di ogni step box, dovrà essere decrementata di 90 dp.\n  let left_dp = stepBoxes[i-1].left;\n  let left = left_dp.match(/\\d+/)[0] - 90; // removing 10 for space + 80 for step box deleted\n  left_dp = left + \"dp\";\n  stepBoxes[i-1].left = left_dp;\n}\n\n\n// higlighting previous step box and showing related flxScroll\nself.highlightSelectedStepBox();\n\n// closing popup and blur\nself.view.flxPopupDeleteStep.setVisibility(false);\nself.view.flxNewStepBlur.setVisibility(false);",
             "parentId": "_b86f62f93d224f35bda8be8fc5d10184",
             "callbackType": null
         }, {
-            "id": "LOADING_INDICATOR_c6043ce1cd5a4016b2b0f8d4d343b3b9",
-            "selectedOption": "dismiss",
+            "id": "INVOKE_SERVICE_dc1011d52bc1476396a654baf791e95d",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_h81f0edeb1b94c93a76fd91a6d1a92d0": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h81f0edeb1b94c93a76fd91a6d1a92d0",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_flow_order_CustomQueryGet",
+                            "operationid": "137789"
+                        }
+                    }
+                },
+                "ME_Mapping_ab8fbb1d92b3481e9c3479ad0b4718e1": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ab8fbb1d92b3481e9c3479ad0b4718e1",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "orderStepDeleted",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "order",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_flow_order_CustomQueryGet",
+                            "operationid": "137789"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_h81f0edeb1b94c93a76fd91a6d1a92d0", "ME_Mapping_ab8fbb1d92b3481e9c3479ad0b4718e1"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "STEP_flow_order_CustomQueryGet",
+                "operationid": "137789"
+            },
             "parentId": "_b86f62f93d224f35bda8be8fc5d10184",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "ADD_SNIPPET_i3dfa70951a34825b8271ace0663cd8e",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### errore: \" + STEP_flow_order_CustomQueryGet.errmsg);",
+            "parentId": "INVOKE_SERVICE_dc1011d52bc1476396a654baf791e95d",
+            "callbackType": "Callback"
+        }, {
+            "id": "_b0766fafe36e4c41ade2ee42f906b4a0",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "STEP_flow_order_CustomQueryGet.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_dc1011d52bc1476396a654baf791e95d",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_i7a04e3d44d948769e232d6044b03f77",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_dc1011d52bc1476396a654baf791e95d",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_b95a0f2df18a44c3a9b61e7dc3d2f525",
+            "selectedOption": "dismiss",
+            "parentId": "_i7a04e3d44d948769e232d6044b03f77",
             "type": "LOADING_INDICATOR",
             "callbackType": null,
             "skin": "none",
@@ -376,11 +735,391 @@
             "isBlocked": "true",
             "showProgressIndicator": "true"
         }, {
-            "id": "ADD_SNIPPET_c39d29c0c6aa45c4a354bc50dee89f36",
+            "id": "SHOW_ALERT_b1d42edac8a7494681b7010e8adab771",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "STEP_flow_order_CustomQueryGet.opstatus NOT 0",
+            "yesLabel": "Ok",
+            "alertMessage": "STEP_flow_order_CustomQueryGet.opstatus NOT 0",
+            "messageType": "constant",
+            "parentId": "_i7a04e3d44d948769e232d6044b03f77",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_f80867e6338a439a8212b5ef757f8377",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "labelIdToRemove = labelsToRemove[i].id;\nvoltmx.print(\"### label to remove: \" + labelIdToRemove);\ndebugger;",
-            "parentId": "LOOP_ACTION_d5fc8c14b71c4d91af14fad469da7bd9",
+            "codeSnippet": "debugger;\nstepsToUpdate = STEP_flow_order_CustomQueryGet.records;\nnumStepsToUpdate = stepsToUpdate.length - 1;",
+            "parentId": "_b0766fafe36e4c41ade2ee42f906b4a0",
             "callbackType": null
+        }, {
+            "id": "LOOP_ACTION_fe4d09308fed450b96feb6804cd21351",
+            "type": "LOOP_ACTION",
+            "parentId": "_b0766fafe36e4c41ade2ee42f906b4a0",
+            "callbackType": null,
+            "varType": "set",
+            "variable": "i",
+            "startType": "set",
+            "startValue": 0,
+            "endType": "choose",
+            "endValue": "numStepsToUpdate",
+            "stepBy": 1,
+            "direction": "inc"
+        }, {
+            "id": "ADD_SNIPPET_e4d2dc64674d4af7a8b758842a7067f8",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "debugger;\n// setting variables we will give as parameters for the update.\nidStep = stepsToUpdate[i].id;\nflowId = stepsToUpdate[i].flow_id;\norderStep = (parseInt(stepsToUpdate[i].order) - 1).toString(); // decreasing order by 1.\ntitleStep = stepsToUpdate[i].title;\nprescription = stepsToUpdate[i].prescription_step;\nautoproceed = stepsToUpdate[i].autoproceed;\nautoskip = stepsToUpdate[i].autoskip;\nhasGreyout = stepsToUpdate[i].has_greyout;\nanalyticsId = stepsToUpdate[i].analytics_id;\nautoproceedLabel = stepsToUpdate[i].autoproceed_label;\ndebugger;",
+            "parentId": "LOOP_ACTION_fe4d09308fed450b96feb6804cd21351",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_c59ac8799b9a4ac7a6a55db16c3f4f9a",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_c3b502c4de8b4a71b0c416718a5dddd1": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_c3b502c4de8b4a71b0c416718a5dddd1",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "idStep",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_update",
+                            "operationid": "122825"
+                        }
+                    }
+                },
+                "ME_Mapping_cbdcf7d479904a3eabea7d7e95a1a145": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cbdcf7d479904a3eabea7d7e95a1a145",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "flowId",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_update",
+                            "operationid": "122825"
+                        }
+                    }
+                },
+                "ME_Mapping_d601bd6db3f3482f9e9484204d965d10": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d601bd6db3f3482f9e9484204d965d10",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "orderStep",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "order",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_update",
+                            "operationid": "122825"
+                        }
+                    }
+                },
+                "ME_Mapping_b180717f97ea47b3a82b6458cdb4e226": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b180717f97ea47b3a82b6458cdb4e226",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "titleStep",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "title",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_update",
+                            "operationid": "122825"
+                        }
+                    }
+                },
+                "ME_Mapping_g7b809398ca7418cae5200cef59b8c65": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_g7b809398ca7418cae5200cef59b8c65",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "prescription",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "prescription_step",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_update",
+                            "operationid": "122825"
+                        }
+                    }
+                },
+                "ME_Mapping_b52cdd64e00d46a7a7dc6e5fcfed3ae9": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b52cdd64e00d46a7a7dc6e5fcfed3ae9",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "autoproceed",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "autoproceed",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_update",
+                            "operationid": "122825"
+                        }
+                    }
+                },
+                "ME_Mapping_b4bd884cb1ce4e01becff33e99605f10": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b4bd884cb1ce4e01becff33e99605f10",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "autoskip",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "autoskip",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_update",
+                            "operationid": "122825"
+                        }
+                    }
+                },
+                "ME_Mapping_j2b55d176eb1469cbaa1d9e624b478f7": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_j2b55d176eb1469cbaa1d9e624b478f7",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "hasGreyout",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "has_greyout",
+                        "dataType": "boolean",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_update",
+                            "operationid": "122825"
+                        }
+                    }
+                },
+                "ME_Mapping_d88b088e6e9040c484628b46d108e1b0": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d88b088e6e9040c484628b46d108e1b0",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "analyticsId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "analytics_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_update",
+                            "operationid": "122825"
+                        }
+                    }
+                },
+                "ME_Mapping_h93ba58dda6d4d348e01087b40917a8b": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h93ba58dda6d4d348e01087b40917a8b",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "autoproceedLabel",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "autoproceed_label",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "STEP_update",
+                            "operationid": "122825"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_c3b502c4de8b4a71b0c416718a5dddd1", "ME_Mapping_cbdcf7d479904a3eabea7d7e95a1a145", "ME_Mapping_d601bd6db3f3482f9e9484204d965d10", "ME_Mapping_b180717f97ea47b3a82b6458cdb4e226", "ME_Mapping_g7b809398ca7418cae5200cef59b8c65", "ME_Mapping_b52cdd64e00d46a7a7dc6e5fcfed3ae9", "ME_Mapping_b4bd884cb1ce4e01becff33e99605f10", "ME_Mapping_j2b55d176eb1469cbaa1d9e624b478f7", "ME_Mapping_d88b088e6e9040c484628b46d108e1b0", "ME_Mapping_h93ba58dda6d4d348e01087b40917a8b"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "STEP_update",
+                "operationid": "122825"
+            },
+            "parentId": "LOOP_ACTION_fe4d09308fed450b96feb6804cd21351",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_c22d59b8b38f48ef8c7f08cdaa4691c3",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "STEP_update.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_c59ac8799b9a4ac7a6a55db16c3f4f9a",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_fe77a1eaf9eb4062a7b4fa2324b13489",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_c59ac8799b9a4ac7a6a55db16c3f4f9a",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_ha1cb46ac31146fe85ff3e62532b20a7",
+            "selectedOption": "dismiss",
+            "parentId": "_fe77a1eaf9eb4062a7b4fa2324b13489",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "SHOW_ALERT_f61ec63a00744453a396d7c1ba55c096",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "STEP_update.opstatus NOT 0",
+            "yesLabel": "Ok",
+            "alertMessage": "STEP_update.opstatus NOT 0",
+            "messageType": "constant",
+            "parentId": "_fe77a1eaf9eb4062a7b4fa2324b13489",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_d86ef8cb75d64414b7335964db8a1cb8",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"concluso STEP_update\");\ndebugger;",
+            "parentId": "_c22d59b8b38f48ef8c7f08cdaa4691c3",
+            "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_b2537d70ed524575bf466d5eef2dd0a6",
+            "selectedOption": "dismiss",
+            "parentId": "_c22d59b8b38f48ef8c7f08cdaa4691c3",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
         }, {
             "id": "INVOKE_SERVICE_a3c736cab9f341ce842fc90631ca5748",
             "type": "INVOKE_ASYNC_SERVICE",
@@ -437,6 +1176,35 @@
             "parentId": "INVOKE_SERVICE_a3c736cab9f341ce842fc90631ca5748",
             "callbackType": "Callback",
             "criteria": "all"
+        }, {
+            "id": "_a660c468bf904f3794c60df16dd27519",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_a3c736cab9f341ce842fc90631ca5748",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_g0924fa7e9e04f36b3ff081b4e88da51",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "LABEL_delete.opstatus NOT 0",
+            "yesLabel": "Ok",
+            "alertMessage": "LABEL_delete.opstatus NOT 0",
+            "messageType": "constant",
+            "parentId": "_a660c468bf904f3794c60df16dd27519",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
         }, {
             "id": "ADD_SNIPPET_d6a31c7b80214ae3b50d15a57aa69096",
             "type": "ADD_SNIPPET",

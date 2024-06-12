@@ -45,6 +45,7 @@
     "displaytext": true,
     "focusskin": "seb178d5458b4f34a9d0547f3a071bf5",
     "id": "btnPreview",
+    "ide_onClick": "AS_Button_c4ba36fadb0f4e1cb257a4c670e426ba",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
