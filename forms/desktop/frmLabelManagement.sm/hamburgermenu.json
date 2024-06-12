@@ -184,7 +184,9 @@
                 "kuid": "baa8b68ef4f046d0a998a71735ec97b0",
                 "srcKUID": "f6158cc0defe49f9b27229072ca607e4",
                 "wType": "Segment"
-            }
+            },
+            "isVisible": true,
+            "responsiveData": {}
         }
     },
     "enablescrolling": true,

@@ -91,9 +91,10 @@
             "id": "_gfd291a0249146928486bbe77312f77d",
             "type": "SCALE_ACTION",
             "itemType": "FORM",
-            "itemId": "frmStepCreation",
-            "itemKUID": "j27b7970c694429db6312f3b27f7428e",
-            "widgetKUID": "e39f8bab05a949f9bac3d669c0c1405d",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxDelete",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "dde6b4696ef043e3afaf2f4cd19d1b30",
             "wType": "FlexContainer",
             "animationObject": {
                 "anchorPoint": {},
@@ -104,7 +105,7 @@
             },
             "config": {
                 "delay": "0",
-                "iterationCount": 0,
+                "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
                 "duration": "0"
             },
@@ -114,7 +115,8 @@
             "displayAnimationId": "SCALE_ACTION_c7429a5f6f6e40cc9255cb92a95e94d3",
             "forkedPlatform": "all",
             "parentId": "IF_CONDITION_ea5a79eb53804b89838b53151051bc00",
-            "callbackType": null
+            "callbackType": null,
+            "widgetPath": "this.view.flxDelete"
         }, {
             "id": "_g3a26b980be94bd98e4544f2dab4dc9b",
             "type": "MOVE_ACTION",
@@ -125,7 +127,7 @@
             "widgetKUID": "d47a7f2db5114694afda1798811b8136",
             "wType": "Image",
             "animationObject": {
-                "left": "3px",
+                "left": "2px",
                 "anchorPoint": {},
                 "stepConfig": {
                     "timingFunction": "kony.anim.EASE"
@@ -167,9 +169,10 @@
             "id": "_b69c3d36e92d4a53a0030fd849ae88b5",
             "type": "SCALE_ACTION",
             "itemType": "FORM",
-            "itemId": "frmStepCreation",
-            "itemKUID": "j27b7970c694429db6312f3b27f7428e",
-            "widgetKUID": "e39f8bab05a949f9bac3d669c0c1405d",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxDelete",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "dde6b4696ef043e3afaf2f4cd19d1b30",
             "wType": "FlexContainer",
             "animationObject": {
                 "anchorPoint": {},
@@ -180,7 +183,7 @@
             },
             "config": {
                 "delay": "0",
-                "iterationCount": 0,
+                "iterationCount": 1,
                 "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
                 "duration": "0"
             },
@@ -190,7 +193,8 @@
             "displayAnimationId": "SCALE_ACTION_be6b18fd1176401c82b3c1214d0ffca5",
             "forkedPlatform": "all",
             "parentId": "ELSE_CONDITION_a5ade28d34374e76be0cea1ab7d67dca",
-            "callbackType": null
+            "callbackType": null,
+            "widgetPath": "this.view.flxDelete"
         }, {
             "id": "_i8acd3cd0a72453a8cf52b1344b24cc5",
             "type": "MOVE_ACTION",

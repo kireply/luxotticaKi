@@ -152,7 +152,7 @@
         }, {
             "id": "ADD_SNIPPET_c32dfc50a57848c28d93b95d2d3eb1ef",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "",
+            "codeSnippet": "voltmx.print(\"### btnChangeStep cliccato. gblFlowId passato in input: \" + gblFlowId);\n\n// setting flowName\nvar id;\n  if (gblFlowId < 10) {\n    id = \"0000\" + gblFlowId;\n  } else if (gblFlowId < 100 && gblFlowId >= 10) {\n    id = \"000\" + gblFlowId;\n  } else if (gblFlowId < 1000 && gblFlowId >= 100) {\n    id = \"00\" + gblFlowId;\n  } else if (gblFlowId < 10000 && gblFlowId >= 1000) {\n    id = \"0\" + gblFlowId;\n  }\n\ngblFlowName = \"#\" + gblChannelId + \"_\" + gblFlowCategory.substring(0, 3).toUpperCase() + \"_\" + id;  \nthis.view.lblFlowName.text = gblFlowName;",
             "parentId": "_c592c52e13464dbbb2c26ba420b45c15",
             "callbackType": null
         }, {
@@ -230,7 +230,7 @@
         }, {
             "id": "ADD_SNIPPET_c1e4febc2d6e4bde8c816b27a5f50779",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### ENTRATO IN ELSE IF e invoco Components_CustomQuery\");\nstepsList = STEP_flow_CustomQuery.records;",
+            "codeSnippet": "voltmx.print(\"### ENTRATO IN ELSE IF. Esiste almeno uno step. Invoco Components_CustomQuery\");\nstepsList = STEP_flow_CustomQuery.records;",
             "parentId": "ELSE_IF_CONDITION_b55588f206bd4ac881342226bb43ce71",
             "callbackType": null
         }, {
@@ -635,7 +635,7 @@
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
-                "leftValue": "COMPONENT_TEMPLATE_GetImage_CustomQuery.opstatus !== 0"
+                "leftValue": "COMPONENT_TEMPLATE_GetImage_CustomQuery.opstatus === 0"
             }],
             "parentId": "INVOKE_SERVICE_bd09d5d692ce4eaa823ade4e920aa6e0",
             "callbackType": "Callback",
@@ -682,7 +682,7 @@
         }, {
             "id": "ADD_SNIPPET_c86a1030c866400c860ba3a0ad29a162",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "componentsImage = COMPONENT_TEMPLATE_GetImage_CustomQuery.records;\n",
+            "codeSnippet": "componentsImages = COMPONENT_TEMPLATE_GetImage_CustomQuery.records;",
             "parentId": "_ja4605615a8a4689ac1fe463d1a5149d",
             "callbackType": null
         }, {
@@ -930,7 +930,7 @@
         }, {
             "id": "ADD_SNIPPET_c12702efc98c4819ae91fcc171c8b9b2",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "",
+            "codeSnippet": "voltmx.print(\"### SONO DENTRO IF FLUSSO VUOTO. Quindi creo il primo step\");\n",
             "parentId": "_adefa3fd12bc423f9b093cb92457f682",
             "callbackType": null
         }, {

@@ -20,7 +20,8 @@
             "type": "ADD_SNIPPET",
             "codeSnippet": "debugger;\nvoltmx.print(\"### entrato in postShow di frmStepComposition\");\n// Disabling text areas.\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n// setting the list of component blurred (as no section is open yet)\nthis.view.flxComponentsSide.opacity = 0.5;\n",
             "parentId": null,
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }, {
             "id": "ADD_LOCAL_VARIABLE_g898eea63141466ca2184127a1eee84f",
             "type": "ADD_LOCAL_VARIABLE",
@@ -30,7 +31,8 @@
             "datatype": "collection",
             "value": "null",
             "parentId": null,
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }, {
             "id": "ADD_LOCAL_VARIABLE_edd9c1580fef4ada871e0a8907ed1276",
             "type": "ADD_LOCAL_VARIABLE",
@@ -40,7 +42,8 @@
             "datatype": "collection",
             "value": "null",
             "parentId": null,
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }, {
             "id": "ADD_LOCAL_VARIABLE_eb31a7d01af0438b8aa55a8e883f9165",
             "type": "ADD_LOCAL_VARIABLE",
@@ -50,7 +53,8 @@
             "datatype": "collection",
             "value": "null",
             "parentId": null,
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }, {
             "id": "ADD_LOCAL_VARIABLE_f825e01f91d743088696a186033e3898",
             "type": "ADD_LOCAL_VARIABLE",
@@ -60,7 +64,8 @@
             "datatype": "collection",
             "value": "null",
             "parentId": null,
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }, {
             "id": "ADD_LOCAL_VARIABLE_de28f1d502754f789f777768ccc88bdf",
             "type": "ADD_LOCAL_VARIABLE",
@@ -70,7 +75,8 @@
             "datatype": "collection",
             "value": "null",
             "parentId": null,
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }, {
             "id": "ADD_LOCAL_VARIABLE_h3cf726a37074b2b94674b491b40680b",
             "type": "ADD_LOCAL_VARIABLE",
@@ -80,7 +86,8 @@
             "datatype": "collection",
             "value": "null",
             "parentId": null,
-            "callbackType": null
+            "callbackType": null,
+            "disabled": true
         }, {
             "id": "_af518630a2844f8da95346600df226de",
             "type": "IF_CONDITION",
@@ -98,7 +105,7 @@
             "parentId": null,
             "callbackType": null,
             "criteria": "all",
-            "disabled": false
+            "disabled": true
         }, {
             "id": "INVOKE_SERVICE_ead40127c0ee491ba586dd246e49b733",
             "type": "INVOKE_ASYNC_SERVICE",
@@ -117,7 +124,8 @@
             },
             "parentId": null,
             "callbackType": null,
-            "enableMappingEditor": true
+            "enableMappingEditor": true,
+            "disabled": true
         }, {
             "id": "_a67defbe01564ed48823d29022ea6ec8",
             "type": "IF_CONDITION",
@@ -134,7 +142,8 @@
             }],
             "parentId": null,
             "callbackType": null,
-            "criteria": "all"
+            "criteria": "all",
+            "disabled": true
         }, {
             "id": "LOADING_INDICATOR_f4183dad57b44689a2dfef30f72ce7a0",
             "selectedOption": "show",

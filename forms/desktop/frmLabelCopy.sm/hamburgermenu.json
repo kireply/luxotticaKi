@@ -155,7 +155,8 @@
                 "kuid": "d911038a32fb4d3ca82aa5ea87a746ff",
                 "srcKUID": "f6d6345317634850bef09677b329a6ec",
                 "wType": "Image"
-            }
+            },
+            "src": "logout_true.png"
         },
         "imgLogout2": {
             "__events__": {},
