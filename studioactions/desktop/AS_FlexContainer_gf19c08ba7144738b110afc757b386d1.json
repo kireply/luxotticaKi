@@ -1,0 +1,27 @@
+{
+    "AS_FlexContainer_gf19c08ba7144738b110afc757b386d1": {
+        "id": "AS_FlexContainer_gf19c08ba7144738b110afc757b386d1",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowLabelCopy",
+            "type": "templates",
+            "platform": "",
+            "KUID": "ef6106081e494d10929d240d23a6a659"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_e4bc6b880e534b558e6535243c59ad84",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if (context.eventType !== \"leave\"){\n  this.view.flxShowIcons.setVisibility(true);\n} else {\n  this.view.flxShowIcons.setVisibility(false);\n}",
+            "parentId": null
+        }]
+    }
+}

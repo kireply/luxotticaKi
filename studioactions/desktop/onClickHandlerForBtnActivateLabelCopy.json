@@ -1,0 +1,25 @@
+{
+    "AS_Button_i584a7ddf6a641c5a0f0eff6d9f04f56": {
+        "id": "AS_Button_i584a7ddf6a641c5a0f0eff6d9f04f56",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnActivateLabelCopy",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmLabelCopy",
+            "type": "forms",
+            "platform": "",
+            "KUID": "d542af1533cb4c91820f2aa7d069320e"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_d621a33279624eb08f87387730a29ae3",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxPopupActivateLabelCopy.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);",
+            "parentId": null
+        }]
+    }
+}

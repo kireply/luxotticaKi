@@ -1,0 +1,25 @@
+{
+    "AS_ListBox_aaf65d65075542ff898ae798eb406d04": {
+        "id": "AS_ListBox_aaf65d65075542ff898ae798eb406d04",
+        "type": "ACTION_SEQUENCE",
+        "name": "onSelectionHandlerForLbSelectEnvironmentDuplicateLabelCopy",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmLabelCopy",
+            "type": "forms",
+            "platform": "",
+            "KUID": "d542af1533cb4c91820f2aa7d069320e"
+        },
+        "language": "js",
+        "eventType": "onSelection",
+        "actions": [{
+            "id": "ADD_SNIPPET_b22dbdca1ff34c87821d03de70cd528c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxPopupDuplicateLabelCopy.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);",
+            "parentId": null
+        }]
+    }
+}

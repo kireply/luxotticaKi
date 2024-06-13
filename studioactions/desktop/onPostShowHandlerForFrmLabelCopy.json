@@ -94,7 +94,109 @@
             },
             "parentId": null,
             "callbackType": null,
+            "enableMappingEditor": true,
+            "disabled": true
+        }, {
+            "id": "INVOKE_SERVICE_d351e8450c0e43239fa0ad2bf126588b",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_fe99ed493e114268b2bccec2f5e43f2e": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_fe99ed493e114268b2bccec2f5e43f2e",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblChannelId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "channel_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_CustomQueryGet",
+                            "operationid": "138245"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_fe99ed493e114268b2bccec2f5e43f2e"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABELCOPY_CustomQueryGet",
+                "operationid": "138245"
+            },
+            "parentId": null,
+            "callbackType": null,
             "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_b32b70ac16bf4a8393aa45148660f79c",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_SERVICE_d351e8450c0e43239fa0ad2bf126588b",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_dda5c6c67c8a452998d7691ce02b3d32",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABELCOPY_CustomQueryGet.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_d351e8450c0e43239fa0ad2bf126588b",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_g232c3eb8d664f828069aba282f29f97",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_d351e8450c0e43239fa0ad2bf126588b",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_f9922d3f051c48c6b1d6ae918aa289b0",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "LABELCOPY_CustomQueryGet.opstatus NOT 0",
+            "yesLabel": "Ok",
+            "alertMessage": "LABELCOPY_CustomQueryGet.opstatus NOT 0",
+            "messageType": "constant",
+            "parentId": "_g232c3eb8d664f828069aba282f29f97",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_jcab906ca74848129bf08e0e35806193",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "debugger;\n\nlet records = LABELCOPY_CustomQueryGet.records;\n\nrecords.forEach(item => {\n  let categoryShort = item.flow_category.substring(0, 3).toUpperCase();\n\n  let id;\n  let flowId = parseInt(item.flow_id, 10);\n  \n  if (flowId < 10) {\n    id = \"0000\" + flowId;\n  } else if (flowId < 100 && flowId >= 10) {\n    id = \"000\" + flowId;\n  } else if (flowId < 1000 && flowId >= 100) {\n    id = \"00\" + flowId;\n  } else if (flowId < 10000 && flowId >= 1000) {\n    id = \"0\" + flowId;\n  }\n\n  item.flow_name = item.flow_channel_id + \"_\" + categoryShort + \"_\" + id;\n});\n\ngblLabelCopyList = records;\n\nself.view.segLabels.widgetDataMap = {lblId: \"id\", lblFlowId: \"flow_id\", lblFlowName: \"flow_name\", lblEnvironment: \"environment\", lblStatus: \"status\"};\nself.view.segLabels.setData(records);",
+            "parentId": "_dda5c6c67c8a452998d7691ce02b3d32",
+            "callbackType": null
         }, {
             "id": "LOADING_INDICATOR_c21f26c683514d478d82b666613003e7",
             "selectedOption": "dismiss",

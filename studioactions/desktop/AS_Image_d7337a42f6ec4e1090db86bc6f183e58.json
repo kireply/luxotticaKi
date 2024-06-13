@@ -1,0 +1,33 @@
+{
+    "AS_Image_d7337a42f6ec4e1090db86bc6f183e58": {
+        "id": "AS_Image_d7337a42f6ec4e1090db86bc6f183e58",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowLabelCopy",
+            "type": "templates",
+            "platform": "",
+            "KUID": "ef6106081e494d10929d240d23a6a659"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_b41b15fc80fa4af998a7a07cc8701736",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblActivateLabelCopy = true;",
+            "parentId": null
+        }]
+    }
+}

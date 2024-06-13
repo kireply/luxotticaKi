@@ -50,7 +50,11 @@
     "canUpdateUI": true,
     "canvasWidth": 1200,
     "children": [
-        "flxMainContainerLabel"
+        "flxMainContainerLabel",
+        "flxPopupActivateLabelCopy",
+        "flxBlur",
+        "flxPopupPublishLabelCopy",
+        "flxPopupDuplicateLabelCopy"
     ],
     "containerweight": 100,
     "controllerInfo": {

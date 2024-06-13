@@ -4,7 +4,7 @@
     "bg_type": "one",
     "font_color": "000000ff",
     "font_name": "Montserrat-Regular",
-    "font_size": 71,
+    "font_size": 60,
     "font_weight": "bold",
     "isForked": true,
     "text_shadow": {
@@ -20,7 +20,7 @@
     "bg_type": "one",
     "font_color": "000000ff",
     "font_name": "Montserrat-Regular",
-    "font_size": 107,
+    "font_size": 89,
     "font_weight": "bold",
     "isForked": true
   },
@@ -35,7 +35,7 @@
     "bg_type": "one",
     "font_color": "000000ff",
     "font_name": "Montserrat-Regular",
-    "font_size": 188,
+    "font_size": 156,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -65,7 +65,7 @@
     "bg_type": "one",
     "font_color": "000000ff",
     "font_name": "Montserrat-Regular",
-    "font_size": 107,
+    "font_size": 89,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -88,7 +88,7 @@
     "bg_type": "one",
     "font_color": "000000ff",
     "font_name": "Montserrat-Regular",
-    "font_size": 75,
+    "font_size": 63,
     "isForked": true,
     "shadow": {
       "br": 0,
@@ -112,7 +112,7 @@
     "bg_type": "one",
     "font_color": "000000ff",
     "font_name": "Montserrat-Regular",
-    "font_size": 188,
+    "font_size": 156,
     "font_weight": "bold",
     "isForked": true
   },
@@ -124,7 +124,7 @@
     "bottom_right_border_color": "424242ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
-    "font_size": 188,
+    "font_size": 156,
     "isForked": true,
     "top_left_border_color": "424242ff",
     "top_left_border_style": "plain",
@@ -140,7 +140,7 @@
     "bottom_right_border_color": "424242ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
-    "font_size": 188,
+    "font_size": 156,
     "isForked": true,
     "top_left_border_color": "424242ff",
     "top_left_border_style": "plain",
@@ -150,30 +150,6 @@
     "top_right_border_width": 0
   },
   "spaan": {
-    "background_color": "ffffff00",
-    "bg_type": "one",
-    "font_color": "000000ff",
-    "font_name": "Montserrat-Regular",
-    "font_size": 200,
-    "font_weight": "bold",
-    "isForked": true,
-    "shadow": {
-      "br": 0,
-      "color": "000000",
-      "inner": false,
-      "nm": 0,
-      "x": 0,
-      "y": 0
-    },
-    "text_shadow": {
-      "br": 0,
-      "color": "000000",
-      "nm": 0,
-      "x": 0,
-      "y": 0
-    }
-  },
-  "spaandroidtablet": {
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
@@ -197,12 +173,36 @@
       "y": 0
     }
   },
+  "spaandroidtablet": {
+    "background_color": "ffffff00",
+    "bg_type": "one",
+    "font_color": "000000ff",
+    "font_name": "Montserrat-Regular",
+    "font_size": 139,
+    "font_weight": "bold",
+    "isForked": true,
+    "shadow": {
+      "br": 0,
+      "color": "000000",
+      "inner": false,
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    },
+    "text_shadow": {
+      "br": 0,
+      "color": "000000",
+      "nm": 0,
+      "x": 0,
+      "y": 0
+    }
+  },
   "spaip": {
     "background_color": "ffffff00",
     "bg_type": "one",
     "font_color": "000000ff",
     "font_name": "Montserrat-Regular",
-    "font_size": 205,
+    "font_size": 171,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -226,7 +226,7 @@
     "bg_type": "one",
     "font_color": "000000ff",
     "font_name": "Montserrat-Regular",
-    "font_size": 176,
+    "font_size": 147,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -250,7 +250,7 @@
     "bg_type": "one",
     "font_color": "000000ff",
     "font_name": "Montserrat-Regular",
-    "font_size": 176,
+    "font_size": 147,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -274,7 +274,7 @@
     "bg_type": "one",
     "font_color": "000000ff",
     "font_name": "Montserrat-Regular",
-    "font_size": 250,
+    "font_size": 208,
     "font_weight": "bold",
     "isForked": true,
     "shadow": {
@@ -298,7 +298,7 @@
     "bg_type": "one",
     "font_color": "000000ff",
     "font_name": "Montserrat-Regular",
-    "font_size": 178,
+    "font_size": 148,
     "font_weight": "bold",
     "isForked": true,
     "text_shadow": {
@@ -313,7 +313,7 @@
   "watchos": {
     "font_color": "000000ff",
     "font_name": "Montserrat-Regular",
-    "font_size": 107,
+    "font_size": 89,
     "font_weight": "bold",
     "isForked": true
   },
@@ -322,7 +322,7 @@
     "bg_type": "one",
     "font_color": "000000ff",
     "font_name": "Montserrat-Regular",
-    "font_size": 73,
+    "font_size": 61,
     "font_weight": "bold",
     "isForked": true
   },
@@ -331,7 +331,7 @@
     "bg_type": "one",
     "font_color": "000000ff",
     "font_name": "Montserrat-Regular",
-    "font_size": 100,
+    "font_size": 83,
     "font_weight": "bold",
     "isForked": true
   }

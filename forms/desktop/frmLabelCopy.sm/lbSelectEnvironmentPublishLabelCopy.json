@@ -1,0 +1,74 @@
+{
+    "@class": "com.kony.gen.viz.model.component.KVizListBox",
+    "DNDConfig": null,
+    "_height_": {
+        "type": "string",
+        "value": "25%"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "10%"
+    },
+    "_margin_": [
+        0,
+        0,
+        0,
+        0
+    ],
+    "_padding_": [
+        3,
+        0,
+        0,
+        0
+    ],
+    "_placeholder_": "Please Select",
+    "_skin_": "sc99e63559c847168684cdb1abb31269",
+    "_top_": {
+        "type": "string",
+        "value": "55%"
+    },
+    "_width_": {
+        "type": "string",
+        "value": "80%"
+    },
+    "canUpdateUI": true,
+    "containerweight": 100,
+    "contentalignment": 4,
+    "disabledSkins": {
+        "focusSkin": "s61be32f6d3a46dbbea0834d8ca7f624"
+    },
+    "groupcells": false,
+    "id": "lbSelectEnvironmentPublishLabelCopy",
+    "ide_onSelection": "AS_ListBox_cf73ccfa545e47bebe677cd0a6b7368d",
+    "info": null,
+    "iscustomlayout": false,
+    "isvisible": true,
+    "kuid": "b3cf80696036434d932412e83e0a8e72",
+    "masterdata": [
+        [
+            "lb1",
+            "Select the channel in which duplicate the flow"
+        ],
+        [
+            "lb2",
+            "Rayban"
+        ]
+    ],
+    "name": "kony.ui.ListBox",
+    "parent": "flxPopupPublishLabelCopy",
+    "pf": "frmLabelCopy",
+    "retaincontentalignment": false,
+    "retainflexpositionproperties": false,
+    "selectedkeys": null,
+    "selectedkeyvalue": null,
+    "selectedkeyvalues": null,
+    "size": 18,
+    "viewconfig": {
+        "toggleViewConfig": {
+            "viewStyle": 0
+        }
+    },
+    "viewtype": 0,
+    "wType": "ListBox",
+    "zindex": 1
+}

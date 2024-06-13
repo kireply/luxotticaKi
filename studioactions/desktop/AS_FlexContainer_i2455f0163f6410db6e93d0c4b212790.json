@@ -1,0 +1,27 @@
+{
+    "AS_FlexContainer_i2455f0163f6410db6e93d0c4b212790": {
+        "id": "AS_FlexContainer_i2455f0163f6410db6e93d0c4b212790",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "collection",
+            "name": "context"
+        }],
+        "contextObj": {
+            "name": "tplRowLabelCopy",
+            "type": "templates",
+            "platform": "",
+            "KUID": "ef6106081e494d10929d240d23a6a659"
+        },
+        "language": "js",
+        "eventType": "onHover",
+        "actions": [{
+            "id": "ADD_SNIPPET_aaf6ce3fa4ee4997b4006f552fbf9ff8",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "if (context.eventType !== \"leave\"){\n    this.view.flxImgPublish2.backgroundColor = \"dedede\";\n} else {\n    this.view.flxImgPublish2.backgroundColor = \"ffffff\";\n}",
+            "parentId": null
+        }]
+    }
+}

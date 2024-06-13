@@ -37,8 +37,10 @@
     "children": [
         "lblId",
         "lblFlowId",
+        "lblFlowName",
         "lblEnvironment",
-        "lblStatus"
+        "lblStatus",
+        "flxShowIcons"
     ],
     "clipbounds": false,
     "containerId": true,
@@ -47,6 +49,11 @@
         "default": {
             "channel": "desktop",
             "name": "flxRowLabelCopyController"
+        }
+    },
+    "desktopweb": {
+        "psp": {
+            "ide_onHover": "AS_FlexContainer_gf19c08ba7144738b110afc757b386d1"
         }
     },
     "enablescrolling": true,

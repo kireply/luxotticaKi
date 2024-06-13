@@ -1,0 +1,31 @@
+{
+    "AS_Image_aa92ff75742c48d7a7765c47546b4f01": {
+        "id": "AS_Image_aa92ff75742c48d7a7765c47546b4f01",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForImgClosePopupActivateLabelCopy",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmLabelCopy",
+            "type": "forms",
+            "platform": "",
+            "KUID": "d542af1533cb4c91820f2aa7d069320e"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_ad5d4e3cd10b4dc3907e18c41f91c2e1",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxPopupActivateLabelCopy.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);",
+            "parentId": null
+        }]
+    }
+}
