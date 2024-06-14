@@ -158,7 +158,7 @@
         }, {
             "id": "ADD_SNIPPET_e8d5bfce2282433592b3e3ea7bf464ab",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// open activate popup.\nthis.view.flxBlur.setVisibility(true);\nthis.view.flxPopupActivateLabelCopy.setVisibility(true);\n\ngblActivateLabelCopy = false;",
+            "codeSnippet": "// open activate popup.\nthis.view.flxBlur.setVisibility(true);\nthis.view.flxPopupActivateLabelCopy.setVisibility(true);\n\ngblActivateLabelCopy = false;\n\nthis.view.lblTitleActivateLabelCopy.text = \"Activate Label Copy n. \" + gblLabelCopyId;\n\n",
             "parentId": "_f66bf521d3024f1caeffca260f7c7ca5",
             "callbackType": null
         }]

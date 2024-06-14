@@ -16,10 +16,402 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_a261a27aa56c49f58f104d354462d140",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "labelCopyId",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_c9d39ccd009740d4a88c38d72072cbba",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "labelCopyFlowId",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_ce3b56f7ac3a4465b0aefdd457ccf100",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "labelCopyEnvironmet",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "string",
+            "value": "\"\"",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_be51198253724c218d06b1fff3e9c33a",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// keeping contact with the current Active label copy. We will set this as \"Archived\".\nlastActiveLabelCopy = gblLabelCopyList.filter(item => item.status === \"Active\");\n\nlabelCopyid = lastActiveLabelCopy[0].id;\nlabelCopyFlowId = lastActiveLabelCopy[0].flow_id;\nlabelCopyEnvironment = lastActiveLabelCopy[0].environment;",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_ad6609e1a93840b381ea612763fb7f51",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Updating Label Copy..."
+        }, {
+            "id": "INVOKE_SERVICE_f3a8d72c134b4f95ac5911dc6ab047a1",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_b361c2ac0a394e5db2b69e2f93a468ec": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b361c2ac0a394e5db2b69e2f93a468ec",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblLabelCopyId",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_update",
+                            "operationid": "137229"
+                        }
+                    }
+                },
+                "ME_Mapping_b2c230a2b0614f90bdd01c4fad60ed26": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b2c230a2b0614f90bdd01c4fad60ed26",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblLabelCopyFlowId",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_update",
+                            "operationid": "137229"
+                        }
+                    }
+                },
+                "ME_Mapping_ce7a09379d5d449a9d7fce7728d13ae7": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ce7a09379d5d449a9d7fce7728d13ae7",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblLabelCopyEnvironment",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "environment",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_update",
+                            "operationid": "137229"
+                        }
+                    }
+                },
+                "ME_Mapping_h0819f74fd6f4fa68e1d0a08c2a5858e": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h0819f74fd6f4fa68e1d0a08c2a5858e",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "status",
+                        "dataType": "string",
+                        "expression": "\"Active\"",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_update",
+                            "operationid": "137229"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_b361c2ac0a394e5db2b69e2f93a468ec", "ME_Mapping_b2c230a2b0614f90bdd01c4fad60ed26", "ME_Mapping_ce7a09379d5d449a9d7fce7728d13ae7", "ME_Mapping_h0819f74fd6f4fa68e1d0a08c2a5858e"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABELCOPY_update",
+                "operationid": "137229"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "LOADING_INDICATOR_hc132817a32d44bda0db051a39b135e8",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_SERVICE_f3a8d72c134b4f95ac5911dc6ab047a1",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_ea276d0ee94d4bc2bb73a40efc415a5e",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABELCOPY_update.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_f3a8d72c134b4f95ac5911dc6ab047a1",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_aae4bcafcbb94a1f9223be89541c2004",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_f3a8d72c134b4f95ac5911dc6ab047a1",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_f5ce2e662388445a8a0f9c529769b8ef",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Label Copy NOT updated successfully.",
+            "yesLabel": "Ok",
+            "alertMessage": "Label Copy NOT updated successfully.",
+            "messageType": "constant",
+            "parentId": "_aae4bcafcbb94a1f9223be89541c2004",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
             "id": "ADD_SNIPPET_d621a33279624eb08f87387730a29ae3",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxPopupActivateLabelCopy.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);",
-            "parentId": null
+            "codeSnippet": "self.view.flxPopupActivateLabelCopy.setVisibility(false);\nself.view.flxBlur.setVisibility(false);",
+            "parentId": "_aae4bcafcbb94a1f9223be89541c2004",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_b15ead471ce14d1e94b8ea3830349728",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_j45844184db240108aa09fdf9e41e320": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_j45844184db240108aa09fdf9e41e320",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "labelCopyId",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_update",
+                            "operationid": "137229"
+                        }
+                    }
+                },
+                "ME_Mapping_f88d003669004130b022ccbf3cb53bb3": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f88d003669004130b022ccbf3cb53bb3",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "labelCopyFlowId",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_update",
+                            "operationid": "137229"
+                        }
+                    }
+                },
+                "ME_Mapping_g9fc8e400c254274ba92cf39273fb074": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_g9fc8e400c254274ba92cf39273fb074",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "labelCopyEnvironmet",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "environment",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_update",
+                            "operationid": "137229"
+                        }
+                    }
+                },
+                "ME_Mapping_d164064b56764d32ba9ebd706d27db61": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d164064b56764d32ba9ebd706d27db61",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "status",
+                        "dataType": "string",
+                        "expression": "\"Archived\"",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_update",
+                            "operationid": "137229"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_j45844184db240108aa09fdf9e41e320", "ME_Mapping_f88d003669004130b022ccbf3cb53bb3", "ME_Mapping_g9fc8e400c254274ba92cf39273fb074", "ME_Mapping_d164064b56764d32ba9ebd706d27db61"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABELCOPY_update",
+                "operationid": "137229"
+            },
+            "parentId": "_ea276d0ee94d4bc2bb73a40efc415a5e",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_jfd6bae3ee734d13ba147ec9500c413b",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABELCOPY_update.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_b15ead471ce14d1e94b8ea3830349728",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_hb7b6a5bb7434fa4bc2f943da2a3c347",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_b15ead471ce14d1e94b8ea3830349728",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_b51040076f9f4762b5c8286ffb5e9cb7",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Old Active Label Copy NOT updated correctly.",
+            "yesLabel": "Ok",
+            "alertMessage": "Old Active Label Copy NOT updated correctly.",
+            "messageType": "constant",
+            "parentId": "_hb7b6a5bb7434fa4bc2f943da2a3c347",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_b755c7a570274de6890fcbd2643e6da5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.flxPopupActivateLabelCopy.setVisibility(false);\nself.view.flxBlur.setVisibility(false);",
+            "parentId": "_hb7b6a5bb7434fa4bc2f943da2a3c347",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_ha5fd800a4ac45d5bdf48a6be4c669c1",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "debugger;\nvoltmx.print(\"### Active Label Copy update successfull.\");\nself.view.flxPopupActivateLabelCopy.setVisibility(false);\nself.view.flxBlur.setVisibility(false);",
+            "parentId": "_jfd6bae3ee734d13ba147ec9500c413b",
+            "callbackType": null
         }]
     }
 }

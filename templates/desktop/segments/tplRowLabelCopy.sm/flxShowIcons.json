@@ -46,7 +46,7 @@
     "id": "flxShowIcons",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "i41a726b00df42949472b1db7af0acfd",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",

@@ -22,7 +22,7 @@
         0
     ],
     "_skin_": "s4796b99fc2740909838ef96bad90585",
-    "_text_": "Activate Label Copy - (label copy Info)",
+    "_text_": "Activate Label Copy n. (label copy id)",
     "_top_": {
         "type": "string",
         "value": "20%"
