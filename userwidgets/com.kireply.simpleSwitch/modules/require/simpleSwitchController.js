@@ -71,9 +71,12 @@ define(function() {
 
         voltmx.print('simpleSwitch: in setDimensions .... for value : ' + value + ', (' + typeof(value) + ')');
         
-        const height = this.view.frame.height;
-        const width = height * 2;
-        this.view.width = `${width}dp`;
+        if (this.view.frame.height !== 0) {
+          const height = this.view.frame.height;
+          const width = height * 2;
+          this.view.width = `${width}dp`;
+        }
+        
 		/*
         if (typeof(value) === 'string') value = parseInt(value.replace('dp', ''));
         this.view.width = 2 * value + 2 + 'dp';

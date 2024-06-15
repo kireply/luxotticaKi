@@ -20,7 +20,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_e4bc6b880e534b558e6535243c59ad84",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "if (this.view.lblStatus.text === \"Active\") {\n  // Active label copy, not showing \"activate\" icon\n  if (context.eventType !== \"leave\"){\n    this.view.flxShowIcons.setVisibility(true);\n    this.view.flxImgActive.setEnabled(false);\n  } else {\n    this.view.flxShowIcons.setVisibility(false);\n  }\n\n} else {\n  // Not active label copy, showing \"activate\" icon\n  if (context.eventType !== \"leave\"){\n    this.view.flxShowIcons.setVisibility(true);\n  } else {\n    this.view.flxShowIcons.setVisibility(false);\n  }\n\n}",
+            "codeSnippet": "if (this.view.lblStatus.text === \"Active\") {\n  // Active label copy, not showing \"activate\" icon\n  this.view.flxImgActivate.setVisibility(false);\n  if (context.eventType !== \"leave\"){\n    this.view.flxShowIcons.setVisibility(true);\n  } else {\n    this.view.flxShowIcons.setVisibility(false);\n  }\n\n} else {\n  // Not active label copy, showing \"activate\" icon\n  if (context.eventType !== \"leave\"){\n    this.view.flxShowIcons.setVisibility(true);\n  } else {\n    this.view.flxShowIcons.setVisibility(false);\n  }\n\n}",
             "parentId": null
         }]
     }
