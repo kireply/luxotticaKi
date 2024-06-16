@@ -47,11 +47,15 @@
     "masterdata": [
         [
             "lb1",
-            "Select the channel in which duplicate the flow"
+            "Development"
         ],
         [
             "lb2",
-            "Rayban"
+            "Quality"
+        ],
+        [
+            "lb3",
+            "Production"
         ]
     ],
     "name": "kony.ui.ListBox",

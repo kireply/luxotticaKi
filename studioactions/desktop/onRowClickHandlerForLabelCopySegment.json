@@ -152,7 +152,7 @@
         }, {
             "id": "ADD_SNIPPET_gacf57d64113446aa87cf856f33d370a",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// open publish popup.\nthis.view.flxBlur.setVisibility(true);\nthis.view.flxPopupPublishLabelCopy.setVisibility(true);\n\ngblPublishLabelCopy = false;",
+            "codeSnippet": "// open publish popup.\nthis.view.lblTitlePublishLabelCopy.text = \"Publish Label Copy n. \" + gblLabelCopyId;\nthis.view.flxBlur.setVisibility(true);\nthis.view.flxPopupPublishLabelCopy.setVisibility(true);\n\ngblPublishLabelCopy = false;",
             "parentId": "ELSE_IF_CONDITION_a0b091c5245241a3be3d9b82c5440f7e",
             "callbackType": null
         }, {
