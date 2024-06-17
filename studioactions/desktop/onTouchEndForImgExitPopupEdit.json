@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_ide_onTouchEnd_af2ecdc13c74472fbf2622bc1451071e",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "gblEditIcon = false;\nthis.view.flxBlur.setVisibility(false);\nthis.view.flxPopupEditFlow.setVisibility(false);"
+            "codeSnippet": "gblEditIcon = false;\nthis.view.flxPopupEditFlow.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);\nthis.view.flxEditFlow.setEnabled(true);\nthis.view.flxEditFlow.opacity = 1;\nthis.view.lblCannotEditProductionFlow.setVisibility(false);"
         }]
     }
 }

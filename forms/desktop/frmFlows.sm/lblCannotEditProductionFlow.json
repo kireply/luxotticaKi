@@ -5,6 +5,10 @@
         "type": "ref",
         "value": "preferred"
     },
+    "_left_": {
+        "type": "string",
+        "value": "11%"
+    },
     "_margin_": [
         1,
         1,
@@ -17,11 +21,11 @@
         0,
         0
     ],
-    "_skin_": "s4796b99fc2740909838ef96bad90585",
-    "_text_": "Edit Flow - (flowName)",
+    "_skin_": "s926cf6d69904afa9a4b53c287ffdab9",
+    "_text_": "Cannot edit flow in production.",
     "_top_": {
         "type": "string",
-        "value": "0%"
+        "value": "5.5%"
     },
     "_width_": {
         "type": "ref",
@@ -35,13 +39,9 @@
         }
     },
     "canUpdateUI": true,
-    "centerx": {
-        "type": "string",
-        "value": "50%"
-    },
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblEditFlow",
+    "id": "lblCannotEditProductionFlow",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,13 +55,13 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "h849d66d8764428b9cf8c343dc816af1",
+    "kuid": "j767732875414573a1eb7e7c0e98c2ef",
     "name": "kony.ui.Label",
-    "parent": "flxEditFlow",
+    "parent": "flxContainerFlowEdit",
     "pf": "frmFlows",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "tooltip": "",
     "wType": "Label",
-    "zindex": 1
+    "zindex": 2
 }

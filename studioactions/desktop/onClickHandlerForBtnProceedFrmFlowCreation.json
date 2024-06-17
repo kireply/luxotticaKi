@@ -819,6 +819,147 @@
             "parentId": "IF_CONDITION_ide_onClick_i1046d2b34494227908e3213c26ca1b4",
             "callbackType": null
         }, {
+            "id": "INVOKE_SERVICE_hc2da58f91124310bc8be4089229da60",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_jfb211617b2f4d9b8df4eb4d8103aa7c": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_jfb211617b2f4d9b8df4eb4d8103aa7c",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_create",
+                            "operationid": "137230"
+                        }
+                    }
+                },
+                "ME_Mapping_ha2dae11cfec486d816f7c7f972dd648": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ha2dae11cfec486d816f7c7f972dd648",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowEnvironment",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "environment",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_create",
+                            "operationid": "137230"
+                        }
+                    }
+                },
+                "ME_Mapping_j77fe8c407be4990837877d09dfa0d34": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_j77fe8c407be4990837877d09dfa0d34",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "status",
+                        "dataType": "string",
+                        "expression": "\"Active\"",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_create",
+                            "operationid": "137230"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_jfb211617b2f4d9b8df4eb4d8103aa7c", "ME_Mapping_ha2dae11cfec486d816f7c7f972dd648", "ME_Mapping_j77fe8c407be4990837877d09dfa0d34"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABELCOPY_create",
+                "operationid": "137230"
+            },
+            "parentId": "IF_CONDITION_ide_onClick_i1046d2b34494227908e3213c26ca1b4",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_a20643397a3b4258bf79e3a75a559879",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABELCOPY_create.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_hc2da58f91124310bc8be4089229da60",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_e7a5611857f84fffa44eec3380405741",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_hc2da58f91124310bc8be4089229da60",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_d87a777034be4cfdaa45b41f7a572890",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "New Label Copy NOT created.",
+            "yesLabel": "Ok",
+            "alertMessage": "New Label Copy NOT created.",
+            "messageType": "constant",
+            "parentId": "_e7a5611857f84fffa44eec3380405741",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_d44ffb6be492417683a77a15a8cb57a0",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### New Label Copy created successfully.\");\ngblLabelCopyId = LABELCOPY_create.LABELCOPY[0].id;\ngblLabelCopyFlowId = gblFlowId;\ngblLabelCopyEnvironment = gblFlowEnvironment;\ngblLabelCopyStatus = \"Active\";",
+            "parentId": "_a20643397a3b4258bf79e3a75a559879",
+            "callbackType": null
+        }, {
             "id": "NAVIGATE_TO_FORM__ide_onClick_d513ffae982a45418c620be072a3f5df",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmStepCreation",
@@ -898,12 +1039,12 @@
                 }
             },
             "mappingsOrder": ["ME_Mapping_f46937e6282f4c4a8bbe55109b60b1f5", "ME_Mapping_d526f32fb6b44174bd964a9f5f1877f3", "ME_Mapping_a5d57f78116e4acc852d315c4eb938b2"],
-            "parentId": "IF_CONDITION_ide_onClick_i1046d2b34494227908e3213c26ca1b4",
+            "parentId": "_a20643397a3b4258bf79e3a75a559879",
             "callbackType": null,
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
             "isCustomInput": false
         }, {
             "id": "ELSE_CONDITION_ide_onClick_g1c626ff60b04288aa261d4b7fe2f2c0",
@@ -1569,7 +1710,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"lbEnvironment_value\": self.view.lbEnvironment.selectedKeyValues[0][1],\n    \"txtFlowDescription_text\": self.view.txtFlowDescription.text,\n    \"lbCategory_value\": self.view.lbCategory.selectedKeyValues[0][1],\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
             "isCustomInput": false
         }, {
             "id": "ELSE_CONDITION_ide_onClick_afd25f0535db482e9a1cee86862844ae",

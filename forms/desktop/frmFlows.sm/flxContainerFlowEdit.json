@@ -35,8 +35,9 @@
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "flxEditFlow",
-        "imgExitPopupEdit"
+        "imgExitPopupEdit",
+        "lblCannotEditProductionFlow",
+        "flxEditFlow"
     ],
     "clipbounds": false,
     "containerweight": 100,
