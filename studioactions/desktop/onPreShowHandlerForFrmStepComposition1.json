@@ -793,40 +793,40 @@
             "httpconfigs": null,
             "isasynchronous": true,
             "mappings": {
-                "ME_Mapping_i23197ac64da4462b8cdf6ff27ece2f3": {
+                "ME_Mapping_f2842ff77bd1412ea8edc215682f1440": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_i23197ac64da4462b8cdf6ff27ece2f3",
+                    "id": "ME_Mapping_f2842ff77bd1412ea8edc215682f1440",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
                     "source": {
                         "type": "Variables",
-                        "propertyName": "gblFlowId",
-                        "dataType": "string",
+                        "propertyName": "gblLabelCopyId",
+                        "dataType": "number",
                         "forkedPlatform": "all"
                     },
                     "target": {
                         "type": "Services",
-                        "propertyName": "flow_id",
+                        "propertyName": "copyId",
                         "dataType": "string",
                         "forkedPlatform": "all",
                         "serviceconfig": {
                             "servicename": "mariaDB",
                             "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                             "type": "integration",
-                            "operationname": "LABEL_Flow_CustomQuery",
-                            "operationid": "132916"
+                            "operationname": "LABEL_copyId_CustomQueryGet",
+                            "operationid": "137514"
                         }
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_i23197ac64da4462b8cdf6ff27ece2f3"],
+            "mappingsOrder": ["ME_Mapping_f2842ff77bd1412ea8edc215682f1440"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                 "type": "integration",
-                "operationname": "LABEL_Flow_CustomQuery",
-                "operationid": "132916"
+                "operationname": "LABEL_copyId_CustomQueryGet",
+                "operationid": "137514"
             },
             "parentId": "_e32a8ffc73b74ff4b4080de827b983db",
             "callbackType": null,
@@ -836,7 +836,7 @@
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
-                "leftValue": "LABEL_Flow_CustomQuery.opstatus === 0"
+                "leftValue": "LABEL_copyId_CustomQueryGet.opstatus === 0"
             }],
             "parentId": "INVOKE_SERVICE_c0b795c0c9f7420595c2f3e82273e905",
             "callbackType": "Callback",
@@ -868,9 +868,9 @@
             "id": "SHOW_ALERT_ce8a11abde0e4e60bd6db65874cffd31",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "LABEL_Flow_CustomQuery.opstatus NOT 0",
+            "alertTitle": "LABEL_copyId_CustomQueryGet.opstatus NOT 0",
             "yesLabel": "Ok",
-            "alertMessage": "LABEL_Flow_CustomQuery.opstatus NOT 0",
+            "alertMessage": "LABEL_copyId_CustomQueryGet.opstatus NOT 0",
             "messageType": "constant",
             "parentId": "_jaa6f1243aa24b32a1c0ccee25484e29",
             "callbackType": null,
@@ -883,7 +883,7 @@
         }, {
             "id": "ADD_SNIPPET_b7aed4924ee845b48b55318e250ff6e8",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"LABEL_Flow_CustomQuery eseguito correttamente. Invocheremo successivamente loadFlowData.\");\ngblFetchedLabels = LABEL_Flow_CustomQuery.records;",
+            "codeSnippet": "voltmx.print(\"LABEL_copyId_CustomQueryGet eseguito correttamente. Invocheremo successivamente loadFlowData.\");\ngblFetchedLabels = LABEL_copyId_CustomQueryGet.records;",
             "parentId": "_da3301dfdb38439292ab213c308398a4",
             "callbackType": null
         }, {

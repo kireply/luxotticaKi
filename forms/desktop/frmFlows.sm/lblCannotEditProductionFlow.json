@@ -21,7 +21,7 @@
         0,
         0
     ],
-    "_skin_": "s926cf6d69904afa9a4b53c287ffdab9",
+    "_skin_": "sfb6f856f1c14dfdbde99d918768abff",
     "_text_": "Cannot edit flow in production.",
     "_top_": {
         "type": "string",
@@ -54,7 +54,7 @@
         }
     },
     "iscustomlayout": false,
-    "isvisible": true,
+    "isvisible": false,
     "kuid": "j767732875414573a1eb7e7c0e98c2ef",
     "name": "kony.ui.Label",
     "parent": "flxContainerFlowEdit",

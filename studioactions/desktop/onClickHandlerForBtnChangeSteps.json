@@ -25,6 +25,107 @@
             "showProgressIndicator": "true",
             "text": "Navigating to Change steps..."
         }, {
+            "id": "INVOKE_SERVICE_d4b7f882a7d14d3ebb2401816d36d393",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_i39a284b45a146fa83fcaa41686abf29": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_i39a284b45a146fa83fcaa41686abf29",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_flow_active_CustomQueryGet",
+                            "operationid": "138945"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_i39a284b45a146fa83fcaa41686abf29"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABELCOPY_flow_active_CustomQueryGet",
+                "operationid": "138945"
+            },
+            "parentId": null,
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_cc55e019fb0845f2971c6a6c610fe5b4",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABELCOPY_flow_active_CustomQueryGet.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_d4b7f882a7d14d3ebb2401816d36d393",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_e226046424d24a61803341d277d6833a",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_d4b7f882a7d14d3ebb2401816d36d393",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_a6c0f3fc58d04b39949a854e83aa141a",
+            "selectedOption": "dismiss",
+            "parentId": "_e226046424d24a61803341d277d6833a",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "SHOW_ALERT_fc4080ba77fc4de3a200885f66783d6b",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "LABELCOPY_flow_active_CustomQueryGet.opstatus NOT 0",
+            "yesLabel": "Ok",
+            "alertMessage": "LABELCOPY_flow_active_CustomQueryGet.opstatus NOT 0",
+            "messageType": "constant",
+            "parentId": "_e226046424d24a61803341d277d6833a",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_c5bc41c93771494a84a001bb4d0a8608",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Label Copy recuperata correttamente\");\ngblLabelCopyId = LABELCOPY_flow_active_CustomQueryGet.records[0].id;",
+            "parentId": "_cc55e019fb0845f2971c6a6c610fe5b4",
+            "callbackType": null
+        }, {
             "id": "NAVIGATE_TO_FORM__c5d219b2ec934b6694216a2f9cfbba5d",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmStepComposition",
@@ -32,6 +133,8 @@
             "projectName": "luxotticaKi",
             "mappings": {},
             "mappingsOrder": [],
+            "parentId": "_cc55e019fb0845f2971c6a6c610fe5b4",
+            "callbackType": null,
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
@@ -41,12 +144,14 @@
             "id": "ADD_SNIPPET_g9a093d5fad243a3babdce1d16e42f75",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### cliccato su CHANGE STEP in EDIT DEL FLUSSO\");\ndebugger;",
-            "parentId": null,
+            "parentId": "_cc55e019fb0845f2971c6a6c610fe5b4",
             "callbackType": null
         }, {
             "id": "LOADING_INDICATOR_d8d60a0982f34458b8c3ac4fd272a84f",
             "selectedOption": "dismiss",
+            "parentId": "_cc55e019fb0845f2971c6a6c610fe5b4",
             "type": "LOADING_INDICATOR",
+            "callbackType": null,
             "skin": "none",
             "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
             "isBlocked": "true",

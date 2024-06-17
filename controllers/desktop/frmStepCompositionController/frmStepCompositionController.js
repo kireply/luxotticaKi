@@ -586,19 +586,19 @@ define({
         }, {}, {});
         
         //gblFlowId = 128; //to comment in the global flow of the application
-        //let label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`; // LABEL QUI
+        //let label_key = `${gblLabelCopyId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`; // LABEL QUI
         
         // retrieving the current step title (to insert into the final label_key)
         let label_key = null;
         var steps = null;
         var stepTitle = null;
         if (gblCurrentStepOrder < 2) {
-          label_key = `${gblFlowId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`;
+          label_key = `${gblLabelCopyId}_${list[i].name}_${this.view.lblStepTitleIntoStepComposition.text}_${instance}_${i+1}`;
         } else {
           steps = this.view.flxSteps.widgets();
           voltmx.print("### gblCurrentStepOrder: " + gblCurrentStepOrder);
           stepTitle = steps[gblCurrentStepOrder].stepTitle;
-          label_key = `${gblFlowId}_${list[i].name}_${stepTitle}_${instance}_${i+1}`;
+          label_key = `${gblLabelCopyId}_${list[i].name}_${stepTitle}_${instance}_${i+1}`;
           voltmx.print("### stepTitle: " + stepTitle);
           voltmx.print("### label_key: " + label_key);
         }
@@ -794,7 +794,7 @@ define({
             if (elementoTrovato_left[prop_id_left[0]].mode === "label"){
               /*    let label = {
                 id: prop_left.lblPropertyValue,
-                flow_id: gblFlowId, 
+                label_copy_id: gblLabelCopyId, 
                 en_GB: elementoTrovato_left[prop_id_left[0]].default
               };
               */
@@ -832,7 +832,7 @@ define({
 
               let label = {
                 id: elementoTrovato_left[prop_id_left[0]].key,
-                flow_id: gblFlowId, 
+                label_copy_id: gblLabelCopyId, 
                 en_GB: prop_left.lblPropertyValue === elementoTrovato_left[prop_id_left[0]].key && elementoTrovato_left[prop_id_left[0]].default !== null && elementoTrovato_left[prop_id_left[0]].default !== "" ? elementoTrovato_left[prop_id_left[0]].default : prop_left.lblPropertyValue
                 
               };
@@ -1092,7 +1092,7 @@ define({
       //  gblFlowId = 338  TO BE COMMENTED
        /*  let label_right = {
            id: prop_right.lblPropertyValue,
-           flow_id: gblFlowId, 
+           label_copy_id: gblLabelCopyId, 
            en_GB: elementoTrovato_right[prop_id_right[0]].default
          };
         */
@@ -1125,7 +1125,7 @@ define({
         
         let label_right = {
           id: elementoTrovato_right[prop_id_right[0]].key,
-          flow_id: gblFlowId, 
+          label_copy_id: gblLabelCopyId, 
           en_GB: prop_right.lblPropertyValue === elementoTrovato_right[prop_id_right[0]].key && elementoTrovato_right[prop_id_right[0]].default !== null && elementoTrovato_right[prop_id_right[0]].default !== "" ? elementoTrovato_right[prop_id_right[0]].default : prop_right.lblPropertyValue
         };
         
