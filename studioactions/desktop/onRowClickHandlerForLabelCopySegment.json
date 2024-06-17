@@ -146,7 +146,7 @@
         }, {
             "id": "ADD_SNIPPET_f6abef95a7cf4ec9a608092977c928c4",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// open duplicate popup.\nthis.view.flxBlur.setVisibility(true);\nthis.view.flxPopupDuplicateLabelCopy.setVisibility(true);\n\ngblDuplicateLabelCopy = false;",
+            "codeSnippet": "// open duplicate popup.\nthis.view.lblTitleDuplicateLabelCopy.text = \"Duplicate Label Copy n. \" + gblLabelCopyId;\nthis.view.flxBlur.setVisibility(true);\nthis.view.flxPopupDuplicateLabelCopy.setVisibility(true);\n\ngblDuplicateLabelCopy = false;",
             "parentId": "ELSE_IF_CONDITION_f83851e878c8403e9d03d062475468d8",
             "callbackType": null
         }, {
@@ -158,7 +158,7 @@
         }, {
             "id": "ADD_SNIPPET_e8d5bfce2282433592b3e3ea7bf464ab",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// open activate popup.\nthis.view.flxBlur.setVisibility(true);\nthis.view.flxPopupActivateLabelCopy.setVisibility(true);\n\ngblActivateLabelCopy = false;\n\nthis.view.lblTitleActivateLabelCopy.text = \"Activate Label Copy n. \" + gblLabelCopyId;\n\n",
+            "codeSnippet": "// open activate popup.\nthis.view.lblTitleActivateLabelCopy.text = \"Activate Label Copy n. \" + gblLabelCopyId;\nthis.view.flxBlur.setVisibility(true);\nthis.view.flxPopupActivateLabelCopy.setVisibility(true);\n\ngblActivateLabelCopy = false;\n",
             "parentId": "_f66bf521d3024f1caeffca260f7c7ca5",
             "callbackType": null
         }]
