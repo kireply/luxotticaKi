@@ -16,6 +16,16 @@
         "language": "js",
         "eventType": "onSelection",
         "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_bab371fa2c4f48339b85efcdc225dfc9",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "labelsToDuplicate",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "ADD_LOCAL_VARIABLE_hce675b0909741b492ae33f539c3dc54",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "numLabelsToDuplicate",
@@ -434,19 +444,899 @@
         }, {
             "id": "ADD_SNIPPET_f4d8221a89d748bab9b6062aae78e225",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"Label Copy duplicated successfully.\");\nnumLabelsToDuplicate = gblLabelCopyList.length-1;\nlabelCopyId = LABELCOPY_create.LABELCOPY[0].id;\n",
+            "codeSnippet": "voltmx.print(\"Label Copy duplicated successfully.\");\nlabelCopyId = LABELCOPY_create.LABELCOPY[0].id;",
             "parentId": "_d315a25fa3834355a51418ba1f69acfa",
             "callbackType": null
         }, {
-            "id": "LOADING_INDICATOR_bcbb6d76d3d8431886ba53254bd8de52",
-            "selectedOption": "dismiss",
+            "id": "INVOKE_SERVICE_d4084a0cf40c4c7a8b64415254b3d98a",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_f245b3bddd04410798c8f6fd2f71d8ca": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f245b3bddd04410798c8f6fd2f71d8ca",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblLabelCopyId",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "copyId",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_copyId_CustomQueryGet",
+                            "operationid": "137514"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_f245b3bddd04410798c8f6fd2f71d8ca"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABEL_copyId_CustomQueryGet",
+                "operationid": "137514"
+            },
             "parentId": "_d315a25fa3834355a51418ba1f69acfa",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_ce9c056b5a7c41f7923407f619530830",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABEL_copyId_CustomQueryGet.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_d4084a0cf40c4c7a8b64415254b3d98a",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_d72318c4261143d29725cfd7342f6cf2",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABEL_copyId_CustomQueryGet.records.length !== 0"
+            }],
+            "parentId": "_ce9c056b5a7c41f7923407f619530830",
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_dec467ee81f44ef3a38bc3a1aeb2b608",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "_ce9c056b5a7c41f7923407f619530830",
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_ja37df10c45c46e3adde8dd33e861049",
+            "selectedOption": "dismiss",
+            "parentId": "_dec467ee81f44ef3a38bc3a1aeb2b608",
             "type": "LOADING_INDICATOR",
             "callbackType": null,
             "skin": "none",
             "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
             "isBlocked": "true",
             "showProgressIndicator": "true"
+        }, {
+            "id": "ADD_SNIPPET_a155751c533d40cba5bd94c5bf1eb662",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Lista di labels associata al LabelCopy vuota.\");",
+            "parentId": "_dec467ee81f44ef3a38bc3a1aeb2b608",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_bb39f15a69a9475bb4fab8f4515af859",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "debugger;\nlabelsToDuplicate = LABEL_copyId_CustomQueryGet.records;\nnumLabelsToDuplicate = labelsToDuplicate.length-1;\ndebugger;",
+            "parentId": "_d72318c4261143d29725cfd7342f6cf2",
+            "callbackType": null
+        }, {
+            "id": "LOOP_ACTION_bf49a171d1df423b999f808bc2b4e038",
+            "type": "LOOP_ACTION",
+            "parentId": "_d72318c4261143d29725cfd7342f6cf2",
+            "callbackType": null,
+            "varType": "set",
+            "variable": "i",
+            "startType": "set",
+            "startValue": 0,
+            "endType": "choose",
+            "endValue": "numLabelsToDuplicate",
+            "stepBy": 1,
+            "direction": "inc"
+        }, {
+            "id": "ADD_SNIPPET_gf6cad519a2d4f378784a5863f0bced8",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "idLabel = labelsToDuplicate[i].id;\n// Now we modifie the id of the label, inserting as first data\n// the id of the new LabelCopy we have just created (as duplicate).\nidLabel = idLabel.replace(/^\\d+/, labelCopyId); // questa espressione regolare sostituisce la prima sequenza di cifre con il valore inserito come parametro.\n\n// assigning now all the translation for each label, if exists\nif (labelsToDuplicate[i].hasOwnProperty('en_US')) {\n  enUS = labelsToDuplicate[i].en_US;\n}\nif (labelsToDuplicate[i].hasOwnProperty('en_GB')) {\n  enGB = labelsToDuplicate[i].en_GB;\n}\nif (labelsToDuplicate[i].hasOwnProperty('de_DE')) {\n  deDE = labelsToDuplicate[i].de_DE;\n}\nif (labelsToDuplicate[i].hasOwnProperty('it_IT')) {\n  itIT = labelsToDuplicate[i].it_IT;\n}\nif (labelsToDuplicate[i].hasOwnProperty('fr_BE')) {\n  frBE = labelsToDuplicate[i].fr_BE;\n}\nif (labelsToDuplicate[i].hasOwnProperty('fr_FR')) {\n  frFR = labelsToDuplicate[i].fr_FR;\n}\nif (labelsToDuplicate[i].hasOwnProperty('nl_BE')) {\n  nlBE = labelsToDuplicate[i].nl_BE;\n}\nif (labelsToDuplicate[i].hasOwnProperty('no_NO')) {\n  noNO = labelsToDuplicate[i].no_NO;\n}\nif (labelsToDuplicate[i].hasOwnProperty(\"sv_SE\")) {\n  svSE = labelsToDuplicate[i].sv_SE;\n}\nif (labelsToDuplicate[i].hasOwnProperty('en_AU')) {\n  enAU = labelsToDuplicate[i].en_AU;\n}\nif (labelsToDuplicate[i].hasOwnProperty('es_US')) {\n  esUS = labelsToDuplicate[i].es_US;\n}\nif (labelsToDuplicate[i].hasOwnProperty('en_CH')) {\n  enCH = labelsToDuplicate[i].en_CH;\n}\nif (labelsToDuplicate[i].hasOwnProperty('en_MX')) {\n  enMX = labelsToDuplicate[i].en_MX;\n}\nif (labelsToDuplicate[i].hasOwnProperty('fr_CA')) {\n  frCA = labelsToDuplicate[i].fr_CA;\n}\nif (labelsToDuplicate[i].hasOwnProperty('fr_CH')) {\n  frCH = labelsToDuplicate[i].fr_CH;\n}\nif (labelsToDuplicate[i].hasOwnProperty('ja_JP')) {\n  jaJP = labelsToDuplicate[i].ja_JP;\n}\nif (labelsToDuplicate[i].hasOwnProperty('pt_BR')) {\n  ptBR = labelsToDuplicate[i].pt_BR;\n}\nif (labelsToDuplicate[i].hasOwnProperty('es_MX')) {\n  esMX = labelsToDuplicate[i].es_MX;\n}\nif (labelsToDuplicate[i].hasOwnProperty('nl_NL')) {\n  nlNL = labelsToDuplicate[i].nl_NL;\n}\nif (labelsToDuplicate[i].hasOwnProperty('de_AT')) {\n  deAT = labelsToDuplicate[i].de_AT;\n}\nif (labelsToDuplicate[i].hasOwnProperty('de_CH')) {\n  deCH = labelsToDuplicate[i].de_CH;\n}\nif (labelsToDuplicate[i].hasOwnProperty('it_CH')) {\n  itCH = labelsToDuplicate[i].it_CH;\n}\n",
+            "parentId": "LOOP_ACTION_bf49a171d1df423b999f808bc2b4e038",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_i50698f66a2f4d49b0a145fe0848b387",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_ga6f2e77f46846978d87ebfc87f4b9ad": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ga6f2e77f46846978d87ebfc87f4b9ad",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "idLabel",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_i5bc906bb8ee484fb5807d71416de07d": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_i5bc906bb8ee484fb5807d71416de07d",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "enUS",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "en_US",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_g49d17b733b34acd84aa2a7918bf46e0": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_g49d17b733b34acd84aa2a7918bf46e0",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "enGB",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "en_GB",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_id8f762117d6409494bfba89a0f37bdd": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_id8f762117d6409494bfba89a0f37bdd",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "deDE",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "de_DE",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_ca2406855038401ab7885ede0ef305e6": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ca2406855038401ab7885ede0ef305e6",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "itIT",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "it_IT",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_i3b6f6d8044740459364ae00b65b8bfd": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_i3b6f6d8044740459364ae00b65b8bfd",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "frBE",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "fr_BE",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_ffa4b8ce9dcc40089af6e60ac773aca1": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ffa4b8ce9dcc40089af6e60ac773aca1",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "frFR",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "fr_FR",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_h6615df7bed04f75abf67ab08e73a270": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_h6615df7bed04f75abf67ab08e73a270",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "nlBE",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "nl_BE",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_b0912d96d802405ab3b5c09ff17f0610": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b0912d96d802405ab3b5c09ff17f0610",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "noNO",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "no_NO",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_iafc94c2399c4cbc8b66ac0107703247": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_iafc94c2399c4cbc8b66ac0107703247",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "svSE",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "sv_SE",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_f4c44cc18afd430d9baebb07d59d25e7": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f4c44cc18afd430d9baebb07d59d25e7",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "enAU",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "en_AU",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_c3311e2774aa478bb5ddeae45ffc1fd9": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_c3311e2774aa478bb5ddeae45ffc1fd9",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "esUS",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "es_US",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_e4a8a16a87d14d13907e8970e7c3d793": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e4a8a16a87d14d13907e8970e7c3d793",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "enCH",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "en_CH",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_d3e4056240c24c8c886f1b452b20d618": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d3e4056240c24c8c886f1b452b20d618",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "enMX",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "en_MX",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_g60912153b21434d879b2ab0bbca45c4": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_g60912153b21434d879b2ab0bbca45c4",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "frCA",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "fr_CA",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_i0f629fa798c41608557aeb0ab4ec030": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_i0f629fa798c41608557aeb0ab4ec030",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "frCH",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "fr_CH",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_cfa5b7c3681747368378c386d82288fd": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cfa5b7c3681747368378c386d82288fd",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "jaJP",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "ja_JP",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_a16789ecf066450096c74d5779c61454": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a16789ecf066450096c74d5779c61454",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "ptBR",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "pt_BR",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_ib67c3455f224936bbb444e6b00e550a": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ib67c3455f224936bbb444e6b00e550a",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "esMX",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "es_MX",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_g7d5ccaff1024565b44a0c6ab5a6abf2": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_g7d5ccaff1024565b44a0c6ab5a6abf2",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "nlNL",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "nl_NL",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_a996b611f9334055a77af0f69130bc96": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a996b611f9334055a77af0f69130bc96",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "deAT",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "de_AT",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_beb0f88267224ff098575a4926ce4fc8": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_beb0f88267224ff098575a4926ce4fc8",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "deCH",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "de_CH",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_e1db4cca228e47709506338be584243d": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_e1db4cca228e47709506338be584243d",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "itCH",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "it_CH",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                },
+                "ME_Mapping_cbbe221048bb4750bc8a85585f60aa51": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cbbe221048bb4750bc8a85585f60aa51",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "labelCopyId",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "label_copy_id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_create",
+                            "operationid": "123746"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_ga6f2e77f46846978d87ebfc87f4b9ad", "ME_Mapping_i5bc906bb8ee484fb5807d71416de07d", "ME_Mapping_g49d17b733b34acd84aa2a7918bf46e0", "ME_Mapping_id8f762117d6409494bfba89a0f37bdd", "ME_Mapping_ca2406855038401ab7885ede0ef305e6", "ME_Mapping_i3b6f6d8044740459364ae00b65b8bfd", "ME_Mapping_ffa4b8ce9dcc40089af6e60ac773aca1", "ME_Mapping_h6615df7bed04f75abf67ab08e73a270", "ME_Mapping_b0912d96d802405ab3b5c09ff17f0610", "ME_Mapping_iafc94c2399c4cbc8b66ac0107703247", "ME_Mapping_f4c44cc18afd430d9baebb07d59d25e7", "ME_Mapping_c3311e2774aa478bb5ddeae45ffc1fd9", "ME_Mapping_e4a8a16a87d14d13907e8970e7c3d793", "ME_Mapping_d3e4056240c24c8c886f1b452b20d618", "ME_Mapping_g60912153b21434d879b2ab0bbca45c4", "ME_Mapping_i0f629fa798c41608557aeb0ab4ec030", "ME_Mapping_cfa5b7c3681747368378c386d82288fd", "ME_Mapping_a16789ecf066450096c74d5779c61454", "ME_Mapping_ib67c3455f224936bbb444e6b00e550a", "ME_Mapping_g7d5ccaff1024565b44a0c6ab5a6abf2", "ME_Mapping_a996b611f9334055a77af0f69130bc96", "ME_Mapping_beb0f88267224ff098575a4926ce4fc8", "ME_Mapping_e1db4cca228e47709506338be584243d", "ME_Mapping_cbbe221048bb4750bc8a85585f60aa51"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABEL_create",
+                "operationid": "123746"
+            },
+            "parentId": "LOOP_ACTION_bf49a171d1df423b999f808bc2b4e038",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_ccce4436650d45378dbe7af9466ed2b0",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABEL_create !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "LABEL_create.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_i50698f66a2f4d49b0a145fe0848b387",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_b80db99e378f40b0b4d4eecd74101031",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_i50698f66a2f4d49b0a145fe0848b387",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_ac88217b249140459e37eb425cac472d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// to exit the Loop.\ni = numLabelsToDuuplicate;",
+            "parentId": "_b80db99e378f40b0b4d4eecd74101031",
+            "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_b3faee9d5c2e40d783b88ee568b15f61",
+            "selectedOption": "dismiss",
+            "parentId": "_b80db99e378f40b0b4d4eecd74101031",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "SHOW_ALERT_d4230cfb2f194204b566951e6956d496",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Label NOT recreated.",
+            "yesLabel": "Ok",
+            "alertMessage": "Label NOT recreated.",
+            "messageType": "constant",
+            "parentId": "_b80db99e378f40b0b4d4eecd74101031",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_eff7d63f05fe45f8a92a5d3b04a1ef71",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Label ricreata correttamente.\");",
+            "parentId": "_ccce4436650d45378dbe7af9466ed2b0",
+            "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_bcbb6d76d3d8431886ba53254bd8de52",
+            "selectedOption": "dismiss",
+            "parentId": "_d72318c4261143d29725cfd7342f6cf2",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "NAVIGATE_TO_FORM__dfa87e186f2548dea9fd81eb4b45951b",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmLabelCopy",
+            "formKUID": "d542af1533cb4c91820f2aa7d069320e",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_d72318c4261143d29725cfd7342f6cf2",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "_be987f7c675043ebacddbb690e67d62b",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_d4084a0cf40c4c7a8b64415254b3d98a",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_e198f1b34b0143f4ad914709964bbfc9",
+            "selectedOption": "dismiss",
+            "parentId": "_be987f7c675043ebacddbb690e67d62b",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "SHOW_ALERT_a9708acfc5ed4777b138e744db650b01",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "LABEL_copyId_CustomQueryGet.opstatus NOT 0",
+            "yesLabel": "Ok",
+            "alertMessage": "LABEL_copyId_CustomQueryGet.opstatus NOT 0",
+            "messageType": "constant",
+            "parentId": "_be987f7c675043ebacddbb690e67d62b",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
         }, {
             "id": "ADD_SNIPPET_b22dbdca1ff34c87821d03de70cd528c",
             "type": "ADD_SNIPPET",

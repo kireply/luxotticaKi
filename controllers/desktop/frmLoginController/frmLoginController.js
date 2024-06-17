@@ -2507,7 +2507,7 @@ define({
    integrationService.invokeOperation("USER_get",{},{},
                                       function(response){
      voltmx.application.showLoadingScreen(null, "Searching user ...", constants.LOADING_SCREEN_POSITION_ONLY_CENTER, true, true, null);
-     voltmx.print ("### Service response: "+JSON.stringify(response));
+     //voltmx.print ("### Service response: "+JSON.stringify(response)); MOSTRA EMAIL E PASSWORD IN CHIARO, usato SOLO PER TESTING.
      var userFound = response.USER.some(user => user.email === email && user.password === password);
      voltmx.print("### USER email: " + email);
      if (userFound){
