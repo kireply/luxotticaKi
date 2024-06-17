@@ -183,7 +183,7 @@
         }, {
             "id": "ADD_SNIPPET_b65191a9da7a4e10957e8d09fd2cc498",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### COMPONENT_INSTANCE_Flow_CustomQuery andata a buon fine. Invocherò successivamente LABEL_Flow_CustomQuery\");\n\n// forEach cicle in order to delete all the records in COMPONENT_INSTANCE, given its id.\nCOMPONENT_INSTANCE_Flow_CustomQuery.records.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"COMPONENT_INSTANCE_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n",
+            "codeSnippet": "voltmx.print(\"### COMPONENT_INSTANCE_Flow_CustomQuery andata a buon fine. Invocherò successivamente LABEL_Flow_CustomQuery\");\n\n// forEach cicle in order to DELETE all the records in COMPONENT_INSTANCE, given its id.\nCOMPONENT_INSTANCE_Flow_CustomQuery.records.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"COMPONENT_INSTANCE_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n",
             "parentId": "_cab96a148f254c13b09afa6603051bca",
             "callbackType": null
         }, {
