@@ -34,7 +34,7 @@
         }, {
             "id": "ADD_SNIPPET_de4a01abe14d4ba19b1547378243140f",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "debugger;\nvoltmx.print(\"### ROWCLICK cliccato\");\n\nvar labelCopy = this.view.segLabels.selectedRowItems[0];\n\nvoltmx.print(\"### labelCopy: \" + JSON.stringify(labelCopy) );\n\nvoltmx.print(\"### labelCopy.id: \" + JSON.stringify(labelCopy.id) );\n\nlabelCopyId = labelCopy.id;\n\ngblLabelCopyId = labelCopy.id;\ngblLabelCopyFlowId = labelCopy.flow_id;\ngblLabelCopyFlowName = labelCopy.flow_name; // full Flow name Ex. RB_EYE_00001\ngblLabelCopyEnvironment = labelCopy.environment;\ngblLabelCopyStatus = labelCopy.status;\n\n// if con varie icone, apertura popup relativo.",
+            "codeSnippet": "debugger;\nvoltmx.print(\"### ROWCLICK cliccato\");\n\nvar labelCopy = this.view.segLabels.selectedRowItems[0];\n\nvoltmx.print(\"### labelCopy: \" + JSON.stringify(labelCopy) );\n\nvoltmx.print(\"### labelCopy.id: \" + JSON.stringify(labelCopy.id) );\n\nlabelCopyId = labelCopy.id;\n\ngblLabelCopyId = parseInt(labelCopy.id);\ngblLabelCopyFlowId = parseInt(labelCopy.flow_id);\ngblLabelCopyFlowName = labelCopy.flow_name; // full Flow name Ex. RB_EYE_00001\ngblLabelCopyEnvironment = labelCopy.environment;\ngblLabelCopyStatus = labelCopy.status;\n\n// if con varie icone, apertura popup relativo.",
             "parentId": null,
             "callbackType": null
         }, {
@@ -152,7 +152,7 @@
         }, {
             "id": "ADD_SNIPPET_gacf57d64113446aa87cf856f33d370a",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// open publish popup.\nthis.view.lblTitlePublishLabelCopy.text = \"Publish Label Copy n. \" + gblLabelCopyId;\nthis.view.flxBlur.setVisibility(true);\nthis.view.flxPopupPublishLabelCopy.setVisibility(true);\n\ngblPublishLabelCopy = false;",
+            "codeSnippet": "// we need to check the env of related flow in order to give \n// the right options of publish to the user.\ndebugger;\nlet flow = gblFlowsList.filter(item => parseInt(item.id.match(/\\d+$/)[0], 10) === gblLabelCopyFlowId);\nlet flowEnv = flow[0].environment;\nif (flowEnv === \"Development\") {\n  this.view.lbSelectEnvironmentPublishLabelCopy.masterData = [ [\"Development\", \"Development\"] ];\n  this.view.lbSelectEnvironmentPublishLabelCopy.selectedKey = \"Development\";\n} else if (flowEnv === \"Quality\") {\n  this.view.lbSelectEnvironmentPublishLabelCopy.masterData = [ [\"Development\", \"Development\"], [\"Quality\", \"Quality\"] ];\n  this.view.lbSelectEnvironmentPublishLabelCopy.selectedKey = gblLabelCopyEnvironment;\n} else {  // flowEnv === \"Production\", all the 3 environments are available\n  this.view.lbSelectEnvironmentPublishLabelCopy.masterData = [ [\"Development\", \"Development\"], [\"Quality\", \"Quality\"], [\"Production\", \"Production\"] ];\n  this.view.lbSelectEnvironmentPublishLabelCopy.selectedKey = gblLabelCopyEnvironment;\n}\n\n\n// open publish popup.\nthis.view.lblTitlePublishLabelCopy.text = \"Publish Label Copy n. \" + gblLabelCopyId;\nthis.view.flxBlur.setVisibility(true);\nthis.view.flxPopupPublishLabelCopy.setVisibility(true);\n\ngblPublishLabelCopy = false;",
             "parentId": "ELSE_IF_CONDITION_a0b091c5245241a3be3d9b82c5440f7e",
             "callbackType": null
         }, {

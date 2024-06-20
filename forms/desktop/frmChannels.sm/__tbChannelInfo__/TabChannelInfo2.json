@@ -37,8 +37,7 @@
         "txtChannelFrameOnlyLensUPC",
         "txtChannelShowUiSkeleton",
         "swChannelShowUiSkeleton",
-        "swChannelShowUiSkeleton1",
-        "simpleSwitch"
+        "swChannelShowUiSkeleton1"
     ],
     "clipbounds": true,
     "containerweight": 100,

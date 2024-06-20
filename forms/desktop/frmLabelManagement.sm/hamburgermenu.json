@@ -64,7 +64,7 @@
                 }
             },
             "zIndex": {
-                "Default": 5
+                "Default": 6
             }
         },
         "flxBtnLogout": {

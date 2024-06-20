@@ -743,6 +743,10 @@ define({
   
   
   
+  
+  
+  
+  
   // function invoked when Save Button is clicked (invoked from action editor)
   saveStepComposition: function(){
     voltmx.print("### INIZIATO -saveStepComposition-");
@@ -799,8 +803,7 @@ define({
               };
               */
 
-
-
+              
               let translations = {};
               // we have the ids and all translation different from english GB
               if (gblFetchedLabels.length > 0) {
@@ -809,7 +812,7 @@ define({
                   let filteredRecord = { id: record.id }; // Inizia con "id"
                   for (let key in record) {
                     // recuperiamo tutti gli id che non servono e che NON sono GB (lingua default) 
-                    if (key !== 'flow_id' && key !== 'en_GB' && key !== 'id') {
+                    if (key !== 'label_copy_id' && key !== 'en_GB' && key !== 'id') {
                       filteredRecord[key] = record[key];
                     }
                   }
@@ -817,12 +820,12 @@ define({
                   return acc;
                 }, []);  */
 
-
+                
                 let record = gblFetchedLabels.find(record => record.id === elementoTrovato_left[prop_id_left[0]].key);
 
                 if (record) {
                   for (let key in record) {
-                    if (key !== 'id' && key !== 'flow_id' && key !== 'en_GB') {
+                    if (key !== 'id' && key !== 'label_copy_id' && key !== 'en_GB') {
                       translations[key] = record[key];
                     }
                   }
@@ -830,11 +833,11 @@ define({
 
               }
 
+              debugger;
               let label = {
                 id: elementoTrovato_left[prop_id_left[0]].key,
-                label_copy_id: gblLabelCopyId, 
+                label_copy_id: gblLabelCopyId,
                 en_GB: prop_left.lblPropertyValue === elementoTrovato_left[prop_id_left[0]].key && elementoTrovato_left[prop_id_left[0]].default !== null && elementoTrovato_left[prop_id_left[0]].default !== "" ? elementoTrovato_left[prop_id_left[0]].default : prop_left.lblPropertyValue
-                
               };
 
               if (Object.keys(translations).length > 0) {
@@ -843,8 +846,6 @@ define({
               }
               
               
-             
-
               voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, label, 
                                                                                                (response) => {
                 voltmx.print("### Service response: " + JSON.stringify(response));
@@ -908,7 +909,7 @@ define({
 
     }  // finita sezione di sinistra
     
-	debugger;
+	debugger;  // inizio sezione di destra
     
     let associatedId = null;
     let scrolls = steps.filter(step => step.id.startsWith("flxScrollRight"));
@@ -952,6 +953,7 @@ define({
         }, {});
 
 
+        debugger; //inizio for each componenti di destra
         // Filtraggio dei componenti, mantenendo quelli che non hanno figli diretti in `new_components`
         right_widgets.forEach(widget => {
           //             debugger;
@@ -1070,6 +1072,9 @@ define({
   
   
   
+  
+  
+  
   // Callback of the COMPONENT_CREATE service, in which property instances and labels of the just created component instance are created
   // Dovrebbe essere aggiustato e reso generico anche per il "left side", per ora funziona solo per il "right side"
   componentCreateCallback: function(widget, property_instance_right, response, component_instance_right, step_id){
@@ -1103,7 +1108,7 @@ define({
     /*      let result = gblFetchedLabels.reduce((acc, record) => {
             let filteredRecord = { id: record.id }; // Inizia con "id"
             for (let key in record) {
-              if (key !== 'flow_id' && key !== 'en_GB' && key !== 'id') {
+              if (key !== 'label_copy_id' && key !== 'en_GB' && key !== 'id') {
                 filteredRecord[key] = record[key];
               }
             }
@@ -1115,7 +1120,7 @@ define({
 		  
           if (record) {
             for (let key in record) {
-              if (key !== 'id' && key !== 'flow_id' && key !== 'en_GB') {
+              if (key !== 'id' && key !== 'label_copy_id' && key !== 'en_GB') {
                 translations[key] = record[key];
               }
             }
@@ -1123,6 +1128,8 @@ define({
 
         }
         
+        debugger; // di componentCreateCallback
+
         let label_right = {
           id: elementoTrovato_right[prop_id_right[0]].key,
           label_copy_id: gblLabelCopyId, 

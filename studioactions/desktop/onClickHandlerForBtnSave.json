@@ -33,14 +33,85 @@
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "true"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "gblFlowEnvironment !== \"Production\" || gblFlowStatus !== \"Active\""
             }],
             "parentId": null,
             "callbackType": null,
             "criteria": "all"
         }, {
+            "id": "ELSE_IF_CONDITION_d73234d0efc7421ca66f6a696459f156",
+            "type": "ELSE_IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "gblSaveAfterEdit",
+                "operator": "===",
+                "rightValueType": "value",
+                "rightValue": "true"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "gblFlowEnvironment === \"Production\" && gblFlowStatus === \"Active\""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_be8a2b1752ae419b812ba6504558d84f",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### entrato in IF per flusso Prod e Active, INVOCO COMPONENT_INSTANCE_Flow_CustomQuery\");\ndebugger; // flow Prod e Active\n// Dovrò eliminare i precedenti componenti per ricrearli,\n// creare un nuovo labelCopy nel quale caricare tutte le labels\n// e infine aggiornare il vecchio labelCopy active ad archiviato.",
+            "parentId": "ELSE_IF_CONDITION_d73234d0efc7421ca66f6a696459f156",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_hdef9731234b4aab96d887167b9b5022",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_cd842093ff8e4b7486608da7d46ba9da": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_cd842093ff8e4b7486608da7d46ba9da",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "COMPONENT_INSTANCE_Flow_CustomQuery",
+                            "operationid": "132915"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_cd842093ff8e4b7486608da7d46ba9da"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "COMPONENT_INSTANCE_Flow_CustomQuery",
+                "operationid": "132915"
+            },
+            "parentId": "ELSE_IF_CONDITION_d73234d0efc7421ca66f6a696459f156",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
             "id": "ADD_SNIPPET_ea9a5ce4e5484868af748a11b196da4a",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### entrato in IF, INVOCO COMPONENT_INSTANCE_Flow_CustomQuery\");",
+            "codeSnippet": "voltmx.print(\"### entrato in IF per flusso NON Prod o NON Active, INVOCO COMPONENT_INSTANCE_Flow_CustomQuery\");\ndebugger; // Flow NON Prod o Active",
             "parentId": "_hc299d94e34d4ce0a72e361ea8b79059",
             "callbackType": null
         }, {
@@ -56,6 +127,12 @@
             "parentId": null,
             "callbackType": null,
             "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_e568e09aeb6a4a00b705d0bcc269b952",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### entrato in ELSE per salvataggio di un flusso nuovo. Invoco direttamente saveStepComposition\");\ngblSavingFlowProdAndActive = false;\ndebugger; // else",
+            "parentId": "_e52221cbe82a4aedb44a5bc3442d8743",
+            "callbackType": null
         }, {
             "id": "INVOKE_FUNCTION__e976fc93e6ab4937bfdae5cc2361667c",
             "type": "INVOKE_FUNCTION",
@@ -194,40 +271,40 @@
             "httpconfigs": null,
             "isasynchronous": true,
             "mappings": {
-                "ME_Mapping_a271924d7f7a4bb181d67940d45c4e4d": {
+                "ME_Mapping_b02b9ccb42e84cbabc50ec15486076d4": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_a271924d7f7a4bb181d67940d45c4e4d",
+                    "id": "ME_Mapping_b02b9ccb42e84cbabc50ec15486076d4",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
                     "source": {
                         "type": "Variables",
-                        "propertyName": "gblFlowId",
-                        "dataType": "string",
+                        "propertyName": "gblLabelCopyId",
+                        "dataType": "number",
                         "forkedPlatform": "all"
                     },
                     "target": {
                         "type": "Services",
-                        "propertyName": "flow_id",
+                        "propertyName": "copyId",
                         "dataType": "string",
                         "forkedPlatform": "all",
                         "serviceconfig": {
                             "servicename": "mariaDB",
                             "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                             "type": "integration",
-                            "operationname": "LABEL_Flow_CustomQuery",
-                            "operationid": "132916"
+                            "operationname": "LABEL_copyId_CustomQueryGet",
+                            "operationid": "137514"
                         }
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_a271924d7f7a4bb181d67940d45c4e4d"],
+            "mappingsOrder": ["ME_Mapping_b02b9ccb42e84cbabc50ec15486076d4"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                 "type": "integration",
-                "operationname": "LABEL_Flow_CustomQuery",
-                "operationid": "132916"
+                "operationname": "LABEL_copyId_CustomQueryGet",
+                "operationid": "137514"
             },
             "parentId": "_cab96a148f254c13b09afa6603051bca",
             "callbackType": null,
@@ -237,10 +314,10 @@
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
-                "leftValue": "LABEL_Flow_CustomQuery.records !== 0"
+                "leftValue": "LABEL_copyId_CustomQueryGet.records !== 0"
             }, {
                 "leftValueType": "expression",
-                "leftValue": "LABEL_Flow_CustomQuery.opstatus === 0"
+                "leftValue": "LABEL_copyId_CustomQueryGet.opstatus === 0"
             }],
             "parentId": "INVOKE_SERVICE_af74a5c80b2a423a913fbda04d0c0a07",
             "callbackType": "Callback",
@@ -277,7 +354,7 @@
         }, {
             "id": "ADD_SNIPPET_e292c34dd3da46f28c981f79139beca0",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### LABEL_Flow_CustomQuery andata a buon fine. Invocherò successivamente la funzione saveStepComposition\");\n\nvoltmx.print(\"### LABEL_Flow_CustomQuery.records: \" + JSON.stringify(LABEL_Flow_CustomQuery.records) );\n\n// forEach cicle in order to delete all the records in LABEL, given its id.\nLABEL_Flow_CustomQuery.records.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n\n//debugger;",
+            "codeSnippet": "voltmx.print(\"### LABEL_copyId_CustomQueryGet andata a buon fine. Invocherò successivamente la funzione saveStepComposition\");\n\nvoltmx.print(\"### LABEL_copyId_CustomQueryGet.records: \" + JSON.stringify(LABEL_copyId_CustomQueryGet.records) );\n\n// forEach cicle in order to delete all the records in LABEL, given its id.\nLABEL_copyId_CustomQueryGet.records.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n\n\ngblSavingFlowProdAndActive = false;\n\n//debugger;",
             "parentId": "_ab001465cfd447b3a1ceb3407eea68df",
             "callbackType": null
         }, {
@@ -287,6 +364,387 @@
             "display": "saveStepComposition",
             "inputparams": [],
             "parentId": "_ab001465cfd447b3a1ceb3407eea68df",
+            "callbackType": null,
+            "disabled": null,
+            "source": "controller"
+        }, {
+            "id": "LOADING_INDICATOR_g240daf853084e6cab06aa848abbc0ed",
+            "selectedOption": "dismiss",
+            "parentId": "INVOKE_SERVICE_hdef9731234b4aab96d887167b9b5022",
+            "type": "LOADING_INDICATOR",
+            "callbackType": "Callback",
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "ADD_SNIPPET_f6f5566f094c4355a6123ac0e8957fb8",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### COMPONENT_INSTANCE_Flow_CustomQuery.records: \" + JSON.stringify(COMPONENT_INSTANCE_Flow_CustomQuery.records) );",
+            "parentId": "INVOKE_SERVICE_hdef9731234b4aab96d887167b9b5022",
+            "callbackType": "Callback"
+        }, {
+            "id": "_c03f424e8ace452486db09be79eb4169",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "COMPONENT_INSTANCE_Flow_CustomQuery.records !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "COMPONENT_INSTANCE_Flow_CustomQuery.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_hdef9731234b4aab96d887167b9b5022",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_c9e6fcd6047e423697ee9f1e7b6f2ff2",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_hdef9731234b4aab96d887167b9b5022",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_c5391e66a3e545af8e2c3d9e188d1b69",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Error with fetching components from DB.",
+            "yesLabel": "Ok",
+            "alertMessage": "Error with fetching components from DB.",
+            "messageType": "constant",
+            "parentId": "_c9e6fcd6047e423697ee9f1e7b6f2ff2",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_a788a273a8dc45a08e09253005588369",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### COMPONENT_INSTANCE_Flow_CustomQuery andata a buon fine. Invocherò successivamente LABEL_Flow_CustomQuery\");\n\n// forEach cicle in order to DELETE all the records in COMPONENT_INSTANCE, given its id.\nCOMPONENT_INSTANCE_Flow_CustomQuery.records.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"COMPONENT_INSTANCE_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n\n// procedo ora ad archiviare il precedente labelCopy",
+            "parentId": "_c03f424e8ace452486db09be79eb4169"
+        }, {
+            "id": "INVOKE_SERVICE_c83ca315a37549048fd121b8e502e1d0",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_b9d9c4e3fa394b059d531f78ff4cf787": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b9d9c4e3fa394b059d531f78ff4cf787",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblLabelCopyId",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_update",
+                            "operationid": "137229"
+                        }
+                    }
+                },
+                "ME_Mapping_a9545f51ee4640c9885b25a6633d1681": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a9545f51ee4640c9885b25a6633d1681",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_update",
+                            "operationid": "137229"
+                        }
+                    }
+                },
+                "ME_Mapping_d0ed738024db41dca40c282a8f3d6317": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_d0ed738024db41dca40c282a8f3d6317",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowEnvironment",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "environment",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_update",
+                            "operationid": "137229"
+                        }
+                    }
+                },
+                "ME_Mapping_a4acdb43c8e24526ad8931e812687414": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a4acdb43c8e24526ad8931e812687414",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "status",
+                        "dataType": "string",
+                        "expression": "\"Archived\"",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_update",
+                            "operationid": "137229"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_b9d9c4e3fa394b059d531f78ff4cf787", "ME_Mapping_a9545f51ee4640c9885b25a6633d1681", "ME_Mapping_d0ed738024db41dca40c282a8f3d6317", "ME_Mapping_a4acdb43c8e24526ad8931e812687414"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABELCOPY_update",
+                "operationid": "137229"
+            },
+            "parentId": "_c03f424e8ace452486db09be79eb4169",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_j597b8c6445c420d8bfecc2d478f6a57",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABELCOPY_update.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_c83ca315a37549048fd121b8e502e1d0",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_ab596257b44947b0a621a39493905354",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_c83ca315a37549048fd121b8e502e1d0",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_j272792f0b894a099335a2956c00b4cd",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Old Label Copy NOT updated correctly.",
+            "yesLabel": "Ok",
+            "alertMessage": "Old Label Copy NOT updated correctly.",
+            "messageType": "constant",
+            "parentId": "_ab596257b44947b0a621a39493905354",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_f10748fa5f9a459ba4c76a5fb55481d5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Label Copy precedentemente attivo correttamente aggiornato ad archived.\");",
+            "parentId": "_j597b8c6445c420d8bfecc2d478f6a57",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_df9f864ed2fb49539cb1f3a44f0194e4",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {
+                "ME_Mapping_a4a71f6f54d34750a674657e1925e92f": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_a4a71f6f54d34750a674657e1925e92f",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowId",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "flow_id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_create",
+                            "operationid": "137230"
+                        }
+                    }
+                },
+                "ME_Mapping_b81141128629464ba8ad51c56850e38c": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_b81141128629464ba8ad51c56850e38c",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblFlowEnvironment",
+                        "dataType": "string",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "environment",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_create",
+                            "operationid": "137230"
+                        }
+                    }
+                },
+                "ME_Mapping_f844dcfbf97142ffa4d8606f8812b3ea": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_f844dcfbf97142ffa4d8606f8812b3ea",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "status",
+                        "dataType": "string",
+                        "expression": "\"Active\"",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABELCOPY_create",
+                            "operationid": "137230"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_a4a71f6f54d34750a674657e1925e92f", "ME_Mapping_b81141128629464ba8ad51c56850e38c", "ME_Mapping_f844dcfbf97142ffa4d8606f8812b3ea"],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "LABELCOPY_create",
+                "operationid": "137230"
+            },
+            "parentId": "_j597b8c6445c420d8bfecc2d478f6a57",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_d3f8090f17bc4153bf36ddac263634f8",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "LABELCOPY_create.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_df9f864ed2fb49539cb1f3a44f0194e4",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_ia9f24d321184f9185e12a6341f4e776",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_df9f864ed2fb49539cb1f3a44f0194e4",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_d6b6ddb8c4cd4f9bbdaa42f0d5049b8b",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "New Label Copy NOT created.",
+            "yesLabel": "Ok",
+            "alertMessage": "New Label Copy NOT created.",
+            "messageType": "constant",
+            "parentId": "_ia9f24d321184f9185e12a6341f4e776",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_c1bd80f904404b0992c84c14b1230450",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Label Copy New creato correttamente.\");\ngblNewLabelCopyId = LABELCOPY_create.LABELCOPY[0].id;\ngblSavingFlowProdAndActive = true;",
+            "parentId": "_d3f8090f17bc4153bf36ddac263634f8",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_FUNCTION__ada3de70e8454475a7109a47496e7a82",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "saveStepComposition",
+            "display": "saveStepComposition",
+            "inputparams": [],
+            "parentId": "_d3f8090f17bc4153bf36ddac263634f8",
             "callbackType": null,
             "disabled": null,
             "source": "controller"

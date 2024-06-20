@@ -16,6 +16,16 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
+            "id": "ADD_LOCAL_VARIABLE_jac90e9c585d4cfdadf09cb7f7c8014c",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "lastActiveLabelCopy",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "collection",
+            "value": "null",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "ADD_LOCAL_VARIABLE_a261a27aa56c49f58f104d354462d140",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "labelCopyId",
@@ -48,7 +58,7 @@
         }, {
             "id": "ADD_SNIPPET_be51198253724c218d06b1fff3e9c33a",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// keeping contact with the current Active label copy. We will set this as \"Archived\".\ndebugger;\nlastActiveLabelCopy = gblLabelCopyList.filter(item => item.status === \"Active\");\n\nlabelCopyId = parseInt(lastActiveLabelCopy[0].id);\nlabelCopyFlowId = parseInt(lastActiveLabelCopy[0].flow_id);\nlabelCopyEnvironment = lastActiveLabelCopy[0].environment;",
+            "codeSnippet": "// keeping contact with the current Active label copy. We will set this as \"Archived\".\ndebugger;\nlastActiveLabelCopy = gblLabelCopyList.filter(item => parseInt(item.flow_id) === gblLabelCopyFlowId && item.status === \"Active\");\n\nif (lastActiveLabelCopy.length !== 0) {\n  labelCopyId = parseInt(lastActiveLabelCopy[0].id);\n  labelCopyFlowId = parseInt(lastActiveLabelCopy[0].flow_id);\n  labelCopyEnvironment = lastActiveLabelCopy[0].environment;\n}\n",
             "parentId": null,
             "callbackType": null
         }, {
@@ -207,11 +217,21 @@
         }, {
             "id": "ADD_SNIPPET_f19581b4824e48718e3da6660c8444e4",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "debugger;\nlet idLC = labelCopyId;\nlet flowLC = labelCopyFlowId;\nlet envLC = labelCopyEnvironment;",
+            "codeSnippet": "debugger;\n\n// Label Copy update to \"Active\" successfull.\n",
             "parentId": "_ea276d0ee94d4bc2bb73a40efc415a5e",
             "callbackType": null
         }, {
-            "id": "_aae4bcafcbb94a1f9223be89541c2004",
+            "id": "_j55abba96f334941bf2a167fe5f8a75f",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "lastActiveLabelCopy.length !== 0"
+            }],
+            "parentId": "_ea276d0ee94d4bc2bb73a40efc415a5e",
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_e1d90da660864bc4bcec853f07559640",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -220,41 +240,15 @@
                 "rightValueType": "widgetprop",
                 "rightValue": ""
             }],
-            "parentId": "INVOKE_SERVICE_f3a8d72c134b4f95ac5911dc6ab047a1",
-            "callbackType": "Callback",
+            "parentId": "_ea276d0ee94d4bc2bb73a40efc415a5e",
+            "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "SHOW_ALERT_f5ce2e662388445a8a0f9c529769b8ef",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "Label Copy NOT updated successfully.",
-            "yesLabel": "Ok",
-            "alertMessage": "Label Copy NOT updated successfully.",
-            "messageType": "constant",
-            "parentId": "_aae4bcafcbb94a1f9223be89541c2004",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
-            "id": "ADD_SNIPPET_d621a33279624eb08f87387730a29ae3",
+            "id": "ADD_SNIPPET_j261bea8dfea4c08aa14f32f5f231614",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "self.view.flxPopupActivateLabelCopy.setVisibility(false);\nself.view.flxBlur.setVisibility(false);",
-            "parentId": "_aae4bcafcbb94a1f9223be89541c2004",
+            "codeSnippet": "debugger;\n\n// There was already an Active Label Copy. We update it as \"Archived\".\n\n// let idLC = labelCopyId;\n// let flowLC = labelCopyFlowId;\n// let envLC = labelCopyEnvironment;",
+            "parentId": "_j55abba96f334941bf2a167fe5f8a75f",
             "callbackType": null
-        }, {
-            "id": "LOADING_INDICATOR_bef144f04ddc4696bcd0efbb1e668618",
-            "selectedOption": "dismiss",
-            "parentId": "_aae4bcafcbb94a1f9223be89541c2004",
-            "type": "LOADING_INDICATOR",
-            "callbackType": null,
-            "skin": "none",
-            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
-            "isBlocked": "true",
-            "showProgressIndicator": "true"
         }, {
             "id": "INVOKE_SERVICE_b15ead471ce14d1e94b8ea3830349728",
             "type": "INVOKE_ASYNC_SERVICE",
@@ -374,9 +368,54 @@
                 "operationname": "LABELCOPY_update",
                 "operationid": "137229"
             },
-            "parentId": "_ea276d0ee94d4bc2bb73a40efc415a5e",
+            "parentId": "_j55abba96f334941bf2a167fe5f8a75f",
             "callbackType": null,
             "enableMappingEditor": true
+        }, {
+            "id": "_aae4bcafcbb94a1f9223be89541c2004",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_f3a8d72c134b4f95ac5911dc6ab047a1",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_f5ce2e662388445a8a0f9c529769b8ef",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Label Copy NOT updated successfully.",
+            "yesLabel": "Ok",
+            "alertMessage": "Label Copy NOT updated successfully.",
+            "messageType": "constant",
+            "parentId": "_aae4bcafcbb94a1f9223be89541c2004",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_d621a33279624eb08f87387730a29ae3",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.flxPopupActivateLabelCopy.setVisibility(false);\nself.view.flxBlur.setVisibility(false);",
+            "parentId": "_aae4bcafcbb94a1f9223be89541c2004",
+            "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_bef144f04ddc4696bcd0efbb1e668618",
+            "selectedOption": "dismiss",
+            "parentId": "_aae4bcafcbb94a1f9223be89541c2004",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
         }, {
             "id": "ADD_SNIPPET_a22f774b70e643e3a2a9eb43f66351fe",
             "type": "ADD_SNIPPET",
@@ -461,6 +500,34 @@
             "id": "LOADING_INDICATOR_ac9bae231c014e099c8d12cff6d871dd",
             "selectedOption": "dismiss",
             "parentId": "_jfd6bae3ee734d13ba147ec9500c413b",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "ADD_SNIPPET_fe8da7ec8d1649b8bd5b7d9d05fab20a",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.flxPopupActivateLabelCopy.setVisibility(false);\nself.view.flxBlur.setVisibility(false);",
+            "parentId": "_e1d90da660864bc4bcec853f07559640"
+        }, {
+            "id": "NAVIGATE_TO_FORM__h0f4999ed498406fbd54bb85ad434805",
+            "type": "NAVIGATE_TO_FORM",
+            "formId": "frmLabelCopy",
+            "formKUID": "d542af1533cb4c91820f2aa7d069320e",
+            "projectName": "luxotticaKi",
+            "mappings": {},
+            "mappingsOrder": [],
+            "parentId": "_e1d90da660864bc4bcec853f07559640",
+            "callbackType": null,
+            "enableMappingEditor": true,
+            "package": "",
+            "isCustomInput": false
+        }, {
+            "id": "LOADING_INDICATOR_i6a86eb0f1d643c2b556e87e35f4def5",
+            "selectedOption": "dismiss",
+            "parentId": "_e1d90da660864bc4bcec853f07559640",
             "type": "LOADING_INDICATOR",
             "callbackType": null,
             "skin": "none",

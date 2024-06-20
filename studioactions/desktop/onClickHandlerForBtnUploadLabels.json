@@ -16,15 +16,44 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
+            "id": "_j4062dd4ee9247aba3473aa401a6601a",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "gblLabelCopyEnvironment === \"Production\" && gblLabelCopyStatus === \"Active\""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_bb22dd77e04544f7ab9df8ed192fa2ee",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
             "id": "INVOKE_FUNCTION__j9a02f713f8c488091c19deacf93ccf4",
             "type": "INVOKE_FUNCTION",
             "sequenceKUID": "getExcel",
             "display": "getExcel",
             "inputparams": [],
-            "parentId": null,
+            "parentId": "_bb22dd77e04544f7ab9df8ed192fa2ee",
             "callbackType": null,
             "disabled": false,
             "source": "controller"
+        }, {
+            "id": "ADD_SNIPPET_f8c9d7ec55e7480c99f8108339c11c19",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// Label Copy in Production and Active cannot be edited.\nthis.view.flxBlur.setVisibility(true);\nthis.view.flxPopupCannotImportLabels.setVisibility(true);",
+            "parentId": "_j4062dd4ee9247aba3473aa401a6601a",
+            "callbackType": null
         }]
     }
 }

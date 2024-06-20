@@ -1,0 +1,25 @@
+{
+    "AS_Button_jf3e9138b9674da38bb63a936e3a47b4": {
+        "id": "AS_Button_jf3e9138b9674da38bb63a936e3a47b4",
+        "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnOkPopupCannotImportLabels",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmLabelManagement",
+            "type": "forms",
+            "platform": "",
+            "KUID": "jcf530250ee04551b0014dcb7147f2fe"
+        },
+        "language": "js",
+        "eventType": "onClick",
+        "actions": [{
+            "id": "ADD_SNIPPET_a52fa3ac102446a08a679b93d14e6a8b",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxPopupCannotImportLabels.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);",
+            "parentId": null
+        }]
+    }
+}

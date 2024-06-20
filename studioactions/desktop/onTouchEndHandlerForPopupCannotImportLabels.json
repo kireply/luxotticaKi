@@ -1,0 +1,31 @@
+{
+    "AS_Image_f43609b30c884fda853e9250acc3820d": {
+        "id": "AS_Image_f43609b30c884fda853e9250acc3820d",
+        "type": "ACTION_SEQUENCE",
+        "name": "onTouchEndHandlerForPopupCannotImportLabels",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "contextObj": {
+            "name": "frmLabelManagement",
+            "type": "forms",
+            "platform": "",
+            "KUID": "jcf530250ee04551b0014dcb7147f2fe"
+        },
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_f6fc5aca06114ea4ad85e1f9456b562c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "this.view.flxPopupCannotImportLabels.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);",
+            "parentId": null
+        }]
+    }
+}
