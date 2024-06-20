@@ -1027,7 +1027,7 @@ define({
               voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("NESTED_COMPONENT_create", {}, nested_component, (nestedResponse) => {
                 voltmx.print("### Service response HO CREATO UN NESTED COMPONENT NEL DB: " + JSON.stringify(nestedResponse));
               }, (error) => {
-                voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+                voltmx.print("### Error in the invocation of the service NESTED_COMPONENT_create: " + JSON.stringify(error));
                 gblFail = true;
               });
             }
@@ -1046,7 +1046,7 @@ define({
               });
             }
           }, (error) => {
-            voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+            voltmx.print("### Error in the invocation of the service COMPONENT_INSTANCE_create: " + JSON.stringify(error));
             gblFail = true;
           });
         };
@@ -1154,7 +1154,7 @@ define({
             voltmx.print ("### Service response: "+JSON.stringify(response));
           },
                                                                                            (error) => {
-            voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+            voltmx.print("### Error in the invocation of the service PROPERTY_INSTANCE_create: " + JSON.stringify(error));
             voltmx.ui.Alert({
               "alertType": constants.ALERT_TYPE_INFO,
               "alertTitle": "Fail",
@@ -1170,7 +1170,7 @@ define({
         },   // end of LABEL_create
               
                                                                                          (error) => {
-          voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+          voltmx.print("### Error in the invocation of the service LABEL_create: " + JSON.stringify(error));
         });
       } else {
         property_instance_right["value"] = prop_right.lblPropertyValue;
@@ -1181,7 +1181,7 @@ define({
           voltmx.print ("### Service response: "+JSON.stringify(response));
         },
                                                                                          (error) => {
-          voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
+          voltmx.print("### Error in the invocation of the service PROPERTY_INSTANCE_create: " + JSON.stringify(error));
           voltmx.ui.Alert({
             "alertType": constants.ALERT_TYPE_INFO,
             "alertTitle": "Fail",
