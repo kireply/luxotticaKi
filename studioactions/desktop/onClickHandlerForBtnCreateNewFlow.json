@@ -10,40 +10,6 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "_ide_onClick_f2c6c7e7210e4e469c24e3686e45cbae",
-            "type": "STYLE_ACTION",
-            "itemType": "FORM",
-            "itemId": "frmFlows",
-            "widgetId": "btnCreateNewFlow",
-            "itemKUID": "e6a8fc2377784d1595b361cc9412aea7",
-            "widgetKUID": "b3ef5d8147e4422b83e6a0d9681b0f62",
-            "wType": "Button",
-            "animationObject": {
-                "anchorPoint": {},
-                "stepConfig": {
-                    "timingFunction": "kony.anim.EASE"
-                },
-                "backgroundColor": "00000000",
-                "opacity": "100",
-                "displayAnimationId": "",
-                "duration": "0",
-                "delay": "0",
-                "iterationCount": ""
-            },
-            "config": {
-                "delay": "0",
-                "iterationCount": 0,
-                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
-                "duration": "0"
-            },
-            "start": "Immediately",
-            "animationId": "STYLE_ACTION_b6e0413654d844c8bc287dcc12d4bd9e",
-            "displayAnimationId": "STYLE_ACTION_b6e0413654d844c8bc287dcc12d4bd9e",
-            "forkedPlatform": "all",
-            "callbackType": null,
-            "disabled": true,
-            "widgetPath": "this.view.btnCreateNewFlow"
-        }, {
             "id": "LOADING_INDICATOR_ide_onClick_i3130a48bc74452d80801ce9dce6a78e",
             "selectedOption": "show",
             "type": "LOADING_INDICATOR",

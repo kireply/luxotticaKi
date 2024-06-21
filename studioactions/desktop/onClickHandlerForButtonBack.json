@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_ic60b3b1f3aa471fa9cf447d2d42abbb",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// back to frmChannels, so we reset channel global variables until next selection\ngblChannelId = \"\";\ngblChannelName = \"\";\ngblChannelLogo = \"\";\ngblChannelProperties = \"\";\ngblChannelGenericImage = \"\";\ngblChannelAssetsCDN = \"\";\ngblChannelProjectImage = \"\";\ngblChannelFrameOnlyLensUPC = \"\";\ngblChannelShowUiSkeleton = \"\";",
+            "codeSnippet": "// back to frmChannels, so we reset channel global variables until next selection\ngblChannelId = \"\";\ngblChannelName = \"\";\ngblChannelLogo = \"\";\ngblChannelProperties = \"\";\ngblChannelGenericImage = \"\";\ngblChannelAssetsCDN = \"\";\ngblChannelProjectImage = \"\";\ngblChannelFrameOnlyLensUPC = \"\";\ngblChannelShowUiSkeleton = \"\";\n",
             "parentId": null,
             "callbackType": null
         }, {

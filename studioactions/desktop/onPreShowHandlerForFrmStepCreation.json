@@ -1,0 +1,25 @@
+{
+    "AS_Form_d8781c81bcd743269ce971149287ea25": {
+        "id": "AS_Form_d8781c81bcd743269ce971149287ea25",
+        "type": "ACTION_SEQUENCE",
+        "name": "onPreShowHandlerForFrmStepCreation",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlowCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "d569d8ca39af43bea658ee877f5208b9"
+        },
+        "language": "js",
+        "eventType": "preShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_b5f4a6c2463446d3ba07694d7f97b5db",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "//resetting interface\nthis.view.txtFlowDescription.text = \"\";\nthis.view.swIsDefaultFlow.selectedIndex = 1;\nthis.view.swIsSupernova.selectedIndex = 1;\nthis.view.swShowFrameOnly.selectedIndex = 1;\nthis.view.swShowFramePlusLenses.selectedIndex = 1;\nthis.view.swShowSavingsLabel.selectedIndex = 1;\nthis.view.swActivateDistanceAndReading.selectedIndex = 1;",
+            "parentId": null
+        }]
+    }
+}
