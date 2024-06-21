@@ -1,0 +1,25 @@
+{
+    "AS_Form_db1c39f85b7946cd87cd54c729f46c99": {
+        "id": "AS_Form_db1c39f85b7946cd87cd54c729f46c99",
+        "type": "ACTION_SEQUENCE",
+        "name": "initHandlerForFrmStepComposition",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmStepComposition",
+            "type": "forms",
+            "platform": "",
+            "KUID": "j7b99cee3df84132ae59e348dbb47442"
+        },
+        "language": "js",
+        "eventType": "init",
+        "actions": [{
+            "id": "ADD_SNIPPET_bfc2c8ebae3b4c378edc7525d925b3dd",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// saving initial state of steps and flexes\ndebugger;\ngblStepInitialState = this.view.flxBoxFirstStep;\ngblFlexRightInitialState = this.view.flxScrollRight;\ngblFlexLeftInitialState = this.view.flxScrollLeft;",
+            "parentId": null
+        }]
+    }
+}

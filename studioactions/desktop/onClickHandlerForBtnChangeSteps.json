@@ -122,7 +122,7 @@
         }, {
             "id": "ADD_SNIPPET_c5bc41c93771494a84a001bb4d0a8608",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### Label Copy recuperata correttamente\");\ngblLabelCopyId = LABELCOPY_flow_active_CustomQueryGet.records[0].id;",
+            "codeSnippet": "voltmx.print(\"### Label Copy recuperata correttamente\");\nself.view.flxPopupEditFlow.setVisibility(false);\nself.view.flxBlur.setVisibility(false);\ngblLabelCopyId = LABELCOPY_flow_active_CustomQueryGet.records[0].id;",
             "parentId": "_cc55e019fb0845f2971c6a6c610fe5b4",
             "callbackType": null
         }, {

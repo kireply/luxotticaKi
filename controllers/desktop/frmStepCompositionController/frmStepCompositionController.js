@@ -741,8 +741,12 @@ define({
   },
 
   
-  
-  
+  onDestroyyy: function () {
+    let model = new CustomFormModel();
+    this.context = null;
+    this.model = null;
+  },
+
   
   
   

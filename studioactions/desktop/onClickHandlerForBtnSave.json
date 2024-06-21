@@ -170,7 +170,7 @@
         }, {
             "id": "ADD_SNIPPET_e568e09aeb6a4a00b705d0bcc269b952",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### entrato in ELSE per salvataggio di un flusso nuovo. Invoco direttamente saveStepComposition\");\ngblSavingFlowProdAndActive = false;\ndebugger; // else",
+            "codeSnippet": "voltmx.print(\"### entrato in ELSE per salvataggio di un flusso nuovo. Invoco direttamente saveStepComposition\");\ndebugger; // else",
             "parentId": "_e52221cbe82a4aedb44a5bc3442d8743",
             "callbackType": null
         }, {
@@ -240,16 +240,6 @@
             "callbackType": null,
             "enableMappingEditor": true
         }, {
-            "id": "LOADING_INDICATOR_he9b290fb5784797aa448e8cfbc232cd",
-            "selectedOption": "dismiss",
-            "parentId": "INVOKE_SERVICE_id9b9408c77347e3a57844598abbeec8",
-            "type": "LOADING_INDICATOR",
-            "callbackType": "Callback",
-            "skin": "none",
-            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
-            "isBlocked": "true",
-            "showProgressIndicator": "true"
-        }, {
             "id": "ADD_SNIPPET_f14a744cb03543649bc49ec76e9b46f0",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### COMPONENT_INSTANCE_Flow_CustomQuery.records: \" + JSON.stringify(COMPONENT_INSTANCE_Flow_CustomQuery.records) );",
@@ -281,6 +271,16 @@
             "parentId": "INVOKE_SERVICE_id9b9408c77347e3a57844598abbeec8",
             "callbackType": "Callback",
             "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_a81c5364ab704951b81f4698bfb3b379",
+            "selectedOption": "dismiss",
+            "parentId": "_ca2b9ef3c7484e22a29da4b34a8019f1",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
         }, {
             "id": "SHOW_ALERT_f2a2b43015a54b0ebefea6696cabcc3e",
             "type": "SHOW_ALERT",
@@ -349,6 +349,16 @@
             "callbackType": "Callback",
             "criteria": "all"
         }, {
+            "id": "LOADING_INDICATOR_cf006a81849e44229a52b0abf3301bd6",
+            "selectedOption": "dismiss",
+            "parentId": "_fa36c62a0d6b4ad19c9a62d080d3fd80",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "SHOW_ALERT_a6009eb152b2477cb5ae2560c9ad865f",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
@@ -380,6 +390,16 @@
             "callbackType": null,
             "disabled": null,
             "source": "controller"
+        }, {
+            "id": "LOADING_INDICATOR_id0efbafdf014f30b0c0c584ae4b9d30",
+            "selectedOption": "dismiss",
+            "parentId": "_ab001465cfd447b3a1ceb3407eea68df",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
         }, {
             "id": "LOADING_INDICATOR_g240daf853084e6cab06aa848abbc0ed",
             "selectedOption": "dismiss",
@@ -422,6 +442,16 @@
             "parentId": "INVOKE_SERVICE_hdef9731234b4aab96d887167b9b5022",
             "callbackType": "Callback",
             "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_e8438c98ef854d45ba7b52c898f74827",
+            "selectedOption": "dismiss",
+            "parentId": "_c9e6fcd6047e423697ee9f1e7b6f2ff2",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
         }, {
             "id": "SHOW_ALERT_c5391e66a3e545af8e2c3d9e188d1b69",
             "type": "SHOW_ALERT",
@@ -615,6 +645,16 @@
             "callbackType": "Callback",
             "criteria": "all"
         }, {
+            "id": "LOADING_INDICATOR_a158361b27c842b0a16f713fa0444645",
+            "selectedOption": "dismiss",
+            "parentId": "_ab596257b44947b0a621a39493905354",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "SHOW_ALERT_j272792f0b894a099335a2956c00b4cd",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
@@ -654,6 +694,16 @@
             "callbackType": "Callback",
             "criteria": "all"
         }, {
+            "id": "LOADING_INDICATOR_i01048686e174373812bd1b67f87a4e4",
+            "selectedOption": "dismiss",
+            "parentId": "_ia9f24d321184f9185e12a6341f4e776",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "SHOW_ALERT_d6b6ddb8c4cd4f9bbdaa42f0d5049b8b",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
@@ -685,6 +735,16 @@
             "callbackType": null,
             "disabled": null,
             "source": "controller"
+        }, {
+            "id": "LOADING_INDICATOR_b4c6f2f5822d447da51e06e4de7987d3",
+            "selectedOption": "dismiss",
+            "parentId": "_d3f8090f17bc4153bf36ddac263634f8",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
         }]
     }
 }
