@@ -131,7 +131,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"variable_labelCopyId\": labelCopyId,\n    \"_meta_\": {\n        \"eventName\": \"onRowClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"variable_labelCopyId\": labelCopyId,\n    \"_meta_\": {\n        \"eventName\": \"onRowClick\",\n        \"widgetId\": \"segLabels\"\n    }\n}",
             "isCustomInput": false
         }, {
             "id": "LOADING_INDICATOR_ede9416ccf5c4c37a447b59f8269d1b3",

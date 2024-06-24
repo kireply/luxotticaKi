@@ -1,0 +1,25 @@
+{
+    "AS_Form_eae6e1e4bee54fdea8691085eebb97ca": {
+        "id": "AS_Form_eae6e1e4bee54fdea8691085eebb97ca",
+        "type": "ACTION_SEQUENCE",
+        "name": "preShowHandlerForFormChannelCreation",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmChannelCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "b995d95be2ee4d2181bb89391aa35ffb"
+        },
+        "language": "js",
+        "eventType": "preShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_jea246b4c1494aac997653f2fc0ad0d7",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// resetting all page\nthis.view.flxPopupCreateNewChannel.setVisibility(false);\nthis.view.txtChannelID.text = \"\";\nthis.view.txtChannelName.text = \"\";\nthis.view.txtChannelLogo.text = \"\";\nthis.view.txtChannelProperties.text = \"\";\nthis.view.txtChannelGenericImage.text = \"\";\nthis.view.txtChannelAssetsCDN.text = \"\";\nthis.view.txtChannelProjectImage.text = \"\";\nthis.view.txtChannelFrameOnlyLensUPC.text = \"\";\n",
+            "parentId": null
+        }]
+    }
+}

@@ -1,90 +1,90 @@
 {
   "android": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
   "androidwearos": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
-  "background_color": "ffffffff",
+  "background_color": "000000ff",
   "bg_type": "one",
-  "border_color": "0000007f",
-  "border_style": "rc",
+  "border_color": "ffffffff",
+  "border_style": "plain",
   "border_type": 0,
-  "border_width": 1,
+  "border_width": 0,
   "desktopweb": {
     "font_name": "Montserrat-Regular",
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
   "fontSizeInPx": false,
-  "font_color": "3333337f",
+  "font_color": "ffffffff",
   "font_name": "iphoneSystem",
-  "font_size": 100,
+  "font_size": 119,
   "font_style": "normal",
   "font_weight": "400",
   "ipad": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
   "iphone": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
   "isDefaultSkin": false,
   "kiosk": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
-  "kuid": "s0cf5fd96cf7445897df2234572814cc",
+  "kuid": "s72b9aaef2c9443aa0dc038590bc47cd",
   "nativemac": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
   "nativewin": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
   "spaan": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
   "spaandroidtablet": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
   "spaip": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
   "spaipad": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
   "spawindowstablet": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
   "spawinphone8": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
   "tabrcandroid": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
-  "wType": "TextField",
+  "wType": "Button",
   "watchos": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
   "windows8": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   },
   "winphone8": {
-    "font_size": 100,
+    "font_size": 119,
     "isForked": false
   }
 }

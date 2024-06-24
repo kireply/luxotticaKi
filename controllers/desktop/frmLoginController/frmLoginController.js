@@ -2523,7 +2523,7 @@ define({
          "alertType": constants.ALERT_TYPE_INFO,
          "alertTitle": "Fail",
          "yesLabel": "Ok",
-         "message": "Login not permitted",
+         "message": "email or password incorrect.",
          "alertHandler": SHOW_ALERT_Failure_Callback
        }, {
          "iconPosition": constants.ALERT_ICON_POSITION_LEFT

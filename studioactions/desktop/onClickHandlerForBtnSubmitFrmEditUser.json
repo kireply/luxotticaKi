@@ -1,22 +1,22 @@
 {
-    "AS_Button_e3c879dd49cd4371b44f6c6dc2d6053a": {
-        "id": "AS_Button_e3c879dd49cd4371b44f6c6dc2d6053a",
+    "AS_Button_ff0fb40e4aef4475bda27255fcedcd39": {
+        "id": "AS_Button_ff0fb40e4aef4475bda27255fcedcd39",
         "type": "ACTION_SEQUENCE",
-        "name": "onClickHandlerForButtonSubmitAddUser",
+        "name": "onClickHandlerForBtnSubmitFrmEditUser",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
         }],
         "contextObj": {
-            "name": "frmAddUser",
+            "name": "frmEditUser",
             "type": "forms",
             "platform": "",
-            "KUID": "h902c48427904d6bb5bbba3458b3d375"
+            "KUID": "f083813d2c09432d9f3d793de344cf37"
         },
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "ADD_LOCAL_VARIABLE_ad8252c3b2ae486cbcf865fb37515e42",
+            "id": "ADD_LOCAL_VARIABLE_he2dfd9d66034465b53a9fdf8ac81c30",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "nameOK",
             "isGlobal": false,
@@ -26,9 +26,9 @@
             "parentId": null,
             "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_hc7ec8639063491c9de6f458c25a5d2e",
+            "id": "ADD_LOCAL_VARIABLE_e439accdccd446a3b7e92e81db1eb509",
             "type": "ADD_LOCAL_VARIABLE",
-            "name": "surnameOK",
+            "name": "SurnameOK",
             "isGlobal": false,
             "valuetype": "constant",
             "datatype": "boolean",
@@ -36,7 +36,7 @@
             "parentId": null,
             "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_f4888fde269f4e369be9c73048eb070f",
+            "id": "ADD_LOCAL_VARIABLE_b30c316d7cce4714a3f1d1649d72c5e6",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "emailOK",
             "isGlobal": false,
@@ -46,7 +46,7 @@
             "parentId": null,
             "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_ea6214d5ea514ec49693b241a418c16b",
+            "id": "ADD_LOCAL_VARIABLE_be7e564c73804f1cb7e33acd28e73993",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "passwordOK",
             "isGlobal": false,
@@ -56,7 +56,7 @@
             "parentId": null,
             "callbackType": null
         }, {
-            "id": "_fd16aafe7a62443aab5d56340b603f6c",
+            "id": "_dbb241f01421483a83a93fe354fd5f66",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -64,14 +64,14 @@
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "\"\"",
-                "leftItemKUID": "h902c48427904d6bb5bbba3458b3d375",
-                "leftWidgetKUID": "g3952d65a70b4af7850251ffbdf3d8a2"
+                "leftItemKUID": "f083813d2c09432d9f3d793de344cf37",
+                "leftWidgetKUID": "eff2a31c50a44391b80a36105ff53648"
             }],
             "parentId": null,
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "_efd47bf707c343299485f6054332c3dc",
+            "id": "_h611e1c8cc604a149e1c1eb67449acce",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -84,35 +84,19 @@
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "ADD_SNIPPET_hde95722aea848a0b07fc334b73d1d3d",
+            "id": "ADD_SNIPPET_fa14dcaf889648d89f17c53a87a67f3f",
             "type": "ADD_SNIPPET",
             "codeSnippet": "nameOK = true;",
-            "parentId": "_efd47bf707c343299485f6054332c3dc",
+            "parentId": "_h611e1c8cc604a149e1c1eb67449acce",
             "callbackType": null
         }, {
-            "id": "ADD_SNIPPET_i23d271c8d97481d876c9b810ae50765",
+            "id": "ADD_SNIPPET_fc267517c73f48c9a2f0a0c02f3198bd",
             "type": "ADD_SNIPPET",
             "codeSnippet": "nameOK = false;",
-            "parentId": "_fd16aafe7a62443aab5d56340b603f6c",
+            "parentId": "_dbb241f01421483a83a93fe354fd5f66",
             "callbackType": null
         }, {
-            "id": "SHOW_ALERT_e97d80c3ea0841cd950b56bc52046d9b",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "Field \"Name\" cannot be empty.",
-            "yesLabel": "Ok",
-            "alertMessage": "Field \"Name\" cannot be empty.",
-            "messageType": "constant",
-            "parentId": "_fd16aafe7a62443aab5d56340b603f6c",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
-            "id": "_aac7fa999c274e799ae104c1e6a7fee4",
+            "id": "_jbb6837f35f5460d9178876515485f2d",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -120,14 +104,14 @@
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "\"\"",
-                "leftItemKUID": "h902c48427904d6bb5bbba3458b3d375",
-                "leftWidgetKUID": "f5a3e4838e99480fb50f95a74039c97a"
+                "leftItemKUID": "f083813d2c09432d9f3d793de344cf37",
+                "leftWidgetKUID": "j3b47800a985404d8be2133baaf3fcbd"
             }],
             "parentId": null,
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "_b303c377bf184898a15dbfec574288b2",
+            "id": "_h949546ad6204eb2b408741de5b1cb01",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -140,35 +124,19 @@
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "ADD_SNIPPET_ab024d063efa4f79a5aace16470b97a5",
+            "id": "ADD_SNIPPET_f835cc499ade43a886d2e5c48d99cb7a",
             "type": "ADD_SNIPPET",
             "codeSnippet": "surnameOK = true;",
-            "parentId": "_b303c377bf184898a15dbfec574288b2",
+            "parentId": "_h949546ad6204eb2b408741de5b1cb01",
             "callbackType": null
         }, {
-            "id": "ADD_SNIPPET_fa9098bc0fff426eb9466ffbcc627c1a",
+            "id": "ADD_SNIPPET_h5e38774ae874f58873e960a831b84bd",
             "type": "ADD_SNIPPET",
             "codeSnippet": "surnameOK = false;",
-            "parentId": "_aac7fa999c274e799ae104c1e6a7fee4",
+            "parentId": "_jbb6837f35f5460d9178876515485f2d",
             "callbackType": null
         }, {
-            "id": "SHOW_ALERT_f15e6c5394f9459185d8a9a5b02579c0",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "Field \"Surname\" cannot be empty.",
-            "yesLabel": "Ok",
-            "alertMessage": "Field \"Surname\" cannot be empty.",
-            "messageType": "constant",
-            "parentId": "_aac7fa999c274e799ae104c1e6a7fee4",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
-            "id": "_d8655675abe14b929c0d2f5f59e3238f",
+            "id": "_a27a214cc2e44c15823f6350aee29966",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -176,14 +144,14 @@
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "\"\"",
-                "leftItemKUID": "h902c48427904d6bb5bbba3458b3d375",
-                "leftWidgetKUID": "c0e515abaddf43488b5fefd9881466d2"
+                "leftItemKUID": "f083813d2c09432d9f3d793de344cf37",
+                "leftWidgetKUID": "af72ce7e0a3d4554b7f3456d59f4c4b5"
             }],
             "parentId": null,
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "_d369843e77e54734a8790e2731d77a7f",
+            "id": "_d6a6dd71be51457898ed1d5e2a4bbf77",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -196,30 +164,30 @@
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "ADD_SNIPPET_e4026678c5d04d1abb623f21005ad3dd",
+            "id": "ADD_SNIPPET_cbe263a58ce843ed819b79b46b0b1bfc",
             "type": "ADD_SNIPPET",
             "codeSnippet": "emailOK = true; // email non vuota, per il momento ancora valida\n\n// Uso una regex per verificare il formato <stringa>@<stringa>\nlet email = this.view.addoredituser2.txtCompileUserEmail.text;\nconst pattern = /^[^@]+@[^@]+$/;\nemailOK = pattern.test(email);\n\n// controllo che la email sia lunga almeno 4 caratteri\nif (email.length < 4) {\n  emailOK = false;\n}",
-            "parentId": "_d369843e77e54734a8790e2731d77a7f",
+            "parentId": "_d6a6dd71be51457898ed1d5e2a4bbf77",
             "callbackType": null
         }, {
-            "id": "_c31e095875bd4886bf95807d13f1752f",
+            "id": "_a0d200797f264c94920fe4e678b35524",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
                 "leftValue": "!emailOK"
             }],
-            "parentId": "_d369843e77e54734a8790e2731d77a7f",
+            "parentId": "_d6a6dd71be51457898ed1d5e2a4bbf77",
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "SHOW_ALERT_b32385e3041441249d5a52f2cc3ce655",
+            "id": "SHOW_ALERT_ee7ab09858b545649ef9304f800fa8ce",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
             "alertTitle": "Invalid email inserted.",
             "yesLabel": "Ok",
             "alertMessage": "Invalid email inserted.",
             "messageType": "constant",
-            "parentId": "_c31e095875bd4886bf95807d13f1752f",
+            "parentId": "_a0d200797f264c94920fe4e678b35524",
             "callbackType": null,
             "alertTitlei18n": null,
             "yesLabeli18n": null,
@@ -228,29 +196,13 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "ADD_SNIPPET_f394ce8263d242bd8ddc9e6f3a88747c",
+            "id": "ADD_SNIPPET_d5ccaf60342e4ff48c64f0109c804b26",
             "type": "ADD_SNIPPET",
             "codeSnippet": "emailOK = false;",
-            "parentId": "_d8655675abe14b929c0d2f5f59e3238f",
+            "parentId": "_a27a214cc2e44c15823f6350aee29966",
             "callbackType": null
         }, {
-            "id": "SHOW_ALERT_if16f213fe93496e8e1faf44bebc5d15",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "Field \"Email\" cannot be empty.",
-            "yesLabel": "Ok",
-            "alertMessage": "Field \"Email\" cannot be empty.",
-            "messageType": "constant",
-            "parentId": "_d8655675abe14b929c0d2f5f59e3238f",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
-            "id": "_e505ec3c14dd47d3813d9d888c1f3322",
+            "id": "_a1406a3517e04d7b9f5f5802483ec1bf",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -258,14 +210,14 @@
                 "operator": "===",
                 "rightValueType": "value",
                 "rightValue": "\"\"",
-                "leftItemKUID": "h902c48427904d6bb5bbba3458b3d375",
-                "leftWidgetKUID": "jbfa93815a4a488ea2429415837badc9"
+                "leftItemKUID": "f083813d2c09432d9f3d793de344cf37",
+                "leftWidgetKUID": "b3733bd7f5c249a2b03038d32053b749"
             }],
             "parentId": null,
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "_a887388ef8c54d94ae4509daa74a8ac6",
+            "id": "_eb0c444c4a2a49bbb21784a635e79128",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -278,35 +230,13 @@
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "ADD_SNIPPET_a0c9039ed5b4475da2ca9ae79a137b70",
+            "id": "ADD_SNIPPET_if0a78e0ea1849f288b3333fb70f8355",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "passwordOK = true; // password non vuota, per il momento ancora valida\n// TODO: aggiungere controllo regex per verificare la robustessa della password.",
-            "parentId": "_a887388ef8c54d94ae4509daa74a8ac6",
+            "codeSnippet": "passwordOK = true; // password non vuota per, il momento ancora valida \n// TODO: aggiungi controllo regex per verificare robustezza password",
+            "parentId": "_eb0c444c4a2a49bbb21784a635e79128",
             "callbackType": null
         }, {
-            "id": "ADD_SNIPPET_i5c2bfe644ff4d06aa8f764dc3e6af9f",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "passwordOK = false;",
-            "parentId": "_e505ec3c14dd47d3813d9d888c1f3322",
-            "callbackType": null
-        }, {
-            "id": "SHOW_ALERT_g78cb070ee344dbf8eedcf1f728f89f7",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "Field \"Password\" cannot be empty.",
-            "yesLabel": "Ok",
-            "alertMessage": "Field \"Password\" cannot be empty.",
-            "messageType": "constant",
-            "parentId": "_e505ec3c14dd47d3813d9d888c1f3322",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
-            "id": "_hb061baa61e247ae802788cca955f35c",
+            "id": "_c90d246dfade48be81ee0d15125daa9b",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
@@ -316,16 +246,16 @@
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "INVOKE_SERVICE_dee92544524e4b0097065b1a6d87ce5a",
+            "id": "INVOKE_SERVICE_f5ab6bb2474740a4a34236cd888f87d8",
             "type": "INVOKE_ASYNC_SERVICE",
             "inputparams": null,
             "httpheaders": null,
             "httpconfigs": null,
             "isasynchronous": true,
             "mappings": {
-                "ME_Mapping_b236d003a86f447fabced93f78e8019b": {
+                "ME_Mapping_ba11b9a691ba4f8eb5de950b8a771085": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_b236d003a86f447fabced93f78e8019b",
+                    "id": "ME_Mapping_ba11b9a691ba4f8eb5de950b8a771085",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -336,11 +266,11 @@
                         "widgetPath": "this.view.addoredituser2.txtName",
                         "widgetType": "TextField",
                         "dataType": "string",
-                        "itemId": "frmAddUser",
-                        "widgetKUID": "g3952d65a70b4af7850251ffbdf3d8a2",
-                        "itemKUID": "h902c48427904d6bb5bbba3458b3d375",
+                        "itemId": "frmEditUser",
+                        "widgetKUID": "eff2a31c50a44391b80a36105ff53648",
+                        "itemKUID": "f083813d2c09432d9f3d793de344cf37",
                         "forkedPlatform": "all",
-                        "instanceKUID": "i38dfca959c54bd09e262e1737d05c9a"
+                        "instanceKUID": "ae46d283a60140d784f93e6aa0e63e6a"
                     },
                     "target": {
                         "type": "Services",
@@ -351,14 +281,14 @@
                             "servicename": "mariaDB",
                             "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                             "type": "integration",
-                            "operationname": "USER_create",
-                            "operationid": "115560"
+                            "operationname": "USER_update",
+                            "operationid": "115559"
                         }
                     }
                 },
-                "ME_Mapping_ee5930856afb4f4ab7533076fc1d633c": {
+                "ME_Mapping_h43e08ff4e09414595a5d1b13cfde03f": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_ee5930856afb4f4ab7533076fc1d633c",
+                    "id": "ME_Mapping_h43e08ff4e09414595a5d1b13cfde03f",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -369,11 +299,11 @@
                         "widgetPath": "this.view.addoredituser2.txtSurname",
                         "widgetType": "TextField",
                         "dataType": "string",
-                        "itemId": "frmAddUser",
-                        "widgetKUID": "f5a3e4838e99480fb50f95a74039c97a",
-                        "itemKUID": "h902c48427904d6bb5bbba3458b3d375",
+                        "itemId": "frmEditUser",
+                        "widgetKUID": "j3b47800a985404d8be2133baaf3fcbd",
+                        "itemKUID": "f083813d2c09432d9f3d793de344cf37",
                         "forkedPlatform": "all",
-                        "instanceKUID": "i38dfca959c54bd09e262e1737d05c9a"
+                        "instanceKUID": "ae46d283a60140d784f93e6aa0e63e6a"
                     },
                     "target": {
                         "type": "Services",
@@ -384,14 +314,14 @@
                             "servicename": "mariaDB",
                             "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                             "type": "integration",
-                            "operationname": "USER_create",
-                            "operationid": "115560"
+                            "operationname": "USER_update",
+                            "operationid": "115559"
                         }
                     }
                 },
-                "ME_Mapping_id75b9397acd4f07a0bdfe841d68b851": {
+                "ME_Mapping_ceb309b9857a4c9aa682d0ad84ff21ee": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_id75b9397acd4f07a0bdfe841d68b851",
+                    "id": "ME_Mapping_ceb309b9857a4c9aa682d0ad84ff21ee",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -402,11 +332,11 @@
                         "widgetPath": "this.view.addoredituser2.txtCompileUserEmail",
                         "widgetType": "TextField",
                         "dataType": "string",
-                        "itemId": "frmAddUser",
-                        "widgetKUID": "c0e515abaddf43488b5fefd9881466d2",
-                        "itemKUID": "h902c48427904d6bb5bbba3458b3d375",
+                        "itemId": "frmEditUser",
+                        "widgetKUID": "af72ce7e0a3d4554b7f3456d59f4c4b5",
+                        "itemKUID": "f083813d2c09432d9f3d793de344cf37",
                         "forkedPlatform": "all",
-                        "instanceKUID": "i38dfca959c54bd09e262e1737d05c9a"
+                        "instanceKUID": "ae46d283a60140d784f93e6aa0e63e6a"
                     },
                     "target": {
                         "type": "Services",
@@ -417,14 +347,14 @@
                             "servicename": "mariaDB",
                             "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                             "type": "integration",
-                            "operationname": "USER_create",
-                            "operationid": "115560"
+                            "operationname": "USER_update",
+                            "operationid": "115559"
                         }
                     }
                 },
-                "ME_Mapping_de0faa4e9d2f4ab49cb1d16b7cf3a974": {
+                "ME_Mapping_bc579a1f7c69423a8dac4c8fee95a03e": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_de0faa4e9d2f4ab49cb1d16b7cf3a974",
+                    "id": "ME_Mapping_bc579a1f7c69423a8dac4c8fee95a03e",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -435,11 +365,11 @@
                         "widgetPath": "this.view.addoredituser2.txtCompileUserPassword",
                         "widgetType": "TextField",
                         "dataType": "string",
-                        "itemId": "frmAddUser",
-                        "widgetKUID": "jbfa93815a4a488ea2429415837badc9",
-                        "itemKUID": "h902c48427904d6bb5bbba3458b3d375",
+                        "itemId": "frmEditUser",
+                        "widgetKUID": "b3733bd7f5c249a2b03038d32053b749",
+                        "itemKUID": "f083813d2c09432d9f3d793de344cf37",
                         "forkedPlatform": "all",
-                        "instanceKUID": "i38dfca959c54bd09e262e1737d05c9a"
+                        "instanceKUID": "ae46d283a60140d784f93e6aa0e63e6a"
                     },
                     "target": {
                         "type": "Services",
@@ -450,45 +380,70 @@
                             "servicename": "mariaDB",
                             "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                             "type": "integration",
-                            "operationname": "USER_create",
-                            "operationid": "115560"
+                            "operationname": "USER_update",
+                            "operationid": "115559"
+                        }
+                    }
+                },
+                "ME_Mapping_ae009d737d7d49698ba0b03350dd19b6": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_ae009d737d7d49698ba0b03350dd19b6",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Forms",
+                        "propertyName": "text",
+                        "widgetId": "txtID",
+                        "widgetPath": "this.view.txtID",
+                        "widgetType": "TextField",
+                        "dataType": "string",
+                        "itemId": "frmEditUser",
+                        "widgetKUID": "b6d4e964f49343f0a3b4764ac8136996",
+                        "itemKUID": "f083813d2c09432d9f3d793de344cf37",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "id",
+                        "dataType": "number",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "USER_update",
+                            "operationid": "115559"
                         }
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_b236d003a86f447fabced93f78e8019b", "ME_Mapping_ee5930856afb4f4ab7533076fc1d633c", "ME_Mapping_id75b9397acd4f07a0bdfe841d68b851", "ME_Mapping_de0faa4e9d2f4ab49cb1d16b7cf3a974"],
+            "mappingsOrder": ["ME_Mapping_ba11b9a691ba4f8eb5de950b8a771085", "ME_Mapping_h43e08ff4e09414595a5d1b13cfde03f", "ME_Mapping_ceb309b9857a4c9aa682d0ad84ff21ee", "ME_Mapping_bc579a1f7c69423a8dac4c8fee95a03e", "ME_Mapping_ae009d737d7d49698ba0b03350dd19b6"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
                 "type": "integration",
-                "operationname": "USER_create",
-                "operationid": "115560"
+                "operationname": "USER_update",
+                "operationid": "115559"
             },
-            "parentId": "_hb061baa61e247ae802788cca955f35c",
+            "parentId": "_c90d246dfade48be81ee0d15125daa9b",
             "callbackType": null,
             "enableMappingEditor": true
         }, {
-            "id": "_jfbe9a4c8166436f8f8b40c7a537b146",
-            "type": "IF_CONDITION",
-            "conditions": [{
-                "leftValueType": "expression",
-                "leftValue": "USER_create!==null"
-            }, {
-                "leftValueType": "expression",
-                "leftValue": "USER_create.opstatus===0"
-            }],
-            "parentId": "INVOKE_SERVICE_dee92544524e4b0097065b1a6d87ce5a",
-            "callbackType": "Callback",
-            "criteria": "all"
+            "id": "ADD_SNIPPET_i55ca616dc7e4a779a9453cbe44c9827",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "passwordOK = false;",
+            "parentId": "_a1406a3517e04d7b9f5f5802483ec1bf",
+            "callbackType": null
         }, {
-            "id": "SHOW_ALERT_ed7e0b64f259468895a00309755c22d8",
+            "id": "SHOW_ALERT_ebf3ea04dce7400aa8f13e2ee574d432",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_INFO",
-            "alertTitle": "User Added.",
+            "alertTitle": "Field \"Password\" cannot be empty.",
             "yesLabel": "Ok",
-            "alertMessage": "User Added.",
+            "alertMessage": "Field \"Password\" cannot be empty.",
             "messageType": "constant",
-            "parentId": "_jfbe9a4c8166436f8f8b40c7a537b146",
+            "parentId": "_a1406a3517e04d7b9f5f5802483ec1bf",
             "callbackType": null,
             "alertTitlei18n": null,
             "yesLabeli18n": null,
@@ -497,7 +452,81 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "_e37791125ba6434b9649b59b512460b8",
+            "id": "SHOW_ALERT_e69c9926305249c9b13d0e1b1239b9a5",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": "Field \"Email\" cannot be empty.",
+            "yesLabel": "Ok",
+            "alertMessage": "Field \"Email\" cannot be empty.",
+            "messageType": "constant",
+            "parentId": "_a27a214cc2e44c15823f6350aee29966",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "SHOW_ALERT_cb48ca3da57b46c285d32f09afd36fe2",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": "Field \"Surname\" cannot be empty.",
+            "yesLabel": "Ok",
+            "alertMessage": "Field \"Surname\" cannot be empty.",
+            "messageType": "constant",
+            "parentId": "_jbb6837f35f5460d9178876515485f2d",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "SHOW_ALERT_c8f709fc03ea4fe09e254af03d1b77dc",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": "Field \"Name\" cannot be empty.",
+            "yesLabel": "Ok",
+            "alertMessage": "Field \"Name\" cannot be empty.",
+            "messageType": "constant",
+            "parentId": "_dbb241f01421483a83a93fe354fd5f66",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "_f47f2b9c2c2f4bd3ad8823cde164c0a6",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "USER_update.opstatus===0"
+            }],
+            "parentId": "INVOKE_SERVICE_f5ab6bb2474740a4a34236cd888f87d8",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "SHOW_ALERT_cdc39e793042471e8e8ce042b050da7e",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": "User updated.",
+            "yesLabel": "Ok",
+            "alertMessage": "User updated.",
+            "messageType": "constant",
+            "parentId": "_f47f2b9c2c2f4bd3ad8823cde164c0a6",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "_d0994428928d404a9e72c839089a10b7",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -506,18 +535,18 @@
                 "rightValueType": "widgetprop",
                 "rightValue": ""
             }],
-            "parentId": "INVOKE_SERVICE_dee92544524e4b0097065b1a6d87ce5a",
+            "parentId": "INVOKE_SERVICE_f5ab6bb2474740a4a34236cd888f87d8",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "SHOW_ALERT_f3232174d0404d47984cc472985aef8d",
+            "id": "SHOW_ALERT_ce0757d03bf3439c9e41fd9ea9d3b996",
             "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "User not added",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": "Error.",
             "yesLabel": "Ok",
-            "alertMessage": "Something went wrong",
+            "alertMessage": "Error in updating the user.",
             "messageType": "constant",
-            "parentId": "_e37791125ba6434b9649b59b512460b8",
+            "parentId": "_d0994428928d404a9e72c839089a10b7",
             "callbackType": null,
             "alertTitlei18n": null,
             "yesLabeli18n": null,
@@ -526,27 +555,27 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "NAVIGATE_TO_FORM__d08238e695bb4d2982f76d8a470d9d74",
+            "id": "NAVIGATE_TO_FORM__b1d235b10a7f4678a3166f84c97eae1c",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmDashboard",
             "formKUID": "b164a58fab0f47b1b2023b479f06502d",
             "projectName": "luxotticaKi",
             "mappings": {},
             "mappingsOrder": [],
-            "parentId": "_e37791125ba6434b9649b59b512460b8",
+            "parentId": "_d0994428928d404a9e72c839089a10b7",
             "callbackType": null,
             "enableMappingEditor": true,
             "package": "",
             "isCustomInput": false
         }, {
-            "id": "NAVIGATE_TO_FORM__g665f819e9944e47bcc7612d41ca1e86",
+            "id": "NAVIGATE_TO_FORM__e26e920e354d43e6b01f95d8dbbab496",
             "type": "NAVIGATE_TO_FORM",
             "formId": "frmDashboard",
             "formKUID": "b164a58fab0f47b1b2023b479f06502d",
             "projectName": "luxotticaKi",
             "mappings": {},
             "mappingsOrder": [],
-            "parentId": "_jfbe9a4c8166436f8f8b40c7a537b146",
+            "parentId": "_f47f2b9c2c2f4bd3ad8823cde164c0a6",
             "callbackType": null,
             "enableMappingEditor": true,
             "package": "",

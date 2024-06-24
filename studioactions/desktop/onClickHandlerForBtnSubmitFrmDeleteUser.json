@@ -2,6 +2,7 @@
     "AS_Button_a08f74658f134eebb8a75892adf0a55b": {
         "id": "AS_Button_a08f74658f134eebb8a75892adf0a55b",
         "type": "ACTION_SEQUENCE",
+        "name": "onClickHandlerForBtnSubmitFrmDeleteUser",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -77,6 +78,22 @@
             "callbackType": "Callback",
             "criteria": "all"
         }, {
+            "id": "SHOW_ALERT_d37e86b05e2e4934a3a41ac5c2ce7fd1",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_INFO",
+            "alertTitle": "User deleted.",
+            "yesLabel": "Ok",
+            "alertMessage": "User deleted.",
+            "messageType": "constant",
+            "parentId": "_b3808606061c4ca59f81a1db617a24aa",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
             "id": "_fc38e383ce3b428d8e396de89dfceff9",
             "type": "ELSE_CONDITION",
             "conditions": [{
@@ -94,7 +111,7 @@
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_INFO",
             "alertTitle": "Unsuccesfull deletion",
-            "alertMessage": "User not deleted",
+            "alertMessage": "No user deleted",
             "messageType": "constant",
             "parentId": "_fc38e383ce3b428d8e396de89dfceff9",
             "callbackType": null,

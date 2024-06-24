@@ -7,19 +7,19 @@
     "font_size": 100,
     "isForked": false
   },
-  "background_color": "ffffffff",
+  "background_color": "000000ff",
   "bg_type": "one",
-  "border_color": "0000007f",
-  "border_style": "rc",
+  "border_color": "ffffffff",
+  "border_style": "plain",
   "border_type": 0,
-  "border_width": 1,
+  "border_width": 0,
   "desktopweb": {
     "font_name": "Montserrat-Regular",
     "font_size": 100,
     "isForked": false
   },
   "fontSizeInPx": false,
-  "font_color": "3333337f",
+  "font_color": "ffffffff",
   "font_name": "iphoneSystem",
   "font_size": 100,
   "font_style": "normal",
@@ -37,7 +37,7 @@
     "font_size": 100,
     "isForked": false
   },
-  "kuid": "s0cf5fd96cf7445897df2234572814cc",
+  "kuid": "s9df3b2abe154acf8f9848d573946333",
   "nativemac": {
     "font_size": 100,
     "isForked": false
@@ -74,7 +74,7 @@
     "font_size": 100,
     "isForked": false
   },
-  "wType": "TextField",
+  "wType": "Button",
   "watchos": {
     "font_size": 100,
     "isForked": false

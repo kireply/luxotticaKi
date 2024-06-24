@@ -36,7 +36,7 @@
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "50%"
+        "value": "48.72%"
     },
     "children": [
         "imgMenuOptionSelected",
@@ -46,6 +46,7 @@
     "containerweight": 100,
     "enablescrolling": true,
     "id": "flxMenuOptionSelected",
+    "ide_onClick": "AS_FlexContainer_d81acef8a6954ff49a4e79b8e90ab933",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,

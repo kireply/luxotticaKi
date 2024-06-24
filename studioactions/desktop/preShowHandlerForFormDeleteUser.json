@@ -1,0 +1,25 @@
+{
+    "AS_Form_dfcafaa7c19542ccad8ee560f8239dbe": {
+        "id": "AS_Form_dfcafaa7c19542ccad8ee560f8239dbe",
+        "type": "ACTION_SEQUENCE",
+        "name": "preShowHandlerForFormDeleteUser",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmDeleteUser",
+            "type": "forms",
+            "platform": "",
+            "KUID": "ced7a225779d43028086b1ceb5004406"
+        },
+        "language": "js",
+        "eventType": "preShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_d652d60454864975af884a0a9b1e499c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// resetting all page\nthis.view.txtID.text = \"\";",
+            "parentId": null
+        }]
+    }
+}
