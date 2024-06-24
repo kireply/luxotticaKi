@@ -2,11 +2,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "490dp"
-    },
-    "_left_": {
-        "type": "string",
-        "value": "302dp"
+        "value": "15%"
     },
     "_margin_": [
         0,
@@ -22,37 +18,45 @@
         0
     ],
     "_percent_": true,
-    "_skin_": "s0276e2722b143d0acf143d09275b354",
+    "_right_": {
+        "type": "string",
+        "value": "0"
+    },
+    "_skin_": "s20d1cd7be5b4f3c9c0b423010a5ea3f",
     "_top_": {
         "type": "string",
-        "value": "180dp"
+        "value": "0"
     },
     "_width_": {
         "type": "string",
-        "value": "60%"
+        "value": "30%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
     "centerx": {
         "type": "string",
-        "value": "51.98%"
+        "value": "50%"
+    },
+    "centery": {
+        "type": "string",
+        "value": "50%"
     },
     "children": [
-        "imgExitPopupIsDefaultTrue",
-        "imgComponent"
+        "imgExitPopup",
+        "lblNestedMsg"
     ],
     "clipbounds": false,
     "containerweight": 100,
     "enablescrolling": true,
-    "id": "flxComponentImage",
+    "id": "flxNestedMsg",
     "info": null,
     "iscustomlayout": false,
-    "isvisible": false,
-    "kuid": "idef6a937d3f450f972b345e31e6771c",
+    "isvisible": true,
+    "kuid": "b9e541354d0e4287ae59f82ca5f93377",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMainContainerStepComposition",
+    "parent": "flxNestedBlur",
     "pf": "frmStepComposition",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
@@ -60,6 +64,5 @@
     "snapgridsize": 10,
     "snaptogrid": true,
     "wType": "FlexContainer",
-    "widgetalignment": 1,
-    "zindex": 10
+    "widgetalignment": 1
 }

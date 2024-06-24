@@ -1,0 +1,23 @@
+{
+    "AS_Image_g6c59b9ac5294f528044b57bc73d2c3b": {
+        "id": "AS_Image_g6c59b9ac5294f528044b57bc73d2c3b",
+        "type": "ACTION_SEQUENCE",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }, {
+            "datatype": "string",
+            "name": "x"
+        }, {
+            "datatype": "string",
+            "name": "y"
+        }],
+        "language": "js",
+        "eventType": "onTouchEnd",
+        "actions": [{
+            "id": "ADD_SNIPPET_ide_onTouchEnd_b379b2d5982b4ab0afb64ca008fa77c5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "gblInfoIcon = \"false\";\n// this.view.flxPopupCreateNewChannelInsideFrmChannels.setVisibility(false);\n// this.view.flxPopupChannelInfo.setVisibility(false);\n// this.view.flxPopupCreateNewChannel.setVisibility(false);\nthis.view.flxPopupChannelInfo.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);"
+        }]
+    }
+}
