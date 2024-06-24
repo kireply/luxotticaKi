@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_f10bd2841eb449879ea84845c7333d95",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "debugger;\nvoltmx.print(\"### entrato in preShow di frmStepComposition\");\n// Disabling text areas.\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n// setting the list of component blurred (as no section is open yet)\nthis.view.flxComponentsSide.opacity = 0.5;",
+            "codeSnippet": "// saving initial state of steps and flexes\ndebugger;\ngblStepInitialState = this.view.flxBoxFirstStep;\ngblFlexRightInitialState = this.view.flxScrollRight;\ngblFlexLeftInitialState = this.view.flxScrollLeft;\n\nvoltmx.print(\"### entrato in preShow di frmStepComposition\");\n// Disabling text areas.\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n// setting the list of component blurred (as no section is open yet)\nthis.view.flxComponentsSide.opacity = 0.5;",
             "parentId": null
         }, {
             "id": "ADD_LOCAL_VARIABLE_jbc1064137d34d6b910a0a6850b6ffee",
@@ -152,7 +152,7 @@
         }, {
             "id": "ADD_SNIPPET_c32dfc50a57848c28d93b95d2d3eb1ef",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### btnChangeStep cliccato. gblFlowId passato in input: \" + gblFlowId);\n\n// setting flowName\nvar id;\n  if (gblFlowId < 10) {\n    id = \"0000\" + gblFlowId;\n  } else if (gblFlowId < 100 && gblFlowId >= 10) {\n    id = \"000\" + gblFlowId;\n  } else if (gblFlowId < 1000 && gblFlowId >= 100) {\n    id = \"00\" + gblFlowId;\n  } else if (gblFlowId < 10000 && gblFlowId >= 1000) {\n    id = \"0\" + gblFlowId;\n  }\n\ngblFlowName = \"#\" + gblChannelId + \"_\" + gblFlowCategory.substring(0, 3).toUpperCase() + \"_\" + id;  \nthis.view.lblFlowName.text = gblFlowName;",
+            "codeSnippet": "debugger;\nvoltmx.print(\"### btnChangeStep cliccato. gblFlowId passato in input: \" + gblFlowId);\n\n// setting flowName\nvar id;\n  if (gblFlowId < 10) {\n    id = \"0000\" + gblFlowId;\n  } else if (gblFlowId < 100 && gblFlowId >= 10) {\n    id = \"000\" + gblFlowId;\n  } else if (gblFlowId < 1000 && gblFlowId >= 100) {\n    id = \"00\" + gblFlowId;\n  } else if (gblFlowId < 10000 && gblFlowId >= 1000) {\n    id = \"0\" + gblFlowId;\n  }\n\ngblFlowName = \"#\" + gblChannelId + \"_\" + gblFlowCategory.substring(0, 3).toUpperCase() + \"_\" + id;  \nthis.view.lblFlowName.text = gblFlowName;",
             "parentId": "_c592c52e13464dbbb2c26ba420b45c15",
             "callbackType": null
         }, {

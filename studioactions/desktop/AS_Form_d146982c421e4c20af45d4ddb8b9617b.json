@@ -1,29 +1,25 @@
 {
-	"AS_Form_d146982c421e4c20af45d4ddb8b9617b": {
-		"id": "AS_Form_d146982c421e4c20af45d4ddb8b9617b",
-		"type": "ACTION_SEQUENCE",
-		"name": "AS_Form_d146982c421e4c20af45d4ddb8b9617b",
-		"params": [
-			{
-				"datatype": "collection",
-				"name": "eventobject"
-			}
-		],
-		"contextObj": {
-			"name": "frmFlowCreation",
-			"type": "forms",
-			"platform": "",
-			"KUID": "d569d8ca39af43bea658ee877f5208b9"
-		},
-		"language": "js",
-		"eventType": "postShow",
-		"actions": [
-			{
-				"id": "ADD_SNIPPET_df41bb1141324a028803a918575d782d",
-				"type": "ADD_SNIPPET",
-				"codeSnippet": "//resetting interface\nthis.view.txtFlowDescription.text = \"\";\nthis.view.swIsDefaultFlow",
-				"parentId": null
-			}
-		]
-	}
+    "AS_Form_d146982c421e4c20af45d4ddb8b9617b": {
+        "id": "AS_Form_d146982c421e4c20af45d4ddb8b9617b",
+        "type": "ACTION_SEQUENCE",
+        "name": "AS_Form_d146982c421e4c20af45d4ddb8b9617b",
+        "params": [{
+            "datatype": "collection",
+            "name": "eventobject"
+        }],
+        "contextObj": {
+            "name": "frmFlowCreation",
+            "type": "forms",
+            "platform": "",
+            "KUID": "d569d8ca39af43bea658ee877f5208b9"
+        },
+        "language": "js",
+        "eventType": "postShow",
+        "actions": [{
+            "id": "ADD_SNIPPET_df41bb1141324a028803a918575d782d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "//resetting interface\nthis.view.txtFlowDescription.text = \"\";\nthis.view.swIsDefaultFlow",
+            "parentId": null
+        }]
+    }
 }
