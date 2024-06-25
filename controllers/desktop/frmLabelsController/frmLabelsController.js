@@ -135,14 +135,49 @@ define({
         voltmx.print(workbook);
         workbook.SheetNames.forEach(sheet => {
           let rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]);
-          voltmx.print("### rowObject: " + rowObject);
+          voltmx.print("### rowObject: " + JSON.stringify(rowObject) );
+          
+          // checking/validating content of imported file (contains "label_copy_id" and "id")
+          let importedFileOK = true;
+          for (let obj of rowObject) {
+            if (!obj.hasOwnProperty('label_copy_id') || !obj.hasOwnProperty('id')) { // check if there are these two keys for each element
+              importedFileOK = false;
+            }
+            if (!obj['label_copy_id'] || !obj['id']) {  // checking if the two keys have values for each element
+              importedFileOK = false;
+            }
+            if (typeof obj['label_copy_id'] !== 'string') { // converting value of 'label_copy_id' to stringa if it's not already
+              obj['label_copy_id'] = String(obj['label_copy_id']);
+            }
+          }
 
-          // file uploaded non empty
-          if(rowObject.length !== 0) {
+          if (rowObject.length === 0) {  // file uploaded is empty
             
+            voltmx.ui.Alert({
+              "alertType": constants.ALERT_TYPE_INFO,
+              "alertTitle": "Fail",
+              "yesLabel": "Ok",
+              "message": "File uploaded is empty! Try again with another file."
+            }, {
+              "iconPosition": constants.ALERT_ICON_POSITION_LEFT
+            });
+            
+          } else if (!importedFileOK) {  // file uploaded missing key <label_copy_id> or <id> or both
+            
+            voltmx.ui.Alert({
+              "alertType": constants.ALERT_TYPE_INFO,
+              "alertTitle": "Fail",
+              "yesLabel": "Ok",
+              "message": "File uploaded missing key <label_copy_id> or <id> ! Try again with a correct file."
+            }, {
+              "iconPosition": constants.ALERT_ICON_POSITION_LEFT
+            });
+            
+          } else {  // file uploaded is okay
+
             voltmx.print("### rowObject NON E ZERO");
-            
-            
+
+
             // deleting old labels
             let numLabelsToRemove = gblLabelsList.length-1;
             let labelIdToRemove = "";
@@ -157,21 +192,21 @@ define({
                 voltmx.print("### Delete andata a buon fine");
                 voltmx.print("### Service LABEL_delete response: "+JSON.stringify(response));
               },
-              (error) => {
+                                                                                               (error) => {
                 voltmx.print("### Delete NON andata a buon fine");
                 voltmx.print("### Error in the invocation of service LABEL_delete: " + JSON.stringify(error));
               });
             }
-            
-            
+
+
             // Now creating new labels from uploaded file
-            
+
             voltmx.print("### File contains -" + rowObject.length + "- rows.")
             this.view.segLabels.setVisibility(true);
             this.view.lblNoLabelsFound.setVisibility(false);
             gblLabelsList = rowObject;
             debugger;
-            
+
             // New empty object for the header row
             let headerRow = {}; 
             // finding the row with the most columns (with the most languages/translations).
@@ -280,57 +315,8 @@ define({
               });
 
             });
-
             
-            /* Deleting all records from table LABEL
-            voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_CustomQueryDelete", {}, gblChannelId, (response) => {
-              voltmx.print("### Service response: "+JSON.stringify(response));
-
-              var newList = gblLabelsList;
-
-              newList = gblLabelsList.map(obj => {
-                const newObj = { id: obj.id };
-                for (const key in obj) {
-                  if (key !== 'id') {
-                    newObj[key] = obj[key];
-                  }
-                }
-                return newObj;
-              });
-
-              voltmx.print("### newList FULL: " +  JSON.stringify(newList.slice(1)) );
-
-              // for each label, save it in the DB
-              newList.slice(1).forEach(record => {  // slice because I remove the header from the list
-
-                debugger;
-                voltmx.print("### newList record: " +  JSON.stringify(record) );
-                voltmx.sdk.getDefaultInstance().getIntegrationService("mariaDB").invokeOperation("LABEL_create", {}, record, (response) => {
-                  voltmx.print("### Service response: "+JSON.stringify(response));
-                }, (error) => {
-                  voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error));
-                });
-
-              });
-
-            }, (error) => {
-              voltmx.print("### Error in the invocation of the service: " + JSON.stringify(error) + " - But the operation seems to be completed successfully at the end. The result is positive.");
-            });  */
-
-            
-            
-          } else { // file uploaded is empty
-
-            voltmx.ui.Alert({
-              "alertType": constants.ALERT_TYPE_INFO,
-              "alertTitle": "Fail",
-              "yesLabel": "Ok",
-              "message": "File uploaded is empty! Try again with another file.",
-              "alertHandler": SHOW_ALERT_Failure_Callback
-            }, {
-              "iconPosition": constants.ALERT_ICON_POSITION_LEFT
-            });
-          }
+          } 
         });
       };
       reader.readAsBinaryString(event.target.files[0]);
@@ -346,8 +332,9 @@ define({
   },  // end of function "getExcel()"
   
   
-  
-  
+  SHOW_ALERT_Failure_Callback: function() {
+    voltmx.print("### FAIL ALERT CALLBACK");
+  },
   
   
   

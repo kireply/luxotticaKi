@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_dbbab3499ef246dfa62bf10741f83231",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "// setting image and name for Channel\nthis.view.channelTemplatewithContract.channelLogo = gblChannelLogo;\nthis.view.channelTemplatewithContract.channelInfo = gblChannelName + \" - #\" + gblChannelId;\ngblLabelsFileUploaded = false;",
+            "codeSnippet": "debugger;\n// setting image and name for Channel\nthis.view.channelTemplatewithContract.channelLogo = gblChannelLogo;\nthis.view.channelTemplatewithContract.channelInfo = gblChannelName + \" - #\" + gblChannelId;\ngblLabelsFileUploaded = false;",
             "parentId": null,
             "callbackType": null,
             "disabled": false
