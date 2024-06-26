@@ -310,8 +310,35 @@
             "httpheaders": null,
             "httpconfigs": null,
             "isasynchronous": true,
-            "mappings": {},
-            "mappingsOrder": [],
+            "mappings": {
+                "ME_Mapping_c1a3bc39b5224f16a4b1a958973e0e91": {
+                    "channel": "desktop",
+                    "id": "ME_Mapping_c1a3bc39b5224f16a4b1a958973e0e91",
+                    "type": "MAPPING",
+                    "callbackType": null,
+                    "rectified": true,
+                    "source": {
+                        "type": "Variables",
+                        "propertyName": "gblLabelCopyId",
+                        "dataType": "number",
+                        "forkedPlatform": "all"
+                    },
+                    "target": {
+                        "type": "Services",
+                        "propertyName": "copyId",
+                        "dataType": "string",
+                        "forkedPlatform": "all",
+                        "serviceconfig": {
+                            "servicename": "mariaDB",
+                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                            "type": "integration",
+                            "operationname": "LABEL_copyId_CustomQueryGet",
+                            "operationid": "137514"
+                        }
+                    }
+                }
+            },
+            "mappingsOrder": ["ME_Mapping_c1a3bc39b5224f16a4b1a958973e0e91"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -362,9 +389,9 @@
             "id": "SHOW_ALERT_a6009eb152b2477cb5ae2560c9ad865f",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "LABEL_Flow_CustomQuery.opstatus NOT 0",
+            "alertTitle": "LABEL_copyId_CustomQueryGet.opstatus NOT 0",
             "yesLabel": "Ok",
-            "alertMessage": "LABEL_Flow_CustomQuery.opstatus NOT 0",
+            "alertMessage": "LABEL_copyId_CustomQueryGet.opstatus NOT 0",
             "messageType": "constant",
             "parentId": "_fa36c62a0d6b4ad19c9a62d080d3fd80",
             "callbackType": null,

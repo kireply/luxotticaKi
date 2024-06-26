@@ -2171,6 +2171,14 @@ define({
     });
     
     // Raggruppa i records (delle immagini preview e modal) per component_name e component_order
+    //debugger;
+    //let a = componentsImages;
+    /* Assicurati che componentsImages sia un array
+    if (!Array.isArray(componentsImages)) {
+      // Se non è un array, lo converte in un array
+      componentsImages = [componentsImages];
+    }*/
+    
     let groupedComponentsImages = componentsImages.reduce((acc, record) => {
       if (record.step_order === order) {
         let key = `${record.component_name}_${record.component_order}`;
@@ -2184,6 +2192,13 @@ define({
     
     
     // Raggruppa i records (di property templates) per component_name e component_order
+  
+    /* Assicurati che propertyTemplates sia un array
+    if (!Array.isArray(propertyTemplates)) {
+      // Se non è un array, lo converte in un array
+      propertyTemplates = [propertyTemplates];
+    }*/
+    
     let groupedPropertyTemplates = propertyTemplates.reduce((acc, record) => {
       if (record.step_order === order) {
         let key = `${record.component_name}_${record.component_order}`;
@@ -2204,6 +2219,13 @@ define({
 
 
     // lista di dizionari dove la chiave è il padre e il valore è il figlio
+    
+    /* Assicurati che parentChildMap sia un array
+    if (!Array.isArray(nestedComponents)) {
+      // Se non è un array, lo converte in un array
+      nestedComponents = [nestedComponents];
+    }*/
+
     let parentChildMap = nestedComponents.reduce((acc, item) => {
       acc[item.component_instance_father_id] = item.component_instance_id;
       return acc;

@@ -1,8 +1,8 @@
 {
-    "AS_Form_fa2ba718c61e42e1bb82db9cf5016ae6": {
-        "id": "AS_Form_fa2ba718c61e42e1bb82db9cf5016ae6",
+    "AS_Form_c602f905bfdc476e81d3757b2ae38fb9": {
+        "id": "AS_Form_c602f905bfdc476e81d3757b2ae38fb9",
         "type": "ACTION_SEQUENCE",
-        "name": "onPreShowHandlerForFrmStepComposition1",
+        "name": "onNavigateHandlerForFrmStepComposition",
         "params": [{
             "datatype": "collection",
             "name": "eventobject"
@@ -14,15 +14,35 @@
             "KUID": "j7b99cee3df84132ae59e348dbb47442"
         },
         "language": "js",
-        "eventType": "preShow",
+        "eventType": "onNavigate",
         "actions": [{
-            "id": "ADD_SNIPPET_f10bd2841eb449879ea84845c7333d95",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "// saving initial state of steps and flexes\ndebugger;\ngblStepInitialState = this.view.flxBoxFirstStep;\ngblFlexRightInitialState = this.view.flxScrollRight;\ngblFlexLeftInitialState = this.view.flxScrollLeft;\n\nvoltmx.print(\"### entrato in preShow di frmStepComposition\");\n// Disabling text areas.\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n// setting the list of component blurred (as no section is open yet)\nthis.view.flxComponentsSide.opacity = 0.5;",
+            "id": "ADD_LOCAL_VARIABLE_f3ee48483a1d448fb44aa883758b6ab5",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "previousCreation",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "boolean",
+            "value": "false",
             "parentId": null,
-            "disabled": true
+            "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_jbc1064137d34d6b910a0a6850b6ffee",
+            "id": "ADD_LOCAL_VARIABLE_j3ebaab7d4ab4fa199cdc6a34158514a",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "previousFlows",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "boolean",
+            "value": "false",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_bc1e13504fbd4e2eb249ccd663514660",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// saving initial state of steps and flexes\ndebugger;\ngblStepInitialState = this.view.flxBoxFirstStep;\ngblFlexRightInitialState = this.view.flxScrollRight;\ngblFlexLeftInitialState = this.view.flxScrollLeft;\n\nvoltmx.print(\"### entrato in preShow di frmStepComposition\");\n// Disabling text areas.\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n// setting the list of component blurred (as no section is open yet)\nthis.view.flxComponentsSide.opacity = 0.5;\n\n\nlet Form = voltmx.application.getCurrentForm();\nlet previousForm = Form.id;\nif (previousForm === \"frmStepCreation\") {\n  previousCreation = true;\n} else if (previousForm === \"frmFlows\") {\n  previousFlows = true;\n}",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_LOCAL_VARIABLE_gfa78739a1384d858acefe5b0d84125e",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "stepsList",
             "isGlobal": false,
@@ -30,10 +50,9 @@
             "datatype": "collection",
             "value": "null",
             "parentId": null,
-            "callbackType": null,
-            "disabled": true
+            "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_b7c1271f5b2f4d869d2166ae2cf1d1c1",
+            "id": "ADD_LOCAL_VARIABLE_dcd837ba68d748cbad6373973cce816b",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "stepSectionList",
             "isGlobal": false,
@@ -41,10 +60,9 @@
             "datatype": "collection",
             "value": "null",
             "parentId": null,
-            "callbackType": null,
-            "disabled": true
+            "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_ga522e315a4141b3be7b8509faff5dd7",
+            "id": "ADD_LOCAL_VARIABLE_ba859afaeff54ef6a39991d21edb9e5e",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "previewSectionList",
             "isGlobal": false,
@@ -52,10 +70,9 @@
             "datatype": "collection",
             "value": "null",
             "parentId": null,
-            "callbackType": null,
-            "disabled": true
+            "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_ec8e12e5c2a04d5eb21373e113533f75",
+            "id": "ADD_LOCAL_VARIABLE_cea2079b76514ff2b998a79ed460fc72",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "nestedComponents",
             "isGlobal": false,
@@ -63,10 +80,9 @@
             "datatype": "collection",
             "value": "null",
             "parentId": null,
-            "callbackType": null,
-            "disabled": true
+            "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_i6d0835148574e33b9a43944ab8518fb",
+            "id": "ADD_LOCAL_VARIABLE_b14942d3de39471eb5f30de0740ead69",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "componentsImages",
             "isGlobal": false,
@@ -74,10 +90,9 @@
             "datatype": "collection",
             "value": "null",
             "parentId": null,
-            "callbackType": null,
-            "disabled": true
+            "callbackType": null
         }, {
-            "id": "ADD_LOCAL_VARIABLE_e7b91bd4e60e4881bcc8a9ca8f6c080b",
+            "id": "ADD_LOCAL_VARIABLE_hb98c56a62064b3ba460943c400677a5",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "propertyTemplates",
             "isGlobal": false,
@@ -85,72 +100,40 @@
             "datatype": "collection",
             "value": "null",
             "parentId": null,
-            "callbackType": null,
-            "disabled": true
-        }, {
-            "id": "IF_CONDITION_d80add2b3f71402c8672f8938fc905ca",
-            "type": "IF_CONDITION",
-            "conditions": [{
-                "leftValueType": "navigationsource",
-                "leftValue": "(this.getPreviousForm() === \"frmStepCreation\") && this.navigationContext && this.navigationContext._meta_ && (this.navigationContext._meta_.widgetId ===  \"btnProceed\") && (this.navigationContext._meta_.eventName ===  \"onClick\")",
-                "operator": "===",
-                "rightValue": "",
-                "leftItemKUID": "j27b7970c694429db6312f3b27f7428e",
-                "leftWidgetKUID": "h81dc10a5cb446e3b293ab457ad937e2",
-                "sequenceId": "AS_Button_fc1580a841e04b58b90e8f39b0d6fb0f",
-                "eventName": "onClick",
-                "widgetId": "btnProceed"
-            }],
-            "parentId": null,
-            "criteria": "all",
-            "disabled": true
-        }, {
-            "id": "ADD_SNIPPET_f86b5d8d73aa4051bf755f26f78e510f",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### entrato in onClick di btnProceed da frmStepCreation\");\n\n// setting the first step box title (created in the previous form)\nthis.view.lblStepTitleIntoStepComposition.text = gblFirstStepTitle;\n// setting the flow name show in top center of the form (as reminder of the current flow open)\nthis.view.lblFlowName.text = gblFlowName;\n\n// setting the first step's box on focus (black background, icons shown, related scroll shown)\nthis.view.flxBoxFirstStep.backgroundColor = \"00000000\";\nthis.view.flxBoxFirstStep.imgDeleteStep.isVisible = true;\nthis.view.flxBoxFirstStep.imgEditStep.isVisible = true;\nthis.view.flxBoxFirstStep.lblStepOrder.fontColor = \"FFFFFF00\";\nthis.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = \"FFFFFF00\";\n//this.view.flxRightSide.flxScrollRight.setVisibility(true);\n//this.view.settingsSide.flxScrollSettingsContent.removeAll();\n//this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);\n//this.view.settingsSide.txt.setVisibility(true);\n//gblCurrentStepOrder = 1;\ngblCurrentStepTitle = this.view.lblStepTitleIntoStepComposition.text;\nvoltmx.print(\"### CURRENT STEP ORDER: \" + JSON.stringify(gblCurrentStepOrder));\n\n",
-            "parentId": "IF_CONDITION_d80add2b3f71402c8672f8938fc905ca",
             "callbackType": null
         }, {
-            "id": "INVOKE_ASYNC_SERVICE_f02e1d1d500748368a7003476b86c97f",
-            "type": "INVOKE_ASYNC_SERVICE",
-            "inputparams": null,
-            "httpheaders": null,
-            "httpconfigs": null,
-            "isasynchronous": true,
-            "mappings": {},
-            "mappingsOrder": [],
-            "serviceconfig": {
-                "servicename": "mariaDB",
-                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                "type": "integration",
-                "operationname": "COMPONENT_TEMPLATE_get",
-                "operationid": "123229"
-            },
-            "parentId": null,
-            "enableMappingEditor": true,
-            "disabled": true
-        }, {
-            "id": "_c592c52e13464dbbb2c26ba420b45c15",
+            "id": "_i823a4858c284d5d8c50d89738c7666e",
             "type": "IF_CONDITION",
             "conditions": [{
-                "leftValueType": "navigationsource",
-                "leftValue": "(this.getPreviousForm() === \"frmFlows\") && this.navigationContext && this.navigationContext._meta_ && (this.navigationContext._meta_.widgetId ===  \"btnChangeSteps\") && (this.navigationContext._meta_.eventName ===  \"onClick\")",
+                "leftValueType": "varvalue",
+                "leftValue": "previousCreation",
                 "operator": "===",
-                "rightValue": "",
-                "leftItemKUID": "e6a8fc2377784d1595b361cc9412aea7",
-                "leftWidgetKUID": "e6d66f6181c14002921d087017e61490",
-                "sequenceId": "AS_Button_ed62d016bf23402b8ed1e90308c08aa1",
-                "eventName": "onClick",
-                "widgetId": "btnChangeSteps"
+                "rightValue": "true",
+                "rightValueType": "value"
             }],
             "parentId": null,
             "callbackType": null,
-            "criteria": "all",
-            "disabled": true
+            "criteria": "all"
         }, {
-            "id": "LOADING_INDICATOR_da78a5120f0445da9b5396acbdcc079c",
+            "id": "_deb578d587f64f7db5ffe4fc31ac4773",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "previousFlows",
+                "operator": "===",
+                "rightValue": "true",
+                "sequenceId": "AS_Button_ed62d016bf23402b8ed1e90308c08aa1",
+                "eventName": "onClick",
+                "widgetId": "btnChangeSteps",
+                "rightValueType": "value"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_b75642cee5ed4088b795c5ee23dd7149",
             "selectedOption": "show",
-            "parentId": "_c592c52e13464dbbb2c26ba420b45c15",
+            "parentId": "_deb578d587f64f7db5ffe4fc31ac4773",
             "type": "LOADING_INDICATOR",
             "callbackType": null,
             "skin": "none",
@@ -159,22 +142,22 @@
             "showProgressIndicator": "true",
             "text": "Loading data..."
         }, {
-            "id": "ADD_SNIPPET_c32dfc50a57848c28d93b95d2d3eb1ef",
+            "id": "ADD_SNIPPET_e236688ed76f42179e7352e8c214dfc0",
             "type": "ADD_SNIPPET",
             "codeSnippet": "debugger;\nvoltmx.print(\"### btnChangeStep cliccato. gblFlowId passato in input: \" + gblFlowId);\n\n// setting flowName\nvar id;\n  if (gblFlowId < 10) {\n    id = \"0000\" + gblFlowId;\n  } else if (gblFlowId < 100 && gblFlowId >= 10) {\n    id = \"000\" + gblFlowId;\n  } else if (gblFlowId < 1000 && gblFlowId >= 100) {\n    id = \"00\" + gblFlowId;\n  } else if (gblFlowId < 10000 && gblFlowId >= 1000) {\n    id = \"0\" + gblFlowId;\n  }\n\ngblFlowName = \"#\" + gblChannelId + \"_\" + gblFlowCategory.substring(0, 3).toUpperCase() + \"_\" + id;  \nthis.view.lblFlowName.text = gblFlowName;",
-            "parentId": "_c592c52e13464dbbb2c26ba420b45c15",
+            "parentId": "_deb578d587f64f7db5ffe4fc31ac4773",
             "callbackType": null
         }, {
-            "id": "INVOKE_SERVICE_g58a4568bf2e4c95ac7d10e8b40e0741",
+            "id": "INVOKE_SERVICE_b6c8491d347b41dfb6e0357a6d7d5c5b",
             "type": "INVOKE_ASYNC_SERVICE",
             "inputparams": null,
             "httpheaders": null,
             "httpconfigs": null,
             "isasynchronous": true,
             "mappings": {
-                "ME_Mapping_g90f812dc5894f0fa4a12ab37a3d2409": {
+                "ME_Mapping_g905d1f9dd39496aa29ed01fceec8464": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_g90f812dc5894f0fa4a12ab37a3d2409",
+                    "id": "ME_Mapping_g905d1f9dd39496aa29ed01fceec8464",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -199,7 +182,7 @@
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_g90f812dc5894f0fa4a12ab37a3d2409"],
+            "mappingsOrder": ["ME_Mapping_g905d1f9dd39496aa29ed01fceec8464"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -207,11 +190,11 @@
                 "operationname": "STEP_flow_CustomQuery",
                 "operationid": "125612"
             },
-            "parentId": "_c592c52e13464dbbb2c26ba420b45c15",
+            "parentId": "_deb578d587f64f7db5ffe4fc31ac4773",
             "callbackType": null,
             "enableMappingEditor": true
         }, {
-            "id": "_adefa3fd12bc423f9b093cb92457f682",
+            "id": "_d2eee5c21c924df99dbb8afbb1150de3",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
@@ -220,11 +203,11 @@
                 "leftValueType": "expression",
                 "leftValue": "STEP_flow_CustomQuery.records.length === 0"
             }],
-            "parentId": "INVOKE_SERVICE_g58a4568bf2e4c95ac7d10e8b40e0741",
+            "parentId": "INVOKE_SERVICE_b6c8491d347b41dfb6e0357a6d7d5c5b",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "ELSE_IF_CONDITION_b55588f206bd4ac881342226bb43ce71",
+            "id": "ELSE_IF_CONDITION_ae99e61017c343079bd5c45eff31e886",
             "type": "ELSE_IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
@@ -233,26 +216,65 @@
                 "leftValueType": "expression",
                 "leftValue": "STEP_flow_CustomQuery.records.length > 0"
             }],
-            "parentId": "INVOKE_SERVICE_g58a4568bf2e4c95ac7d10e8b40e0741",
+            "parentId": "INVOKE_SERVICE_b6c8491d347b41dfb6e0357a6d7d5c5b",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "ADD_SNIPPET_c1e4febc2d6e4bde8c816b27a5f50779",
+            "id": "_d0f02617ebb441cfa594d9265ecb0711",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_b6c8491d347b41dfb6e0357a6d7d5c5b",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "LOADING_INDICATOR_f4be0588465f4116b1f81028a5f3b7dd",
+            "selectedOption": "dismiss",
+            "parentId": "_d0f02617ebb441cfa594d9265ecb0711",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "SHOW_ALERT_aeaefc674e6d48adad79ee4c55a50141",
+            "type": "SHOW_ALERT",
+            "alertType": "constants.ALERT_TYPE_ERROR",
+            "alertTitle": "Components_CustomQuery.records for stepSection IS NULL",
+            "yesLabel": "Ok",
+            "alertMessage": "Components_CustomQuery.records for stepSection IS NULL",
+            "messageType": "constant",
+            "parentId": "_d0f02617ebb441cfa594d9265ecb0711",
+            "callbackType": null,
+            "alertTitlei18n": null,
+            "yesLabeli18n": null,
+            "noLabeli18n": null,
+            "alertMessagei18n": null,
+            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
+            "disabled": null
+        }, {
+            "id": "ADD_SNIPPET_f60257bf02dd43d2a575680a23cac97a",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### ENTRATO IN ELSE IF. Esiste almeno uno step. Invoco Components_CustomQuery\");\nstepsList = STEP_flow_CustomQuery.records;",
-            "parentId": "ELSE_IF_CONDITION_b55588f206bd4ac881342226bb43ce71",
+            "parentId": "ELSE_IF_CONDITION_ae99e61017c343079bd5c45eff31e886",
             "callbackType": null
         }, {
-            "id": "INVOKE_SERVICE_fea137b650bd4ae7b067b4a32f7bac4a",
+            "id": "INVOKE_SERVICE_g80b470f38f2499f899526ff8e1bfae1",
             "type": "INVOKE_ASYNC_SERVICE",
             "inputparams": null,
             "httpheaders": null,
             "httpconfigs": null,
             "isasynchronous": true,
             "mappings": {
-                "ME_Mapping_f0c31d7458194aa1b155d77e2d25944e": {
+                "ME_Mapping_ca4b19b0ba00467583addd6d5e134f9c": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_f0c31d7458194aa1b155d77e2d25944e",
+                    "id": "ME_Mapping_ca4b19b0ba00467583addd6d5e134f9c",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -276,9 +298,9 @@
                         }
                     }
                 },
-                "ME_Mapping_aaa77692aab84fd3a19b076c5f5fffbf": {
+                "ME_Mapping_g8ba88841fbb437da1ab4a2cd7834f52": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_aaa77692aab84fd3a19b076c5f5fffbf",
+                    "id": "ME_Mapping_g8ba88841fbb437da1ab4a2cd7834f52",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -301,7 +323,7 @@
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_f0c31d7458194aa1b155d77e2d25944e", "ME_Mapping_aaa77692aab84fd3a19b076c5f5fffbf"],
+            "mappingsOrder": ["ME_Mapping_ca4b19b0ba00467583addd6d5e134f9c", "ME_Mapping_g8ba88841fbb437da1ab4a2cd7834f52"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -309,21 +331,21 @@
                 "operationname": "Components_CustomQuery",
                 "operationid": "125611"
             },
-            "parentId": "ELSE_IF_CONDITION_b55588f206bd4ac881342226bb43ce71",
+            "parentId": "ELSE_IF_CONDITION_ae99e61017c343079bd5c45eff31e886",
             "callbackType": null,
             "enableMappingEditor": true
         }, {
-            "id": "_cc14dd43ff70465b965cc7171bb3fdaa",
+            "id": "_b42eccc7963f4dc580e8156c367d24e7",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
                 "leftValue": "Components_CustomQuery.records !== null"
             }],
-            "parentId": "INVOKE_SERVICE_fea137b650bd4ae7b067b4a32f7bac4a",
+            "parentId": "INVOKE_SERVICE_g80b470f38f2499f899526ff8e1bfae1",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "_d833038698ad480d9d828603713c78cb",
+            "id": "_c10247faa8ca45beba714ec4a3325210",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -332,13 +354,13 @@
                 "rightValueType": "widgetprop",
                 "rightValue": ""
             }],
-            "parentId": "INVOKE_SERVICE_fea137b650bd4ae7b067b4a32f7bac4a",
+            "parentId": "INVOKE_SERVICE_g80b470f38f2499f899526ff8e1bfae1",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "LOADING_INDICATOR_caab672f6f3b452a8ec08b15a4cefa8f",
+            "id": "LOADING_INDICATOR_b7ea4ea2e4144822b5af4c4abd3ddfb1",
             "selectedOption": "dismiss",
-            "parentId": "_d833038698ad480d9d828603713c78cb",
+            "parentId": "_c10247faa8ca45beba714ec4a3325210",
             "type": "LOADING_INDICATOR",
             "callbackType": null,
             "skin": "none",
@@ -346,14 +368,14 @@
             "isBlocked": "true",
             "showProgressIndicator": "true"
         }, {
-            "id": "SHOW_ALERT_jf8fdd8f398f41c29d14bef4366bdc36",
+            "id": "SHOW_ALERT_ge05643addf743efbaba43d60a4e0042",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "Components_CustomQuery.records for stepSection IS NULL",
+            "alertTitle": "Components_CustomQuery.records for previewSection IS null",
             "yesLabel": "Ok",
-            "alertMessage": "Components_CustomQuery.records for stepSection IS NULL",
+            "alertMessage": "Components_CustomQuery.records for previewSection IS null",
             "messageType": "constant",
-            "parentId": "_d833038698ad480d9d828603713c78cb",
+            "parentId": "_c10247faa8ca45beba714ec4a3325210",
             "callbackType": null,
             "alertTitlei18n": null,
             "yesLabeli18n": null,
@@ -362,22 +384,22 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "ADD_SNIPPET_e8ff9508fe98482a88a5968c6b5b371a",
+            "id": "ADD_SNIPPET_cc8169799ad34ace857f6de4d1501919",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### ENTRATO IN IF e invoco nuovamente Components_CustomQuery\");\nstepSectionList = Components_CustomQuery.records;",
-            "parentId": "_cc14dd43ff70465b965cc7171bb3fdaa",
+            "parentId": "_b42eccc7963f4dc580e8156c367d24e7",
             "callbackType": null
         }, {
-            "id": "INVOKE_SERVICE_f308c602b4274109b4e448e753868cda",
+            "id": "INVOKE_SERVICE_cf8504cb0b3c4ee4af9a1ec7209bedd2",
             "type": "INVOKE_ASYNC_SERVICE",
             "inputparams": null,
             "httpheaders": null,
             "httpconfigs": null,
             "isasynchronous": true,
             "mappings": {
-                "ME_Mapping_cf65af738460482db27a0e3260a6db58": {
+                "ME_Mapping_i9e4450d77484c248148021d1de23148": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_cf65af738460482db27a0e3260a6db58",
+                    "id": "ME_Mapping_i9e4450d77484c248148021d1de23148",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -401,9 +423,9 @@
                         }
                     }
                 },
-                "ME_Mapping_e553a48f9b9e469cbf21713a5376f818": {
+                "ME_Mapping_d7a2498db73a483e8458652bcc02ace3": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_e553a48f9b9e469cbf21713a5376f818",
+                    "id": "ME_Mapping_d7a2498db73a483e8458652bcc02ace3",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -426,7 +448,7 @@
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_cf65af738460482db27a0e3260a6db58", "ME_Mapping_e553a48f9b9e469cbf21713a5376f818"],
+            "mappingsOrder": ["ME_Mapping_i9e4450d77484c248148021d1de23148", "ME_Mapping_d7a2498db73a483e8458652bcc02ace3"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -434,75 +456,36 @@
                 "operationname": "Components_CustomQuery",
                 "operationid": "125611"
             },
-            "parentId": "_cc14dd43ff70465b965cc7171bb3fdaa",
+            "parentId": "_b42eccc7963f4dc580e8156c367d24e7",
             "callbackType": null,
             "enableMappingEditor": true
         }, {
-            "id": "_c2c26cd0d6524a0bbe7070a51a534e00",
+            "id": "_c022645cf8844c2b9dfbe677456468de",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
                 "leftValue": "Components_CustomQuery.records !== null"
             }],
-            "parentId": "INVOKE_SERVICE_f308c602b4274109b4e448e753868cda",
+            "parentId": "INVOKE_SERVICE_cf8504cb0b3c4ee4af9a1ec7209bedd2",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "_c3ca5ecd528747c38bc065aad0cc3990",
-            "type": "ELSE_CONDITION",
-            "conditions": [{
-                "leftValueType": "widgetprop",
-                "leftValue": "",
-                "operator": "===",
-                "rightValueType": "widgetprop",
-                "rightValue": ""
-            }],
-            "parentId": "INVOKE_SERVICE_f308c602b4274109b4e448e753868cda",
-            "callbackType": "Callback",
-            "criteria": "all"
-        }, {
-            "id": "LOADING_INDICATOR_d1efac054f7547d695d8c37e6d2741bb",
-            "selectedOption": "dismiss",
-            "parentId": "_c3ca5ecd528747c38bc065aad0cc3990",
-            "type": "LOADING_INDICATOR",
-            "callbackType": null,
-            "skin": "none",
-            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
-            "isBlocked": "true",
-            "showProgressIndicator": "true"
-        }, {
-            "id": "SHOW_ALERT_jd50a8a8c1214bfe87b96931f3972b76",
-            "type": "SHOW_ALERT",
-            "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "Components_CustomQuery.records for previewSection IS null",
-            "yesLabel": "Ok",
-            "alertMessage": "Components_CustomQuery.records for previewSection IS null",
-            "messageType": "constant",
-            "parentId": "_c3ca5ecd528747c38bc065aad0cc3990",
-            "callbackType": null,
-            "alertTitlei18n": null,
-            "yesLabeli18n": null,
-            "noLabeli18n": null,
-            "alertMessagei18n": null,
-            "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
-            "disabled": null
-        }, {
-            "id": "ADD_SNIPPET_fcdafaf42861449d860532536271bedc",
+            "id": "ADD_SNIPPET_h03b7aba9a224ff9a09c261fe7286e1f",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"secondo Components_CustomQuery eseguito\");\npreviewSectionList = Components_CustomQuery.records;",
-            "parentId": "_c2c26cd0d6524a0bbe7070a51a534e00",
+            "parentId": "_c022645cf8844c2b9dfbe677456468de",
             "callbackType": null
         }, {
-            "id": "INVOKE_SERVICE_d9ff96e25bde478c8711bab9907e047c",
+            "id": "INVOKE_SERVICE_ccd077a785334896a1c6a2208252ac56",
             "type": "INVOKE_ASYNC_SERVICE",
             "inputparams": null,
             "httpheaders": null,
             "httpconfigs": null,
             "isasynchronous": true,
             "mappings": {
-                "ME_Mapping_b884c2215c3c4e8980503faa85cdd6d1": {
+                "ME_Mapping_c625875b93454e3097789a9c2d13c1bd": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_b884c2215c3c4e8980503faa85cdd6d1",
+                    "id": "ME_Mapping_c625875b93454e3097789a9c2d13c1bd",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -527,7 +510,7 @@
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_b884c2215c3c4e8980503faa85cdd6d1"],
+            "mappingsOrder": ["ME_Mapping_c625875b93454e3097789a9c2d13c1bd"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -535,21 +518,21 @@
                 "operationname": "NESTED_COMPONENT_CustomQuery",
                 "operationid": "130923"
             },
-            "parentId": "_c2c26cd0d6524a0bbe7070a51a534e00",
+            "parentId": "_c022645cf8844c2b9dfbe677456468de",
             "callbackType": null,
             "enableMappingEditor": true
         }, {
-            "id": "_f8a596f4cfb8490a818dc706e4a5cd4f",
+            "id": "_g63842f306e14c0996b527de0c5b7028",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
                 "leftValue": "NESTED_COMPONENT_CustomQuery.records !== null"
             }],
-            "parentId": "INVOKE_SERVICE_d9ff96e25bde478c8711bab9907e047c",
+            "parentId": "INVOKE_SERVICE_ccd077a785334896a1c6a2208252ac56",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "_j5f7fffb06084dbc84ecc3e6e66b7bf4",
+            "id": "_f63de7bfa0d0462697acf71563a375b5",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -558,13 +541,13 @@
                 "rightValueType": "widgetprop",
                 "rightValue": ""
             }],
-            "parentId": "INVOKE_SERVICE_d9ff96e25bde478c8711bab9907e047c",
+            "parentId": "INVOKE_SERVICE_ccd077a785334896a1c6a2208252ac56",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "LOADING_INDICATOR_e96187cc27c04252b1ef7656448f64e2",
+            "id": "LOADING_INDICATOR_cd5d35d9f599447bb3d18b1a2d769154",
             "selectedOption": "dismiss",
-            "parentId": "_j5f7fffb06084dbc84ecc3e6e66b7bf4",
+            "parentId": "_f63de7bfa0d0462697acf71563a375b5",
             "type": "LOADING_INDICATOR",
             "callbackType": null,
             "skin": "none",
@@ -572,14 +555,14 @@
             "isBlocked": "true",
             "showProgressIndicator": "true"
         }, {
-            "id": "SHOW_ALERT_bcbc107816484e0b978edec8b096e012",
+            "id": "SHOW_ALERT_f62467951afe4be4914b38f9575e6219",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
             "alertTitle": "NESTED_COMPONENT_CustomQuery.records NOT null",
             "yesLabel": "Ok",
-            "alertMessage": "NESTED_COMPONENT_CustomQuery.records NOT null",
+            "alertMessage": "NESTED_COMPONENT_CustomQuery.records NOT null\n",
             "messageType": "constant",
-            "parentId": "_j5f7fffb06084dbc84ecc3e6e66b7bf4",
+            "parentId": "_f63de7bfa0d0462697acf71563a375b5",
             "callbackType": null,
             "alertTitlei18n": null,
             "yesLabeli18n": null,
@@ -588,22 +571,22 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "ADD_SNIPPET_h103de6bdb9a414090f46aec4eaa8112",
+            "id": "ADD_SNIPPET_f71481a6070949f6a384876caf145b19",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"ADESSO ENTRO IN COMPONENT_TEMPLATE\");\nnestedComponents = NESTED_COMPONENT_CustomQuery.records;",
-            "parentId": "_f8a596f4cfb8490a818dc706e4a5cd4f",
+            "parentId": "_g63842f306e14c0996b527de0c5b7028",
             "callbackType": null
         }, {
-            "id": "INVOKE_SERVICE_bd09d5d692ce4eaa823ade4e920aa6e0",
+            "id": "INVOKE_SERVICE_b313489c49f1472f8b36f6711e266d31",
             "type": "INVOKE_ASYNC_SERVICE",
             "inputparams": null,
             "httpheaders": null,
             "httpconfigs": null,
             "isasynchronous": true,
             "mappings": {
-                "ME_Mapping_e809de58f540472da1183cadd0f3619c": {
+                "ME_Mapping_hab227316bc0410881a1d62b7d470c33": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_e809de58f540472da1183cadd0f3619c",
+                    "id": "ME_Mapping_hab227316bc0410881a1d62b7d470c33",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -628,7 +611,7 @@
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_e809de58f540472da1183cadd0f3619c"],
+            "mappingsOrder": ["ME_Mapping_hab227316bc0410881a1d62b7d470c33"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -636,21 +619,21 @@
                 "operationname": "COMPONENT_TEMPLATE_GetImage_CustomQuery",
                 "operationid": "132105"
             },
-            "parentId": "_f8a596f4cfb8490a818dc706e4a5cd4f",
+            "parentId": "_g63842f306e14c0996b527de0c5b7028",
             "callbackType": null,
             "enableMappingEditor": true
         }, {
-            "id": "_ja4605615a8a4689ac1fe463d1a5149d",
+            "id": "_cdf147759546417fb2c5d270bfafe40f",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
                 "leftValue": "COMPONENT_TEMPLATE_GetImage_CustomQuery.opstatus === 0"
             }],
-            "parentId": "INVOKE_SERVICE_bd09d5d692ce4eaa823ade4e920aa6e0",
+            "parentId": "INVOKE_SERVICE_b313489c49f1472f8b36f6711e266d31",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "_g05abd8fa09c4cc5bce814ff00ccafae",
+            "id": "_d2a864ca91a04e7abe29949c37794184",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -659,13 +642,13 @@
                 "rightValueType": "widgetprop",
                 "rightValue": ""
             }],
-            "parentId": "INVOKE_SERVICE_bd09d5d692ce4eaa823ade4e920aa6e0",
+            "parentId": "INVOKE_SERVICE_b313489c49f1472f8b36f6711e266d31",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "LOADING_INDICATOR_bfc0bd1168a24d3bbffd744a4c8e8ee7",
+            "id": "LOADING_INDICATOR_j137938f97644249adcb98b01aba5718",
             "selectedOption": "dismiss",
-            "parentId": "_g05abd8fa09c4cc5bce814ff00ccafae",
+            "parentId": "_d2a864ca91a04e7abe29949c37794184",
             "type": "LOADING_INDICATOR",
             "callbackType": null,
             "skin": "none",
@@ -673,14 +656,14 @@
             "isBlocked": "true",
             "showProgressIndicator": "true"
         }, {
-            "id": "SHOW_ALERT_b45da6d17c7c4fe29ba6b6c700417417",
+            "id": "SHOW_ALERT_i2fa6670b7434addacc4a761df2b4170",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
             "alertTitle": "COMPONENT_TEMPLATE_GetImage_CustomQuery.opstatus NOT  0",
             "yesLabel": "Ok",
             "alertMessage": "COMPONENT_TEMPLATE_GetImage_CustomQuery.opstatus NOT  0\n",
             "messageType": "constant",
-            "parentId": "_g05abd8fa09c4cc5bce814ff00ccafae",
+            "parentId": "_d2a864ca91a04e7abe29949c37794184",
             "callbackType": null,
             "alertTitlei18n": null,
             "yesLabeli18n": null,
@@ -689,22 +672,22 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "ADD_SNIPPET_c86a1030c866400c860ba3a0ad29a162",
+            "id": "ADD_SNIPPET_bc6a00ccced34b9ab9d6d3a5138a63a0",
             "type": "ADD_SNIPPET",
             "codeSnippet": "componentsImages = COMPONENT_TEMPLATE_GetImage_CustomQuery.records;",
-            "parentId": "_ja4605615a8a4689ac1fe463d1a5149d",
+            "parentId": "_cdf147759546417fb2c5d270bfafe40f",
             "callbackType": null
         }, {
-            "id": "INVOKE_SERVICE_h0524b8eb1e44113bc88771d0b672b02",
+            "id": "INVOKE_SERVICE_c1ce18156c264b108b29387e9b58c29b",
             "type": "INVOKE_ASYNC_SERVICE",
             "inputparams": null,
             "httpheaders": null,
             "httpconfigs": null,
             "isasynchronous": true,
             "mappings": {
-                "ME_Mapping_g49a9a628e22414585ec98e6fe42f731": {
+                "ME_Mapping_ac449877eb0e469a998cb5ea4ca1d7c3": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_g49a9a628e22414585ec98e6fe42f731",
+                    "id": "ME_Mapping_ac449877eb0e469a998cb5ea4ca1d7c3",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -729,7 +712,7 @@
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_g49a9a628e22414585ec98e6fe42f731"],
+            "mappingsOrder": ["ME_Mapping_ac449877eb0e469a998cb5ea4ca1d7c3"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -737,21 +720,21 @@
                 "operationname": "PROPERTY_TEMPLATE_Flow_CustomQuery",
                 "operationid": "132788"
             },
-            "parentId": "_ja4605615a8a4689ac1fe463d1a5149d",
+            "parentId": "_cdf147759546417fb2c5d270bfafe40f",
             "callbackType": null,
             "enableMappingEditor": true
         }, {
-            "id": "_e32a8ffc73b74ff4b4080de827b983db",
+            "id": "_fd000a7585e84abfbd6d696929e2690f",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
                 "leftValue": "PROPERTY_TEMPLATE_Flow_CustomQuery.opstatus === 0"
             }],
-            "parentId": "INVOKE_SERVICE_h0524b8eb1e44113bc88771d0b672b02",
+            "parentId": "INVOKE_SERVICE_c1ce18156c264b108b29387e9b58c29b",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "_c01f1a0b6e754b0699d862864b589d72",
+            "id": "_b5842dcf90d74a16b0959e5188325a92",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -760,13 +743,13 @@
                 "rightValueType": "widgetprop",
                 "rightValue": ""
             }],
-            "parentId": "INVOKE_SERVICE_h0524b8eb1e44113bc88771d0b672b02",
+            "parentId": "INVOKE_SERVICE_c1ce18156c264b108b29387e9b58c29b",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "LOADING_INDICATOR_g386c6dc592541fb8fb42f98b6c09568",
+            "id": "LOADING_INDICATOR_a6265ce70fe545049a87c40fb3c08278",
             "selectedOption": "dismiss",
-            "parentId": "_c01f1a0b6e754b0699d862864b589d72",
+            "parentId": "_b5842dcf90d74a16b0959e5188325a92",
             "type": "LOADING_INDICATOR",
             "callbackType": null,
             "skin": "none",
@@ -774,13 +757,14 @@
             "isBlocked": "true",
             "showProgressIndicator": "true"
         }, {
-            "id": "SHOW_ALERT_j8263f4b222741c4ac74faf82078c3da",
+            "id": "SHOW_ALERT_a422ae3f7e4a443099491ca87071b826",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
             "alertTitle": "PROPERTY_TEMPLATE_Flow_CustomQuery.opstatus NOT 0",
-            "alertMessage": "PROPERTY_TEMPLATE_Flow_CustomQuery.opstatus NOT 0",
+            "yesLabel": "Ok",
+            "alertMessage": "PROPERTY_TEMPLATE_Flow_CustomQuery.opstatus NOT 0\n",
             "messageType": "constant",
-            "parentId": "_c01f1a0b6e754b0699d862864b589d72",
+            "parentId": "_b5842dcf90d74a16b0959e5188325a92",
             "callbackType": null,
             "alertTitlei18n": null,
             "yesLabeli18n": null,
@@ -789,22 +773,22 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "ADD_SNIPPET_hd348b20dbc845fab3fddc19467f0d08",
+            "id": "ADD_SNIPPET_d525bfd47edc4c1cb8bd2857144a85a8",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### ENTRATO IN IF e invoco loadFlowData\");\npropertyTemplates = PROPERTY_TEMPLATE_Flow_CustomQuery.records;\n\n// setting the boolean to true in order to give a different behaviour\ngblSaveAfterEdit = true;",
-            "parentId": "_e32a8ffc73b74ff4b4080de827b983db",
+            "codeSnippet": "voltmx.print(\"### ENTRATO IN IF e invoco loadFlowData\");\npropertyTemplates = PROPERTY_TEMPLATE_Flow_CustomQuery.records;\n\n// setting the boolean to true in order to give a different behaviour\ngblSaveAfterEdit = true;\n",
+            "parentId": "_fd000a7585e84abfbd6d696929e2690f",
             "callbackType": null
         }, {
-            "id": "INVOKE_SERVICE_c0b795c0c9f7420595c2f3e82273e905",
+            "id": "INVOKE_SERVICE_ba8e5b6a9e414a9e818972408d896229",
             "type": "INVOKE_ASYNC_SERVICE",
             "inputparams": null,
             "httpheaders": null,
             "httpconfigs": null,
             "isasynchronous": true,
             "mappings": {
-                "ME_Mapping_f2842ff77bd1412ea8edc215682f1440": {
+                "ME_Mapping_c61089da881d48929a657a87ed5dc3e2": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_f2842ff77bd1412ea8edc215682f1440",
+                    "id": "ME_Mapping_c61089da881d48929a657a87ed5dc3e2",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -829,7 +813,7 @@
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_f2842ff77bd1412ea8edc215682f1440"],
+            "mappingsOrder": ["ME_Mapping_c61089da881d48929a657a87ed5dc3e2"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -837,21 +821,21 @@
                 "operationname": "LABEL_copyId_CustomQueryGet",
                 "operationid": "137514"
             },
-            "parentId": "_e32a8ffc73b74ff4b4080de827b983db",
+            "parentId": "_fd000a7585e84abfbd6d696929e2690f",
             "callbackType": null,
             "enableMappingEditor": true
         }, {
-            "id": "_da3301dfdb38439292ab213c308398a4",
+            "id": "_d7e2f10f07614a4c8f855d7be5ca92c8",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
                 "leftValue": "LABEL_copyId_CustomQueryGet.opstatus === 0"
             }],
-            "parentId": "INVOKE_SERVICE_c0b795c0c9f7420595c2f3e82273e905",
+            "parentId": "INVOKE_SERVICE_ba8e5b6a9e414a9e818972408d896229",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "_jaa6f1243aa24b32a1c0ccee25484e29",
+            "id": "_dd753a1e22f342488db9537d1965ad25",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -860,13 +844,13 @@
                 "rightValueType": "widgetprop",
                 "rightValue": ""
             }],
-            "parentId": "INVOKE_SERVICE_c0b795c0c9f7420595c2f3e82273e905",
+            "parentId": "INVOKE_SERVICE_ba8e5b6a9e414a9e818972408d896229",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "LOADING_INDICATOR_b1315d3b980f4beb9a2c1258d95199a9",
+            "id": "LOADING_INDICATOR_j6c0b6c1f7504d258abc2d9dd451630f",
             "selectedOption": "dismiss",
-            "parentId": "_jaa6f1243aa24b32a1c0ccee25484e29",
+            "parentId": "_dd753a1e22f342488db9537d1965ad25",
             "type": "LOADING_INDICATOR",
             "callbackType": null,
             "skin": "none",
@@ -874,14 +858,14 @@
             "isBlocked": "true",
             "showProgressIndicator": "true"
         }, {
-            "id": "SHOW_ALERT_ce8a11abde0e4e60bd6db65874cffd31",
+            "id": "SHOW_ALERT_d7a0abdb5e704406a139580bc7cd8afd",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
             "alertTitle": "LABEL_copyId_CustomQueryGet.opstatus NOT 0",
             "yesLabel": "Ok",
             "alertMessage": "LABEL_copyId_CustomQueryGet.opstatus NOT 0",
             "messageType": "constant",
-            "parentId": "_jaa6f1243aa24b32a1c0ccee25484e29",
+            "parentId": "_dd753a1e22f342488db9537d1965ad25",
             "callbackType": null,
             "alertTitlei18n": null,
             "yesLabeli18n": null,
@@ -890,13 +874,13 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "ADD_SNIPPET_b7aed4924ee845b48b55318e250ff6e8",
+            "id": "ADD_SNIPPET_a294d31ea3ae439fb7fdc3ff5efd6b8f",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"LABEL_copyId_CustomQueryGet eseguito correttamente. Invocheremo successivamente loadFlowData.\");\ngblFetchedLabels = LABEL_copyId_CustomQueryGet.records;",
-            "parentId": "_da3301dfdb38439292ab213c308398a4",
+            "codeSnippet": "voltmx.print(\"LABEL_copyId_CustomQueryGet eseguito correttamente. Invocheremo successivamente loadFlowData.\");\ngblFetchedLabels = LABEL_copyId_CustomQueryGet.records;\n",
+            "parentId": "_d7e2f10f07614a4c8f855d7be5ca92c8",
             "callbackType": null
         }, {
-            "id": "INVOKE_FUNCTION__c4064102a80e450498af4fb2d8ca5f31",
+            "id": "INVOKE_FUNCTION__f745b47253c4493d9adf68b14a18aa21",
             "type": "INVOKE_FUNCTION",
             "sequenceKUID": "loadFlowData",
             "display": "loadFlowData",
@@ -922,14 +906,14 @@
                 "name": "propertyTemplates",
                 "value": " propertyTemplates"
             }],
-            "parentId": "_da3301dfdb38439292ab213c308398a4",
+            "parentId": "_d7e2f10f07614a4c8f855d7be5ca92c8",
             "callbackType": null,
             "disabled": null,
             "source": "controller"
         }, {
-            "id": "LOADING_INDICATOR_cf0f6d77b0cf4269bd69e471eba13bdd",
+            "id": "LOADING_INDICATOR_b03334337ce24df28df921ebec684e11",
             "selectedOption": "dismiss",
-            "parentId": "_da3301dfdb38439292ab213c308398a4",
+            "parentId": "_d7e2f10f07614a4c8f855d7be5ca92c8",
             "type": "LOADING_INDICATOR",
             "callbackType": null,
             "skin": "none",
@@ -937,22 +921,22 @@
             "isBlocked": "true",
             "showProgressIndicator": "true"
         }, {
-            "id": "ADD_SNIPPET_c12702efc98c4819ae91fcc171c8b9b2",
+            "id": "ADD_SNIPPET_h384f96e8776411687dd902078d68e7a",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### SONO DENTRO IF FLUSSO VUOTO. Quindi creo il primo step\");\n",
-            "parentId": "_adefa3fd12bc423f9b093cb92457f682",
+            "parentId": "_d2eee5c21c924df99dbb8afbb1150de3",
             "callbackType": null
         }, {
-            "id": "INVOKE_SERVICE_fc39ce6db5fb4b248c058260ce608cbe",
+            "id": "INVOKE_SERVICE_ffe8cb47fd084c8d8fa6f84c3342dae4",
             "type": "INVOKE_ASYNC_SERVICE",
             "inputparams": null,
             "httpheaders": null,
             "httpconfigs": null,
             "isasynchronous": true,
             "mappings": {
-                "ME_Mapping_g3941dcb00b7483e81e5e76d6762e956": {
+                "ME_Mapping_e83ff5347daf4d10a512edb87c5e6fb9": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_g3941dcb00b7483e81e5e76d6762e956",
+                    "id": "ME_Mapping_e83ff5347daf4d10a512edb87c5e6fb9",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -976,9 +960,9 @@
                         }
                     }
                 },
-                "ME_Mapping_ec8dd1559200441f8f0f04b5590cb0ed": {
+                "ME_Mapping_b435fed510c841fa81ace5eed210f8b3": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_ec8dd1559200441f8f0f04b5590cb0ed",
+                    "id": "ME_Mapping_b435fed510c841fa81ace5eed210f8b3",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -1002,9 +986,9 @@
                         }
                     }
                 },
-                "ME_Mapping_cbe83c2189794c4fb0208adb80504d48": {
+                "ME_Mapping_d0af644ec8e040c9bacfa7105ce7b2f3": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_cbe83c2189794c4fb0208adb80504d48",
+                    "id": "ME_Mapping_d0af644ec8e040c9bacfa7105ce7b2f3",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -1026,9 +1010,9 @@
                         }
                     }
                 },
-                "ME_Mapping_fd2a359f085c44e889b37ce4f7df1751": {
+                "ME_Mapping_dbebf95d9f5644afa7b0bea4fd86ebb2": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_fd2a359f085c44e889b37ce4f7df1751",
+                    "id": "ME_Mapping_dbebf95d9f5644afa7b0bea4fd86ebb2",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -1050,9 +1034,9 @@
                         }
                     }
                 },
-                "ME_Mapping_f779db2614cd47249d63ec18f38d7118": {
+                "ME_Mapping_fe3d2ec7247d42d79ca336c35f7b2351": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_f779db2614cd47249d63ec18f38d7118",
+                    "id": "ME_Mapping_fe3d2ec7247d42d79ca336c35f7b2351",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -1074,9 +1058,9 @@
                         }
                     }
                 },
-                "ME_Mapping_bb31ff7be633463899bef1047cb8c2c3": {
+                "ME_Mapping_b9958317001244e5bd7dbf2fafe09684": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_bb31ff7be633463899bef1047cb8c2c3",
+                    "id": "ME_Mapping_b9958317001244e5bd7dbf2fafe09684",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -1098,9 +1082,9 @@
                         }
                     }
                 },
-                "ME_Mapping_d76dadc886a24ed497a939f6d65f01a2": {
+                "ME_Mapping_e9c686a2256445c89b98eeadffa2163b": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_d76dadc886a24ed497a939f6d65f01a2",
+                    "id": "ME_Mapping_e9c686a2256445c89b98eeadffa2163b",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -1122,9 +1106,9 @@
                         }
                     }
                 },
-                "ME_Mapping_abda8be80f3946ecb0dda508a1e8b9de": {
+                "ME_Mapping_d1f1b39e1efe4e4f88fb9109b7f3009e": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_abda8be80f3946ecb0dda508a1e8b9de",
+                    "id": "ME_Mapping_d1f1b39e1efe4e4f88fb9109b7f3009e",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -1146,9 +1130,9 @@
                         }
                     }
                 },
-                "ME_Mapping_idf881fec5ab4858b059bfaadf189e90": {
+                "ME_Mapping_cb0bbfa397ac4eb393ac78eb3fb3a31b": {
                     "channel": "desktop",
-                    "id": "ME_Mapping_idf881fec5ab4858b059bfaadf189e90",
+                    "id": "ME_Mapping_cb0bbfa397ac4eb393ac78eb3fb3a31b",
                     "type": "MAPPING",
                     "callbackType": null,
                     "rectified": true,
@@ -1171,7 +1155,7 @@
                     }
                 }
             },
-            "mappingsOrder": ["ME_Mapping_g3941dcb00b7483e81e5e76d6762e956", "ME_Mapping_ec8dd1559200441f8f0f04b5590cb0ed", "ME_Mapping_cbe83c2189794c4fb0208adb80504d48", "ME_Mapping_fd2a359f085c44e889b37ce4f7df1751", "ME_Mapping_f779db2614cd47249d63ec18f38d7118", "ME_Mapping_bb31ff7be633463899bef1047cb8c2c3", "ME_Mapping_d76dadc886a24ed497a939f6d65f01a2", "ME_Mapping_abda8be80f3946ecb0dda508a1e8b9de", "ME_Mapping_idf881fec5ab4858b059bfaadf189e90"],
+            "mappingsOrder": ["ME_Mapping_e83ff5347daf4d10a512edb87c5e6fb9", "ME_Mapping_b435fed510c841fa81ace5eed210f8b3", "ME_Mapping_d0af644ec8e040c9bacfa7105ce7b2f3", "ME_Mapping_dbebf95d9f5644afa7b0bea4fd86ebb2", "ME_Mapping_fe3d2ec7247d42d79ca336c35f7b2351", "ME_Mapping_b9958317001244e5bd7dbf2fafe09684", "ME_Mapping_e9c686a2256445c89b98eeadffa2163b", "ME_Mapping_d1f1b39e1efe4e4f88fb9109b7f3009e", "ME_Mapping_cb0bbfa397ac4eb393ac78eb3fb3a31b"],
             "serviceconfig": {
                 "servicename": "mariaDB",
                 "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
@@ -1179,11 +1163,11 @@
                 "operationname": "STEP_create",
                 "operationid": "122826"
             },
-            "parentId": "_adefa3fd12bc423f9b093cb92457f682",
+            "parentId": "_d2eee5c21c924df99dbb8afbb1150de3",
             "callbackType": null,
             "enableMappingEditor": true
         }, {
-            "id": "_c60b5b50199b4bc4ac43d09c62469527",
+            "id": "_ff6569a94c9b4b5e94aa2e6ab786a3d4",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
@@ -1192,11 +1176,11 @@
                 "leftValueType": "expression",
                 "leftValue": "STEP_create.opstatus === 0"
             }],
-            "parentId": "INVOKE_SERVICE_fc39ce6db5fb4b248c058260ce608cbe",
+            "parentId": "INVOKE_SERVICE_ffe8cb47fd084c8d8fa6f84c3342dae4",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "_f9675db5431c4e9fa3f93ac763988f6f",
+            "id": "_a2bcb62f0a9f4d658f6fc784d12b5bbd",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -1205,18 +1189,18 @@
                 "rightValueType": "widgetprop",
                 "rightValue": ""
             }],
-            "parentId": "INVOKE_SERVICE_fc39ce6db5fb4b248c058260ce608cbe",
+            "parentId": "INVOKE_SERVICE_ffe8cb47fd084c8d8fa6f84c3342dae4",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "SHOW_ALERT_a98f16bb37cf4268a2cf42b25471dec0",
+            "id": "SHOW_ALERT_i7ae2e831a4940339196eff2cf6b8476",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",
-            "alertTitle": "STEP_create NOT successfull.",
+            "alertTitle": "Step NOT created.",
             "yesLabel": "Ok",
-            "alertMessage": "STEP_create NOT successfull.",
+            "alertMessage": "Step NOT created.",
             "messageType": "constant",
-            "parentId": "_f9675db5431c4e9fa3f93ac763988f6f",
+            "parentId": "_a2bcb62f0a9f4d658f6fc784d12b5bbd",
             "callbackType": null,
             "alertTitlei18n": null,
             "yesLabeli18n": null,
@@ -1225,23 +1209,48 @@
             "iconPosition": "constants.ALERT_ICON_POSITION_LEFT",
             "disabled": null
         }, {
-            "id": "LOADING_INDICATOR_a3482b4113fe4098b97721e96a6ead13",
+            "id": "LOADING_INDICATOR_a7d08dbabfa142808ac8049297157f49",
             "selectedOption": "dismiss",
-            "parentId": "SHOW_ALERT_a98f16bb37cf4268a2cf42b25471dec0",
+            "parentId": "_a2bcb62f0a9f4d658f6fc784d12b5bbd",
             "type": "LOADING_INDICATOR",
-            "callbackType": "True",
+            "callbackType": null,
             "skin": "none",
             "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
             "isBlocked": "true",
             "showProgressIndicator": "true"
         }, {
-            "id": "ADD_SNIPPET_e342555fc4064ab086855cbffb16fe28",
+            "id": "ADD_SNIPPET_fda8056412774fb6b1a200682fc9696f",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### STEP_create successfull.\");",
-            "parentId": "_c60b5b50199b4bc4ac43d09c62469527",
+            "codeSnippet": "voltmx.print(\"STEP_create successfull.\");",
+            "parentId": "_ff6569a94c9b4b5e94aa2e6ab786a3d4",
             "callbackType": null
         }, {
-            "id": "IF_CONDITION_e16fd6648a5c4de8b535bb7d7541e8e8",
+            "id": "ADD_SNIPPET_a248fd35d5404a0fb6defb04e2b00d52",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### entrato in onClick di btnProceed da frmStepCreation\");\ndebugger;\n// setting the first step box title (created in the previous form)\nthis.view.lblStepTitleIntoStepComposition.text = gblFirstStepTitle;\n// setting the flow name show in top center of the form (as reminder of the current flow open)\nthis.view.lblFlowName.text = gblFlowName;\n\n// setting the first step's box on focus (black background, icons shown, related scroll shown)\nthis.view.flxBoxFirstStep.backgroundColor = \"00000000\";\nthis.view.flxBoxFirstStep.imgDeleteStep.isVisible = true;\nthis.view.flxBoxFirstStep.imgEditStep.isVisible = true;\nthis.view.flxBoxFirstStep.lblStepOrder.fontColor = \"FFFFFF00\";\nthis.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = \"FFFFFF00\";\n//this.view.flxRightSide.flxScrollRight.setVisibility(true);\n//this.view.settingsSide.flxScrollSettingsContent.removeAll();\n//this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);\n//this.view.settingsSide.txt.setVisibility(true);\n//gblCurrentStepOrder = 1;\ngblCurrentStepTitle = this.view.lblStepTitleIntoStepComposition.text;\nvoltmx.print(\"### CURRENT STEP ORDER: \" + JSON.stringify(gblCurrentStepOrder));\n\n",
+            "parentId": "_i823a4858c284d5d8c50d89738c7666e",
+            "callbackType": null
+        }, {
+            "id": "INVOKE_SERVICE_c9f097887dec4f34a09e9e165f95ee36",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "COMPONENT_TEMPLATE_get",
+                "operationid": "123229"
+            },
+            "parentId": "_i823a4858c284d5d8c50d89738c7666e",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_c079bd51ae6143ce93ce96e9fdca3428",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
@@ -1250,11 +1259,30 @@
                 "leftValueType": "expression",
                 "leftValue": "COMPONENT_TEMPLATE_get.opstatus === 0"
             }],
-            "parentId": "INVOKE_ASYNC_SERVICE_f02e1d1d500748368a7003476b86c97f",
+            "parentId": "INVOKE_SERVICE_c9f097887dec4f34a09e9e165f95ee36",
             "callbackType": "Callback",
             "criteria": "all"
         }, {
-            "id": "IF_CONDITION_f400755646ba454f821ef949e979d8ca",
+            "id": "_a3877d47a05a49c4ae5e15c4542d6b89",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_c9f097887dec4f34a09e9e165f95ee36",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_e6c38dfea3b146ad997d0ddf62bf91e4",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Error occurred in Foundry layer while fetching components' templates. OPSTATUS: \" + COMPONENT_TEMPLATE_get.opstatus);",
+            "parentId": "_a3877d47a05a49c4ae5e15c4542d6b89",
+            "callbackType": null
+        }, {
+            "id": "_h90be68149dc43438a3b5d1ce3cd6d3a",
             "type": "IF_CONDITION",
             "conditions": [{
                 "leftValueType": "expression",
@@ -1263,138 +1291,11 @@
                 "leftValueType": "expression",
                 "leftValue": "COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE.length > 0"
             }],
-            "parentId": "IF_CONDITION_e16fd6648a5c4de8b535bb7d7541e8e8",
+            "parentId": "_c079bd51ae6143ce93ce96e9fdca3428",
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "ADD_SNIPPET_b4c56c7a014c4c0aa753e9c7824e8bc3",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "// var data_configurable = [];\n// var data_simple = [];\nvoltmx.print(\"### GBL CONFIGURABLE COMPONENTS AT THE BEGINNING: \");\nconsole.log(gblConfigurableComponentsTemplates); //empty at the beginning\n\nvoltmx.print(\"### GBL SIMPLE COMPONENTS AT THE BEGINNING: \");\nconsole.log(gblSimpleComponentsTemplates);  //empty at the beginning\n\n\n// iteration over all of the components\nfor (let i = 0; i < COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE.length; i++) {\n    /* \n     Network response :{\"opstatus\":0,\"COMPONENT_TEMPLATE\":[{\"layout\":\"stepSection\",\"displayName\":\"RXC_ATTRIBUTE_TILE_LIST\",\"modalImage\":\"\",\"name\":\"RXC_ATTRIBUTE_TILE_LIST\",\"nestedViewModes\":\"inside, outside\",\"availableAttributes\":\"*, warrantyOptions\",\"configurable\":\"true\",\"previewImage\":\"https://www.francese-live.academy/wp-content/uploads/2017/04/adresse.png\"},{\"layout\":\"previewSection\",\"displayName\":\"RXC_BRAND_LOGO\",\"modalImage\":\"\",\"name\":\"RXC_BRAND_LOGO\",\"position_values\":\"top-left, top-right, bottom-left, bottom-right, center\",\"previewImage\":\"https://www.salvatorepumo.it/wp-content/uploads/2024/01/logo-ray-ban-oggi.jpg\"}]\n    */\n  console.log(COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]);\n  voltmx.print(\"### COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]: \" + JSON.stringify(COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]) );\n  \n  // taking in consideration ONLY components that are NOT defaultComponent\n  if (COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].defaultComponent === \"false\"){\n    \n    \n    // if the component is configurable, I put it in the configurable component segment, otherwise in the simple component segment\n    if (\"configurable\" in COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]){  // oppure -> if (COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].configurable !== null) {\n      /*\n       {\n                        \"imgComponent\": {\n                            \"src\": tempData1070[each9618][\"previewImage\"]\n                        },\n                        \"lblComponentName\": {\n                            \"text\": tempData1070[each9618][\"displayName\"]\n                        },\n                    }       \n       */\n      var template_configurable = {imgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].previewImage, modalImgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].modalImage, lblComponentName: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].displayName, lblLayout: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].layout};\n      gblConfigurableComponentsTemplates.push(template_configurable);\n      voltmx.print(\"### GBL CONFIGURABLE COMPONENTS: \");\n      voltmx.print(\"### \" + JSON.stringify(gblConfigurableComponentsTemplates));\n      //console.log(gblConfigurableComponentsTemplates);\n      voltmx.print(\"### CONFIGURABLE!\");\n    } else {\n      var template_simple = {imgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].previewImage, modalImgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].modalImage, lblComponentName: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].displayName, lblLayout: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].layout};\n      gblSimpleComponentsTemplates.push(template_simple);\n      voltmx.print(\"### GBL SIMPLE COMPONENTS: \");\n      voltmx.print(\"### \" + JSON.stringify(gblSimpleComponentsTemplates));\n      //console.log(gblSimpleComponentsTemplates);\n      voltmx.print(\"### SIMPLE!\");\n    }\n  }\n}\n\n\n// inserting the data inside the 2 segments and setting them disabled\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setData(gblConfigurableComponentsTemplates);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(gblSimpleComponentsTemplates);\n\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setEnabled(false);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setEnabled(false);\n\n",
-            "parentId": "IF_CONDITION_f400755646ba454f821ef949e979d8ca",
-            "callbackType": null,
-            "disabled": false
-        }, {
-            "id": "ADD_MAPPING_f7f84ad9d8a84edc947f6296b9d18ff4",
-            "type": "ADD_MAPPING",
-            "mappings": {
-                "ME_Mapping_d7f1a576f29d41cc9617ff5b2a9d1e30": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_d7f1a576f29d41cc9617ff5b2a9d1e30",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Services",
-                        "propertyName": "COMPONENT_TEMPLATE",
-                        "dataType": "collection",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "COMPONENT_TEMPLATE_get",
-                            "operationid": "123229"
-                        }
-                    },
-                    "target": {
-                        "type": "Forms",
-                        "propertyName": "rowData",
-                        "widgetId": "segComponentsSideSimpleContent",
-                        "widgetPath": "this.view.ComponentsSide.segComponentsSideSimpleContent",
-                        "widgetType": "Segment",
-                        "dataType": "collection",
-                        "itemId": "frmStepComposition",
-                        "collectionId": "masterdata",
-                        "widgetKUID": "j5aed49b001c483195a9de8d2a6ec806",
-                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
-                        "forkedPlatform": "all",
-                        "instanceKUID": "f5291f743a984bb48e80d4d1d5ba5d1e"
-                    }
-                },
-                "ME_Mapping_hb0c03690a8f441981048dc0bf387b41": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_hb0c03690a8f441981048dc0bf387b41",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Services",
-                        "propertyName": "previewImage",
-                        "dataType": "string",
-                        "collectionId": "COMPONENT_TEMPLATE",
-                        "propertyPath": "[\"COMPONENT_TEMPLATE\"][0][\"previewImage\"]",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "COMPONENT_TEMPLATE_get",
-                            "operationid": "123229"
-                        }
-                    },
-                    "target": {
-                        "type": "Forms",
-                        "propertyName": "src",
-                        "widgetId": "imgComponent",
-                        "widgetPath": "this.view.imgComponent",
-                        "widgetType": "Image",
-                        "dataType": "string",
-                        "templateType": "rowTemplate",
-                        "itemId": "frmStepComposition",
-                        "parentMappingId": "ME_Mapping_d7f1a576f29d41cc9617ff5b2a9d1e30",
-                        "segmentId": "segComponentsSideSimpleContent",
-                        "segmentKUID": "c29c2bc540ad4e94a09bcc889d29b88b",
-                        "widgetKUID": "h86d52ec98eb47bb90e91cce2ce78b37",
-                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
-                        "forkedPlatform": "all"
-                    }
-                },
-                "ME_Mapping_h206412c829e4a0d8eb767fd45003975": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_h206412c829e4a0d8eb767fd45003975",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Services",
-                        "propertyName": "displayName",
-                        "dataType": "string",
-                        "collectionId": "COMPONENT_TEMPLATE",
-                        "propertyPath": "[\"COMPONENT_TEMPLATE\"][0][\"displayName\"]",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "COMPONENT_TEMPLATE_get",
-                            "operationid": "123229"
-                        }
-                    },
-                    "target": {
-                        "type": "Forms",
-                        "propertyName": "text",
-                        "widgetId": "lblComponentName",
-                        "widgetPath": "this.view.lblComponentName",
-                        "widgetType": "Label",
-                        "dataType": "string",
-                        "templateType": "rowTemplate",
-                        "itemId": "frmStepComposition",
-                        "parentMappingId": "ME_Mapping_d7f1a576f29d41cc9617ff5b2a9d1e30",
-                        "segmentId": "segComponentsSideSimpleContent",
-                        "segmentKUID": "c29c2bc540ad4e94a09bcc889d29b88b",
-                        "widgetKUID": "eb9dbd875edd42698ff01340c28d81e9",
-                        "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
-                        "forkedPlatform": "all"
-                    }
-                }
-            },
-            "mappingsOrder": ["ME_Mapping_d7f1a576f29d41cc9617ff5b2a9d1e30", "ME_Mapping_hb0c03690a8f441981048dc0bf387b41", "ME_Mapping_h206412c829e4a0d8eb767fd45003975"],
-            "parentId": "IF_CONDITION_f400755646ba454f821ef949e979d8ca",
-            "callbackType": null,
-            "enableMappingEditor": true,
-            "disabled": true
-        }, {
-            "id": "ELSE_CONDITION_e290ffe9e5c24e55b6953ccb01534256",
+            "id": "_b38526d0f2b548edb874f10799b489bc",
             "type": "ELSE_CONDITION",
             "conditions": [{
                 "leftValueType": "widgetprop",
@@ -1403,33 +1304,20 @@
                 "rightValueType": "widgetprop",
                 "rightValue": ""
             }],
-            "parentId": "IF_CONDITION_e16fd6648a5c4de8b535bb7d7541e8e8",
+            "parentId": "_c079bd51ae6143ce93ce96e9fdca3428",
             "callbackType": null,
             "criteria": "all"
         }, {
-            "id": "ADD_SNIPPET_a804a80f4da040f9891997a0fadc1d22",
+            "id": "ADD_SNIPPET_b6c5da0adcdb49dabb3c319c4d1be774",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### No components' templates returned.\");",
-            "parentId": "ELSE_CONDITION_e290ffe9e5c24e55b6953ccb01534256",
+            "parentId": "_b38526d0f2b548edb874f10799b489bc",
             "callbackType": null
         }, {
-            "id": "ELSE_CONDITION_ac87943ecd534b659808b6f881961afd",
-            "type": "ELSE_CONDITION",
-            "conditions": [{
-                "leftValueType": "widgetprop",
-                "leftValue": "",
-                "operator": "===",
-                "rightValueType": "widgetprop",
-                "rightValue": ""
-            }],
-            "parentId": "INVOKE_ASYNC_SERVICE_f02e1d1d500748368a7003476b86c97f",
-            "callbackType": "Callback",
-            "criteria": "all"
-        }, {
-            "id": "ADD_SNIPPET_d7cca7da780a4f4aa6b1920b4651eb85",
+            "id": "ADD_SNIPPET_ae05cc50bee44c19a9c2a708c801a9c1",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### Error occurred in Foundry layer while fetching components' templates. OPSTATUS: \"+COMPONENT_TEMPLATE_get.opstatus);",
-            "parentId": "ELSE_CONDITION_ac87943ecd534b659808b6f881961afd",
+            "codeSnippet": "// var data_configurable = [];\n// var data_simple = [];\nvoltmx.print(\"### GBL CONFIGURABLE COMPONENTS AT THE BEGINNING: \");\nconsole.log(gblConfigurableComponentsTemplates); //empty at the beginning\n\nvoltmx.print(\"### GBL SIMPLE COMPONENTS AT THE BEGINNING: \");\nconsole.log(gblSimpleComponentsTemplates);  //empty at the beginning\n\n\n// iteration over all of the components\nfor (let i = 0; i < COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE.length; i++) {\n    /* \n     Network response :{\"opstatus\":0,\"COMPONENT_TEMPLATE\":[{\"layout\":\"stepSection\",\"displayName\":\"RXC_ATTRIBUTE_TILE_LIST\",\"modalImage\":\"\",\"name\":\"RXC_ATTRIBUTE_TILE_LIST\",\"nestedViewModes\":\"inside, outside\",\"availableAttributes\":\"*, warrantyOptions\",\"configurable\":\"true\",\"previewImage\":\"https://www.francese-live.academy/wp-content/uploads/2017/04/adresse.png\"},{\"layout\":\"previewSection\",\"displayName\":\"RXC_BRAND_LOGO\",\"modalImage\":\"\",\"name\":\"RXC_BRAND_LOGO\",\"position_values\":\"top-left, top-right, bottom-left, bottom-right, center\",\"previewImage\":\"https://www.salvatorepumo.it/wp-content/uploads/2024/01/logo-ray-ban-oggi.jpg\"}]\n    */\n  console.log(COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]);\n  voltmx.print(\"### COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]: \" + JSON.stringify(COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]) );\n  \n  // taking in consideration ONLY components that are NOT defaultComponent\n  if (COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].defaultComponent === \"false\"){\n    \n    \n    // if the component is configurable, I put it in the configurable component segment, otherwise in the simple component segment\n    if (\"configurable\" in COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]){  // oppure -> if (COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].configurable !== null) {\n      /*\n       {\n                        \"imgComponent\": {\n                            \"src\": tempData1070[each9618][\"previewImage\"]\n                        },\n                        \"lblComponentName\": {\n                            \"text\": tempData1070[each9618][\"displayName\"]\n                        },\n                    }       \n       */\n      var template_configurable = {imgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].previewImage, modalImgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].modalImage, lblComponentName: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].displayName, lblLayout: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].layout};\n      gblConfigurableComponentsTemplates.push(template_configurable);\n      voltmx.print(\"### GBL CONFIGURABLE COMPONENTS: \");\n      voltmx.print(\"### \" + JSON.stringify(gblConfigurableComponentsTemplates));\n      //console.log(gblConfigurableComponentsTemplates);\n      voltmx.print(\"### CONFIGURABLE!\");\n    } else {\n      var template_simple = {imgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].previewImage, modalImgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].modalImage, lblComponentName: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].displayName, lblLayout: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].layout};\n      gblSimpleComponentsTemplates.push(template_simple);\n      voltmx.print(\"### GBL SIMPLE COMPONENTS: \");\n      voltmx.print(\"### \" + JSON.stringify(gblSimpleComponentsTemplates));\n      //console.log(gblSimpleComponentsTemplates);\n      voltmx.print(\"### SIMPLE!\");\n    }\n  }\n}\n\n\n// inserting the data inside the 2 segments and setting them disabled\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setData(gblConfigurableComponentsTemplates);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(gblSimpleComponentsTemplates);\n\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setEnabled(false);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setEnabled(false);\n\n",
+            "parentId": "_h90be68149dc43438a3b5d1ce3cd6d3a",
             "callbackType": null
         }]
     }
