@@ -727,7 +727,7 @@ define({
   
   
   
-  
+ 
   
   
   SHOW_ALERT_Failure_Callback: function() {
@@ -746,7 +746,18 @@ define({
     this.context = null;
     this.model = null;
   },
-
+  
+  
+  showLoading: function () {
+    voltmx.print("### show loading ON");
+    voltmx.application.showLoadingScreen(null, "Loading...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
+  },
+  
+  
+  dismissLoading: function () {
+    voltmx.print("### show loading OFF");
+    voltmx.application.dismissLoadingScreen();
+  },
   
   
   
@@ -1949,7 +1960,7 @@ define({
     
     return this.modes;
     
-    voltmx.print("### INIZIATO -returnThisModes-");
+    voltmx.print("### FINITO -returnThisModes-");
   },    // end of function "returnThisModes".
   
   
@@ -2318,6 +2329,7 @@ define({
   // this function laod the flow's data already existing (steps and components)
   loadFlowData: function(flow_id, stepsList, stepSectionList, previewSectionList, nestedComponents, componentsImages, propertyTemplates){  // stepsList è il risultato di STEP_flow_CustomQuery.records
     voltmx.print("### INIZIATO -loadFlowData-");
+    this.showLoading();
     //debugger;
     //voltmx.application.showLoadingScreen(null, "Loading components...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
     //checking input parameters content
@@ -2452,8 +2464,9 @@ define({
     }
     
     // debugger;
-    //voltmx.application.dismissLoadingScreen();
+    // voltmx.application.dismissLoadingScreen();
     voltmx.print("### FINITO -loadFlowData-");
+    this.dismissLoading();
   }   // end of function "loadFlowData"
   
   

@@ -15,137 +15,33 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
-            "id": "ADD_LOCAL_VARIABLE_aaa84c616b2d4eaf81f1ebe8aa1f47d6",
-            "type": "ADD_LOCAL_VARIABLE",
-            "name": "ordine",
-            "isGlobal": false,
-            "valuetype": "constant",
-            "datatype": "string",
-            "value": "\"2\"",
+            "id": "LOADING_INDICATOR_ddab1bf332724277b0dd2fa5dfbe1645",
+            "selectedOption": "show",
             "parentId": null,
-            "callbackType": null
-        }, {
-            "id": "ADD_SNIPPET_c95bd591c893490b9cbc709cfa4b5387",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "debugger;\nvoltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\n\"STEP_flow_order_CustomQueryGet\", {},\n{flow_id: gblFlowId, order: ordine},\n  (response) => {\n  \n  voltmx.print(\"### response: \" + JSON.stringify(response) );\n  let steps = STEP_flow_order_CustomQueryGet.records;\n}, (error) => {\n  voltmx.print(\"### error: \" + JSON.stringify(error) );\n});\ndebugger;",
-            "parentId": null,
+            "type": "LOADING_INDICATOR",
             "callbackType": null,
-            "disabled": true
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Loooooad..."
         }, {
-            "id": "INVOKE_SERVICE_dd44bf1ec8304fa3996c2751712f35c9",
-            "type": "INVOKE_ASYNC_SERVICE",
-            "inputparams": null,
-            "httpheaders": null,
-            "httpconfigs": null,
-            "isasynchronous": true,
-            "mappings": {
-                "ME_Mapping_j39934dee38d491185f73522d2609fd9": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_j39934dee38d491185f73522d2609fd9",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "gblFlowId",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Services",
-                        "propertyName": "flow_id",
-                        "dataType": "string",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "STEP_flow_order_CustomQueryGet",
-                            "operationid": "137789"
-                        }
-                    }
-                },
-                "ME_Mapping_a88a8fd7683742df90fdfe45581322d7": {
-                    "channel": "desktop",
-                    "id": "ME_Mapping_a88a8fd7683742df90fdfe45581322d7",
-                    "type": "MAPPING",
-                    "callbackType": null,
-                    "rectified": true,
-                    "source": {
-                        "type": "Variables",
-                        "propertyName": "ordine",
-                        "dataType": "string",
-                        "forkedPlatform": "all"
-                    },
-                    "target": {
-                        "type": "Services",
-                        "propertyName": "order",
-                        "dataType": "string",
-                        "forkedPlatform": "all",
-                        "serviceconfig": {
-                            "servicename": "mariaDB",
-                            "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                            "type": "integration",
-                            "operationname": "STEP_flow_order_CustomQueryGet",
-                            "operationid": "137789"
-                        }
-                    }
-                }
-            },
-            "mappingsOrder": ["ME_Mapping_j39934dee38d491185f73522d2609fd9", "ME_Mapping_a88a8fd7683742df90fdfe45581322d7"],
-            "serviceconfig": {
-                "servicename": "mariaDB",
-                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
-                "type": "integration",
-                "operationname": "STEP_flow_order_CustomQueryGet",
-                "operationid": "137789"
-            },
-            "parentId": null,
+            "id": "TIMEOUT_ACTION_i9ab7880f43448c089feb68b72b47943",
+            "timeout": 7000,
+            "type": "TIMEOUT_ACTION",
+            "timeoutVar": "",
+            "timerId": "TIMEOUT_ACTION_i9ab7880f43448c089feb68b72b47943",
+            "repeats": "false"
+        }, {
+            "id": "LOADING_INDICATOR_fa2a854139244bc39a665a513768103b",
+            "selectedOption": "dismiss",
+            "parentId": "TIMEOUT_ACTION_i9ab7880f43448c089feb68b72b47943",
+            "type": "LOADING_INDICATOR",
             "callbackType": null,
-            "enableMappingEditor": true,
-            "disabled": false
-        }, {
-            "id": "ADD_SNIPPET_je40dff14f2d48d09ac4e2c635a225e5",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "let response = STEP_flow_order_CustomQueryGet;\n\ndebugger;",
-            "parentId": "INVOKE_SERVICE_dd44bf1ec8304fa3996c2751712f35c9",
-            "callbackType": "Callback",
-            "disabled": true
-        }, {
-            "id": "_f8508e5687734f21bdb4b0f403ad3c6a",
-            "type": "IF_CONDITION",
-            "conditions": [{
-                "leftValueType": "expression",
-                "leftValue": "STEP_flow_order_CustomQueryGet.opstatus === 0"
-            }],
-            "parentId": "INVOKE_SERVICE_dd44bf1ec8304fa3996c2751712f35c9",
-            "callbackType": "Callback",
-            "criteria": "all"
-        }, {
-            "id": "_g75a9faaab5449adad808383cac59190",
-            "type": "ELSE_CONDITION",
-            "conditions": [{
-                "leftValueType": "widgetprop",
-                "leftValue": "",
-                "operator": "===",
-                "rightValueType": "widgetprop",
-                "rightValue": ""
-            }],
-            "parentId": "INVOKE_SERVICE_dd44bf1ec8304fa3996c2751712f35c9",
-            "callbackType": "Callback",
-            "criteria": "all"
-        }, {
-            "id": "ADD_SNIPPET_fab71d803d1d4198ad033be5c48f45bd",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### NON FATTO\");",
-            "parentId": "_g75a9faaab5449adad808383cac59190",
-            "callbackType": null
-        }, {
-            "id": "ADD_SNIPPET_a53642ad5a5247a2bf2d23513e996d2d",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### FATTO\");",
-            "parentId": "_f8508e5687734f21bdb4b0f403ad3c6a",
-            "callbackType": null
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
         }]
     }
 }

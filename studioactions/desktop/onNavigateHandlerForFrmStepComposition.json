@@ -16,6 +16,16 @@
         "language": "js",
         "eventType": "onNavigate",
         "actions": [{
+            "id": "INVOKE_FUNCTION__c9af58df1a634c34bd1aade5462a69d7",
+            "type": "INVOKE_FUNCTION",
+            "sequenceKUID": "showLoading",
+            "display": "showLoading",
+            "inputparams": [],
+            "parentId": null,
+            "callbackType": null,
+            "disabled": true,
+            "source": "controller"
+        }, {
             "id": "LOADING_INDICATOR_g104ef46ca4f463e8623619221d25985",
             "selectedOption": "show",
             "parentId": null,
@@ -141,6 +151,42 @@
             "parentId": null,
             "callbackType": null,
             "criteria": "all"
+        }, {
+            "id": "TIMEOUT_ACTION_ae0642cca0fd4ea2a9e49ff64d2a84a1",
+            "timeout": 5000,
+            "type": "TIMEOUT_ACTION",
+            "parentId": null,
+            "callbackType": null,
+            "disabled": true,
+            "timerId": "TIMEOUT_ACTION_ae0642cca0fd4ea2a9e49ff64d2a84a1",
+            "repeats": "false"
+        }, {
+            "id": "ADD_SNIPPET_dd186cd88835416896d758c478f944d2",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "alert(\"finito il timeout\");",
+            "parentId": "TIMEOUT_ACTION_ae0642cca0fd4ea2a9e49ff64d2a84a1",
+            "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_j5bf657b6a3c4a11a5e0cdcac4a50512",
+            "selectedOption": "dismiss",
+            "parentId": "TIMEOUT_ACTION_ae0642cca0fd4ea2a9e49ff64d2a84a1",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "LOADING_INDICATOR_fa7b35494d0644178cf08ebb68af9a0a",
+            "selectedOption": "show",
+            "parentId": "_deb578d587f64f7db5ffe4fc31ac4773",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "L....."
         }, {
             "id": "LOADING_INDICATOR_bab7e5a6401d416bbc80c209739efdad",
             "selectedOption": "show",

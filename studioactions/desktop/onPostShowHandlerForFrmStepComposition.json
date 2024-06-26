@@ -16,15 +16,28 @@
         "language": "js",
         "eventType": "postShow",
         "actions": [{
-            "id": "ADD_SNIPPET_b5f614b493fa4ee5b427e28baa1b1fd1",
-            "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### SONO in postShow\");",
+            "id": "LOADING_INDICATOR_f79fd8322faa41799133b07858f90ff4",
+            "selectedOption": "show",
             "parentId": null,
-            "callbackType": null
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "L......"
         }, {
-            "id": "LOADING_INDICATOR_b3ac8a01c4db407c909635875530793e",
-            "selectedOption": "dismiss",
+            "id": "TIMEOUT_ACTION_g3403747211241b2958b45872b42f064",
+            "timeout": 5000,
+            "type": "TIMEOUT_ACTION",
             "parentId": null,
+            "callbackType": null,
+            "timerId": "TIMEOUT_ACTION_g3403747211241b2958b45872b42f064",
+            "repeats": false
+        }, {
+            "id": "LOADING_INDICATOR_fe619efb5e844c369ed9d095e6390ae6",
+            "selectedOption": "dismiss",
+            "parentId": "TIMEOUT_ACTION_g3403747211241b2958b45872b42f064",
             "type": "LOADING_INDICATOR",
             "callbackType": null,
             "skin": "none",
