@@ -59,7 +59,7 @@
         }, {
             "id": "ADD_SNIPPET_be8a2b1752ae419b812ba6504558d84f",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### entrato in IF per flusso Prod e Active, INVOCO COMPONENT_INSTANCE_Flow_CustomQuery\");\ndebugger; // flow Prod e Active\n// Dovrò eliminare i precedenti componenti per ricrearli,\n// creare un nuovo labelCopy nel quale caricare tutte le labels\n// e infine aggiornare il vecchio labelCopy active ad archiviato.",
+            "codeSnippet": "voltmx.print(\"### entrato in IF per flusso Prod e Active, INVOCO COMPONENT_INSTANCE_Flow_CustomQuery\");\n//debugger; // flow Prod e Active\n// Dovrò eliminare i precedenti componenti per ricrearli,\n// creare un nuovo labelCopy nel quale caricare tutte le labels\n// e infine aggiornare il vecchio labelCopy active ad archiviato.",
             "parentId": "ELSE_IF_CONDITION_d73234d0efc7421ca66f6a696459f156",
             "callbackType": null
         }, {
@@ -151,7 +151,7 @@
         }, {
             "id": "ADD_SNIPPET_ea9a5ce4e5484868af748a11b196da4a",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### entrato in IF per flusso NON Prod o NON Active, INVOCO COMPONENT_INSTANCE_Flow_CustomQuery\");\ndebugger; // Flow NON Prod o Active",
+            "codeSnippet": "voltmx.print(\"### entrato in IF per flusso NON Prod o NON Active, INVOCO COMPONENT_INSTANCE_Flow_CustomQuery\");\n//debugger; // Flow NON Prod o Active",
             "parentId": "_hc299d94e34d4ce0a72e361ea8b79059",
             "callbackType": null
         }, {
@@ -170,7 +170,7 @@
         }, {
             "id": "ADD_SNIPPET_e568e09aeb6a4a00b705d0bcc269b952",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### entrato in ELSE per salvataggio di un flusso nuovo. Invoco direttamente saveStepComposition\");\ndebugger; // else",
+            "codeSnippet": "voltmx.print(\"### entrato in ELSE per salvataggio di un flusso nuovo. Invoco direttamente saveStepComposition\");\n//debugger; // else",
             "parentId": "_e52221cbe82a4aedb44a5bc3442d8743",
             "callbackType": null
         }, {
@@ -404,7 +404,7 @@
         }, {
             "id": "ADD_SNIPPET_e292c34dd3da46f28c981f79139beca0",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### LABEL_copyId_CustomQueryGet andata a buon fine. Invocherò successivamente la funzione saveStepComposition\");\n\nvoltmx.print(\"### LABEL_copyId_CustomQueryGet.records: \" + JSON.stringify(LABEL_copyId_CustomQueryGet.records) );\ndebugger;\n// forEach cicle in order to delete all the records in LABEL, given its id.\nLABEL_copyId_CustomQueryGet.records.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n\n\ngblSavingFlowProdAndActive = false;\n\n//debugger;",
+            "codeSnippet": "voltmx.print(\"### LABEL_copyId_CustomQueryGet andata a buon fine. Invocherò successivamente la funzione saveStepComposition\");\n\nvoltmx.print(\"### LABEL_copyId_CustomQueryGet.records: \" + JSON.stringify(LABEL_copyId_CustomQueryGet.records) );\n//debugger;\n// forEach cicle in order to delete all the records in LABEL, given its id.\nLABEL_copyId_CustomQueryGet.records.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n\n\ngblSavingFlowProdAndActive = false;\n\n//debugger;",
             "parentId": "_ab001465cfd447b3a1ceb3407eea68df",
             "callbackType": null
         }, {
@@ -440,7 +440,7 @@
         }, {
             "id": "ADD_SNIPPET_f6f5566f094c4355a6123ac0e8957fb8",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### COMPONENT_INSTANCE_Flow_CustomQuery.records: \" + JSON.stringify(COMPONENT_INSTANCE_Flow_CustomQuery.records) );\ndebugger;",
+            "codeSnippet": "voltmx.print(\"### COMPONENT_INSTANCE_Flow_CustomQuery.records: \" + JSON.stringify(COMPONENT_INSTANCE_Flow_CustomQuery.records) );\n//debugger;",
             "parentId": "INVOKE_SERVICE_hdef9731234b4aab96d887167b9b5022",
             "callbackType": "Callback"
         }, {
@@ -498,7 +498,7 @@
         }, {
             "id": "ADD_SNIPPET_a788a273a8dc45a08e09253005588369",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### COMPONENT_INSTANCE_Flow_CustomQuery andata a buon fine. Invocherò successivamente LABEL_Flow_CustomQuery\");\ndebugger;\n\n// forEach cicle in order to DELETE all the records in COMPONENT_INSTANCE, given its id.\nCOMPONENT_INSTANCE_Flow_CustomQuery.records.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"COMPONENT_INSTANCE_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n\nflowId = parseInt(gblFlowId);\ndebugger;",
+            "codeSnippet": "voltmx.print(\"### COMPONENT_INSTANCE_Flow_CustomQuery andata a buon fine. Invocherò successivamente LABEL_Flow_CustomQuery\");\n//debugger;\n\n// forEach cicle in order to DELETE all the records in COMPONENT_INSTANCE, given its id.\nCOMPONENT_INSTANCE_Flow_CustomQuery.records.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"COMPONENT_INSTANCE_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n\nflowId = parseInt(gblFlowId);\n//debugger;",
             "parentId": "_c03f424e8ace452486db09be79eb4169"
         }, {
             "id": "INVOKE_SERVICE_c83ca315a37549048fd121b8e502e1d0",
@@ -609,7 +609,7 @@
         }, {
             "id": "ADD_SNIPPET_c7ce83689db94ab0b0db0d1ece07b5aa",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### new Label Copy creato correttamente.\");\nnewLabelCopyId = LABELCOPY_create.LABELCOPY[0].id;\ndebugger;",
+            "codeSnippet": "voltmx.print(\"### new Label Copy creato correttamente.\");\nnewLabelCopyId = LABELCOPY_create.LABELCOPY[0].id;\n//debugger;",
             "parentId": "_j597b8c6445c420d8bfecc2d478f6a57",
             "callbackType": null
         }, {
@@ -749,7 +749,7 @@
         }, {
             "id": "ADD_SNIPPET_c1bd80f904404b0992c84c14b1230450",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "debugger;\nvoltmx.print(\"### LABEL_copyId_CustomQueryGet andata a buon fine. Invocherò successivamente la funzione saveStepComposition\");\nvoltmx.print(\"### LABEL_copyId_CustomQueryGet.records: \" + JSON.stringify(LABEL_copyId_CustomQueryGet.records) );\n\nnewLabels = JSON.parse(JSON.stringify(LABEL_copyId_CustomQueryGet.records));\noldLabels = JSON.parse(JSON.stringify(LABEL_copyId_CustomQueryGet.records));\nJSON.parse(JSON.stringify(LABEL_copyId_CustomQueryGet.records));\n// In questa lista di labels sostituisco ad ognuna il label_copy_id inserendo il nuovo e ricreo le labels.\nnewLabels.forEach(record => {\n  record.id = record.id.replace(/^\\d+/, newLabelCopyId); // sostituisce il primo numero della stringa con il label copy aggiornato\n  record.label_copy_id = newLabelCopyId;\n  \n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_create\", {}, record, (response) => {\n    voltmx.print(\"### Label recreated correctly: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Label NOT recreated correctly. Error: \" + error);\n  });\n  \n});\n\n\n// Ora che le labels sono ricreate con il nuovo label copy, elimino le vecchie per poterle ricreare con gli aggiornamenti\noldLabels.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n\ndebugger;",
+            "codeSnippet": "//debugger;\nvoltmx.print(\"### LABEL_copyId_CustomQueryGet andata a buon fine. Invocherò successivamente la funzione saveStepComposition\");\nvoltmx.print(\"### LABEL_copyId_CustomQueryGet.records: \" + JSON.stringify(LABEL_copyId_CustomQueryGet.records) );\n\nnewLabels = JSON.parse(JSON.stringify(LABEL_copyId_CustomQueryGet.records));\noldLabels = JSON.parse(JSON.stringify(LABEL_copyId_CustomQueryGet.records));\nJSON.parse(JSON.stringify(LABEL_copyId_CustomQueryGet.records));\n// In questa lista di labels sostituisco ad ognuna il label_copy_id inserendo il nuovo e ricreo le labels.\nnewLabels.forEach(record => {\n  record.id = record.id.replace(/^\\d+/, newLabelCopyId); // sostituisce il primo numero della stringa con il label copy aggiornato\n  record.label_copy_id = newLabelCopyId;\n  \n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_create\", {}, record, (response) => {\n    voltmx.print(\"### Label recreated correctly: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Label NOT recreated correctly. Error: \" + error);\n  });\n  \n});\n\n\n// Ora che le labels sono ricreate con il nuovo label copy, elimino le vecchie per poterle ricreare con gli aggiornamenti\noldLabels.forEach(record => {\n\n  voltmx.sdk.getDefaultInstance().getIntegrationService(\"mariaDB\").invokeOperation(\"LABEL_delete\", {}, {id: record.id}, (response) => {\n    voltmx.print(\"### Row deleted with response: \" + JSON.stringify(response) );\n  }, (error) => {\n    voltmx.print(\"### Row NOT deleted. Error: \" + error);\n  });\n  \n});\n\n//debugger;",
             "parentId": "_d3f8090f17bc4153bf36ddac263634f8",
             "callbackType": null
         }, {

@@ -514,6 +514,16 @@
             "callbackType": "Callback",
             "criteria": "all"
         }, {
+            "id": "LOADING_INDICATOR_ef0439087c79403b896b3105579ebc55",
+            "selectedOption": "dismiss",
+            "parentId": "_a49afc55204f4fbfaa6bf593c8003f20",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "SHOW_ALERT_f152b0633fa84ff685cb181cf0556ac2",
             "type": "SHOW_ALERT",
             "alertType": "constants.ALERT_TYPE_ERROR",

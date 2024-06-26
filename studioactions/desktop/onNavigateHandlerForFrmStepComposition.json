@@ -16,6 +16,17 @@
         "language": "js",
         "eventType": "onNavigate",
         "actions": [{
+            "id": "LOADING_INDICATOR_g104ef46ca4f463e8623619221d25985",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Load..."
+        }, {
             "id": "ADD_LOCAL_VARIABLE_f3ee48483a1d448fb44aa883758b6ab5",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "previousCreation",
@@ -131,6 +142,136 @@
             "callbackType": null,
             "criteria": "all"
         }, {
+            "id": "LOADING_INDICATOR_bab7e5a6401d416bbc80c209739efdad",
+            "selectedOption": "show",
+            "parentId": "_deb578d587f64f7db5ffe4fc31ac4773",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Loading..."
+        }, {
+            "id": "_h788566463ec424caf9adb2f7ff4ac76",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "gblConfigurableComponentsTemplates.length === 0 || gblSimpleComponentsTemplates.length === 0"
+            }],
+            "parentId": "_deb578d587f64f7db5ffe4fc31ac4773",
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "INVOKE_SERVICE_b32092dfe221458f87e6f6d8cb377316",
+            "type": "INVOKE_ASYNC_SERVICE",
+            "inputparams": null,
+            "httpheaders": null,
+            "httpconfigs": null,
+            "isasynchronous": true,
+            "mappings": {},
+            "mappingsOrder": [],
+            "serviceconfig": {
+                "servicename": "mariaDB",
+                "serviceid": "a113ff3f-1581-4b02-ab37-8ee6cc497b5e",
+                "type": "integration",
+                "operationname": "COMPONENT_TEMPLATE_get",
+                "operationid": "123229"
+            },
+            "parentId": "_h788566463ec424caf9adb2f7ff4ac76",
+            "callbackType": null,
+            "enableMappingEditor": true
+        }, {
+            "id": "_eea612e995be45c0b1c23e2f04cafcfd",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "COMPONENT_TEMPLATE_get !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "COMPONENT_TEMPLATE_get.opstatus === 0"
+            }],
+            "parentId": "INVOKE_SERVICE_b32092dfe221458f87e6f6d8cb377316",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "_ied23a8b74c24dd982fb50d84c9e9371",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "INVOKE_SERVICE_b32092dfe221458f87e6f6d8cb377316",
+            "callbackType": "Callback",
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_de0bd35359a644da9e2b3b9e4375ebe1",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### Error occurred in Foundry layer while fetching components' templates. OPSTATUS: \" + COMPONENT_TEMPLATE_get.opstatus);",
+            "parentId": "_ied23a8b74c24dd982fb50d84c9e9371",
+            "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_c1072c5f8bd9472095c7ba84de47e185",
+            "selectedOption": "dismiss",
+            "parentId": "_ied23a8b74c24dd982fb50d84c9e9371",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "_c93457572d094af9b40c0063209feac0",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "expression",
+                "leftValue": "COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE !== null"
+            }, {
+                "leftValueType": "expression",
+                "leftValue": "COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE.length > 0"
+            }],
+            "parentId": "_eea612e995be45c0b1c23e2f04cafcfd",
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_b5ab0902bf804fd7b2656d5ba3167c15",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": "_eea612e995be45c0b1c23e2f04cafcfd",
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_je506e71be604131895fde9974aff0a1",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### No components' templates returned.\");",
+            "parentId": "_b5ab0902bf804fd7b2656d5ba3167c15",
+            "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_b7b695d4dfd046ecb558f19e96ed27a6",
+            "selectedOption": "dismiss",
+            "parentId": "_b5ab0902bf804fd7b2656d5ba3167c15",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
+            "id": "ADD_SNIPPET_f43d20c2ea04474ca4410f15b2385d9e",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// var data_configurable = [];\n// var data_simple = [];\nvoltmx.print(\"### GBL CONFIGURABLE COMPONENTS AT THE BEGINNING: \");\nconsole.log(gblConfigurableComponentsTemplates); //empty at the beginning\n\nvoltmx.print(\"### GBL SIMPLE COMPONENTS AT THE BEGINNING: \");\nconsole.log(gblSimpleComponentsTemplates);  //empty at the beginning\n\n\n// iteration over all of the components\nfor (let i = 0; i < COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE.length; i++) {\n    /* \n     Network response :{\"opstatus\":0,\"COMPONENT_TEMPLATE\":[{\"layout\":\"stepSection\",\"displayName\":\"RXC_ATTRIBUTE_TILE_LIST\",\"modalImage\":\"\",\"name\":\"RXC_ATTRIBUTE_TILE_LIST\",\"nestedViewModes\":\"inside, outside\",\"availableAttributes\":\"*, warrantyOptions\",\"configurable\":\"true\",\"previewImage\":\"https://www.francese-live.academy/wp-content/uploads/2017/04/adresse.png\"},{\"layout\":\"previewSection\",\"displayName\":\"RXC_BRAND_LOGO\",\"modalImage\":\"\",\"name\":\"RXC_BRAND_LOGO\",\"position_values\":\"top-left, top-right, bottom-left, bottom-right, center\",\"previewImage\":\"https://www.salvatorepumo.it/wp-content/uploads/2024/01/logo-ray-ban-oggi.jpg\"}]\n    */\n  console.log(COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]);\n  voltmx.print(\"### COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]: \" + JSON.stringify(COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]) );\n  \n  // taking in consideration ONLY components that are NOT defaultComponent\n  if (COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].defaultComponent === \"false\"){\n    \n    \n    // if the component is configurable, I put it in the configurable component segment, otherwise in the simple component segment\n    if (\"configurable\" in COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]){  // oppure -> if (COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].configurable !== null) {\n      /*\n       {\n                        \"imgComponent\": {\n                            \"src\": tempData1070[each9618][\"previewImage\"]\n                        },\n                        \"lblComponentName\": {\n                            \"text\": tempData1070[each9618][\"displayName\"]\n                        },\n                    }       \n       */\n      var template_configurable = {imgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].previewImage, modalImgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].modalImage, lblComponentName: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].displayName, lblLayout: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].layout};\n      gblConfigurableComponentsTemplates.push(template_configurable);\n      voltmx.print(\"### GBL CONFIGURABLE COMPONENTS: \");\n      voltmx.print(\"### \" + JSON.stringify(gblConfigurableComponentsTemplates));\n      //console.log(gblConfigurableComponentsTemplates);\n      voltmx.print(\"### CONFIGURABLE!\");\n    } else {\n      var template_simple = {imgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].previewImage, modalImgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].modalImage, lblComponentName: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].displayName, lblLayout: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].layout};\n      gblSimpleComponentsTemplates.push(template_simple);\n      voltmx.print(\"### GBL SIMPLE COMPONENTS: \");\n      voltmx.print(\"### \" + JSON.stringify(gblSimpleComponentsTemplates));\n      //console.log(gblSimpleComponentsTemplates);\n      voltmx.print(\"### SIMPLE!\");\n    }\n  }\n}\n\n\n// inserting the data inside the 2 segments and setting them disabled\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setData(gblConfigurableComponentsTemplates);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(gblSimpleComponentsTemplates);\n\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setEnabled(false);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setEnabled(false);\n\n",
+            "parentId": "_c93457572d094af9b40c0063209feac0",
+            "callbackType": null
+        }, {
             "id": "LOADING_INDICATOR_b75642cee5ed4088b795c5ee23dd7149",
             "selectedOption": "show",
             "parentId": "_deb578d587f64f7db5ffe4fc31ac4773",
@@ -140,7 +281,7 @@
             "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
             "isBlocked": "true",
             "showProgressIndicator": "true",
-            "text": "Loading data..."
+            "text": "Loading..."
         }, {
             "id": "ADD_SNIPPET_e236688ed76f42179e7352e8c214dfc0",
             "type": "ADD_SNIPPET",
@@ -1225,11 +1366,32 @@
             "parentId": "_ff6569a94c9b4b5e94aa2e6ab786a3d4",
             "callbackType": null
         }, {
+            "id": "LOADING_INDICATOR_c9f7f0f1f90b41779cccf5975df14b3f",
+            "selectedOption": "dismiss",
+            "parentId": "_ff6569a94c9b4b5e94aa2e6ab786a3d4",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "ADD_SNIPPET_a248fd35d5404a0fb6defb04e2b00d52",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### entrato in onClick di btnProceed da frmStepCreation\");\ndebugger;\n// setting the first step box title (created in the previous form)\nthis.view.lblStepTitleIntoStepComposition.text = gblFirstStepTitle;\n// setting the flow name show in top center of the form (as reminder of the current flow open)\nthis.view.lblFlowName.text = gblFlowName;\n\n// setting the first step's box on focus (black background, icons shown, related scroll shown)\nthis.view.flxBoxFirstStep.backgroundColor = \"00000000\";\nthis.view.flxBoxFirstStep.imgDeleteStep.isVisible = true;\nthis.view.flxBoxFirstStep.imgEditStep.isVisible = true;\nthis.view.flxBoxFirstStep.lblStepOrder.fontColor = \"FFFFFF00\";\nthis.view.flxBoxFirstStep.lblStepTitleIntoStepComposition.fontColor = \"FFFFFF00\";\n//this.view.flxRightSide.flxScrollRight.setVisibility(true);\n//this.view.settingsSide.flxScrollSettingsContent.removeAll();\n//this.view.settingsSide.flxScrollSettingsContent.setVisibility(false);\n//this.view.settingsSide.txt.setVisibility(true);\n//gblCurrentStepOrder = 1;\ngblCurrentStepTitle = this.view.lblStepTitleIntoStepComposition.text;\nvoltmx.print(\"### CURRENT STEP ORDER: \" + JSON.stringify(gblCurrentStepOrder));\n\n",
             "parentId": "_i823a4858c284d5d8c50d89738c7666e",
             "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_ee556b96d80e45f8a6630f0a492c9cdf",
+            "selectedOption": "show",
+            "parentId": "_i823a4858c284d5d8c50d89738c7666e",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Loading..."
         }, {
             "id": "INVOKE_SERVICE_c9f097887dec4f34a09e9e165f95ee36",
             "type": "INVOKE_ASYNC_SERVICE",
@@ -1282,6 +1444,16 @@
             "parentId": "_a3877d47a05a49c4ae5e15c4542d6b89",
             "callbackType": null
         }, {
+            "id": "LOADING_INDICATOR_a3f8c558989741b588f2916043fa3ff8",
+            "selectedOption": "dismiss",
+            "parentId": "_a3877d47a05a49c4ae5e15c4542d6b89",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "_h90be68149dc43438a3b5d1ce3cd6d3a",
             "type": "IF_CONDITION",
             "conditions": [{
@@ -1314,11 +1486,31 @@
             "parentId": "_b38526d0f2b548edb874f10799b489bc",
             "callbackType": null
         }, {
+            "id": "LOADING_INDICATOR_id8b329003ca4ba7bb3e1d5aca954fea",
+            "selectedOption": "dismiss",
+            "parentId": "_b38526d0f2b548edb874f10799b489bc",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "ADD_SNIPPET_ae05cc50bee44c19a9c2a708c801a9c1",
             "type": "ADD_SNIPPET",
             "codeSnippet": "// var data_configurable = [];\n// var data_simple = [];\nvoltmx.print(\"### GBL CONFIGURABLE COMPONENTS AT THE BEGINNING: \");\nconsole.log(gblConfigurableComponentsTemplates); //empty at the beginning\n\nvoltmx.print(\"### GBL SIMPLE COMPONENTS AT THE BEGINNING: \");\nconsole.log(gblSimpleComponentsTemplates);  //empty at the beginning\n\n\n// iteration over all of the components\nfor (let i = 0; i < COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE.length; i++) {\n    /* \n     Network response :{\"opstatus\":0,\"COMPONENT_TEMPLATE\":[{\"layout\":\"stepSection\",\"displayName\":\"RXC_ATTRIBUTE_TILE_LIST\",\"modalImage\":\"\",\"name\":\"RXC_ATTRIBUTE_TILE_LIST\",\"nestedViewModes\":\"inside, outside\",\"availableAttributes\":\"*, warrantyOptions\",\"configurable\":\"true\",\"previewImage\":\"https://www.francese-live.academy/wp-content/uploads/2017/04/adresse.png\"},{\"layout\":\"previewSection\",\"displayName\":\"RXC_BRAND_LOGO\",\"modalImage\":\"\",\"name\":\"RXC_BRAND_LOGO\",\"position_values\":\"top-left, top-right, bottom-left, bottom-right, center\",\"previewImage\":\"https://www.salvatorepumo.it/wp-content/uploads/2024/01/logo-ray-ban-oggi.jpg\"}]\n    */\n  console.log(COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]);\n  voltmx.print(\"### COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]: \" + JSON.stringify(COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]) );\n  \n  // taking in consideration ONLY components that are NOT defaultComponent\n  if (COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].defaultComponent === \"false\"){\n    \n    \n    // if the component is configurable, I put it in the configurable component segment, otherwise in the simple component segment\n    if (\"configurable\" in COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i]){  // oppure -> if (COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].configurable !== null) {\n      /*\n       {\n                        \"imgComponent\": {\n                            \"src\": tempData1070[each9618][\"previewImage\"]\n                        },\n                        \"lblComponentName\": {\n                            \"text\": tempData1070[each9618][\"displayName\"]\n                        },\n                    }       \n       */\n      var template_configurable = {imgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].previewImage, modalImgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].modalImage, lblComponentName: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].displayName, lblLayout: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].layout};\n      gblConfigurableComponentsTemplates.push(template_configurable);\n      voltmx.print(\"### GBL CONFIGURABLE COMPONENTS: \");\n      voltmx.print(\"### \" + JSON.stringify(gblConfigurableComponentsTemplates));\n      //console.log(gblConfigurableComponentsTemplates);\n      voltmx.print(\"### CONFIGURABLE!\");\n    } else {\n      var template_simple = {imgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].previewImage, modalImgComponent: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].modalImage, lblComponentName: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].displayName, lblLayout: COMPONENT_TEMPLATE_get.COMPONENT_TEMPLATE[i].layout};\n      gblSimpleComponentsTemplates.push(template_simple);\n      voltmx.print(\"### GBL SIMPLE COMPONENTS: \");\n      voltmx.print(\"### \" + JSON.stringify(gblSimpleComponentsTemplates));\n      //console.log(gblSimpleComponentsTemplates);\n      voltmx.print(\"### SIMPLE!\");\n    }\n  }\n}\n\n\n// inserting the data inside the 2 segments and setting them disabled\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setData(gblConfigurableComponentsTemplates);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(gblSimpleComponentsTemplates);\n\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setEnabled(false);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setEnabled(false);\n\n",
             "parentId": "_h90be68149dc43438a3b5d1ce3cd6d3a",
             "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_fbadee8b6a7e4714b10d215eb56e7f7b",
+            "selectedOption": "dismiss",
+            "parentId": "_h90be68149dc43438a3b5d1ce3cd6d3a",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
         }]
     }
 }

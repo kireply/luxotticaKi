@@ -11,7 +11,7 @@ define({
   // This function is called at the end of executing functions "editProperty", "cloneComponent" or "deleteComponent"
   selectComponent: function(rightData, leftData, instance, nested, lastComponentWidth){
     voltmx.print("### INIZIATO -selectComponent-");
-    debugger;
+    // debugger;
     
     voltmx.print("### RIGHT DATA: " + JSON.stringify(rightData));
     voltmx.print("### LEFT DATA: " + JSON.stringify(leftData));
@@ -59,7 +59,7 @@ define({
     
     //whenever a component already inserted in one of the two halves is clicked
     const selectedCompEventHandler = () => {
-      debugger;
+      // debugger;
       // if none of the two halves is open, the functionalities are not available (content is blured)
       let left_width = parseInt(this.view.flxLeftRight.flxLeftSide.width, 10);
       let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);
@@ -187,7 +187,7 @@ define({
     };
     
     selectedComp.onClickClone = () => {
-      debugger;
+      // debugger;
       this.cloneComponent(selectedComp.id);
     };
     
@@ -270,7 +270,7 @@ define({
   // this function should update the component selected with the settings edited on the right Setting Side
   onEndEditingCallback: function(propComp, identify, dropdown, switched){  //identity = selectedComponent.id
     
-    debugger;
+    // debugger;
     voltmx.print("### INIZIATO -onEndEditingCallback-");
     let value = null;
     if (dropdown){
@@ -837,7 +837,7 @@ define({
 
               }
 
-              debugger;
+              // debugger;
               let label = {
                 id: elementoTrovato_left[prop_id_left[0]].key,
                 label_copy_id: gblLabelCopyId,
@@ -913,7 +913,7 @@ define({
 
     }  // finita sezione di sinistra
     
-	debugger;  // inizio sezione di destra
+	// debugger;  // inizio sezione di destra
     
     let associatedId = null;
     let scrolls = steps.filter(step => step.id.startsWith("flxScrollRight"));
@@ -957,7 +957,7 @@ define({
         }, {});
 
 
-        debugger; //inizio for each componenti di destra
+        // debugger; //inizio for each componenti di destra
         // Filtraggio dei componenti, mantenendo quelli che non hanno figli diretti in `new_components`
         right_widgets.forEach(widget => {
           //             debugger;
@@ -966,7 +966,7 @@ define({
 
           let completeKey = widget[componentKey]["flxSelectedComponentLeft"]["segmentLeft"]["data"][0].lblComponentName + "_" + widget[componentKey]["lblComponentOrder"].text + "_" + step_id;
           let keyArray = mode_dict[completeKey];
-          debugger;
+          // debugger;
           let nestedObjs = keyArray.find(item => item.hasOwnProperty('nestedComponents'));
           if (nestedObjs && nestedObjs.nestedComponents.length > 0){
             if (!childIds.has(id)){
@@ -1132,7 +1132,7 @@ define({
 
         }
         
-        debugger; // di componentCreateCallback
+        // debugger; // di componentCreateCallback
 
         let label_right = {
           id: elementoTrovato_right[prop_id_right[0]].key,
@@ -1212,7 +1212,7 @@ define({
     
   // this function creates the new step (and the related box, at the top right)
   addNewStep: function(left_position, title){
-    debugger;
+    // debugger;
     voltmx.print("### INIZIATO -addNewStep-");
     
     let allSteps = this.view.flxSteps.widgets();
@@ -1256,7 +1256,7 @@ define({
     box.newId += allSteps.length === 2 ? 2 : ( parseInt(allSteps[allSteps.length-1].newId.match(/\d+/)[0]) + 1 );
     
     box.onClickTeaser = () => {
-      debugger;
+      // debugger;
       let steps_widgets = this.view.flxSteps.widgets();
       let flxScrolls = this.view.flxRightSide.widgets();
       let current_id = box.newId || box.id;   // ex. "boxStep3"
@@ -1390,7 +1390,7 @@ define({
     
     box.onTouchEndDeleteTeaser = () => {
       voltmx.print("### Entrato in onTouchEndDeleteTeaser dello step");
-      debugger;
+      // debugger;
       this.view.lblPopupStepOrder.text = "Step" + gblCurrentStepOrder;
       this.view.flxNewStepBlur.setVisibility(true);
       this.view.flxPopupDeleteStep.setVisibility(true);
@@ -1449,7 +1449,7 @@ define({
     
     this.highlightSelectedStepBox();
 
-    debugger;
+    // debugger;
     voltmx.print("### FINITO -addNewStep-");
   },  // end of function "addNewStep"
   
@@ -1499,7 +1499,7 @@ define({
   highlightSelectedStepBox: function(){
     voltmx.print("### INIZIATO -highlightSelectedStepBox-");
     let steps = this.view.flxSteps.widgets();
-    debugger;
+    // debugger;
     // removing highlight from all ste boxes (white background and no icons shown)
     for (let i = 1; i <= gblLastInsertedStep; i++) { // starting from 1 because 0 is the "add new"
       if (i === 1) {
@@ -1540,7 +1540,7 @@ define({
     
     // hiding all flxScrolls
     let scrolls = this.view.flxRightSide.widgets();
-    debugger;
+    // debugger;
     for (let i = 0; i <= scrolls.length-1; i++) {
       scrolls[i].setVisibility(false);
     }
@@ -1565,7 +1565,7 @@ define({
     
     flxScrollToShow.setVisibility(true);
 
-    debugger;
+    // debugger;
     
     /* Tentativo per far ricomparire le immagini dei componenti caricati.... non funziona
     let flex = Object.keys(scrolls[3]).find(key => key.startsWith("flex"));
@@ -1960,7 +1960,7 @@ define({
   // this function clones (duplicate) the component selected
   cloneComponent: function(id){
     voltmx.print("### INIZIATO -cloneComponent-");
-    debugger;
+    // debugger;
     let scroll = this.findCurrentFlexScroll();
     let scroll_widgets = scroll.widgets();
     let new_scroll_widgets = [];  // recreating the scroll with the new list of components (including the duplicated one)
@@ -2010,13 +2010,13 @@ define({
         new_scroll_widgets.push([widget[widget_key].leftData, widget[widget_key].rightData]);
       }
     });
-    debugger; // DENTRO A -cloneComponent-
+    // debugger; // DENTRO A -cloneComponent-
     scroll.removeAll(); // removing all component views from the scroll
     this.view.settingsSide.flxScrollSettingsContent.removeAll();
         
     // aggiorniamo le properties dei componenti successivi (es chiave labels con istanza e order aggiornato)
     new_scroll_widgets.forEach( (new_widget, index) => {
-      debugger;
+      // debugger;
       let instance = (index + 1).toString();
       
       if(name !== new_widget[0][0].lblComponentName) {
@@ -2050,7 +2050,7 @@ define({
         // Trova la chiave che corrisponde al pattern
         let propertyKey = Object.keys(gblPropertyTemplatesIds).find(key => {
           return key.startsWith(new_widget[0][0].lblComponentName) && key.endsWith(gblCurrentStepOrder);
-          debugger;
+          // debugger;
         });
 
         // diverso da instance
@@ -2087,7 +2087,7 @@ define({
       });
       
       gblLastInsertedComponent = new_widget[0][0].lblComponentName;
-      debugger;
+      // debugger;
       this.selectComponent(new_widget[1], new_widget[0], instance, false);
     });
     
@@ -2318,7 +2318,7 @@ define({
   // this function laod the flow's data already existing (steps and components)
   loadFlowData: function(flow_id, stepsList, stepSectionList, previewSectionList, nestedComponents, componentsImages, propertyTemplates){  // stepsList è il risultato di STEP_flow_CustomQuery.records
     voltmx.print("### INIZIATO -loadFlowData-");
-    debugger;
+    //debugger;
     //voltmx.application.showLoadingScreen(null, "Loading components...", constants.LOADING_SCREEN_POSITION_FULL_SCREEN, true, true, {});
     //checking input parameters content
     voltmx.print("### flow_id: " + flow_id);
@@ -2408,7 +2408,7 @@ define({
     
     // setting the last step box inserted as selected (black background and icons shown)
     let steps = this.view.flxSteps.widgets();
-    debugger;
+    //debugger;
     let lastStepBox = steps.find(step => step.id === (gblCurrentStepOrder === 1 ? "flxBoxFirstStep" : "boxStep" + gblCurrentStepOrder) );
     if (lastStepBox) {
       if (gblCurrentStepOrder === 1) { // only first step box present
@@ -2428,9 +2428,9 @@ define({
       }
     }
     
-    debugger;
+    //debugger;
     //lastStepBox.onClickTeaser();
-    debugger;
+    //debugger;
     // if the last step has no components, show the default message
     let scrolls = this.view.flxRightSide.widgets();
     let lastScroll = scrolls.find(scroll => scroll.id === ("flxScrollRight" + (gblCurrentStepOrder === 1 ? "" : gblCurrentStepOrder) ));
@@ -2451,7 +2451,7 @@ define({
       } 
     }
     
-    debugger;
+    // debugger;
     //voltmx.application.dismissLoadingScreen();
     voltmx.print("### FINITO -loadFlowData-");
   }   // end of function "loadFlowData"

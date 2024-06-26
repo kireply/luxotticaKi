@@ -16,6 +16,22 @@
         "language": "js",
         "eventType": "postShow",
         "actions": [{
+            "id": "ADD_SNIPPET_b5f614b493fa4ee5b427e28baa1b1fd1",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "voltmx.print(\"### SONO in postShow\");",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "LOADING_INDICATOR_b3ac8a01c4db407c909635875530793e",
+            "selectedOption": "dismiss",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "ADD_SNIPPET_a57a87fd15d04e04bc9c7984b8ebeb2c",
             "type": "ADD_SNIPPET",
             "codeSnippet": "debugger;\nvoltmx.print(\"### entrato in postShow di frmStepComposition\");\n// Disabling text areas.\nthis.view.settingsSide.txt.setEnabled(false);\nthis.view.txtStartPhraseLeft.setEnabled(false);\nthis.view.txtStartPhraseRight.setEnabled(false);\n// setting the list of component blurred (as no section is open yet)\nthis.view.flxComponentsSide.opacity = 0.5;\n",
