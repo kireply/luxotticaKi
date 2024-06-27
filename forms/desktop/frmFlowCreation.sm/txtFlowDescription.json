@@ -41,6 +41,7 @@
     "containerheightmode": 1,
     "containerweight": 100,
     "contentalignment": 4,
+    "disabledSkins": {},
     "focusskin": "sae4f4330cb44b1db4d74095730853b8",
     "id": "txtFlowDescription",
     "info": null,

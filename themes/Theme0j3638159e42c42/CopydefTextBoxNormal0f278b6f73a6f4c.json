@@ -38,6 +38,14 @@
     "isForked": false
   },
   "kuid": "s192642bcac14456bcc75f26ef06b520",
+  "nativemac": {
+    "font_size": 100,
+    "isForked": false
+  },
+  "nativewin": {
+    "font_size": 100,
+    "isForked": false
+  },
   "spaan": {
     "font_size": 100,
     "isForked": false

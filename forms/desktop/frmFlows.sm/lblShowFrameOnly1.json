@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "4%"
+        "value": "3%"
     },
     "_left_": {
         "type": "string",
@@ -22,10 +22,10 @@
         0
     ],
     "_skin_": "sfd924d5e71e4497b04c55aaf3fce866",
-    "_text_": "Is Default flow?",
+    "_text_": "Show frame only?",
     "_top_": {
         "type": "string",
-        "value": "55%"
+        "value": "63.150000000000006%"
     },
     "_width_": {
         "type": "ref",
@@ -41,7 +41,7 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "id": "lblIsDefaultFlow",
+    "id": "lblShowFrameOnly1",
     "info": null,
     "ipad": {
         "psp": {
@@ -55,7 +55,7 @@
     },
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "je93ac8c833c40daaff28515468ac377",
+    "kuid": "d6eed8908ff14e3c86e9d774c391baf2",
     "name": "kony.ui.Label",
     "parent": "flxDuplicationFlow",
     "pf": "frmFlows",

@@ -3,11 +3,11 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "7%"
+        "value": "5%"
     },
     "_left_": {
         "type": "string",
-        "value": "5%"
+        "value": "5.09%"
     },
     "_margin_": [
         0,
@@ -26,7 +26,7 @@
     "_text_": "",
     "_top_": {
         "type": "string",
-        "value": "35%"
+        "value": "30%"
     },
     "_width_": {
         "type": "string",
@@ -41,7 +41,9 @@
     "containerheightmode": 1,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s4ae88d6059f41ebb18f1220b211dfc3",
+    "disabledSkins": {
+        "focusSkin": "sc1e04c5fdec490383bc86fbb8f10c22"
+    },
     "id": "txtFlowDescription",
     "info": null,
     "iscustomlayout": false,

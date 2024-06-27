@@ -23,7 +23,7 @@
             "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
             "isBlocked": "true",
             "showProgressIndicator": "true",
-            "text": "Navigating to Change steps..."
+            "text": "Loading..."
         }, {
             "id": "INVOKE_SERVICE_d4b7f882a7d14d3ebb2401816d36d393",
             "type": "INVOKE_ASYNC_SERVICE",
@@ -143,13 +143,21 @@
         }, {
             "id": "ADD_SNIPPET_g9a093d5fad243a3babdce1d16e42f75",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "voltmx.print(\"### cliccato su CHANGE STEP in EDIT DEL FLUSSO\");\ndebugger;",
+            "codeSnippet": "voltmx.print(\"### cliccato su CHANGE STEP in EDIT DEL FLUSSO\");\n//debugger;",
             "parentId": "_cc55e019fb0845f2971c6a6c610fe5b4",
             "callbackType": null
         }, {
+            "id": "TIMEOUT_ACTION_habe622a59df4793988a9ffc5915b73b",
+            "timeout": 6000,
+            "type": "TIMEOUT_ACTION",
+            "parentId": "_cc55e019fb0845f2971c6a6c610fe5b4",
+            "callbackType": null,
+            "timerId": "TIMEOUT_ACTION_habe622a59df4793988a9ffc5915b73b",
+            "repeats": false
+        }, {
             "id": "LOADING_INDICATOR_d8d60a0982f34458b8c3ac4fd272a84f",
             "selectedOption": "dismiss",
-            "parentId": "_cc55e019fb0845f2971c6a6c610fe5b4",
+            "parentId": "TIMEOUT_ACTION_habe622a59df4793988a9ffc5915b73b",
             "type": "LOADING_INDICATOR",
             "callbackType": null,
             "skin": "none",

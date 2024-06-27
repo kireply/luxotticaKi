@@ -3,7 +3,7 @@
     "DNDConfig": null,
     "_height_": {
         "type": "string",
-        "value": "7%"
+        "value": "5%"
     },
     "_left_": {
         "type": "string",
@@ -25,7 +25,7 @@
     "_skin_": "s6670225d90f4454945f185f0da4ab20",
     "_top_": {
         "type": "string",
-        "value": "47%"
+        "value": "40%"
     },
     "_width_": {
         "type": "string",
@@ -34,7 +34,9 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
-    "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
+    "disabledSkins": {
+        "focusSkin": "s61be32f6d3a46dbbea0834d8ca7f624"
+    },
     "groupcells": false,
     "id": "lbCategory2",
     "info": null,
@@ -43,15 +45,15 @@
     "kuid": "e222cacbcbef4b4d82304ea276411c8f",
     "masterdata": [
         [
-            "lb1",
+            "Sunglasses",
             "Sunglasses"
         ],
         [
-            "lb2",
+            "Eyeglasses",
             "Eyeglasses"
         ],
         [
-            "lb3",
+            "Mix&Match",
             "Mix&Match"
         ]
     ],

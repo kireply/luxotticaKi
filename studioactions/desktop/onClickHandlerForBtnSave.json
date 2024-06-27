@@ -168,6 +168,35 @@
             "callbackType": null,
             "criteria": "all"
         }, {
+            "id": "LOADING_INDICATOR_cc4b30e852a940c0bf264b1756d8fa69",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Saving..."
+        }, {
+            "id": "TIMEOUT_ACTION_dd3ff9935c7f4915a656a1c78cb81ad5",
+            "timeout": 5000,
+            "type": "TIMEOUT_ACTION",
+            "parentId": null,
+            "callbackType": null,
+            "timerId": "TIMEOUT_ACTION_dd3ff9935c7f4915a656a1c78cb81ad5",
+            "repeats": false
+        }, {
+            "id": "LOADING_INDICATOR_d92acd8f78b247b6acf69e11c872935a",
+            "selectedOption": "dismiss",
+            "parentId": "TIMEOUT_ACTION_dd3ff9935c7f4915a656a1c78cb81ad5",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "ADD_SNIPPET_e568e09aeb6a4a00b705d0bcc269b952",
             "type": "ADD_SNIPPET",
             "codeSnippet": "voltmx.print(\"### entrato in ELSE per salvataggio di un flusso nuovo. Invoco direttamente saveStepComposition\");\n//debugger; // else",

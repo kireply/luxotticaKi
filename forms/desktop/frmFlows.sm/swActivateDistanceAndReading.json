@@ -4,7 +4,7 @@
     "_children_": [],
     "_height_": {
         "type": "string",
-        "value": "3%"
+        "value": "2.93%"
     },
     "_left_": {
         "type": "string",
@@ -27,7 +27,7 @@
     "_skin_": "sb49bf7280ac4ab2b77341aeaa4d2278",
     "_top_": {
         "type": "string",
-        "value": "55.20%"
+        "value": "75.20%"
     },
     "_width_": {
         "type": "string",
@@ -35,12 +35,14 @@
     },
     "canUpdateUI": true,
     "containerweight": 0,
-    "data": {},
-    "id": "swIsDefaultFlow1",
+    "data": {
+        "state": false
+    },
+    "id": "swActivateDistanceAndReading",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "f3bca608d9184cf183b62f80d5f07761",
+    "kuid": "f48b6038d751432383b493ff82c35527",
     "masterType": 1,
     "name": "kony.ui.UserWidgetInstance",
     "onclick": "AS_FlexContainer_j6ed7e78c876440da3af64d132975c81",

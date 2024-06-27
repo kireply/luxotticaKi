@@ -24,7 +24,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_de60c5c21b5e4f928c4dc2112abbb7f0",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "this.view.flxPopupDuplicateFlowLarge.setVisibility(false);\nthis.view.flxPopupDuplicateFlowSmall.setVisibility(true);",
+            "codeSnippet": "this.view.lbSelectChannel.selectedKey = \"lb1\"; // making the user chose again\nthis.view.flxPopupDuplicateFlowLarge.setVisibility(false);\nthis.view.flxPopupDuplicateFlowSmall.setVisibility(true);",
             "parentId": null
         }]
     }

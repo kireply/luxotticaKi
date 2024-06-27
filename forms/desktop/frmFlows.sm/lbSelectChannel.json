@@ -34,8 +34,10 @@
     "canUpdateUI": true,
     "containerweight": 100,
     "contentalignment": 4,
+    "disabledSkins": {
+        "focusSkin": "s61be32f6d3a46dbbea0834d8ca7f624"
+    },
     "dropdownimage": "listboxarw.png",
-    "focusskin": "s61be32f6d3a46dbbea0834d8ca7f624",
     "groupcells": false,
     "id": "lbSelectChannel",
     "ide_onSelection": "AS_ListBox_ad19a701a5104553aa2fd4d125012030",
