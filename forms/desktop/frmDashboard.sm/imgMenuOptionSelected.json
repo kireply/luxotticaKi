@@ -8,7 +8,7 @@
     },
     "_left_": {
         "type": "string",
-        "value": "2%"
+        "value": "6dp"
     },
     "_margin_": [
         0,
@@ -35,7 +35,7 @@
     "canUpdateUI": true,
     "centery": {
         "type": "string",
-        "value": "46%"
+        "value": "50%"
     },
     "containerweight": 100,
     "id": "imgMenuOptionSelected",

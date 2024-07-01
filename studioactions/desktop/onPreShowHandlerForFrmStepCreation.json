@@ -18,7 +18,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_b5f4a6c2463446d3ba07694d7f97b5db",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "//resetting al page\nthis.view.flxPopupIsDefaultTrue.setVisibility(false);\nthis.view.flxPopupIsDefaultFalse.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);\n\nthis.view.txtFlowDescription.text = \"\";\nthis.view.swIsDefaultFlow.selectedIndex = 1;\nthis.view.swIsSupernova.selectedIndex = 1;\nthis.view.swShowFrameOnly.selectedIndex = 1;\nthis.view.swShowFramePlusLenses.selectedIndex = 1;\nthis.view.swShowSavingsLabel.selectedIndex = 1;\nthis.view.swActivateDistanceAndReading.selectedIndex = 1;\n\nlet formName = voltmx.application.getCurrentForm().id;\nvoltmx.store.setItem(\"formAtRefresh\", formName);\nalert(voltmx.store.length() );\nvoltmx.store.removeItem(\"formAtRefresh\");\nalert(voltmx.store.length() );",
+            "codeSnippet": "//resetting al page\nthis.view.flxPopupIsDefaultTrue.setVisibility(false);\nthis.view.flxPopupIsDefaultFalse.setVisibility(false);\nthis.view.flxBlur.setVisibility(false);\n\nthis.view.txtFlowDescription.text = \"\";\nthis.view.swIsDefaultFlow.selectedIndex = 1;\nthis.view.swIsSupernova.selectedIndex = 1;\nthis.view.swShowFrameOnly.selectedIndex = 1;\nthis.view.swShowFramePlusLenses.selectedIndex = 1;\nthis.view.swShowSavingsLabel.selectedIndex = 1;\nthis.view.swActivateDistanceAndReading.selectedIndex = 1;\n\n// let formName = voltmx.application.getCurrentForm().id;\n// voltmx.store.setItem(\"formAtRefresh\", formName);\n// alert(voltmx.store.length() );\n// voltmx.store.removeItem(\"formAtRefresh\");\n// alert(voltmx.store.length() );",
             "parentId": null
         }]
     }

@@ -16,6 +16,12 @@
         "language": "js",
         "eventType": "onClick",
         "actions": [{
+            "id": "ADD_SNIPPET_ec38435798ed4250bf239736a074158d",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// resetting global variables\ngblInfoIcon = \"\";\ngblFlowId = \"\";\ngblFlowCategory = \"\";\ngblFlowName = \"\";\ngblFlowStatus = \"\";\ngblFlowDescription = \"\";\ngblFlowEnvironment = \"\";\ngblFlowAuthor = \"\";\ngblFlowLayoutId = \"\";\ngblFlowDefault = false;\ngblFlowSupernova = false;\ngblFlowFrameOnly = false;\ngblFlowFramePlusLenses = false;\ngblFlowSavingsLabel = false;\ngblFlowDistanceReading = false;\ngblDuplicateIcon = false;\ngblEditIcon = false;\ngblArchiveIcon = false;\ngblActivateIcon = false;\ngblNavigatedFromLogin = false;\ngblSelectedComponentLeft = false;\ngblSelectedComponentRight = false;\ngblLeftOrder = 1;\ngblRightOrder = 1;\ngblLastInsertedComponent = \"\";\ngblFail = false;\ngblLabelsPage = 1;\ngblLabelsColumns = 0;\ngblLabelsFileUploaded = false;\ngblActivateLabelCopy = false;\ngblPublishLabelCopy = false;\ngblDuplicateLabelCopy = false;\ngblLabelCopyId = 0;\ngblLabelCopyFlowId = 0;\ngblLabelCopyFlowName = \"\";\ngblLabelCopyEnvironment = \"\";\ngblLabelCopyStatus = \"\";\ngblNewLabelCopyId = 0;\ngblFirstStepTitle = \"\";\ngblStepIdToChange = 0;\ngblStepBoxToChange = \"\";\ngblCurrentStepOrder = 1;\ngblCurrentStepTitle = \"\";\ngblLastInsertedStep = 1;\ngblFatherNest = \"\";\ngblIsNestedInsideEdit = false;\ngblEditingLeftSide = false;\ngblEditingRightSide = false;\ngblSaveAfterEdit = false;\ngblComponentId = \"\";\n\ngblPropertyTemplatesIds = {};\ngblLabelsList = {};\ngblLabelCopyList = {};\ngblIdOrderSteps = {};\ngblFetchedLabels = {};\nvoltmx.print(\"### global variables resetted navigating back to Flows\");\n",
+            "parentId": null,
+            "callbackType": null
+        }, {
             "id": "LOADING_INDICATOR_a1ed0234ed05406aaff7e5253c28b08e",
             "selectedOption": "show",
             "type": "LOADING_INDICATOR",
