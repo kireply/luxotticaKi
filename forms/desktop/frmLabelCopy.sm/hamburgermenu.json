@@ -57,14 +57,6 @@
                 "wType": "Button"
             }
         },
-        "clickableArea": {
-            "__events__": {},
-            "__info__": {
-                "kuid": "f20dcfb2d7624d65951024802b0860c1",
-                "srcKUID": "j6c6d8aca27b44bda1bcf72d8e6126f1",
-                "wType": "Button"
-            }
-        },
         "flxBlurStyleOption": {
             "__events__": {},
             "__info__": {
@@ -78,6 +70,14 @@
             "__info__": {
                 "kuid": "eb80af75bf874d249555618394784759",
                 "srcKUID": "a0c260c49fa14d3aa934cade39c38bb0",
+                "wType": "FlexContainer"
+            }
+        },
+        "flxSegMenu": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "be5ef41f3d5744f69060373bfb127cd4",
+                "srcKUID": "d0f5b2bc6ebb43a8a40602b48c830256",
                 "wType": "FlexContainer"
             }
         },
