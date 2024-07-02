@@ -178,5 +178,6 @@
         "flxtplRowSegMenu": "flxtplRowSegMenu",
         "imgMenuIcon": "imgMenuIcon",
         "lblMenu": "lblMenu"
-    }
+    },
+    "zindex": 1
 }

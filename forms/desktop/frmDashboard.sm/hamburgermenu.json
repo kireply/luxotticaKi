@@ -57,6 +57,14 @@
                 "wType": "Button"
             }
         },
+        "clickableArea": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "f384ad3c2f204d17910ba7f5ce45739c",
+                "srcKUID": "j6c6d8aca27b44bda1bcf72d8e6126f1",
+                "wType": "Button"
+            }
+        },
         "flxBlurStyleOption": {
             "__events__": {},
             "__info__": {

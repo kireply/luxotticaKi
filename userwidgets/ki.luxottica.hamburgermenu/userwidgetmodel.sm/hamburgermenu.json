@@ -38,7 +38,8 @@
         "segMenu",
         "btnResizeMenu",
         "flxBtnLogout",
-        "flxBlurStyleOption"
+        "flxBlurStyleOption",
+        "clickableArea"
     ],
     "clipbounds": false,
     "containerweight": 100,
