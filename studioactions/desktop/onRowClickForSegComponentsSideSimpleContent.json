@@ -22,6 +22,35 @@
         "language": "js",
         "eventType": "onRowClick",
         "actions": [{
+            "id": "LOADING_INDICATOR_d993cf786a1045f7b3e772104c4c0dd9",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Inserting..."
+        }, {
+            "id": "TIMEOUT_ACTION_ffe0edcc9bc54ee88c2dc04b4619f19b",
+            "timeout": 1000,
+            "type": "TIMEOUT_ACTION",
+            "parentId": null,
+            "callbackType": null,
+            "timerId": "TIMEOUT_ACTION_ffe0edcc9bc54ee88c2dc04b4619f19b",
+            "repeats": false
+        }, {
+            "id": "LOADING_INDICATOR_a5b126eec8e94d4aae0c84b044f2b27c",
+            "selectedOption": "dismiss",
+            "parentId": "TIMEOUT_ACTION_ffe0edcc9bc54ee88c2dc04b4619f19b",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "ADD_LOCAL_VARIABLE_g960647d223a4820a63168d4ddc7d096",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "selected_item",

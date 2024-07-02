@@ -417,10 +417,11 @@ define({
   
   
   
-  /* This function is called when the user select a component from one of the two segments on the left of the form (Configurable and Simple).
+  /* This function is called whenever the user select a component from one of the two segments on the left of the form (Configurable and Simple).
   * We retrieve from the db the data related to the component selected (calling the service PROPERTY_TEMPLATE_CustomQuery)
   * and we pass them to the function as parameters. */
   editProperty: function(list, rightSegmentData, leftSegmentData, selected_item, selected_item_img, selected_item_modal_img){
+    
     voltmx.print("### INIZIATO -editProperty-");
     voltmx.print("### LIST: " + JSON.stringify(list));
 //     LIST: [{"mode":"dropdown","default":"bottom-left","component_name":"RXC_BRAND_FOOTER","name":"position","id":"129","type":"string","position_values":"top-left, top-right, bottom-left, bottom-right, center","required":"false"},{"mode":"label","default":"Frame size","component_name":"RXC_BRAND_FOOTER","name":"frameSize","id":"130","type":"string","position_values":"top-left, top-right, bottom-left, bottom-right, center","required":"false"}]
@@ -720,6 +721,9 @@ define({
     
     
     this.selectComponent(rightSegmentData, leftSegmentData, instance, nested, lastComponentWidth);
+    
+    //voltmx.application.dismissLoadingScreen();
+    
     voltmx.print("### FINITO -editProperty-");
   }, // end of function editProperty.
 
@@ -1078,7 +1082,7 @@ define({
     voltmx.print("### SALVATAGGIO CON gblSaveAfterEdit = " + gblSaveAfterEdit + ".");
     gblSaveAfterEdit = true;
 
-    //voltmx.application.dismissLoadingScreen();
+    // voltmx.application.dismissLoadingScreen();
     voltmx.print("### FINITO -saveStepComposition-");
   },   // end of function saveStepComposition
   

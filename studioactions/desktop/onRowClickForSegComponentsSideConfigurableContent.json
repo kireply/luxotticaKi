@@ -22,6 +22,35 @@
         "language": "js",
         "eventType": "onRowClick",
         "actions": [{
+            "id": "LOADING_INDICATOR_c6067e2b6cb34d3d9ff23bb0334c38ad",
+            "selectedOption": "show",
+            "parentId": null,
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true",
+            "text": "Inserting..."
+        }, {
+            "id": "TIMEOUT_ACTION_h0ff76b2d68a413bab24f388f58b01fd",
+            "timeout": 1000,
+            "type": "TIMEOUT_ACTION",
+            "parentId": null,
+            "callbackType": null,
+            "timerId": "TIMEOUT_ACTION_h0ff76b2d68a413bab24f388f58b01fd",
+            "repeats": false
+        }, {
+            "id": "LOADING_INDICATOR_d0324bc715cb45e3b9fe5107ef39d2f5",
+            "selectedOption": "dismiss",
+            "parentId": "TIMEOUT_ACTION_h0ff76b2d68a413bab24f388f58b01fd",
+            "type": "LOADING_INDICATOR",
+            "callbackType": null,
+            "skin": "none",
+            "position": "constants.LOADING_SCREEN_POSITION_FULL_SCREEN",
+            "isBlocked": "true",
+            "showProgressIndicator": "true"
+        }, {
             "id": "ADD_LOCAL_VARIABLE_i3f68d616fa849ad9e25d363e66e4734",
             "type": "ADD_LOCAL_VARIABLE",
             "name": "nestedSelection",
