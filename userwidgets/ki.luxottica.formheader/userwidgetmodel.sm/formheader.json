@@ -36,7 +36,8 @@
     "canUpdateUI": true,
     "children": [
         "imgLogo",
-        "flxRightIcons"
+        "flxRightIcons",
+        "flxBlurIcons"
     ],
     "clipbounds": false,
     "containerweight": 100,

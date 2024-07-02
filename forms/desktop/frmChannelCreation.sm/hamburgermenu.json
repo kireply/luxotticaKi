@@ -70,6 +70,14 @@
                 }
             }
         },
+        "flxBlurStyleOption": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "h26a3e2fdaa642a49416fc73b609d0dc",
+                "srcKUID": "c262f24b6d624ca4bd44e4308ecb8ee2",
+                "wType": "FlexContainer"
+            }
+        },
         "flxBtnLogout": {
             "__events__": {},
             "__info__": {

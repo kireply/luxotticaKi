@@ -21,7 +21,7 @@
         "actions": [{
             "id": "ADD_SNIPPET_g88531a6e4bd4081b44d5a8b4b5b6776",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "//Entering hover icon\nif (context.eventType !== \"leave\"){\n    this.view.flxImgDelete4.backgroundColor = \"dedede\";\n} else {\n    this.view.flxImgDelete4.backgroundColor = \"ffffff\";\n}",
+            "codeSnippet": "/* Commentato fino a quando icona non è implementata\n* index del flx4 interno dovrà essere riportato a 1 (per rimanere in secondo piano)\n\n//Entering hover icon\nif (context.eventType !== \"leave\"){\n    this.view.flxImgDelete4.backgroundColor = \"dedede\";\n} else {\n    this.view.flxImgDelete4.backgroundColor = \"ffffff\";\n}\n\n*/",
             "parentId": null
         }]
     }

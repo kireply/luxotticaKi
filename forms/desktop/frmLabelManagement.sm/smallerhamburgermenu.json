@@ -87,6 +87,14 @@
                 "Default": 6
             }
         },
+        "flxBlurStyleOption": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "hc12ee97710e450dbda6b8ad950d12ff",
+                "srcKUID": "d898d2170a3c4370a25cadc19a742368",
+                "wType": "FlexContainer"
+            }
+        },
         "flxLogout": {
             "__events__": {},
             "__info__": {

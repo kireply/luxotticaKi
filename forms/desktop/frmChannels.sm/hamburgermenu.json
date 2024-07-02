@@ -57,6 +57,14 @@
                 "wType": "Button"
             }
         },
+        "flxBlurStyleOption": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "j246dd94e42f4319ade86293c9268799",
+                "srcKUID": "c262f24b6d624ca4bd44e4308ecb8ee2",
+                "wType": "FlexContainer"
+            }
+        },
         "flxBtnLogout": {
             "__events__": {},
             "__info__": {

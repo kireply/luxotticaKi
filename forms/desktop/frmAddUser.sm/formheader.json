@@ -39,6 +39,14 @@
     "clipbounds": false,
     "containerweight": 0,
     "dataDiffs": {
+        "flxBlurIcons": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "af32440d33a6482fa8a5d55f272fd880",
+                "srcKUID": "c38d17e10e864c8bbf79cc6e34abffd8",
+                "wType": "FlexContainer"
+            }
+        },
         "flxRightIcons": {
             "__events__": {},
             "__info__": {

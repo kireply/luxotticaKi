@@ -8,11 +8,11 @@
     },
     "_height_": {
         "type": "string",
-        "value": "15%"
+        "value": "20%"
     },
     "_left_": {
         "type": "string",
-        "value": "82%"
+        "value": "77%"
     },
     "_margin_": [
         0,
@@ -30,7 +30,7 @@
     "_src_": "delete_modified.png",
     "_width_": {
         "type": "string",
-        "value": "15%"
+        "value": "20%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
@@ -40,7 +40,7 @@
     "info": null,
     "invokedProperty": "src",
     "iscustomlayout": false,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "b6cdbe28fc0b4b97887966947bc224b4",
     "name": "kony.ui.Image2",
     "parent": "flxBoxFirstStep",

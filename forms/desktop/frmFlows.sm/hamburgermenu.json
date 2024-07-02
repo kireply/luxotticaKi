@@ -110,6 +110,14 @@
                 "Default": 10
             }
         },
+        "flxBlurStyleOption": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "dfe9920e47ff4196854acdf074c9d97f",
+                "srcKUID": "c262f24b6d624ca4bd44e4308ecb8ee2",
+                "wType": "FlexContainer"
+            }
+        },
         "flxBtnLogout": {
             "__events__": {
                 "desktopweb": {

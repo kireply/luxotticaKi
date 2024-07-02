@@ -8,7 +8,7 @@
     },
     "_height_": {
         "type": "string",
-        "value": "15%"
+        "value": "20%"
     },
     "_left_": {
         "type": "string",
@@ -30,7 +30,7 @@
     "_src_": "pencil_modified.png",
     "_width_": {
         "type": "string",
-        "value": "15%"
+        "value": "20%"
     },
     "canUpdateUI": true,
     "containerweight": 100,
@@ -40,7 +40,7 @@
     "info": null,
     "invokedProperty": "src",
     "iscustomlayout": false,
-    "isvisible": false,
+    "isvisible": true,
     "kuid": "db6ebe830b3442e1aa018a4e9e048fb6",
     "name": "kony.ui.Image2",
     "parent": "flxBoxFirstStep",

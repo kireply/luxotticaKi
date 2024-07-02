@@ -37,7 +37,8 @@
     "children": [
         "segMenu",
         "btnResizeMenu",
-        "flxBtnLogout"
+        "flxBtnLogout",
+        "flxBlurStyleOption"
     ],
     "clipbounds": false,
     "containerweight": 100,
