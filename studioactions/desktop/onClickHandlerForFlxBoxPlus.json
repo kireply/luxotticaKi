@@ -45,6 +45,60 @@
             "disabled": true,
             "widgetPath": "this.view.flxBoxPlus"
         }, {
+            "id": "ADD_LOCAL_VARIABLE_da3e7306b5ee4eb8a737942702cfdaed",
+            "type": "ADD_LOCAL_VARIABLE",
+            "name": "right_width",
+            "isGlobal": false,
+            "valuetype": "constant",
+            "datatype": "number",
+            "value": "0",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_b325b42c07554cfca231b05a281987a0",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "right_width = parseInt(this.view.flxRightSide.width, 10);",
+            "parentId": null,
+            "callbackType": null
+        }, {
+            "id": "_dbc0558548124ff9bb288788916cfb6d",
+            "type": "IF_CONDITION",
+            "conditions": [{
+                "leftValueType": "varvalue",
+                "leftValue": "right_width",
+                "operator": ">",
+                "rightValueType": "value",
+                "rightValue": "48"
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "_cbf9845244d04bfda1e4c20042d15f7d",
+            "type": "ELSE_CONDITION",
+            "conditions": [{
+                "leftValueType": "widgetprop",
+                "leftValue": "",
+                "operator": "===",
+                "rightValueType": "widgetprop",
+                "rightValue": ""
+            }],
+            "parentId": null,
+            "callbackType": null,
+            "criteria": "all"
+        }, {
+            "id": "ADD_SNIPPET_bb483a9bf7d04e5eae320dfc16018b2c",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// right panel not open. We open it.\n\n// To avoid conficts by unintentional double clicking on sides while they have the animation going on\nthis.view.flxRightSide.setEnabled(false);\nthis.view.flxLeftSide.setEnabled(false);\n\n\nthis.view.flxComponentsSide.opacity = 0.5;\nthis.view.flxLeftSide.skin = \"HalfNotSelectedSide\";\n\n\nthis.view.settingsSide.flxScrollSettingsContent.setVisibility(false);\nthis.view.settingsSide.flxScrollSettingsContent.removeAll();\nthis.view.settingsSide.txt.setVisibility(true);\n\n\nvoltmx.print(\"### RIGHT WIDTH was: \" + self.view.flxRightSide.width);\n\n\n// content_right = self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.flxScrollRight.widgets();\nlet content_right = self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.widgets();\nlet targetWidget = null; // boolean\n\n// if the current Step is different from 1, we need to find the content related to the step we are in currently\nif (gblCurrentStepOrder > 1){\n  targetWidget = content_right.find(widget => widget.id === \"flxScrollRight\" + gblCurrentStepOrder);\n} else {\n  targetWidget = self.view.flxRightSide.flxScrollRight;  \n}\n\n\n// showing RIGHT SIDE ELEMENTS\nlet currentScrollName = \"flxScrollRight\" + (gblCurrentStepOrder === 1 ? \"\" : gblCurrentStepOrder);\nlet currentScroll = self.view.flxRightSide[currentScrollName];\ncurrentScroll.setVisibility(true);\nif (currentScroll.widgets().length === 0) {\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.imgNoComponentsRight.setVisibility(true);\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.lblNoComponentsRight.setVisibility(true);\n  self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.txtStartPhraseRight.setVisibility(true);\n}\n\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxRightSide.setEnabled(true);\n\n\n\n// now hiding the selected components' arrows, clone/delete box and \"add nested button\"\nlet scroll_widgets = self.view.flxLeftSide.flxScrollLeft.widgets();\nvoltmx.print(\"### scroll_widgets: -\" + (scroll_widgets) + \"-\");\n//voltmx.print(\"### scroll_widgets: -\" + JSON.stringify(scroll_widgets) + \"-\");\n\nscroll_widgets.forEach( widg => {\n  let widget_key = Object.keys(widg).find(key => key.startsWith(\"component\"));\n  let chiavi = Object.keys(widg);\n  voltmx.print(\"### chiavi: -\" + chiavi + \"-\");\n  voltmx.print(\"### widget_key: -\" + widget_key + \"-\");\n\n  widg[widget_key].arrowUpVisible = false;\n  widg[widget_key].arrowDownVisible = false;\n  widg[widget_key].flxMoveVisible = false;\n  widg[widget_key].cloneDeleteVisible = false;\n  widg[widget_key].flxAddNestedVisible = false;\n});\n\nvoltmx.print(\"### FINITO A SINISTRA\");\n\n\n\n\n// The sides was in halves and now the user wants to OPEN the LEFT one\n// We will expand the selected side (RIGHT SIDE)\n\nvoltmx.print(\"### LEFT WIDTH was: \" + self.view.flxLeftSide.width);\n\nthis.view.flxComponentsSide.opacity = 1;\nthis.view.flxRightSide.skin = \"HalfSelectedSide\";\n\n\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.imgNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.lblNoComponentsLeft.setVisibility(false);\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.txtStartPhraseLeft.setVisibility(false);\n// self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxSelectedComponent.setVisibility(false);\n\n// retriveing the content of the LEFT side (in order to hide it when the RIGHT SIDE is open)\ncontent = self.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.flxScrollLeft.widgets();\nvoltmx.print(\"### TYPE OF LEFT CONTENT: \" + typeof content);\n// for each element in the LEFT SIDE, we hide it\ncontent.forEach(function(widget) {\n   voltmx.print(\"### WIDGET ID: \" + JSON.stringify(widget.id));\n  if (widget.id && widget.id.includes(\"flex\")) {\n    voltmx.print(\"### SELECTED COMPONENT\");\n    widget.isVisible = false;\n  }\n});\n\n// disabling the use of the closed side (LEFT SIDE)\nself.view.flxMainContainerStepComposition.flxContainerStepCreation.flxLeftRight.flxLeftSide.setEnabled(false);\n\n\n// Filtering the components to keep only the non-\"previewSection\" ones.\n// So we are keeping only the \"stepSection\" ones (that we need for the RIGHT SIDE)\nlet filteredSimpleComponents = gblSimpleComponentsTemplates.filter(function(item) {\n  return item.lblLayout !== \"previewSection\";\n});\n\n\nlet filteredConfigurableComponents = gblConfigurableComponentsTemplates.filter(function(item) {\n  return item.lblLayout !== \"previewSection\";\n});\n\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(filteredSimpleComponents);\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setData(filteredConfigurableComponents);\n\nself.view.ComponentsSide.segComponentsSideConfigurableContent.setEnabled(true);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setEnabled(true);\n",
+            "parentId": "_cbf9845244d04bfda1e4c20042d15f7d",
+            "callbackType": null
+        }, {
+            "id": "ADD_SNIPPET_af66f033167e4a47b65090a36311d490",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// right panel already open.\nthis.view.flxPopupNewStep.setVisibility(true);\nthis.view.flxNewStepBlur.setVisibility(true);",
+            "parentId": "_dbc0558548124ff9bb288788916cfb6d",
+            "callbackType": null
+        }, {
             "id": "INVOKE_FUNCTION__ide_onClick_e1f1856679234b37b561409beda3e9c1",
             "type": "INVOKE_FUNCTION",
             "sequenceKUID": "addNewStep",
@@ -59,10 +113,135 @@
             "disabled": null,
             "source": "controller"
         }, {
-            "id": "ADD_SNIPPET_ide_onClick_j4dbdccc86fe40099f55891179b5f7f7",
+            "id": "TIMEOUT_ACTION_b328b5ce43c44fd7a96872a65a561f0d",
+            "timeout": 500,
+            "type": "TIMEOUT_ACTION",
+            "parentId": "_cbf9845244d04bfda1e4c20042d15f7d",
+            "timerId": "TIMEOUT_ACTION_f17f727b449a449ba0054060dde74029",
+            "repeats": false
+        }, {
+            "id": "_d7c457c0e9e247f09c0cae822034f0df",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxSteps",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "f7cf362afaca48f68c682b9738763925",
+            "wType": "FlexScrollContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "width": "80%"
+            },
+            "config": {
+                "delay": "0",
+                "iterationCount": 1,
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "210"
+            },
+            "start": "Immediately",
+            "parentAnimation": "MOVE_ACTION_e82db6bf20714ed7b4ae9b01e6d7ad65",
+            "animationId": "_d7c457c0e9e247f09c0cae822034f0df",
+            "displayAnimationId": "SCALE_ACTION_cf9c395fc35844438f02343462ef9c5f",
+            "forkedPlatform": "all",
+            "parentId": "_cbf9845244d04bfda1e4c20042d15f7d",
+            "callbackType": null,
+            "widgetPath": "this.view.flxSteps"
+        }, {
+            "id": "ADD_SNIPPET_dcc8b159a43548a2bf47426ed4b4b301",
             "type": "ADD_SNIPPET",
-            "codeSnippet": "let right_width = parseInt(this.view.flxLeftRight.flxRightSide.width, 10);\n\nif (right_width > 48){\n  this.view.flxPopupNewStep.setVisibility(true);\n  this.view.flxNewStepBlur.setVisibility(true);\n}",
+            "codeSnippet": "// To avoid conficts by unintentional double clicking on sides while they have the animation going on\nself.view.flxRightSide.setEnabled(true);\nself.view.flxLeftSide.setEnabled(true);",
+            "parentId": "TIMEOUT_ACTION_b328b5ce43c44fd7a96872a65a561f0d",
             "callbackType": null
+        }, {
+            "id": "_ef14816a27bf445e9d74189065bef9e6",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxRightSide",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "c4fef085b1b0464f89985709475aa8b0",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "width": "80%",
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "250",
+                "delay": "0",
+                "iterationCount": "1"
+            },
+            "config": {
+                "delay": "0",
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "200"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_b6a5399d4d51452cb85ae83f3813fba4",
+            "animationId": "_ef14816a27bf445e9d74189065bef9e6",
+            "displayAnimationId": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
+            "forkedPlatform": "all",
+            "parentId": "_cbf9845244d04bfda1e4c20042d15f7d",
+            "widgetPath": "this.view.flxRightSide"
+        }, {
+            "id": "ADD_SNIPPET_df8854daee7245928bd80c29a3d481bf",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.ComponentsSide.segComponentsSideConfigurableContent.setData(gblConfigurableComponentsTemplates);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setData(gblSimpleComponentsTemplates);\n",
+            "parentId": "_ef14816a27bf445e9d74189065bef9e6",
+            "callbackType": "Callback",
+            "disabled": true
+        }, {
+            "id": "ADD_SNIPPET_adb46670abfd4a2d805f74f791c0f0b5",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "self.view.ComponentsSide.segComponentsSideConfigurableContent.setEnabled(false);\nself.view.ComponentsSide.segComponentsSideSimpleContent.setEnabled(false);",
+            "parentId": "_ef14816a27bf445e9d74189065bef9e6",
+            "callbackType": "Callback",
+            "disabled": true
+        }, {
+            "id": "_df6bacc5cdbc41bd9154df02ea54630f",
+            "type": "SCALE_ACTION",
+            "itemType": "FORM",
+            "itemId": "frmStepComposition",
+            "widgetId": "flxLeftSide",
+            "itemKUID": "j7b99cee3df84132ae59e348dbb47442",
+            "widgetKUID": "ef32f1f4c3c04df9bf584b0dbdd318fe",
+            "wType": "FlexContainer",
+            "animationObject": {
+                "anchorPoint": {},
+                "stepConfig": {
+                    "timingFunction": "kony.anim.EASE"
+                },
+                "width": "16%",
+                "opacity": "100",
+                "displayAnimationId": "",
+                "duration": "250",
+                "delay": "0",
+                "iterationCount": "1"
+            },
+            "config": {
+                "delay": "0",
+                "fillMode": "voltmx.anim.FILL_MODE_FORWARDS",
+                "duration": "200"
+            },
+            "start": "Immediately",
+            "parentAnimation": "SCALE_ACTION_b0a0deffa9aa466c9c8c6e25c0bbb0c6",
+            "animationId": "_df6bacc5cdbc41bd9154df02ea54630f",
+            "displayAnimationId": "SCALE_ACTION_de6b47ad6de543ba8f6596aa75e41bee",
+            "forkedPlatform": "all",
+            "parentId": "_ef14816a27bf445e9d74189065bef9e6",
+            "callbackType": "Callback",
+            "widgetPath": "this.view.flxLeftSide"
+        }, {
+            "id": "ADD_SNIPPET_e379ac6e3b2244ea81445e7d9086c4eb",
+            "type": "ADD_SNIPPET",
+            "codeSnippet": "// right panel already open.\nself.view.flxPopupNewStep.setVisibility(true);\nself.view.flxNewStepBlur.setVisibility(true);",
+            "parentId": "_df6bacc5cdbc41bd9154df02ea54630f",
+            "callbackType": "Callback"
         }]
     }
 }

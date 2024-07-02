@@ -68,5 +68,6 @@
         "lock": true
     },
     "wType": "FlexContainer",
-    "widgetalignment": 1
+    "widgetalignment": 1,
+    "zindex": 1
 }
