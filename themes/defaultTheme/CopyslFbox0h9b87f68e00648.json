@@ -18,7 +18,6 @@
     "bottom_right_border_color": "000000ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
-    "customCSS": "transform: rotate(45deg) !important;\nborder: none !important;\ncursor: pointer;",
     "font_name": "Helvetica",
     "isCustomCSSEnabled": true,
     "isForked": true,
@@ -29,11 +28,6 @@
     "top_right_border_style": "plain",
     "top_right_border_width": 0
   },
-  "font_color": "000000ff",
-  "font_name": "Helvetica",
-  "font_size": 156,
-  "font_style": "normal",
-  "font_weight": "normal",
   "ipad": {
     "font_name": "System"
   },
@@ -44,7 +38,7 @@
   "kiosk": {
     "font_name": "None"
   },
-  "kuid": "sa5e6e42de524a199c5188dec3aff0ed",
+  "kuid": "s1b5cb17036f49298f90604ed0cf8e8d",
   "nativemac": {
     "bottom_left_border_color": "000000ff",
     "bottom_left_border_style": "plain",
@@ -52,7 +46,7 @@
     "bottom_right_border_color": "000000ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
-    "customCSS": "transform: rotate(45deg) !important;\nborder: none !important;\ncursor: pointer;",
+    "isCustomCSSEnabled": true,
     "isForked": true,
     "top_left_border_color": "000000ff",
     "top_left_border_style": "plain",
@@ -68,7 +62,7 @@
     "bottom_right_border_color": "000000ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
-    "customCSS": "transform: rotate(45deg) !important;\nborder: none !important;\ncursor: pointer;",
+    "isCustomCSSEnabled": true,
     "isForked": true,
     "top_left_border_color": "000000ff",
     "top_left_border_style": "plain",
@@ -84,7 +78,6 @@
     "bottom_right_border_color": "000000ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
-    "customCSS": "transform: rotate(45deg) !important;\nborder: none !important;\ncursor: pointer;",
     "font_name": "Helvetica",
     "isCustomCSSEnabled": true,
     "isForked": true,
@@ -102,7 +95,6 @@
     "bottom_right_border_color": "000000ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
-    "customCSS": "transform: rotate(45deg) !important;\nborder: none !important;\ncursor: pointer;",
     "font_name": "Helvetica",
     "isCustomCSSEnabled": true,
     "isForked": true,
@@ -120,7 +112,6 @@
     "bottom_right_border_color": "000000ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
-    "customCSS": "transform: rotate(45deg) !important;\nborder: none !important;\ncursor: pointer;",
     "font_name": "Helvetica",
     "isCustomCSSEnabled": true,
     "isForked": true,
@@ -138,7 +129,6 @@
     "bottom_right_border_color": "000000ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
-    "customCSS": "transform: rotate(45deg) !important;\nborder: none !important;\ncursor: pointer;",
     "font_name": "Helvetica",
     "isCustomCSSEnabled": true,
     "isForked": true,
@@ -156,7 +146,6 @@
     "bottom_right_border_color": "000000ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
-    "customCSS": "transform: rotate(45deg) !important;\nborder: none !important;\ncursor: pointer;",
     "font_name": "Helvetica",
     "isCustomCSSEnabled": true,
     "isForked": true,
@@ -174,7 +163,6 @@
     "bottom_right_border_color": "000000ff",
     "bottom_right_border_style": "plain",
     "bottom_right_border_width": 0,
-    "customCSS": "transform: rotate(45deg) !important;\nborder: none !important;\ncursor: pointer;",
     "font_name": "Helvetica",
     "isCustomCSSEnabled": true,
     "isForked": true,
@@ -188,7 +176,7 @@
   "tabrcandroid": {
     "font_name": "default"
   },
-  "wType": "Image",
+  "wType": "FlexContainer",
   "watchos": {
     "font_name": "System"
   },

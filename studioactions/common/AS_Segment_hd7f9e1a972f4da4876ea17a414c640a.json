@@ -1,6 +1,6 @@
 {
-    "AS_Segment_b33062cbc5cc463c8bd086ae68474f85": {
-        "id": "AS_Segment_b33062cbc5cc463c8bd086ae68474f85",
+    "AS_Segment_hd7f9e1a972f4da4876ea17a414c640a": {
+        "id": "AS_Segment_hd7f9e1a972f4da4876ea17a414c640a",
         "type": "ACTION_SEQUENCE",
         "params": [{
             "datatype": "collection",
@@ -12,18 +12,12 @@
             "datatype": "number",
             "name": "rowNumber"
         }],
-        "contextObj": {
-            "name": "userwidgetmodel",
-            "type": "userwidgets",
-            "KUID": "c7d86eec00e34dfe951b10467d4879d7"
-        },
         "language": "js",
         "eventType": "onRowClick",
         "actions": [{
-            "id": "ADD_SNIPPET_b4b07a57f45f475b8bfdabc70e609b64",
+            "id": "ADD_SNIPPET_ide_onRowClick_b8a0aae4a6fa4bf2be5c98165e2496ef",
             "type": "ADD_SNIPPET",
             "codeSnippet": "var menu = this.view.segMenu.selectedRowItems[0];\nvar menuOption = menu.imgMenuIcon;\nvoltmx.print(\"### Menu: \" + JSON.stringify(menu) );\nvoltmx.print(\"### Menu option: \" + \"-\" + menuOption + \"-\");\n\nif (menuOption === \"flow.png\") {\n        var ntf = new voltmx.mvc.Navigation(\"frmFlows\");\n        ntf.navigate();\n  \t\tvoltmx.print(\"### Navigate to: \" + menuOption);\n}\nif (menuOption === \"labels.png\") {\n        var ntf = new voltmx.mvc.Navigation(\"frmLabelCopy\");\n        ntf.navigate();\n  \t\tvoltmx.print(\"### Navigate to: \" + menuOption);\n}\nif (menuOption === \"audience_icon.png\") {\n        var ntf = new voltmx.mvc.Navigation(\"frmDashboard\");\n        ntf.navigate();\n  \t\tvoltmx.print(\"### Navigate to: \" + menuOption);\n}\nif (menuOption === \"settings.png\") {\n        var ntf = new voltmx.mvc.Navigation(\"frmChannelSettings\");\n        ntf.navigate();\n  \t\tvoltmx.print(\"### Navigate to: \" + menuOption);\n}\n",
-            "parentId": null,
             "callbackType": null
         }]
     }

@@ -1,12 +1,12 @@
 {
     "DNDConfig": null,
-    "_bottom_": {
-        "type": "string",
-        "value": "0dp"
-    },
     "_height_": {
         "type": "string",
-        "value": "86%"
+        "value": "310dp"
+    },
+    "_left_": {
+        "type": "string",
+        "value": "0"
     },
     "_margin_": [
         0,
@@ -22,39 +22,33 @@
         0
     ],
     "_percent_": true,
-    "_right_": {
+    "_skin_": "s66782a328a94530b0cbb77a5e5e56e4",
+    "_top_": {
         "type": "string",
-        "value": "0dp"
+        "value": "0"
     },
-    "_skin_": "s82f11f2130e46588a29c7944e958f19",
     "_width_": {
         "type": "string",
-        "value": "78.33%"
+        "value": "100%"
     },
     "allboxes": [],
     "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
-        "imgLogo",
-        "lblFlowName",
-        "lblFlowDescription",
-        "lblFlowCategory",
-        "flxFlowInfo",
-        "flxCreateNewStep"
+        "segMenu"
     ],
     "clipbounds": false,
     "containerweight": 100,
-    "desktopweb": {},
     "enablescrolling": true,
-    "id": "flxContainerStepCreation",
+    "id": "flxSegSmallerMenu",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "d2b7edae53ad45f1984b04607a150f66",
+    "kuid": "c3436d653ea94a149b3cb9d4f1968207",
     "layouttype": 2,
     "name": "kony.ui.FlexContainer",
-    "parent": "flxMainContainerStepCreation",
-    "pf": "frmStepCreation",
+    "parent": "smallerhamburgermenu",
+    "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
     "retainflowhorizontalalignment": false,

@@ -628,7 +628,7 @@
             "enableMappingEditor": true,
             "package": "",
             "enableNavigationObj": true,
-            "navigationObj": "{\n    \"lblStepTitle_text\": self.view.lblStepTitle.text,\n    \"lblStepTitle_isVisible\": self.view.lblStepTitle.isVisible,\n    \"txtStepTitle_text\": self.view.txtStepTitle.text,\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"\"\n    }\n}",
+            "navigationObj": "{\n    \"lblStepTitle_text\": self.view.lblStepTitle.text,\n    \"lblStepTitle_isVisible\": self.view.lblStepTitle.isVisible,\n    \"txtStepTitle_text\": self.view.txtStepTitle.text,\n    \"_meta_\": {\n        \"eventName\": \"onClick\",\n        \"widgetId\": \"btnProceed\"\n    }\n}",
             "isCustomInput": false
         }]
     }

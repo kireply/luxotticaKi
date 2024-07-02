@@ -109,6 +109,14 @@
                 }
             }
         },
+        "flxSegSmallerMenu": {
+            "__events__": {},
+            "__info__": {
+                "kuid": "ef225a0484974e2aa93b30fadbc496ce",
+                "srcKUID": "c3436d653ea94a149b3cb9d4f1968207",
+                "wType": "FlexContainer"
+            }
+        },
         "imgLogout": {
             "__events__": {},
             "__info__": {

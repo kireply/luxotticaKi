@@ -97,7 +97,7 @@
     "groupcells": false,
     "hasSections": false,
     "id": "segMenu",
-    "ide_onRowClick": "AS_Segment_b33062cbc5cc463c8bd086ae68474f85",
+    "ide_onRowClick": "AS_Segment_hd7f9e1a972f4da4876ea17a414c640a",
     "info": null,
     "ipad": {
         "psp": {
@@ -120,7 +120,7 @@
     "paginationconfig": {
         "position": "bottom"
     },
-    "parent": "smallerhamburgermenu",
+    "parent": "flxSegSmallerMenu",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
